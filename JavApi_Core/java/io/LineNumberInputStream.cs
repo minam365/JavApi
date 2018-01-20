@@ -12,11 +12,11 @@
  *  limitations under the License.
  */
 using System;
-using java = biz.ritter.javapi; 
+using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.io
 {
-	/**
+    /*
  * Wraps an existing {@link InputStream} and counts the line terminators
  * encountered while reading the data. Line numbering starts at 0. Recognized
  * line terminator sequences are {@code '\r'}, {@code '\n'} and {@code "\r\n"}.
@@ -25,81 +25,80 @@ namespace biz.ritter.javapi.io
  * 
  * @deprecated Use {@link LineNumberReader}
  */
-	[Obsolete]
-	public class LineNumberInputStream : FilterInputStream
-	{
+    [Obsolete]
+    public class LineNumberInputStream : FilterInputStream
+    {
 
-		private int lineNumber;
-		private int markedLineNumber = -1;
-		private int lastChar = -1;
-		private int markedLastChar;
+        private int lineNumber;
+        private int markedLineNumber = -1;
+        private int lastChar = -1;
+        private int markedLastChar;
 
-		/**
+        /*
      * Constructs a new {@code LineNumberInputStream} on the {@link InputStream}
      * {@code in}. Line numbers are counted for all data read from this stream.
      * 
      * @param in
      *            The non-null input stream to count line numbers.
      */
-		public LineNumberInputStream (InputStream inJ) : base(inJ)
-		{
-        
-		}
+        public LineNumberInputStream(InputStream inJ) : base(inJ)
+        {
 
-		/**
-     * Returns the number of bytes that are available before this stream will
-     * block.
-     * <p>
-     * Note: The source stream may just be a sequence of {@code "\r\n"} bytes
-     * which are converted into {@code '\n'} by this stream. Therefore,
-     * {@code available} returns only {@code in.available() / 2} bytes as
-     * result.
-     *
-     * @return the guaranteed number of bytes available before blocking.
-     * @throws IOException
-     *             if an error occurs in this stream.
-     */
-    
-		public override int available ()
-		{// throws IOException {
-			return inJ.available () / 2 + (lastChar == -1 ? 0 : 1);
-		}
+        }
 
-		/**
-     * Returns the current line number for this stream. Numbering starts at 0.
-     * 
-     * @return the current line number.
-     */
-		public int getLineNumber ()
-		{
-			return lineNumber;
-		}
+        /*
+         * Returns the number of bytes that are available before this stream will
+         * block.
+         * <p>
+         * Note: The source stream may just be a sequence of {@code "\r\n"} bytes
+         * which are converted into {@code '\n'} by this stream. Therefore,
+         * {@code available} returns only {@code in.available() / 2} bytes as
+         * result.
+         *
+         * @return the guaranteed number of bytes available before blocking.
+         * @throws IOException
+         *             if an error occurs in this stream.
+         */
 
-		/**
-     * Sets a mark position in this stream. The parameter {@code readlimit}
-     * indicates how many bytes can be read before the mark is invalidated.
-     * Sending {@code reset()} will reposition this stream back to the marked
-     * position, provided that {@code readlimit} has not been surpassed.
-     * The line number count will also be reset to the last marked
-     * line number count.
-     * <p>
-     * This implementation sets a mark in the filtered stream.
-     *
-     * @param readlimit
-     *            the number of bytes that can be read from this stream before
-     *            the mark is invalidated.
-     * @see #markSupported()
-     * @see #reset()
-     */
-    
-		public override void mark (int readlimit)
-		{
-			inJ.mark (readlimit);
-			markedLineNumber = lineNumber;
-			markedLastChar = lastChar;
-		}
+        public override int available()
+        {// throws IOException {
+            return inJ.available() / 2 + (lastChar == -1 ? 0 : 1);
+        }
 
-		/**
+        /*
+         * Returns the current line number for this stream. Numbering starts at 0.
+         * 
+         * @return the current line number.
+         */
+        public int getLineNumber()
+        {
+            return lineNumber;
+        }
+
+        /*
+         * Sets a mark position in this stream. The parameter {@code readlimit}
+         * indicates how many bytes can be read before the mark is invalidated.
+         * Sending {@code reset()} will reposition this stream back to the marked
+         * position, provided that {@code readlimit} has not been surpassed.
+         * The line number count will also be reset to the last marked
+         * line number count.
+         * <p>
+         * This implementation sets a mark in the filtered stream.
+         *
+         * @param readlimit
+         *            the number of bytes that can be read from this stream before
+         *            the mark is invalidated.
+         * @see #markSupported()
+         * @see #reset()
+         */
+        public override void mark(int readlimit)
+        {
+            inJ.mark(readlimit);
+            markedLineNumber = lineNumber;
+            markedLastChar = lastChar;
+        }
+
+        /*
      * Reads a single byte from the filtered stream and returns it as an integer
      * in the range from 0 to 255. Returns -1 if the end of this stream has been
      * reached.
@@ -114,34 +113,39 @@ namespace biz.ritter.javapi.io
      * @throws IOException
      *             if the stream is closed or another IOException occurs.
      */
-		public override int read ()
-		{//throws IOException {
-			int currentChar = lastChar;
-			if (currentChar == -1) {
-				currentChar = inJ.read ();
-			} else {
-				lastChar = -1;
-			}
-			switch (currentChar) {
-			case '\r':
-				currentChar = '\n';
-				lastChar = inJ.read ();
-				if (lastChar == '\n') {
-					lastChar = -1;
-				}
-				lineNumber++;
-				break;
-			// fall through
-			case '\n':
-				lineNumber++;
-				break;
-			default:
-				break;
-			}
-			return currentChar;
-		}
+        public override int read()
+        {//throws IOException {
+            int currentChar = lastChar;
+            if (currentChar == -1)
+            {
+                currentChar = inJ.read();
+            }
+            else
+            {
+                lastChar = -1;
+            }
+            switch (currentChar)
+            {
+                case '\r':
+                    currentChar = '\n';
+                    lastChar = inJ.read();
+                    if (lastChar == '\n')
+                    {
+                        lastChar = -1;
+                    }
+                    lineNumber++;
+                    break;
+                // fall through
+                case '\n':
+                    lineNumber++;
+                    break;
+                default:
+                    break;
+            }
+            return currentChar;
+        }
 
-		/**
+        /*
      * Reads at most {@code length} bytes from the filtered stream and stores
      * them in the byte array {@code buffer} starting at {@code offset}.
      * Returns the number of bytes actually read or -1 if no bytes have been
@@ -170,38 +174,46 @@ namespace biz.ritter.javapi.io
      * @throws NullPointerException
      *             if {@code buffer} is {@code null}.
      */
-    
-		public override int read (byte[] buffer, int offset, int length)
-		{//throws IOException {
-			// Force buffer null check first!
-			if (offset > buffer.Length || offset < 0) {
-				// luni.12=Offset out of bounds \: {0}
-				throw new java.lang.ArrayIndexOutOfBoundsException ("Offset out of bounds : " + offset); //$NON-NLS-1$
-			} 
-			if (length < 0 || length > buffer.Length - offset) {
-				// luni.18=Length out of bounds \: {0}
-				throw new java.lang.ArrayIndexOutOfBoundsException ("Length out of bounds : " + length); //$NON-NLS-1$
-			}
 
-			for (int i = 0; i < length; i++) {
-				int currentChar;
-				try {
-					currentChar = read ();
-				} catch (IOException e) {
-					if (i != 0) {
-						return i;
-					}
-					throw e;
-				}
-				if (currentChar == -1) {
-					return i == 0 ? -1 : i;
-				}
-				buffer [offset + i] = (byte)currentChar;
-			}
-			return length;
-		}
+        public override int read(byte[] buffer, int offset, int length)
+        {//throws IOException {
+            // Force buffer null check first!
+            if (offset > buffer.Length || offset < 0)
+            {
+                // luni.12=Offset out of bounds \: {0}
+                throw new java.lang.ArrayIndexOutOfBoundsException("Offset out of bounds : " + offset); //$NON-NLS-1$
+            }
+            if (length < 0 || length > buffer.Length - offset)
+            {
+                // luni.18=Length out of bounds \: {0}
+                throw new java.lang.ArrayIndexOutOfBoundsException("Length out of bounds : " + length); //$NON-NLS-1$
+            }
 
-		/**
+            for (int i = 0; i < length; i++)
+            {
+                int currentChar;
+                try
+                {
+                    currentChar = read();
+                }
+                catch (IOException e)
+                {
+                    if (i != 0)
+                    {
+                        return i;
+                    }
+                    throw e;
+                }
+                if (currentChar == -1)
+                {
+                    return i == 0 ? -1 : i;
+                }
+                buffer[offset + i] = (byte)currentChar;
+            }
+            return length;
+        }
+
+        /*
      * Resets this stream to the last marked location. It also resets the line
      * count to what is was when this stream was marked.
      * 
@@ -212,15 +224,15 @@ namespace biz.ritter.javapi.io
      * @see #mark(int)
      * @see #markSupported()
      */
-    
-		public override void reset ()
-		{//throws IOException {
-			inJ.reset ();
-			lineNumber = markedLineNumber;
-			lastChar = markedLastChar;
-		}
 
-		/**
+        public override void reset()
+        {//throws IOException {
+            inJ.reset();
+            lineNumber = markedLineNumber;
+            lastChar = markedLastChar;
+        }
+
+        /*
      * Sets the line number of this stream to the specified
      * {@code lineNumber}. Note that this may have side effects on the
      * line number associated with the last marked position.
@@ -230,12 +242,12 @@ namespace biz.ritter.javapi.io
      * @see #mark(int)
      * @see #reset()
      */
-		public void setLineNumber (int lineNumber)
-		{
-			this.lineNumber = lineNumber;
-		}
+        public void setLineNumber(int lineNumber)
+        {
+            this.lineNumber = lineNumber;
+        }
 
-		/**
+        /*
      * Skips {@code count} number of bytes in this stream. Subsequent
      * {@code read()}'s will not return these bytes unless {@code reset()} is
      * used. This implementation skips {@code count} number of bytes in the
@@ -251,19 +263,22 @@ namespace biz.ritter.javapi.io
      * @see #read()
      * @see #reset()
      */
-    
-		public override long skip (long count)
-		{//throws IOException {
-			if (count <= 0) {
-				return 0;
-			}
-			for (int i = 0; i < count; i++) {
-				int currentChar = read ();
-				if (currentChar == -1) {
-					return i;
-				}
-			}
-			return count;
-		}
-	}
+
+        public override long skip(long count)
+        {//throws IOException {
+            if (count <= 0)
+            {
+                return 0;
+            }
+            for (int i = 0; i < count; i++)
+            {
+                int currentChar = read();
+                if (currentChar == -1)
+                {
+                    return i;
+                }
+            }
+            return count;
+        }
+    }
 }

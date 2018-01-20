@@ -10,7 +10,7 @@ namespace biz.ritter.javapi.io
 
         private DataInputStream delegateInstance;
 
-        protected ObjectInputStream() {}
+        protected ObjectInputStream() { }
         public ObjectInputStream(InputStream input)
         {
             delegateInstance = input is DataInputStream ? (DataInputStream)input : new DataInputStream(input);

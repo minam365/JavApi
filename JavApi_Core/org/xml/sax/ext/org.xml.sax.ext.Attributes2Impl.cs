@@ -8,7 +8,7 @@ using org.xml.sax.helpers;
 
 namespace org.xml.sax.ext
 {
-    /**
+     /*
      * SAX2 extension helper for additional Attributes information,
      * implementing the {@link Attributes2} interface.
      *
@@ -40,13 +40,13 @@ namespace org.xml.sax.ext
         private bool[] specified;
 
 
-        /**
+         /*
          * Construct a new, empty Attributes2Impl object.
          */
         public Attributes2Impl() { }
 
 
-        /**
+         /*
          * Copy an existing Attributes or Attributes2 object.
          * If the object implements Attributes2, values of the
          * <em>specified</em> and <em>declared</em> flags for each
@@ -71,7 +71,7 @@ namespace org.xml.sax.ext
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Returns the current value of the attribute's "declared" flag.
          */
         // javadoc mostly from interface
@@ -84,7 +84,7 @@ namespace org.xml.sax.ext
         }
 
 
-        /**
+         /*
          * Returns the current value of the attribute's "declared" flag.
          */
         // javadoc mostly from interface
@@ -100,7 +100,7 @@ namespace org.xml.sax.ext
         }
 
 
-        /**
+         /*
          * Returns the current value of the attribute's "declared" flag.
          */
         // javadoc mostly from interface
@@ -115,7 +115,7 @@ namespace org.xml.sax.ext
         }
 
 
-        /**
+         /*
          * Returns the current value of an attribute's "specified" flag.
          *
          * @param index The attribute index (zero-based).
@@ -132,7 +132,7 @@ namespace org.xml.sax.ext
         }
 
 
-        /**
+         /*
          * Returns the current value of an attribute's "specified" flag.
          *
          * @param uri The Namespace URI, or the empty string if
@@ -154,7 +154,7 @@ namespace org.xml.sax.ext
         }
 
 
-        /**
+         /*
          * Returns the current value of an attribute's "specified" flag.
          *
          * @param qName The XML qualified (prefixed) name.
@@ -178,7 +178,7 @@ namespace org.xml.sax.ext
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Copy an entire Attributes object.  The "specified" flags are
          * assigned as true, and "declared" flags as false (except when
          * an attribute's type is not CDATA),
@@ -215,7 +215,7 @@ namespace org.xml.sax.ext
         }
 
 
-        /**
+         /*
          * Add an attribute to the end of the list, setting its
          * "specified" flag to true.  To set that flag's value
          * to false, use {@link #setSpecified}.
@@ -267,7 +267,7 @@ namespace org.xml.sax.ext
         }
 
 
-        /**
+         /*
          * Assign a value to the "declared" flag of a specific attribute.
          * This is normally needed only for attributes of type CDATA,
          * including attributes whose type is changed to or from CDATA.
@@ -287,7 +287,7 @@ namespace org.xml.sax.ext
         }
 
 
-        /**
+         /*
          * Assign a value to the "specified" flag of a specific attribute.
          * This is the only way this flag can be cleared, except clearing
          * by initialization with the copy constructor.

@@ -20,7 +20,7 @@ namespace biz.ritter.javapi.io
 {
 
 
-    /**
+    /*
      * Wraps an existing {@link Reader} and performs some transformation on the
      * input data while it is being read. Transformations can be anything from a
      * simple byte-wise filtering input data to an on-the-fly compression or
@@ -30,24 +30,26 @@ namespace biz.ritter.javapi.io
      * 
      * @see FilterWriter
      */
-    public abstract class FilterReader : Reader {
+    public abstract class FilterReader : Reader
+    {
 
-        /**
+        /*
          * The target Reader which is being filtered.
          */
         protected Reader inJ;
 
-        /**
+        /*
          * Constructs a new FilterReader on the Reader {@code in}.
          * 
          * @param in
          *            The non-null Reader to filter reads on.
          */
-        protected FilterReader(Reader inJ) : base (inJ) {
+        protected FilterReader(Reader inJ) : base(inJ)
+        {
             this.inJ = inJ;
         }
 
-        /**
+        /*
          * Closes this reader. This implementation closes the filtered reader.
          * 
          * @throws IOException
@@ -55,12 +57,13 @@ namespace biz.ritter.javapi.io
          */
         public override void close() //throws IOException 
         {
-            lock (lockJ) {
+            lock (lockJ)
+            {
                 inJ.close();
             }
         }
 
-        /**
+        /*
          * Sets a mark position in this reader. The parameter {@code readlimit}
          * indicates how many bytes can be read before the mark is invalidated.
          * Sending {@code reset()} will reposition this reader back to the marked
@@ -78,12 +81,13 @@ namespace biz.ritter.javapi.io
          */
         public override void mark(int readlimit) //throws IOException 
         {
-            lock (lockJ) {
+            lock (lockJ)
+            {
                 inJ.mark(readlimit);
             }
         }
 
-        /**
+        /*
          * Indicates whether this reader supports {@code mark()} and {@code reset()}.
          * This implementation returns whether the filtered reader supports marking.
          * 
@@ -93,13 +97,15 @@ namespace biz.ritter.javapi.io
          * @see #reset()
          * @see #skip(long)
          */
-        public override bool markSupported() {
-            lock (lockJ){
+        public override bool markSupported()
+        {
+            lock (lockJ)
+            {
                 return inJ.markSupported();
             }
         }
 
-        /**
+        /*
          * Reads a single character from the filtered reader and returns it as an
          * integer with the two higher-order bytes set to 0. Returns -1 if the end
          * of the filtered reader has been reached.
@@ -111,12 +117,13 @@ namespace biz.ritter.javapi.io
          */
         public override int read()// throws IOException 
         {
-            lock (lockJ){
+            lock (lockJ)
+            {
                 return inJ.read();
             }
         }
 
-        /**
+        /*
          * Reads at most {@code count} characters from the filtered reader and stores them
          * in the byte array {@code buffer} starting at {@code offset}. Returns the
          * number of characters actually read or -1 if no characters were read and
@@ -136,12 +143,13 @@ namespace biz.ritter.javapi.io
          */
         public override int read(char[] buffer, int offset, int count) //throws IOException 
         {
-            lock (lockJ){
+            lock (lockJ)
+            {
                 return inJ.read(buffer, offset, count);
             }
         }
 
-        /**
+        /*
          * Indicates whether this reader is ready to be read without blocking. If
          * the result is {@code true}, the next {@code read()} will not block. If
          * the result is {@code false}, this reader may or may not block when
@@ -154,12 +162,13 @@ namespace biz.ritter.javapi.io
          */
         public override bool ready() //throws IOException 
         {
-            lock (lockJ){
+            lock (lockJ)
+            {
                 return inJ.ready();
             }
         }
 
-        /**
+        /*
          * Resets this reader's position to the last marked location. Invocations of
          * {@code read()} and {@code skip()} will occur from this new location. If
          * this reader was not marked, the behavior depends on the implementation of
@@ -174,12 +183,13 @@ namespace biz.ritter.javapi.io
          */
         public override void reset() //throws IOException 
         {
-            lock (lockJ){
+            lock (lockJ)
+            {
                 inJ.reset();
             }
         }
 
-        /**
+        /*
          * Skips {@code count} characters in this reader. Subsequent {@code read()}'s
          * will not return these characters unless {@code reset()} is used. The
          * default implementation is to skip characters in the filtered reader.
@@ -196,7 +206,8 @@ namespace biz.ritter.javapi.io
          */
         public override long skip(long count) //throws IOException 
         {
-            lock (lockJ){
+            lock (lockJ)
+            {
                 return inJ.skip(count);
             }
         }

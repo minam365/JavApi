@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+    /*
      * ArrayList is an implementation of {@link List}, backed by an array. All
      * optional operations adding, removing, and replacing are supported. The
      * elements can be any objects.
@@ -53,7 +53,7 @@ namespace biz.ritter.javapi.util
             sizeJ = this.array.Length;
         }
 
-        /**
+        /*
          * Constructs a new instance of {@code ArrayList} with the specified
          * capacity.
          * 
@@ -68,7 +68,7 @@ namespace biz.ritter.javapi.util
             array = newElementArray(capacity);
         }
 
-        /**
+        /*
          * Constructs a new instance of {@code ArrayList} containing the elements of
          * the specified collection. The initial size of the {@code ArrayList} will
          * be 10% larger than the size of the specified collection.
@@ -93,7 +93,7 @@ namespace biz.ritter.javapi.util
             return (E[]) new E[length];
         }
 
-        /**
+        /*
          * Inserts the specified object into this {@code ArrayList} at the specified
          * location. The object is inserted before any previous element at the
          * specified location. If the location is equal to the size of this
@@ -142,7 +142,7 @@ namespace biz.ritter.javapi.util
             modCount++;
         }
 
-        /**
+        /*
          * Adds the specified object at the end of this {@code ArrayList}.
          * 
          * @param object
@@ -160,7 +160,7 @@ namespace biz.ritter.javapi.util
             return true;
         }
 
-        /**
+        /*
          * Inserts the objects in the specified collection at the specified location
          * in this List. The objects are added in the order they are returned from
          * the collection's iterator.
@@ -225,7 +225,7 @@ namespace biz.ritter.javapi.util
             return true;
         }
 
-        /**
+        /*
          * Adds the objects in the specified collection to this {@code ArrayList}.
          * 
          * @param collection
@@ -249,7 +249,7 @@ namespace biz.ritter.javapi.util
             return true;
         }
 
-        /**
+        /*
          * Removes all elements from this {@code ArrayList}, leaving it empty.
          * 
          * @see #isEmpty
@@ -268,7 +268,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+        /*
          * Returns a new {@code ArrayList} with the same elements, the same size and
          * the same capacity as this {@code ArrayList}.
          * 
@@ -284,8 +284,8 @@ namespace biz.ritter.javapi.util
                 return null;
             }
         }
-
-        /**
+    
+        /*
          * Searches this {@code ArrayList} for the specified object.
          * 
          * @param object
@@ -311,7 +311,7 @@ namespace biz.ritter.javapi.util
             return false;
         }
 
-        /**
+        /*
          * Ensures that after this operation the {@code ArrayList} can hold the
          * specified number of elements without further growing.
          * 
@@ -468,7 +468,7 @@ namespace biz.ritter.javapi.util
             return -1;
         }
 
-        /**
+        /*
          * Removes the object at the specified location from this list.
          * 
          * @param location
@@ -526,7 +526,7 @@ namespace biz.ritter.javapi.util
             return false;
         }
 
-        /**
+        /*
          * Removes the objects in the specified range from the start to the end, but
          * not including the end index.
          * 
@@ -573,7 +573,7 @@ namespace biz.ritter.javapi.util
             modCount++;
         }
 
-        /**
+        /*
          * Replaces the element at the specified location in this {@code ArrayList}
          * with the specified object.
          * 
@@ -596,7 +596,7 @@ namespace biz.ritter.javapi.util
             return result;
         }
 
-        /**
+        /*
          * Returns the number of elements in this {@code ArrayList}.
          * 
          * @return the number of elements in this {@code ArrayList}.
@@ -606,7 +606,7 @@ namespace biz.ritter.javapi.util
             return sizeJ;
         }
 
-        /**
+        /*
          * Returns a new array containing all elements contained in this
          * {@code ArrayList}.
          * 
@@ -619,7 +619,7 @@ namespace biz.ritter.javapi.util
             return result;
         }
 
-        /** --Bastie: why not use the base clase method? --
+        /* --Bastie: why not use the base clase method? --
          * Returns an array containing all elements contained in this
          * {@code ArrayList}. If the specified array is large enough to hold the
          * elements, the specified array is used, otherwise an array of the same
@@ -648,7 +648,7 @@ namespace biz.ritter.javapi.util
             return contents;
         }*/
 
-        /**
+        /*
          * Sets the capacity of this {@code ArrayList} to be the same as the current
          * size.
          * 

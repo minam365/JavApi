@@ -7,7 +7,7 @@ using System;
 namespace org.xml.sax
 {
 
-    /**
+    /*
      * Interface for an element's attribute specifications.
      *
      * <blockquote>
@@ -81,7 +81,7 @@ namespace org.xml.sax
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+        /*
          * Return the number of attributes in this list.
          *
          * <p>The SAX parser may provide attributes in any
@@ -113,7 +113,7 @@ namespace org.xml.sax
         String getName(int i);
 
 
-        /**
+        /*
          * Return the type of an attribute in the list (by position).
          *
          * <p>The attribute type is one of the strings "CDATA", "ID",
@@ -137,7 +137,7 @@ namespace org.xml.sax
         String getType(int i);
 
 
-        /**
+        /*
          * Return the value of an attribute in the list (by position).
          *
          * <p>If the attribute value is a list of tokens (IDREFS,
@@ -159,7 +159,7 @@ namespace org.xml.sax
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+        /*
          * Return the type of an attribute in the list (by name).
          *
          * <p>The return value is the same as the return value for
@@ -176,7 +176,7 @@ namespace org.xml.sax
         String getType(String name);
 
 
-        /**
+        /*
          * Return the value of an attribute in the list (by name).
          *
          * <p>The return value is the same as the return value for

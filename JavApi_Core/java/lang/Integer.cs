@@ -21,7 +21,7 @@ namespace biz.ritter.javapi.lang
 {
     public sealed class Integer : Number, Comparable<Integer>
     {
-        /**
+        /*
          * The {@link Class} object that represents the primitive type {@code int}.
          */
         public static readonly Type TYPE = new int[0].GetType().GetElementType();
@@ -89,7 +89,7 @@ namespace biz.ritter.javapi.lang
         {
             return int.Parse(s);
         }
-        /**
+        /*
          * Parses the specified string as a signed integer value using the specified
          * radix.
          * 
@@ -123,7 +123,7 @@ namespace biz.ritter.javapi.lang
                 throw new java.lang.NumberFormatException();
             }
         }
-        /**
+        /*
          * Determines the number of trailing zeros in the specified integer after
          * the {@link #lowestOneBit(int) lowest one bit}.
          *
@@ -137,7 +137,7 @@ namespace biz.ritter.javapi.lang
             return bitCount((i & -i) - 1);
         }
 
-        /**
+        /*
          * Counts the number of 1 bits in the specified integer; this is also
          * referred to as population count.
          *
@@ -156,7 +156,7 @@ namespace biz.ritter.javapi.lang
             return (i & 0x0000003F);
         }
 
-        /**
+        /*
          * Converts the specified integer into its decimal string representation.
          * The returned string is a concatenation of a minus sign if the number is
          * negative and characters from '0' to '9'.
@@ -272,7 +272,7 @@ namespace biz.ritter.javapi.lang
             countJ = last_digitJ--;
             return new java.lang.StringJ(0, countJ, bufferJ).ToString();
         }
-        /**
+        /*
          * Determines the number of leading zeros in the specified integer prior to
          * the {@link #highestOneBit(int) highest one bit}.
          *
@@ -290,7 +290,7 @@ namespace biz.ritter.javapi.lang
             i |= i >> 16;
             return bitCount(~i);
         }
-        /**
+        /*
          * Determines the highest (leftmost) bit of the specified integer that is 1
          * and returns the bit mask value for that bit. This is also referred to as
          * the Most Significant 1 Bit. Returns zero if the specified integer is
@@ -311,7 +311,7 @@ namespace biz.ritter.javapi.lang
             return (i & ~java.dotnet.lang.Operator.shiftRightUnsignet(i, 1));
         }
 
-        /**
+        /*
          * Returns the value of the {@code signum} function for the specified
          * integer.
          * 
@@ -327,7 +327,7 @@ namespace biz.ritter.javapi.lang
         }
 
 
-        /**
+        /*
          * Parses the specified string and returns a {@code Integer} instance if the
          * string can be decoded into an integer value. The string may be an
          * optional minus sign "-" followed by a hexadecimal ("0x..." or "#..."),
@@ -390,7 +390,7 @@ namespace biz.ritter.javapi.lang
             int result = parse(str, i, baseJ, negative);
             return valueOf(result);
         }
-        /**
+        /*
          * Parses the specified string as a signed decimal integer value.
          * 
          * @param string
@@ -442,7 +442,7 @@ namespace biz.ritter.javapi.lang
             return result;
         }
 
-        /**
+        /*
          * Returns a {@code Integer} instance for the specified integer value.
          * <p>
          * If it is not necessary to get a new {@code Integer} instance, it is
@@ -486,9 +486,10 @@ namespace biz.ritter.javapi.lang
 
         internal class IAC_INTERGER_valueOfCache
         {
-            /**
+            /*
              * <p>
              * A cache of instances used by {@link Integer#valueOf(int)} and auto-boxing.
+             * </p>
              */
             internal static readonly Integer[] CACHE = new Integer[256];
 

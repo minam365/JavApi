@@ -14,47 +14,53 @@
 using System;
 using java = biz.ritter.javapi;
 
-namespace biz.ritter.javapi.lang{
+namespace biz.ritter.javapi.lang
+{
 
-/**
- * Thrown when the virtual machine notices that a program tries to create a new
- * instance of a class which has no visible constructors from the location where
- * {@code new} is invoked.
- * <p>
- * Note that this can only occur when inconsistent class files are being loaded.
- */
-public class InstantiationError : IncompatibleClassChangeError {
-    private const long serialVersionUID = -4885810657349421204L;
-
-    /**
-     * Constructs a new {@code InstantiationError} that includes the current
-     * stack trace.
+    /*
+     * Thrown when the virtual machine notices that a program tries to create a new
+     * instance of a class which has no visible constructors from the location where
+     * {@code new} is invoked.
+     * <p>
+     * Note that this can only occur when inconsistent class files are being loaded.
+     * </p>
      */
-    public InstantiationError() :base(){
-        
-    }
+    public class InstantiationError : IncompatibleClassChangeError
+    {
+        private const long serialVersionUID = -4885810657349421204L;
 
-    /**
-     * Constructs a new {@code InstantiationError} with the current stack trace
-     * and the specified detail message.
-     * 
-     * @param detailMessage
-     *            the detail message for this error.
-     */
-    public InstantiationError(String detailMessage) :base(detailMessage){
-        
-    }
+        /*
+         * Constructs a new {@code InstantiationError} that includes the current
+         * stack trace.
+         */
+        public InstantiationError() : base()
+        {
 
-    /**
-     * Constructs a new {@code InstantiationError} with the current stack trace
-     * and the class that caused this error.
-     * 
-     * @param clazz
-     *            the class that can not be instantiated.
-     */
-    protected internal InstantiationError(java.lang.Class clazz) :base(clazz.getName()){
-        
-    }
+        }
 
-}
+        /*
+         * Constructs a new {@code InstantiationError} with the current stack trace
+         * and the specified detail message.
+         * 
+         * @param detailMessage
+         *            the detail message for this error.
+         */
+        public InstantiationError(String detailMessage) : base(detailMessage)
+        {
+
+        }
+
+        /*
+         * Constructs a new {@code InstantiationError} with the current stack trace
+         * and the class that caused this error.
+         * 
+         * @param clazz
+         *            the class that can not be instantiated.
+         */
+        protected internal InstantiationError(java.lang.Class clazz) : base(clazz.getName())
+        {
+
+        }
+
+    }
 }

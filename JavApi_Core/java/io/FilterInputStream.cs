@@ -23,7 +23,8 @@ namespace biz.ritter.javapi.io
 
         protected volatile InputStream inJ;
 
-        public FilterInputStream (InputStream inJ) {
+        public FilterInputStream(InputStream inJ)
+        {
             this.inJ = inJ;
         }
 

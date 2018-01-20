@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.io
 {
-    /**
+    /*
      * A specialized {@link Writer} that writes to a file in the file system.
      * All write requests made by calling methods in this class are directly
      * forwarded to the equivalent function of the underlying operating system.
@@ -32,7 +32,7 @@ namespace biz.ritter.javapi.io
     public class FileWriter : OutputStreamWriter
     {
 
-        /**
+        /*
          * Creates a FileWriter using the File {@code file}.
          * 
          * @param file
@@ -45,7 +45,7 @@ namespace biz.ritter.javapi.io
         {
         }
 
-        /**
+        /*
          * Creates a FileWriter using the File {@code file}. The parameter
          * {@code append} determines whether or not the file is opened and appended
          * to or just opened and overwritten.
@@ -72,7 +72,7 @@ namespace biz.ritter.javapi.io
             super(new FileOutputStream(fd));
         }*/
 
-        /**
+        /*
          * Creates a FileWriter using the platform dependent {@code filename}.
          * 
          * @param filename
@@ -85,7 +85,7 @@ namespace biz.ritter.javapi.io
         {
         }
 
-        /**
+        /*
          * Creates a FileWriter using the platform dependent {@code filename}. The
          * parameter {@code append} determines whether or not the file is opened and
          * appended to or just opened and overwritten.

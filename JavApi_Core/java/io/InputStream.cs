@@ -32,7 +32,8 @@ namespace biz.ritter.javapi.io
         {
             return this.read(buffer, 0, buffer.Length);
         }
-        public virtual int read (byte [] buffer, int beginOffset, int length) {
+        public virtual int read(byte[] buffer, int beginOffset, int length)
+        {
             if (0 > beginOffset || beginOffset + length > buffer.Length || length < 0)
             {
                 throw new java.lang.IndexOutOfBoundsException();

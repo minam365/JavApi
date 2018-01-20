@@ -14,36 +14,41 @@
 using System;
 using java = biz.ritter.javapi;
 
-namespace biz.ritter.javapi.lang{
+namespace biz.ritter.javapi.lang
+{
 
-/**
- * Thrown when the virtual machine notices that an attempt is made to load a
- * class which would directly or indirectly inherit from one of its subclasses.
- * <p>
- * Note that this error can only occur when inconsistent class files are loaded,
- * since it would normally be detected at compile time.
- */
-public class ClassCircularityError : LinkageError {
-
-    private const long serialVersionUID = 1054362542914539689L;
-
-    /**
-     * Constructs a new {@code ClassCircularityError} that include the current
-     * stack trace.
+    /*
+     * Thrown when the virtual machine notices that an attempt is made to load a
+     * class which would directly or indirectly inherit from one of its subclasses.
+     * <p>
+     * Note that this error can only occur when inconsistent class files are loaded,
+     * since it would normally be detected at compile time.
+     * </p>
      */
-    public ClassCircularityError() :base(){
-        
-    }
+    public class ClassCircularityError : LinkageError
+    {
 
-    /**
-     * Constructs a new {@code ClassCircularityError} with the current stack
-     * trace and the specified detail message.
-     * 
-     * @param detailMessage
-     *            the detail message for this error.
-     */
-    public ClassCircularityError(String detailMessage) :base(detailMessage){
-        
+        private const long serialVersionUID = 1054362542914539689L;
+
+        /**
+         * Constructs a new {@code ClassCircularityError} that include the current
+         * stack trace.
+         */
+        public ClassCircularityError() : base()
+        {
+
+        }
+
+        /*
+         * Constructs a new {@code ClassCircularityError} with the current stack
+         * trace and the specified detail message.
+         * 
+         * @param detailMessage
+         *            the detail message for this error.
+         */
+        public ClassCircularityError(String detailMessage) : base(detailMessage)
+        {
+
+        }
     }
-}
 }

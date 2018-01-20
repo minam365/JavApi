@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.io
 {
 
-    /**
+    /*
      * A specialized {@link Reader} that reads from a file in the file system.
      * All read requests made by calling methods in this class are directly
      * forwarded to the equivalent function of the underlying operating system.
@@ -33,7 +33,7 @@ namespace biz.ritter.javapi.io
     public class FileReader : InputStreamReader
     {
 
-        /**
+        /*
          * Constructs a new FileReader on the given {@code file}.
          * 
          * @param file
@@ -58,7 +58,7 @@ namespace biz.ritter.javapi.io
             base(new FileInputStream(fd)){
         }*/
 
-        /**
+        /*
          * Construct a new FileReader on the given file named {@code filename}.
          * 
          * @param filename

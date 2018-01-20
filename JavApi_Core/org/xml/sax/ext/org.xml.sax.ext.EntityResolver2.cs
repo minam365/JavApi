@@ -7,7 +7,7 @@ using System;
 namespace org.xml.sax.ext
 {
 
-    /**
+    /*
      * Extended interface for mapping external entity references to input
      * sources, or providing a missing external subset.  The
      * {@link XMLReader#setEntityResolver XMLReader.setEntityResolver()} method
@@ -55,7 +55,7 @@ namespace org.xml.sax.ext
      */
     public interface EntityResolver2 : EntityResolver
     {
-        /**
+        /*
          * Allows applications to provide an external subset for documents
          * that don't explicitly define one.  Documents with DOCTYPE declarations
          * that omit an external subset can thus augment the declarations
@@ -128,7 +128,7 @@ namespace org.xml.sax.ext
         InputSource getExternalSubset(String name, String baseURI);
         //throws  SAXException, IOException;
 
-        /**
+        /*
          * Allows applications to map references to external entities into input
          * sources, or tell the parser it should use conventional URI resolution.
          * This method is only called for external entities which have been
