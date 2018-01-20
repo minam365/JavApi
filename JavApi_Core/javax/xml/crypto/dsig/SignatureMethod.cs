@@ -50,17 +50,17 @@ namespace biz.ritter.javapix.xml.crypto.dsig
 	public interface SignatureMethod : XMLStructure, AlgorithmMethod
 	{
 
-		/**
-     * Returns the algorithm-specific input parameters of this  
-     * <code>SignatureMethod</code>.
-     *
-     * <p>The returned parameters can be typecast to a {@link
-     * javax.xml.crypto.dsig.spec.SignatureMethodParameterSpec} object.
-     *
-     * @return the algorithm-specific input parameters of this 
-     *    <code>SignatureMethod</code> (may be <code>null</code> if not 
-     *    specified)
-     */
-		java.security.spec.AlgorithmParameterSpec getParameterSpec ();
+		///**
+  //   * Returns the algorithm-specific input parameters of this  
+  //   * <code>SignatureMethod</code>.
+  //   *
+  //   * <p>The returned parameters can be typecast to a {@link
+  //   * javax.xml.crypto.dsig.spec.SignatureMethodParameterSpec} object.
+  //   *
+  //   * @return the algorithm-specific input parameters of this 
+  //   *    <code>SignatureMethod</code> (may be <code>null</code> if not 
+  //   *    specified)
+  //   */
+		//java.security.spec.AlgorithmParameterSpec getParameterSpec ();
 	}
 }

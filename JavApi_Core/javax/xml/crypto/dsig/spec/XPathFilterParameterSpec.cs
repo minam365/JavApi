@@ -20,20 +20,20 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapix.xml.crypto.dsig.spec
 {
-/**
- * Parameters for the <a href="http://www.w3.org/TR/xmldsig-core/#sec-XPath">
- * XPath Filtering Transform Algorithm</a>.
- * The parameters include the XPath expression and an optional <code>Map</code> 
- * of additional namespace prefix mappings. The XML Schema Definition of
- * the XPath Filtering transform parameters is defined as:
- * <pre><code>
- * &lt;element name="XPath" type="string"/&gt;
- * </code></pre>
- *
- * @author Bastie - change to generic Map<String,String>
- * @author Sean Mullan
- * @author JSR 105 Expert Group
- * @see Transform
+/*
+  Parameters for the <a href="http://www.w3.org/TR/xmldsig-core/#sec-XPath">
+  XPath Filtering Transform Algorithm</a>.
+  The parameters include the XPath expression and an optional <code>Map</code> 
+  of additional namespace prefix mappings. The XML Schema Definition of
+  the XPath Filtering transform parameters is defined as:
+  <pre><code>
+  &lt;element name="XPath" type="string"/&gt;
+  </code></pre>
+ 
+  @author Bastie - change to generic Map<String, String>
+  @author Sean Mullan
+  @author JSR 105 Expert Group
+  @see Transform
  */
 public sealed class XPathFilterParameterSpec : TransformParameterSpec {
 

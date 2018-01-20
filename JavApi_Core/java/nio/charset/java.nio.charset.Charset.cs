@@ -250,7 +250,7 @@ namespace biz.ritter.javapi.nio.charset
         /// <summary>
         /// Check charset name for build in implementation
         /// </summary>
-        /// <param name="charset"></param>
+        /// <param name="charsetName"></param>
         /// <returns></returns>
         protected static Charset getCharsetFromBuiltInProvider (String charsetName) {
             checkCharsetName(charsetName);

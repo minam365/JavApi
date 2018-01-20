@@ -21,7 +21,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapix.xml.crypto.dsig.spec
 {
 
-/**
+/*
  * The XML Schema Definition of the <code>XPath</code> element as defined in the
  * <a href="http://www.w3.org/TR/xmldsig-filter2">
  * W3C Recommendation for XML-Signature XPath Filter 2.0</a>:

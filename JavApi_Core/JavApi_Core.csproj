@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -12,6 +12,8 @@
     <AssemblyName>JavApi</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <newfilesearch>OnLoad</newfilesearch>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -23,6 +25,7 @@
     <WarningLevel>2</WarningLevel>
     <DocumentationFile>JavApiDoc.xml</DocumentationFile>
     <NoWarn>0168</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -34,6 +37,7 @@
     <NoWarn>0168</NoWarn>
     <DocumentationFile>
     </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -968,23 +972,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup>
-    <Folder Include="javax\xml\crypto\" />
-    <Folder Include="java\security\spec\" />
-    <Folder Include="javax\xml\crypto\dsig\" />
-    <Folder Include="javax\xml\crypto\dsig\keyinfo\" />
-    <Folder Include="javax\xml\crypto\dsig\spec\" />
-    <Folder Include="javax\xml\crypto\dsig\dom\" />
-    <Folder Include="org\w3c\" />
-    <Folder Include="org\w3c\dom\" />
-    <Folder Include="javax\xml\crypto\dom\" />
-    <Folder Include="java\nio\channels\" />
-    <Folder Include="java\dotnet\lang\" />
-    <Folder Include="javax\imageio\spi\" />
-    <Folder Include="javax\xml\parsers\" />
-    <Folder Include="javax\xml\validation\" />
-    <Folder Include="org\apache\xpath\" />
-    <Folder Include="javax\annotation\" />
-    <Folder Include="biz\ritter\text\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>
