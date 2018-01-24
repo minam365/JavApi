@@ -20,7 +20,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.nio
 {
 
-    /**
+     /*
      * A buffer of chars.
      * <p/>
      * A char buffer can be created in either one of the following ways:
@@ -37,7 +37,7 @@ namespace biz.ritter.javapi.nio
      */
     public abstract class CharBuffer : Buffer, java.lang.Comparable<CharBuffer>, java.lang.CharSequence, java.lang.Appendable, java.lang.Readable {
 
-        /**
+         /*
          * Creates a char buffer based on a newly allocated char array.
          * 
          * @param capacity
@@ -53,7 +53,7 @@ namespace biz.ritter.javapi.nio
             return BufferFactory.newCharBuffer(capacity);
         }
 
-        /**
+         /*
          * Creates a new char buffer by wrapping the given char array.
          * <p/>
          * Calling this method has the same effect as
@@ -67,7 +67,7 @@ namespace biz.ritter.javapi.nio
             return wrap(array, 0, array.Length);
         }
 
-        /**
+         /*
          * Creates a new char buffer by wrapping the given char array.
          * <p/>
          * The new buffer's position will be {@code start}, limit will be
@@ -98,7 +98,7 @@ namespace biz.ritter.javapi.nio
             return buf;
         }
 
-        /**
+         /*
          * Creates a new char buffer by wrapping the given char sequence.
          * <p/>
          * Calling this method has the same effect as
@@ -122,7 +122,7 @@ namespace biz.ritter.javapi.nio
             return wrap(s);
         }
 
-        /**
+         /*
          * Creates a new char buffer by wrapping the given char sequence.
          * <p/>
          * The new buffer's position will be {@code start}, limit will be
@@ -155,7 +155,7 @@ namespace biz.ritter.javapi.nio
             return result;
         }
 
-        /**
+         /*
          * Constructs a {@code CharBuffer} with given capacity.
          * 
          * @param capacity
@@ -164,7 +164,7 @@ namespace biz.ritter.javapi.nio
         protected CharBuffer(int capacity) : base (capacity){
         }
 
-        /**
+         /*
          * Returns the char array which this buffer is based on, if there is one.
          * 
          * @return the char array which this buffer is based on.
@@ -177,7 +177,7 @@ namespace biz.ritter.javapi.nio
             return protectedArray();
         }
 
-        /**
+         /*
          * Returns the offset of the char array which this buffer is based on, if
          * there is one.
          * <p/>
@@ -194,7 +194,7 @@ namespace biz.ritter.javapi.nio
             return protectedArrayOffset();
         }
 
-        /**
+         /*
          * Returns a read-only buffer that shares its content with this buffer.
          * <p/>
          * The returned buffer is guaranteed to be a new instance, even if this
@@ -209,7 +209,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract CharBuffer asReadOnlyBuffer();
 
-        /**
+         /*
          * Returns the character located at the specified index in the buffer. The
          * index value is referenced from the current buffer position.
          * 
@@ -229,7 +229,7 @@ namespace biz.ritter.javapi.nio
             return get(positionJ + index);
         }
 
-        /**
+         /*
          * Compacts this char buffer.
          * <p/>
          * The remaining chars will be moved to the head of the buffer,
@@ -242,7 +242,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract CharBuffer compact();
 
-        /**
+         /*
          * Compare the remaining chars of this buffer to another char
          * buffer's remaining chars.
          * 
@@ -273,7 +273,7 @@ namespace biz.ritter.javapi.nio
             return remaining() - otherBuffer.remaining();
         }
 
-        /**
+         /*
          * Returns a duplicated buffer that shares its content with this buffer.
          * <p/>
          * The duplicated buffer's initial position, limit, capacity and mark are
@@ -288,7 +288,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract CharBuffer duplicate();
 
-        /**
+         /*
          * Checks whether this char buffer is equal to another object.
          * <p/>
          * If {@code other} is not a char buffer then {@code false} is returned. Two
@@ -320,7 +320,7 @@ namespace biz.ritter.javapi.nio
             return equalSoFar;
         }
 
-        /**
+         /*
          * Returns the char at the current position and increases the position by 1.
          * 
          * @return the char at the current position.
@@ -329,7 +329,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract char get();
 
-        /**
+         /*
          * Reads chars from the current position into the specified char array and
          * increases the position by the number of chars read.
          * <p/>
@@ -346,7 +346,7 @@ namespace biz.ritter.javapi.nio
             return get(dest, 0, dest.Length);
         }
 
-        /**
+         /*
          * Reads chars from the current position into the specified char array,
          * starting from the specified offset, and increases the position by the
          * number of chars read.
@@ -380,7 +380,7 @@ namespace biz.ritter.javapi.nio
             return this;
         }
 
-        /**
+         /*
          * Returns a char at the specified index; the position is not changed.
          * 
          * @param index
@@ -391,7 +391,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract char get(int index);
 
-        /**
+         /*
          * Indicates whether this buffer is based on a char array and is read/write.
          *
          * @return {@code true} if this buffer is based on a byte array and provides
@@ -401,7 +401,7 @@ namespace biz.ritter.javapi.nio
             return protectedHasArray();
         }
 
-        /**
+         /*
          * Calculates this buffer's hash code from the remaining chars. The
          * position, limit, capacity and mark don't affect the hash code.
          *
@@ -417,7 +417,7 @@ namespace biz.ritter.javapi.nio
         }
 
 
-        /**
+         /*
          * Returns the number of remaining chars.
          * 
          * @return the number of remaining chars.
@@ -426,7 +426,7 @@ namespace biz.ritter.javapi.nio
             return remaining();
         }
 
-        /**
+         /*
          * Returns the byte order used by this buffer when converting chars from/to
          * bytes.
          * <p/>
@@ -438,28 +438,28 @@ namespace biz.ritter.javapi.nio
          */
         public abstract ByteOrder order();
 
-        /**
+         /*
          * Child class implements this method to realize {@code array()}.
          *
          * @see #array()
          */
         public abstract char[] protectedArray();
 
-        /**
+         /*
          * Child class implements this method to realize {@code arrayOffset()}.
          *
          * @see #arrayOffset()
          */
         public abstract int protectedArrayOffset();
 
-        /**
+         /*
          * Child class implements this method to realize {@code hasArray()}.
          *
          * @see #hasArray()
          */
         public abstract bool protectedHasArray();
 
-        /**
+         /*
          * Writes the given char to the current position and increases the position
          * by 1.
          * 
@@ -473,7 +473,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract CharBuffer put(char c);
 
-        /**
+         /*
          * Writes chars from the given char array to the current position and
          * increases the position by the number of chars written.
          * <p/>
@@ -492,7 +492,7 @@ namespace biz.ritter.javapi.nio
             return put(src, 0, src.Length);
         }
 
-        /**
+         /*
          * Writes chars from the given char array, starting from the specified offset,
          * to the current position and increases the position by the number of chars
          * written.
@@ -528,7 +528,7 @@ namespace biz.ritter.javapi.nio
             return this;
         }
 
-        /**
+         /*
          * Writes all the remaining chars of the {@code src} char buffer to this
          * buffer's current position, and increases both buffers' position by the
          * number of chars copied.
@@ -558,7 +558,7 @@ namespace biz.ritter.javapi.nio
             return this;
         }
 
-        /**
+         /*
          * Writes a char to the specified index of this buffer; the position is not
          * changed.
          * 
@@ -574,7 +574,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract CharBuffer put(int index, char c);
 
-        /**
+         /*
          * Writes all chars of the given string to the current position of this
          * buffer, and increases the position by the length of string.
          * <p/>
@@ -593,7 +593,7 @@ namespace biz.ritter.javapi.nio
             return put(str, 0, str.length());
         }
 
-        /**
+         /*
          * Writes chars of the given string to the current position of this buffer,
          * and increases the position by the number of chars written.
          * 
@@ -628,7 +628,7 @@ namespace biz.ritter.javapi.nio
             return this;
         }
 
-        /**
+         /*
          * Returns a sliced buffer that shares its content with this buffer.
          * <p/>
          * The sliced buffer's capacity will be this buffer's {@code remaining()},
@@ -645,7 +645,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract CharBuffer slice();
 
-        /**
+         /*
          * Returns a new char buffer representing a sub-sequence of this buffer's
          * current remaining content.
          * <p/>
@@ -675,7 +675,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract java.lang.CharSequence subSequence(int start, int end);
 
-        /**
+         /*
          * Returns a string representing the current remaining chars of this buffer.
          * 
          * @return a string representing the current remaining chars of this buffer.
@@ -688,7 +688,7 @@ namespace biz.ritter.javapi.nio
             return strbuf.toString();
         }
 
-        /**
+         /*
          * Writes the given char to the current position and increases the position
          * by 1.
          *
@@ -704,7 +704,7 @@ namespace biz.ritter.javapi.nio
             return put(c);
         }
 
-        /**
+         /*
          * Writes all chars of the given character sequence {@code csq} to the
          * current position of this buffer, and increases the position by the length
          * of the csq.
@@ -728,7 +728,7 @@ namespace biz.ritter.javapi.nio
             return put("null"); //$NON-NLS-1$
         }
 
-        /**
+         /*
          * Writes chars of the given {@code CharSequence} to the current position of
          * this buffer, and increases the position by the number of chars written.
          *
@@ -764,7 +764,7 @@ namespace biz.ritter.javapi.nio
             }
         }
 
-        /**
+         /*
          * Reads characters from this buffer and puts them into {@code target}. The
          * number of chars that are copied is either the number of remaining chars
          * in this buffer or the number of remaining chars in {@code target},

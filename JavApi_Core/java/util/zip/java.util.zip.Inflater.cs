@@ -28,7 +28,7 @@ namespace biz.ritter.javapi.util.zip
 
         private long streamHandle = -1;
 
-        /**
+         /*
          * This constructor creates an inflater that expects a header from the input
          * stream. Use {@code Inflater(bool)} if the input comes without a ZLIB
          * header.
@@ -36,7 +36,7 @@ namespace biz.ritter.javapi.util.zip
         public Inflater() :this(false) {
         }
 
-        /**
+         /*
          * This constructor allows to create an inflater that expects no header from
          * the input stream.
          *
@@ -56,7 +56,7 @@ namespace biz.ritter.javapi.util.zip
         int inRead;
 
 
-        /**
+         /*
          * Release any resources associated with this {@code Inflater}. Any unused
          * input/output is discarded. This is also called by the finalize method.
          */
@@ -74,7 +74,7 @@ namespace biz.ritter.javapi.util.zip
             end();
         }
 
-        /**
+         /*
          * Indicates if the {@code Inflater} has inflated the entire deflated
          * stream. If deflated bytes remain and {@code needsInput()} returns {@code
          * true} this method will return {@code false}. This method should be
@@ -87,7 +87,7 @@ namespace biz.ritter.javapi.util.zip
             return finish;
         }
 
-        /**
+         /*
          * Returns the <i>Adler32</i> checksum of either all bytes inflated, or the
          * checksum of the preset dictionary if one has been supplied.
          *
@@ -101,7 +101,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Returns the total number of bytes read by the {@code Inflater}. This
          * method performs the same as {@code getTotalIn()} except that it returns a
          * {@code long} value instead of an integer.
@@ -120,7 +120,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Returns a the total number of bytes read by the {@code Inflater}. This
          * method performs the same as {@code getTotalOut} except it returns a
          * {@code long} value instead of an integer.
@@ -137,7 +137,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Returns the number of bytes of current input remaining to be read by the
          * inflater.
          *
@@ -149,7 +149,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Returns total number of bytes of input read by the {@code Inflater}. The
          * result value is limited by {@code Integer.MAX_VALUE}.
          *
@@ -161,7 +161,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Returns total number of bytes written to the output buffer by the {@code
          * Inflater}. The result value is limited by {@code Integer.MAX_VALUE}.
          *
@@ -173,7 +173,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Inflates bytes from current input and stores them in {@code buf}.
          *
          * @param buf
@@ -187,7 +187,7 @@ namespace biz.ritter.javapi.util.zip
             return inflate(buf, 0, buf.Length);
         }
 
-        /**
+         /*
          * Inflates up to n bytes from the current input and stores them in {@code
          * buf} starting at {@code off}.
          *
@@ -209,7 +209,7 @@ namespace biz.ritter.javapi.util.zip
         }
 
 
-        /**
+         /*
          * Indicates whether the input bytes were compressed with a preset
          * dictionary. This method should be called prior to {@code inflate()} to
          * determine whether a dictionary is required. If so {@code setDictionary()}
@@ -226,7 +226,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Indicates that input has to be passed to the inflater.
          *
          * @return {@code true} if {@code setInput} has to be called before
@@ -239,7 +239,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Resets the {@code Inflater}. Should be called prior to inflating a new
          * set of data.
          */
@@ -249,7 +249,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Sets the preset dictionary to be used for inflation to {@code buf}.
          * {@code needsDictionary()} can be called to determine whether the current
          * input was deflated using a preset dictionary.
@@ -264,7 +264,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Like {@code setDictionary(byte[])}, allowing to define a specific region
          * inside {@code buf} to be used as a dictionary.
          * <p>
@@ -287,7 +287,7 @@ namespace biz.ritter.javapi.util.zip
         }
 
 
-        /**
+         /*
          * Sets the current input to be decompressed. This method should only be
          * called if {@code needsInput()} returns {@code true}.
          *
@@ -301,7 +301,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Sets the current input to the region of the input buffer starting at
          * {@code off} and ending at {@code nbytes - 1} where data is written after
          * decompression. This method should only be called if {@code needsInput()}

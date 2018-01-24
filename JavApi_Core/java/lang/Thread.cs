@@ -180,27 +180,27 @@ namespace biz.ritter.javapi.lang
         ///</summary>
         public enum State
         {
-            /**
+             /*
              * The thread has been created, but has never been started.
              */
             NEW,
-            /**
+             /*
              * The thread may be run.
              */
             RUNNABLE,
-            /**
+             /*
              * The thread is blocked and waiting for a lock.
              */
             BLOCKED,
-            /**
+             /*
              * The thread is waiting.
              */
             WAITING,
-            /**
+             /*
              * The thread is waiting for a specified amount of time.
              */
             TIMED_WAITING,
-            /**
+             /*
              * The thread has been terminated.
              */
             TERMINATED

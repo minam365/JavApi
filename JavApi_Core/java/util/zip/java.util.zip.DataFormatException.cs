@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util.zip
 {
-    /**
+     /*
      * {@code DataFormatException} is used to indicate an error in the format of a
      * particular data stream which is to be uncompressed.
      */
@@ -26,13 +26,13 @@ namespace biz.ritter.javapi.util.zip
 
         private static readonly long serialVersionUID = 2219632870893641452L;
 
-        /**
+         /*
          * Constructs a new {@code DataFormatException} instance.
          */
         public DataFormatException() : base() {
         }
 
-        /**
+         /*
          * Constructs a new {@code DataFormatException} instance with the specified
          * message.
          *

@@ -17,7 +17,7 @@
 
 namespace biz.ritter.javapi.lang.annotation
 {
-	/**
+	 /*
  * Defines a meta-annotation for determining what {@link ElementType}s an
  * annotation can be applied to.
  * 
@@ -36,7 +36,7 @@ namespace biz.ritter.javapi.lang.annotation
 			this.elementType = types;
 		}
 
-		/**
+		 /*
      * Returns the program element types for which this annotation is applied.
      * 
      * @return the types of element as defined by {@code ElementType}

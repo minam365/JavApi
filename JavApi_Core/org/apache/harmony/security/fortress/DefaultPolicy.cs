@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 using biz.ritter.javapi.security;
 
 namespace org.apache.harmony.security.fortress {
-/**
+ /*
 * @author Alexey V. Varlamov
 */
 /*import java.security.AccessController;
@@ -30,7 +30,7 @@ import java.security.URIParameter;
 import org.apache.harmony.security.PolicyEntry;
 */
 
-/**
+ /*
  * Default Policy implementation based on policy configuration files. This
  * implementation recognizes text files, consisting of clauses with the
  * following syntax:
@@ -129,12 +129,12 @@ import org.apache.harmony.security.PolicyEntry;
 public class DefaultPolicy : Policy {
 }
 /*
-    /**
+     /*
      * System property for dynamically added policy location.
      *
     public const String JAVA_SECURITY_POLICY = "java.security.policy"; //$NON-NLS-1$
 
-    /**
+     /*
      * Prefix for numbered Policy locations specified in security.properties.
      *
     public const String POLICY_URL_PREFIX = "policy.url."; //$NON-NLS-1$
@@ -155,7 +155,7 @@ public class DefaultPolicy : Policy {
     // on the first appeal to it's data.
     private bool initialized;
 
-    /**
+     /*
      * Default constructor, equivalent to
      * <code>DefaultPolicy(new DefaultPolicyParser())</code>.
      *
@@ -167,7 +167,7 @@ public class DefaultPolicy : Policy {
         this(new DefaultPolicyParser(), needRefresh){
     }
 
-    /**
+     /*
      * Extension constructor for plugging-in a custom parser. Defers policy data
      * initialization before the first <code>getPermissions()</code> call
      * (though policy may be refreshed explicitly, as well).
@@ -184,7 +184,7 @@ public class DefaultPolicy : Policy {
         }        
     }
 
-    /**
+     /*
      * Returns collection of permissions allowed for the domain 
      * according to the policy. The evaluated characteristics of the 
      * domain are it's codesource and principals; they are assumed
@@ -224,7 +224,7 @@ public class DefaultPolicy : Policy {
 
     }
 
-    /**
+     /*
      * Returns collection of permissions allowed for the codesource 
      * according to the policy. 
      * The evaluation assumes that current principals are undefined.
@@ -262,7 +262,7 @@ public class DefaultPolicy : Policy {
         return PolicyUtils.toPermissionCollection(pc);
     }
 
-    /**
+     /*
      * Gets fresh list of locations and tries to load all of them in sequence;
      * failed loads are ignored. After processing all locations, old policy
      * settings are discarded and new ones come into force. <br>

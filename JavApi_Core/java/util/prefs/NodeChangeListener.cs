@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.prefs
 {
 
-    /**
+     /*
      * This interface is used to handle preference node change events. The
      * implementation of this interface can be installed by the {@code Preferences}
      * instance.
@@ -29,7 +29,7 @@ namespace biz.ritter.javapi.util.prefs
      */
     public interface NodeChangeListener : EventListener
     {
-        /**
+         /*
          * This method gets called whenever a child node is added to another node.
          * 
          * @param e
@@ -37,7 +37,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         void childAdded(NodeChangeEvent e);
 
-        /**
+         /*
          * This method gets called whenever a child node is removed from another
          * node.
          * 

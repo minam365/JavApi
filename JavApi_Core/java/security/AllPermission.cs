@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.security
 {
-    /**
+     /*
      * {@code AllPermission} represents the permission to perform any operation.
      * Since its {@link #implies(Permission)} method always returns {@code true},
      * granting this permission is equivalent to disabling security.
@@ -25,7 +25,7 @@ namespace biz.ritter.javapi.security
     public sealed class AllPermission : Permission
     {
 
-        /**
+         /*
          * @serial
          */
         private static readonly long serialVersionUID = -2916474571451318075L;
@@ -36,7 +36,7 @@ namespace biz.ritter.javapi.security
         // Actions name
         private const String ALL_ACTIONS = "<all actions>"; //$NON-NLS-1$
 
-        /**
+         /*
          * Constructs a new instance of {@code AllPermission}. The two argument
          * version is provided for class {@code Policy} so that it has a consistent
          * call pattern across all permissions. The name and action list are both
@@ -52,7 +52,7 @@ namespace biz.ritter.javapi.security
         {
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code AllPermission}.
          */
         public AllPermission() :
@@ -60,7 +60,7 @@ namespace biz.ritter.javapi.security
         {
         }
 
-        /**
+         /*
          * Compares the specified object with this {@code AllPermission} for
          * equality and returns {@code true} if the specified object is equal,
          * {@code false} otherwise. To be equal, the given object needs to be an
@@ -78,7 +78,7 @@ namespace biz.ritter.javapi.security
             return (obj is AllPermission);
         }
 
-        /**
+         /*
          * Returns the hash code value for this {@code AllPermission}. Returns the
          * same hash code for {@code AllPermission}s that are equal to each other as
          * required by the general contract of {@link Object#hashCode}.
@@ -92,7 +92,7 @@ namespace biz.ritter.javapi.security
             return 1;
         }
 
-        /**
+         /*
          * Returns the actions associated with this {@code AllPermission}. Since
          * {@code AllPermission} objects allow all actions, this method returns
          * always the string "&lt;all actions&gt;".
@@ -104,7 +104,7 @@ namespace biz.ritter.javapi.security
             return ALL_ACTIONS;
         }
 
-        /**
+         /*
          * Indicates whether the given permission is implied by this permission.
          * {@code AllPermission} objects imply all other permissions.
          *
@@ -117,7 +117,7 @@ namespace biz.ritter.javapi.security
             return true;
         }
 
-        /**
+         /*
          * Returns a new {@code PermissionCollection} for holding permissions of
          * this class.
          *

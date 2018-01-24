@@ -13,7 +13,7 @@
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      * The <code>Text</code> interface inherits from <code>CharacterData</code> 
      * and represents the textual content (termed character data in XML) of an 
      * <code>Element</code> or <code>Attr</code>. If there is no markup inside 
@@ -35,7 +35,7 @@ namespace org.w3c.dom
      */
     public interface Text : CharacterData
     {
-        /**
+         /*
          * Breaks this node into two nodes at the specified <code>offset</code>, 
          * keeping both in the tree as siblings. After being split, this node 
          * will contain all the content up to the <code>offset</code> point. A 

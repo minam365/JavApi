@@ -58,7 +58,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig.spec
  */
 public class XPathType {
 
-    /**
+     /*
      * Represents the filter set operation.
      */
     public class Filter {
@@ -68,7 +68,7 @@ public class XPathType {
             this.operation = operation;
         }
 
-        /**
+         /*
          * Returns the string form of the operation.
          *
          * @return the string form of the operation
@@ -77,17 +77,17 @@ public class XPathType {
             return operation;
         }
 
-        /**
+         /*
          * The intersect filter operation.
          */
         public static readonly Filter INTERSECT = new Filter("intersect");
 
-        /**
+         /*
          * The subtract filter operation.
          */
         public static readonly Filter SUBTRACT = new Filter("subtract");
 
-        /**
+         /*
          * The union filter operation.
          */
         public static readonly Filter UNION = new Filter("union");
@@ -97,7 +97,7 @@ public class XPathType {
     private readonly Filter filter;
     private java.util.Map<String,String> nsMap; 
 
-    /**
+     /*
      * Creates an <code>XPathType</code> instance with the specified XPath
      * expression and filter.
      *
@@ -120,7 +120,7 @@ public class XPathType {
         //this.nsMap = java.util.Collections<Object>.EMPTY_MAP;
     }
 
-    /**
+     /*
      * Creates an <code>XPathType</code> instance with the specified XPath
      * expression, filter, and namespace map. The map is copied to protect
      * against subsequent modification.
@@ -150,7 +150,7 @@ public class XPathType {
         return java.util.Collections<Object>.unmodifiableMap(new java.util.HashMap<String,String>(map));
     }
 
-    /**
+     /*
      * Returns the XPath expression to be evaluated.
      *
      * @return the XPath expression to be evaluated
@@ -159,7 +159,7 @@ public class XPathType {
         return expression;
     }
 
-    /**
+     /*
      * Returns the filter operation.
      *
      * @return the filter operation
@@ -168,7 +168,7 @@ public class XPathType {
         return filter;
     }
 
-    /**
+     /*
      * Returns a map of namespace prefixes. Each key is a namespace prefix
      * <code>String</code> that maps to a corresponding namespace URI
      * <code>String</code>.

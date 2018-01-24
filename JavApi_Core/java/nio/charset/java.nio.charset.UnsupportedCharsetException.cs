@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.nio.charset
 {
-    /**
+     /*
      * An {@code UnsupportedCharsetException} is thrown when an unsupported charset
      * name is encountered.
      */
@@ -32,7 +32,7 @@ namespace biz.ritter.javapi.nio.charset
         // the unsupported charset name
         private String charsetName;
 
-        /**
+         /*
          * Constructs a new {@code UnsupportedCharsetException} with the supplied
          * charset name.
          * 
@@ -43,7 +43,7 @@ namespace biz.ritter.javapi.nio.charset
             this.charsetName = charset;
         }
 
-        /**
+         /*
          * Gets the encountered unsupported charset name.
          * 
          * @return the encountered unsupported charset name.

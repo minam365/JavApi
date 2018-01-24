@@ -24,7 +24,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig.keyinfo {
 		private X509DataConstants ()
 		{
 		}
-		/**
+		 /*
      * URI identifying the X509Data KeyInfo type:
      * http://www.w3.org/2000/09/xmldsig#X509Data. This can be specified as
      * the value of the <code>type</code> parameter of the
@@ -33,7 +33,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig.keyinfo {
      */
 		internal const String TYPE = "http://www.w3.org/2000/09/xmldsig#X509Data";
 		
-		/**
+		 /*
      * URI identifying the binary (ASN.1 DER) X.509 Certificate KeyInfo type:
      * http://www.w3.org/2000/09/xmldsig#rawX509Certificate. This can be 
      * specified as the value of the <code>type</code> parameter of the

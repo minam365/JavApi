@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang
 {
-    /**
+     /*
      * The wrapper for the primitive type {@code float}.
      * 
      * @see java.lang.Number
@@ -32,7 +32,7 @@ namespace biz.ritter.javapi.lang
             Float returnValue = new Float(sysD);
             return returnValue;
         }
-        /**
+         /*
          * The {@link Class} object that represents the primitive type {@code
          * float}.
          *
@@ -48,22 +48,22 @@ namespace biz.ritter.javapi.lang
 
         private static readonly long serialVersionUID = -2671257302660747028L;
 
-        /**
+         /*
          * The value which the receiver represents.
          */
         private readonly float value;
 
-        /**
+         /*
          * Constant for the maximum {@code float} value, (2 - 2<sup>-23</sup>) * 2<sup>127</sup>.
          */
         public static readonly float MAX_VALUE = 3.40282346638528860e+38f;
 
-        /**
+         /*
          * Constant for the minimum {@code float} value, 2<sup>-149</sup>.
          */
         public static readonly float MIN_VALUE = 1.40129846432481707e-45f;
 
-        /**
+         /*
          * <p>
          * Constant for the smallest positive normal value of <code>float</code>.
          * </p>
@@ -71,17 +71,17 @@ namespace biz.ritter.javapi.lang
          */
         public static readonly float MIN_NORMAL = 1.1754943508222875E-38f;
 
-        /**
+         /*
          * Constant for the Not-a-Number (NaN) value of the {@code float} type.
          */
         public static readonly float NaN = 0.0f / 0.0f;
 
-        /**
+         /*
          * Constant for the Positive Infinity value of the {@code float} type.
          */
         public static readonly float POSITIVE_INFINITY = 1.0f / 0.0f;
 
-        /**
+         /*
          * Constant for the Negative Infinity value of the {@code float} type.
          */
         public static readonly float NEGATIVE_INFINITY = -1.0f / 0.0f;
@@ -128,7 +128,7 @@ namespace biz.ritter.javapi.lang
             if (JAVA_FLOAT_NAN_VALUE == value) return Float.NaN;
             return BitConverter.ToSingle(BitConverter.GetBytes(value), 0);
         }
-        /**
+         /*
          * Indicates whether this object is a <em>Not-a-Number (NaN)</em> value.
          * 
          * @return {@code true} if this float is <em>Not-a-Number</em>;
@@ -139,7 +139,7 @@ namespace biz.ritter.javapi.lang
             return isNaN(value);
         }
 
-        /**
+         /*
          * Indicates whether the specified float is a <em>Not-a-Number (NaN)</em>
          * value.
          * 

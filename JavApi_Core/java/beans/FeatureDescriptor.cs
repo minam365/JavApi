@@ -21,7 +21,7 @@ namespace biz.ritter.javapi.beans
     public class FeatureDescriptor
     {
         protected internal String name;
-        /**
+         /*
          * <p>
          * Sets the name.
          * </p>
@@ -34,7 +34,7 @@ namespace biz.ritter.javapi.beans
             this.name = name;
         }
 
-        /**
+         /*
          * <p>
          * Gets the name.
          * </p>

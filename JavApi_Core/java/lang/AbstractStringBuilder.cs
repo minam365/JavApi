@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang
 {
 
-    /**
+     /*
      * A modifiable {@link CharSequence sequence of characters} for use in creating
      * and modifying Strings. This class is intended as a base class for
      * {@link StringBuffer} and {@link StringBuilder}.
@@ -171,7 +171,7 @@ namespace biz.ritter.javapi.lang
             append0(s.subSequence(start, end).toString());
         }
 
-        /**
+         /*
          * Returns the number of characters that can be held without growing.
          * 
          * @return the capacity
@@ -182,7 +182,7 @@ namespace biz.ritter.javapi.lang
             return value.Length;
         }
 
-        /**
+         /*
          * Retrieves the character at the {@code index}.
          * 
          * @param index
@@ -247,7 +247,7 @@ namespace biz.ritter.javapi.lang
             count--;
         }
 
-        /**
+         /*
          * Ensures that this object has a minimum capacity available before
          * requiring the internal buffer to be enlarged. The general policy of this
          * method is that if the {@code minimumCapacity} is larger than the current
@@ -266,7 +266,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Copies the requested sequence of characters to the {@code char[]} passed
          * starting at {@code destStart}.
          *
@@ -358,7 +358,7 @@ namespace biz.ritter.javapi.lang
             insert0(index, s.subSequence(start, end).toString());
         }
 
-        /**
+         /*
          * The current length.
          * 
          * @return the number of characters contained in this instance.
@@ -512,7 +512,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Sets the character at the {@code index}.
          * 
          * @param index
@@ -536,7 +536,7 @@ namespace biz.ritter.javapi.lang
             value[index] = ch;
         }
 
-        /**
+         /*
          * Sets the current length to a new value. If the new length is larger than
          * the current length, then the new characters at the end of this object
          * will contain the {@code char} value of {@code \u0000}.
@@ -568,7 +568,7 @@ namespace biz.ritter.javapi.lang
             count = length;
         }
 
-        /**
+         /*
          * Returns the String value of the subsequence from the {@code start} index
          * to the current end.
          * 
@@ -591,7 +591,7 @@ namespace biz.ritter.javapi.lang
             throw new StringIndexOutOfBoundsException(start);
         }
 
-        /**
+         /*
          * Returns the String value of the subsequence from the {@code start} index
          * to the {@code end} index.
          * 
@@ -616,7 +616,7 @@ namespace biz.ritter.javapi.lang
             throw new StringIndexOutOfBoundsException();
         }
 
-        /**
+         /*
          * Returns the current String representation.
          * 
          * @return a String containing the characters in this instance.
@@ -636,7 +636,7 @@ namespace biz.ritter.javapi.lang
             return new StringJ(0, count, value).ToString();
         }
 
-        /**
+         /*
          * Returns a {@code CharSequence} of the subsequence from the {@code start}
          * index to the {@code end} index.
          * 
@@ -654,7 +654,7 @@ namespace biz.ritter.javapi.lang
             return new StringJ(substring(start, end));
         }
 
-        /**
+         /*
          * Searches for the first index of the specified character. The search for
          * the character starts at the beginning and moves towards the end.
          * 
@@ -669,7 +669,7 @@ namespace biz.ritter.javapi.lang
             return indexOf(s, 0);
         }
 
-        /**
+         /*
          * Searches for the index of the specified character. The search for the
          * character starts at the specified offset and moves towards the end.
          * 
@@ -718,7 +718,7 @@ namespace biz.ritter.javapi.lang
             return (start < count || start == 0) ? start : count;
         }
 
-        /**
+         /*
          * Searches for the last index of the specified character. The search for
          * the character starts at the end and moves towards the beginning.
          * 
@@ -735,7 +735,7 @@ namespace biz.ritter.javapi.lang
             return lastIndexOf(s, count);
         }
 
-        /**
+         /*
          * Searches for the index of the specified character. The search for the
          * character starts at the specified offset and moves towards the beginning.
          * 
@@ -788,7 +788,7 @@ namespace biz.ritter.javapi.lang
             return -1;
         }
 
-        /**
+         /*
          * Trims off any extra capacity beyond the current length. Note, this method
          * is NOT guaranteed to change the capacity of this object.
          * 
@@ -803,7 +803,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Retrieves the Unicode code point value at the {@code index}.
          * 
          * @param index
@@ -823,7 +823,7 @@ namespace biz.ritter.javapi.lang
             return Character.codePointAt(value, index, count);
         }
 
-        /**
+         /*
          * Retrieves the Unicode code point value that precedes the {@code index}.
          * 
          * @param index
@@ -843,7 +843,7 @@ namespace biz.ritter.javapi.lang
             return Character.codePointBefore(value, index);
         }
 
-        /**
+         /*
          * Calculates the number of Unicode code points between {@code beginIndex}
          * and {@code endIndex}.
          * 
@@ -868,7 +868,7 @@ namespace biz.ritter.javapi.lang
                     - beginIndex);
         }
 
-        /**
+         /*
          * Returns the index that is offset {@code codePointOffset} code points from
          * {@code index}.
          *

@@ -32,19 +32,19 @@ namespace biz.ritter.javapi.io
     /// <remarks>Class is ported from Apache Harmony project.</remarks>
     public class PushbackInputStream : FilterInputStream
     {
-        /**
+         /*
          * The buffer that contains pushed-back bytes.
          */
         protected byte[] buf;
 
-        /**
+         /*
          * The current position within {@code buf}. A value equal to
          * {@code buf.length} indicates that no bytes are available. A value of 0
          * indicates that the buffer is full.
          */
         protected int pos;
 
-        /**
+         /*
          * Constructs a new {@code PushbackInputStream} with the specified input
          * stream as source. The size of the pushback buffer is set to the default
          * value of 1 byte.
@@ -57,7 +57,7 @@ namespace biz.ritter.javapi.io
             pos = 1;
         }
 
-        /**
+         /*
          * Constructs a new {@code PushbackInputStream} with {@code in} as source
          * input stream. The size of the pushback buffer is set to {@code size}.
          * 
@@ -76,7 +76,7 @@ namespace biz.ritter.javapi.io
             pos = size;
         }
 
-        /**
+         /*
          * Returns the number of bytes that are available before this stream will
          * block. This is the sum of the bytes available in the pushback buffer and
          * those available from the source stream.
@@ -93,7 +93,7 @@ namespace biz.ritter.javapi.io
             return buf.Length - pos + inJ.available();
         }
 
-        /**
+         /*
          * Closes this stream. This implementation closes the source stream
          * and releases the pushback buffer.
          *
@@ -109,7 +109,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Indicates whether this stream supports the {@code mark(int)} and
          * {@code reset()} methods. {@code PushbackInputStream} does not support
          * them, so it returns {@code false}.
@@ -122,7 +122,7 @@ namespace biz.ritter.javapi.io
             return false;
         }
 
-        /**
+         /*
          * Reads a single byte from this stream and returns it as an integer in the
          * range from 0 to 255. If the pushback buffer does not contain any
          * available bytes then a byte from the source input stream is returned.
@@ -148,7 +148,7 @@ namespace biz.ritter.javapi.io
             return inJ.read();
         }
 
-        /**
+         /*
          * Reads at most {@code length} bytes from this stream and stores them in
          * the byte array {@code buffer} starting at {@code offset}. Bytes are read
          * from the pushback buffer first, then from the source stream if more bytes
@@ -213,7 +213,7 @@ namespace biz.ritter.javapi.io
             return copiedBytes;
         }
 
-        /**
+         /*
          * Skips {@code count} bytes in this stream. This implementation skips bytes
          * in the pushback buffer first and then in the source stream if necessary.
          * 
@@ -241,7 +241,7 @@ namespace biz.ritter.javapi.io
             return numSkipped;
         }
 
-        /**
+         /*
          * Pushes all the bytes in {@code buffer} back to this stream. The bytes are
          * pushed back in such a way that the next byte read from this stream is
          * buffer[0], then buffer[1] and so on.
@@ -261,7 +261,7 @@ namespace biz.ritter.javapi.io
             unread(buffer, 0, buffer.Length);
         }
 
-        /**
+         /*
          * Pushes a subset of the bytes in {@code buffer} back to this stream. The
          * subset is defined by the start position {@code offset} within
          * {@code buffer} and the number of bytes specified by {@code length}. The
@@ -310,7 +310,7 @@ namespace biz.ritter.javapi.io
             pos = pos - length;
         }
 
-        /**
+         /*
          * Pushes the specified byte {@code oneByte} back to this stream. Only the
          * least significant byte of the integer {@code oneByte} is pushed back.
          * This is done in such a way that the next byte read from this stream is
@@ -335,7 +335,7 @@ namespace biz.ritter.javapi.io
             buf[--pos] = (byte) oneByte;
         }
 
-        /**
+         /*
          * Marks the current position in this stream. Setting a mark is not
          * supported in this class; this implementation does nothing.
          * 
@@ -347,7 +347,7 @@ namespace biz.ritter.javapi.io
             return;
         }
 
-        /**
+         /*
          * Resets this stream to the last marked position. Resetting the stream is
          * not supported in this class; this implementation always throws an
          * {@code IOException}.

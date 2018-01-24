@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace org.apache.harmony.awt
 {
 
-    /**
+     /*
      * List of AWT listeners. It is for 3 purposes.
      * 1. To support list modification from listeners
      * 2. To ensure call for all listeners as atomic operation
@@ -37,7 +37,7 @@ namespace org.apache.harmony.awt
         {
         }
 
-        /**
+         /*
          * Adds system listener to this list.
          *
          * @param listener - listener to be added.
@@ -51,7 +51,7 @@ namespace org.apache.harmony.awt
             systemList.add(listener);
         }
 
-        /**
+         /*
          * Adds user (public) listener to this list.
          *
          * @param listener - listener to be added.
@@ -77,7 +77,7 @@ namespace org.apache.harmony.awt
             }
         }
 
-        /**
+         /*
          * Removes user (public) listener to this list.
          *
          * @param listener - listener to be removed.
@@ -101,7 +101,7 @@ namespace org.apache.harmony.awt
             }
         }
 
-        /**
+         /*
          * Gets all user (public) listeners in one array.
          *
          * @param emptyArray - empty array, it's for deriving particular listeners class.
@@ -116,7 +116,7 @@ namespace org.apache.harmony.awt
             }
         }
 
-        /**
+         /*
          * Gets all user (public) listeners in one list.
          *
          * @return list of all user listeners.
@@ -145,7 +145,7 @@ namespace org.apache.harmony.awt
             }
         }
 
-        /**
+         /*
          * Gets iterator for user listeners.
          *
          * @return iterator for user listeners.
@@ -163,7 +163,7 @@ namespace org.apache.harmony.awt
             }
         }
 
-        /**
+         /*
          * Gets iterator for system listeners.
          *
          * @return iterator for system listeners.

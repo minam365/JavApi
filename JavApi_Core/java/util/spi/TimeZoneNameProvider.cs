@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.spi
 {
 
-    /**
+     /*
      * TimeZoneNameProvider is an abstract class to get localized time zone names
      * from service providers.
      * 
@@ -28,7 +28,7 @@ namespace biz.ritter.javapi.util.spi
     public abstract class TimeZoneNameProvider : LocaleServiceProvider
     {
 
-        /**
+         /*
          * The constructor
          * 
          */
@@ -37,7 +37,7 @@ namespace biz.ritter.javapi.util.spi
             // do nothing
         }
 
-        /**
+         /*
          * Gets the name of the specified time zone ID that's suitable to display to
          * the user.
          * 

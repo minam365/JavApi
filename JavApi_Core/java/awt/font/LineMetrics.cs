@@ -14,7 +14,7 @@
 
 namespace biz.ritter.javapi.awt.font
 {
-    /**
+     /*
      * @author Ilya S. Okomin
      */
 

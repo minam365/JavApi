@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang{
 
-/**
+ /*
  * Thrown when the virtual machine notices that a program tries to reference,
  * on a class or object, a method that does not exist.
  */
@@ -24,7 +24,7 @@ public class NoSuchMethodError : IncompatibleClassChangeError {
 
     private const long serialVersionUID = -3765521442372831335L;
 
-    /**
+     /*
      * Constructs a new {@code NoSuchMethodError} that includes the current
      * stack trace.
      */
@@ -32,7 +32,7 @@ public class NoSuchMethodError : IncompatibleClassChangeError {
         
     }
 
-    /**
+     /*
      * Constructs a new {@code NoSuchMethodError} with the current stack trace
      * and the specified detail message.
      * 

@@ -20,7 +20,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang.annotation
 {
-	/**
+	 /*
  * Indicates that an annotation type has changed since it was compiled or
  * serialized.
  *
@@ -32,7 +32,7 @@ namespace biz.ritter.javapi.lang.annotation
 		private java.lang.reflect.Method elementJ;
 		private String foundTypeJ;
 
-		/**
+		 /*
      * Constructs an instance for the given type element and the type found.
      *
      * @param element
@@ -49,7 +49,7 @@ namespace biz.ritter.javapi.lang.annotation
 			this.foundTypeJ = foundType;
 		}
 
-		/**
+		 /*
      * Returns the method object for the invalid type.
      *
      * @return a {@link Method} instance.
@@ -59,7 +59,7 @@ namespace biz.ritter.javapi.lang.annotation
 			return elementJ;
 		}
 
-		/**
+		 /*
      * Returns the invalid type.
      *
      * @return a string describing the invalid data.

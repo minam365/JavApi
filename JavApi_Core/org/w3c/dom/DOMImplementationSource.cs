@@ -14,7 +14,7 @@ using System;
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      * This interface permits a DOM implementer to supply one or more 
      * implementations, based upon requested features and versions, as specified 
      * in . Each implemented <code>DOMImplementationSource</code> object is 
@@ -25,7 +25,7 @@ namespace org.w3c.dom
      */
     public interface DOMImplementationSource
     {
-        /**
+         /*
          *  A method to request the first DOM implementation that supports the 
          * specified features. 
          * @param features  A string that specifies which features and versions 
@@ -45,7 +45,7 @@ namespace org.w3c.dom
          */
         DOMImplementation getDOMImplementation(String features);
 
-        /**
+         /*
          * A method to request a list of DOM implementations that support the 
          * specified features and versions, as specified in .
          * @param features A string that specifies which features and versions 

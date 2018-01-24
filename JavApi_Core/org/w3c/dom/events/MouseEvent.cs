@@ -10,7 +10,7 @@ using org.w3c.dom.views;
 namespace org.w3c.dom.events
 {
 
-    /**
+     /*
      * The <code>MouseEvent</code> interface provides specific contextual  
      * information associated with Mouse events.
      * <p>The <code>detail</code> attribute inherited from <code>UIEvent</code> 
@@ -24,60 +24,60 @@ namespace org.w3c.dom.events
      */
     public interface MouseEvent : UIEvent
     {
-        /**
+         /*
          * <code>screenX</code> indicates the horizontal coordinate at which the 
          * event occurred in relative to the origin of the screen coordinate system.
          */
         int getScreenX();
-        /**
+         /*
          * <code>screenY</code> indicates the vertical coordinate at which the event 
          * occurred relative to the origin of the screen coordinate system.
          */
         int getScreenY();
-        /**
+         /*
          * <code>clientX</code> indicates the horizontal coordinate at which the 
          * event occurred relative to the DOM implementation's client area.
          */
         int getClientX();
-        /**
+         /*
          * <code>clientY</code> indicates the vertical coordinate at which the event 
          * occurred relative to the DOM implementation's client area.
          */
         int getClientY();
-        /**
+         /*
          * <code>ctrlKey</code> indicates whether the 'ctrl' key was depressed 
          * during the firing of the event.
          */
         bool getCtrlKey();
-        /**
+         /*
          * <code>shiftKey</code> indicates whether the 'shift' key was depressed 
          * during the firing of the event.
          */
         bool getShiftKey();
-        /**
+         /*
          * <code>altKey</code> indicates whether the 'alt' key was depressed during 
          * the firing of the event.  On some platforms this key may map to an 
          * alternative key name.
          */
         bool getAltKey();
-        /**
+         /*
          * <code>metaKey</code> indicates whether the 'meta' key was depressed 
          * during the firing of the event.  On some platforms this key may map to 
          * an alternative key name.
          */
         bool getMetaKey();
-        /**
+         /*
          * During mouse events caused by the depression or release of a mouse 
          * button, <code>button</code> is used to indicate which mouse button 
          * changed state.
          */
         short getButton();
-        /**
+         /*
          * <code>relatedNode</code> is used to identify a secondary node related to 
          * a UI event.
          */
         Node getRelatedNode();
-        /**
+         /*
          * 
          * @param typeArg Specifies the event type.
          * @param canBubbleArg Specifies whether or not the event can bubble.

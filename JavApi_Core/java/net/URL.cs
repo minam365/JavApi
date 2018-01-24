@@ -20,11 +20,11 @@ namespace biz.ritter.javapi.net
     public sealed class URL : java.io.Serializable
     {
 
-        /**
+         /*
          * Cache for storing protocol handler
          */
         private static java.util.Hashtable<String, URLStreamHandler> streamHandlers = new java.util.Hashtable<String, URLStreamHandler>();
-        /**
+         /*
          * The factory responsible for producing URL Stream (protocol) Handler
          */
         private static URLStreamHandlerFactory streamHandlerFactory;
@@ -33,7 +33,7 @@ namespace biz.ritter.javapi.net
 
         private int hashCode;
 
-        /**
+         /*
          * The receiver's filename.
          * 
          * @serial the file of this URL
@@ -41,7 +41,7 @@ namespace biz.ritter.javapi.net
          */
         private String file;
 
-        /**
+         /*
          * The receiver's protocol identifier.
          * 
          * @serial the protocol of this URL (http, file)
@@ -49,7 +49,7 @@ namespace biz.ritter.javapi.net
          */
         private String protocol = null;
 
-        /**
+         /*
          * The receiver's host name.
          * 
          * @serial the host of this URL
@@ -57,7 +57,7 @@ namespace biz.ritter.javapi.net
          */
         private String host;
 
-        /**
+         /*
          * The receiver's port number.
          * 
          * @serial the port of this URL
@@ -65,7 +65,7 @@ namespace biz.ritter.javapi.net
          */
         private int port = -1;
 
-        /**
+         /*
          * The receiver's authority.
          * 
          * @serial the authority of this URL
@@ -73,25 +73,25 @@ namespace biz.ritter.javapi.net
          */
         private String authority = null;
 
-        /**
+         /*
          * The receiver's userInfo.
          */
         [NonSerialized]
         private String userInfo = null;
 
-        /**
+         /*
          * The receiver's path.
          */
         [NonSerialized]
         private String path = null;
 
-        /**
+         /*
          * The receiver's query.
          */
         [NonSerialized]
         private String query = null;
 
-        /**
+         /*
          * The receiver's reference.
          * 
          * @serial the reference of this URL
@@ -102,7 +102,7 @@ namespace biz.ritter.javapi.net
         [NonSerialized]
         internal URLStreamHandler strmHandler;
 
-        /**
+         /*
          * Creates a new URL instance by parsing the string {@code spec}.
          * 
          * @param spec
@@ -116,7 +116,7 @@ namespace biz.ritter.javapi.net
         {
         }
 
-        /**
+         /*
          * Creates a new URL to the specified resource {@code spec}. This URL is
          * relative to the given {@code context}. If the protocol of the parsed URL
          * does not match with the protocol of the context URL, then the newly
@@ -136,7 +136,7 @@ namespace biz.ritter.javapi.net
         {
         }
 
-        /**
+         /*
          * Creates a new URL to the specified resource {@code spec}. This URL is
          * relative to the given {@code context}. The {@code handler} will be used
          * to parse the URL string representation. If this argument is {@code null}
@@ -294,7 +294,7 @@ namespace biz.ritter.javapi.net
             }
         }
 
-        /**
+         /*
          * Creates a new URL instance using the given arguments. The URL uses the
          * default port for the specified protocol.
          * 
@@ -314,7 +314,7 @@ namespace biz.ritter.javapi.net
         {
         }
 
-        /**
+         /*
          * Creates a new URL instance using the given arguments. The URL uses the
          * specified port instead of the default port for the given protocol.
          * 
@@ -337,7 +337,7 @@ namespace biz.ritter.javapi.net
         {
         }
 
-        /**
+         /*
          * Creates a new URL instance using the given arguments. The URL uses the
          * specified port instead of the default port for the given protocol.
          *
@@ -447,7 +447,7 @@ namespace biz.ritter.javapi.net
             fixURL(true);
 
         }
-        /**
+         /*
         * Sets the properties of this URL using the provided arguments. Only a
         * {@code URLStreamHandler} can use this method to set fields of the
         * existing URL instance. A URL is generally constant.
@@ -560,7 +560,7 @@ namespace biz.ritter.javapi.net
                 path = file;
             }
         }
-        /**
+         /*
          * Sets the receiver's stream handler to one which is appropriate for its
          * protocol. Throws a MalformedURLException if no reasonable handler is
          * available.
@@ -653,7 +653,7 @@ namespace biz.ritter.javapi.net
 
         }
 
-        /**
+         /*
          * Returns a string containing a concise, human-readable representation of
          * this URL. The returned string is the same as the result of the method
          * {@code toExternalForm()}.
@@ -665,7 +665,7 @@ namespace biz.ritter.javapi.net
             return toExternalForm();
         }
 
-        /**
+         /*
          * Returns a string containing a concise, human-readable representation of
          * this URL.
          * 

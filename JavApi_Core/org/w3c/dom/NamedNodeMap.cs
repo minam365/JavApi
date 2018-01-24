@@ -14,7 +14,7 @@ using System;
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      * Objects implementing the <code>NamedNodeMap</code> interface are used to 
      * represent collections of nodes that can be accessed by name. Note that 
      * <code>NamedNodeMap</code> does not inherit from <code>NodeList</code>; 
@@ -28,7 +28,7 @@ namespace org.w3c.dom
      */
     public interface NamedNodeMap
     {
-        /**
+         /*
          * Retrieves a node specified by name.
          * @param nameThe <code>nodeName</code> of a node to retrieve.
          * @return A <code>Node</code> (of any type) with the specified 
@@ -37,7 +37,7 @@ namespace org.w3c.dom
          */
         Node getNamedItem(String name);
 
-        /**
+         /*
          * Adds a node using its <code>nodeName</code> attribute. If a node with 
          * that name is already present in this map, it is replaced by the new 
          * one.
@@ -62,7 +62,7 @@ namespace org.w3c.dom
          */
         Node setNamedItem(Node arg);//                             throws DOMException;
 
-        /**
+         /*
          * Removes a node specified by name. When this map contains the attributes 
          * attached to an element, if the removed attribute is known to have a 
          * default value, an attribute immediately appears containing the 
@@ -78,7 +78,7 @@ namespace org.w3c.dom
          */
         Node removeNamedItem(String name);//                                throws DOMException;
 
-        /**
+         /*
          * Returns the <code>index</code>th item in the map. If <code>index</code> 
          * is greater than or equal to the number of nodes in this map, this 
          * returns <code>null</code>.
@@ -88,13 +88,13 @@ namespace org.w3c.dom
          */
         Node item(int index);
 
-        /**
+         /*
          * The number of nodes in this map. The range of valid child node indices 
          * is <code>0</code> to <code>length-1</code> inclusive. 
          */
         int getLength();
 
-        /**
+         /*
          * Retrieves a node specified by local name and namespace URI. HTML-only 
          * DOM implementations do not need to implement this method.
          * @param namespaceURIThe namespace URI of the node to retrieve.
@@ -107,7 +107,7 @@ namespace org.w3c.dom
         Node getNamedItemNS(String namespaceURI,
                                    String localName);
 
-        /**
+         /*
          * Adds a node using its <code>namespaceURI</code> and 
          * <code>localName</code>. If a node with that namespace URI and that 
          * local name is already present in this map, it is replaced by the new 
@@ -131,7 +131,7 @@ namespace org.w3c.dom
          */
         Node setNamedItemNS(Node arg);//                               throws DOMException;
 
-        /**
+         /*
          * Removes a node specified by local name and namespace URI. A removed 
          * attribute may be known to have a default value when this map contains 
          * the attributes attached to an element, as returned by the attributes 

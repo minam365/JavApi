@@ -18,7 +18,7 @@
 
 namespace biz.ritter.javapix.xml.validation{
 
-/**
+ /*
  * This class provides access to the type information determined
  * by {@link ValidatorHandler}. 
  * 
@@ -39,7 +39,7 @@ namespace biz.ritter.javapix.xml.validation{
  */
 public abstract class TypeInfoProvider {
     
-    /**
+     /*
      * Constructor for the derived class.
      * 
      * <p/>
@@ -48,7 +48,7 @@ public abstract class TypeInfoProvider {
     protected TypeInfoProvider() {
     }
     
-    /**
+     /*
      * <p>Returns the immutable {@link TypeInfo} object for the current element.</p>
      * 
      * <p/>
@@ -74,7 +74,7 @@ public abstract class TypeInfoProvider {
      */
     public abstract org.w3c.dom.TypeInfo getElementTypeInfo();
     
-    /**
+     /*
      * Returns the immutable {@link TypeInfo} object for the specified
      * attribute of the current element.
      * 
@@ -106,7 +106,7 @@ public abstract class TypeInfoProvider {
      */
     public abstract org.w3c.dom.TypeInfo getAttributeTypeInfo(int index);
     
-    /**
+     /*
      * Returns <tt>true</tt> if the specified attribute is determined
      * to be ID.
      * 
@@ -141,7 +141,7 @@ public abstract class TypeInfoProvider {
      */
     public abstract bool isIdAttribute(int index);
     
-    /**
+     /*
      * Returns <tt>false</tt> if the attribute was added by the validator.
      * 
      * <p/>

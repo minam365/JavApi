@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.nio.charset
 {
-    /**
+     /*
      * A {@code CharacterCodingException} is thrown when an encoding or decoding
      * error occurs.
      */
@@ -29,7 +29,7 @@ namespace biz.ritter.javapi.nio.charset
          */
         private static readonly long serialVersionUID = 8421532232154627783L;
 
-        /**
+         /*
          * Constructs a new {@code CharacterCodingException}.
          */
         public CharacterCodingException() : base() {

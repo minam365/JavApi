@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-/**
+ /*
  * An Error that can be thrown when something wrong occurs in loading a service
  * provider.
  */
@@ -27,7 +27,7 @@ public class ServiceConfigurationError : java.lang.Error {
     
     private const long serialVersionUID = 74132770414881L;
 
-    /**
+     /*
      * The constructor
      * 
      * @param msg
@@ -36,7 +36,7 @@ public class ServiceConfigurationError : java.lang.Error {
     public ServiceConfigurationError(String msg) :base(msg){
     }
 
-    /**
+     /*
      * The constructor
      * 
      * @param msg

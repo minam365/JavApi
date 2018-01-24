@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.awt {
 
-/**
+ /*
  * RenderingHints
  * @author Alexey A. Petrenko
  */
@@ -189,7 +189,7 @@ public class RenderingHints : java.util.Map<Object, Object>, java.lang.Cloneable
         return "RenderingHints["+map.toString()+"]"; //$NON-NLS-1$ //$NON-NLS-2$
     }
 
-    /**
+     /*
      * Key
      */
     public abstract class Key {
@@ -214,7 +214,7 @@ public class RenderingHints : java.util.Map<Object, Object>, java.lang.Cloneable
         public abstract bool isCompatibleValue(Object val);
     }
 
-    /**
+     /*
      * Private implementation of Key class
      */
     private class KeyImpl : Key {
@@ -231,7 +231,7 @@ public class RenderingHints : java.util.Map<Object, Object>, java.lang.Cloneable
         }
     }
 
-    /**
+     /*
      * Private class KeyValue is used as value for Key class instance.
      */
     private class KeyValue {

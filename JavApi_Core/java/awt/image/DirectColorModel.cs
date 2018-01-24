@@ -5,7 +5,7 @@ namespace biz.ritter.javapi.awt.image
 {
 
 
-    /**
+     /*
      * @author Igor V. Stolyarov
      */
     public class DirectColorModel : PackedColorModel
@@ -35,7 +35,7 @@ namespace biz.ritter.javapi.awt.image
         {
         }
 
-        /**
+         /*
          * Initialization of Lookup tables
          */
         private void initLUTs()

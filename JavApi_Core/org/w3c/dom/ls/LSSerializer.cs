@@ -15,7 +15,7 @@ using org.w3c.dom;
 namespace org.w3c.dom.ls
 {
 
-    /**
+     /*
      *  A <code>LSSerializer</code> provides an API for serializing (writing) a 
      * DOM document out into XML. The XML data is written to a string or an 
      * output stream. Any changes or fixups made during the serialization affect 
@@ -177,7 +177,7 @@ namespace org.w3c.dom.ls
      */
     public interface LSSerializer
     {
-        /**
+         /*
          *  The <code>DOMConfiguration</code> object used by the 
          * <code>LSSerializer</code> when serializing a DOM node. 
          * <br> In addition to the parameters recognized by the <a href='http://www.w3.org/TR/DOM-Level-3-Core/core.html#DOMConfiguration'>
@@ -279,7 +279,7 @@ namespace org.w3c.dom.ls
          */
         DOMConfiguration getDomConfig();
 
-        /**
+         /*
          *  The end-of-line sequence of characters to be used in the XML being 
          * written out. Any string is supported, but XML treats only a certain 
          * set of characters sequence as end-of-line (See section 2.11, 
@@ -300,7 +300,7 @@ namespace org.w3c.dom.ls
          * <br> 
          */
         String getNewLine();
-        /**
+         /*
          *  The end-of-line sequence of characters to be used in the XML being 
          * written out. Any string is supported, but XML treats only a certain 
          * set of characters sequence as end-of-line (See section 2.11, 
@@ -322,7 +322,7 @@ namespace org.w3c.dom.ls
          */
         void setNewLine(String newLine);
 
-        /**
+         /*
          *  When the application provides a filter, the serializer will call out 
          * to the filter before serializing each Node. The filter implementation 
          * can choose to remove the node from the stream or to terminate the 
@@ -333,7 +333,7 @@ namespace org.w3c.dom.ls
          * cdata-sections</a>" is set to <code>false</code>. 
          */
         LSSerializerFilter getFilter();
-        /**
+         /*
          *  When the application provides a filter, the serializer will call out 
          * to the filter before serializing each Node. The filter implementation 
          * can choose to remove the node from the stream or to terminate the 
@@ -345,7 +345,7 @@ namespace org.w3c.dom.ls
          */
         void setFilter(LSSerializerFilter filter);
 
-        /**
+         /*
          *  Serialize the specified node as described above in the general 
          * description of the <code>LSSerializer</code> interface. The output is 
          * written to the supplied <code>LSOutput</code>. 
@@ -389,7 +389,7 @@ namespace org.w3c.dom.ls
         bool write(Node nodeArg,
                              LSOutput destination);//                         throws LSException;
 
-        /**
+         /*
          *  A convenience method that acts as if <code>LSSerializer.write</code> 
          * was called with a <code>LSOutput</code> with no encoding specified 
          * and <code>LSOutput.systemId</code> set to the <code>uri</code> 
@@ -410,7 +410,7 @@ namespace org.w3c.dom.ls
         bool writeToURI(Node nodeArg,
                                   String uri);//                              throws LSException;
 
-        /**
+         /*
          *  Serialize the specified node as described above in the general 
          * description of the <code>LSSerializer</code> interface. The output is 
          * written to a <code>DOMString</code> that is returned to the caller. 

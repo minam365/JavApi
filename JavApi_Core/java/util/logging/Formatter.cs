@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.logging
 {
 
-/**
+ /*
  * {@code Formatter} objects are used to format {@link LogRecord} objects into a
  * string representation. Head and tail strings are sometimes used to wrap a set
  * of records. The {@code getHead} and {@code getTail} methods are used for this
@@ -26,13 +26,13 @@ namespace biz.ritter.javapi.util.logging
  */
 public abstract class Formatter {
 
-    /**
+     /*
      * Constructs a {@code Formatter} object.
      */
     protected Formatter() :base() {
     }
 
-    /**
+     /*
      * Converts a {@link LogRecord} object into a string representation. The
      * resulted string is usually localized and includes the message field of
      * the record.
@@ -43,7 +43,7 @@ public abstract class Formatter {
      */
     public abstract String format(LogRecord r);
 
-    /**
+     /*
      * Formats a {@code LogRecord} object into a localized string
      * representation. This is a convenience method for subclasses of {@code
      * Formatter}.
@@ -87,7 +87,7 @@ public abstract class Formatter {
         return pattern;
     }
 
-    /**
+     /*
      * Gets the head string used to wrap a set of log records. This base class
      * always returns an empty string.
      * 
@@ -100,7 +100,7 @@ public abstract class Formatter {
         return ""; //$NON-NLS-1$
     }
 
-    /**
+     /*
      * Gets the tail string used to wrap a set of log records. This base class
      * always returns the empty string.
      * 

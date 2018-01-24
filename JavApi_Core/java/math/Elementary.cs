@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.math
 {
-    /**
+     /*
      * Static library that provides the basic arithmetic mutable operations for
      * {@link BigInteger}. The operations provided are listed below.
      * <ul type="circle">
@@ -28,11 +28,11 @@ namespace biz.ritter.javapi.math
      */
     internal class Elementary {
 
-        /** Just to denote that this class can't be instantiated */
+         /* Just to denote that this class can't be instantiated */
         private Elementary() {
         }
 
-        /**
+         /*
          * Compares two arrays. All elements are treated as unsigned integers. The
          * magnitude is the bit chain of elements in big-endian order.
          * 
@@ -51,7 +51,7 @@ namespace biz.ritter.javapi.math
                             : BigInteger.GREATER);
         }
 
-        /** @see BigInteger#add(BigInteger) */
+         /* @see BigInteger#add(BigInteger) */
         internal static BigInteger add(BigInteger op1, BigInteger op2) {
             int [] resDigits;
             int resSign;
@@ -110,7 +110,7 @@ namespace biz.ritter.javapi.math
             return resJ;
         }
 
-        /**
+         /*
          * Performs {@code res = a + b}. 
          */
         private static void add(int[] res, int[] a, int aSize, int[] b, int bSize) {
@@ -150,7 +150,7 @@ namespace biz.ritter.javapi.math
             }
         }
 
-        /** @see BigInteger#subtract(BigInteger) */
+         /* @see BigInteger#subtract(BigInteger) */
         internal static BigInteger subtract(BigInteger op1, BigInteger op2) {
             int resSign;
             int[] resDigits;
@@ -200,7 +200,7 @@ namespace biz.ritter.javapi.math
             return res;
         }
 
-        /**
+         /*
          * Performs {@code res = a - b}. It is assumed the magnitude of a is not
          * less than the magnitude of b.
          */
@@ -222,7 +222,7 @@ namespace biz.ritter.javapi.math
             }
         }
 
-        /**
+         /*
          * Addss the value represented by {@code b} to the value represented by
          * {@code a}. It is assumed the magnitude of a is not less than the
          * magnitude of b.
@@ -236,7 +236,7 @@ namespace biz.ritter.javapi.math
             return res;
         }
 
-        /**
+         /*
          * Performs {@code op1 += op2}. {@code op1} must have enough place to store
          * the result (i.e. {@code op1.bitLength() >= op2.bitLength()}). Both
          * should be positive (i.e. {@code op1 >= op2}).
@@ -254,7 +254,7 @@ namespace biz.ritter.javapi.math
             op1.unCache();
         }
 
-        /**
+         /*
          * Adds an integer value to the array of integers remembering carry.
          * 
          * @return a possible generated carry (0 or 1)
@@ -270,7 +270,7 @@ namespace biz.ritter.javapi.math
             return (int) carry;
         }
 
-        /**
+         /*
          * Performs: {@code op1 += addend}. The number must to have place to hold a
          * possible carry.
          */
@@ -283,7 +283,7 @@ namespace biz.ritter.javapi.math
             op1.unCache();
         }
 
-        /**
+         /*
          * Performs {@code op1 -= op2}. {@code op1} must have enough place to store
          * the result (i.e. {@code op1.bitLength() >= op2.bitLength()}). Both
          * should be positive (what implies that {@code op1 >= op2}).
@@ -301,7 +301,7 @@ namespace biz.ritter.javapi.math
             op1.unCache();
         }
 
-        /**
+         /*
          * Performs {@code res = b - a}
          */
         private static void inverseSubtract(int[] res, int[] a, int aSize, int[] b,
@@ -334,7 +334,7 @@ namespace biz.ritter.javapi.math
 
         }
 
-        /**
+         /*
          * Subtracts the value represented by {@code b} from the value represented
          * by {@code a}. It is assumed the magnitude of a is not less than the
          * magnitude of b.
@@ -348,7 +348,7 @@ namespace biz.ritter.javapi.math
             return res;
         }
 
-        /**
+         /*
          * Same as
          * 
          * @link #inplaceSubtract(BigInteger, BigInteger), but without the
@@ -384,7 +384,7 @@ namespace biz.ritter.javapi.math
             op1.unCache();
         }
 
-        /**
+         /*
          * Same as @link #inplaceAdd(BigInteger, BigInteger), but without the restriction of
          *       non-positive values
          * @param op1 any number
@@ -415,7 +415,7 @@ namespace biz.ritter.javapi.math
             op1.unCache();
         }
 
-        /**
+         /*
          * Compares two arrays, representing unsigned integer in little-endian order.
          * Returns +1,0,-1 if a is - respective - greater, equal or lesser then b 
          */

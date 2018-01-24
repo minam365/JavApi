@@ -23,7 +23,7 @@ using javax = biz.ritter.javapix;
 namespace biz.ritter.javapix.xml.datatype
 {
 
-    /** 
+     /* 
      * <p>Representation for W3C XML Schema 1.0 date/time datatypes.
      * Specifically, these date/time datatypes are 
      * <a href="#DATETIME"><code>dateTime</code></a>,
@@ -177,7 +177,7 @@ namespace biz.ritter.javapix.xml.datatype
         : java.lang.Cloneable
     {
 
-        /**
+         /*
          * <p>Unset all fields to undefined.</p>
          *
          * <p>Set all int fields to {@link DatatypeConstants#FIELD_UNDEFINED} and reference fields 
@@ -185,7 +185,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract void clear();
 
-        /**
+         /*
          * <p>Reset this <code>XMLGregorianCalendar</code> to its original values.</p>
          * 
          * <p><code>XMLGregorianCalendar</code> is reset to the same values as when it was created with
@@ -239,7 +239,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract void reset();
 
-        /**
+         /*
          * <p>Set low and high order component of XSD <code>dateTime</code> year field.</p>
          * 
          * <p>Unset this field by invoking the setter with a parameter value of <code>null</code>.</p>
@@ -252,7 +252,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract void setYear(java.math.BigInteger year);
 
-        /**
+         /*
          * <p>Set year of XSD <code>dateTime</code> year field.</p>
          *
          * <p>Unset this field by invoking the setter with a parameter value of 
@@ -267,7 +267,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract void setYear(int year);
 
-        /**
+         /*
          * <p>Set month.</p>
          *
          * <p>Unset this field by invoking the setter with a parameter value of {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -280,7 +280,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract void setMonth(int month);
 
-        /**
+         /*
          * <p>Set days in month.</p>
          *
          * <p>Unset this field by invoking the setter with a parameter value of {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -293,7 +293,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract void setDay(int day);
 
-        /**
+         /*
          * <p>Set the number of minutes in the timezone offset.</p>
          *
          * <p>Unset this field by invoking the setter with a parameter value of {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -307,7 +307,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract void setTimezone(int offset);
 
-        /**
+         /*
          * <p>Set time as one unit.</p>
          *
          * @param hour value constraints are summarized in 
@@ -334,7 +334,7 @@ namespace biz.ritter.javapix.xml.datatype
             );
         }
 
-        /**
+         /*
          * <p>Set hours.</p>
          *
          * <p>Unset this field by invoking the setter with a parameter value of {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -346,7 +346,7 @@ namespace biz.ritter.javapix.xml.datatype
         */
         public abstract void setHour(int hour);
 
-        /**
+         /*
          * <p>Set minutes.</p>
          *
          * <p>Unset this field by invoking the setter with a parameter value of {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -358,7 +358,7 @@ namespace biz.ritter.javapix.xml.datatype
         */
         public abstract void setMinute(int minute);
 
-        /**
+         /*
          * <p>Set seconds.</p>
          *
          * <p>Unset this field by invoking the setter with a parameter value of {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -370,7 +370,7 @@ namespace biz.ritter.javapix.xml.datatype
         */
         public abstract void setSecond(int second);
 
-        /**
+         /*
          * <p>Set milliseconds.</p>
          *
          * <p>Unset this field by invoking the setter with a parameter value of {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -383,7 +383,7 @@ namespace biz.ritter.javapix.xml.datatype
         */
         public abstract void setMillisecond(int millisecond);
 
-        /**
+         /*
          * <p>Set fractional seconds.</p>
          *
          * <p>Unset this field by invoking the setter with a parameter value of <code>null</code>.</p>
@@ -397,7 +397,7 @@ namespace biz.ritter.javapix.xml.datatype
         public abstract void setFractionalSecond(java.math.BigDecimal fractional);
 
 
-        /**
+         /*
          * <p>Set time as one unit, including the optional infinite precision 
          * fractional seconds.</p>
          *
@@ -428,7 +428,7 @@ namespace biz.ritter.javapix.xml.datatype
         }
 
 
-        /**
+         /*
          * <p>Set time as one unit, including optional milliseconds.</p>
          *
          * @param hour value constraints are summarized in 
@@ -453,7 +453,7 @@ namespace biz.ritter.javapix.xml.datatype
             setMillisecond(millisecond);
         }
 
-        /** 
+         /* 
          * <p>Return high order component for XML Schema 1.0 dateTime datatype field for 
          * <code>year</code>.
          * <code>null</code> if this optional part of the year field is not defined.</p>
@@ -468,7 +468,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract java.math.BigInteger getEon();
 
-        /** 
+         /* 
          * <p>Return low order component for XML Schema 1.0 dateTime datatype field for 
          * <code>year</code> or {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
          * 
@@ -482,7 +482,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract int getYear();
 
-        /** 
+         /* 
          * <p>Return XML Schema 1.0 dateTime datatype field for 
          * <code>year</code>.</p>
          * 
@@ -499,7 +499,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract java.math.BigInteger getEonAndYear();
 
-        /** 
+         /* 
          * <p>Return number of month or {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
          * 
          * <p>Value constraints for this value are summarized in 
@@ -510,7 +510,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract int getMonth();
 
-        /** 
+         /* 
          * Return day in month or {@link DatatypeConstants#FIELD_UNDEFINED}.<p/>
          *
          * <p>Value constraints for this value are summarized in 
@@ -520,7 +520,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract int getDay();
 
-        /** 
+         /* 
          * Return timezone offset in minutes or 
          * {@link DatatypeConstants#FIELD_UNDEFINED} if this optional field is not defined.
          *
@@ -531,7 +531,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract int getTimezone();
 
-        /** 
+         /* 
          * Return hours or {@link DatatypeConstants#FIELD_UNDEFINED}.
          * Returns {@link DatatypeConstants#FIELD_UNDEFINED} if this field is not defined.
          *
@@ -541,7 +541,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract int getHour();
 
-        /**
+         /*
          * Return minutes or {@link DatatypeConstants#FIELD_UNDEFINED}.<p/>
          * Returns {@link DatatypeConstants#FIELD_UNDEFINED} if this field is not defined.
          *
@@ -551,7 +551,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract int getMinute();
 
-        /** 
+         /* 
          * <p>Return seconds or {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
          * 
          * <p>Returns {@link DatatypeConstants#FIELD_UNDEFINED} if this field is not defined.
@@ -571,7 +571,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract int getSecond();
 
-        /** 
+         /* 
          * <p>Return millisecond precision of {@link #getFractionalSecond()}.</p>
          * 
          * <p>This method represents a convenience accessor to infinite
@@ -604,7 +604,7 @@ namespace biz.ritter.javapix.xml.datatype
             return getFractionalSecond().movePointRight(3).intValue();
         }
 
-        /** 
+         /* 
          * <p>Return fractional seconds.</p>
          * 
          * <p><code>null</code> is returned when this optional field is not defined.</p>
@@ -624,7 +624,7 @@ namespace biz.ritter.javapix.xml.datatype
         public abstract java.math.BigDecimal getFractionalSecond();
 
         // comparisons
-        /**
+         /*
          * <p>Compare two instances of W3C XML Schema 1.0 date/time datatypes 
          * according to partial order relation defined in 
          * <a href="http://www.w3.org/TR/xmlschema-2/#dateTime-order">W3C XML Schema 1.0 Part 2, Section 3.2.7.3,
@@ -647,7 +647,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract int compare(XMLGregorianCalendar xmlGregorianCalendar);
 
-        /**
+         /*
          * <p>Normalize this instance to UTC.</p>
          *
          * <p>2000-03-04T23:00:00+03:00 normalizes to 2000-03-04T20:00:00Z</p>
@@ -657,7 +657,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract XMLGregorianCalendar normalize();
 
-        /**
+         /*
          * <p>Indicates whether parameter <code>obj</code> is "equal to" this one.</p>
          * 
          * @param obj to compare.
@@ -684,7 +684,7 @@ namespace biz.ritter.javapix.xml.datatype
             return result;
         }
 
-        /**
+         /*
          * <p>Returns a hash code consistent with the definition of the equals method.</p>
          * 
          * @return hash code of this object.
@@ -715,7 +715,7 @@ namespace biz.ritter.javapix.xml.datatype
                 + gc.getSecond();
         }
 
-        /**
+         /*
          * <p>Return the lexical representation of <code>this</code> instance. 
          * The format is specified in 
          * <a href="http://www.w3.org/TR/xmlschema-2/#dateTime-order">XML Schema 1.0 Part 2, Section 3.2.[7-14].1,
@@ -731,7 +731,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract String toXMLFormat();
 
-        /**
+         /*
          * <p>Return the name of the XML Schema date/time type that this instance 
          * maps to. Type is computed based on fields that are set.</p>
          *
@@ -844,7 +844,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract javax.xml.namespacej.QName getXMLSchemaType();
 
-        /**
+         /*
          * <p>Returns a <code>String</code> representation of this <code>XMLGregorianCalendar</code> <code>Object</code>.</p>
          * 
          * <p>The result is a lexical representation generated by {@link #toXMLFormat()}.</p>
@@ -862,13 +862,13 @@ namespace biz.ritter.javapix.xml.datatype
             return toXMLFormat();
         }
 
-        /**
+         /*
          * Validate instance by <code>getXMLSchemaType()</code> constraints.
          * @return true if data values are valid.
          */
         public abstract bool isValid();
 
-        /**
+         /*
          * <p>Add <code>duration</code> to this instance.</p>
          * 
          * <p>The computation is specified in
@@ -884,7 +884,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract void add(Duration duration);
 
-        /**
+         /*
          * <p>Convert this <code>XMLGregorianCalendar</code> to a {@link GregorianCalendar}.</p>
          * 
          * <p>When <code>this</code> instance has an undefined field, this
@@ -974,7 +974,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract java.util.GregorianCalendar toGregorianCalendar();
 
-        /**
+         /*
          * <p/>Convert this <code>XMLGregorianCalendar</code> along with provided parameters
          * to a {@link GregorianCalendar} instance.
          * 
@@ -1029,7 +1029,7 @@ namespace biz.ritter.javapix.xml.datatype
             java.util.Locale aLocale,
             XMLGregorianCalendar defaults);
 
-        /**
+         /*
          * <p>Returns a <code>java.util.TimeZone</code> for this class.</p>
          * 
          * <p>If timezone field is defined for this instance, 
@@ -1049,7 +1049,7 @@ namespace biz.ritter.javapix.xml.datatype
 
 
 
-        /**
+         /*
          * <p>Creates and returns a copy of this object.</p>
          * 
          * @return copy of this <code>Object</code>

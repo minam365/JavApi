@@ -21,7 +21,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapix.xml.crypto.dsig.keyinfo
 {
 
-/**
+ /*
  * A representation of the XML <code>KeyName</code> element as 
  * defined in the <a href="http://www.w3.org/TR/xmldsig-core/">
  * W3C Recommendation for XML-Signature Syntax and Processing</a>.
@@ -48,7 +48,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig.keyinfo
  */
 public interface KeyName : XMLStructure {
 
-    /**
+     /*
      * Returns the name of this <code>KeyName</code>.
      *
      * @return the name of this <code>KeyName</code> (never 

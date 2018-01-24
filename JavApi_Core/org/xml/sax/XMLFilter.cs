@@ -8,7 +8,7 @@ using System;
 namespace org.xml.sax
 {
 
-    /**
+     /*
      * Interface for an XML filter.
      *
      * <blockquote>
@@ -37,7 +37,7 @@ namespace org.xml.sax
     public interface XMLFilter : XMLReader
     {
 
-        /**
+         /*
          * Set the parent reader.
          *
          * <p>This method allows the application to link the filter to
@@ -49,7 +49,7 @@ namespace org.xml.sax
         void setParent(XMLReader parent);
 
 
-        /**
+         /*
          * Get the parent reader.
          *
          * <p>This method allows the application to query the parent

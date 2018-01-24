@@ -26,7 +26,7 @@ namespace biz.ritter.javapix.xml.crypto
 //import javax.xml.crypto.dsig.keyinfo.KeyInfo;
 //import javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
 
-/**
+ /*
  * A selector that finds and returns a key using the data contained in a
  * {@link KeyInfo} object. An example of an implementation of
  * this class is one that searchs a {@link java.security.KeyStore} for 
@@ -40,7 +40,7 @@ namespace biz.ritter.javapix.xml.crypto
  */
 public abstract class KeySelector {
 
-    /**
+     /*
      * The purpose of the key that is to be selected.
      */
     public class Purpose {
@@ -49,7 +49,7 @@ public abstract class KeySelector {
 
         private Purpose(String name) 	{ this.name = name; }
 
-        /**
+         /*
          * Returns a string representation of this purpose ("sign",
          * "verify", "encrypt", or "decrypt").
          *
@@ -57,30 +57,30 @@ public abstract class KeySelector {
          */
         public String toString()	{ return name; } 	
 
-        /**
+         /*
          * A key for signing.
          */
         public static readonly Purpose SIGN = new Purpose("sign");
-        /**
+         /*
          * A key for verifying.
          */
         public static readonly Purpose VERIFY = new Purpose("verify");
-        /**
+         /*
          * A key for encrypting.
          */
         public static readonly Purpose ENCRYPT = new Purpose("encrypt");
-        /**
+         /*
          * A key for decrypting.
          */
         public static readonly Purpose DECRYPT = new Purpose("decrypt");
     }
 
-    /**
+     /*
      * Default no-args constructor; intended for invocation by subclasses only.
      */
     protected KeySelector() {}
 
-    /**
+     /*
      * Attempts to find a key that satisfies the specified constraints.
      *
      * @param keyInfo a <code>KeyInfo</code> (may be <code>null</code>)
@@ -110,7 +110,7 @@ public abstract class KeySelector {
         AlgorithmMethod method, XMLCryptoContext context) 
        ;// throws KeySelectorException;
 
-    /**
+     /*
      * Returns a <code>KeySelector</code> that always selects the specified
      * key, regardless of the <code>KeyInfo</code> passed to it.
      *

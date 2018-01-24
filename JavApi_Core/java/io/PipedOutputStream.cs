@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.io
 {
-    /**
+     /*
      * Places information on a communications pipe. When two threads want to pass
      * data back and forth, one creates a piped output stream and the other one
      * creates a piped input stream.
@@ -27,12 +27,12 @@ namespace biz.ritter.javapi.io
     public class PipedOutputStream : OutputStream
     {
 
-        /**
+         /*
          * The destination PipedInputStream
          */
         private PipedInputStream dest;
 
-        /**
+         /*
          * Constructs a new unconnected {@code PipedOutputStream}. The resulting
          * stream must be connected to a {@link PipedInputStream} before data can be
          * written to it.
@@ -42,7 +42,7 @@ namespace biz.ritter.javapi.io
         {
         }
 
-        /**
+         /*
          * Constructs a new {@code PipedOutputStream} connected to the
          * {@link PipedInputStream} {@code dest}. Any data written to this stream
          * can be read from the target stream.
@@ -58,7 +58,7 @@ namespace biz.ritter.javapi.io
             connect(dest);
         }
 
-        /**
+         /*
          * Closes this stream. If this stream is connected to an input stream, the
          * input stream is closed and the pipe is disconnected.
          * 
@@ -76,7 +76,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Connects this stream to a {@link PipedInputStream}. Any data written to
          * this output stream becomes readable in the input stream.
          * 
@@ -110,7 +110,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Notifies the readers of this {@link PipedInputStream} that bytes can be
          * read. This method does nothing if this stream is not connected.
          * 
@@ -129,7 +129,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Writes {@code count} bytes from the byte array {@code buffer} starting at
          * {@code offset} to this stream. The written data can then be read from the
          * connected input stream.
@@ -163,7 +163,7 @@ namespace biz.ritter.javapi.io
             base.write(buffer, offset, count);
         }
 
-        /**
+         /*
          * Writes a single byte to this stream. Only the least significant byte of
          * the integer {@code oneByte} is written. The written byte can then be read
          * from the connected input stream.

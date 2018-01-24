@@ -18,16 +18,16 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.math
 {
-    /**
+     /*
      * Static library that provides {@link BigInteger} base conversion from/to any
      * integer represented in an {@link java.lang.String} Object.
      */
     internal class Conversion {
 
-        /** Just to denote that this class can't be instantiated */
+         /* Just to denote that this class can't be instantiated */
         private Conversion() {}
 
-        /**
+         /*
          * Holds the maximal exponent for each radix, so that radix<sup>digitFitInInt[radix]</sup>
          * fit in an {@code int} (32 bits).
          */
@@ -35,7 +35,7 @@ namespace biz.ritter.javapi.math
                 11, 10, 9, 9, 8, 8, 8, 8, 7, 7, 7, 7, 7, 7, 7, 6, 6, 6, 6, 6, 6, 6,
                 6, 6, 6, 6, 6, 6, 6, 5 };
 
-        /**
+         /*
          * bigRadices values are precomputed maximal powers of radices (integer
          * numbers from 2 to 36) that fit into unsigned int (32 bits). bigRadices[0] =
          * 2 ^ 31, bigRadices[8] = 10 ^ 9, etc.
@@ -50,7 +50,7 @@ namespace biz.ritter.javapi.math
                 1291467969, 1544804416, 1838265625, 60466176 };
 
     
-        /** @see BigInteger#toString(int) */
+         /* @see BigInteger#toString(int) */
         protected internal static String bigInteger2String(BigInteger val, int radix) {
             int sign = val.sign;
             int numberLength = val.numberLength;
@@ -127,7 +127,7 @@ namespace biz.ritter.javapi.math
             return new String(result, currentChar, resLengthInChars - currentChar);
         }
 
-        /**
+         /*
          * Builds the correspondent {@code String} representation of {@code val}
          * being scaled by {@code scale}.
          * 
@@ -414,7 +414,7 @@ namespace biz.ritter.javapi.math
             return ((rem << 32) | (quot & 0xFFFFFFFFL));
         }
 
-        /** @see BigInteger#doubleValue() */
+         /* @see BigInteger#doubleValue() */
         protected internal static double bigInteger2Double(BigInteger val) {
             // val.bitLength() < 64
             if ((val.numberLength < 2)

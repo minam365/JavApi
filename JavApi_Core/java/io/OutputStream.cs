@@ -38,7 +38,7 @@ namespace biz.ritter.javapi.io
         public virtual void close () {}
 
 
-        /**
+         /*
          * Returns true if this writer has encountered and suppressed an error. Used
          * by PrintStreams as an alternative to checked exceptions.
          */

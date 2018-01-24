@@ -8,7 +8,7 @@
 namespace org.w3c.dom.views
 {
 
-    /**
+     /*
      * The <code>DocumentView</code> interface is implemented by 
      * <code>Document</code> objects in DOM implementations supporting DOM Views. 
      * It provides an attribute to retrieve the default view of a document.
@@ -16,7 +16,7 @@ namespace org.w3c.dom.views
      */
     public interface DocumentView
     {
-        /**
+         /*
          * The default <code>AbstractView</code> for this <code>Document</code>, or 
          * <code>null</code> if none available.
          */

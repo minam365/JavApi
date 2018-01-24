@@ -17,7 +17,7 @@ using System;
 namespace biz.ritter.javapi.net
 {
 
-    /**
+     /*
      * A {@code BindException} is thrown when a process cannot bind a local
      * address/port, either because it is already bound or reserved by the OS.
      */
@@ -26,13 +26,13 @@ namespace biz.ritter.javapi.net
 
         private static readonly long serialVersionUID = -5945005768251722951L;
 
-        /**
+         /*
          * Constructs a new instance with its walkback filled in.
          */
         public BindException() : base (){
         }
 
-        /**
+         /*
          * Constructs a new instance with its walkback and message filled in.
          * 
          * @param detailMessage

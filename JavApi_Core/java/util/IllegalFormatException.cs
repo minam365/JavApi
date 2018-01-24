@@ -20,7 +20,7 @@ using biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * An {@code IllegalFormatException} is thrown when a format string that
      * contains either an illegal syntax or format specifier is transferred as a
      * parameter. Only subclasses inheriting explicitly from this exception are

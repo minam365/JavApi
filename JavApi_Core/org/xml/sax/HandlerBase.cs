@@ -7,7 +7,7 @@ using System;
 namespace org.xml.sax
 {
 
-    /**
+     /*
      * Default base class for handlers.
      *
      * <blockquote>
@@ -52,7 +52,7 @@ namespace org.xml.sax
         // Default implementation of the EntityResolver interface.
         ////////////////////////////////////////////////////////////////////
 
-        /**
+         /*
          * Resolve an external entity.
          *
          * <p>Always return null, so that the parser will use the system
@@ -83,7 +83,7 @@ namespace org.xml.sax
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Receive notification of a notation declaration.
          *
          * <p>By default, do nothing.  Application writers may override this
@@ -102,7 +102,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Receive notification of an unparsed entity declaration.
          *
          * <p>By default, do nothing.  Application writers may override this
@@ -129,7 +129,7 @@ namespace org.xml.sax
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Receive a Locator object for document events.
          *
          * <p>By default, do nothing.  Application writers may override this
@@ -146,7 +146,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Receive notification of the beginning of the document.
          *
          * <p>By default, do nothing.  Application writers may override this
@@ -164,7 +164,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Receive notification of the end of the document.
          *
          * <p>By default, do nothing.  Application writers may override this
@@ -182,7 +182,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Receive notification of the start of an element.
          *
          * <p>By default, do nothing.  Application writers may override this
@@ -202,7 +202,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Receive notification of the end of an element.
          *
          * <p>By default, do nothing.  Application writers may override this
@@ -221,7 +221,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Receive notification of character data inside an element.
          *
          * <p>By default, do nothing.  Application writers may override this
@@ -243,7 +243,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Receive notification of ignorable whitespace in element content.
          *
          * <p>By default, do nothing.  Application writers may override this
@@ -265,7 +265,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Receive notification of a processing instruction.
          *
          * <p>By default, do nothing.  Application writers may override this
@@ -292,7 +292,7 @@ namespace org.xml.sax
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Receive notification of a parser warning.
          *
          * <p>The default implementation does nothing.  Application writers
@@ -312,7 +312,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Receive notification of a recoverable parser error.
          *
          * <p>The default implementation does nothing.  Application writers
@@ -332,7 +332,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Report a fatal XML parsing error.
          *
          * <p>The default implementation throws a SAXParseException.

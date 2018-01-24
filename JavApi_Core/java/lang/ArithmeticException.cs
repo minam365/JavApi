@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang
 {
 
-    /**
+     /*
      * Thrown when the an invalid arithmetic operation is attempted.
      */
     [Serializable]
@@ -25,14 +25,14 @@ namespace biz.ritter.javapi.lang
 
         private static readonly long serialVersionUID = 2256477558314496007L;
 
-        /**
+         /*
          * Constructs a new {@code ArithmeticException} that includes the current
          * stack trace.
          */
         public ArithmeticException() : base() {
         }
 
-        /**
+         /*
          * Constructs a new {@code ArithmeticException} with the current stack trace
          * and the specified detail message.
          *

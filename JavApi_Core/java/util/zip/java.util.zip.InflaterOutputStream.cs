@@ -17,18 +17,18 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util.zip
 {
-    /**
+     /*
      * An ouput stream filter to decompress data compressed in the format of
      * Deflater.
      */
     public class InflaterOutputStream : java.io.FilterOutputStream {
 
-        /**
+         /*
          * The inflater used by InflaterOutputStream to decompress data.
          */
         protected readonly Inflater inf;
 
-        /**
+         /*
          * The internal output buffer.
          */
         protected readonly byte[] buf;
@@ -37,7 +37,7 @@ namespace biz.ritter.javapi.util.zip
 
         private static readonly int DEFAULT_BUFFER_SIZE = 1024;
 
-        /**
+         /*
          * Constructs an InflaterOutputStream with the default Inflater and internal
          * output buffer size.
          * 
@@ -48,7 +48,7 @@ namespace biz.ritter.javapi.util.zip
         public InflaterOutputStream(java.io.OutputStream outJ) :this(outJ, new Inflater()){
         }
 
-        /**
+         /*
          * Constructs an InflaterOutputStream with the specifed Inflater and the
          * default internal output buffer size.
          * 
@@ -62,7 +62,7 @@ namespace biz.ritter.javapi.util.zip
         public InflaterOutputStream(java.io.OutputStream outJ, Inflater infl) :this(outJ, infl, DEFAULT_BUFFER_SIZE){
         }
 
-        /**
+         /*
          * Constructs an InflaterOutputStream with the specifed Inflater and
          * internal output buffer size.
          * 
@@ -85,7 +85,7 @@ namespace biz.ritter.javapi.util.zip
             buf = new byte[bufLen];
         }
 
-        /**
+         /*
          * Writes remaining data into the output stream and closes the underling
          * output stream data.
          */
@@ -98,7 +98,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Flushes the output stream.
          */
         
@@ -107,7 +107,7 @@ namespace biz.ritter.javapi.util.zip
             outJ.flush();
         }
 
-        /**
+         /*
          * Finishes writing current uncompressed data into the InflaterOutputStream
          * but not closes it.
          * 
@@ -119,7 +119,7 @@ namespace biz.ritter.javapi.util.zip
             write();
         }
 
-        /**
+         /*
          * Writes a bit to the uncompressing output stream.
          * 
          * @param b
@@ -134,7 +134,7 @@ namespace biz.ritter.javapi.util.zip
             write(new byte[] { (byte) b }, 0, 1);
         }
 
-        /**
+         /*
          * Writes a bit to the uncompressing output stream.
          * 
          * @param b

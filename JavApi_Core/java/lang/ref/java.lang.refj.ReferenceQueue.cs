@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang.refj
 {
 
-    /**
+     /*
      * The {@code ReferenceQueue} is the container on which reference objects are
      * enqueued when the garbage collector detects the reachability type specified
      * for the referent.
@@ -38,7 +38,7 @@ namespace biz.ritter.javapi.lang.refj
 
         private bool empty;
     
-        /**
+         /*
          * Constructs a new instance of this class.
          */
         public ReferenceQueue() {
@@ -52,7 +52,7 @@ namespace biz.ritter.javapi.lang.refj
             return new Reference<T>[size];
         }
 
-        /**
+         /*
          * Returns the next available reference from the queue, removing it in the
          * process. Does not wait for a reference to become available.
          *
@@ -78,7 +78,7 @@ namespace biz.ritter.javapi.lang.refj
             return refJ;
         }
 
-        /**
+         /*
          * Returns the next available reference from the queue, removing it in the
          * process. Waits indefinitely for a reference to become available.
          *
@@ -92,7 +92,7 @@ namespace biz.ritter.javapi.lang.refj
             return remove(0L);
         }
 
-        /**
+         /*
          * Returns the next available reference from the queue, removing it in the
          * process. Waits for a reference to become available or the given timeout
          * period to elapse, whichever happens first.
@@ -136,7 +136,7 @@ namespace biz.ritter.javapi.lang.refj
             return refJ;
         }
 
-        /**
+         /*
          * Enqueue the reference object on the receiver.
          *
          * @param reference

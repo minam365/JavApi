@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * An {@code IllegalFormatPrecisionException} will be thrown if the precision is
      * a negative other than -1 or in other cases where precision is not supported.
      * 
@@ -30,7 +30,7 @@ namespace biz.ritter.javapi.util
 
         private int p;
 
-        /**
+         /*
          * Constructs a new {@code IllegalFormatPrecisionException} with specified
          * precision.
          * 
@@ -42,7 +42,7 @@ namespace biz.ritter.javapi.util
             this.p = p;
         }
 
-        /**
+         /*
          * Returns the precision associated with the exception.
          * 
          * @return the precision.
@@ -52,7 +52,7 @@ namespace biz.ritter.javapi.util
             return p;
         }
 
-        /**
+         /*
          * Returns the message of the exception.
          * 
          * @return the message of the exception.

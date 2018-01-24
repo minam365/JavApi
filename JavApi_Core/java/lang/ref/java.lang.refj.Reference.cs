@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang.refj
 {
-    /**
+     /*
      * Provides an abstract class which describes behavior common to all reference
      * objects. It is not possible to create immediate subclasses of
      * {@code Reference} in addition to the ones provided by this package. It is
@@ -39,14 +39,14 @@ namespace biz.ritter.javapi.lang.refj
        * Abstract class which describes behavior common to all reference objects.
        */
 
-        /**
+         /*
          * Constructs a new instance of this class.
          * 
          */
         protected internal Reference() {
         }
 
-        /**
+         /*
          * Makes the referent {@code null}. This does not force the reference
          * object to be enqueued.
          */
@@ -54,7 +54,7 @@ namespace biz.ritter.javapi.lang.refj
             return;
         }
 
-        /**
+         /*
          * Forces the reference object to be enqueued if it has been associated with
          * a queue.
          *
@@ -65,7 +65,7 @@ namespace biz.ritter.javapi.lang.refj
             return false;
         }
 
-      /**
+       /*
        * Returns the referent of the reference object.
        *
        * @return the referent to which reference refers, or {@code null} if the
@@ -75,7 +75,7 @@ namespace biz.ritter.javapi.lang.refj
             return default(T);
         }
 
-        /**
+         /*
          * Checks whether the reference object has been enqueued.
          *
          * @return {@code true} if the {@code Reference} has been enqueued, {@code
@@ -85,7 +85,7 @@ namespace biz.ritter.javapi.lang.refj
             return false;
         }
 
-        /**
+         /*
          * Implement this method to support the provided subclass implementations.
          * Initialize a newly created reference object. Associate the reference
          * object with the referent.
@@ -96,7 +96,7 @@ namespace biz.ritter.javapi.lang.refj
             return;
         }
 
-        /**
+         /*
          * Implement this method to support the provided subclass implementations.
          * Initialize a newly created reference object. Associate the reference
          * object with the referent, and the specified ReferenceQueue.
@@ -108,7 +108,7 @@ namespace biz.ritter.javapi.lang.refj
             return;
         }
 
-        /**
+         /*
          * Enqueue the reference object on the associated queue.
          * 
          * @return boolean true if the Reference was successfully enqueued. false
@@ -118,7 +118,7 @@ namespace biz.ritter.javapi.lang.refj
             return false;
         }
 
-        /**
+         /*
          * Called when a Reference has been removed from its ReferenceQueue. Set the
          * enqueued field to false.
          */

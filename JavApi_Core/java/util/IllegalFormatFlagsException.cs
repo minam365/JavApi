@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * An {@code IllegalFormatFlagsException} will be thrown if the combination of
      * the format flags is illegal.
      * 
@@ -31,7 +31,7 @@ namespace biz.ritter.javapi.util
 
         private String flags;
 
-        /**
+         /*
          * Constructs a new {@code IllegalFormatFlagsException} with the specified
          * flags.
          * 
@@ -47,7 +47,7 @@ namespace biz.ritter.javapi.util
             flags = f;
         }
 
-        /**
+         /*
          * Returns the flags that are illegal.
          * 
          * @return the flags that are illegal.
@@ -57,7 +57,7 @@ namespace biz.ritter.javapi.util
             return flags;
         }
 
-        /**
+         /*
          * Returns the message string of the IllegalFormatFlagsException.
          * 
          * @return the message string of the IllegalFormatFlagsException.

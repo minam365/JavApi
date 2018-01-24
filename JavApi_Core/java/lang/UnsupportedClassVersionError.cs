@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang
 {
 
-/**
+ /*
  * Thrown when an attempt is made to load a class with a format version that is
  * not supported by the virtual machine.
  */
@@ -25,7 +25,7 @@ public class UnsupportedClassVersionError : ClassFormatError {
 
     private const long serialVersionUID = -7123279212883497373L;
 
-    /**
+     /*
      * Constructs a new {@code UnsupportedClassVersionError} that includes the
      * current stack trace.
      */
@@ -33,7 +33,7 @@ public class UnsupportedClassVersionError : ClassFormatError {
         
     }
 
-    /**
+     /*
      * Constructs a new {@code UnsupportedClassVersionError} with the current
      * stack trace and the specified detail message.
      * 

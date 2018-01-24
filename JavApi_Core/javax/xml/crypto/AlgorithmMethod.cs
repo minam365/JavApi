@@ -21,7 +21,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapix.xml.crypto
 {
-/**
+ /*
  * An abstract representation of an algorithm defined in the XML Security 
  * specifications. Subclasses represent specific types of XML security
  * algorithms, such as a {@link javax.xml.crypto.dsig.Transform}.
@@ -31,14 +31,14 @@ namespace biz.ritter.javapix.xml.crypto
  */ 
 public interface AlgorithmMethod {
 
-    /**
+     /*
      * Returns the algorithm URI of this <code>AlgorithmMethod</code>.
      *
      * @return the algorithm URI of this <code>AlgorithmMethod</code>
      */
     String getAlgorithm();
 
-    /**
+     /*
      * Returns the algorithm parameters of this <code>AlgorithmMethod</code>.
      *
      * @return the algorithm parameters of this <code>AlgorithmMethod</code>.

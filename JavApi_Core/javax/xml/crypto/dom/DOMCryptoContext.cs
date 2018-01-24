@@ -22,7 +22,7 @@ using javax = biz.ritter.javapix;
 namespace biz.ritter.javapix.xml.crypto.dom
 {
 
-/**
+ /*
  * This class provides a DOM-specific implementation of the
  * {@link XMLCryptoContext} interface. It also includes additional
  * methods that are specific to a DOM-based implementation for registering
@@ -42,12 +42,12 @@ public class DOMCryptoContext : XMLCryptoContext {
     private URIDereferencer dereferencer;
     private String defaultPrefix;
 
-    /**
+     /*
      * Default constructor. (For invocation by subclass constructors).
      */
     protected DOMCryptoContext() {}
 
-    /**
+     /*
      * This implementation uses an internal {@link HashMap} to get the prefix 
      * that the specified URI maps to. It returns the <code>defaultPrefix</code>
      * if it maps to <code>null</code>.
@@ -63,7 +63,7 @@ public class DOMCryptoContext : XMLCryptoContext {
         return (prefix != null ? prefix : defaultPrefix);
     }
 
-    /**
+     /*
      * This implementation uses an internal {@link HashMap} to map the URI
      * to the specified prefix.
      *
@@ -88,7 +88,7 @@ public class DOMCryptoContext : XMLCryptoContext {
         return baseURI;
     }
 
-    /**
+     /*
      * @throws IllegalArgumentException {@inheritDoc}
      */
     public virtual void setBaseURI(String baseURI) {
@@ -106,7 +106,7 @@ public class DOMCryptoContext : XMLCryptoContext {
         this.dereferencer = dereferencer;
     }
 
-    /**
+     /*
      * This implementation uses an internal {@link HashMap} to get the object 
      * that the specified name maps to. 
      *
@@ -119,7 +119,7 @@ public class DOMCryptoContext : XMLCryptoContext {
         return propMap.get(name);
     }
 
-    /**
+     /*
      * This implementation uses an internal {@link HashMap} to map the name
      * to the specified object.
      *
@@ -140,7 +140,7 @@ public class DOMCryptoContext : XMLCryptoContext {
         this.ks = ks;
     }
 
-    /**
+     /*
      * Returns the <code>Element</code> with the specified ID attribute value.
      *
      * <p>This implementation uses an internal {@link HashMap} to get the 
@@ -159,7 +159,7 @@ public class DOMCryptoContext : XMLCryptoContext {
         return idMap.get(idValue);
     }
 
-    /**
+     /*
      * Registers the element's attribute specified by the namespace URI and
      * local name to be of type ID. The attribute must have a non-empty value.
      *
@@ -193,7 +193,7 @@ public class DOMCryptoContext : XMLCryptoContext {
         idMap.put(idValue, element);
     }
 
-    /**
+     /*
      * Returns a read-only iterator over the set of Id/Element mappings of 
      * this <code>DOMCryptoContext</code>. Attempts to modify the set via the
      * {@link Iterator#remove} method throw an
@@ -209,7 +209,7 @@ public class DOMCryptoContext : XMLCryptoContext {
         return (java.util.Iterator<Object>) java.util.Collections<Object>.unmodifiableMap(idMap).entrySet().iterator();
     }
 
-    /**
+     /*
      * This implementation uses an internal {@link HashMap} to get the object 
      * that the specified key maps to. 
      */
@@ -217,7 +217,7 @@ public class DOMCryptoContext : XMLCryptoContext {
         return objMap.get(key);
     }
 
-    /**
+     /*
      * This implementation uses an internal {@link HashMap} to map the key
      * to the specified object.
      *

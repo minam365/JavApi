@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util.logging
 {
-/**
+ /*
  * A {@code Handler} put the description of log events into a cycled memory
  * buffer.
  * <p>
@@ -74,7 +74,7 @@ public class MemoryHandler : Handler {
     // current position in buffer
     private int cursor;
 
-    /**
+     /*
      * Default constructor, construct and init a {@code MemoryHandler} using
      * {@code LogManager} properties or default values.
      *
@@ -119,7 +119,7 @@ public class MemoryHandler : Handler {
         buffer = new LogRecord[size];
     }
 
-    /**
+     /*
      * Construct and init a {@code MemoryHandler} using given target, size and
      * push level, other properties using {@code LogManager} properties or
      * default values.
@@ -151,7 +151,7 @@ public class MemoryHandler : Handler {
         buffer = new LogRecord[size];
     }
 
-    /**
+     /*
      * Close this handler and target handler, free all associated resources.
      * 
      * @throws SecurityException
@@ -164,7 +164,7 @@ public class MemoryHandler : Handler {
         setLevel(Level.OFF);
     }
 
-    /**
+     /*
      * Call target handler to flush any buffered output. Note that this doesn't
      * cause this {@code MemoryHandler} to push.
      */
@@ -173,7 +173,7 @@ public class MemoryHandler : Handler {
         target.flush();
     }
 
-    /**
+     /*
      * Put a given {@code LogRecord} into internal buffer. If given record is
      * not loggable, just return. Otherwise it is stored in the buffer.
      * Furthermore if the record's level is not less than the push level, the
@@ -198,7 +198,7 @@ public class MemoryHandler : Handler {
         return;}
     }
 
-    /**
+     /*
      * Return the push level.
      * 
      * @return the push level
@@ -207,7 +207,7 @@ public class MemoryHandler : Handler {
         return pushJ;
     }
 
-    /**
+     /*
      * Check if given {@code LogRecord} would be put into this
      * {@code MemoryHandler}'s internal buffer.
      * <p>
@@ -225,7 +225,7 @@ public class MemoryHandler : Handler {
         return base.isLoggable(record);
     }
 
-    /**
+     /*
      * Triggers a push action to output all buffered records to the target handler,
      * and the target handler will publish them. Then the buffer is cleared.
      */
@@ -245,7 +245,7 @@ public class MemoryHandler : Handler {
         cursor = 0;
     }
 
-    /**
+     /*
      * Set the push level. The push level is used to check the push action
      * triggering. When a new {@code LogRecord} is put into the internal
      * buffer and its level is not less than the push level, the push action

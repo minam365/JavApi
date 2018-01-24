@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang
 {
 
-    /**
+     /*
      * Thrown when an assertion has failed.
      *
      * @since 1.4
@@ -27,13 +27,13 @@ namespace biz.ritter.javapi.lang
 
         private static readonly long serialVersionUID = -5013299493970297370L;
 
-        /**
+         /*
          * Constructs a new {@code AssertionError} with no message.
          */
         public AssertionError() :base(){
         }
 
-        /**
+         /*
          * Constructs a new {@code AssertionError} with a message based on calling
          * {@link String#valueOf(Object)} with the specified object. If the object
          * is an instance of {@link Throwable}, then it also becomes the cause of
@@ -48,7 +48,7 @@ namespace biz.ritter.javapi.lang
                             : null)){
         }
 
-        /**
+         /*
          * Constructs a new {@code AssertionError} with a message based on calling
          * {@link String#valueOf(boolean)} with the specified boolean value.
          * 
@@ -58,7 +58,7 @@ namespace biz.ritter.javapi.lang
         public AssertionError(bool detailMessage) : this (java.lang.StringJ.valueOf(detailMessage).ToString()){
         }
 
-        /**
+         /*
          * Constructs a new {@code AssertionError} with a message based on calling
          * {@link String#valueOf(char)} with the specified character value.
          * 
@@ -68,7 +68,7 @@ namespace biz.ritter.javapi.lang
         public AssertionError(char detailMessage):this(""+detailMessage) {
         }
 
-        /**
+         /*
          * Constructs a new {@code AssertionError} with a message based on calling
          * {@link String#valueOf(int)} with the specified integer value.
          * 
@@ -79,7 +79,7 @@ namespace biz.ritter.javapi.lang
             this(Integer.toString(detailMessage)){
         }
 
-        /**
+         /*
          * Constructs a new {@code AssertionError} with a message based on calling
          * {@link String#valueOf(long)} with the specified long value.
          * 
@@ -90,7 +90,7 @@ namespace biz.ritter.javapi.lang
             this(Long.toString(detailMessage)){
         }
 
-        /**
+         /*
          * Constructs a new {@code AssertionError} with a message based on calling
          * {@link String#valueOf(float)} with the specified float value.
          * 
@@ -101,7 +101,7 @@ namespace biz.ritter.javapi.lang
             this(Float.toString(detailMessage)){
         }
 
-        /**
+         /*
          * Constructs a new {@code AssertionError} with a message based on calling
          * {@link String#valueOf(double)} with the specified double value.
          * 

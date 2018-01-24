@@ -14,7 +14,7 @@ using System;
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      * The <code>Node</code> interface is the primary datatype for the entire 
      * Document Object Model. It represents a single node in the document tree. 
      * While all objects implementing the <code>Node</code> interface expose 
@@ -35,12 +35,12 @@ namespace org.w3c.dom
      */
     public interface Node
     {
-        /**
+         /*
          * The name of this node, depending on its type; see the table above. 
          */
         String getNodeName();
 
-        /**
+         /*
          * The value of this node, depending on its type; see the table above. 
          * When it is defined to be <code>null</code>, setting it has no effect.
          * @exception DOMException
@@ -53,12 +53,12 @@ namespace org.w3c.dom
         String getNodeValue();//                                 throws DOMException;
         void setNodeValue(String nodeValue);//                                 throws DOMException;
 
-        /**
+         /*
          * A code representing the type of the underlying object, as defined above.
          */
         short getNodeType();
 
-        /**
+         /*
          * The parent of this node. All nodes, except <code>Attr</code>, 
          * <code>Document</code>, <code>DocumentFragment</code>, 
          * <code>Entity</code>, and <code>Notation</code> may have a parent. 
@@ -68,44 +68,44 @@ namespace org.w3c.dom
          */
         Node getParentNode();
 
-        /**
+         /*
          * A <code>NodeList</code> that contains all children of this node. If 
          * there are no children, this is a <code>NodeList</code> containing no 
          * nodes.
          */
         NodeList getChildNodes();
 
-        /**
+         /*
          * The first child of this node. If there is no such node, this returns 
          * <code>null</code>.
          */
         Node getFirstChild();
 
-        /**
+         /*
          * The last child of this node. If there is no such node, this returns 
          * <code>null</code>.
          */
         Node getLastChild();
 
-        /**
+         /*
          * The node immediately preceding this node. If there is no such node, 
          * this returns <code>null</code>.
          */
         Node getPreviousSibling();
 
-        /**
+         /*
          * The node immediately following this node. If there is no such node, 
          * this returns <code>null</code>.
          */
         Node getNextSibling();
 
-        /**
+         /*
          * A <code>NamedNodeMap</code> containing the attributes of this node (if 
          * it is an <code>Element</code>) or <code>null</code> otherwise. 
          */
         NamedNodeMap getAttributes();
 
-        /**
+         /*
          * The <code>Document</code> object associated with this node. This is 
          * also the <code>Document</code> object used to create new nodes. When 
          * this node is a <code>Document</code> or a <code>DocumentType</code> 
@@ -115,7 +115,7 @@ namespace org.w3c.dom
          */
         Document getOwnerDocument();
 
-        /**
+         /*
          * Inserts the node <code>newChild</code> before the existing child node 
          * <code>refChild</code>. If <code>refChild</code> is <code>null</code>, 
          * insert <code>newChild</code> at the end of the list of children.
@@ -141,7 +141,7 @@ namespace org.w3c.dom
         Node insertBefore(Node newChild,
                                  Node refChild);//                             throws DOMException;
 
-        /**
+         /*
          * Replaces the child node <code>oldChild</code> with <code>newChild</code>
          *  in the list of children, and returns the <code>oldChild</code> node.
          * <br>If <code>newChild</code> is a <code>DocumentFragment</code> object, 
@@ -166,7 +166,7 @@ namespace org.w3c.dom
         Node replaceChild(Node newChild,
                                  Node oldChild);//                             throws DOMException;
 
-        /**
+         /*
          * Removes the child node indicated by <code>oldChild</code> from the list 
          * of children, and returns it.
          * @param oldChildThe node being removed.
@@ -178,7 +178,7 @@ namespace org.w3c.dom
          */
         Node removeChild(Node oldChild);//                            throws DOMException;
 
-        /**
+         /*
          * Adds the node <code>newChild</code> to the end of the list of children 
          * of this node. If the <code>newChild</code> is already in the tree, it 
          * is first removed.
@@ -196,14 +196,14 @@ namespace org.w3c.dom
          */
         Node appendChild(Node newChild);//                            throws DOMException;
 
-        /**
+         /*
          * Returns whether this node has any children.
          * @return  <code>true</code> if this node has any children, 
          *   <code>false</code> otherwise.
          */
         bool hasChildNodes();
 
-        /**
+         /*
          * Returns a duplicate of this node, i.e., serves as a generic copy 
          * constructor for nodes. The duplicate node has no parent; (
          * <code>parentNode</code> is <code>null</code>.).
@@ -229,7 +229,7 @@ namespace org.w3c.dom
          */
         Node cloneNode(bool deep);
 
-        /**
+         /*
          * Puts all <code>Text</code> nodes in the full depth of the sub-tree 
          * underneath this <code>Node</code>, including attribute nodes, into a 
          * "normal" form where only structure (e.g., elements, comments, 
@@ -247,7 +247,7 @@ namespace org.w3c.dom
          */
         void normalize();
 
-        /**
+         /*
          * Tests whether the DOM implementation implements a specific feature and 
          * that feature is supported by this node.
          * @param featureThe name of the feature to test. This is the same name 
@@ -264,7 +264,7 @@ namespace org.w3c.dom
         bool isSupported(String feature,
                                    String version);
 
-        /**
+         /*
          * The namespace URI of this node, or <code>null</code> if it is 
          * unspecified.
          * <br>This is not a computed value that is the result of a namespace 
@@ -281,7 +281,7 @@ namespace org.w3c.dom
          */
         String getNamespaceURI();
 
-        /**
+         /*
          * The namespace prefix of this node, or <code>null</code> if it is 
          * unspecified.
          * <br>Note that setting this attribute, when permitted, changes the 
@@ -315,7 +315,7 @@ namespace org.w3c.dom
         String getPrefix();
         void setPrefix(String prefix);//                               throws DOMException;
 
-        /**
+         /*
          * Returns the local part of the qualified name of this node.
          * <br>For nodes of any type other than <code>ELEMENT_NODE</code> and 
          * <code>ATTRIBUTE_NODE</code> and nodes created with a DOM Level 1 
@@ -325,7 +325,7 @@ namespace org.w3c.dom
          */
         String getLocalName();
 
-        /**
+         /*
          * Returns whether this node (if it is an element) has any attributes.
          * @return <code>true</code> if this node has any attributes, 
          *   <code>false</code> otherwise.
@@ -341,51 +341,51 @@ namespace org.w3c.dom
     {
 
         // NodeType
-        /**
+         /*
          * The node is an <code>Element</code>.
          */
         public const short ELEMENT_NODE = 1;
-        /**
+         /*
          * The node is an <code>Attr</code>.
          */
         public const short ATTRIBUTE_NODE = 2;
-        /**
+         /*
          * The node is a <code>Text</code> node.
          */
         public const short TEXT_NODE = 3;
-        /**
+         /*
          * The node is a <code>CDATASection</code>.
          */
         public const short CDATA_SECTION_NODE = 4;
-        /**
+         /*
          * The node is an <code>EntityReference</code>.
          */
         public const short ENTITY_REFERENCE_NODE = 5;
-        /**
+         /*
          * The node is an <code>Entity</code>.
          */
         public const short ENTITY_NODE = 6;
-        /**
+         /*
          * The node is a <code>ProcessingInstruction</code>.
          */
         public const short PROCESSING_INSTRUCTION_NODE = 7;
-        /**
+         /*
          * The node is a <code>Comment</code>.
          */
         public const short COMMENT_NODE = 8;
-        /**
+         /*
          * The node is a <code>Document</code>.
          */
         public const short DOCUMENT_NODE = 9;
-        /**
+         /*
          * The node is a <code>DocumentType</code>.
          */
         public const short DOCUMENT_TYPE_NODE = 10;
-        /**
+         /*
          * The node is a <code>DocumentFragment</code>.
          */
         public const short DOCUMENT_FRAGMENT_NODE = 11;
-        /**
+         /*
          * The node is a <code>Notation</code>.
          */
         public const short NOTATION_NODE = 12;

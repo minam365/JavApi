@@ -18,7 +18,7 @@ namespace biz.ritter.javapi.sql
 {
 
 
-    /**
+     /*
      * Provides facilities for managing JDBC drivers.
      * <p/>
      * The {@code DriverManager} class loads JDBC drivers during its initialization,
@@ -100,7 +100,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Removes a driver from the {@code DriverManager}'s registered driver list.
          * This will only succeed when the caller's class loader loaded the driver
          * that is to be removed. If the driver was loaded by a different class
@@ -135,7 +135,7 @@ namespace biz.ritter.javapi.sql
             }
         }
 
-        /**
+         /*
          * Attempts to establish a connection to the given database URL.
          * 
          * @param url
@@ -151,7 +151,7 @@ namespace biz.ritter.javapi.sql
             return getConnection(url, new java.util.Properties());
         }
 
-        /**
+         /*
          * Attempts to establish a connection to the given database URL.
          * 
          * @param url
@@ -200,7 +200,7 @@ namespace biz.ritter.javapi.sql
             throw new SQLException("No suitable driver", sqlState); //$NON-NLS-1$ 
         }
 
-        /**
+         /*
          * Attempts to establish a connection to the given database URL.
          * 
          * @param url
@@ -230,7 +230,7 @@ namespace biz.ritter.javapi.sql
             return getConnection(url, theProperties);
         }
 
-        /**
+         /*
          * Tries to find a driver that can interpret the supplied URL.
          * 
          * @param url
@@ -270,7 +270,7 @@ namespace biz.ritter.javapi.sql
             throw new SQLException("No suitable driver", "08001"); //$NON-NLS-1$ //$NON-NLS-2$
         }
 
-        /**
+         /*
          * Returns an {@code Enumeration} that contains all of the loaded JDBC
          * drivers that the current caller can access.
          * 
@@ -305,7 +305,7 @@ namespace biz.ritter.javapi.sql
             }
         }
 
-        /**
+         /*
          * Returns the login timeout when connecting to a database in seconds.
          * 
          * @return the login timeout in seconds.
@@ -315,7 +315,7 @@ namespace biz.ritter.javapi.sql
             return loginTimeout;
         }
 
-        /**
+         /*
          * Gets the log {@code PrintStream} used by the {@code DriverManager} and
          * all the JDBC Drivers.
          *
@@ -327,7 +327,7 @@ namespace biz.ritter.javapi.sql
             return thePrintStream;
         }
 
-        /**
+         /*
          * Retrieves the log writer.
          * 
          * @return A {@code PrintWriter} object used as the log writer. {@code null}
@@ -338,7 +338,7 @@ namespace biz.ritter.javapi.sql
             return thePrintWriter;
         }
 
-        /**
+         /*
          * Prints a message to the current JDBC log stream. This is either the
          * {@code PrintWriter} or (deprecated) the {@code PrintStream}, if set.
          * 
@@ -364,7 +364,7 @@ namespace biz.ritter.javapi.sql
             return;
         }
 
-        /**
+         /*
          * Registers a given JDBC driver with the {@code DriverManager}.
          * <p/>
          * A newly loaded JDBC driver class should register itself with the
@@ -387,7 +387,7 @@ namespace biz.ritter.javapi.sql
             }
         }
 
-        /**
+         /*
          * Sets the login timeout when connecting to a database in seconds.
          * 
          * @param seconds
@@ -399,7 +399,7 @@ namespace biz.ritter.javapi.sql
             return;
         }
 
-        /**
+         /*
          * Sets the print stream to use for logging data from the {@code
          * DriverManager} and the JDBC drivers.
          *
@@ -414,7 +414,7 @@ namespace biz.ritter.javapi.sql
             thePrintStream = outJ;
         }
 
-        /**
+         /*
          * Sets the {@code PrintWriter} that is used by all loaded drivers, and also
          * the {@code DriverManager}.
          * 
@@ -441,7 +441,7 @@ namespace biz.ritter.javapi.sql
             }
         }
 
-        /**
+         /*
          * Determines whether the supplied object was loaded by the given {@code ClassLoader}.
          * 
          * @param theObject

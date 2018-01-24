@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.sql
 {
 
-    /**
+     /*
      * An interface used to call <i>Stored Procedures</i>.
      * <p/>
      * The JDBC API provides an SQL escape syntax allowing <i>Stored Procedures</i>
@@ -50,7 +50,7 @@ namespace biz.ritter.javapi.sql
     public interface CallableStatement : PreparedStatement
     {
 
-        /**
+         /*
          * Gets the value of a specified JDBC {@code ARRAY} parameter as a
          * {@code java.sql.Array}.
          * 
@@ -63,7 +63,7 @@ namespace biz.ritter.javapi.sql
          */
         Array getArray(int parameterIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified JDBC {@code ARRAY} parameter as a {@code
          * java.sql.Array}.
          * 
@@ -75,7 +75,7 @@ namespace biz.ritter.javapi.sql
          */
         Array getArray(String parameterName);// throws SQLException;
 
-        /**
+         /*
          * Returns a new {@link BigDecimal} representation of the JDBC {@code
          * NUMERIC} parameter specified by the input index.
          * 
@@ -90,7 +90,7 @@ namespace biz.ritter.javapi.sql
          */
         java.math.BigDecimal getBigDecimal(int parameterIndex);// throws SQLException;
 
-        /**
+         /*
          * Returns a new {@link BigDecimal} representation of the JDBC {@code
          * NUMERIC} parameter specified by the input index. The number of digits
          * after the decimal point is specified by {@code scale}.
@@ -111,7 +111,7 @@ namespace biz.ritter.javapi.sql
         java.math.BigDecimal getBigDecimal(int parameterIndex, int scale)
                ;// throws SQLException;
 
-        /**
+         /*
          * Returns a new {@link BigDecimal} representation of the JDBC {@code
          * NUMERIC} parameter specified by the input name.
          * 
@@ -125,7 +125,7 @@ namespace biz.ritter.javapi.sql
          */
         java.math.BigDecimal getBigDecimal(String parameterName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified JDBC {@code BLOB} parameter as a {@code
          * java.sql.Blob}.
          * 
@@ -140,7 +140,7 @@ namespace biz.ritter.javapi.sql
          */
         Blob getBlob(int parameterIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified JDBC {@code BLOB} parameter as a {@code
          * java.sql.Blob}.
          * 
@@ -154,7 +154,7 @@ namespace biz.ritter.javapi.sql
          */
         Blob getBlob(String parameterName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified JDBC {@code BIT} parameter as a boolean.
          * 
          * @param parameterIndex
@@ -167,7 +167,7 @@ namespace biz.ritter.javapi.sql
          */
         bool getBoolean(int parameterIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified JDBC {@code BIT} parameter as a {@code
          * boolean}.
          * 
@@ -180,7 +180,7 @@ namespace biz.ritter.javapi.sql
          */
         bool getBoolean(String parameterName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified JDBC {@code TINYINT} parameter as a {@code
          * byte}.
          * 
@@ -194,7 +194,7 @@ namespace biz.ritter.javapi.sql
          */
         byte getByte(int parameterIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified JDBC {@code TINYINT} parameter as a Java
          * {@code byte}.
          * 
@@ -207,7 +207,7 @@ namespace biz.ritter.javapi.sql
          */
         byte getByte(String parameterName);// throws SQLException;
 
-        /**
+         /*
          * Returns a byte array representation of the indexed JDBC {@code BINARY} or
          * {@code VARBINARY} parameter.
          * 
@@ -221,7 +221,7 @@ namespace biz.ritter.javapi.sql
          */
         byte[] getBytes(int parameterIndex);// throws SQLException;
 
-        /**
+         /*
          * Returns a byte array representation of the named JDBC {@code BINARY} or
          * {@code VARBINARY} parameter.
          * 
@@ -234,7 +234,7 @@ namespace biz.ritter.javapi.sql
          */
         byte[] getBytes(String parameterName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified JDBC {@code CLOB} parameter as a {@code
          * java.sql.Clob}.
          * 
@@ -250,7 +250,7 @@ namespace biz.ritter.javapi.sql
          */
         Clob getClob(int parameterIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified JDBC {@code CLOB} parameter as a {@code
          * java.sql.Clob}.
          * 
@@ -264,7 +264,7 @@ namespace biz.ritter.javapi.sql
          */
         Clob getClob(String parameterName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of the specified JDBC {@code DATE} parameter as a {@code
          * java.sql.Date}.
          * 
@@ -279,7 +279,7 @@ namespace biz.ritter.javapi.sql
          */
         Date getDate(int parameterIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of the specified JDBC {@code DATE} parameter as a {@code
          * java.sql.Date}, using the specified {@code Calendar} to construct the date.
          * <p/>
@@ -300,7 +300,7 @@ namespace biz.ritter.javapi.sql
          */
         Date getDate(int parameterIndex, java.util.Calendar cal);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of the specified JDBC {@code DATE} parameter as a {@code
          * java.sql.Date}.
          * 
@@ -314,7 +314,7 @@ namespace biz.ritter.javapi.sql
          */
         Date getDate(String parameterName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of the specified JDBC {@code DATE} parameter as a {@code
          * java.sql.Date}, using the specified {@code Calendar} to construct the date.
          * <p/>
@@ -334,7 +334,7 @@ namespace biz.ritter.javapi.sql
          */
         Date getDate(String parameterName, java.util.Calendar cal);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of the specified JDBC {@code DOUBLE} parameter as a
          * {@code double}.
          * 
@@ -348,7 +348,7 @@ namespace biz.ritter.javapi.sql
          */
         double getDouble(int parameterIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of the specified JDBC {@code DOUBLE} parameter as a
          * {@code double}.
          * 
@@ -361,7 +361,7 @@ namespace biz.ritter.javapi.sql
          */
         double getDouble(String parameterName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of the specified JDBC {@code FLOAT} parameter as a {@code
          * float}.
          * 
@@ -375,7 +375,7 @@ namespace biz.ritter.javapi.sql
          */
         float getFloat(int parameterIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of the specified JDBC {@code FLOAT} parameter as a Java
          * {@code float}.
          * 
@@ -388,7 +388,7 @@ namespace biz.ritter.javapi.sql
          */
         float getFloat(String parameterName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of the specified JDBC {@code INTEGER} parameter as an
          * {@code int}.
          * 
@@ -402,7 +402,7 @@ namespace biz.ritter.javapi.sql
          */
         int getInt(int parameterIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of the specified JDBC {@code INTEGER} parameter as an
          * {@code int}.
          * 
@@ -415,7 +415,7 @@ namespace biz.ritter.javapi.sql
          */
         int getInt(String parameterName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of the specified JDBC {@code BIGINT} parameter as a
          * {@code long}.
          * 
@@ -429,7 +429,7 @@ namespace biz.ritter.javapi.sql
          */
         long getLong(int parameterIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of the specified JDBC {@code BIGINT} parameter as a
          * {@code long}.
          * 
@@ -442,7 +442,7 @@ namespace biz.ritter.javapi.sql
          */
         long getLong(String parameterName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of the specified parameter as a Java {@code Object}.
          * <p/>
          * The object type returned is the JDBC type registered for the parameter
@@ -459,7 +459,7 @@ namespace biz.ritter.javapi.sql
          */
         Object getObject(int parameterIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of the specified parameter as an {@code Object}. The
          * {@code Map} gives the correspondence between SQL types and Java classes.
          * 
@@ -476,7 +476,7 @@ namespace biz.ritter.javapi.sql
         Object getObject(int parameterIndex, java.util.Map<String, java.lang.Class> map)
                ;// throws SQLException;
 
-        /**
+         /*
          * Gets the value of the specified parameter as an {@code Object}.
          * <p/>
          * The object type returned is the JDBC type that was registered for
@@ -494,7 +494,7 @@ namespace biz.ritter.javapi.sql
          */
         Object getObject(String parameterName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified parameter as an {@code Object}. The 
          * actual return type is determined by the {@code Map} parameter which
          * gives the correspondence between SQL types and Java classes.
@@ -510,7 +510,7 @@ namespace biz.ritter.javapi.sql
         Object getObject(String parameterName, java.util.Map<String, java.lang.Class> map)
                ;// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified SQL {@code REF(&lt;structured type&gt;)}
          * parameter as a {@code java.sql.Ref}.
          * 
@@ -524,7 +524,7 @@ namespace biz.ritter.javapi.sql
          */
         Ref getRef(int parameterIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified SQL {@code REF(&lt;structured type&gt;)}
          * parameter as a {@code java.sql.Ref}.
          * 
@@ -539,7 +539,7 @@ namespace biz.ritter.javapi.sql
          */
         Ref getRef(String parameterName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified JDBC {@code SMALLINT} parameter as a
          * {@code short}.
          * 
@@ -553,7 +553,7 @@ namespace biz.ritter.javapi.sql
          */
         short getShort(int parameterIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified JDBC {@code SMALLINT} parameter as a
          * {@code short}.
          * 
@@ -566,7 +566,7 @@ namespace biz.ritter.javapi.sql
          */
         short getShort(String parameterName);// throws SQLException;
 
-        /**
+         /*
          * Returns the indexed parameter's value as a {@code String}. The 
          * parameter value must be one of the JDBC types {@code CHAR}, 
          * {@code VARCHAR} or {@code LONGVARCHAR}.
@@ -585,7 +585,7 @@ namespace biz.ritter.javapi.sql
          */
         String getString(int parameterIndex);// throws SQLException;
 
-        /**
+         /*
          * Returns the named parameter's value as a string. The parameter value must
          * be one of the JDBC types {@code CHAR}, {@code VARCHAR} or {@code
          * LONGVARCHAR}.
@@ -603,7 +603,7 @@ namespace biz.ritter.javapi.sql
          */
         String getString(String parameterName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified JDBC {@code TIME} parameter as a {@code
          * java.sql.Time}.
          * 
@@ -618,7 +618,7 @@ namespace biz.ritter.javapi.sql
          */
         Time getTime(int parameterIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified JDBC {@code TIME} parameter as a {@code
          * java.sql.Time}, using the supplied {@code Calendar} to construct the 
          * time. The JDBC driver uses the calendar to handle specific timezones 
@@ -638,7 +638,7 @@ namespace biz.ritter.javapi.sql
          */
         Time getTime(int parameterIndex, java.util.Calendar cal);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified JDBC {@code TIME} parameter as a {@code
          * java.sql.Time}.
          * 
@@ -652,7 +652,7 @@ namespace biz.ritter.javapi.sql
          */
         Time getTime(String parameterName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified JDBC {@code TIME} parameter as a {@code
          * java.sql.Time}, using the supplied {@code Calendar} to construct 
          * the time. The JDBC driver uses the calendar to handle specific 
@@ -671,7 +671,7 @@ namespace biz.ritter.javapi.sql
          */
         Time getTime(String parameterName, java.util.Calendar cal);// throws SQLException;
 
-        /**
+         /*
          * Returns the indexed parameter's {@code TIMESTAMP} value as a {@code
          * java.sql.Timestamp}.
          * 
@@ -687,7 +687,7 @@ namespace biz.ritter.javapi.sql
          */
         Timestamp getTimestamp(int parameterIndex);// throws SQLException;
 
-        /**
+         /*
          * Returns the indexed parameter's {@code TIMESTAMP} value as a {@code
          * java.sql.Timestamp}. The JDBC driver uses the supplied {@code Calendar}
          * to handle specific timezones and locales when creating the result.
@@ -707,7 +707,7 @@ namespace biz.ritter.javapi.sql
         Timestamp getTimestamp(int parameterIndex, java.util.Calendar cal)
                ;// throws SQLException;
 
-        /**
+         /*
          * Returns the named parameter's {@code TIMESTAMP} value as a {@code
          * java.sql.Timestamp}.
          * 
@@ -722,7 +722,7 @@ namespace biz.ritter.javapi.sql
          */
         Timestamp getTimestamp(String parameterName);// throws SQLException;
 
-        /**
+         /*
          * Returns the indexed parameter's {@code TIMESTAMP} value as a {@code
          * java.sql.Timestamp}. The JDBC driver uses the supplied {@code Calendar}
          * to handle specific timezones and locales when creating the result.
@@ -741,7 +741,7 @@ namespace biz.ritter.javapi.sql
         Timestamp getTimestamp(String parameterName, java.util.Calendar cal)
                ;// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified JDBC {@code DATALINK} parameter as a
          * {@code java.net.URL}.
          * 
@@ -756,7 +756,7 @@ namespace biz.ritter.javapi.sql
          */
         java.net.URL getURL(int parameterIndex);// throws SQLException;
 
-        /**
+         /*
          * Returns the named parameter's JDBC {@code DATALINK} value in a new Java
          * {@code java.net.URL}.
          * 
@@ -771,7 +771,7 @@ namespace biz.ritter.javapi.sql
          */
         java.net.URL getURL(String parameterName);// throws SQLException;
 
-        /**
+         /*
          * Defines the type of a specified {@code OUT} parameter. All {@code OUT}
          * parameters must have their type defined before a stored procedure is
          * executed.
@@ -797,7 +797,7 @@ namespace biz.ritter.javapi.sql
         void registerOutParameter(int parameterIndex, int sqlType)
                ;// throws SQLException;
 
-        /**
+         /*
          * Defines the Type of a specified {@code OUT} parameter. All {@code OUT}
          * parameters must have their type defined before a stored procedure is
          * executed. This version of the {@code registerOutParameter} method, which
@@ -824,7 +824,7 @@ namespace biz.ritter.javapi.sql
         void registerOutParameter(int parameterIndex, int sqlType, int scale)
                ;// throws SQLException;
 
-        /**
+         /*
          * Defines the Type of a specified {@code OUT} parameter. This variant 
          * of the method is designed for use with parameters that are 
          * <i>User Defined Types</i> (UDT) or a {@code REF} type, although it 
@@ -845,7 +845,7 @@ namespace biz.ritter.javapi.sql
         void registerOutParameter(int paramIndex, int sqlType,
                 String typeName);// throws SQLException;
 
-        /**
+         /*
          * Defines the Type of a specified {@code OUT} parameter. All OUT parameters
          * must have their Type defined before a stored procedure is executed.
          * <p/>
@@ -869,7 +869,7 @@ namespace biz.ritter.javapi.sql
         void registerOutParameter(String parameterName, int sqlType)
                ;// throws SQLException;
 
-        /**
+         /*
          * Defines the Type of a specified {@code OUT} parameter. All {@code OUT}
          * parameters must have their Type defined before a stored procedure is
          * executed. This version of the {@code registerOutParameter} method, which
@@ -894,7 +894,7 @@ namespace biz.ritter.javapi.sql
         void registerOutParameter(String parameterName, int sqlType,
                 int scale);// throws SQLException;
 
-        /**
+         /*
          * Defines the Type of a specified {@code OUT} parameter. This variant of
          * the method is designed for use with parameters that are <i>User Defined
          * Types</i> (UDT) or a {@code REF} type, although it can be used for any
@@ -914,7 +914,7 @@ namespace biz.ritter.javapi.sql
         void registerOutParameter(String parameterName, int sqlType,
                 String typeName);// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter to the content of a supplied
          * {@code InputStream}, which has a specified number of bytes.
          * <p/>
@@ -937,7 +937,7 @@ namespace biz.ritter.javapi.sql
         void setAsciiStream(String parameterName,
                 java.io.InputStream theInputStream, int length);// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter to a supplied {@code
          * java.math.BigDecimal} value.
          * 
@@ -951,7 +951,7 @@ namespace biz.ritter.javapi.sql
         void setBigDecimal(String parameterName, java.math.BigDecimal theBigDecimal)
                ;// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter to the content of a supplied
          * binary {@code InputStream}, which has a specified number of bytes.
          * <p/>
@@ -972,7 +972,7 @@ namespace biz.ritter.javapi.sql
         void setBinaryStream(String parameterName,
                 java.io.InputStream theInputStream, int length);// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter to a supplied {@code boolean}
          * value.
          * 
@@ -986,7 +986,7 @@ namespace biz.ritter.javapi.sql
         void setBoolean(String parameterName, bool theBoolean)
                ;// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter to a supplied {@code byte} value.
          * 
          * @param parameterName
@@ -998,7 +998,7 @@ namespace biz.ritter.javapi.sql
          */
         void setByte(String parameterName, byte theByte);// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter to a supplied array of bytes. The
          * array is mapped to {@code VARBINARY} or else {@code LONGVARBINARY} in the
          * connected database.
@@ -1013,7 +1013,7 @@ namespace biz.ritter.javapi.sql
         void setBytes(String parameterName, byte[] theBytes)
                ;// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter to the character content of a
          * {@code Reader} object, with the specified length of character data.
          * 
@@ -1029,7 +1029,7 @@ namespace biz.ritter.javapi.sql
         void setCharacterStream(String parameterName, java.io.Reader reader,
                 int length);// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter to a supplied {@code
          * java.sql.Date} value.
          * 
@@ -1042,7 +1042,7 @@ namespace biz.ritter.javapi.sql
          */
         void setDate(String parameterName, Date theDate);// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter to a supplied {@code
          * java.sql.Date} value, using a supplied calendar to map the date. The
          * calendar allows the application to control the timezone used to compute
@@ -1065,7 +1065,7 @@ namespace biz.ritter.javapi.sql
         void setDate(String parameterName, Date theDate, java.util.Calendar cal)
                ;// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter to a supplied {@code double}
          * value.
          * 
@@ -1079,7 +1079,7 @@ namespace biz.ritter.javapi.sql
         void setDouble(String parameterName, double theDouble)
                ;// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter to to a supplied {@code float}
          * value.
          * 
@@ -1093,7 +1093,7 @@ namespace biz.ritter.javapi.sql
         void setFloat(String parameterName, float theFloat)
                ;// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter to a supplied {@code int} value.
          * 
          * @param parameterName
@@ -1105,7 +1105,7 @@ namespace biz.ritter.javapi.sql
          */
         void setInt(String parameterName, int theInt);// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter to a supplied {@code long} value.
          * 
          * @param parameterName
@@ -1117,7 +1117,7 @@ namespace biz.ritter.javapi.sql
          */
         void setLong(String parameterName, long theLong);// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter to SQL {@code NULL}. Don't use
          * this version of {@code setNull} for <i>User Defined Types</i> (UDT) or
          * for {@code REF} type parameters.
@@ -1131,7 +1131,7 @@ namespace biz.ritter.javapi.sql
          */
         void setNull(String parameterName, int sqlType);// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter to be SQL {@code NULL} where the
          * parameter type is either {@code REF} or user defined (e.g. {@code STRUCT}
          * , {@code JAVA_OBJECT} etc).
@@ -1157,7 +1157,7 @@ namespace biz.ritter.javapi.sql
         void setNull(String parameterName, int sqlType, String typeName)
                ;// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter using a supplied object. Prior to
          * issuing this request to the connected database {@code theObject} is
          * transformed to the corresponding SQL type according to the standard Java
@@ -1184,7 +1184,7 @@ namespace biz.ritter.javapi.sql
         void setObject(String parameterName, Object theObject)
                ;// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter using a supplied object.
          * <p/>
          * The parameter {@code theObject} is converted to the given {@code
@@ -1216,7 +1216,7 @@ namespace biz.ritter.javapi.sql
         void setObject(String parameterName, Object theObject,
                 int targetSqlType);// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter using a supplied object.
          * <p/>
          * The object is converted to the given {@code targetSqlType} before it is
@@ -1250,7 +1250,7 @@ namespace biz.ritter.javapi.sql
         void setObject(String parameterName, Object theObject,
                 int targetSqlType, int scale);// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter to a supplied {@code short}
          * value.
          * 
@@ -1264,7 +1264,7 @@ namespace biz.ritter.javapi.sql
         void setShort(String parameterName, short theShort)
                ;// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter to a supplied {@code String}.
          * 
          * @param parameterName
@@ -1277,7 +1277,7 @@ namespace biz.ritter.javapi.sql
         void setString(String parameterName, String theString)
                ;// throws SQLException;
 
-        /**
+         /*
          * Sets the value of the parameter named {@code parameterName} to the value
          * of the supplied {@code java.sql.Time}.
          * 
@@ -1291,7 +1291,7 @@ namespace biz.ritter.javapi.sql
          */
         void setTime(String parameterName, Time theTime);// throws SQLException;
 
-        /**
+         /*
          * Sets the value of the parameter named {@code parameterName} to the value
          * of the supplied {@code java.sql.Time} using the supplied calendar.
          * <p/>
@@ -1313,7 +1313,7 @@ namespace biz.ritter.javapi.sql
         void setTime(String parameterName, Time theTime, java.util.Calendar cal)
                ;// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter to a supplied {@code
          * java.sql.Timestamp} value.
          * 
@@ -1328,7 +1328,7 @@ namespace biz.ritter.javapi.sql
         void setTimestamp(String parameterName, Timestamp theTimestamp)
                ;// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter to a supplied {@code
          * java.sql.Timestamp} value, using the supplied calendar.
          * <p/>
@@ -1350,7 +1350,7 @@ namespace biz.ritter.javapi.sql
         void setTimestamp(String parameterName, Timestamp theTimestamp,
                 java.util.Calendar cal);// throws SQLException;
 
-        /**
+         /*
          * Sets the value of a specified parameter to the supplied {@code
          * java.net.URL}.
          * 
@@ -1364,7 +1364,7 @@ namespace biz.ritter.javapi.sql
          */
         void setURL(String parameterName, java.net.URL theURL);// throws SQLException;
 
-        /**
+         /*
          * Gets whether the value of the last {@code OUT} parameter read was SQL
          * {@code NULL}.
          * 

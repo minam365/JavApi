@@ -20,7 +20,7 @@ namespace biz.ritter.javapi.security
         {
             //TODO : implement it!
         }
-        /**
+         /*
          * Performs the privileged action specified by <code>action</code>.
          * 
          * When permission checks are made, if the permission has been granted by

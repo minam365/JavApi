@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.awt
 {
-/**
+ /*
  * @author Michael Danilov, Dmitry A. Durnev
  */
     [Serializable]
@@ -42,7 +42,7 @@ public sealed class ComponentOrientation : java.io.Serializable {
         rlLangs.add("ur"); //$NON-NLS-1$
     }
 
-    /**
+     /*
      * @deprecated
      */
     [Obsolete]

@@ -26,7 +26,7 @@ import java.security.interfaces.DSAPublicKey;
 import java.security.interfaces.RSAPublicKey;
 import javax.xml.crypto.XMLStructure;
 */
-/**
+ /*
  * A representation of the XML <code>KeyValue</code> element as defined
  * in the <a href="http://www.w3.org/TR/xmldsig-core/">
  * W3C Recommendation for XML-Signature Syntax and Processing</a>. A 
@@ -94,7 +94,7 @@ import javax.xml.crypto.XMLStructure;
  */
 public interface KeyValue : XMLStructure {
 
-    /**
+     /*
      * Returns the public key of this <code>KeyValue</code>. 
      *
      * @return the public key of this <code>KeyValue</code>

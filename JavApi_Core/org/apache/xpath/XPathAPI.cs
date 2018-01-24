@@ -37,7 +37,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.traversal.NodeIterator;
 */
-	/**
+	 /*
  * The methods in this class are convenience methods into the
  * low-level XPath API.
  * These functions tend to be a little slow, since a number of objects must be
@@ -57,7 +57,7 @@ import org.w3c.dom.traversal.NodeIterator;
  * */
 	public class XPathAPI
 	{
-		/**
+		 /*
    *  Use an XPath string to select a nodelist.
    *  XPath namespace prefixes are resolved from the contextNode.
    *
@@ -73,7 +73,7 @@ import org.w3c.dom.traversal.NodeIterator;
 			return selectNodeList (contextNode, str, contextNode);
 		}
 
-		/**
+		 /*
    *  Use an XPath string to select a nodelist.
    *  XPath namespace prefixes are resolved from the namespaceNode.
    *

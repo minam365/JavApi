@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.text
 {
 
-    /**
+     /*
      * Thrown when the string being parsed is not in the correct form.
      */
     [Serializable]
@@ -27,7 +27,7 @@ namespace biz.ritter.javapi.text
 
         private int errorOffset;
 
-        /**
+         /*
          * Constructs a new instance of this class with its stack trace, detail
          * message and the location of the error filled in.
          * 
@@ -40,7 +40,7 @@ namespace biz.ritter.javapi.text
             errorOffset = location;
         }
 
-        /**
+         /*
          * Returns the index at which this parse exception occurred.
          * 
          * @return the location of this exception in the parsed string.

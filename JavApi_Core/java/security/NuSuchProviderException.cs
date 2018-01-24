@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.security
 {
 
-    /**
+     /*
      * {@code NoSuchProviderException} indicates that a requested security provider
      * could not be found.
      */
@@ -27,7 +27,7 @@ namespace biz.ritter.javapi.security
 
         private static readonly long serialVersionUID = 8488111756688534474L;
 
-        /**
+         /*
          * Constructs a new instance of {@code NoSuchProviderException} with the
          * given message.
          *
@@ -39,7 +39,7 @@ namespace biz.ritter.javapi.security
         {
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code NoSuchProviderException}.
          */
         public NoSuchProviderException()

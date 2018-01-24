@@ -7,7 +7,7 @@ using System;
 namespace org.xml.sax.ext
 {
 
-    /**
+     /*
      * SAX2 extension handler for lexical events.
      *
      * <blockquote>
@@ -44,7 +44,7 @@ namespace org.xml.sax.ext
     public interface LexicalHandler
     {
 
-        /**
+         /*
          * Report the start of DTD declarations, if any.
          *
          * <p>This method is intended to report the beginning of the
@@ -86,7 +86,7 @@ namespace org.xml.sax.ext
                        String systemId);//	throws SAXException;
 
 
-        /**
+         /*
          * Report the end of DTD declarations.
          *
          * <p>This method is intended to report the end of the
@@ -99,7 +99,7 @@ namespace org.xml.sax.ext
         void endDTD();//	throws SAXException;
 
 
-        /**
+         /*
          * Report the beginning of some internal and external XML entities.
          *
          * <p>The reporting of parameter entities (including
@@ -150,7 +150,7 @@ namespace org.xml.sax.ext
         void startEntity(String name);//	throws SAXException;
 
 
-        /**
+         /*
          * Report the end of an entity.
          *
          * @param name The name of the entity that is ending.
@@ -160,7 +160,7 @@ namespace org.xml.sax.ext
         void endEntity(String name);//	throws SAXException;
 
 
-        /**
+         /*
          * Report the start of a CDATA section.
          *
          * <p>The contents of the CDATA section will be reported through
@@ -174,7 +174,7 @@ namespace org.xml.sax.ext
         void startCDATA();//	throws SAXException;
 
 
-        /**
+         /*
          * Report the end of a CDATA section.
          *
          * @exception SAXException The application may raise an exception.
@@ -183,7 +183,7 @@ namespace org.xml.sax.ext
         void endCDATA();//	throws SAXException;
 
 
-        /**
+         /*
          * Report an XML comment anywhere in the document.
          *
          * <p>This callback will be used for comments inside or outside the

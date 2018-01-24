@@ -8,7 +8,7 @@ using java = biz.ritter.javapi;
 namespace org.xml.sax
 {
 
-    /**
+     /*
      * A single input source for an XML entity.
      *
      * <blockquote>
@@ -60,7 +60,7 @@ namespace org.xml.sax
     public class InputSource
     {
 
-        /**
+         /*
          * Zero-argument default constructor.
          *
          * @see #setPublicId
@@ -74,7 +74,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Create a new input source with a system identifier.
          *
          * <p>Applications may use setPublicId to include a 
@@ -97,7 +97,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Create a new input source with a byte stream.
          *
          * <p>Application writers should use setSystemId() to provide a base 
@@ -118,7 +118,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Create a new input source with a character stream.
          *
          * <p>Application writers should use setSystemId() to provide a base 
@@ -138,7 +138,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Set the public identifier for this input source.
          *
          * <p>The public identifier is always optional: if the application
@@ -156,7 +156,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Get the public identifier for this input source.
          *
          * @return The public identifier, or null if none was supplied.
@@ -168,7 +168,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Set the system identifier for this input source.
          *
          * <p>The system identifier is optional if there is a byte stream
@@ -197,7 +197,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Get the system identifier for this input source.
          *
          * <p>The getEncoding method will return the character encoding
@@ -215,7 +215,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Set the byte stream for this input source.
          *
          * <p>The SAX parser will ignore this if there is also a character
@@ -238,7 +238,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Get the byte stream for this input source.
          *
          * <p>The getEncoding method will return the character
@@ -254,7 +254,7 @@ namespace org.xml.sax
         }
 
 
-        /** 
+         /* 
          * Set the character encoding, if known.
          *
          * <p>The encoding must be a string acceptable for an
@@ -275,7 +275,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Get the character encoding for a byte stream or URI.
          * This value will be ignored when the application provides a
          * character stream.
@@ -291,7 +291,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Set the character stream for this input source.
          *
          * <p>If there is a character stream specified, the SAX parser
@@ -309,7 +309,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Get the character stream for this input source.
          *
          * @return The character stream, or null if none was supplied.

@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.text
 {
-    /**
+     /*
      * Tracks the current position in a parsed string. In case of an error the error
      * index can be set to the position where the error occurred without having to
      * change the parse position.
@@ -25,7 +25,7 @@ namespace biz.ritter.javapi.text
 
         private int currentPosition, errorIndex = -1;
 
-        /**
+         /*
          * Constructs a new {@code ParsePosition} with the specified index.
          * 
          * @param index
@@ -35,7 +35,7 @@ namespace biz.ritter.javapi.text
             currentPosition = index;
         }
 
-        /**
+         /*
          * Compares the specified object to this {@code ParsePosition} and indicates
          * if they are equal. In order to be equal, {@code object} must be an
          * instance of {@code ParsePosition} and it must have the same index and
@@ -57,7 +57,7 @@ namespace biz.ritter.javapi.text
                     && errorIndex == pos.errorIndex;
         }
 
-        /**
+         /*
          * Returns the index at which the parse could not continue.
          * 
          * @return the index of the parse error or -1 if there is no error.
@@ -66,7 +66,7 @@ namespace biz.ritter.javapi.text
             return errorIndex;
         }
 
-        /**
+         /*
          * Returns the current parse position.
          * 
          * @return the current position.
@@ -80,7 +80,7 @@ namespace biz.ritter.javapi.text
             return currentPosition + errorIndex;
         }
 
-        /**
+         /*
          * Sets the index at which the parse could not continue.
          * 
          * @param index
@@ -90,7 +90,7 @@ namespace biz.ritter.javapi.text
             errorIndex = index;
         }
 
-        /**
+         /*
          * Sets the current parse position.
          * 
          * @param index
@@ -100,7 +100,7 @@ namespace biz.ritter.javapi.text
             currentPosition = index;
         }
 
-        /**
+         /*
          * Returns the string representation of this parse position.
          * 
          * @return the string representation of this parse position.

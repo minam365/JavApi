@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * An {@code ConcurrentModificationException} is thrown when a Collection is
      * modified and an existing iterator on the Collection is used to modify the
      * Collection as well.
@@ -30,7 +30,7 @@ namespace biz.ritter.javapi.util
 
         private static readonly long serialVersionUID = -3666751008965953603L;
 
-        /**
+         /*
          * Constructs a new {@code ConcurrentModificationException} with the current
          * stack trace filled in.
          */
@@ -38,7 +38,7 @@ namespace biz.ritter.javapi.util
             /*empty*/
         }
 
-        /**
+         /*
          * Constructs a new {@code ConcurrentModificationException} with the current
          * stack trace and message filled in.
          * 

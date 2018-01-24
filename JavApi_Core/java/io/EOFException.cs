@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.io
 {
 
-    /**
+     /*
      * Thrown when a program encounters the end of a file or stream during an input
      * operation.
      */
@@ -26,13 +26,13 @@ namespace biz.ritter.javapi.io
 
         private static readonly long serialVersionUID = 6433858223774886977L;
 
-        /**
+         /*
          * Constructs a new {@code EOFException} with its stack trace filled in.
          */
         public EOFException() :base () {
         }
 
-        /**
+         /*
          * Constructs a new {@code EOFException} with its stack trace and detail
          * message filled in.
          * 

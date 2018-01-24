@@ -100,7 +100,7 @@ namespace System
         {
             if (0 > startIndex) return -1;
             if (startIndex >= str.Length) startIndex = str.Length - 1;
-            return str.LastIndexOf(c,startIndex);
+            return str.LastIndexOf(c, startIndex);
         }
         public static int lastIndexOf(this String str, char c)
         {
@@ -119,7 +119,7 @@ namespace System
             return str.Trim();
         }
 
-        /**
+         /*
          * Converts the specified boolean to its string representation. When the
          * boolean is {@code true} return {@code "true"}, otherwise return {@code
          * "false"}.
@@ -163,21 +163,26 @@ namespace System
             return str[index];
         }
 
-        public static void getChars(this String str, int srcBegin, int srcEnd, char[] dst, int dstBegin) {
-            if (srcBegin < 0) {
+        public static void getChars(this String str, int srcBegin, int srcEnd, char[] dst, int dstBegin)
+        {
+            if (srcBegin < 0)
+            {
                 throw new java.lang.StringIndexOutOfBoundsException(srcBegin);
             }
-            if (srcEnd > str.Length) {
+            if (srcEnd > str.Length)
+            {
                 throw new java.lang.StringIndexOutOfBoundsException(srcEnd);
             }
-            if (srcBegin > srcEnd) {
+            if (srcBegin > srcEnd)
+            {
                 throw new java.lang.StringIndexOutOfBoundsException(srcEnd - srcBegin);
             }
             java.lang.SystemJ.arraycopy(str.ToCharArray(), 0 + srcBegin, dst, dstBegin,
                  srcEnd - srcBegin);
         }
 
-        public static String substring (this String str, int start, int end) {
+        public static String substring(this String str, int start, int end)
+        {
             return str.Substring(start, end - start);
         }
         public static bool startsWith(this String str, String pre)
@@ -202,7 +207,7 @@ namespace System
         }
         public static int indexOf(this String str, char c, int start)
         {
-            return str.IndexOf(c,start);
+            return str.IndexOf(c, start);
         }
         public static String replace(this String str, char oldChar, char newChar)
         {
@@ -264,7 +269,7 @@ namespace System
         }
         public static StringBuilder Insert(this StringBuilder sb, int offset, String s)
         {
-            return sb.Insert(offset,s);
+            return sb.Insert(offset, s);
         }
         #endregion
         #region System.Exception
@@ -292,7 +297,7 @@ namespace System
         }
         public static void finalize(this Object o)
         {
-            
+
         }
         public static void wait(this Object o)
         {
@@ -384,7 +389,8 @@ namespace System
         /// <param name="t">an instance</param>
         /// <param name="name">named resource</param>
         /// <returns></returns>
-        public static java.net.URL getResource (this System.Object t, String name) {
+        public static java.net.URL getResource(this System.Object t, String name)
+        {
             return t.getClass().getResource(name);
         }
         #endregion
@@ -395,11 +401,11 @@ namespace System
         /// <param name="dayOfWeek">enum value of System.DayOfWeek</param>
         /// <returns>Sunday == 1, Monday == 2, ...</returns>
         /// <see cref="System.DayOfWeek"/>
-        internal static int toInt (this DayOfWeek dayOfWeek)
+        internal static int toInt(this DayOfWeek dayOfWeek)
         {
             switch (dayOfWeek)
             {
-                case DayOfWeek.Monday : return 2;
+                case DayOfWeek.Monday: return 2;
                 case DayOfWeek.Tuesday: return 3;
                 case DayOfWeek.Wednesday: return 4;
                 case DayOfWeek.Thursday: return 5;

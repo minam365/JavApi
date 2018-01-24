@@ -110,7 +110,7 @@ namespace biz.ritter.javapi.util
 
         }
 
-        /**
+         /*
          * Entry is an internal class which is used to hold the entries of a
          * TreeMap.
          * 
@@ -3291,7 +3291,7 @@ namespace biz.ritter.javapi.util
 
             public abstract NavigableMap<K, V> tailMap(K start, bool inclusive);
 
-            /**
+             /*
              * 
              * @param key
              * @return false if the key bigger than the end key (if any)
@@ -3307,7 +3307,7 @@ namespace biz.ritter.javapi.util
                 return true;
             }
 
-            /**
+             /*
              * 
              * @param key
              * @return false if the key smaller than the start key (if any)
@@ -4731,7 +4731,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Constructs a new empty {@code TreeMap} instance.
          */
         public TreeMap()
@@ -4740,7 +4740,7 @@ namespace biz.ritter.javapi.util
 
         }
 
-        /**
+         /*
          * Constructs a new empty {@code TreeMap} instance with the specified
          * comparator.
          *
@@ -4752,7 +4752,7 @@ namespace biz.ritter.javapi.util
             this.comparatorJ = comparator;
         }
 
-        /**
+         /*
          * Constructs a new {@code TreeMap} instance containing the mappings from
          * the specified map and using natural ordering.
          *
@@ -4769,7 +4769,7 @@ namespace biz.ritter.javapi.util
             putAll(map);
         }
 
-        /**
+         /*
          * Constructs a new {@code TreeMap} instance containing the mappings from
          * the specified SortedMap and using the same comparator.
          *
@@ -4813,7 +4813,7 @@ namespace biz.ritter.javapi.util
             return last;
         }
 
-        /**
+         /*
          * Removes all mappings from this TreeMap, leaving it empty.
          *
          * @see Map#isEmpty()
@@ -4827,7 +4827,7 @@ namespace biz.ritter.javapi.util
             modCount++;
         }
 
-        /**
+         /*
          * Returns a new {@code TreeMap} with the same mappings, size and comparator
          * as this instance.
          *
@@ -4867,7 +4867,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns the comparator used to compare elements in this map.
          *
          * @return the comparator or {@code null} if the natural ordering is used.
@@ -4877,7 +4877,7 @@ namespace biz.ritter.javapi.util
             return comparatorJ;
         }
 
-        /**
+         /*
          * Returns whether this map contains the specified key.
          *
          * @param key
@@ -4955,7 +4955,7 @@ namespace biz.ritter.javapi.util
             return false;
         }
 
-        /**
+         /*
          * Returns whether this map contains the specified value.
          *
          * @param value
@@ -5441,7 +5441,7 @@ namespace biz.ritter.javapi.util
             return null;
         }
 
-        /**
+         /*
          * Returns the first key in this map.
          *
          * @return the first key in this map.
@@ -5497,7 +5497,7 @@ namespace biz.ritter.javapi.util
             return null;
         }
 
-        /**
+         /*
          * Returns the value of the mapping with the specified key.
          *
          * @param key
@@ -5572,7 +5572,7 @@ namespace biz.ritter.javapi.util
             return default(V);
         }
 
-        /**
+         /*
          * Returns a set of the keys contained in this map. The set is backed by
          * this map so changes to one are reflected by the other. The set does not
          * support adding.
@@ -5621,7 +5621,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns the last key in this map.
          *
          * @return the last key in this map.
@@ -5692,7 +5692,7 @@ namespace biz.ritter.javapi.util
                     key1, key2);
         }
 
-        /**
+         /*
          * Maps the specified key to the specified value.
          *
          * @param key
@@ -6197,7 +6197,7 @@ namespace biz.ritter.javapi.util
             x.parent = y;
         }
 
-        /**
+         /*
          * Copies all the mappings in the given map to this map. These mappings will
          * replace all mappings that this map had for any of the keys currently in
          * the given map.
@@ -6222,7 +6222,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Removes the mapping with the specified key from this map.
          *
          * @param key
@@ -6720,7 +6720,7 @@ namespace biz.ritter.javapi.util
             x.color = false;
         }
 
-        /**
+         /*
          * Returns the number of mappings in this map.
          *
          * @return the number of mappings in this map.
@@ -6730,7 +6730,7 @@ namespace biz.ritter.javapi.util
             return sizeJ;
         }
 
-        /**
+         /*
          * Returns a collection of the values contained in this map. The collection
          * is backed by this map so changes to one are reflected by the other. The
          * collection supports remove, removeAll, retainAll and clear operations,
@@ -6790,7 +6790,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableMap#firstEntry()
@@ -6801,7 +6801,7 @@ namespace biz.ritter.javapi.util
             return newImmutableEntry(findSmallestEntry());
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableMap#lastEntry()
@@ -6812,7 +6812,7 @@ namespace biz.ritter.javapi.util
             return newImmutableEntry(findBiggestEntry());
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableMap#pollFirstEntry()
@@ -6829,7 +6829,7 @@ namespace biz.ritter.javapi.util
             return result;
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableMap#pollLastEntry()
@@ -6846,7 +6846,7 @@ namespace biz.ritter.javapi.util
             return result;
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableMap#higherEntry(obj)
@@ -6857,7 +6857,7 @@ namespace biz.ritter.javapi.util
             return newImmutableEntry(findHigherEntry(key));
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableMap#higherKey(obj)
@@ -6869,7 +6869,7 @@ namespace biz.ritter.javapi.util
             return (null == entry) ? default(K) : entry.getKey();
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableMap#lowerEntry(obj)
@@ -6880,7 +6880,7 @@ namespace biz.ritter.javapi.util
             return newImmutableEntry(findLowerEntry(key));
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableMap#lowerKey(obj)
@@ -6892,7 +6892,7 @@ namespace biz.ritter.javapi.util
             return (null == entry) ? default(K) : entry.getKey();
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableMap#ceilingEntry(java.lang.Object)
@@ -6903,7 +6903,7 @@ namespace biz.ritter.javapi.util
             return newImmutableEntry(findCeilingEntry(key));
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableMap#ceilingKey(java.lang.Object)
@@ -6915,7 +6915,7 @@ namespace biz.ritter.javapi.util
             return (null == entry) ? default(K) : entry.getKey();
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableMap#floorEntry(obj)
@@ -6926,7 +6926,7 @@ namespace biz.ritter.javapi.util
             return newImmutableEntry(findFloorEntry(key));
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableMap#floorKey(obj)
@@ -6986,7 +6986,7 @@ namespace biz.ritter.javapi.util
             return x;
         }
 
-        /**
+         /*
          * Returns a set containing all of the mappings in this map. Each mapping is
          * an instance of {@link MapNS.Entry}. As the set is backed by this map,
          * changes in one will be reflected in the other. It does not support adding
@@ -7043,7 +7043,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableMap#navigableKeySet()
@@ -7055,7 +7055,7 @@ namespace biz.ritter.javapi.util
             return (null != navigableKeySetJ) ? navigableKeySetJ : (navigableKeySetJ = (new AscendingSubMap<K, V>(this)).navigableKeySet());
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableMap#descendingKeySet()
@@ -7066,7 +7066,7 @@ namespace biz.ritter.javapi.util
             return descendingMap().navigableKeySet();
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableMap#descendingMap()
@@ -7077,7 +7077,7 @@ namespace biz.ritter.javapi.util
             return (null != descendingMapJ) ? descendingMapJ : (descendingMapJ = new DescendingSubMap<K, V>(this));
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableMap#subMap(Object, boolean, Object, boolean)
@@ -7094,7 +7094,7 @@ namespace biz.ritter.javapi.util
             throw new java.lang.IllegalArgumentException();
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableMap#headMap(Object, boolean)
@@ -7107,7 +7107,7 @@ namespace biz.ritter.javapi.util
             return new AscendingSubMap<K, V>(this, end, inclusive);
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableMap#tailMap(Object, boolean)
@@ -7120,7 +7120,7 @@ namespace biz.ritter.javapi.util
             return new AscendingSubMap<K, V>(start, inclusive, this);
         }
 
-        /**
+         /*
          * Returns a sorted map over a range of this sorted map with all keys
          * greater than or equal to the specified {@code startKey} and less than the
          * specified {@code endKey}. Changes to the returned sorted map are
@@ -7164,7 +7164,7 @@ namespace biz.ritter.javapi.util
             throw new java.lang.IllegalArgumentException();
         }
 
-        /**
+         /*
          * Returns a sorted map over a range of this sorted map with all keys that
          * are less than the specified {@code endKey}. Changes to the returned
          * sorted map are reflected in this sorted map and vice versa.
@@ -7190,7 +7190,7 @@ namespace biz.ritter.javapi.util
             return headMap(endKey, false);
         }
 
-        /**
+         /*
          * Returns a sorted map over a range of this sorted map with all keys that
          * are greater than or equal to the specified {@code startKey}. Changes to
          * the returned sorted map are reflected in this sorted map and vice versa.

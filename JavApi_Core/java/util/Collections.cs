@@ -22,7 +22,7 @@ namespace biz.ritter.javapi.util
     /// </summary>
     public class Collections<T>
     {
-        /**
+         /*
          * Returns a wrapper on the specified sorted map which synchronizes all
          * access to the sorted map.
          * 
@@ -131,7 +131,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns a wrapper on the specified map which synchronizes all access to
          * the map.
          * 
@@ -335,7 +335,7 @@ namespace biz.ritter.javapi.util
                 }
             }
         }
-        /**
+         /*
          * An empty immutable instance of {@link Set}.
          */
         public static readonly Set<Object> EMPTY_SET = new EmptySet();
@@ -382,7 +382,7 @@ namespace biz.ritter.javapi.util
                 }
             }
         }
-        /**
+         /*
          * An empty immutable instance of {@link List}.
          */
         public static readonly List<T> EMPTY_LIST = new EmptyList<T>();
@@ -397,7 +397,7 @@ namespace biz.ritter.javapi.util
             return EMPTY_LIST;
         }
 
-        /**
+         /*
          * Returns a list containing the specified number of the specified element.
          * The list cannot be modified. The list is serializable.
          * 
@@ -414,7 +414,7 @@ namespace biz.ritter.javapi.util
             return new CopiesList<T>(length, obj);
         }
 
-        /**
+         /*
          * Returns a wrapper on the specified list which throws an
          * {@code UnsupportedOperationException} whenever an attempt is made to
          * modify the list.
@@ -436,7 +436,7 @@ namespace biz.ritter.javapi.util
             return new UnmodifiableList<E>((List<E>)list);
         }
 
-        /**
+         /*
          * Returns a wrapper on the specified collection which throws an
          * {@code UnsupportedOperationException} whenever an attempt is made to
          * modify the collection.
@@ -454,7 +454,7 @@ namespace biz.ritter.javapi.util
             return new UnmodifiableCollection<E>(collection);
         }
 
-        /**
+         /*
          * Returns a wrapper on the specified sorted map which throws an
          * {@code UnsupportedOperationException} whenever an attempt is made to
          * modify the sorted map.
@@ -472,7 +472,7 @@ namespace biz.ritter.javapi.util
             return new UnmodifiableSortedMap<K, V>((SortedMap<K, V>)map);
         }
 
-        /**
+         /*
          * Returns a wrapper on the specified sorted set which throws an
          * {@code UnsupportedOperationException} whenever an attempt is made to
          * modify the sorted set.
@@ -490,7 +490,7 @@ namespace biz.ritter.javapi.util
             return new UnmodifiableSortedSet<E>(set);
         }
 
-        /**
+         /*
          * Returns a wrapper on the specified map which throws an
          * {@code UnsupportedOperationException} whenever an attempt is made to
          * modify the map.
@@ -508,7 +508,7 @@ namespace biz.ritter.javapi.util
             return new UnmodifiableMap<K, V>((Map<K, V>)map);
         }
 
-        /**
+         /*
          * Returns a wrapper on the specified set which throws an
          * {@code UnsupportedOperationException} whenever an attempt is made to
          * modify the set.
@@ -526,7 +526,7 @@ namespace biz.ritter.javapi.util
             return new UnmodifiableSet<E>((Set<E>)set);
         }
 
-        /**
+         /*
          * Returns a set containing the specified element. The set cannot be
          * modified. The set is serializable.
          * 
@@ -539,7 +539,7 @@ namespace biz.ritter.javapi.util
             return new SingletonSet<E>(obj);
         }
 
-        /**
+         /*
          * Returns a {@link Comparator} that reverses the order of the
          * {@code Comparator} passed. If the {@code Comparator} passed is
          * {@code null}, then this method is equivalent to {@link #reverseOrder()}.
@@ -565,7 +565,7 @@ namespace biz.ritter.javapi.util
             }
             return new ReverseComparatorWithComparator<T>(c);
         }
-        /**
+         /*
          * A comparator which reverses the natural order of the elements. The
          * {@code Comparator} that's returned is {@link Serializable}.
          *
@@ -579,7 +579,7 @@ namespace biz.ritter.javapi.util
             return (Comparator<T>)ReverseComparator<T>.INSTANCE;
         }
 
-        /**
+         /*
          * This class is a singleton so that equals() and hashCode() work properly.
          */
         [Serializable]
@@ -646,7 +646,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns an {@code Enumeration} on the specified collection.
          * 
          * @param collection
@@ -933,7 +933,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Replaces this SynchronizedRandomAccessList with a SynchronizedList so
          * that JREs before 1.4 can deserialize this obj without any
          * problems. This is necessary since RandomAccess API was introduced
@@ -1118,7 +1118,7 @@ namespace biz.ritter.javapi.util
                         }
                     }*/
 
-        /**
+         /*
          * Resolves SynchronizedList instances to SynchronizedRandomAccessList
          * instances if the underlying list is a Random Access list.
          * <p>
@@ -1508,7 +1508,7 @@ namespace biz.ritter.javapi.util
             return new UnmodifiableRandomAccessList<E>(list.subList(start, end));
         }
 
-        /**
+         /*
          * Replaces this UnmodifiableRandomAccessList with an UnmodifiableList
          * so that JREs before 1.4 can deserialize this object without any
          * problems. This is necessary since RandomAccess API was introduced
@@ -1598,7 +1598,7 @@ namespace biz.ritter.javapi.util
             return new UnmodifiableList<E>(list.subList(start, end));
         }
 
-        /**
+         /*
          * Resolves UnmodifiableList instances to UnmodifiableRandomAccessList
          * instances if the underlying list is a Random Access list.
          * <p>

@@ -26,7 +26,7 @@ namespace biz.ritter.javapi.io
 
 		private const long serialVersionUID = -2353342684412443330L;
 
-		/**
+		 /*
      * Constructs a new {@code SyncFailedException} with its stack trace and
      * detail message filled in.
      * 

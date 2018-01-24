@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang
 {
 
-    /**
+     /*
      * java.lang.StringBuffer is a variable size contiguous indexable array of characters. The
      * length of the java.lang.StringBuffer is the number of characters it contains. The
      * capacity of the java.lang.StringBuffer is the number of characters it can hold.
@@ -45,13 +45,13 @@ namespace biz.ritter.javapi.lang
                 new ObjectStreamField("shared", typeof(bool)), //$NON-NLS-1$
                 new ObjectStreamField("value", typeof (char[])), }; //$NON-NLS-1$
 */
-        /**
+         /*
          * Constructs a new java.lang.StringBuffer using the default capacity which is 16.
          */
         public StringBuffer() {
         }
 
-        /**
+         /*
          * Constructs a new java.lang.StringBuffer using the specified capacity.
          * 
          * @param capacity
@@ -60,7 +60,7 @@ namespace biz.ritter.javapi.lang
         public StringBuffer(int capacity) :base(capacity) {
         }
 
-        /**
+         /*
          * Constructs a new java.lang.StringBuffer containing the characters in the specified
          * string. The capacity of the new buffer will be the length of the
          * {@code String} plus the default capacity.
@@ -73,7 +73,7 @@ namespace biz.ritter.javapi.lang
         public StringBuffer(String s) : base(s) {
         }
 
-        /**
+         /*
          * Constructs a java.lang.StringBuffer and initializes it with the content from the
          * specified {@code CharSequence}. The capacity of the new buffer will be
          * the length of the {@code CharSequence} plus the default capacity.
@@ -87,7 +87,7 @@ namespace biz.ritter.javapi.lang
         public StringBuffer(CharSequence cs) : base (cs.ToString()) {
         }
 
-        /**
+         /*
          * Adds the string representation of the specified boolean to the end of
          * this StringBuffer.
          * <p />
@@ -103,7 +103,7 @@ namespace biz.ritter.javapi.lang
             return append(b ? "true" : "false"); //$NON-NLS-1$//$NON-NLS-2$
         }
 
-        /**
+         /*
          * Adds the specified character to the end of this buffer.
          * 
          * @param ch
@@ -118,7 +118,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Adds the string representation of the specified double to the end of this
          * StringBuffer.
          * 
@@ -131,7 +131,7 @@ namespace biz.ritter.javapi.lang
             return append(Double.toString(d));
         }
 
-        /**
+         /*
          * Adds the string representation of the specified float to the end of this
          * StringBuffer.
          * 
@@ -144,7 +144,7 @@ namespace biz.ritter.javapi.lang
             return append(Float.toString(f));
         }
 
-        /**
+         /*
          * Adds the string representation of the specified integer to the end of
          * this StringBuffer.
          * 
@@ -157,7 +157,7 @@ namespace biz.ritter.javapi.lang
             return append(Integer.toString(i));
         }
 
-        /**
+         /*
          * Adds the string representation of the specified long to the end of this
          * StringBuffer.
          * 
@@ -170,7 +170,7 @@ namespace biz.ritter.javapi.lang
             return append(Long.toString(l));
         }
 
-        /**
+         /*
          * Adds the string representation of the specified object to the end of this
          * StringBuffer.
          * <p />
@@ -194,7 +194,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Adds the specified string to the end of this buffer.
          * <p />
          * If the specified string is {@code null} the string {@code "null"} is
@@ -211,7 +211,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Adds the specified java.lang.StringBuffer to the end of this buffer.
          * <p />
          * If the specified java.lang.StringBuffer is {@code null} the string {@code "null"}
@@ -237,7 +237,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Adds the character array to the end of this buffer.
          * 
          * @param chars
@@ -253,7 +253,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Adds the specified sequence of characters to the end of this buffer.
          * 
          * @param chars
@@ -276,7 +276,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Appends the specified CharSequence to this buffer.
          * <p />
          * If the specified CharSequence is {@code null} the string {@code "null"}
@@ -299,7 +299,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Appends the specified subsequence of the CharSequence to this buffer.
          * <p />
          * If the specified CharSequence is {@code null}, then the string {@code
@@ -325,7 +325,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Appends the string representation of the specified Unicode code point to
          * the end of this buffer.
          * <p />
@@ -370,7 +370,7 @@ namespace biz.ritter.javapi.lang
              }
         }
 
-        /**
+         /*
          * Deletes a range of characters.
          * 
          * @param start
@@ -389,7 +389,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Deletes the character at the specified offset.
          * 
          * @param location
@@ -412,7 +412,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Copies the requested sequence of characters to the {@code char[]} passed
          * starting at {@code idx}.
          * 
@@ -442,7 +442,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Inserts the character into this buffer at the specified offset.
          * 
          * @param index
@@ -460,7 +460,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Inserts the string representation of the specified boolean into this
          * buffer at the specified offset.
          * 
@@ -478,7 +478,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Inserts the string representation of the specified integer into this
          * buffer at the specified offset.
          * 
@@ -494,7 +494,7 @@ namespace biz.ritter.javapi.lang
             return insert(index, Integer.toString(i));
         }
 
-        /**
+         /*
          * Inserts the string representation of the specified long into this buffer
          * at the specified offset.
          * 
@@ -510,7 +510,7 @@ namespace biz.ritter.javapi.lang
             return insert(index, Long.toString(l));
         }
 
-        /**
+         /*
          * Inserts the string representation of the specified into this buffer
          * double at the specified offset.
          * 
@@ -526,7 +526,7 @@ namespace biz.ritter.javapi.lang
             return insert(index, Double.toString(d));
         }
 
-        /**
+         /*
          * Inserts the string representation of the specified float into this buffer
          * at the specified offset.
          * 
@@ -542,7 +542,7 @@ namespace biz.ritter.javapi.lang
             return insert(index, Float.toString(f));
         }
 
-        /**
+         /*
          * Inserts the string representation of the specified object into this
          * buffer at the specified offset.
          * <p />
@@ -562,7 +562,7 @@ namespace biz.ritter.javapi.lang
             return insert(index, obj == null ? "null" : obj.ToString()); //$NON-NLS-1$
         }
 
-        /**
+         /*
          * Inserts the string into this buffer at the specified offset.
          * <p />
          * If the specified string is {@code null}, the string {@code "null"} is
@@ -583,7 +583,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Inserts the character array into this buffer at the specified offset.
          * 
          * @param index
@@ -603,7 +603,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Inserts the specified subsequence of characters into this buffer at the
          * specified index.
          * 
@@ -631,7 +631,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Inserts the specified CharSequence into this buffer at the specified
          * index.
          * <p />
@@ -654,7 +654,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Inserts the specified subsequence into this buffer at the specified
          * index.
          * <p />
@@ -698,7 +698,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Replaces the characters in the specified range with the contents of the
          * specified string.
          * 
@@ -721,7 +721,7 @@ namespace biz.ritter.javapi.lang
             }
         }
 
-        /**
+         /*
          * Reverses the order of characters in this buffer.
          * 
          * @return this buffer.

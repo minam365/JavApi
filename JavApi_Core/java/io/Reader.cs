@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.io
 {
 
-    /**
+     /*
      * The base class for all readers. A reader is a means of reading data from a
      * source in a character-wise manner. Some readers also support marking a
      * position in the input and returning to this position later.
@@ -36,12 +36,12 @@ namespace biz.ritter.javapi.io
      * @see Writer
      */
     public abstract class Reader : java.lang.Readable, Closeable {
-        /**
+         /*
          * The object used to synchronize access to the reader.
          */
         protected Object lockJ;
 
-        /**
+         /*
          * Constructs a new {@code Reader} with {@code this} as the object used to
          * synchronize critical sections.
          */
@@ -49,7 +49,7 @@ namespace biz.ritter.javapi.io
             lockJ = this;
         }
 
-        /**
+         /*
          * Constructs a new {@code Reader} with {@code lock} used to synchronize
          * critical sections.
          * 
@@ -65,7 +65,7 @@ namespace biz.ritter.javapi.io
             this.lockJ = newLock;
         }
 
-        /**
+         /*
          * Closes this reader. Implementations of this method should free any
          * resources associated with the reader.
          * 
@@ -74,7 +74,7 @@ namespace biz.ritter.javapi.io
          */
         public abstract void close();// throws IOException;
 
-        /**
+         /*
          * Sets a mark position in this reader. The parameter {@code readLimit}
          * indicates how many characters can be read before the mark is invalidated.
          * Calling {@code reset()} will reposition the reader back to the marked
@@ -98,7 +98,7 @@ namespace biz.ritter.javapi.io
             throw new java.io.IOException();
         }
 
-        /**
+         /*
          * Indicates whether this reader supports the {@code mark()} and
          * {@code reset()} methods. This default implementation returns
          * {@code false}.
@@ -109,7 +109,7 @@ namespace biz.ritter.javapi.io
             return false;
         }
 
-        /**
+         /*
          * Reads a single character from this reader and returns it as an integer
          * with the two higher-order bytes set to 0. Returns -1 if the end of the
          * reader has been reached.
@@ -130,7 +130,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Reads characters from this reader and stores them in the character array
          * {@code buf} starting at offset 0. Returns the number of characters
          * actually read or -1 if the end of the reader has been reached.
@@ -147,7 +147,7 @@ namespace biz.ritter.javapi.io
             return read(buf, 0, buf.Length);
         }
 
-        /**
+         /*
          * Reads at most {@code count} characters from this reader and stores them
          * at {@code offset} in the character array {@code buf}. Returns the number
          * of characters actually read or -1 if the end of the reader has been
@@ -168,7 +168,7 @@ namespace biz.ritter.javapi.io
         public abstract int read(char[] buf, int offset, int count);
                 //throws IOException;
 
-        /**
+         /*
          * Indicates whether this reader is ready to be read without blocking.
          * Returns {@code true} if this reader will not block when {@code read} is
          * called, {@code false} if unknown or blocking will occur. This default
@@ -186,7 +186,7 @@ namespace biz.ritter.javapi.io
             return false;
         }
 
-        /**
+         /*
          * Resets this reader's position to the last {@code mark()} location.
          * Invocations of {@code read()} and {@code skip()} will occur from this new
          * location. If this reader has not been marked, the behavior of
@@ -203,7 +203,7 @@ namespace biz.ritter.javapi.io
             throw new java.io.IOException();
         }
 
-        /**
+         /*
          * Skips {@code amount} characters in this reader. Subsequent calls of
          * {@code read} methods will not return these characters unless {@code
          * reset()} is used. This method may perform multiple reads to read {@code
@@ -246,7 +246,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Reads characters and puts them into the {@code target} character buffer.
          * 
          * @param target

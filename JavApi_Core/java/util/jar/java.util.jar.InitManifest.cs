@@ -99,12 +99,12 @@ namespace biz.ritter.javapi.util.jar
             return pos;
         }
 
-        /**
+         /*
          * Number of subsequent line breaks.
          */
         internal int linebreak = 0;
 
-        /**
+         /*
          * Read a single line from the manifest buffer.
          */
         private bool readHeader()

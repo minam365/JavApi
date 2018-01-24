@@ -20,7 +20,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang
 {
 
-    /**
+     /*
      * The wrapper for the primitive type {@code short}.
      * 
      * @see java.lang.Number
@@ -29,7 +29,7 @@ namespace biz.ritter.javapi.lang
     [Serializable]
     public sealed class Short : Number, Comparable<Short>
     {
-        /**
+         /*
          * The {@link Class} object that represents the primitive type {@code
          * short}.
          */
@@ -37,22 +37,22 @@ namespace biz.ritter.javapi.lang
 
         private static readonly long serialVersionUID = 7515723908773894738L;
 
-        /**
+         /*
          * The value which the receiver represents.
          */
         private readonly short value;
 
-        /**
+         /*
          * Constant for the maximum {@code short} value, 2<sup>15</sup>-1.
          */
         public static readonly short MAX_VALUE = short.MaxValue;
 
-        /**
+         /*
          * Constant for the minimum {@code short} value, -2<sup>15</sup>.
          */
         public static readonly short MIN_VALUE = short.MinValue;
 
-        /**
+         /*
          * Constant for the number of bits needed to represent a {@code short} in
          * two's complement form.
          *
@@ -60,7 +60,7 @@ namespace biz.ritter.javapi.lang
          */
         public static readonly int SIZE = 16;
 
-        /**
+         /*
          * Constructs a new {@code Short} from the specified string.
          *
          * @param string
@@ -74,7 +74,7 @@ namespace biz.ritter.javapi.lang
         {
         }
 
-        /**
+         /*
          * Constructs a new {@code Short} with the specified primitive short value.
          *
          * @param value
@@ -91,7 +91,7 @@ namespace biz.ritter.javapi.lang
             return (byte)value;
         }
 
-        /**
+         /*
          * Compares this object to the specified short object to determine their
          * relative order.
          * 
@@ -111,7 +111,7 @@ namespace biz.ritter.javapi.lang
             return value > obj.value ? 1 : (value < obj.value ? -1 : 0);
         }
 
-        /**
+         /*
          * Parses the specified string and returns a {@code Short} instance if the
          * string can be decoded into a short value. The string may be an optional
          * minus sign "-" followed by a hexadecimal ("0x..." or "#..."), octal
@@ -141,7 +141,7 @@ namespace biz.ritter.javapi.lang
             return value;
         }
 
-        /**
+         /*
          * Compares this instance with the specified object and indicates if they
          * are equal. In order to be equal, {@code object} must be an instance of
          * {@code Short} and have the same short value as this object.
@@ -182,7 +182,7 @@ namespace biz.ritter.javapi.lang
             return value;
         }
 
-        /**
+         /*
          * Parses the specified string as a signed decimal short value. The ASCII
          * character \u002d ('-') is recognized as the minus sign.
          *
@@ -198,7 +198,7 @@ namespace biz.ritter.javapi.lang
             return parseShort(str, 10);
         }
 
-        /**
+         /*
          * Parses the specified string as a signed short value using the specified
          * radix. The ASCII character \u002d ('-') is recognized as the minus sign.
          *
@@ -225,7 +225,7 @@ namespace biz.ritter.javapi.lang
             throw new NumberFormatException();
         }
 
-        /**
+         /*
          * Gets the primitive value of this short.
          *
          * @return this object's primitive value.
@@ -242,7 +242,7 @@ namespace biz.ritter.javapi.lang
             return Integer.toString(value);
         }
 
-        /**
+         /*
          * Returns a string containing a concise, human-readable description of the
          * specified short value with radix 10.
          *
@@ -255,7 +255,7 @@ namespace biz.ritter.javapi.lang
             return Integer.toString(value);
         }
 
-        /**
+         /*
          * Parses the specified string as a signed decimal short value.
          *
          * @param string
@@ -272,7 +272,7 @@ namespace biz.ritter.javapi.lang
             return valueOf(parseShort(str));
         }
 
-        /**
+         /*
          * Parses the specified string as a signed short value using the specified
          * radix.
          *
@@ -294,7 +294,7 @@ namespace biz.ritter.javapi.lang
             return valueOf(parseShort(str, radix));
         }
 
-        /**
+         /*
          * Reverses the bytes of the specified short.
          * 
          * @param s
@@ -309,7 +309,7 @@ namespace biz.ritter.javapi.lang
             return (short)(low | high);
         }
 
-        /**
+         /*
          * Returns a {@code Short} instance for the specified short value.
          * <p/>
          * If it is not necessary to get a new {@code Short} instance, it is
@@ -342,7 +342,7 @@ namespace biz.ritter.javapi.lang
 
         internal class IAC_SHORT_valueOfCache
         {
-            /**
+             /*
              * A cache of instances used by {@link Short#valueOf(short)} and auto-boxing.
              */
             internal static readonly Short[] CACHE = new Short[256];

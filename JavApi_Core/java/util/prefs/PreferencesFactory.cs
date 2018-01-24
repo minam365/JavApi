@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.prefs
 {
 
-    /**
+     /*
      * This interface is used by the {@link Preferences} class as factory class to
      * create {@code Preferences} instances. This interface can be implemented and
      * installed to replace the default preferences implementation.
@@ -29,7 +29,7 @@ namespace biz.ritter.javapi.util.prefs
     public interface PreferencesFactory
     {
 
-        /**
+         /*
          * Returns the root node of the preferences hierarchy for the calling user
          * context.
          * 
@@ -37,7 +37,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         Preferences userRoot();
 
-        /**
+         /*
          * Returns the root node of the system preferences hierarchy.
          * 
          * @return the system preferences hierarchy root node.

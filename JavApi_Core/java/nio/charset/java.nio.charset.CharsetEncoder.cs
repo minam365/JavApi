@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.nio.charset
 {
-    /**
+     /*
      * A converter that can converts a 16-bit Unicode character sequence to a byte
      * sequence in some charset.
      * <p />
@@ -121,7 +121,7 @@ namespace biz.ritter.javapi.nio.charset
         // checking
         private CharsetDecoder decoder;
 
-        /**
+         /*
          * Constructs a new <code>CharsetEncoder</code> using the given
          * <code>Charset</code>, average number and maximum number of bytes
          * created by this encoder for one input character.
@@ -144,7 +144,7 @@ namespace biz.ritter.javapi.nio.charset
                     new byte[] { (byte) '?' }){
         }
 
-        /**
+         /*
          * Constructs a new <code>CharsetEncoder</code> using the given
          * <code>Charset</code>, replacement byte array, average number and
          * maximum number of bytes created by this encoder for one input character.
@@ -184,7 +184,7 @@ namespace biz.ritter.javapi.nio.charset
             replaceWith(replacement);
         }
 
-        /**
+         /*
          * Gets the average number of bytes created by this encoder for a single
          * input character.
          * 
@@ -195,7 +195,7 @@ namespace biz.ritter.javapi.nio.charset
             return averBytes;
         }
 
-        /**
+         /*
          * Checks if the given character can be encoded by this encoder.
          * <p />
          * Note that this method can change the internal status of this encoder, so
@@ -240,7 +240,7 @@ namespace biz.ritter.javapi.nio.charset
             return result;
         }
 
-        /**
+         /*
          * Checks if a given <code>CharSequence</code> can be encoded by this
          * encoder.
          * 
@@ -276,7 +276,7 @@ namespace biz.ritter.javapi.nio.charset
             return this.canEncode((java.lang.CharSequence)sequence.getWrapperInstance());
         }
 
-        /**
+         /*
          * Gets the <code>Charset</code> which this encoder uses.
          * 
          * @return the <code>Charset</code> which this encoder uses.
@@ -285,7 +285,7 @@ namespace biz.ritter.javapi.nio.charset
             return cs;
         }
 
-        /**
+         /*
          * This is a facade method for the encoding operation.
          * <p />
          * This method encodes the remaining character sequence of the given
@@ -384,7 +384,7 @@ namespace biz.ritter.javapi.nio.charset
             return result;
         }
 
-        /**
+         /*
          * Encodes characters starting at the current position of the given input
          * buffer, and writes the equivalent byte sequence into the given output
          * buffer from its current position.
@@ -502,7 +502,7 @@ namespace biz.ritter.javapi.nio.charset
             }
         }
 
-        /**
+         /*
          * Encodes characters into bytes. This method is called by
          * {@link #encode(CharBuffer, ByteBuffer, boolean) encode}.
          * <p />
@@ -536,7 +536,7 @@ namespace biz.ritter.javapi.nio.charset
          */
         protected abstract CoderResult encodeLoop(java.nio.CharBuffer inJ, java.nio.ByteBuffer outJ);
 
-        /**
+         /*
          * Flushes this encoder.
          * <p />
          * This method will call {@link #implFlush(ByteBuffer) implFlush}. Some
@@ -578,7 +578,7 @@ namespace biz.ritter.javapi.nio.charset
             return result;
         }
 
-        /**
+         /*
          * Flushes this encoder. The default implementation does nothing and always
          * returns <code>CoderResult.UNDERFLOW</code>; this method can be
          * overridden if needed.
@@ -592,7 +592,7 @@ namespace biz.ritter.javapi.nio.charset
             return CoderResult.UNDERFLOW;
         }
 
-        /**
+         /*
          * Notifies that this encoder's <code>CodingErrorAction</code> specified
          * for malformed input error has been changed. The default implementation
          * does nothing; this method can be overridden if needed.
@@ -604,7 +604,7 @@ namespace biz.ritter.javapi.nio.charset
             // default implementation is empty
         }
 
-        /**
+         /*
          * Notifies that this encoder's <code>CodingErrorAction</code> specified
          * for unmappable character error has been changed. The default
          * implementation does nothing; this method can be overridden if needed.
@@ -616,7 +616,7 @@ namespace biz.ritter.javapi.nio.charset
             // default implementation is empty
         }
 
-        /**
+         /*
          * Notifies that this encoder's replacement has been changed. The default
          * implementation does nothing; this method can be overridden if needed.
          * 
@@ -627,7 +627,7 @@ namespace biz.ritter.javapi.nio.charset
             // default implementation is empty
         }
 
-        /**
+         /*
          * Resets this encoder's charset related state. The default implementation
          * does nothing; this method can be overridden if needed.
          */
@@ -635,7 +635,7 @@ namespace biz.ritter.javapi.nio.charset
             // default implementation is empty
         }
 
-        /**
+         /*
          * Checks if the given argument is legal as this encoder's replacement byte
          * array.
          * 
@@ -667,7 +667,7 @@ namespace biz.ritter.javapi.nio.charset
             return !result.isError();
         }
 
-        /**
+         /*
          * Gets this encoder's <code>CodingErrorAction</code> when a malformed
          * input error occurred during the encoding process.
          * 
@@ -678,7 +678,7 @@ namespace biz.ritter.javapi.nio.charset
             return malformAction;
         }
 
-        /**
+         /*
          * Gets the maximum number of bytes which can be created by this encoder for
          * one input character, must be positive.
          * 
@@ -689,7 +689,7 @@ namespace biz.ritter.javapi.nio.charset
             return maxBytes;
         }
 
-        /**
+         /*
          * Sets this encoder's action on malformed input error.
          * 
          * This method will call the
@@ -712,7 +712,7 @@ namespace biz.ritter.javapi.nio.charset
             return this;
         }
 
-        /**
+         /*
          * Sets this encoder's action on unmappable character error.
          * 
          * This method will call the
@@ -736,7 +736,7 @@ namespace biz.ritter.javapi.nio.charset
             return this;
         }
 
-        /**
+         /*
          * Gets the replacement byte array, which is never null or empty.
          * 
          * @return the replacement byte array, cannot be null or empty.
@@ -745,7 +745,7 @@ namespace biz.ritter.javapi.nio.charset
             return replace;
         }
 
-        /**
+         /*
          * Sets the new replacement value.
          * 
          * This method first checks the given replacement's validity, then changes
@@ -775,7 +775,7 @@ namespace biz.ritter.javapi.nio.charset
             return this;
         }
 
-        /**
+         /*
          * Resets this encoder. This method will reset the internal status and then
          * calla <code>implReset()</code> to reset any status related to the
          * specific charset.
@@ -788,7 +788,7 @@ namespace biz.ritter.javapi.nio.charset
             return this;
         }
 
-        /**
+         /*
          * Gets this encoder's <code>CodingErrorAction</code> when unmappable
          * character occurred during encoding process.
          * 

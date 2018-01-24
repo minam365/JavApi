@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util.jar
 {
-    /**
+     /*
      * {@code JarFile} is used to read jar entries and their associated data from
      * jar files.
      *
@@ -28,7 +28,7 @@ namespace biz.ritter.javapi.util.jar
 
         // The directory containing the manifest.
         const String META_DIR = "META-INF/"; //$NON-NLS-1$
-        /**
+         /*
          * The MANIFEST file name.
          */
         public const String MANIFEST_NAME = META_DIR+"MANIFEST.MF"; //$NON-NLS-1$
@@ -43,7 +43,7 @@ namespace biz.ritter.javapi.util.jar
         private bool closed = false;
 
         
-    /**
+     /*
      * Create a new {@code JarFile} using the contents of the specified file.
      *
      * @param file
@@ -55,7 +55,7 @@ namespace biz.ritter.javapi.util.jar
         this(file, true){
     }
 
-    /**
+     /*
      * Create a new {@code JarFile} using the contents of the specified file.
      *
      * @param file
@@ -73,7 +73,7 @@ namespace biz.ritter.javapi.util.jar
         readMetaEntries();
     }
 
-    /**
+     /*
      * Create a new {@code JarFile} using the contents of file.
      *
      * @param file
@@ -94,7 +94,7 @@ namespace biz.ritter.javapi.util.jar
         readMetaEntries();
     }
 
-    /**
+     /*
      * Create a new {@code JarFile} from the contents of the file specified by
      * filename.
      *
@@ -107,7 +107,7 @@ namespace biz.ritter.javapi.util.jar
         this(filename, true){
     }
 
-    /**
+     /*
      * Create a new {@code JarFile} from the contents of the file specified by
      * {@code filename}.
      *
@@ -125,7 +125,7 @@ namespace biz.ritter.javapi.util.jar
         }
         readMetaEntries();
     }
-        /**
+         /*
          * Returns the {@code Manifest} object associated with this {@code JarFile}
          * or {@code null} if no MANIFEST entry exists.
          *
@@ -163,7 +163,7 @@ namespace biz.ritter.javapi.util.jar
             return manifest;
         }
 
-        /**
+         /*
          * Called by the JarFile constructors, this method reads the contents of the
          * file's META-INF/ directory and picks out the MANIFEST.MF file and
          * verifier signature files if they exist. Any signature files found are
@@ -211,7 +211,7 @@ namespace biz.ritter.javapi.util.jar
                 verifier = null;
             }
         }
-        /**
+         /*
          * Returns all the ZipEntry's that relate to files in the
          * JAR's META-INF directory.
          *

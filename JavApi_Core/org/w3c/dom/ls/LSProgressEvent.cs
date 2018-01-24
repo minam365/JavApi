@@ -14,7 +14,7 @@ using org.w3c.dom.events;
 namespace org.w3c.dom.ls
 {
 
-    /**
+     /*
      *  This interface represents a progress event object that notifies the 
      * application about progress as a document is parsed. It extends the 
      * <code>Event</code> interface defined in [<a href='http://www.w3.org/TR/2003/NOTE-DOM-Level-3-Events-20031107'>DOM Level 3 Events</a>]
@@ -27,18 +27,18 @@ namespace org.w3c.dom.ls
      */
     public interface LSProgressEvent : Event
     {
-        /**
+         /*
          * The input source that is being parsed.
          */
         LSInput getInput();
 
-        /**
+         /*
          * The current position in the input source, including all external 
          * entities and other resources that have been read.
          */
         int getPosition();
 
-        /**
+         /*
          * The total size of the document including all external resources, this 
          * number might change as a document is being parsed if references to 
          * more external resources are seen. A value of <code>0</code> is 

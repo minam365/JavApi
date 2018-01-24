@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang
 {
-    /**
+     /*
      * {@code Error} is the superclass of all classes that represent unrecoverable
      * errors. When errors are thrown, they should not be caught by application
      * code.
@@ -29,13 +29,13 @@ namespace biz.ritter.javapi.lang
 
         private static readonly long serialVersionUID = 4980196508277280342L;
 
-        /**
+         /*
          * Constructs a new {@code Error} that includes the current stack trace.
          */
         public Error() : base (){
         }
 
-        /**
+         /*
          * Constructs a new {@code Error} with the current stack trace and the
          * specified detail message.
          * 
@@ -45,7 +45,7 @@ namespace biz.ritter.javapi.lang
         public Error(String detailMessage) : base (detailMessage) {
         }
 
-        /**
+         /*
          * Constructs a new {@code Error} with the current stack trace, the
          * specified detail message and the specified cause.
          * 
@@ -57,7 +57,7 @@ namespace biz.ritter.javapi.lang
         public Error(String detailMessage, Throwable throwable) : base (detailMessage, throwable) {
         }
 
-        /**
+         /*
          * Constructs a new {@code Error} with the current stack trace and the
          * specified cause.
          * 

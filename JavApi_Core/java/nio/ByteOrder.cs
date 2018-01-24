@@ -20,19 +20,19 @@ namespace biz.ritter.javapi.nio
 {
 
 
-    /**
+     /*
      * Defines byte order constants.
      */
     /// <remarks>Class is ported from Apache Harmony project.</remarks>
     public sealed class ByteOrder
     {
 
-        /**
+         /*
          * This constant represents big endian.
          */
         public static readonly ByteOrder BIG_ENDIAN = new ByteOrder("BIG_ENDIAN"); //$NON-NLS-1$
 
-        /**
+         /*
          * This constant represents little endian.
          */
         public static readonly ByteOrder LITTLE_ENDIAN = new ByteOrder("LITTLE_ENDIAN"); //$NON-NLS-1$
@@ -41,7 +41,7 @@ namespace biz.ritter.javapi.nio
 
         
 
-        /**
+         /*
          * Returns the current platform byte order.
          * 
          * @return the byte order object, which is either LITTLE_ENDIAN or
@@ -57,7 +57,7 @@ namespace biz.ritter.javapi.nio
             this.name = name;
         }
 
-        /**
+         /*
          * Returns a string that describes this object.
          * 
          * @return "BIG_ENDIAN" for {@link #BIG_ENDIAN ByteOrder.BIG_ENDIAN}

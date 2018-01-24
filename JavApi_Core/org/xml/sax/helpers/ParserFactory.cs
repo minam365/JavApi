@@ -7,7 +7,7 @@ using java = biz.ritter.javapi;
 
 namespace org.xml.sax.helpers
 {
-    /**
+     /*
      * Java-specific class for dynamically loading SAX parsers.
      *
      * <blockquote>
@@ -43,7 +43,7 @@ namespace org.xml.sax.helpers
     {
 
 
-        /**
+         /*
          * Private null constructor.
          */
         private ParserFactory()
@@ -51,7 +51,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Create a new SAX parser using the `org.xml.sax.parser' system property.
          *
          * <p>The named class must exist and must implement the
@@ -91,7 +91,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Create a new SAX parser object using the class name provided.
          *
          * <p>The named class must exist and must implement the

@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.io
 {
-    /**
+     /*
      * Wraps an existing {@link OutputStream} and <em>buffers</em> the output.
      * Expensive interaction with the underlying input stream is minimized, since
      * most (smaller) requests can be satisfied by accessing the buffer alone. The
@@ -35,17 +35,17 @@ namespace biz.ritter.javapi.io
      * @see BufferedInputStream
      */
     public class BufferedOutputStream : FilterOutputStream {
-        /**
+         /*
          * The buffer containing the bytes to be written to the target stream.
          */
         protected byte[] buf;
 
-        /**
+         /*
          * The total number of bytes inside the byte array {@code buf}.
          */
         protected int count;
 
-        /**
+         /*
          * Constructs a new {@code BufferedOutputStream} on the {@link OutputStream}
          * {@code out}. The buffer size is set to the default value of 8 KB.
          * 
@@ -57,7 +57,7 @@ namespace biz.ritter.javapi.io
             buf = new byte[8192];
         }
 
-        /**
+         /*
          * Constructs a new {@code BufferedOutputStream} on the {@link OutputStream}
          * {@code out}. The buffer size is set to {@code size}.
          * 
@@ -76,7 +76,7 @@ namespace biz.ritter.javapi.io
             buf = new byte[size];
         }
 
-        /**
+         /*
          * Flushes this stream to ensure all pending data is written out to the
          * target stream. In addition, the target stream is flushed.
          * 
@@ -90,7 +90,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Writes {@code count} bytes from the byte array {@code buffer} starting at
          * {@code offset} to this stream. If there is room in the buffer to hold the
          * bytes, they are copied in. If not, the buffered bytes plus the bytes in
@@ -168,7 +168,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Writes one byte to this stream. Only the low order byte of the integer
          * {@code oneByte} is written. If there is room in the buffer, the byte is
          * copied into the buffer and the count incremented. Otherwise, the buffer
@@ -199,7 +199,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Flushes only internal buffer.
          */
         private void flushInternal() {//throws IOException {

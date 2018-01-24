@@ -21,14 +21,14 @@ namespace biz.ritter.javapix.xml.transform
     // $Id: Source.java 446598 2006-09-15 12:55:40Z jeremias $
 
 
-    /**
+     /*
      * An object that implements this interface contains the information
      * needed to act as source input (XML source or transformation instructions).
      */
     public interface Source
     {
 
-        /**
+         /*
          * Set the system identifier for this Source.
          *
          * <p>The system identifier is optional if the source does not
@@ -40,7 +40,7 @@ namespace biz.ritter.javapix.xml.transform
          */
         void setSystemId(String systemId);
 
-        /**
+         /*
          * Get the system identifier that was set with setSystemId.
          *
          * @return The system identifier that was set with setSystemId, or null

@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.io
 {
 
-    /**
+     /*
      * Signals that a serialization-related method has been invoked in the wrong
      * place. Some methods in {@code ObjectInputStream} and {@code
      * ObjectOutputStream} can only be called from a nested call to readObject() or
@@ -36,7 +36,7 @@ namespace biz.ritter.javapi.io
 
         private const long serialVersionUID = -3893467273049808895L;
 
-        /**
+         /*
          * Constructs a new {@code NotActiveException} with its stack trace filled
          * in.
          */
@@ -45,7 +45,7 @@ namespace biz.ritter.javapi.io
         {
         }
 
-        /**
+         /*
          * Constructs a new {@code NotActiveException} with its stack trace and
          * detail message filled in.
          * 

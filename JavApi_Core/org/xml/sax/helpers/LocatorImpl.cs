@@ -9,7 +9,7 @@ namespace org.xml.sax.helpers
 {
 
 
-    /**
+     /*
      * Provide an optional convenience implementation of Locator.
      *
      * <blockquote>
@@ -54,7 +54,7 @@ namespace org.xml.sax.helpers
     {
 
 
-        /**
+         /*
          * Zero-argument constructor.
          *
          * <p>This will not normally be useful, since the main purpose
@@ -65,7 +65,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Copy constructor.
          *
          * <p>Create a persistent copy of the current state of a locator.
@@ -90,7 +90,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Return the saved public identifier.
          *
          * @return The public identifier as a string, or null if none
@@ -104,7 +104,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Return the saved system identifier.
          *
          * @return The system identifier as a string, or null if none
@@ -118,7 +118,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Return the saved line number (1-based).
          *
          * @return The line number as an integer, or -1 if none is available.
@@ -131,7 +131,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Return the saved column number (1-based).
          *
          * @return The column number as an integer, or -1 if none is available.
@@ -150,7 +150,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Set the public identifier for this locator.
          *
          * @param publicId The new public identifier, or null 
@@ -163,7 +163,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Set the system identifier for this locator.
          *
          * @param systemId The new system identifier, or null 
@@ -176,7 +176,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Set the line number for this locator (1-based).
          *
          * @param lineNumber The line number, or -1 if none is available.
@@ -188,7 +188,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Set the column number for this locator (1-based).
          *
          * @param columnNumber The column number, or -1 if none is available.

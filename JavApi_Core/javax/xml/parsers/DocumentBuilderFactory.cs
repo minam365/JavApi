@@ -23,7 +23,7 @@ using javax = biz.ritter.javapix;
 
 namespace biz.ritter.javapix.xml.parsers
 {
-	/**
+	 /*
  * Defines a factory API that enables applications to obtain a
  * parser that produces DOM object trees from XML documents.
  *
@@ -44,7 +44,7 @@ namespace biz.ritter.javapix.xml.parsers
 		{
 		}
 
-		/**
+		 /*
      * Obtain a new instance of a
      * <code>DocumentBuilderFactory</code>. This static method creates
      * a new factory instance.
@@ -114,7 +114,7 @@ namespace biz.ritter.javapix.xml.parsers
 			}
 		}
 
-		/**
+		 /*
      * @return New instance of a <code>DocumentBuilderFactory</code>
      *
      * @exception FactoryConfigurationError if the implementation is not
@@ -136,7 +136,7 @@ namespace biz.ritter.javapix.xml.parsers
 			}
 		}
 
-		/**
+		 /*
      * Creates a new instance of a {@link javax.xml.parsers.DocumentBuilder}
      * using the currently configured parameters.
      *
@@ -147,7 +147,7 @@ namespace biz.ritter.javapix.xml.parsers
     
 		public abstract DocumentBuilder newDocumentBuilder ();
 		//throws ParserConfigurationException;
-		/**
+		 /*
      * Specifies that the parser produced by this code will
      * provide support for XML namespaces. By default the value of this is set
      * to <code>false</code>
@@ -161,7 +161,7 @@ namespace biz.ritter.javapix.xml.parsers
 			this.namespaceAware = awareness;
 		}
 
-		/**
+		 /*
      * Specifies that the parser produced by this code will
      * validate documents as they are parsed. By default the value of this
      * is set to <code>false</code>.
@@ -192,7 +192,7 @@ namespace biz.ritter.javapix.xml.parsers
 			this.validating = validating;
 		}
 
-		/**
+		 /*
      * Specifies that the parsers created by this  factory must eliminate
      * whitespace in element content (sometimes known loosely as
      * 'ignorable whitespace') when parsing XML documents (see XML Rec
@@ -212,7 +212,7 @@ namespace biz.ritter.javapix.xml.parsers
 			this.whitespace = whitespace;
 		}
 
-		/**
+		 /*
      * Specifies that the parser produced by this code will
      * expand entity reference nodes. By default the value of this is set to
      * <code>true</code>
@@ -226,7 +226,7 @@ namespace biz.ritter.javapix.xml.parsers
 			this.expandEntityRef = expandEntityRef;
 		}
 
-		/**
+		 /*
      * <p>Specifies that the parser produced by this code will
      * ignore comments. By default the value of this is set to <code>false
      * </code>.</p>
@@ -239,7 +239,7 @@ namespace biz.ritter.javapix.xml.parsers
 			this.ignoreComments = ignoreComments;
 		}
 
-		/**
+		 /*
      * Specifies that the parser produced by this code will
      * convert CDATA nodes to Text nodes and append it to the
      * adjacent (if any) text node. By default the value of this is set to
@@ -255,7 +255,7 @@ namespace biz.ritter.javapix.xml.parsers
 			this.coalescing = coalescing;
 		}
 
-		/**
+		 /*
      * Indicates whether or not the factory is configured to produce
      * parsers which are namespace aware.
      *
@@ -268,7 +268,7 @@ namespace biz.ritter.javapix.xml.parsers
 			return namespaceAware;
 		}
 
-		/**
+		 /*
      * Indicates whether or not the factory is configured to produce
      * parsers which validate the XML content during parse.
      *
@@ -281,7 +281,7 @@ namespace biz.ritter.javapix.xml.parsers
 			return validating;
 		}
 
-		/**
+		 /*
      * Indicates whether or not the factory is configured to produce
      * parsers which ignore ignorable whitespace in element content.
      *
@@ -295,7 +295,7 @@ namespace biz.ritter.javapix.xml.parsers
 			return whitespace;
 		}
 
-		/**
+		 /*
      * Indicates whether or not the factory is configured to produce
      * parsers which expand entity reference nodes.
      *
@@ -308,7 +308,7 @@ namespace biz.ritter.javapix.xml.parsers
 			return expandEntityRef;
 		}
 
-		/**
+		 /*
      * Indicates whether or not the factory is configured to produce
      * parsers which ignores comments.
      *
@@ -321,7 +321,7 @@ namespace biz.ritter.javapix.xml.parsers
 			return ignoreComments;
 		}
 
-		/**
+		 /*
      * Indicates whether or not the factory is configured to produce
      * parsers which converts CDATA nodes to Text nodes and appends it to
      * the adjacent (if any) Text node.
@@ -336,7 +336,7 @@ namespace biz.ritter.javapix.xml.parsers
 			return coalescing;
 		}
 
-		/**
+		 /*
      * Allows the user to set specific attributes on the underlying
      * implementation.
      * @param name The name of the attribute.
@@ -346,7 +346,7 @@ namespace biz.ritter.javapix.xml.parsers
      */
 		public abstract void setAttribute (String name, Object value);
 		// throws IllegalArgumentException;
-		/**
+		 /*
      * Allows the user to retrieve specific attributes on the underlying
      * implementation.
      * @param name The name of the attribute.
@@ -356,7 +356,7 @@ namespace biz.ritter.javapix.xml.parsers
      */
 		public abstract Object getAttribute (String name);
 		//throws IllegalArgumentException;
-		/**
+		 /*
 	 * <p>Set a feature for this <code>DocumentBuilderFactory</code> and <code>DocumentBuilder</code>s created by this factory.</p>
 	 * 
 	 * <p>
@@ -393,7 +393,7 @@ namespace biz.ritter.javapix.xml.parsers
 	 */
 		public abstract void setFeature (String name, bool value);
 		//throws ParserConfigurationException;
-		/**
+		 /*
 	 * <p>Get the state of the named feature.</p>
 	 * 
 	 * <p>
@@ -413,7 +413,7 @@ namespace biz.ritter.javapix.xml.parsers
 	 */
 		public abstract bool getFeature (String name);
 		//throws ParserConfigurationException;
-		/**
+		 /*
      * Gets the {@link Schema} object specified through
      * the {@link #setSchema(Schema schema)} method.
      * 
@@ -443,7 +443,7 @@ namespace biz.ritter.javapix.xml.parsers
 
 		}
 
-		/**
+		 /*
      * <p/>Set the {@link Schema} to be used by parsers created
      * from this factory.
      * 
@@ -509,7 +509,7 @@ namespace biz.ritter.javapix.xml.parsers
 			);
 		}
 
-		/**
+		 /*
      * <p>Set state of XInclude processing.</p>
      * 
      * <p>If XInclude markup is found in the document instance, should it be
@@ -539,7 +539,7 @@ namespace biz.ritter.javapix.xml.parsers
 			);
 		}
 
-		/**
+		 /*
      * <p>Get state of XInclude processing.</p>
      * 
      * @return current state of XInclude processing

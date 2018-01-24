@@ -39,7 +39,7 @@ namespace biz.ritter.javapi.sql
 
         private const long serialVersionUID = 1511598038487230103L;
 
-        /**
+         /*
          * Constructs a {@code Date} object corresponding to the supplied year,
          * month and day.
          *
@@ -59,7 +59,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates a date which corresponds to the day determined by the supplied
          * milliseconds time value {@code theDate}.
          * 
@@ -75,7 +75,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * @deprecated This method is deprecated and must not be used. SQL {@code
          *             Date} values do not have an hours component.
          * @return does not return anything.
@@ -88,7 +88,7 @@ namespace biz.ritter.javapi.sql
             throw new java.lang.IllegalArgumentException();
         }
 
-        /**
+         /*
          * @deprecated This method is deprecated and must not be used. SQL {@code
          *             Date} values do not have a minutes component.
          * @return does not return anything.
@@ -101,7 +101,7 @@ namespace biz.ritter.javapi.sql
             throw new java.lang.IllegalArgumentException();
         }
 
-        /**
+         /*
          * @deprecated This method is deprecated and must not be used. SQL {@code
          *             Date} values do not have a seconds component.
          * @return does not return anything.
@@ -114,7 +114,7 @@ namespace biz.ritter.javapi.sql
             throw new java.lang.IllegalArgumentException();
         }
 
-        /**
+         /*
          * @deprecated This method is deprecated and must not be used. SQL {@code
          *             Date} values do not have an hours component.
          * @param theHours
@@ -128,7 +128,7 @@ namespace biz.ritter.javapi.sql
             throw new java.lang.IllegalArgumentException();
         }
 
-        /**
+         /*
          * @deprecated This method is deprecated and must not be used. SQL {@code
          *             Date} values do not have a minutes component.
          * @param theMinutes
@@ -142,7 +142,7 @@ namespace biz.ritter.javapi.sql
             throw new java.lang.IllegalArgumentException();
         }
 
-        /**
+         /*
          * @deprecated This method is deprecated and must not be used. SQL {@code
          *             Date} values do not have a seconds component.
          * @param theSeconds
@@ -156,7 +156,7 @@ namespace biz.ritter.javapi.sql
             throw new java.lang.IllegalArgumentException();
         }
 
-        /**
+         /*
          * Sets this date to a date supplied as a milliseconds value. The date is
          * set based on the supplied time value and rounded to zero GMT for that day.
          * 
@@ -173,7 +173,7 @@ namespace biz.ritter.javapi.sql
             base.setTime(normalizeTime(theTime));
         }
 
-        /**
+         /*
          * Produces a string representation of the date in SQL format
          * 
          * @return a string representation of the date in SQL format - {@code
@@ -209,7 +209,7 @@ namespace biz.ritter.javapi.sql
             sb.append(str);
         }
 
-        /**
+         /*
          * Creates a {@code Date} from a string representation of a date in SQL
          * format.
          * 

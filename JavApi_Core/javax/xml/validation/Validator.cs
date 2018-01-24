@@ -28,7 +28,7 @@ import javax.xml.transform.Source;
 
 import org.w3c.dom.ls.LSResourceResolver;
 */
-	/**
+	 /*
  * <p>A processor that checks an XML document against {@link Schema}.</p>
  * 
  * <p/>
@@ -50,7 +50,7 @@ import org.w3c.dom.ls.LSResourceResolver;
  */
 	public abstract class Validator
 	{
-		/**
+		 /*
      * Constructor for derived classes.
      * 
      * <p/>
@@ -65,7 +65,7 @@ import org.w3c.dom.ls.LSResourceResolver;
 		{
 		}
 
-		/**
+		 /*
 	 * <p>Reset this <code>Validator</code> to its original configuration.</p>
 	 * 
 	 * <p><code>Validator</code> is reset to the same state as when it was created with
@@ -79,7 +79,7 @@ import org.w3c.dom.ls.LSResourceResolver;
 	 */
 		public abstract void reset ();
 
-		/**
+		 /*
      * Validates the specified input.
      * 
      * <p/>
@@ -95,7 +95,7 @@ import org.w3c.dom.ls.LSResourceResolver;
 			validate (source, null);
 		}
 
-		/**
+		 /*
      * Validates the specified input and send the augmented validation
      * result to the specified output.
      * 
@@ -208,7 +208,7 @@ import org.w3c.dom.ls.LSResourceResolver;
      */
 		public abstract void validate (javax.xml.transform.Source source, javax.xml.transform.Result result);
 		// throws SAXException, IOException;
-		/**
+		 /*
      * Sets the {@link ErrorHandler} to receive errors encountered
      * during the <code>validate</code> method invocation.
      * 
@@ -260,7 +260,7 @@ import org.w3c.dom.ls.LSResourceResolver;
      */
 		public abstract void setErrorHandler (ErrorHandler errorHandler);
 
-		/**
+		 /*
      * Gets the current {@link ErrorHandler} set to this {@link Validator}.
      * 
      * @return
@@ -273,7 +273,7 @@ import org.w3c.dom.ls.LSResourceResolver;
      */
 		public abstract ErrorHandler getErrorHandler ();
 
-		/**
+		 /*
      * Sets the {@link LSResourceResolver} to customize
      * resource resolution while in a validation episode.
      * 
@@ -312,7 +312,7 @@ import org.w3c.dom.ls.LSResourceResolver;
      */
 		public abstract void setResourceResolver (org.w3c.dom.ls.LSResourceResolver resourceResolver);
 
-		/**
+		 /*
      * Gets the current {@link LSResourceResolver} set to this {@link Validator}.
      * 
      * @return
@@ -325,7 +325,7 @@ import org.w3c.dom.ls.LSResourceResolver;
      */
 		public abstract org.w3c.dom.ls.LSResourceResolver getResourceResolver ();
 
-		/**
+		 /*
      * Look up the value of a feature flag.
      *
      * <p/>The feature name is any fully-qualified URI.  It is
@@ -355,7 +355,7 @@ import org.w3c.dom.ls.LSResourceResolver;
 			throw new SAXNotRecognizedException (name);
 		}
 
-		/**
+		 /*
      * Set the value of a feature flag.
      *
      * <p>
@@ -390,7 +390,7 @@ import org.w3c.dom.ls.LSResourceResolver;
 			throw new SAXNotRecognizedException (name);
 		}
 
-		/**
+		 /*
      * Set the value of a property.
      *
      * <p>The property name is any fully-qualified URI.  It is
@@ -420,7 +420,7 @@ import org.w3c.dom.ls.LSResourceResolver;
 			throw new SAXNotRecognizedException (name);
 		}
 
-		/**
+		 /*
      * Look up the value of a property.
      *
      * <p>The property name is any fully-qualified URI.  It is

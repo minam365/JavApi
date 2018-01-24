@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang
 {
 
-    /**
+     /*
      * Thrown when an attempt is made to create an array with a size of less than
      * zero.
      */
@@ -26,14 +26,14 @@ namespace biz.ritter.javapi.lang
 
         private static readonly long serialVersionUID = -8960118058596991861L;
 
-        /**
+         /*
          * Constructs a new {@code NegativeArraySizeException} that includes the
          * current stack trace.
          */
         public NegativeArraySizeException() : base(){
         }
 
-        /**
+         /*
          * Constructs a new {@code NegativeArraySizeException} with the current
          * stack trace and the specified detail message.
          * 

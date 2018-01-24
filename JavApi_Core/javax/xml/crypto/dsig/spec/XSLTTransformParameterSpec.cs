@@ -21,7 +21,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapix.xml.crypto.dsig.spec
 {
 
-/**
+ /*
  * Parameters for the <a href="http://www.w3.org/TR/1999/REC-xslt-19991116">
  * XSLT Transform Algorithm</a>.
  * The parameters include a namespace-qualified stylesheet element.
@@ -42,7 +42,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig.spec
 public sealed class XSLTTransformParameterSpec : TransformParameterSpec{
     private XMLStructure stylesheet;
 
-    /**
+     /*
      * Creates an <code>XSLTTransformParameterSpec</code> with the specified 
      * stylesheet.
      *
@@ -57,7 +57,7 @@ public sealed class XSLTTransformParameterSpec : TransformParameterSpec{
         this.stylesheet = stylesheet;
     }
 
-    /**
+     /*
      * Returns the stylesheet.
      *
      * @return the stylesheet

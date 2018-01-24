@@ -17,7 +17,7 @@ using System;
 
 namespace biz.ritter.javapi.util
 {
-    /**
+     /*
      * <strong>Basties Note: In change to Java this type is declared as interface, because type
      * have only abstract methods.</strong>
      * <strong>Note: Do not use this class since it is obsolete. Please use the
@@ -32,7 +32,7 @@ namespace biz.ritter.javapi.util
     [Obsolete] // see comment why it is obsolete
     public interface Dictionary<K, V> {
 
-        /**
+         /*
          * Returns an enumeration on the elements of this dictionary.
          * 
          * @return an enumeration of the values of this dictionary.
@@ -42,7 +42,7 @@ namespace biz.ritter.javapi.util
          */
         Enumeration<V> elements();
 
-        /**
+         /*
          * Returns the value which is associated with {@code key}.
          * 
          * @param key
@@ -53,7 +53,7 @@ namespace biz.ritter.javapi.util
          */
         V get(Object key);
 
-        /**
+         /*
          * Returns true if this dictionary has no key/value pairs.
          * 
          * @return {@code true} if this dictionary has no key/value pairs,
@@ -62,7 +62,7 @@ namespace biz.ritter.javapi.util
          */
         bool isEmpty();
 
-        /**
+         /*
          * Returns an enumeration on the keys of this dictionary.
          * 
          * @return an enumeration of the keys of this dictionary.
@@ -72,7 +72,7 @@ namespace biz.ritter.javapi.util
          */
         Enumeration<K> keys();
 
-        /**
+         /*
          * Associate {@code key} with {@code value} in this dictionary. If {@code
          * key} exists in the dictionary before this call, the old value in the
          * dictionary is replaced by {@code value}.
@@ -89,7 +89,7 @@ namespace biz.ritter.javapi.util
          */
         V put(K key, V value);
 
-        /**
+         /*
          * Removes the key/value pair with the specified {@code key} from this
          * dictionary.
          * 
@@ -102,7 +102,7 @@ namespace biz.ritter.javapi.util
          */
         V remove(Object key);
 
-        /**
+         /*
          * Returns the number of key/value pairs in this dictionary.
          * 
          * @return the number of key/value pairs in this dictionary.

@@ -15,27 +15,27 @@ using System;
 
 namespace biz.ritter.javapi.nio.charset
 {
-    /**
+     /*
      * Used to indicate what kind of actions to take in case of encoding/decoding
      * errors. Currently three actions are defined: {@code IGNORE}, {@code REPLACE}
      * and {@code REPORT}.
      */
     public class CodingErrorAction {
 
-        /**
+         /*
          * Denotes the action to ignore any errors.
          */
         public static readonly CodingErrorAction IGNORE = new CodingErrorAction(
                 "IGNORE"); //$NON-NLS-1$
 
-        /**
+         /*
          * Denotes the action to fill in the output with a replacement character
          * when malformed input or an unmappable character is encountered.
          */
         public static readonly CodingErrorAction REPLACE = new CodingErrorAction(
                 "REPLACE"); //$NON-NLS-1$
 
-        /**
+         /*
          * Denotes the action to report the encountered error in an appropriate
          * manner, for example to throw an exception or return an informative
          * result.
@@ -53,7 +53,7 @@ namespace biz.ritter.javapi.nio.charset
             this.action = action;
         }
 
-        /**
+         /*
          * Returns a text description of this action indication.
          * 
          * @return a text description of this action indication.

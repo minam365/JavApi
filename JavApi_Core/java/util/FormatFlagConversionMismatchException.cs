@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * A {@code FormatFlagsConversionMismatchException} will be thrown if a
      * conversion and the flags are incompatible.
      * 
@@ -34,7 +34,7 @@ namespace biz.ritter.javapi.util
 
         private char c;
 
-        /**
+         /*
          * Constructs a new {@code FormatFlagsConversionMismatchException} with the
          * flags and conversion specified.
          * 
@@ -53,7 +53,7 @@ namespace biz.ritter.javapi.util
             this.c = c;
         }
 
-        /**
+         /*
          * Returns the incompatible format flag.
          * 
          * @return the incompatible format flag.
@@ -63,7 +63,7 @@ namespace biz.ritter.javapi.util
             return f;
         }
 
-        /**
+         /*
          * Returns the incompatible conversion.
          * 
          * @return the incompatible conversion.
@@ -73,7 +73,7 @@ namespace biz.ritter.javapi.util
             return c;
         }
 
-        /**
+         /*
          * Returns the message string of the {@code FormatFlagsConversionMismatchException}.
          * 
          * @return the message string of the {@code FormatFlagsConversionMismatchException}.

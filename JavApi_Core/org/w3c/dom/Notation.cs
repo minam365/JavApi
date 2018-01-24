@@ -14,7 +14,7 @@ using System;
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      * This interface represents a notation declared in the DTD. A notation either 
      * declares, by name, the format of an unparsed entity (see section 4.7 of 
      * the XML 1.0 specification ), or is used for formal declaration of 
@@ -28,13 +28,13 @@ namespace org.w3c.dom
      */
     public interface Notation : Node
     {
-        /**
+         /*
          * The public identifier of this notation. If the public identifier was 
          * not specified, this is <code>null</code>.
          */
         String getPublicId();
 
-        /**
+         /*
          * The system identifier of this notation. If the system identifier was 
          * not specified, this is <code>null</code>.
          */

@@ -14,7 +14,7 @@ using System;
 namespace org.w3c.dom.ls
 {
 
-    /**
+     /*
      *  <code>DOMImplementationLS</code> contains the factory methods for creating 
      * Load and Save objects. 
      * <p> The expectation is that an instance of the 
@@ -31,7 +31,7 @@ namespace org.w3c.dom.ls
      */
     public interface DOMImplementationLS
     {
-        /**
+         /*
          * Create a new <code>LSParser</code>. The newly constructed parser may 
          * then be configured by means of its <code>DOMConfiguration</code> 
          * object, and used to parse documents by means of its <code>parse</code>
@@ -75,7 +75,7 @@ namespace org.w3c.dom.ls
         LSParser createLSParser(short mode,
                                        String schemaType);//                                   throws DOMException;
 
-        /**
+         /*
          *  Create a new <code>LSSerializer</code> object. 
          * @return The newly created <code>LSSerializer</code> object.
          * <p ><b>Note:</b>    By default, the newly created 
@@ -89,7 +89,7 @@ namespace org.w3c.dom.ls
          */
         LSSerializer createLSSerializer();
 
-        /**
+         /*
          *  Create a new empty input source object where 
          * <code>LSInput.characterStream</code>, <code>LSInput.byteStream</code>
          * , <code>LSInput.stringData</code> <code>LSInput.systemId</code>, 
@@ -100,7 +100,7 @@ namespace org.w3c.dom.ls
          */
         LSInput createLSInput();
 
-        /**
+         /*
          *  Create a new empty output destination object where 
          * <code>LSOutput.characterStream</code>, 
          * <code>LSOutput.byteStream</code>, <code>LSOutput.systemId</code>, 
@@ -114,11 +114,11 @@ namespace org.w3c.dom.ls
     public sealed class DOMImplementationLSConstants
     {
         // DOMImplementationLSMode
-        /**
+         /*
          * Create a synchronous <code>LSParser</code>.
          */
         public static readonly short MODE_SYNCHRONOUS = 1;
-        /**
+         /*
          * Create an asynchronous <code>LSParser</code>.
          */
         public static readonly short MODE_ASYNCHRONOUS = 2;

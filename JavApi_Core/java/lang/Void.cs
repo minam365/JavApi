@@ -15,7 +15,7 @@ using System;
 using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang{
-    /**
+     /*
      * Placeholder class for the Java keyword {@code void}.
      *
      * @since 1.1
@@ -23,7 +23,7 @@ namespace biz.ritter.javapi.lang{
     public sealed class Void : Object
     {
 
-        /**
+         /*
          * The {@link Class} object that represents the primitive type {@code void}.
          */
         public static readonly java.lang.Class TYPE = lookupType();

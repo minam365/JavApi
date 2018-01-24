@@ -16,11 +16,11 @@ using java = biz.ritter.javapi;
 
 namespace org.apache.harmony.awt.gl.color
 {
-    /**
+     /*
      * @author Oleg V. Khaschansky
      */
 
-    /**
+     /*
      * This class encapsulates native ICC transform object, is responsible for its
      * creation, destruction and passing its handle to the native CMM.
      */
@@ -33,7 +33,7 @@ namespace org.apache.harmony.awt.gl.color
         private java.awt.color.ICC_Profile dst;
 
 
-        /**
+         /*
          * @return Returns the number of input channels.
          */
         public int getNumInputChannels()
@@ -41,7 +41,7 @@ namespace org.apache.harmony.awt.gl.color
             return numInputChannels;
         }
 
-        /**
+         /*
          * @return Returns the number of output channels.
          */
         public int getNumOutputChannels()
@@ -49,7 +49,7 @@ namespace org.apache.harmony.awt.gl.color
             return numOutputChannels;
         }
 
-        /**
+         /*
          * @return Returns the dst.
          */
         public java.awt.color.ICC_Profile getDst()
@@ -57,7 +57,7 @@ namespace org.apache.harmony.awt.gl.color
             return dst;
         }
 
-        /**
+         /*
          * @return Returns the src.
          */
         public java.awt.color.ICC_Profile getSrc()
@@ -65,7 +65,7 @@ namespace org.apache.harmony.awt.gl.color
             return src;
         }
 
-        /**
+         /*
          * Constructs a multiprofile ICC transform
          * @param profiles - list of ICC profiles
          * @param renderIntents - only hints for CMM
@@ -75,7 +75,7 @@ namespace org.apache.harmony.awt.gl.color
             throw new java.lang.UnsupportedOperationException("Not yet implemented");
         }
 
-        /**
+         /*
          * This constructor is able to set intents by default
          * @param profiles - list of ICC profiles
          */

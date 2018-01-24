@@ -22,7 +22,7 @@ using javax = biz.ritter.javapix;
 namespace biz.ritter.javapix.xml.crypto.dom
 {
 
-/**
+ /*
  * A DOM-specific {@link XMLStructure}. The purpose of this class is to
  * allow a DOM node to be used to represent extensible content (any elements
  * or mixed content) in XML Signature structures.
@@ -43,7 +43,7 @@ public class DOMStructure : XMLStructure {
 
     private readonly org.w3c.dom.Node node;
 
-    /**
+     /*
      * Creates a <code>DOMStructure</code> containing the specified node.
      *
      * @param node the node
@@ -56,7 +56,7 @@ public class DOMStructure : XMLStructure {
         this.node = node;
     }
 
-    /**
+     /*
      * Returns the node contained in this <code>DOMStructure</code>.
      *
      * @return the node
@@ -65,7 +65,7 @@ public class DOMStructure : XMLStructure {
         return node;
     }
 
-    /**
+     /*
      * @throws NullPointerException {@inheritDoc}
      */
     public virtual bool isFeatureSupported(String feature) {

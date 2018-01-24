@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.io
 {
-	/**
+	 /*
 	 * Wraps an existing {@link OutputStream} and writes typed data to it.
 	 * Typically, this stream can be read in by DataInputStream. Types that can be
 	 * written include byte, 16-bit short, 32-bit int, 32-bit float, 64-bit long,
@@ -27,13 +27,13 @@ namespace biz.ritter.javapi.io
 	 */
 	public class DataOutputStream : FilterOutputStream, DataOutput {
 	
-	    /**
+	     /*
 	     * The number of bytes written out so far.
 	     */
 	    protected int written;
 	    byte[] buff;
 	
-	    /**
+	     /*
 	     * Constructs a new {@code DataOutputStream} on the {@code OutputStream}
 	     * {@code out}. Note that data written by this stream is not in a human
 	     * readable form but can be reconstructed by using a {@link DataInputStream}
@@ -46,7 +46,7 @@ namespace biz.ritter.javapi.io
 	        buff = new byte[8];
 	    }
 	
-	    /**
+	     /*
 	     * Flushes this stream to ensure all pending data is sent out to the target
 	     * stream. This implementation then also flushes the target stream.
 	     * 
@@ -57,7 +57,7 @@ namespace biz.ritter.javapi.io
 	        base.flush();
 	    }
 	
-	    /**
+	     /*
 	     * Returns the total number of bytes written to the target stream so far.
 	     * 
 	     * @return the number of bytes written to the target stream.
@@ -69,7 +69,7 @@ namespace biz.ritter.javapi.io
 	        return written;
 	    }
 	
-	    /**
+	     /*
 	     * Writes {@code count} bytes from the byte array {@code buffer} starting at
 	     * {@code offset} to the target stream.
 	     * 
@@ -95,7 +95,7 @@ namespace biz.ritter.javapi.io
 	        written += count;
 	    }
 	
-	    /**
+	     /*
 	     * Writes a byte to the target stream. Only the least significant byte of
 	     * the integer {@code oneByte} is written.
 	     * 
@@ -111,7 +111,7 @@ namespace biz.ritter.javapi.io
 	        written++;
 	    }
 	
-	    /**
+	     /*
 	     * Writes a boolean to the target stream.
 	     * 
 	     * @param val
@@ -125,7 +125,7 @@ namespace biz.ritter.javapi.io
 	        written++;
 	    }
 	
-	    /**
+	     /*
 	     * Writes an 8-bit byte to the target stream. Only the least significant
 	     * byte of the integer {@code val} is written.
 	     * 
@@ -141,7 +141,7 @@ namespace biz.ritter.javapi.io
 	        written++;
 	    }
 	
-	    /**
+	     /*
 	     * Writes the low order bytes from a string to the target stream.
 	     * 
 	     * @param str
@@ -163,7 +163,7 @@ namespace biz.ritter.javapi.io
 	        written += bytes.Length;
 	    }
 	
-	    /**
+	     /*
 	     * Writes a 16-bit character to the target stream. Only the two lower bytes
 	     * of the integer {@code val} are written, with the higher one written
 	     * first. This corresponds to the Unicode value of {@code val}.
@@ -181,7 +181,7 @@ namespace biz.ritter.javapi.io
 	        written += 2;
 	    }
 	
-	    /**
+	     /*
 	     * Writes the 16-bit characters contained in {@code str} to the target
 	     * stream.
 	     * 
@@ -203,7 +203,7 @@ namespace biz.ritter.javapi.io
 	        written += newBytes.Length;
 	    }
 	
-	    /**
+	     /*
 	     * Writes a 64-bit double to the target stream. The resulting output is the
 	     * eight bytes resulting from calling Double.doubleToLongBits().
 	     * 
@@ -217,7 +217,7 @@ namespace biz.ritter.javapi.io
 	        writeLong(java.lang.Double.doubleToLongBits(val));
 	    }
 	
-	    /**
+	     /*
 	     * Writes a 32-bit float to the target stream. The resulting output is the
 	     * four bytes resulting from calling Float.floatToIntBits().
 	     * 
@@ -231,7 +231,7 @@ namespace biz.ritter.javapi.io
 	        writeInt(java.lang.Float.floatToIntBits(val));
 	    }
 	
-	    /**
+	     /*
 	     * Writes a 32-bit int to the target stream. The resulting output is the
 	     * four bytes, highest order first, of {@code val}.
 	     * 
@@ -250,7 +250,7 @@ namespace biz.ritter.javapi.io
 	        written += 4;
 	    }
 	
-	    /**
+	     /*
 	     * Writes a 64-bit long to the target stream. The resulting output is the
 	     * eight bytes, highest order first, of {@code val}.
 	     * 
@@ -286,7 +286,7 @@ namespace biz.ritter.javapi.io
 	        return offset;
 	    }
 	
-	    /**
+	     /*
 	     * Writes the specified 16-bit short to the target stream. Only the lower
 	     * two bytes of the integer {@code val} are written, with the higher one
 	     * written first.
@@ -312,7 +312,7 @@ namespace biz.ritter.javapi.io
 	        return offset;
 	    }
 	
-	    /**
+	     /*
 	     * Writes the specified encoded in {@link DataInput modified UTF-8} to this
 	     * stream.
 	     * 

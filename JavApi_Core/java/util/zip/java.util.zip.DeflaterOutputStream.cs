@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.zip
 {
 
-    /**
+     /*
      * This class provides an implementation of {@code FilterOutputStream} that
      * compresses data using the <i>DEFLATE</i> algorithm. Basically it wraps the
      * {@code Deflater} class and takes care of the buffering.
@@ -29,19 +29,19 @@ namespace biz.ritter.javapi.util.zip
     {
         internal const int BUF_SIZE = 512;
 
-        /**
+         /*
          * The buffer for the data to be written to.
          */
         protected byte[] buf;
 
-        /**
+         /*
          * The deflater used.
          */
         protected Deflater def;
 
         protected internal bool done = false;
 
-        /**
+         /*
          * This constructor lets you pass the {@code Deflater} specifying the
          * compression algorithm.
          *
@@ -55,7 +55,7 @@ namespace biz.ritter.javapi.util.zip
         public DeflaterOutputStream(java.io.OutputStream os, Deflater def) :this(os, def, BUF_SIZE){
         }
 
-        /**
+         /*
          * This is the most basic constructor. You only need to pass the {@code
          * OutputStream} to which the compressed data shall be written to. The
          * default settings for the {@code Deflater} and internal buffer are used.
@@ -68,7 +68,7 @@ namespace biz.ritter.javapi.util.zip
         public DeflaterOutputStream(java.io.OutputStream os) : this(os, new Deflater(), BUF_SIZE){
         }
 
-        /**
+         /*
          * This constructor lets you specify both the compression algorithm as well
          * as the internal buffer size to be used.
          *
@@ -92,7 +92,7 @@ namespace biz.ritter.javapi.util.zip
             buf = new byte[bsize];
         }
 
-        /**
+         /*
          * Compress the data in the input buffer and write it to the underlying
          * stream.
          *
@@ -107,7 +107,7 @@ namespace biz.ritter.javapi.util.zip
             } while (!def.needsInput());
         }
 
-        /**
+         /*
          * Writes any unwritten compressed data to the underlying stream, the closes
          * all underlying streams. This stream can no longer be used after close()
          * has been called.
@@ -125,7 +125,7 @@ namespace biz.ritter.javapi.util.zip
             outJ.close();
         }
 
-        /**
+         /*
          * Writes any unwritten data to the underlying stream. Does not close the
          * stream.
          *
@@ -155,7 +155,7 @@ namespace biz.ritter.javapi.util.zip
             write(b, 0, 1);
         }
 
-        /**
+         /*
          * Compresses {@code nbytes} of data from {@code buf} starting at
          * {@code off} and writes it to the underlying stream.
          *

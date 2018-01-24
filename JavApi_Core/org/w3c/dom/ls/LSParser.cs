@@ -14,7 +14,7 @@ using System;
 namespace org.w3c.dom.ls
 {
 
-    /**
+     /*
      *  An interface to an object that is able to build, or augment, a DOM tree 
      * from various input sources. 
      * <p> <code>LSParser</code> provides an API for parsing XML and building the 
@@ -137,7 +137,7 @@ namespace org.w3c.dom.ls
      */
     public interface LSParser
     {
-        /**
+         /*
          *  The <code>DOMConfiguration</code> object used when parsing an input 
          * source. This <code>DOMConfiguration</code> is specific to the parse 
          * operation. No parameter values from this <code>DOMConfiguration</code>
@@ -254,7 +254,7 @@ namespace org.w3c.dom.ls
          */
         DOMConfiguration getDomConfig();
 
-        /**
+         /*
          *  When a filter is provided, the implementation will call out to the 
          * filter as it is constructing the DOM tree structure. The filter can 
          * choose to remove elements from the document being constructed, or to 
@@ -266,7 +266,7 @@ namespace org.w3c.dom.ls
          * filter. 
          */
         LSParserFilter getFilter();
-        /**
+         /*
          *  When a filter is provided, the implementation will call out to the 
          * filter as it is constructing the DOM tree structure. The filter can 
          * choose to remove elements from the document being constructed, or to 
@@ -279,19 +279,19 @@ namespace org.w3c.dom.ls
          */
         void setFilter(LSParserFilter filter);
 
-        /**
+         /*
          *  <code>true</code> if the <code>LSParser</code> is asynchronous, 
          * <code>false</code> if it is synchronous. 
          */
         bool getAsync();
 
-        /**
+         /*
          *  <code>true</code> if the <code>LSParser</code> is currently busy 
          * loading a document, otherwise <code>false</code>. 
          */
         bool getBusy();
 
-        /**
+         /*
          * Parse an XML document from a resource identified by a 
          * <code>LSInput</code>.
          * @param input  The <code>LSInput</code> from which the source of the 
@@ -312,7 +312,7 @@ namespace org.w3c.dom.ls
          */
         Document parse(LSInput input);//                          throws DOMException, LSException;
 
-        /**
+         /*
          *  Parse an XML document from a location identified by a URI reference [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]. If the URI 
          * contains a fragment identifier (see section 4.1 in [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]), the 
          * behavior is not defined by this specification, future versions of 
@@ -335,7 +335,7 @@ namespace org.w3c.dom.ls
          */
         Document parseURI(String uri);//                             throws DOMException, LSException;
 
-        /**
+         /*
          *  Parse an XML fragment from a resource identified by a 
          * <code>LSInput</code> and insert the content into an existing document 
          * at the position specified with the <code>context</code> and 
@@ -415,7 +415,7 @@ namespace org.w3c.dom.ls
                                      Node contextArg,
                                      short action);//                                 throws DOMException, LSException;
 
-        /**
+         /*
          *  Abort the loading of the document that is currently being loaded by 
          * the <code>LSParser</code>. If the <code>LSParser</code> is currently 
          * not busy, a call to this method does nothing. 
@@ -427,34 +427,34 @@ namespace org.w3c.dom.ls
     public sealed class LSParserConstants
     {
         // ACTION_TYPES
-        /**
+         /*
          *  Append the result of the parse operation as children of the context 
          * node. For this action to work, the context node must be an 
          * <code>Element</code> or a <code>DocumentFragment</code>. 
          */
         public static readonly short ACTION_APPEND_AS_CHILDREN = 1;
-        /**
+         /*
          *  Replace all the children of the context node with the result of the 
          * parse operation. For this action to work, the context node must be an 
          * <code>Element</code>, a <code>Document</code>, or a 
          * <code>DocumentFragment</code>. 
          */
         public static readonly short ACTION_REPLACE_CHILDREN = 2;
-        /**
+         /*
          *  Insert the result of the parse operation as the immediately preceding 
          * sibling of the context node. For this action to work the context 
          * node's parent must be an <code>Element</code> or a 
          * <code>DocumentFragment</code>. 
          */
         public static readonly short ACTION_INSERT_BEFORE = 3;
-        /**
+         /*
          *  Insert the result of the parse operation as the immediately following 
          * sibling of the context node. For this action to work the context 
          * node's parent must be an <code>Element</code> or a 
          * <code>DocumentFragment</code>. 
          */
         public static readonly short ACTION_INSERT_AFTER = 4;
-        /**
+         /*
          *  Replace the context node with the result of the parse operation. For 
          * this action to work, the context node must have a parent, and the 
          * parent must be an <code>Element</code> or a 

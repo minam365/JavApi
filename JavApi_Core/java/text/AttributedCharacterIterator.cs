@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.text
 {
-    /**
+     /*
      * Extends the
      * {@link CharacterIterator} interface, adding support for iterating over
      * attributes and not only characters. An
@@ -26,7 +26,7 @@ namespace biz.ritter.javapi.text
      */
     public interface AttributedCharacterIterator : CharacterIterator {
 
-        /**
+         /*
          * Returns a set of attributes present in the {@code
          * AttributedCharacterIterator}. An empty set is returned if no attributes
          * were defined.
@@ -35,7 +35,7 @@ namespace biz.ritter.javapi.text
          */
         java.util.Set<AttributedCharacterIteratorNS.Attribute> getAllAttributeKeys();
 
-        /**
+         /*
          * Returns the value stored in the attribute for the current character. If
          * the attribute was not defined then {@code null} is returned.
          *
@@ -45,7 +45,7 @@ namespace biz.ritter.javapi.text
          */
         Object getAttribute(AttributedCharacterIteratorNS.Attribute attribute);
 
-        /**
+         /*
          * Returns a map of all attributes of the current character. If no
          * attributes were defined for the current character then an empty map is
          * returned.
@@ -55,7 +55,7 @@ namespace biz.ritter.javapi.text
          */
         java.util.Map<AttributedCharacterIteratorNS.Attribute, Object> getAttributes();
 
-        /**
+         /*
          * Returns the index of the last character in the run having the same
          * attributes as the current character.
          *
@@ -63,7 +63,7 @@ namespace biz.ritter.javapi.text
          */
         int getRunLimit();
 
-        /**
+         /*
          * Returns the index of the last character in the run that has the same
          * attribute value for the given attribute as the current character.
          *
@@ -73,7 +73,7 @@ namespace biz.ritter.javapi.text
          */
         int getRunLimit(AttributedCharacterIteratorNS.Attribute attribute);
 
-        /**
+         /*
          * Returns the index of the last character in the run that has the same
          * attribute values for the attributes in the set as the current character.
          *
@@ -83,7 +83,7 @@ namespace biz.ritter.javapi.text
          */
         int getRunLimit(java.util.Set<AttributedCharacterIteratorNS.Attribute> attributes);
 
-        /**
+         /*
          * Returns the index of the first character in the run that has the same
          * attributes as the current character.
          *
@@ -91,7 +91,7 @@ namespace biz.ritter.javapi.text
          */
         int getRunStart();
 
-        /**
+         /*
          * Returns the index of the first character in the run that has the same
          * attribute value for the given attribute as the current character.
          *
@@ -101,7 +101,7 @@ namespace biz.ritter.javapi.text
          */
         int getRunStart(AttributedCharacterIteratorNS.Attribute attribute);
 
-        /**
+         /*
          * Returns the index of the first character in the run that has the same
          * attribute values for the attributes in the set as the current character.
          *
@@ -112,7 +112,7 @@ namespace biz.ritter.javapi.text
         int getRunStart(java.util.Set<AttributedCharacterIteratorNS.Attribute> attributes);
     }
     namespace AttributedCharacterIteratorNS {
-        /**
+         /*
          * Defines keys for text attributes.
          */
         [Serializable]
@@ -120,7 +120,7 @@ namespace biz.ritter.javapi.text
 
             private static readonly long serialVersionUID = -9142742483513960612L;
 
-            /**
+             /*
              * This attribute marks segments from an input method. Most input
              * methods create these segments for words.
              *
@@ -130,13 +130,13 @@ namespace biz.ritter.javapi.text
             public static readonly Attribute INPUT_METHOD_SEGMENT = new Attribute(
                     "input_method_segment"); //$NON-NLS-1$
 
-            /**
+             /*
              * The attribute describing the language of a character. The value
              * objects are of type {@code Locale} or a subtype of it.
              */
             public static readonly Attribute LANGUAGE = new Attribute("language"); //$NON-NLS-1$
 
-            /**
+             /*
              * For languages that have different reading directions of text (like
              * Japanese), this attribute allows to define which reading should be
              * used. The value objects are of type {@code Annotation} which
@@ -146,7 +146,7 @@ namespace biz.ritter.javapi.text
 
             private String name;
 
-            /**
+             /*
              * The constructor for an {@code Attribute} with the name passed.
              *
              * @param name
@@ -156,7 +156,7 @@ namespace biz.ritter.javapi.text
                 this.name = name;
             }
 
-            /**
+             /*
              * Compares this attribute with the specified object. Checks if both
              * objects are the same instance. It is defined final so all subclasses
              * have the same behavior for this method.
@@ -171,7 +171,7 @@ namespace biz.ritter.javapi.text
                 return this == obj;
             }
 
-            /**
+             /*
              * Returns the name of this attribute.
              *
              * @return the name of this attribute.
@@ -180,7 +180,7 @@ namespace biz.ritter.javapi.text
                 return name;
             }
 
-            /**
+             /*
              * Calculates the hash code for objects of type {@code Attribute}. It
              * is defined final so all sub types calculate their hash code
              * identically.
@@ -192,7 +192,7 @@ namespace biz.ritter.javapi.text
                 return base.GetHashCode();
             }
 
-            /**
+             /*
              * Resolves a deserialized instance to the correct constant attribute.
              *
              * @return the {@code Attribute} this instance represents.
@@ -218,7 +218,7 @@ namespace biz.ritter.javapi.text
                 throw new java.io.InvalidObjectException("Unknown attribute"); //$NON-NLS-1$
             }
 
-            /**
+             /*
              * Returns the name of the class followed by a "(", the name of the
              * attribute, and a ")".
              *

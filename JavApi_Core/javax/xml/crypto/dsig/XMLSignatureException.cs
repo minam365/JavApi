@@ -21,7 +21,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapix.xml.crypto.dsig
 {
-/**
+ /*
  * Indicates an exceptional condition that occured during the XML
  * signature generation or validation process.
  *
@@ -32,7 +32,7 @@ public class XMLSignatureException : java.lang.Exception {
 
     private const long serialVersionUID = -3438102491013869995L;
 
-    /**
+     /*
      * The throwable that caused this exception to get thrown, or null if this
      * exception was not caused by another throwable or if the causative
      * throwable is unknown. 
@@ -41,14 +41,14 @@ public class XMLSignatureException : java.lang.Exception {
      */
     private java.lang.Throwable cause;
 
-    /**
+     /*
      * Constructs a new <code>XMLSignatureException</code> with 
      * <code>null</code> as its detail message.
      */
     public XMLSignatureException() :base(){
     }
 
-    /**
+     /*
      * Constructs a new <code>XMLSignatureException</code> with the specified 
      * detail message. 
      *
@@ -58,7 +58,7 @@ public class XMLSignatureException : java.lang.Exception {
         
     }
 
-    /**
+     /*
      * Constructs a new <code>XMLSignatureException</code> with the 
      * specified detail message and cause.  
      * <p>Note that the detail message associated with
@@ -74,7 +74,7 @@ public class XMLSignatureException : java.lang.Exception {
         this.cause = cause;
     }
 
-    /**
+     /*
      * Constructs a new <code>XMLSignatureException</code> with the specified 
      * cause and a detail message of 
      * <code>(cause==null ? null : cause.toString())</code>
@@ -89,7 +89,7 @@ public class XMLSignatureException : java.lang.Exception {
         this.cause = cause;
     }
 
-    /**
+     /*
      * Returns the cause of this <code>XMLSignatureException</code> or 
      * <code>null</code> if the cause is nonexistent or unknown.  (The 
      * cause is the throwable that caused this 
@@ -102,7 +102,7 @@ public class XMLSignatureException : java.lang.Exception {
         return cause;
     }
 
-    /**
+     /*
      * Prints this <code>XMLSignatureException</code>, its backtrace and
      * the cause's backtrace to the standard error stream.
      */
@@ -113,7 +113,7 @@ public class XMLSignatureException : java.lang.Exception {
         }
     }
 
-    /**
+     /*
      * Prints this <code>XMLSignatureException</code>, its backtrace and
      * the cause's backtrace to the specified print stream.
      *
@@ -124,7 +124,7 @@ public class XMLSignatureException : java.lang.Exception {
         
     }
 
-    /**
+     /*
      * Prints this <code>XMLSignatureException</code>, its backtrace and
      * the cause's backtrace to the specified print writer.
      *

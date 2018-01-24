@@ -6,7 +6,7 @@ using System;
 
 namespace org.xml.sax.ext
 {
-    /**
+     /*
      * SAX2 extension to augment the entity information provided 
      * though a {@link Locator}.
      * If an implementation supports this extension, the Locator
@@ -30,7 +30,7 @@ namespace org.xml.sax.ext
      */
     public interface Locator2 : Locator
     {
-        /**
+         /*
          * Returns the version of XML used for the entity.  This will
          * normally be the identifier from the current entity's
          * <em>&lt;?xml&nbsp;version='...'&nbsp;...?&gt;</em> declaration,
@@ -42,7 +42,7 @@ namespace org.xml.sax.ext
          */
         String getXMLVersion();
 
-        /**
+         /*
          * Returns the name of the character encoding for the entity.
          * If the encoding was declared externally (for example, in a MIME
          * Content-Type header), that will be the name returned.  Else if there

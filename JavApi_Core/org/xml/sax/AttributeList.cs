@@ -94,7 +94,7 @@ namespace org.xml.sax
         int getLength();
 
 
-        /**
+         /*
          * Return the name of an attribute in this list (by position).
          *
          * <p>The names must be unique: the SAX parser shall not include the

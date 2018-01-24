@@ -8,7 +8,7 @@
 namespace org.w3c.dom.traversal
 {
 
-    /**
+     /*
      * <code>TreeWalker</code> objects are used to navigate a document tree or 
      * subtree using the view of the document defined by its 
      * <code>whatToShow</code> flags and any filters that are defined for the 
@@ -27,17 +27,17 @@ namespace org.w3c.dom.traversal
      */
     public interface TreeWalker
     {
-        /**
+         /*
          * This attribute determines which node types are presented via the 
          * TreeWalker.
          */
         int getWhatToShow();
 
-        /**
+         /*
          * The filter used to screen nodes.
          */
         NodeFilter getFilter();
-        /**
+         /*
          * The value of this flag determines whether entity reference nodes are 
          * expanded. To produce a view of the document that has entity references 
          * expanded and does not expose the entity reference node itself, use the 
@@ -48,7 +48,7 @@ namespace org.w3c.dom.traversal
          * and set expandEntityReferences to true.
          */
         bool getExpandEntityReferences();
-        /**
+         /*
          * The current node.
          * <br>The value must not be null. Attempting to set it to null will raise a 
          * NOT_SUPPORTED_ERR exception. When setting a node, the whatToShow flags 
@@ -57,7 +57,7 @@ namespace org.w3c.dom.traversal
          */
         Node getCurrentNode();
         void setCurrentNode(Node currentNode);
-        /**
+         /*
          * Moves to and returns the parent node of the current node. If there is no 
          * parent node, or if the current node is the root node from which this 
          * TreeWalker was created, retains the current position and returns null.
@@ -65,7 +65,7 @@ namespace org.w3c.dom.traversal
          *   the TreeWalker's logical view.
          */
         Node parentNode();
-        /**
+         /*
          * Moves the <code>TreeWalker</code> to the first child of the current node, 
          * and returns the new node. If the current node has no children, returns 
          * <code>null</code>, and retains the current node.
@@ -73,7 +73,7 @@ namespace org.w3c.dom.traversal
          *   children.
          */
         Node firstChild();
-        /**
+         /*
          * Moves the <code>TreeWalker</code> to the last child of the current node, 
          * and returns the new node. If the current node has no children, returns 
          * <code>null</code>, and retains the current node.
@@ -81,7 +81,7 @@ namespace org.w3c.dom.traversal
          *   children.
          */
         Node lastChild();
-        /**
+         /*
          * Moves the <code>TreeWalker</code> to the previous sibling of the current 
          * node, and returns the new node. If the current node has no previous 
          * sibling, returns <code>null</code>, and retains the current node.
@@ -89,7 +89,7 @@ namespace org.w3c.dom.traversal
          *   previous sibling.
          */
         Node previousSibling();
-        /**
+         /*
          * Moves the <code>TreeWalker</code> to the next sibling of the current 
          * node, and returns the new node. If the current node has no next sibling, 
          * returns <code>null</code>, and retains the current node.
@@ -97,7 +97,7 @@ namespace org.w3c.dom.traversal
          *   next sibling.
          */
         Node nextSibling();
-        /**
+         /*
          * Moves the <code>TreeWalker</code> to the previous node in document order 
          * relative to the current node, and returns the new node. If the current 
          * node has no previous node, returns <code>null</code>, and retains the 
@@ -106,7 +106,7 @@ namespace org.w3c.dom.traversal
          *   previous node.
          */
         Node previousNode();
-        /**
+         /*
          * Moves the <code>TreeWalker</code> to the next node in document order 
          * relative to the current node, and returns the new node. If the current 
          * node has no next node, returns <code>null</code>, and retains the 

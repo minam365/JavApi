@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * An {@code IllegalFormatWidthException} will be thrown if the width is a
      * negative value other than -1 or in other cases where a width is not
      * supported.
@@ -32,7 +32,7 @@ namespace biz.ritter.javapi.util
 
         private int w;
 
-        /**
+         /*
          * Constructs a new {@code IllegalFormatWidthException} with specified
          * width.
          * 
@@ -44,7 +44,7 @@ namespace biz.ritter.javapi.util
             this.w = w;
         }
 
-        /**
+         /*
          * Returns the width associated with the exception.
          * 
          * @return the width.
@@ -54,7 +54,7 @@ namespace biz.ritter.javapi.util
             return w;
         }
 
-        /**
+         /*
          * Returns the message of the exception.
          * 
          * @return the message of the exception.

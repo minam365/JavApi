@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang
 {
 
-    /**
+     /*
      * Thrown when an action is attempted at a time when the virtual machine is not
      * in the correct state.
      */
@@ -29,14 +29,14 @@ namespace biz.ritter.javapi.lang
 
         private static readonly long serialVersionUID = -1848914673093119416L;
 
-        /**
+         /*
          * Constructs a new {@code IllegalStateException} that includes the current
          * stack trace.
          */
         public IllegalStateException() :base () {
         }
 
-        /**
+         /*
          * Constructs a new {@code IllegalStateException} with the current stack
          * trace and the specified detail message.
          * 
@@ -46,7 +46,7 @@ namespace biz.ritter.javapi.lang
         public IllegalStateException(String detailMessage) : base (detailMessage) {
         }
     
-        /**
+         /*
          * Constructs a new {@code IllegalStateException} with the current stack
          * trace, the specified detail message and the specified cause.
          * 
@@ -59,7 +59,7 @@ namespace biz.ritter.javapi.lang
         public IllegalStateException(String message, Throwable cause) : base (message,cause) {
         }
     
-        /**
+         /*
          * Constructs a new {@code IllegalStateException} with the current stack
          * trace and the specified cause.
          * 

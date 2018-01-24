@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang{
 
-/**
+ /*
  * Thrown by a class loader when a class file has an illegal format or if the
  * data that it contains can not be interpreted as a class.
  */
@@ -24,7 +24,7 @@ public class ClassFormatError : LinkageError {
 
     private const long serialVersionUID = -8420114879011949195L;
 
-    /**
+     /*
      * Constructs a new {@code ClassFormatError} that includes the current stack
      * trace.
      */
@@ -32,7 +32,7 @@ public class ClassFormatError : LinkageError {
         
     }
 
-    /**
+     /*
      * Constructs a new {@code ClassFormatError} with the current stack trace
      * and the specified detail message.
      * 

@@ -82,7 +82,7 @@ namespace biz.ritter.javapi.nio.charset
         // the length of the erroneous input
         private readonly int lengthJ;
 
-        /**
+         /*
          * Constructs a <code>CoderResult</code> object with its text description.
          * 
          * @param type
@@ -97,7 +97,7 @@ namespace biz.ritter.javapi.nio.charset
 
         private readonly static Object lockObject = new Object();
 
-        /**
+         /*
          * Gets a <code>CoderResult</code> object indicating a malformed-input
          * error.
          * 
@@ -125,7 +125,7 @@ namespace biz.ritter.javapi.nio.charset
             }
         }
 
-        /**
+         /*
          * Gets a <code>CoderResult</code> object indicating an unmappable
          * character error.
          * 
@@ -154,7 +154,7 @@ namespace biz.ritter.javapi.nio.charset
             }
         }
 
-        /**
+         /*
          * Returns true if this result is an underflow condition.
          * 
          * @return true if an underflow, otherwise false.
@@ -163,7 +163,7 @@ namespace biz.ritter.javapi.nio.charset
             return this.type == TYPE_UNDERFLOW;
         }
 
-        /**
+         /*
          * Returns true if this result represents a malformed-input error or an
          * unmappable-character error.
          * 
@@ -175,7 +175,7 @@ namespace biz.ritter.javapi.nio.charset
                     || this.type == TYPE_UNMAPPABLE_CHAR;
         }
 
-        /**
+         /*
          * Returns true if this result represents a malformed-input error.
          * 
          * @return true if this is a malformed-input error, otherwise false.
@@ -184,7 +184,7 @@ namespace biz.ritter.javapi.nio.charset
             return this.type == TYPE_MALFORMED_INPUT;
         }
 
-        /**
+         /*
          * Returns true if this result is an overflow condition.
          * 
          * @return true if this is an overflow, otherwise false.
@@ -193,7 +193,7 @@ namespace biz.ritter.javapi.nio.charset
             return this.type == TYPE_OVERFLOW;
         }
 
-        /**
+         /*
          * Returns true if this result represents an unmappable-character error.
          * 
          * @return true if this is an unmappable-character error, otherwise false.
@@ -202,7 +202,7 @@ namespace biz.ritter.javapi.nio.charset
             return this.type == TYPE_UNMAPPABLE_CHAR;
         }
 
-        /**
+         /*
          * Gets the length of the erroneous input. The length is only meaningful to
          * a malformed-input error or an unmappble character error.
          * 
@@ -218,7 +218,7 @@ namespace biz.ritter.javapi.nio.charset
             throw new java.lang.UnsupportedOperationException("The length of the erroneous input is only meaningful to a malformed-input error or an unmappble character error");
         }
 
-        /**
+         /*
          * Throws an exception corresponding to this coder result.
          * 
          * @throws BufferUnderflowException
@@ -242,7 +242,7 @@ namespace biz.ritter.javapi.nio.charset
             
         }
 
-        /**
+         /*
          * Returns a text description of this result.
          * 
          * @return a text description of this result.

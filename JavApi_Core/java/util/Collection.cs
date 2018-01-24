@@ -19,7 +19,7 @@ namespace biz.ritter.javapi.util
 {
 
 
-    /**
+     /*
      * {@code Collection} is the root of the collection hierarchy. It defines operations on
      * data collections and the behavior that they will have in all implementations
      * of {@code Collection}s.
@@ -45,7 +45,7 @@ namespace biz.ritter.javapi.util
      */
     public interface Collection<E> : java.lang.Iterable<E> {//, IEnumerator<E> {
 
-        /**
+         /*
          * Attempts to add {@code object} to the contents of this
          * {@code Collection} (optional).
          * 
@@ -83,7 +83,7 @@ namespace biz.ritter.javapi.util
          */
         bool add(E obj);
 
-        /**
+         /*
          * Attempts to add all of the objects contained in {@code Collection}
          * to the contents of this {@code Collection} (optional). If the passed {@code Collection}
          * is changed during the process of adding elements to this {@code Collection}, the
@@ -108,7 +108,7 @@ namespace biz.ritter.javapi.util
         //public bool addAll(Collection<? extends E> collection);
         bool addAll(Collection<E> collection);
 
-        /**
+         /*
          * Removes all elements from this {@code Collection}, leaving it empty (optional).
          * 
          * @throws UnsupportedOperationException
@@ -119,7 +119,7 @@ namespace biz.ritter.javapi.util
          */
         void clear();
 
-        /**
+         /*
          * Tests whether this {@code Collection} contains the specified object. Returns
          * {@code true} if and only if at least one element {@code elem} in this
          * {@code Collection} meets following requirement:
@@ -138,7 +138,7 @@ namespace biz.ritter.javapi.util
          */
         bool contains(Object obj);
 
-        /**
+         /*
          * Tests whether this {@code Collection} contains all objects contained in the
          * specified {@code Collection}. If an element {@code elem} is contained several
          * times in the specified {@code Collection}, the method returns {@code true} even
@@ -161,7 +161,7 @@ namespace biz.ritter.javapi.util
         //public boolean containsAll(Collection<?> collection);
         bool containsAll(Collection<E> collection);
 
-        /**
+         /*
          * Returns if this {@code Collection} contains no elements.
          * 
          * @return {@code true} if this {@code Collection} has no elements, {@code false}
@@ -171,7 +171,7 @@ namespace biz.ritter.javapi.util
          */
         bool isEmpty();
 
-        /**
+         /*
          * Returns an instance of {@link Iterator} that may be used to access the
          * objects contained by this {@code Collection}. The order in which the elements are
          * returned by the iterator is not defined. Only if the instance of the
@@ -181,7 +181,7 @@ namespace biz.ritter.javapi.util
          */
         new Iterator<E> iterator();
 
-        /**
+         /*
          * Removes one instance of the specified object from this {@code Collection} if one
          * is contained (optional). The element {@code elem} that is removed
          * complies with {@code (object==null ? elem==null : object.equals(elem)}.
@@ -200,7 +200,7 @@ namespace biz.ritter.javapi.util
          */
         bool remove(Object obj);
 
-        /**
+         /*
          * Removes all occurrences in this {@code Collection} of each object in the
          * specified {@code Collection} (optional). After this method returns none of the
          * elements in the passed {@code Collection} can be found in this {@code Collection}
@@ -226,7 +226,7 @@ namespace biz.ritter.javapi.util
         //public boolean removeAll(Collection<?> collection);
         bool removeAll(Collection<E> collection);
 
-        /**
+         /*
          * Removes all objects from this {@code Collection} that are not also found in the
          * {@code Collection} passed (optional). After this method returns this {@code Collection}
          * will only contain elements that also can be found in the {@code Collection}
@@ -251,7 +251,7 @@ namespace biz.ritter.javapi.util
         //public bool retainAll(Collection<?> collection);
         bool retainAll(Collection<E> collection);
 
-        /**
+         /*
          * Returns a count of how many objects this {@code Collection} contains.
          * 
          * @return how many objects this {@code Collection} contains, or Integer.MAX_VALUE
@@ -260,7 +260,7 @@ namespace biz.ritter.javapi.util
          */
         int size();
 
-        /**
+         /*
          * Returns a new array containing all elements contained in this {@code Collection}.
          * 
          * If the implementation has ordered elements it will return the element
@@ -274,7 +274,7 @@ namespace biz.ritter.javapi.util
          */
         Object[] toArray();
 
-        /**
+         /*
          * Returns an array containing all elements contained in this {@code Collection}. If
          * the specified array is large enough to hold the elements, the specified
          * array is used, otherwise an array of the same type is created. If the

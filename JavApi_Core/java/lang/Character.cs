@@ -20,17 +20,17 @@ namespace biz.ritter.javapi.lang
 {
     public class Character
     {
-        /**
+         /*
          * Unicode category constant Lu.
          */
         public const byte UPPERCASE_LETTER = 1;
 
-        /**
+         /*
          * Unicode category constant Lo.
          */
         public const byte OTHER_LETTER = 5;
 
-        /**
+         /*
          * Returns the lower case equivalent for the specified character if the
          * character is an upper case letter. Otherwise, the specified character is
          * returned unchanged.
@@ -48,7 +48,7 @@ namespace biz.ritter.javapi.lang
         {
             return System.Char.ToUpper(c);
         }
-        /**
+         /*
          * Indicates whether the specified character is an upper case letter.
          * 
          * @param c
@@ -72,7 +72,7 @@ namespace biz.ritter.javapi.lang
         }
 
         private readonly char value;
-        /**
+         /*
          * Constructs a new {@code Character} with the specified primitive char
          * value.
          * 
@@ -84,7 +84,7 @@ namespace biz.ritter.javapi.lang
             this.value = value;
         }
 
-        /**
+         /*
          * Gets the primitive value of this character.
          * 
          * @return this object's primitive value.
@@ -94,7 +94,7 @@ namespace biz.ritter.javapi.lang
             return value;
         }
 
-        /**
+         /*
          * The {@link Class} object that represents the primitive type {@code char}.
          */
         public static readonly Type TYPE = new char[0].GetType().GetElementType();
@@ -106,36 +106,36 @@ namespace biz.ritter.javapi.lang
         private static readonly char[] typeValues = "\u001f\u000f!\u180c#\u0018%\u181a'\u0018)\u1615,\u1918.\u14180\u18099\t;\u0018>\u0019@\u0018Z\u0001\\\u1518^\u161b`\u171bz\u0002|\u1519~\u1619\u009f\u000f\u00a1\u180c\u00a5\u001a\u00a7\u001c\u00a9\u1c1b\u00ab\u1d02\u00ad\u1419\u00b0\u1b1c\u00b2\u190b\u00b4\u0b1b\u00b6\u021c\u00b8\u181b\u00ba\u0b02\u00bc\u1e0b\u00be\u000b\u00c0\u1801\u00d6\u0001\u00d8\u1901\u00de\u0001\u00f6\u0002\u00f8\u1902\u00ff\u0002\u0137\u0201\u0148\u0102\u0178\u0201\u017e\u0102\u0180\u0002\u0182\u0001\u0186\u0201\u0189\u0102\u018b\u0001\u018d\u0002\u0191\u0001\u0193\u0102\u0196\u0201\u0198\u0001\u019b\u0002\u019d\u0001\u019f\u0102\u01a6\u0201\u01aa\u0102\u01ae\u0201\u01b1\u0102\u01b3\u0001\u01b7\u0102\u01b9\u0201\u01bb\u0502\u01bd\u0201\u01bf\u0002\u01c3\u0005\u01c5\u0301\u01c7\u0102\u01c9\u0203\u01cb\u0301\u01dc\u0102\u01ef\u0201\u01f1\u0102\u01f3\u0203\u01f6\u0201\u01f8\u0001\u021f\u0201\u0233\u0201\u02ad\u0002\u02b8\u0004\u02ba\u001b\u02c1\u0004\u02cf\u001b\u02d1\u0004\u02df\u001b\u02e4\u0004\u02ed\u001b\u02ee\u0004\u034e\u0006\u0362\u0006\u0375\u001b\u037a\u0004\u037e\u0018\u0385\u001b\u0388\u1801\u038a\u0001\u038c\u0001\u038f\u0001\u0391\u0102\u03a1\u0001\u03ab\u0001\u03ce\u0002\u03d1\u0002\u03d4\u0001\u03d7\u0002\u03ef\u0201\u03f3\u0002\u042f\u0001\u045f\u0002\u0481\u0201\u0483\u061c\u0486\u0006\u0489\u0007\u04c0\u0201\u04c4\u0102\u04c8\u0102\u04cc\u0102\u04f5\u0201\u04f9\u0201\u0556\u0001\u055a\u0418\u055f\u0018\u0587\u0002\u058a\u1814\u05a1\u0006\u05b9\u0006\u05bd\u0006\u05c1\u0618\u05c4\u1806\u05ea\u0005\u05f2\u0005\u05f4\u0018\u060c\u0018\u061b\u1800\u061f\u1800\u063a\u0005\u0641\u0504\u064a\u0005\u0655\u0006\u0669\t\u066d\u0018\u0671\u0506\u06d3\u0005\u06d5\u0518\u06dc\u0006\u06de\u0007\u06e4\u0006\u06e6\u0004\u06e8\u0006\u06ea\u1c06\u06ed\u0006\u06f9\t\u06fc\u0005\u06fe\u001c\u070d\u0018\u0710\u1005\u0712\u0605\u072c\u0005\u074a\u0006\u07a5\u0005\u07b0\u0006\u0902\u0006\u0903\u0800\u0939\u0005\u093d\u0506\u0940\b\u0948\u0006\u094c\b\u094d\u0600\u0951\u0605\u0954\u0006\u0961\u0005\u0963\u0006\u0965\u0018\u096f\t\u0970\u0018\u0982\u0608\u0983\u0800\u098c\u0005\u0990\u0005\u09a8\u0005\u09b0\u0005\u09b2\u0005\u09b9\u0005\u09bc\u0006\u09c0\b\u09c4\u0006\u09c8\b\u09cc\b\u09cd\u0600\u09d7\u0800\u09dd\u0005\u09e1\u0005\u09e3\u0006\u09ef\t\u09f1\u0005\u09f3\u001a\u09f9\u000b\u09fa\u001c\u0a02\u0006\u0a0a\u0005\u0a10\u0005\u0a28\u0005\u0a30\u0005\u0a33\u0005\u0a36\u0005\u0a39\u0005\u0a3c\u0006\u0a40\b\u0a42\u0006\u0a48\u0006\u0a4d\u0006\u0a5c\u0005\u0a5e\u0005\u0a6f\t\u0a71\u0006\u0a74\u0005\u0a82\u0006\u0a83\u0800\u0a8b\u0005\u0a8d\u0500\u0a91\u0005\u0aa8\u0005\u0ab0\u0005\u0ab3\u0005\u0ab9\u0005\u0abd\u0506\u0ac0\b\u0ac5\u0006\u0ac8\u0006\u0ac9\u0800\u0acc\b\u0acd\u0600\u0ad0\u0005\u0ae0\u0005\u0aef\t\u0b02\u0608\u0b03\u0800\u0b0c\u0005\u0b10\u0005\u0b28\u0005\u0b30\u0005\u0b33\u0005\u0b39\u0005\u0b3d\u0506\u0b41\u0608\u0b43\u0006\u0b48\b\u0b4c\b\u0b4d\u0600\u0b57\u0806\u0b5d\u0005\u0b61\u0005\u0b6f\t\u0b70\u001c\u0b83\u0806\u0b8a\u0005\u0b90\u0005\u0b95\u0005\u0b9a\u0005\u0b9c\u0005\u0b9f\u0005\u0ba4\u0005\u0baa\u0005\u0bb5\u0005\u0bb9\u0005\u0bbf\b\u0bc1\u0806\u0bc2\b\u0bc8\b\u0bcc\b\u0bcd\u0600\u0bd7\u0800\u0bef\t\u0bf2\u000b\u0c03\b\u0c0c\u0005\u0c10\u0005\u0c28\u0005\u0c33\u0005\u0c39\u0005\u0c40\u0006\u0c44\b\u0c48\u0006\u0c4d\u0006\u0c56\u0006\u0c61\u0005\u0c6f\t\u0c83\b\u0c8c\u0005\u0c90\u0005\u0ca8\u0005\u0cb3\u0005\u0cb9\u0005\u0cc0\u0608\u0cc4\b\u0cc7\u0806\u0cc8\b\u0ccb\b\u0ccd\u0006\u0cd6\b\u0cde\u0005\u0ce1\u0005\u0cef\t\u0d03\b\u0d0c\u0005\u0d10\u0005\u0d28\u0005\u0d39\u0005\u0d40\b\u0d43\u0006\u0d48\b\u0d4c\b\u0d4d\u0600\u0d57\u0800\u0d61\u0005\u0d6f\t\u0d83\b\u0d96\u0005\u0db1\u0005\u0dbb\u0005\u0dbd\u0500\u0dc6\u0005\u0dca\u0006\u0dd1\b\u0dd4\u0006\u0dd6\u0006\u0ddf\b\u0df3\b\u0df4\u0018\u0e30\u0005\u0e32\u0605\u0e34\u0506\u0e3a\u0006\u0e40\u1a05\u0e45\u0005\u0e47\u0604\u0e4e\u0006\u0e50\u1809\u0e59\t\u0e5b\u0018\u0e82\u0005\u0e84\u0005\u0e88\u0005\u0e8a\u0005\u0e8d\u0500\u0e97\u0005\u0e9f\u0005\u0ea3\u0005\u0ea5\u0500\u0ea7\u0500\u0eab\u0005\u0eb0\u0005\u0eb2\u0605\u0eb4\u0506\u0eb9\u0006\u0ebc\u0006\u0ebd\u0500\u0ec4\u0005\u0ec6\u0004\u0ecd\u0006\u0ed9\t\u0edd\u0005\u0f01\u1c05\u0f03\u001c\u0f12\u0018\u0f17\u001c\u0f19\u0006\u0f1f\u001c\u0f29\t\u0f33\u000b\u0f39\u061c\u0f3d\u1615\u0f3f\b\u0f47\u0005\u0f6a\u0005\u0f7e\u0006\u0f80\u0806\u0f84\u0006\u0f86\u1806\u0f88\u0605\u0f8b\u0005\u0f97\u0006\u0fbc\u0006\u0fc5\u001c\u0fc7\u1c06\u0fcc\u001c\u0fcf\u1c00\u1021\u0005\u1027\u0005\u102a\u0005\u102d\u0608\u1030\u0006\u1032\u0806\u1037\u0006\u1039\u0608\u1049\t\u104f\u0018\u1055\u0005\u1057\b\u1059\u0006\u10c5\u0001\u10f6\u0005\u10fb\u1800\u1159\u0005\u11a2\u0005\u11f9\u0005\u1206\u0005\u1246\u0005\u1248\u0005\u124d\u0005\u1256\u0005\u1258\u0005\u125d\u0005\u1286\u0005\u1288\u0005\u128d\u0005\u12ae\u0005\u12b0\u0005\u12b5\u0005\u12be\u0005\u12c0\u0005\u12c5\u0005\u12ce\u0005\u12d6\u0005\u12ee\u0005\u130e\u0005\u1310\u0005\u1315\u0005\u131e\u0005\u1346\u0005\u135a\u0005\u1368\u0018\u1371\t\u137c\u000b\u13f4\u0005\u166c\u0005\u166e\u0018\u1676\u0005\u1681\u050c\u169a\u0005\u169c\u1516\u16ea\u0005\u16ed\u0018\u16f0\u000b\u17b3\u0005\u17b6\b\u17bd\u0006\u17c5\b\u17c7\u0806\u17c9\u0608\u17d3\u0006\u17da\u0018\u17dc\u1a18\u17e9\t\u1805\u0018\u1807\u1814\u180a\u0018\u180e\u0010\u1819\t\u1842\u0005\u1844\u0405\u1877\u0005\u18a8\u0005\u18a9\u0600\u1e95\u0201\u1e9b\u0002\u1ef9\u0201\u1f07\u0002\u1f0f\u0001\u1f15\u0002\u1f1d\u0001\u1f27\u0002\u1f2f\u0001\u1f37\u0002\u1f3f\u0001\u1f45\u0002\u1f4d\u0001\u1f57\u0002\u1f59\u0100\u1f5b\u0100\u1f5d\u0100\u1f60\u0102\u1f67\u0002\u1f6f\u0001\u1f7d\u0002\u1f87\u0002\u1f8f\u0003\u1f97\u0002\u1f9f\u0003\u1fa7\u0002\u1faf\u0003\u1fb4\u0002\u1fb7\u0002\u1fbb\u0001\u1fbd\u1b03\u1fbf\u1b02\u1fc1\u001b\u1fc4\u0002\u1fc7\u0002\u1fcb\u0001\u1fcd\u1b03\u1fcf\u001b\u1fd3\u0002\u1fd7\u0002\u1fdb\u0001\u1fdf\u001b\u1fe7\u0002\u1fec\u0001\u1fef\u001b\u1ff4\u0002\u1ff7\u0002\u1ffb\u0001\u1ffd\u1b03\u1ffe\u001b\u200b\f\u200f\u0010\u2015\u0014\u2017\u0018\u2019\u1e1d\u201b\u1d15\u201d\u1e1d\u201f\u1d15\u2027\u0018\u2029\u0e0d\u202e\u0010\u2030\u0c18\u2038\u0018\u203a\u1d1e\u203e\u0018\u2040\u0017\u2043\u0018\u2045\u1519\u2046\u0016\u204d\u0018\u206f\u0010\u2070\u000b\u2079\u000b\u207c\u0019\u207e\u1516\u2080\u020b\u2089\u000b\u208c\u0019\u208e\u1516\u20af\u001a\u20dc\u0006\u20e0\u0007\u20e2\u0607\u20e3\u0700\u2101\u001c\u2103\u1c01\u2106\u001c\u2108\u011c\u210a\u1c02\u210d\u0001\u210f\u0002\u2112\u0001\u2114\u021c\u2116\u011c\u2118\u001c\u211d\u0001\u2123\u001c\u212a\u1c01\u212d\u0001\u212f\u021c\u2131\u0001\u2133\u011c\u2135\u0502\u2138\u0005\u213a\u021c\u215f\u000b\u2183\n\u2194\u0019\u2199\u001c\u219b\u0019\u219f\u001c\u21a1\u1c19\u21a4\u191c\u21a7\u1c19\u21ad\u001c\u21af\u1c19\u21cd\u001c\u21cf\u0019\u21d1\u001c\u21d5\u1c19\u21f3\u001c\u22f1\u0019\u2307\u001c\u230b\u0019\u231f\u001c\u2321\u0019\u2328\u001c\u232a\u1516\u237b\u001c\u239a\u001c\u2426\u001c\u244a\u001c\u249b\u000b\u24e9\u001c\u24ea\u000b\u2595\u001c\u25b6\u001c\u25b8\u191c\u25c0\u001c\u25c2\u191c\u25f7\u001c\u2613\u001c\u266e\u001c\u2670\u191c\u2671\u1c00\u2704\u001c\u2709\u001c\u2727\u001c\u274b\u001c\u274d\u1c00\u2752\u001c\u2756\u001c\u275e\u001c\u2767\u001c\u2793\u000b\u2794\u001c\u27af\u001c\u27be\u001c\u28ff\u001c\u2e99\u001c\u2ef3\u001c\u2fd5\u001c\u2ffb\u001c\u3001\u180c\u3003\u0018\u3005\u041c\u3007\u0a05\u3011\u1615\u3013\u001c\u301b\u1615\u301d\u1514\u301f\u0016\u3021\u0a1c\u3029\n\u302f\u0006\u3031\u0414\u3035\u0004\u3037\u001c\u303a\n\u303f\u001c\u3094\u0005\u309a\u0006\u309c\u001b\u309e\u0004\u30fa\u0005\u30fc\u1704\u30fe\u0004\u312c\u0005\u318e\u0005\u3191\u001c\u3195\u000b\u319f\u001c\u31b7\u0005\u321c\u001c\u3229\u000b\u3243\u001c\u327b\u001c\u3280\u1c0b\u3289\u000b\u32b0\u001c\u32cb\u001c\u32fe\u001c\u3376\u001c\u33dd\u001c\u33fe\u001c\u4db5\u0005\u9fa5\u0005\ua48c\u0005\ua4a1\u001c\ua4b3\u001c\ua4c0\u001c\ua4c4\u001c\ua4c6\u001c\ud7a3\u0005\udfff\u0013\uf8ff\u0012\ufa2d\u0005\ufb06\u0002\ufb17\u0002\ufb1f\u0506\ufb28\u0005\ufb2a\u1905\ufb36\u0005\ufb3c\u0005\ufb3e\u0005\ufb41\u0005\ufb44\u0005\ufbb1\u0005\ufd3d\u0005\ufd3f\u1615\ufd8f\u0005\ufdc7\u0005\ufdfb\u0005\ufe23\u0006\ufe31\u1418\ufe33\u1714\ufe35\u1517\ufe44\u1516\ufe4c\u0018\ufe4f\u0017\ufe52\u0018\ufe57\u0018\ufe59\u1514\ufe5e\u1516\ufe61\u0018\ufe64\u1419\ufe66\u0019\ufe6a\u1a18\ufe6b\u1800\ufe72\u0005\ufe74\u0005\ufefc\u0005\ufeff\u1000\uff03\u0018\uff05\u181a\uff07\u0018\uff09\u1615\uff0c\u1918\uff0e\u1418\uff10\u1809\uff19\t\uff1b\u0018\uff1e\u0019\uff20\u0018\uff3a\u0001\uff3c\u1518\uff3e\u161b\uff40\u171b\uff5a\u0002\uff5c\u1519\uff5e\u1619\uff62\u1815\uff64\u1618\uff66\u1705\uff6f\u0005\uff71\u0504\uff9d\u0005\uff9f\u0004\uffbe\u0005\uffc7\u0005\uffcf\u0005\uffd7\u0005\uffdc\u0005\uffe1\u001a\uffe3\u1b19\uffe5\u1a1c\uffe6\u001a\uffe9\u191c\uffec\u0019\uffee\u001c\ufffb\u0010\ufffd\u001c"
                 .getValue();
 
-        /**
+         /*
          * Unicode category constant Cn.
          */
         public const byte UNASSIGNED = 0;
-        /**
+         /*
          * Unicode category constant Nd.
          */
         public const byte DECIMAL_DIGIT_NUMBER = 9;
-        /**
+         /*
          * The minimum value of a supplementary code point, {@code U+010000}.
          *
          * @since 1.5
          */
         public static readonly int MIN_SUPPLEMENTARY_CODE_POINT = 0x10000;
 
-        /**
+         /*
          * The minimum code point value, {@code U+0000}.
          *
          * @since 1.5
          */
         public static readonly int MIN_CODE_POINT = 0x000000;
 
-        /**
+         /*
          * The maximum code point value, {@code U+10FFFF}.
          *
          * @since 1.5
          */
         public static readonly int MAX_CODE_POINT = 0x10FFFF;
 
-        /**
+         /*
          * The minimum value of a high surrogate or leading surrogate unit in UTF-16
          * encoding, {@code '\uD800'}.
          *
@@ -144,7 +144,7 @@ namespace biz.ritter.javapi.lang
         public static readonly char MIN_HIGH_SURROGATE = '\uD800';
 
         private static readonly char[] digitValues = "90Z7zW\u0669\u0660\u06f9\u06f0\u096f\u0966\u09ef\u09e6\u0a6f\u0a66\u0aef\u0ae6\u0b6f\u0b66\u0bef\u0be6\u0c6f\u0c66\u0cef\u0ce6\u0d6f\u0d66\u0e59\u0e50\u0ed9\u0ed0\u0f29\u0f20\u1049\u1040\u1371\u1368\u17e9\u17e0\u1819\u1810\uff19\uff10\uff3a\uff17\uff5a\uff37".ToCharArray();
-        /**
+         /*
          * The maximum value of a high surrogate or leading surrogate unit in UTF-16
          * encoding, {@code '\uDBFF'}.
          *
@@ -152,7 +152,7 @@ namespace biz.ritter.javapi.lang
          */
         public static readonly char MAX_HIGH_SURROGATE = '\uDBFF';
 
-        /**
+         /*
          * The minimum value of a low surrogate or trailing surrogate unit in UTF-16
          * encoding, {@code '\uDC00'}.
          *
@@ -160,7 +160,7 @@ namespace biz.ritter.javapi.lang
          */
         public static readonly char MIN_LOW_SURROGATE = '\uDC00';
 
-        /**
+         /*
          * The maximum value of a low surrogate or trailing surrogate unit in UTF-16
          * encoding, {@code '\uDFFF'}.
          *
@@ -168,33 +168,33 @@ namespace biz.ritter.javapi.lang
          */
         public static readonly char MAX_LOW_SURROGATE = '\uDFFF';
 
-        /**
+         /*
          * The minimum value of a surrogate unit in UTF-16 encoding, {@code '\uD800'}.
          *
          * @since 1.5
          */
         public static readonly char MIN_SURROGATE = '\uD800';
 
-        /**
+         /*
          * The minimum {@code Character} value.
          */
         public static readonly char MIN_VALUE = char.MinValue;
 
-        /**
+         /*
          * The maximum {@code Character} value.
          */
         public static readonly char MAX_VALUE = char.MaxValue;
 
-        /**
+         /*
          * The minimum radix used for conversions between characters and integers.
          */
         public static readonly int MIN_RADIX = 2;
 
-        /**
+         /*
          * The maximum radix used for conversions between characters and integers.
          */
         public static readonly int MAX_RADIX = 36;
-        /**
+         /*
          * Returns the character which represents the specified digit in the
          * specified radix. The {@code radix} must be between {@code MIN_RADIX} and
          * {@code MAX_RADIX} inclusive; {@code digit} must not be negative and
@@ -220,7 +220,7 @@ namespace biz.ritter.javapi.lang
             return '\u0000';
         }
 
-        /**
+         /*
          * Convenience method to determine the value of the specified character
          * {@code c} in the supplied radix. The value of {@code radix} must be
          * between MIN_RADIX and MAX_RADIX.
@@ -267,7 +267,7 @@ namespace biz.ritter.javapi.lang
             }
             return -1;
         }
-        /**
+         /*
          * Indicates whether the specified character is a Java space.
          * 
          * @param c
@@ -282,7 +282,7 @@ namespace biz.ritter.javapi.lang
             return c == '\n' || c == '\t' || c == '\f' || c == '\r' || c == ' ';
         }
 
-        /**
+         /*
          * Indicates whether the specified character is a Unicode space character.
          * That is, if it is a member of one of the Unicode categories Space
          * Separator, Line Separator, or Paragraph Separator.
@@ -306,7 +306,7 @@ namespace biz.ritter.javapi.lang
                     || c == 0x3000;
         }
 
-        /**
+         /*
          * Indicates whether the specified character is a whitespace character in
          * Java.
          * 
@@ -333,7 +333,7 @@ namespace biz.ritter.javapi.lang
             return c <= 0x200b || c == 0x2028 || c == 0x2029 || c == 0x3000;
         }
 
-        /**
+         /*
          * Indicates whether the specified character is an ISO control character.
          * 
          * @param c
@@ -346,7 +346,7 @@ namespace biz.ritter.javapi.lang
             return isISOControl((int)c);
         }
 
-        /**
+         /*
          * Indicates whether the specified code point is an ISO control character.
          * 
          * @param c
@@ -359,7 +359,7 @@ namespace biz.ritter.javapi.lang
             return (c >= 0 && c <= 0x1f) || (c >= 0x7f && c <= 0x9f);
         }
 
-        /**
+         /*
          * Returns the code point at {@code index} in the specified sequence of
          * character units. If the unit at {@code index} is a high-surrogate unit,
          * {@code index + 1} is less than the length of the sequence and the unit at
@@ -406,7 +406,7 @@ namespace biz.ritter.javapi.lang
             return high;
         }
 
-        /**
+         /*
          * Returns the code point at {@code index} in the specified array of
          * character units. If the unit at {@code index} is a high-surrogate unit,
          * {@code index + 1} is less than the length of the array and the unit at
@@ -453,7 +453,7 @@ namespace biz.ritter.javapi.lang
             return high;
         }
 
-        /**
+         /*
          * Returns the code point at {@code index} in the specified array of
          * character units, where {@code index} has to be less than {@code limit}.
          * If the unit at {@code index} is a high-surrogate unit, {@code index + 1}
@@ -498,7 +498,7 @@ namespace biz.ritter.javapi.lang
             return high;
         }
 
-        /**
+         /*
          * Indicates whether the specified character pair is a valid surrogate pair.
          *
          * @param high
@@ -517,7 +517,7 @@ namespace biz.ritter.javapi.lang
             return (isHighSurrogate(high) && isLowSurrogate(low));
         }
 
-        /**
+         /*
          * Indicates whether {@code ch} is a high- (or leading-) surrogate code unit
          * that is used for representing supplementary characters in UTF-16
          * encoding.
@@ -534,7 +534,7 @@ namespace biz.ritter.javapi.lang
             return (MIN_HIGH_SURROGATE <= ch && MAX_HIGH_SURROGATE >= ch);
         }
 
-        /**
+         /*
          * Indicates whether {@code ch} is a low- (or trailing-) surrogate code unit
          * that is used for representing supplementary characters in UTF-16
          * encoding.
@@ -551,7 +551,7 @@ namespace biz.ritter.javapi.lang
             return (MIN_LOW_SURROGATE <= ch && MAX_LOW_SURROGATE >= ch);
         }
 
-        /**
+         /*
          * Converts a surrogate pair into a Unicode code point. This method assumes
          * that the pair are valid surrogates. If the pair are <i>not</i> valid
          * surrogates, then the result is indeterminate. The
@@ -574,7 +574,7 @@ namespace biz.ritter.javapi.lang
             int l = low & 0x3FF;
             return (h | l) + 0x10000;
         }
-        /**
+         /*
          * Returns the code point that preceds {@code index} in the specified
          * sequence of character units. If the unit at {@code index - 1} is a
          * low-surrogate unit, {@code index - 2} is not negative and the unit at
@@ -621,7 +621,7 @@ namespace biz.ritter.javapi.lang
             return low;
         }
 
-        /**
+         /*
          * Returns the code point that preceds {@code index} in the specified
          * array of character units. If the unit at {@code index - 1} is a
          * low-surrogate unit, {@code index - 2} is not negative and the unit at
@@ -668,7 +668,7 @@ namespace biz.ritter.javapi.lang
             return low;
         }
 
-        /**
+         /*
          * Returns the code point that preceds the {@code index} in the specified
          * array of character units and is not less than {@code start}. If the unit
          * at {@code index - 1} is a low-surrogate unit, {@code index - 2} is not
@@ -720,7 +720,7 @@ namespace biz.ritter.javapi.lang
             return low;
         }
 
-        /**
+         /*
          * Counts the number of Unicode code points in the subsequence of the
          * specified character sequence, as delineated by {@code beginIndex} and
          * {@code endIndex}. Any surrogate values with missing pair values will be
@@ -773,7 +773,7 @@ namespace biz.ritter.javapi.lang
             return result;
         }
 
-        /**
+         /*
          * Counts the number of Unicode code points in the subsequence of the
          * specified char array, as delineated by {@code offset} and {@code count}.
          * Any surrogate values with missing pair values will be counted as one code
@@ -828,7 +828,7 @@ namespace biz.ritter.javapi.lang
             return result;
         }
 
-        /**
+         /*
          * Determines the index in the specified character sequence that is offset
          * {@code codePointOffset} code points from {@code index}.
          *
@@ -916,7 +916,7 @@ namespace biz.ritter.javapi.lang
             return i2;
         }
 
-        /**
+         /*
          * Determines the index in a subsequence of the specified character array
          * that is offset {@code codePointOffset} code points from {@code index}.
          * The subsequence is delineated by {@code start} and {@code count}.
@@ -1014,7 +1014,7 @@ namespace biz.ritter.javapi.lang
             return i2;
         }
 
-        /**
+         /*
          * Converts the specified Unicode code point into a UTF-16 encoded sequence
          * and returns it as a char array.
          * 
@@ -1045,7 +1045,7 @@ namespace biz.ritter.javapi.lang
             return new char[] { (char)codePoint };
         }
 
-        /**
+         /*
          * Indicates whether {@code codePoint} is a valid Unicode code point.
          *
          * @param codePoint
@@ -1059,7 +1059,7 @@ namespace biz.ritter.javapi.lang
             return (MIN_CODE_POINT <= codePoint && MAX_CODE_POINT >= codePoint);
         }
 
-        /**
+         /*
          * Indicates whether {@code codePoint} is within the supplementary code
          * point range.
          *
@@ -1073,7 +1073,7 @@ namespace biz.ritter.javapi.lang
         {
             return (MIN_SUPPLEMENTARY_CODE_POINT <= codePoint && MAX_CODE_POINT >= codePoint);
         }
-        /**
+         /*
          * Indicates whether the specified character is a digit.
          * 
          * @param c
@@ -1095,7 +1095,7 @@ namespace biz.ritter.javapi.lang
             return getType(c) == DECIMAL_DIGIT_NUMBER;
         }
 
-        /**
+         /*
          * Gets the general Unicode category of the specified character.
          * 
          * @param c
@@ -1186,7 +1186,7 @@ namespace biz.ritter.javapi.lang
     	2, 2, 1, 1, 1, 2, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2, 
     	1, 2, 1, 2, 1, 2, 1, 2 };
 
-        /**
+         /*
          * Indicates whether the specified character is a letter.
          * 
          * @param c
@@ -1212,7 +1212,7 @@ namespace biz.ritter.javapi.lang
         {
             return codePointAt((CharSequence)new StringJ(s), i);
         }
-        /**
+         /*
          * Returns a {@code Character} instance for the {@code char} value passed.
          * For ASCII/Latin-1 characters (and generally all characters with a Unicode
          * value up to 512), this method should be used instead of the constructor,

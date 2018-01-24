@@ -22,7 +22,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapix.xml.crypto
 {
 
-/**
+ /*
  * An abstract representation of a <code>Data</code> type containing a 
  * node-set. The type (class) and ordering of the nodes contained in the set 
  * are not defined by this class; instead that behavior should be 
@@ -33,7 +33,7 @@ namespace biz.ritter.javapix.xml.crypto
  */
 public interface NodeSetData : Data {
 
-    /**
+     /*
      * Returns a read-only iterator over the nodes contained in this 
      * <code>NodeSetData</code> in 
      * <a href="http://www.w3.org/TR/1999/REC-xpath-19991116#dt-document-order">

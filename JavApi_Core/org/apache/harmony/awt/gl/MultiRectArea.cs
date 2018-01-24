@@ -20,29 +20,29 @@ namespace org.apache.harmony.awt.gl
     internal class MultiRectArea : java.awt.Shape
     {
 
-        /**
+         /*
          * If CHECK is true validation check active
          */
         private const bool CHECK = false;
 
         internal bool sorted = true;
 
-        /**
+         /*
          * Rectangle buffer
          */
         public int[] rect;
 
-        /**
+         /*
          * Bounding box
          */
         java.awt.Rectangle bounds;
 
-        /**
+         /*
          * Result rectangle array
          */
         java.awt.Rectangle[] rectangles;
 
-        /**
+         /*
          * LineCash provides creating MultiRectArea line by line. Used in JavaShapeRasterizer.
          */
         public class LineCash : MultiRectArea
@@ -153,7 +153,7 @@ namespace org.apache.harmony.awt.gl
 
         }
 
-        /**
+         /*
          * RectCash provides simple creating MultiRectArea
          */
         internal class RectCash : MultiRectArea
@@ -246,7 +246,7 @@ namespace org.apache.harmony.awt.gl
 
         }
 
-        /**
+         /*
          * MultiRectArea path iterator
          */
         internal class Iterator : java.awt.geom.PathIterator
@@ -373,7 +373,7 @@ namespace org.apache.harmony.awt.gl
 
         }
 
-        /**
+         /*
          * Constructs a new empty MultiRectArea 
          */
         public MultiRectArea()
@@ -387,7 +387,7 @@ namespace org.apache.harmony.awt.gl
             this.sorted = sorted;
         }
 
-        /**
+         /*
          * Constructs a new MultiRectArea as a copy of another one 
          */
         public MultiRectArea(MultiRectArea mra)
@@ -404,7 +404,7 @@ namespace org.apache.harmony.awt.gl
             }
         }
 
-        /**
+         /*
          * Constructs a new MultiRectArea consists of single rectangle 
          */
         public MultiRectArea(java.awt.Rectangle r)
@@ -421,7 +421,7 @@ namespace org.apache.harmony.awt.gl
             check(this, "MultiRectArea(Rectangle)"); //$NON-NLS-1$
         }
 
-        /**
+         /*
          * Constructs a new MultiRectArea consists of single rectangle
          */
         public MultiRectArea(int x0, int y0, int x1, int y1)
@@ -438,7 +438,7 @@ namespace org.apache.harmony.awt.gl
             check(this, "MultiRectArea(Rectangle)"); //$NON-NLS-1$
         }
 
-        /**
+         /*
          * Constructs a new MultiRectArea and append rectangle from buffer
          */
         public MultiRectArea(java.awt.Rectangle[] buf)
@@ -450,7 +450,7 @@ namespace org.apache.harmony.awt.gl
             }
         }
 
-        /**
+         /*
          * Constructs a new MultiRectArea and append rectangle from array
          */
         public MultiRectArea(java.util.ArrayList<java.awt.Rectangle> buf)
@@ -462,7 +462,7 @@ namespace org.apache.harmony.awt.gl
             }
         }
 
-        /**
+         /*
          * Sort rectangle buffer
          */
         internal void resort()
@@ -494,7 +494,7 @@ namespace org.apache.harmony.awt.gl
             invalidate();
         }
 
-        /**
+         /*
          * Tests equals with another object
          */
 
@@ -519,7 +519,7 @@ namespace org.apache.harmony.awt.gl
             return false;
         }
 
-        /**
+         /*
          * Checks validation of MultiRectArea object
          */
         static MultiRectArea check(MultiRectArea mra, String msg)
@@ -535,7 +535,7 @@ namespace org.apache.harmony.awt.gl
             return mra;
         }
 
-        /**
+         /*
          * Checks validation of MultiRectArea object
          */
         public static int checkValidation(java.awt.Rectangle[] r, bool sorted)
@@ -584,7 +584,7 @@ namespace org.apache.harmony.awt.gl
             return -1;
         }
 
-        /**
+         /*
          * Assigns rectangle from another buffer
          */
         protected internal void setRect(int[] buf, bool copy)
@@ -601,7 +601,7 @@ namespace org.apache.harmony.awt.gl
             invalidate();
         }
 
-        /**
+         /*
          * Union with another MultiRectArea object
          */
         public void add(MultiRectArea mra)
@@ -610,7 +610,7 @@ namespace org.apache.harmony.awt.gl
             invalidate();
         }
 
-        /**
+         /*
          * Intersect with another MultiRectArea object
          */
         public void intersect(MultiRectArea mra)
@@ -619,7 +619,7 @@ namespace org.apache.harmony.awt.gl
             invalidate();
         }
 
-        /**
+         /*
          * Subtract another MultiRectArea object
          */
         public void substract(MultiRectArea mra)
@@ -628,7 +628,7 @@ namespace org.apache.harmony.awt.gl
             invalidate();
         }
 
-        /**
+         /*
          * Union with Rectangle object
          */
         public void add(java.awt.Rectangle rect)
@@ -637,7 +637,7 @@ namespace org.apache.harmony.awt.gl
             invalidate();
         }
 
-        /**
+         /*
          * Intersect with Rectangle object
          */
         public void intersect(java.awt.Rectangle rect)
@@ -646,7 +646,7 @@ namespace org.apache.harmony.awt.gl
             invalidate();
         }
 
-        /**
+         /*
          * Subtract rectangle object
          */
         public void substract(java.awt.Rectangle rect)
@@ -654,7 +654,7 @@ namespace org.apache.harmony.awt.gl
             setRect(subtract(this, new MultiRectArea(rect)).rect, false);
         }
 
-        /**
+         /*
          * Union two MutliRectareArea objects
          */
         public static MultiRectArea intersect(MultiRectArea src1, MultiRectArea src2)
@@ -663,7 +663,7 @@ namespace org.apache.harmony.awt.gl
             return res;
         }
 
-        /**
+         /*
          * Intersect two MultiRectArea objects
          */
         public static MultiRectArea union(MultiRectArea src1, MultiRectArea src2)
@@ -672,7 +672,7 @@ namespace org.apache.harmony.awt.gl
             return res;
         }
 
-        /**
+         /*
          * Subtract two MultiRectArea objects
          */
         public static MultiRectArea subtract(MultiRectArea src1, MultiRectArea src2)
@@ -681,7 +681,7 @@ namespace org.apache.harmony.awt.gl
             return res;
         }
 
-        /**
+         /*
          * Print MultiRectArea object to output stream
          */
         public static void print(MultiRectArea mra, String msg)
@@ -705,7 +705,7 @@ namespace org.apache.harmony.awt.gl
             }
         }
 
-        /**
+         /*
          * Translate MultiRectArea object by (x, y)
          */
         public void translate(int x, int y)
@@ -732,7 +732,7 @@ namespace org.apache.harmony.awt.gl
             }
         }
 
-        /**
+         /*
          * Add rectangle to the buffer without any checking
          */
         public void addRect(int x1, int y1, int x2, int y2)
@@ -745,7 +745,7 @@ namespace org.apache.harmony.awt.gl
             rect[i++] = y2;
         }
 
-        /**
+         /*
          * Tests is MultiRectArea empty 
          */
         public bool isEmpty()
@@ -759,7 +759,7 @@ namespace org.apache.harmony.awt.gl
             rectangles = null;
         }
 
-        /**
+         /*
          * Returns bounds of MultiRectArea object
          */
         public java.awt.Rectangle getBounds()
@@ -806,7 +806,7 @@ namespace org.apache.harmony.awt.gl
             return bounds = new java.awt.Rectangle(x1, y1, x2 - x1 + 1, y2 - y1 + 1);
         }
 
-        /**
+         /*
          * Return rectangle count in the buffer
          */
         public int getRectCount()
@@ -814,7 +814,7 @@ namespace org.apache.harmony.awt.gl
             return (rect[0] - 1) / 4;
         }
 
-        /**
+         /*
          * Returns Rectangle array 
          */
         public java.awt.Rectangle[] getRectangles()
@@ -837,7 +837,7 @@ namespace org.apache.harmony.awt.gl
             return rectangles;
         }
 
-        /**
+         /*
          * Returns Bounds2D
          */
         public java.awt.geom.Rectangle2D getBounds2D()
@@ -845,7 +845,7 @@ namespace org.apache.harmony.awt.gl
             return getBounds();
         }
 
-        /**
+         /*
          * Tests does point lie inside MultiRectArea object
          */
         public bool contains(double x, double y)
@@ -860,7 +860,7 @@ namespace org.apache.harmony.awt.gl
             return false;
         }
 
-        /**
+         /*
          * Tests does Point2D lie inside MultiRectArea object
          */
         public bool contains(java.awt.geom.Point2D p)
@@ -868,7 +868,7 @@ namespace org.apache.harmony.awt.gl
             return contains(p.getX(), p.getY());
         }
 
-        /**
+         /*
          * Tests does rectangle lie inside MultiRectArea object
          */
         public bool contains(double x, double y, double w, double h)
@@ -876,7 +876,7 @@ namespace org.apache.harmony.awt.gl
             throw new java.lang.RuntimeException("Not implemented"); //$NON-NLS-1$
         }
 
-        /**
+         /*
          * Tests does Rectangle2D lie inside MultiRectArea object
          */
         public bool contains(java.awt.geom.Rectangle2D r)
@@ -884,7 +884,7 @@ namespace org.apache.harmony.awt.gl
             return this.contains(r.getX(), r.getY(), r.getWidth(), r.getHeight()); // Basties note: easy to implement...
         }
 
-        /**
+         /*
          * Tests does rectangle intersect MultiRectArea object
          */
         public bool intersects(double x, double y, double w, double h)
@@ -894,7 +894,7 @@ namespace org.apache.harmony.awt.gl
             return intersects(r);
         }
 
-        /**
+         /*
          * Tests does Rectangle2D intersect MultiRectArea object
          */
         public bool intersects(java.awt.geom.Rectangle2D r)
@@ -913,7 +913,7 @@ namespace org.apache.harmony.awt.gl
             return false;
         }
 
-        /**
+         /*
          * Returns path iterator
          */
         public java.awt.geom.PathIterator getPathIterator(java.awt.geom.AffineTransform t, double flatness)
@@ -921,7 +921,7 @@ namespace org.apache.harmony.awt.gl
             return new Iterator(this, t);
         }
 
-        /**
+         /*
          * Returns path iterator
          */
         public java.awt.geom.PathIterator getPathIterator(java.awt.geom.AffineTransform t)
@@ -929,7 +929,7 @@ namespace org.apache.harmony.awt.gl
             return new Iterator(this, t);
         }
 
-        /**
+         /*
          * Returns MultiRectArea object converted to string 
          */
 

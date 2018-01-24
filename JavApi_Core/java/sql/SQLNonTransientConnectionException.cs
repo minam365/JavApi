@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.sql
 {
 
-    /**
+     /*
      * An exception, which is subclass of SQLException, is thrown when the
      * connection operation that failed will not succeed when the operation is
      * retried without the cause of the failure being corrected.
@@ -29,7 +29,7 @@ namespace biz.ritter.javapi.sql
 
         private const long serialVersionUID = -5852318857474782892L;
 
-        /**
+         /*
          * Creates an SQLNonTransientConnectionException object. The Reason string
          * is set to null, the SQLState string is set to null and the Error Code is
          * set to 0.
@@ -39,7 +39,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLNonTransientConnectionException object. The Reason string
          * is set to the given reason string, the SQLState string is set to null and
          * the Error Code is set to 0.
@@ -52,7 +52,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLNonTransientConnectionException object. The Reason string
          * is set to the given reason string, the SQLState string is set to the
          * given SQLState string and the Error Code is set to 0.
@@ -67,7 +67,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLNonTransientConnectionException object. The Reason string
          * is set to the given reason string, the SQLState string is set to the
          * given SQLState string and the Error Code is set to the given error code
@@ -86,7 +86,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLNonTransientConnectionException object. The Reason string
          * is set to the null if cause == null or cause.toString() if
          * cause!=null,and the cause java.lang.Throwable object is set to the given cause
@@ -101,7 +101,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLNonTransientConnectionException object. The Reason string
          * is set to the given and the cause java.lang.Throwable object is set to the given
          * cause java.lang.Throwable object.
@@ -117,7 +117,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLNonTransientConnectionException object. The Reason string
          * is set to the given reason string, the SQLState string is set to the
          * given SQLState string and the cause java.lang.Throwable object is set to the given
@@ -137,7 +137,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLNonTransientConnectionException object. The Reason string
          * is set to the given reason string, the SQLState string is set to the
          * given SQLState string , the Error Code is set to the given error code

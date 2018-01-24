@@ -14,7 +14,7 @@ using System;
 namespace org.w3c.dom.ls
 {
 
-    /**
+     /*
      *  <code>LSResourceResolver</code> provides a way for applications to 
      * redirect references to external resources. 
      * <p> Applications needing to implement custom handling for external 
@@ -39,7 +39,7 @@ namespace org.w3c.dom.ls
      */
     public interface LSResourceResolver
     {
-        /**
+         /*
          *  Allow the application to resolve external resources. 
          * <br> The <code>LSParser</code> will call this method before opening any 
          * external resource, including the external DTD subset, external 

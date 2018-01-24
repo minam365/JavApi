@@ -14,7 +14,7 @@ using System;
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      *  The <code>Attr</code> interface represents an attribute in an 
      * <code>Element</code> object. Typically the allowable values for the 
      * attribute are defined in a document type definition.
@@ -55,12 +55,12 @@ namespace org.w3c.dom
      */
     public interface Attr : Node
     {
-        /**
+         /*
          * Returns the name of this attribute. 
          */
         String getName();
 
-        /**
+         /*
          * If this attribute was explicitly given a value in the original 
          * document, this is <code>true</code>; otherwise, it is 
          * <code>false</code>. Note that the implementation is in charge of this 
@@ -87,7 +87,7 @@ namespace org.w3c.dom
          */
         bool getSpecified();
 
-        /**
+         /*
          * On retrieval, the value of the attribute is returned as a string. 
          * Character and general entity references are replaced with their 
          * values. See also the method <code>getAttribute</code> on the 
@@ -103,7 +103,7 @@ namespace org.w3c.dom
         String getValue();
         void setValue(String value);//                            throws DOMException;
 
-        /**
+         /*
          * The <code>Element</code> node this attribute is attached to or 
          * <code>null</code> if this attribute is not in use.
          * @since DOM Level 2

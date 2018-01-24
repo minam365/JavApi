@@ -5,7 +5,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.awt.geom
 {
-    /**
+     /*
      * @author Denis M. Kishenko
      */
     public abstract class Dimension2D : java.lang.Cloneable

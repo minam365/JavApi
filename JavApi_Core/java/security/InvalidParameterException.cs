@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.security
 {
 
-    /**
+     /*
      * {@code InvalidParameterException} indicates exceptional conditions, caused by
      * invalid parameters.
      */
@@ -27,7 +27,7 @@ namespace biz.ritter.javapi.security
 
         private static readonly long serialVersionUID = -857968536935667808L;
 
-        /**
+         /*
          * Constructs a new instance of {@code InvalidParameterException} with the
          * given message.
          *
@@ -39,7 +39,7 @@ namespace biz.ritter.javapi.security
         {
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code InvalidParameterException}.
          */
         public InvalidParameterException()

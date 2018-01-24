@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.math
 {
-    /**
+     /*
      * Static library that provides all operations related with division and modular
      * arithmetic to {@link BigInteger}. Some methods are provided in both mutable
      * and immutable way. There are several variants provided listed below:
@@ -40,7 +40,7 @@ namespace biz.ritter.javapi.math
      */
     internal class Division {
 
-        /**
+         /*
          * Divides the array 'a' by the array 'b' and gets the quotient and the
          * remainder. Implements the Knuth's division algorithm. See D. Knuth, The
          * Art of Computer Programming, vol. 2. Steps D1-D8 correspond the steps in
@@ -164,7 +164,7 @@ namespace biz.ritter.javapi.math
             return normA;
         }
 
-        /**
+         /*
          * Divides an array by an integer value. Implements the Knuth's division
          * algorithm. See D. Knuth, The Art of Computer Programming, vol. 2.
          * 
@@ -217,7 +217,7 @@ namespace biz.ritter.javapi.math
             return (int) rem;
         }
 
-        /**
+         /*
          * Divides an array by an integer value. Implements the Knuth's division
          * algorithm. See D. Knuth, The Art of Computer Programming, vol. 2.
          * 
@@ -239,7 +239,7 @@ namespace biz.ritter.javapi.math
             return (int) result;
         }
 
-        /**
+         /*
          * Divides a <code>BigInteger</code> by a signed <code>int</code> and
          * returns the remainder.
          * 
@@ -252,7 +252,7 @@ namespace biz.ritter.javapi.math
                     divisor);
         }
 
-        /**
+         /*
          * Divides an unsigned long a by an unsigned int b. It is supposed that the
          * most significant bit of b is set to 1, i.e. b &lt; 0
          * 
@@ -297,7 +297,7 @@ namespace biz.ritter.javapi.math
             return (rem << 32) | (quot & 0xffffffffL);
         }
 
-        /**
+         /*
          * Computes the quotient and the remainder after a division by an {@code int}
          * number.
          * 
@@ -337,7 +337,7 @@ namespace biz.ritter.javapi.math
             return new BigInteger[] { result0, result1 };
         }
 
-        /**
+         /*
          * Multiplies an array by int and subtracts it from a subarray of another
          * array.
          * 
@@ -365,7 +365,7 @@ namespace biz.ritter.javapi.math
             return (int)(carry1 >> 32); // -1 or 0
         }
 
-        /**
+         /*
          * @param m a positive modulus
          * Return the greatest common divisor of op1 and op2,
          * 
@@ -432,7 +432,7 @@ namespace biz.ritter.javapi.math
             return op2.shiftLeft(pow2Count);
         }
 
-        /**
+         /*
          * Performs the same as {@link #gcdBinary(BigInteger, BigInteger)}, but
          * with numbers of 63 bits, represented in positives values of {@code long}
          * type.
@@ -471,7 +471,7 @@ namespace biz.ritter.javapi.math
     
     
     
-        /**
+         /*
          * Calculates a.modInverse(p) Based on: Savas, E; Koc, C "The Montgomery Modular
          * Inverse - Revised"
          */
@@ -564,7 +564,7 @@ namespace biz.ritter.javapi.math
             return r;
         }
     
-        /**
+         /*
          * Calculate the first digit of the inverse
          */
         private static int calcN(BigInteger a) {
@@ -592,7 +592,7 @@ namespace biz.ritter.javapi.math
             return res;
         }
 
-        /**
+         /*
          * Implements the "Shifting Euclidean modular inverse algorithm".
          * "Laszlo Hars - Modular Inverse Algorithms Without Multiplications
          * for Cryptographic Applications"
@@ -710,7 +710,7 @@ namespace biz.ritter.javapi.math
             return res;
         }
     
-        /**
+         /*
          * Performs modular exponentiation using the Montgomery Reduction. It
          * requires that all parameters be positive and the modulus be odd. >
          * 
@@ -742,7 +742,7 @@ namespace biz.ritter.javapi.math
             return monPro(res, BigInteger.ONE, modulus, n2);
         }
 
-        /**
+         /*
          * Performs modular exponentiation using the Montgomery Reduction. It
          * requires that all parameters be positive and the modulus be even. Based
          * <i>The square and multiply algorithm and the Montgomery Reduction C. K.
@@ -776,7 +776,7 @@ namespace biz.ritter.javapi.math
             return x1.add(q.multiply(y));
         }
 
-        /**
+         /*
          * It requires that all parameters be positive.
          * 
          * @return {@code base<sup>exponent</sup> mod (2<sup>j</sup>)}.
@@ -839,7 +839,7 @@ namespace biz.ritter.javapi.math
             }
         }
     
-        /**
+         /*
          * Implements the Montgomery Product of two integers represented by
          * {@code int} arrays. The arrays are supposed in <i>little
          * endian</i> notation.
@@ -862,7 +862,7 @@ namespace biz.ritter.javapi.math
         
         }
     
-        /**
+         /*
          * Performs the final reduction of the Montgomery algorithm.
          * @see monPro(BigInteger, BigInteger, BigInteger, long)
          * @see monSquare(BigInteger, BigInteger, long)
@@ -894,7 +894,7 @@ namespace biz.ritter.javapi.math
             return result;
         }
 
-        /**
+         /*
          * @param x an odd positive number.
          * @param n the exponent by which 2 is raised.
          * @return {@code x<sup>-1</sup> (mod 2<sup>n</sup>)}.
@@ -915,7 +915,7 @@ namespace biz.ritter.javapi.math
             return y;
         }
 
-        /**
+         /*
          * Performs {@code x = x mod (2<sup>n</sup>)}.
          * 
          * @param x a positive number, it will store the result.

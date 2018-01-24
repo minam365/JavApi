@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util
 {
-    /**
+     /*
      * The {@code TimerTask} class represents a task to run at a specified time. The task
      * may be run once or repeatedly.
      * 
@@ -82,14 +82,14 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Creates a new {@code TimerTask}.
          */
         protected TimerTask():base()
         {
         }
 
-        /**
+         /*
          * Cancels the {@code TimerTask} and removes it from the {@code Timer}'s queue. Generally, it
          * returns {@code false} if the call did not prevent a {@code TimerTask} from running at
          * least once. Subsequent calls have no effect.
@@ -107,7 +107,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns the scheduled execution time. If the task execution is in
          * progress it returns the execution time of the ongoing task. Tasks which
          * have not yet run return an undefined value.
@@ -122,7 +122,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * The task to run should be specified in the implementation of the {@code run()}
          * method.
          */

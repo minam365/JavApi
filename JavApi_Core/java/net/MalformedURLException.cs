@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.net
 {
 
-    /**
+     /*
      * This exception is thrown when a program attempts to create an URL from an
      * incorrect specification.
      * 
@@ -29,7 +29,7 @@ namespace biz.ritter.javapi.net
 
         private static readonly long serialVersionUID = -182787522200415866L;
 
-        /**
+         /*
          * Constructs a new instance of this class with its walkback filled in.
          */
         public MalformedURLException()
@@ -37,7 +37,7 @@ namespace biz.ritter.javapi.net
         {
         }
 
-        /**
+         /*
          * Constructs a new instance of this class with its walkback and message
          * filled in.
          * 

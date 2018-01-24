@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang.reflect
 {
 
-    /**
+     /*
      * This class provides a wrapper for an exception thrown by a {@code Method} or
      * {@code Constructor} invocation.
      * 
@@ -34,7 +34,7 @@ namespace biz.ritter.javapi.lang.reflect
 
         private Throwable target;
 
-        /**
+         /*
          * Constructs a new {@code InvocationTargetException} instance with a
          * {@code null} cause / target exception.
          */
@@ -43,7 +43,7 @@ namespace biz.ritter.javapi.lang.reflect
         {
         }
 
-        /**
+         /*
          * Constructs a new {@code InvocationTargetException} instance with its
          * cause / target exception filled in.
          * 
@@ -57,7 +57,7 @@ namespace biz.ritter.javapi.lang.reflect
             target = exception;
         }
 
-        /**
+         /*
          * Constructs a new {@code InvocationTargetException} instance with its
          * cause / target exception and message filled in.
          * 
@@ -79,7 +79,7 @@ namespace biz.ritter.javapi.lang.reflect
         /// <param name="tie"></param>
         internal InvocationTargetException (TargetInvocationException tie) : this (tie.GetBaseException() is java.lang.Throwable ? (java.lang.Throwable)tie.GetBaseException() : new RuntimeException (), tie.Message){}
 
-        /**
+         /*
          * Returns the target exception, which may be {@code null}.
          * 
          * @return the target exception
@@ -89,7 +89,7 @@ namespace biz.ritter.javapi.lang.reflect
             return target;
         }
 
-        /**
+         /*
          * Returns the cause of this exception, which may be {@code null}.
          * 
          * @return the cause of this exception

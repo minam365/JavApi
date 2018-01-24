@@ -7,7 +7,7 @@ using java =biz.ritter.javapi;
 
 namespace biz.ritter.javapi.awt.geom
 {
-    /**
+     /*
      * @author Denis M. Kishenko
      */
     [Serializable]

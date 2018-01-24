@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util.logging
 {
-/**
+ /*
  * A {@code StreamHandler} object writes log messages to an output stream, that
  * is, objects of the class {@link java.io.OutputStream}.
  * <p>
@@ -50,7 +50,7 @@ public class StreamHandler : Handler {
     // the flag indicating whether the writer has been initialized
     private bool writerNotInitialized;
 
-    /**
+     /*
      * Constructs a {@code StreamHandler} object. The new stream handler
      * does not have an associated output stream.
      */
@@ -62,7 +62,7 @@ public class StreamHandler : Handler {
         this.writerNotInitialized = true;
     }
 
-    /**
+     /*
      * Constructs a {@code StreamHandler} object with the supplied output
      * stream. Default properties are read.
      * 
@@ -74,7 +74,7 @@ public class StreamHandler : Handler {
         this.os = os;
     }
 
-    /**
+     /*
      * Constructs a {@code StreamHandler} object. The specified default values
      * will be used if the corresponding properties are not found in the log
      * manager's properties.
@@ -88,7 +88,7 @@ public class StreamHandler : Handler {
         this.writerNotInitialized = true;
     }
 
-    /**
+     /*
      * Constructs a {@code StreamHandler} object with the supplied output stream
      * and formatter.
      * 
@@ -141,7 +141,7 @@ public class StreamHandler : Handler {
         }
     }
 
-    /**
+     /*
      * Sets the output stream this handler writes to. Note it does nothing else.
      * 
      * @param newOs
@@ -151,7 +151,7 @@ public class StreamHandler : Handler {
         this.os = newOs;
     }
 
-    /**
+     /*
      * Sets the output stream this handler writes to. If there's an existing
      * output stream, the tail string of the associated formatter will be
      * written to it. Then it will be flushed, closed and replaced with
@@ -176,7 +176,7 @@ public class StreamHandler : Handler {
         this.writerNotInitialized = true;
     }
 
-    /**
+     /*
      * Sets the character encoding used by this handler. A {@code null} value
      * indicates that the default encoding should be used.
      * 
@@ -212,7 +212,7 @@ public class StreamHandler : Handler {
         }
     }
 
-    /**
+     /*
      * Closes this handler, but the underlying output stream is only closed if
      * {@code closeStream} is {@code true}. Security is not checked.
      * 
@@ -240,7 +240,7 @@ public class StreamHandler : Handler {
         }
     }
 
-    /**
+     /*
      * Closes this handler. The tail string of the formatter associated with
      * this handler is written out. A flush operation and a subsequent close
      * operation is then performed upon the output stream. Client applications
@@ -256,7 +256,7 @@ public class StreamHandler : Handler {
         close(true);
     }
 
-    /**
+     /*
      * Flushes any buffered output.
      */
     
@@ -277,7 +277,7 @@ public class StreamHandler : Handler {
         }
     }
 
-    /**
+     /*
      * Accepts a logging request. The log record is formatted and written to the
      * output stream if the following three conditions are met:
      * <ul>
@@ -318,7 +318,7 @@ public class StreamHandler : Handler {
         }
     }}
 
-    /**
+     /*
      * Determines whether the supplied log record needs to be logged. The
      * logging levels are checked as well as the filter. The output stream of
      * this handler is also checked. If it is {@code null}, this method returns

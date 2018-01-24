@@ -41,7 +41,7 @@ namespace biz.ritter.javapi.net
             return getHeaderField("Content-Type"); //$NON-NLS-1$
         }
 
-        /**
+         /*
          * Gets the value of the header field specified by {@code key} or {@code
          * null} if there is no field with this name. The current implementation of
          * this method returns always {@code null}.

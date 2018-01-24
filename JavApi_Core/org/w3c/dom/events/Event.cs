@@ -9,7 +9,7 @@ using System;
 namespace org.w3c.dom.events
 {
 
-    /**
+     /*
      * The <code>Event</code> interface is used to provide contextual information 
      * about an event to the handler processing the event.  An object which 
      * implements the <code>Event</code> interface is generally passed as the 
@@ -24,40 +24,40 @@ namespace org.w3c.dom.events
     {
         // PhaseType
 
-        /**
+         /*
          * The <code>type</code> property represents the event name as a string 
          * property. 
          */
         String getType();
-        /**
+         /*
          * The <code>target</code> property indicates the <code>EventTarget</code> 
          * to which the event  was originally dispatched. 
          */
         EventTarget getTarget();
-        /**
+         /*
          * The <code>currentNode</code> property indicates the <code>Node</code> 
          * whose <code>EventListener</code>s are currently being processed.  This 
          * is particularly  useful during capturing and bubbling. 
          */
         Node getCurrentNode();
-        /**
+         /*
          * The <code>eventPhase</code> property indicates which phase of event flow 
          * is currently  being evaluated. 
          */
         short getEventPhase();
-        /**
+         /*
          * The <code>bubbles</code> property indicates whether or not an event is a 
          * bubbling event.  If the event can bubble the value is true, else the 
          * value is false. 
          */
         bool getBubbles();
-        /**
+         /*
          * The <code>cancelable</code> property indicates whether or not an event 
          * can have its default action prevented.  If the default action can be 
          * prevented the value is true, else the value is false. 
          */
         bool getCancelable();
-        /**
+         /*
          * The <code>preventBubble</code> method is used to end the bubbling phase 
          * of  event flow. If this method is called by any 
          * <code>EventListener</code>s registered on the same 
@@ -66,7 +66,7 @@ namespace org.w3c.dom.events
          * tree. 
          */
         void preventBubble();
-        /**
+         /*
          * The <code>preventCapture</code> method is used to end the capturing phase 
          * of  event flow. If this method is called by any 
          * <code>EventListener</code>s registered on the same 
@@ -75,7 +75,7 @@ namespace org.w3c.dom.events
          * down. 
          */
         void preventCapture();
-        /**
+         /*
          * If an event is cancelable, the <code>preventCapture</code> method is used 
          * to signify that the event is to be canceled, meaning any default action 
          * normally taken by the implementation as a result of the event will not 
@@ -87,7 +87,7 @@ namespace org.w3c.dom.events
          * throughout the remainder of the event's propagation. 
          */
         void preventDefault();
-        /**
+         /*
          * 
          * @param eventTypeArg Specifies the event type.  This type may be any event 
          *   type currently defined in this specification or a new event type.  Any 

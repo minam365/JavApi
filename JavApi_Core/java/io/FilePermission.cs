@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.io
 {
-/**
+ /*
  * A permission for accessing a file or directory. The FilePermission is made up
  * of a pathname and a set of actions which are valid for the pathname.
  * <p/>
@@ -69,7 +69,7 @@ public sealed class FilePermission : java.security.Permission, java.io.Serializa
 		[NonSerialized]
 		private bool allSubdir = false;
 
-    /**
+     /*
      * Constructs a new FilePermission with the path and actions specified.
      * 
      * @param path
@@ -120,7 +120,7 @@ public sealed class FilePermission : java.security.Permission, java.io.Serializa
         }
     }
 
-    /**
+     /*
      * Returns the string representing this permission's actions. It must be of
      * the form "read,write,execute,delete", all lower case and in the correct
      * order if there is more than one action.
@@ -157,7 +157,7 @@ public sealed class FilePermission : java.security.Permission, java.io.Serializa
         return result.toString();
     }
 
-    /**
+     /*
      * Returns the numerical representation of the argument.
      * 
      * @param actionNames
@@ -186,7 +186,7 @@ public sealed class FilePermission : java.security.Permission, java.io.Serializa
         return actionInt;
     }
 
-    /**
+     /*
      * Returns the actions associated with this file permission.
      * 
      * @return the actions associated with this file permission.
@@ -196,7 +196,7 @@ public sealed class FilePermission : java.security.Permission, java.io.Serializa
         return actions;
     }
 
-    /**
+     /*
      * Indicates if this file permission is equal to another. The two are equal
      * if {@code obj} is a FilePermission, they have the same path, and they
      * have the same actions.
@@ -225,7 +225,7 @@ public sealed class FilePermission : java.security.Permission, java.io.Serializa
         return false;
     }
 
-    /**
+     /*
      * Indicates whether the permission {@code p} is implied by this file
      * permission. This is the case if {@code p} is an instance of
      * {@code FilePermission}, if {@code p}'s actions are a subset of this
@@ -243,7 +243,7 @@ public sealed class FilePermission : java.security.Permission, java.io.Serializa
         return match != 0 && match == ((FilePermission) p).mask;
     }
 
-    /**
+     /*
      * Returns an int describing what masks are implied by a specific
      * permission.
      * 
@@ -345,7 +345,7 @@ public sealed class FilePermission : java.security.Permission, java.io.Serializa
         return includeDir ? matchedMask : 0;
     }
 
-    /**
+     /*
      * Returns a new PermissionCollection in which to place FilePermission
      * objects.
      * 
@@ -357,7 +357,7 @@ public sealed class FilePermission : java.security.Permission, java.io.Serializa
         return new FilePermissionCollection();
     }
 
-    /**
+     /*
      * Calculates the hash code value for this file permission.
      * 
      * @return the hash code value for this file permission.

@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.text
 {
 
-    /**
+     /*
      * Holds a string with attributes describing the characters of
      * this string.
      */
@@ -29,7 +29,7 @@ namespace biz.ritter.javapi.text
 
 
 
-        /**
+         /*
          * Constructs an {@code AttributedString} from an {@code
          * AttributedCharacterIterator}, which represents attributed text.
          *
@@ -110,7 +110,7 @@ namespace biz.ritter.javapi.text
             }
         }
 
-        /**
+         /*
          * Constructs an {@code AttributedString} from a range of the text contained
          * in the specified {@code AttributedCharacterIterator}, starting at {@code
          * start} and ending at {@code end}. All attributes will be copied to this
@@ -132,7 +132,7 @@ namespace biz.ritter.javapi.text
                 int end) :this(iterator, start, end, iterator.getAllAttributeKeys()){
         }
 
-        /**
+         /*
          * Constructs an {@code AttributedString} from a range of the text contained
          * in the specified {@code AttributedCharacterIterator}, starting at {@code
          * start}, ending at {@code end} and it will copy the attributes defined in
@@ -159,7 +159,7 @@ namespace biz.ritter.javapi.text
             : this(iterator, start, end, new java.util.HashSet<AttributedCharacterIteratorNS.Attribute>(java.util.Arrays<System.Object>.asList(attributes))){
         }
 
-        /**
+         /*
          * Creates an {@code AttributedString} from the given text.
          *
          * @param value
@@ -173,7 +173,7 @@ namespace biz.ritter.javapi.text
             attributeMap = new java.util.HashMap<AttributedCharacterIteratorNS.Attribute, java.util.List<IAC_Range>>();//11);
         }
 
-        /**
+         /*
          * Creates an {@code AttributedString} from the given text and the
          * attributes. The whole text has the given attributes applied.
          *
@@ -208,7 +208,7 @@ namespace biz.ritter.javapi.text
             }
         }
 
-        /**
+         /*
          * Applies a given attribute to this string.
          *
          * @param attribute
@@ -240,7 +240,7 @@ namespace biz.ritter.javapi.text
             ranges.add(new IAC_Range(0, text.Length, value));
         }
 
-        /**
+         /*
          * Applies a given attribute to the given range of this string.
          *
          * @param attribute
@@ -339,7 +339,7 @@ namespace biz.ritter.javapi.text
             it.add(new IAC_Range(start, end, value));
         }
 
-        /**
+         /*
          * Applies a given set of attributes to the given range of the string.
          *
          * @param attributes
@@ -363,7 +363,7 @@ namespace biz.ritter.javapi.text
             }
         }
 
-        /**
+         /*
          * Returns an {@code AttributedCharacterIterator} that gives access to the
          * complete content of this attributed string.
          *
@@ -373,7 +373,7 @@ namespace biz.ritter.javapi.text
             return new AttributedIterator(this);
         }
 
-        /**
+         /*
          * Returns an {@code AttributedCharacterIterator} that gives access to the
          * complete content of this attributed string. Only attributes contained in
          * {@code attributes} are available from this iterator if they are defined
@@ -389,7 +389,7 @@ namespace biz.ritter.javapi.text
             return new AttributedIterator(this, attributes, 0, text.Length);
         }
 
-        /**
+         /*
          * Returns an {@code AttributedCharacterIterator} that gives access to the
          * contents of this attributed string starting at index {@code start} up to
          * index {@code end}. Only attributes contained in {@code attributes} are
@@ -460,7 +460,7 @@ namespace biz.ritter.javapi.text
             }
         }
 
-        /**
+         /*
             * Returns a new {@code AttributedIterator} with the same source string,
             * begin, end, and current index as this attributed iterator.
             * 
@@ -494,7 +494,7 @@ namespace biz.ritter.javapi.text
             return attrString.text[offset];
         }
 
-        /**
+         /*
             * Returns the begin index in the source string.
             * 
             * @return the index of the first character to iterate.
@@ -503,7 +503,7 @@ namespace biz.ritter.javapi.text
             return begin;
         }
 
-        /**
+         /*
             * Returns the end index in the source String.
             * 
             * @return the index one past the last character to iterate.
@@ -512,7 +512,7 @@ namespace biz.ritter.javapi.text
             return end;
         }
 
-        /**
+         /*
             * Returns the current index in the source String.
             * 
             * @return the current index.
@@ -544,7 +544,7 @@ namespace biz.ritter.javapi.text
             return false;
         }
 
-        /**
+         /*
             * Returns a set of attributes present in the {@code AttributedString}.
             * An empty set returned indicates that no attributes where defined.
             *

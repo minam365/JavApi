@@ -50,7 +50,7 @@ namespace biz.ritter.javapi.util
         protected Set<K> keySetJ; 
         protected internal Collection<V> valuesCollection;
 
-        /**
+         /*
          * An immutable key-value mapping.
          * 
          * @param <K>
@@ -71,7 +71,7 @@ namespace biz.ritter.javapi.util
 
             private V value;
 
-            /**
+             /*
              * Constructs a new instance by key and value.
              * 
              * @param theKey
@@ -85,7 +85,7 @@ namespace biz.ritter.javapi.util
                 value = theValue;
             }
 
-            /**
+             /*
              * Constructs a new instance by an entry
              * 
              * @param entry
@@ -97,7 +97,7 @@ namespace biz.ritter.javapi.util
                 value = entry.getValue();
             }
 
-            /**
+             /*
              * {@inheritDoc}
              * 
              * @see java.util.Map.Entry#getKey()
@@ -107,7 +107,7 @@ namespace biz.ritter.javapi.util
                 return key;
             }
 
-            /**
+             /*
              * {@inheritDoc}
              * 
              * @see java.util.Map.Entry#getValue()
@@ -117,7 +117,7 @@ namespace biz.ritter.javapi.util
                 return value;
             }
 
-            /**
+             /*
              * Throws an UnsupportedOperationException.
              * 
              * @param object
@@ -133,7 +133,7 @@ namespace biz.ritter.javapi.util
                 throw new java.lang.UnsupportedOperationException();
             }
 
-            /**
+             /*
              * Answers whether the object is equal to this entry. This works across
              * all kinds of the Map.Entry interface.
              * 
@@ -156,7 +156,7 @@ namespace biz.ritter.javapi.util
                 return false;
             }
 
-            /**
+             /*
              * Answers the hash code of this entry.
              * 
              * @see java.lang.Object#hashCode()
@@ -168,7 +168,7 @@ namespace biz.ritter.javapi.util
                         ^ (value == null ? 0 : value.GetHashCode());
             }
 
-            /**
+             /*
              * Answers a String representation of this entry.
              * 
              * @see java.lang.Object#toString()

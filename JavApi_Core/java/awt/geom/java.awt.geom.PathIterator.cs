@@ -16,7 +16,7 @@ using System;
 
 namespace biz.ritter.javapi.awt.geom
 {
-    /**
+     /*
      * @author Denis M. Kishenko
      */
 

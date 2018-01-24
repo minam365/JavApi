@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.sql
 {
 
-/**
+ /*
  * A connection represents a link from a Java application to a database. All SQL
  * statements and results are returned within the context of a connection.
  * Database statements that are executed within this context form a
@@ -41,7 +41,7 @@ public interface Connection : Wrapper {
 
    
 
-    /**
+     /*
      * Discards all warnings that may have arisen for this connection.
      * Subsequent calls to {@link #getWarnings()} will return {@code null}
      * up until a new warning condition occurs.
@@ -51,7 +51,7 @@ public interface Connection : Wrapper {
      */
     void clearWarnings();// throws SQLException;
 
-    /**
+     /*
      * Causes the instant release of all database and driver connection
      * resources associated with this object. Any subsequent invocations of this
      * method have no effect.
@@ -68,7 +68,7 @@ public interface Connection : Wrapper {
      */
     void close();// throws SQLException;
 
-    /**
+     /*
      * Commits all of the changes made since the last {@code commit} or
      * {@code rollback} of the associated transaction. All locks in the database
      * held by this connection are also relinquished. Calling this operation on
@@ -80,7 +80,7 @@ public interface Connection : Wrapper {
      */
     void commit();// throws SQLException;
 
-    /**
+     /*
      * Returns a new instance of {@code Statement} for issuing SQL commands to
      * the remote database.
      * <p/>
@@ -95,7 +95,7 @@ public interface Connection : Wrapper {
      */
     Statement createStatement();// throws SQLException;
 
-    /**
+     /*
      * Returns a new instance of {@code Statement} whose associated {@code
      * ResultSet}s have the characteristics specified in the type and
      * concurrency arguments.
@@ -122,7 +122,7 @@ public interface Connection : Wrapper {
     Statement createStatement(int resultSetType, int resultSetConcurrency)
             ;//throws SQLException;
 
-    /**
+     /*
      * Returns a new instance of {@code Statement} whose associated
      * {@code ResultSet}s will have the characteristics specified in the
      * type, concurrency and holdability arguments.
@@ -158,7 +158,7 @@ public interface Connection : Wrapper {
             int resultSetConcurrency, int resultSetHoldability)
             ;//throws SQLException;
 
-    /**
+     /*
      * Returns a {@code boolean} indicating whether or not this connection is in
      * the {@code auto-commit} operating mode.
      * 
@@ -169,7 +169,7 @@ public interface Connection : Wrapper {
      */
     bool getAutoCommit();// throws SQLException;
 
-    /**
+     /*
      * Gets this {@code Connection} object's current catalog name.
      * 
      * @return the catalog name. {@code null} if there is no catalog
@@ -179,7 +179,7 @@ public interface Connection : Wrapper {
      */
     String getCatalog();// throws SQLException;
 
-    /**
+     /*
      * Returns the holdability property that any {@code ResultSet} produced by
      * this instance will have.
      * 
@@ -193,7 +193,7 @@ public interface Connection : Wrapper {
      */
     int getHoldability();// throws SQLException;
 
-    /**
+     /*
      * Gets the metadata about the database referenced by this connection. The
      * returned {@code DatabaseMetaData} describes the database topography,
      * available stored procedures, SQL syntax and so on.
@@ -205,7 +205,7 @@ public interface Connection : Wrapper {
      */
     DatabaseMetaData getMetaData();// throws SQLException;
 
-    /**
+     /*
      * Returns the transaction isolation level for this connection.
      * 
      * @return the transaction isolation value.
@@ -219,7 +219,7 @@ public interface Connection : Wrapper {
      */
     int getTransactionIsolation();// throws SQLException;
 
-    /**
+     /*
      * Returns the type mapping associated with this {@code Connection} object.
      * The type mapping must be set on the application level.
      * 
@@ -229,7 +229,7 @@ public interface Connection : Wrapper {
      */
     java.util.Map<String, java.lang.Class> getTypeMap();// throws SQLException;
 
-    /**
+     /*
      * Gets the first instance of any {@code SQLWarning} objects that may have
      * been created in the use of this connection. If at least one warning has
      * occurred then this operation returns the first one reported. A {@code
@@ -247,7 +247,7 @@ public interface Connection : Wrapper {
      */
     SQLWarning getWarnings();// throws SQLException;
 
-    /**
+     /*
      * Returns a {@code boolean} indicating whether or not this connection is in
      * the {@code closed} state. The {@code closed} state may be entered into as
      * a consequence of a successful invocation of the {@link #close()} method
@@ -260,7 +260,7 @@ public interface Connection : Wrapper {
      */
     bool isClosed();// throws SQLException;
 
-    /**
+     /*
      * Returns a {@code boolean} indicating whether or not this connection is
      * currently in the {@code read-only} state.
      * 
@@ -270,7 +270,7 @@ public interface Connection : Wrapper {
      */
     bool isReadOnly();// throws SQLException;
 
-    /**
+     /*
      * Returns a string representation of the input SQL statement
      * {@code sql} expressed in the underlying system's native SQL
      * syntax.
@@ -283,7 +283,7 @@ public interface Connection : Wrapper {
      */
     String nativeSQL(String sql);// throws SQLException;
 
-    /**
+     /*
      * Returns a new instance of {@code CallableStatement} that may be used for
      * making stored procedure calls to the database.
      * 
@@ -299,7 +299,7 @@ public interface Connection : Wrapper {
      */
     CallableStatement prepareCall(String sql);// throws SQLException;
 
-    /**
+     /*
      * Returns a new instance of {@code CallableStatement} that may be used for
      * making stored procedure calls to the database. {@code ResultSet}s emitted
      * from this {@code CallableStatement} will satisfy the specified {@code
@@ -330,7 +330,7 @@ public interface Connection : Wrapper {
     CallableStatement prepareCall(String sql, int resultSetType,
             int resultSetConcurrency) ;//throws SQLException;
 
-    /**
+     /*
      * Returns a new instance of {@code CallableStatement} that may be used for
      * making stored procedure calls to the database. {@code ResultSet}s created
      * from this {@code CallableStatement} will have characteristics determined
@@ -369,7 +369,7 @@ public interface Connection : Wrapper {
             int resultSetConcurrency, int resultSetHoldability)
             ;//throws SQLException;
 
-    /**
+     /*
      * Returns a new instance of {@code PreparedStatement} that may be used any
      * number of times to execute parameterized requests on the database server.
      * <p/>
@@ -392,7 +392,7 @@ public interface Connection : Wrapper {
      */
     PreparedStatement prepareStatement(String sql) ;//throws SQLException;
 
-    /**
+     /*
      * Creates a default {@code PreparedStatement} that can retrieve
      * automatically generated keys. Parameter {@code autoGeneratedKeys} may be
      * used to tell the driver whether such keys should be made accessible.
@@ -430,7 +430,7 @@ public interface Connection : Wrapper {
     PreparedStatement prepareStatement(String sql, int autoGeneratedKeys)
             ;//throws SQLException;
 
-    /**
+     /*
      * Creates a default {@code PreparedStatement} that can retrieve the
      * auto-generated keys designated by a supplied array. If {@code sql} is an
      * SQL {@code INSERT} statement, the parameter {@code columnIndexes} is expected
@@ -460,7 +460,7 @@ public interface Connection : Wrapper {
     PreparedStatement prepareStatement(String sql, int[] columnIndexes)
             ;//throws SQLException;
 
-    /**
+     /*
      * Creates a {@code PreparedStatement} that generates {@code ResultSet}s
      * with the specified values of {@code resultSetType} and {@code
      * resultSetConcurrency}.
@@ -491,7 +491,7 @@ public interface Connection : Wrapper {
     PreparedStatement prepareStatement(String sql, int resultSetType,
             int resultSetConcurrency) ;//throws SQLException;
 
-    /**
+     /*
      * Creates a {@code PreparedStatement} that generates {@code ResultSet}s
      * with the specified type, concurrency and holdability
      * 
@@ -529,7 +529,7 @@ public interface Connection : Wrapper {
             int resultSetConcurrency, int resultSetHoldability)
             ;//throws SQLException;
 
-    /**
+     /*
      * Creates a default {@code PreparedStatement} that can retrieve the
      * auto-generated keys designated by a supplied array. If {@code sql} is an
      * SQL {@code INSERT} statement, {@code columnNames} is expected to hold the
@@ -560,7 +560,7 @@ public interface Connection : Wrapper {
     PreparedStatement prepareStatement(String sql, String[] columnNames)
             ;//throws SQLException;
 
-    /**
+     /*
      * Releases the specified {@code savepoint} from the present transaction. Once removed,
      * the {@code Savepoint} is considered invalid and should not be referenced
      * further.
@@ -574,7 +574,7 @@ public interface Connection : Wrapper {
      */
     void releaseSavepoint(Savepoint savepoint) ;//throws SQLException;
 
-    /**
+     /*
      * Rolls back all updates made so far in this transaction and
      * relinquishes all acquired database locks. It is an error to invoke this
      * operation when in auto-commit mode.
@@ -585,7 +585,7 @@ public interface Connection : Wrapper {
      */
     void rollback() ;//throws SQLException;
 
-    /**
+     /*
      * Undoes all changes made after the supplied {@code Savepoint} object was
      * set. This method should only be used when auto-commit mode is disabled.
      * 
@@ -596,7 +596,7 @@ public interface Connection : Wrapper {
      */
     void rollback(Savepoint savepoint) ;//throws SQLException;
 
-    /**
+     /*
      * Sets this connection's auto-commit mode {@code on} or {@code off}.
      * <p/>
      * Putting a Connection into auto-commit mode means that all associated SQL
@@ -625,7 +625,7 @@ public interface Connection : Wrapper {
      */
     void setAutoCommit(bool autoCommit) ;//throws SQLException;
 
-    /**
+     /*
      * Sets the catalog name for this connection. This is used to select a
      * subspace of the database for future work. If the driver does not support
      * catalog names, this method is ignored.
@@ -637,7 +637,7 @@ public interface Connection : Wrapper {
      */
     void setCatalog(String catalog);// throws SQLException;
 
-    /**
+     /*
      * Sets the holdability of the {@code ResultSet}s created by this Connection.
      * 
      * @param holdability
@@ -651,7 +651,7 @@ public interface Connection : Wrapper {
      */
     void setHoldability(int holdability);// throws SQLException;
 
-    /**
+     /*
      * Sets this connection to read-only mode.
      * <p/>
      * This serves as a hint to the driver, which can enable database
@@ -665,7 +665,7 @@ public interface Connection : Wrapper {
      */
     void setReadOnly(bool readOnly);// throws SQLException;
 
-    /**
+     /*
      * Creates an unnamed {@code Savepoint} in the current transaction.
      * 
      * @return a {@code Savepoint} object for this savepoint.
@@ -674,7 +674,7 @@ public interface Connection : Wrapper {
      */
     Savepoint setSavepoint();// throws SQLException;
 
-    /**
+     /*
      * Creates a named {@code Savepoint} in the current transaction.
      * 
      * @param name
@@ -685,7 +685,7 @@ public interface Connection : Wrapper {
      */
     Savepoint setSavepoint(String name) ;//throws SQLException;
 
-    /**
+     /*
      * Sets the transaction isolation level for this Connection.
      * <p/>
      * If this method is called during a transaction, the results are
@@ -706,7 +706,7 @@ public interface Connection : Wrapper {
      */
     void setTransactionIsolation(int level);// throws SQLException;
 
-    /**
+     /*
      * Sets the {@code TypeMap} for this connection. The input {@code map}
      * should contain mappings between complex Java and SQL types.
      * 
@@ -718,7 +718,7 @@ public interface Connection : Wrapper {
      */
     void setTypeMap(java.util.Map<String, java.lang.Class> map);// throws SQLException;
 
-    /**
+     /*
      * TODO Javadoc
      * 
      * @return
@@ -752,19 +752,19 @@ public interface Connection : Wrapper {
 
 public sealed class ConnectionConstants {
    
-    /**
+     /*
      * A constant indicating that transactions are not supported.
      */
     public const int TRANSACTION_NONE = 0;
 
-    /**
+     /*
      * No <i>dirty reads</i> are permitted, therefore transactions may not read
      * a row containing uncommitted values - but does not prevent an application
      * from <i>non-repeatable reads</i> and <i>phantom reads</i>.
      */
     public const int TRANSACTION_READ_COMMITTED = 2;
 
-    /**
+     /*
      * In the case that reading uncommitted values is allowed, the following
      * incidents may happen which may lead to an invalid results:
      * <ul>
@@ -775,13 +775,13 @@ public sealed class ConnectionConstants {
      */
     public const int TRANSACTION_READ_UNCOMMITTED = 1;
 
-    /**
+     /*
      * A constant indicating that <i>dirty reads</i> and <i>non-repeatable
      * reads</i> are <b>prevented</b> but <i>phantom reads</i> can occur.
      */
     public const int TRANSACTION_REPEATABLE_READ = 4;
 
-    /**
+     /*
      * The constant that indicates that the following incidents are <b>all
      * prevented</b> (the opposite of {@link #TRANSACTION_READ_UNCOMMITTED}):
      * <ul>

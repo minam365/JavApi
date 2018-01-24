@@ -88,7 +88,7 @@ namespace biz.ritter.javapi.io
         {
             this.delegateInstance.Close();
         }
-        /**
+         /*
          * Reads bytes from this file into {@code buffer}. Blocks until {@code
          * buffer.length} number of bytes have been read, the end of the file is
          * reached or an exception is thrown.
@@ -106,7 +106,7 @@ namespace biz.ritter.javapi.io
             readFully(buffer, 0, buffer.Length);
         }
 
-        /**
+         /*
          * Read bytes from this file into {@code buffer} starting at offset {@code
          * offset}. This method blocks until {@code count} number of bytes have been
          * read.
@@ -148,7 +148,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Returns the length of this file in bytes.
          * 
          * @return the file's length in bytes.
@@ -161,7 +161,7 @@ namespace biz.ritter.javapi.io
         }
 
 
-        /**
+         /*
          * Checks to see if the file is currently open. Returns silently if it is,
          * and throws an exception if it is not.
          * 
@@ -176,7 +176,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Skips over {@code count} bytes in this file. Less than {@code count}
          * bytes are skipped if the end of the file is reached or an exception is
          * thrown during the operation. Nothing is done if {@code count} is
@@ -198,7 +198,7 @@ namespace biz.ritter.javapi.io
             }
             return 0;
         }
-        /**
+         /*
          * Moves this file's file pointer to a new position, from where following
          * {@code read}, {@code write} or {@code skip} operations are done. The
          * position may be greater than the current length of the file, but the
@@ -223,7 +223,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Gets the current position within this file. All reads and
          * writes take place at the current file pointer position.
          * 
@@ -239,7 +239,7 @@ namespace biz.ritter.javapi.io
             //return fileSystem.seek(fd.descriptor, 0L, IFileSystem.SEEK_CUR);
         }
 
-        /**
+         /*
          * Reads at most {@code count} bytes from the current position in this file
          * and stores them in the byte array {@code buffer} starting at {@code
          * offset}. Blocks until {@code count} bytes have been read, the end of the
@@ -273,7 +273,7 @@ namespace biz.ritter.javapi.io
                 return this.delegateInstance.Read (buffer, offset, count);
             }
         }
-    /**
+     /*
      * Reads a line of text form the current position in this file. A line is
      * represented by zero or more characters followed by {@code '\n'}, {@code
      * '\r'}, {@code "\r\n"} or the end of file marker. The string does not

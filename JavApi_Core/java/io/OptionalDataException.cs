@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.io
 {
-	/**
+	 /*
  * Signals that the {@link ObjectInputStream} class encountered a primitive type
  * ({@code int}, {@code char} etc.) instead of an object instance in the input
  * stream.
@@ -31,18 +31,18 @@ namespace biz.ritter.javapi.io
 
 		private const long serialVersionUID = -8011121865681257820L;
 
-		/**
+		 /*
      * {@code true} indicates that there is no more primitive data available.
      */
 		public bool eof;
 
-		/**
+		 /*
      * The number of bytes of primitive data (int, char, long etc.) that are
      * available.
      */
 		public int length;
 
-		/**
+		 /*
      * Constructs a new {@code OptionalDataException} with its stack trace
      * filled in.
      */
@@ -51,7 +51,7 @@ namespace biz.ritter.javapi.io
         
 		}
 
-		/**
+		 /*
      * Constructs a new {@code OptionalDataException} with its stack trace and
      * detail message filled in.
      * 

@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.net
 {
-    /**
+     /*
      * This class is used to encode a string using the format required by {@code
      * application/x-www-form-urlencoded} MIME content type. It contains helper
      * methods used by the URI class, and performs encoding and decoding in a
@@ -31,7 +31,7 @@ namespace biz.ritter.javapi.net
 
         internal const String encoding = "utf-8"; //$NON-NLS-1$
 
-        /**
+         /*
          * Validate a string by checking if it contains any characters other than:
          * 1. letters ('a'..'z', 'A'..'Z') 2. numbers ('0'..'9') 3. characters in
          * the legalset parameter 4. others (unicode characters that are not in
@@ -86,7 +86,7 @@ namespace biz.ritter.javapi.net
             }
         }
 
-        /**
+         /*
          * All characters except letters ('a'..'z', 'A'..'Z') and numbers ('0'..'9')
          * and legal characters are converted into their hexidecimal value prepended
          * by '%'.
@@ -129,7 +129,7 @@ namespace biz.ritter.javapi.net
             return buf.toString();
         }
 
-        /**
+         /*
          * Other characters, which are Unicode chars that are not US-ASCII, and are
          * not ISO Control or are not ISO Space chars are not preserved. They are
          * converted into their hexidecimal value prepended by '%'.
@@ -160,7 +160,7 @@ namespace biz.ritter.javapi.net
             return buf.toString();
         }
 
-        /**
+         /*
          * Decodes the string argument which is assumed to be encoded in the {@code
          * x-www-form-urlencoded} MIME content type using the UTF-8 encoding scheme.
          * <p/>

@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-/**
+ /*
  * UUID is an immutable representation of a 128-bit universally unique
  * identifier (UUID).
  * <p>
@@ -59,7 +59,7 @@ public sealed class UUID : java.io.Serializable, java.lang.Comparable<UUID> {
 
     private int hash;
 
-    /**
+     /*
      * <p>
      * Constructs an instance with the specified bits.
      *
@@ -75,7 +75,7 @@ public sealed class UUID : java.io.Serializable, java.lang.Comparable<UUID> {
         init();
     }
 
-    /**
+     /*
      * <p>
      * Sets up the transient fields of this instance based on the current values
      * of the {@code mostSigBits} and {@code leastSigBits} fields.
@@ -119,7 +119,7 @@ public sealed class UUID : java.io.Serializable, java.lang.Comparable<UUID> {
     }
 
     private static Object lockJ = new Object();
-    /**
+     /*
      * <p>
      * Generates a variant 2, version 4 (randomly generated number) UUID as per
      * <a href="http://www.ietf.org/rfc/rfc4122.txt">RFC 4122</a>.
@@ -157,7 +157,7 @@ public sealed class UUID : java.io.Serializable, java.lang.Comparable<UUID> {
         return new UUID(msb, lsb);
     }
 
-    /**
+     /*
      * <p>
      * Generates a variant 2, version 3 (name-based, MD5-hashed) UUID as per <a
      * href="http://www.ietf.org/rfc/rfc4122.txt">RFC 4122</a>.
@@ -201,7 +201,7 @@ public sealed class UUID : java.io.Serializable, java.lang.Comparable<UUID> {
         return new UUID(msb, lsb);
     }
 
-    /**
+     /*
      * <p>
      * Parses a UUID string with the format defined by {@link #toString()}.
      *
@@ -250,7 +250,7 @@ public sealed class UUID : java.io.Serializable, java.lang.Comparable<UUID> {
         return new UUID(msb, lsb);
     }
 
-    /**
+     /*
      * <p>
      * The 64 least significant bits of the UUID.
      *
@@ -260,7 +260,7 @@ public sealed class UUID : java.io.Serializable, java.lang.Comparable<UUID> {
         return leastSigBits;
     }
 
-    /**
+     /*
      * <p>
      * The 64 most significant bits of the UUID.
      *
@@ -270,7 +270,7 @@ public sealed class UUID : java.io.Serializable, java.lang.Comparable<UUID> {
         return mostSigBits;
     }
 
-    /**
+     /*
      * <p>
      * The version of the variant 2 UUID as per <a
      * href="http://www.ietf.org/rfc/rfc4122.txt">RFC 4122</a>. If the variant
@@ -289,7 +289,7 @@ public sealed class UUID : java.io.Serializable, java.lang.Comparable<UUID> {
         return versionJ;
     }
 
-    /**
+     /*
      * <p>
      * The variant of the UUID as per <a
      * href="http://www.ietf.org/rfc/rfc4122.txt">RFC 4122</a>.
@@ -306,7 +306,7 @@ public sealed class UUID : java.io.Serializable, java.lang.Comparable<UUID> {
         return variantJ;
     }
 
-    /**
+     /*
      * <p>
      * The timestamp value of the version 1, variant 2 UUID as per <a
      * href="http://www.ietf.org/rfc/rfc4122.txt">RFC 4122</a>.
@@ -322,7 +322,7 @@ public sealed class UUID : java.io.Serializable, java.lang.Comparable<UUID> {
         return timestampJ;
     }
 
-    /**
+     /*
      * <p>
      * The clock sequence value of the version 1, variant 2 UUID as per <a
      * href="http://www.ietf.org/rfc/rfc4122.txt">RFC 4122</a>.
@@ -338,7 +338,7 @@ public sealed class UUID : java.io.Serializable, java.lang.Comparable<UUID> {
         return clockSequenceJ;
     }
 
-    /**
+     /*
      * <p>
      * The node value of the version 1, variant 2 UUID as per <a
      * href="http://www.ietf.org/rfc/rfc4122.txt">RFC 4122</a>.
@@ -354,7 +354,7 @@ public sealed class UUID : java.io.Serializable, java.lang.Comparable<UUID> {
         return nodeJ;
     }
 
-    /**
+     /*
      * <p>
      * Compares this UUID to the specified UUID. The natural ordering of UUIDs
      * is based upon the value of the bits from most significant to least
@@ -385,7 +385,7 @@ public sealed class UUID : java.io.Serializable, java.lang.Comparable<UUID> {
         return 0;
     }
 
-    /**
+     /*
      * <p>
      * Compares this UUID to another object for equality. If {@code object}
      * is not {@code null}, is a UUID instance, and all bits are equal, then
@@ -416,7 +416,7 @@ public sealed class UUID : java.io.Serializable, java.lang.Comparable<UUID> {
                 && (this.mostSigBits == that.mostSigBits);
     }
 
-    /**
+     /*
      * <p>
      * Returns a hash value for this UUID that is consistent with the
      * {@link #equals(Object)} method.
@@ -428,7 +428,7 @@ public sealed class UUID : java.io.Serializable, java.lang.Comparable<UUID> {
         return hash;
     }
 
-    /**
+     /*
      * <p>
      * Returns a string representation of this UUID in the following format, as
      * per <a href="http://www.ietf.org/rfc/rfc4122.txt">RFC 4122</a>.
@@ -479,7 +479,7 @@ public sealed class UUID : java.io.Serializable, java.lang.Comparable<UUID> {
         return builder.toString();
     }
 
-    /**
+     /*
      * <p>
      * Resets the transient fields to match the behavior of the constructor.
      * 

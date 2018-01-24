@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang{
 
-    /**
+     /*
      * A modifiable {@link CharSequence sequence of characters} for use in creating
      * and modifying Strings. This class is intended as a direct replacement of
      * {@link StringBuffer} for non-concurrent use; unlike {@code StringBuffer} this
@@ -40,7 +40,7 @@ namespace biz.ritter.javapi.lang{
 
         private static readonly long serialVersionUID = 4383685877147921099L;
 
-        /**
+         /*
          * Constructs an instance with an initial capacity of {@code 16}.
          * 
          * @see #capacity()
@@ -48,7 +48,7 @@ namespace biz.ritter.javapi.lang{
         public StringBuilder() :base(){
         }
 
-        /**
+         /*
          * Constructs an instance with the specified capacity.
          *
          * @param capacity
@@ -60,7 +60,7 @@ namespace biz.ritter.javapi.lang{
         public StringBuilder(int capacity):base(capacity) {
         }
 
-        /**
+         /*
          * Constructs an instance that's initialized with the contents of the
          * specified {@code CharSequence}. The capacity of the new builder will be
          * the length of the {@code CharSequence} plus 16.
@@ -73,7 +73,7 @@ namespace biz.ritter.javapi.lang{
         public StringBuilder(CharSequence seq) :base(seq.ToString()){
         }
 
-        /**
+         /*
          * Constructs an instance that's initialized with the contents of the
          * specified {@code String}. The capacity of the new builder will be the
          * length of the {@code String} plus 16.
@@ -86,7 +86,7 @@ namespace biz.ritter.javapi.lang{
         public StringBuilder(String str) :base (str){
         }
 
-        /**
+         /*
          * Appends the string representation of the specified {@code boolean} value.
          * The {@code boolean} value is converted to a String according to the rule
          * defined by {@link String#valueOf(boolean)}.
@@ -101,7 +101,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Appends the string representation of the specified {@code char} value.
          * The {@code char} value is converted to a string according to the rule
          * defined by {@link String#valueOf(char)}.
@@ -116,7 +116,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Appends the string representation of the specified {@code int} value. The
          * {@code int} value is converted to a string according to the rule defined
          * by {@link String#valueOf(int)}.
@@ -131,7 +131,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Appends the string representation of the specified {@code long} value.
          * The {@code long} value is converted to a string according to the rule
          * defined by {@link String#valueOf(long)}.
@@ -146,7 +146,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Appends the string representation of the specified {@code float} value.
          * The {@code float} value is converted to a string according to the rule
          * defined by {@link String#valueOf(float)}.
@@ -161,7 +161,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Appends the string representation of the specified {@code double} value.
          * The {@code double} value is converted to a string according to the rule
          * defined by {@link String#valueOf(double)}.
@@ -176,7 +176,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Appends the string representation of the specified {@code Object}.
          * The {@code Object} value is converted to a string according to the rule
          * defined by {@link String#valueOf(Object)}.
@@ -195,7 +195,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Appends the contents of the specified string. If the string is {@code
          * null}, then the string {@code "null"} is appended.
          *
@@ -208,7 +208,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Appends the contents of the specified {@code StringBuffer}. If the
          * java.lang.StringBuffer is {@code null}, then the string {@code "null"} is
          * appended.
@@ -226,7 +226,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Appends the string representation of the specified {@code char[]}.
          * The {@code char[]} is converted to a string according to the rule
          * defined by {@link String#valueOf(char[])}.
@@ -241,7 +241,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Appends the string representation of the specified subset of the {@code
          * char[]}. The {@code char[]} value is converted to a String according to
          * the rule defined by {@link String#valueOf(char[],int,int)}.
@@ -263,7 +263,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Appends the string representation of the specified {@code CharSequence}.
          * If the {@code CharSequence} is {@code null}, then the string {@code
          * "null"} is appended.
@@ -281,7 +281,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Appends the string representation of the specified subsequence of the
          * {@code CharSequence}. If the {@code CharSequence} is {@code null}, then
          * the string {@code "null"} is used to extract the subsequence from.
@@ -303,7 +303,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Appends the encoded Unicode code point. The code point is converted to a
          * {@code char[]} as defined by {@link Character#toChars(int)}.
          *
@@ -317,7 +317,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Deletes a sequence of characters specified by {@code start} and {@code
          * end}. Shifts any remaining characters to the left.
          * 
@@ -335,7 +335,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Deletes the character at the specified index. shifts any remaining
          * characters to the left.
          * 
@@ -351,7 +351,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Inserts the string representation of the specified {@code boolean} value
          * at the specified {@code offset}. The {@code boolean} value is converted
          * to a string according to the rule defined by
@@ -372,7 +372,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Inserts the string representation of the specified {@code char} value at
          * the specified {@code offset}. The {@code char} value is converted to a
          * string according to the rule defined by {@link String#valueOf(char)}.
@@ -392,7 +392,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Inserts the string representation of the specified {@code int} value at
          * the specified {@code offset}. The {@code int} value is converted to a
          * String according to the rule defined by {@link String#valueOf(int)}.
@@ -412,7 +412,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Inserts the string representation of the specified {@code long} value at
          * the specified {@code offset}. The {@code long} value is converted to a
          * String according to the rule defined by {@link String#valueOf(long)}.
@@ -432,7 +432,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Inserts the string representation of the specified {@code float} value at
          * the specified {@code offset}. The {@code float} value is converted to a
          * string according to the rule defined by {@link String#valueOf(float)}.
@@ -452,7 +452,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Inserts the string representation of the specified {@code double} value
          * at the specified {@code offset}. The {@code double} value is converted
          * to a String according to the rule defined by
@@ -473,7 +473,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Inserts the string representation of the specified {@code Object} at the
          * specified {@code offset}. The {@code Object} value is converted to a
          * String according to the rule defined by {@link String#valueOf(Object)}.
@@ -493,7 +493,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Inserts the specified string at the specified {@code offset}. If the
          * specified string is null, then the String {@code "null"} is inserted.
          *
@@ -511,7 +511,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Inserts the string representation of the specified {@code char[]} at the
          * specified {@code offset}. The {@code char[]} value is converted to a
          * String according to the rule defined by {@link String#valueOf(char[])}.
@@ -531,7 +531,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Inserts the string representation of the specified subsequence of the
          * {@code char[]} at the specified {@code offset}. The {@code char[]} value
          * is converted to a String according to the rule defined by
@@ -558,7 +558,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Inserts the string representation of the specified {@code CharSequence}
          * at the specified {@code offset}. The {@code CharSequence} is converted
          * to a String as defined by {@link CharSequence#toString()}. If {@code s}
@@ -579,7 +579,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Inserts the string representation of the specified subsequence of the
          * {@code CharSequence} at the specified {@code offset}. The {@code
          * CharSequence} is converted to a String as defined by
@@ -607,7 +607,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Replaces the specified subsequence in this builder with the specified
          * string.
          * 
@@ -629,7 +629,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Reverses the order of characters in this builder.
          * 
          * @return this buffer.
@@ -639,7 +639,7 @@ namespace biz.ritter.javapi.lang{
             return this;
         }
 
-        /**
+         /*
          * Returns the contents of this builder.
          * 
          * @return the string representation of the data in this builder.
@@ -655,7 +655,7 @@ namespace biz.ritter.javapi.lang{
         }
 
 
-        /**
+         /*
          * Reads the state of a {@code StringBuilder} from the passed stream and
          * restores it to this instance.
          *
@@ -674,7 +674,7 @@ namespace biz.ritter.javapi.lang{
             set(value, count);
         }
 
-        /**
+         /*
          * Writes the state of this object to the stream passed.
          *
          * @param out

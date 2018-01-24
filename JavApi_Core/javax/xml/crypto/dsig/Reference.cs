@@ -21,7 +21,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapix.xml.crypto.dsig
 {
 
-/**
+ /*
  * A representation of the <code>Reference</code> element as defined in the 
  * <a href="http://www.w3.org/TR/xmldsig-core/">
  * W3C Recommendation for XML-Signature Syntax and Processing</a>. 
@@ -64,7 +64,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig
  */
 public interface Reference : URIReference, XMLStructure {
 
-    /**
+     /*
      * Returns an {@link java.util.Collections#unmodifiableList unmodifiable 
      * list} of {@link Transform}s that are contained in this 
      * <code>Reference</code>.
@@ -74,14 +74,14 @@ public interface Reference : URIReference, XMLStructure {
      */
     java.util.List<Object> getTransforms();
 
-    /**
+     /*
      * Returns the digest method of this <code>Reference</code>.
      *
      * @return the digest method
      */
     DigestMethod getDigestMethod();
 
-    /**
+     /*
      * Returns the optional <code>Id</code> attribute of this 
      * <code>Reference</code>, which permits this reference to be 
      * referenced from elsewhere.
@@ -91,7 +91,7 @@ public interface Reference : URIReference, XMLStructure {
      */
     String getId();
 
-    /**
+     /*
      * Returns the digest value of this <code>Reference</code>.
      * 
      * @return the raw digest value, or <code>null</code> if this reference has
@@ -100,7 +100,7 @@ public interface Reference : URIReference, XMLStructure {
      */
     byte[] getDigestValue();
 
-    /**
+     /*
      * Returns the calculated digest value of this <code>Reference</code>
      * after a validation operation. This method is useful for debugging if
      * the reference fails to validate.
@@ -111,7 +111,7 @@ public interface Reference : URIReference, XMLStructure {
      */
     byte[] getCalculatedDigestValue();
 
-    /**
+     /*
      * Validates this reference. This method verifies the digest of this 
      * reference.
      *
@@ -129,7 +129,7 @@ public interface Reference : URIReference, XMLStructure {
     bool validate(XMLValidateContext validateContext) 
         ;//throws XMLSignatureException;
 
-    /**
+     /*
      * Returns the dereferenced data, if 
      * <a href="XMLSignContext.html#Supported Properties">reference caching</a>
      * is enabled. This is the result of dereferencing the URI of this 
@@ -141,7 +141,7 @@ public interface Reference : URIReference, XMLStructure {
      */
     Data getDereferencedData();
 
-    /**
+     /*
      * Returns the pre-digested input stream, if
      * <a href="XMLSignContext.html#Supported Properties">reference caching</a>
      * is enabled. This is the input to the digest operation during a

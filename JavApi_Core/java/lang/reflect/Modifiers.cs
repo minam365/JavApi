@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang.reflect
 {
 
-    /**
+     /*
      * This class provides static methods to decode class and member modifiers.
      *
      * @see Class#getModifiers()
@@ -28,70 +28,70 @@ namespace biz.ritter.javapi.lang.reflect
     public class Modifier
     {
 
-        /**
+         /*
          * The {@code int} value representing the {@code public}
          * modifier.
          */
         public static readonly int PUBLIC = 0x1;
 
-        /**
+         /*
          * The {@code int} value representing the {@code private}
          * modifier.
          */
         public static readonly int PRIVATE = 0x2;
 
-        /**
+         /*
          * The {@code int} value representing the {@code protected}
          * modifier.
          */
         public static readonly int PROTECTED = 0x4;
 
-        /**
+         /*
          * The {@code int} value representing the {@code static} modifier.
          */
         public static readonly int STATIC = 0x8;
 
-        /**
+         /*
          * The {@code int} value representing the {@code readonly} modifier.
          */
         public static readonly int FINAL = 0x10;
 
-        /**
+         /*
          * The {@code int} value representing the {@code synchronized}
          * modifier.
          */
         public static readonly int SYNCHRONIZED = 0x20;
 
-        /**
+         /*
          * The {@code int} value representing the {@code volatile}
          * modifier.
          */
         public static readonly int VOLATILE = 0x40;
 
-        /**
+         /*
          * The {@code int} value representing the {@code transient}
          * modifier.
          */
         public static readonly int TRANSIENT = 0x80;
 
-        /**
+         /*
          * The {@code int} value representing the {@code native} modifier.
          */
         public static readonly int NATIVE = 0x100;
 
-        /**
+         /*
          * The {@code int} value representing the {@code interface}
          * modifier.
          */
         public static readonly int INTERFACE = 0x200;
 
-        /**
+         /*
          * The {@code int} value representing the {@code abstract}
          * modifier.
          */
         public static readonly int ABSTRACT = 0x400;
 
-        /**
+         /*
          * The {@code int} value representing the {@code strict} modifier.
          */
         public static readonly int STRICT = 0x800;
@@ -107,14 +107,14 @@ namespace biz.ritter.javapi.lang.reflect
 
         static readonly int ENUM = 0x4000;
 
-        /**
+         /*
          * Constructs a new {@code Modifier} instance.
          */
         public Modifier()
         {
         }
 
-        /**
+         /*
          * Indicates whether or not the specified modifiers contain the {@code
          * abstract} modifier.
          * 
@@ -128,7 +128,7 @@ namespace biz.ritter.javapi.lang.reflect
             return ((modifiers & ABSTRACT) != 0);
         }
 
-        /**
+         /*
          * Indicates whether or not the specified modifiers contain the {@code
          * readonly} modifier.
          * 
@@ -142,7 +142,7 @@ namespace biz.ritter.javapi.lang.reflect
             return ((modifiers & FINAL) != 0);
         }
 
-        /**
+         /*
          * Indicates whether or not the specified modifiers contain the {@code
          * interface} modifier.
          * 
@@ -156,7 +156,7 @@ namespace biz.ritter.javapi.lang.reflect
             return ((modifiers & INTERFACE) != 0);
         }
 
-        /**
+         /*
          * Indicates whether or not the specified modifiers contain the {@code
          * native} modifier.
          * 
@@ -170,7 +170,7 @@ namespace biz.ritter.javapi.lang.reflect
             return ((modifiers & NATIVE) != 0);
         }
 
-        /**
+         /*
          * Indicates whether or not the specified modifiers contain the {@code
          * private} modifier.
          * 
@@ -184,7 +184,7 @@ namespace biz.ritter.javapi.lang.reflect
             return ((modifiers & PRIVATE) != 0);
         }
 
-        /**
+         /*
          * Indicates whether or not the specified modifiers contain the {@code
          * protected} modifier.
          * 
@@ -198,7 +198,7 @@ namespace biz.ritter.javapi.lang.reflect
             return ((modifiers & PROTECTED) != 0);
         }
 
-        /**
+         /*
          * Indicates whether or not the specified modifiers contain the {@code
          * public} modifier.
          * 
@@ -212,7 +212,7 @@ namespace biz.ritter.javapi.lang.reflect
             return ((modifiers & PUBLIC) != 0);
         }
 
-        /**
+         /*
          * Indicates whether or not the specified modifiers contain the {@code
          * static} modifier.
          * 
@@ -226,7 +226,7 @@ namespace biz.ritter.javapi.lang.reflect
             return ((modifiers & STATIC) != 0);
         }
 
-        /**
+         /*
          * Indicates whether or not the specified modifiers contain the {@code
          * strict} modifier.
          * 
@@ -240,7 +240,7 @@ namespace biz.ritter.javapi.lang.reflect
             return ((modifiers & STRICT) != 0);
         }
 
-        /**
+         /*
          * Indicates whether or not the specified modifiers contain the {@code
          * synchronized} modifier.
          * 
@@ -254,7 +254,7 @@ namespace biz.ritter.javapi.lang.reflect
             return ((modifiers & SYNCHRONIZED) != 0);
         }
 
-        /**
+         /*
          * Indicates whether or not the specified modifiers contain the {@code
          * transient} modifier.
          * 
@@ -268,7 +268,7 @@ namespace biz.ritter.javapi.lang.reflect
             return ((modifiers & TRANSIENT) != 0);
         }
 
-        /**
+         /*
          * Indicates whether or not the specified modifiers contain the {@code
          * volatile} modifier.
          * 
@@ -282,7 +282,7 @@ namespace biz.ritter.javapi.lang.reflect
             return ((modifiers & VOLATILE) != 0);
         }
 
-        /**
+         /*
          * Returns a string containing the string representation of all modifiers
          * present in the specified modifiers. Modifiers appear in the order
          * specified by the Java Language Specification:

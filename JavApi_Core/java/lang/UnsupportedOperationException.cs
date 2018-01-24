@@ -17,21 +17,21 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang
 {
-    /**
+     /*
      * Thrown when an unsupported operation is attempted.
      */
     public class UnsupportedOperationException : RuntimeException {
 
         private static readonly long serialVersionUID = -1242599979055084673L;
 
-        /**
+         /*
          * Constructs a new {@code UnsupportedOperationException} that includes the
          * current stack trace.
          */
         public UnsupportedOperationException() {
         }
 
-        /**
+         /*
          * Constructs a new {@code UnsupportedOperationException} with the current
          * stack trace and the specified detail message.
          * 
@@ -41,7 +41,7 @@ namespace biz.ritter.javapi.lang
         public UnsupportedOperationException(String detailMessage) : base (detailMessage) {
         }
     
-        /**
+         /*
          * Constructs a new {@code UnsupportedOperationException} with the current
          * stack trace, the specified detail message and the specified cause.
          * 
@@ -53,7 +53,7 @@ namespace biz.ritter.javapi.lang
          */
         public UnsupportedOperationException(String message, Throwable cause) : base(message, cause){}
     
-        /**
+         /*
          * Constructs a new {@code UnsupportedOperationException} with the current
          * stack trace and the specified cause.
          * 

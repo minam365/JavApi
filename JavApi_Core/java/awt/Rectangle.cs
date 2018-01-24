@@ -16,7 +16,7 @@ using System;
 
 namespace biz.ritter.javapi.awt
 {
-    /**
+     /*
      * @author Denis M. Kishenko
      */
     [Serializable]

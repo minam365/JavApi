@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang
 {
 
-/**
+ /*
  * Thrown when the virtual machine notices that an attempt is made to load a
  * class which does not pass the class verification phase.
  */
@@ -25,7 +25,7 @@ public class VerifyError : LinkageError {
 
     private const long serialVersionUID = 7001962396098498785L;
 
-    /**
+     /*
      * Constructs a new {@code VerifyError} that includes the current stack
      * trace.
      */
@@ -33,7 +33,7 @@ public class VerifyError : LinkageError {
         
     }
 
-    /**
+     /*
      * Constructs a new {@code VerifyError} with the current stack trace and the
      * specified detail message.
      * 

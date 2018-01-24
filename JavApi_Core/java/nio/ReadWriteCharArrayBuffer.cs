@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.nio
 {
 
-    /**
+     /*
      * CharArrayBuffer, ReadWriteCharArrayBuffer and ReadOnlyCharArrayBuffer compose
      * the implementation of array based char buffers.
      * <p>

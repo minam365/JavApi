@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang{
 
-/**
+ /*
  * Creates operating system processes.
  *
  * @since 1.5
@@ -31,7 +31,7 @@ public sealed class ProcessBuilder {
 
     private bool redirectErrorStreamJ;
 
-    /**
+     /*
      * Constructs a new {@code ProcessBuilder} instance with the specified
      * operating system program and its arguments.
      * 
@@ -42,7 +42,7 @@ public sealed class ProcessBuilder {
         
     }
 
-    /**
+     /*
      * Constructs a new {@code ProcessBuilder} instance with the specified
      * operating system program and its arguments. Note that the list passed to
      * this constructor is not copied, so any subsequent updates to it are
@@ -65,7 +65,7 @@ public sealed class ProcessBuilder {
                 java.lang.SystemJ.getenv();
     }
 
-    /**
+     /*
      * Returns this process builder's current program and arguments. Note that
      * the returned list is not a copy and modifications to it will change the
      * state of this instance.
@@ -76,7 +76,7 @@ public sealed class ProcessBuilder {
         return commandJ;
     }
 
-    /**
+     /*
      * Changes the program and arguments of this process builder.
      * 
      * @param command
@@ -87,7 +87,7 @@ public sealed class ProcessBuilder {
         return command(toList(commandJ));
     }
 
-    /**
+     /*
      * Changes the program and arguments of this process builder. Note that the
      * list passed to this method is not copied, so any subsequent updates to it
      * are reflected in this instance's state.
@@ -106,7 +106,7 @@ public sealed class ProcessBuilder {
         return this;
     }
 
-    /**
+     /*
      * Returns the working directory of this process builder. If {@code null} is
      * returned, then the working directory of the Java process is used when a
      * process is started.
@@ -117,7 +117,7 @@ public sealed class ProcessBuilder {
         return directoryJ;
     }
 
-    /**
+     /*
      * Changes the working directory of this process builder. If the specified
      * directory is {@code null}, then the working directory of the Java
      * process is used when a process is started.
@@ -131,7 +131,7 @@ public sealed class ProcessBuilder {
         return this;
     }
 
-    /**
+     /*
      * Returns this process builder's current environment. When a process
      * builder instance is created, the environment is populated with a copy of
      * the environment, as returned by {@link System#getenv()}. Note that the
@@ -144,7 +144,7 @@ public sealed class ProcessBuilder {
         return environmentJ;
     }
 
-    /**
+     /*
      * Indicates whether the standard error should be redirected to standard
      * output. If redirected, the {@link Process#getErrorStream()} will always
      * return end of stream and standard error is written to
@@ -157,7 +157,7 @@ public sealed class ProcessBuilder {
         return redirectErrorStreamJ;
     }
 
-    /**
+     /*
      * Changes the state of whether or not standard error is redirected to
      * standard output.
      * 
@@ -171,7 +171,7 @@ public sealed class ProcessBuilder {
         return this;
     }
 
-    /**
+     /*
      * Starts a new process based on the current state of this process builder.
      *
      * @return the new {@code Process} instance.

@@ -16,34 +16,34 @@ using java = biz.ritter.javapi;
 
 namespace org.apache.harmony.awt.gl
 {
-    /**
+     /*
      * @author Denis M. Kishenko
      */
 
     internal class Crossing
     {
 
-        /**
+         /*
          * Allowable tolerance for bounds comparison
          */
         const double DELTA = 1E-5;
 
-        /**
+         /*
          * If roots have distance less then <code>ROOT_DELTA</code> they are double
          */
         const double ROOT_DELTA = 1E-10;
 
-        /**
+         /*
          * Rectangle cross segment
          */
         public const int CROSSING = 255;
 
-        /**
+         /*
          * Unknown crossing result
          */
         const int UNKNOWN = 254;
 
-        /**
+         /*
          * Solves quadratic equation
          * @param eqn - the coefficients of the equation
          * @param res - the roots of the equation
@@ -82,7 +82,7 @@ namespace org.apache.harmony.awt.gl
             return fixRoots(res, rc);
         }
 
-        /**
+         /*
          * Solves cubic equation
          * @param eqn - the coefficients of the equation
          * @param res - the roots of the equation
@@ -144,7 +144,7 @@ namespace org.apache.harmony.awt.gl
             return fixRoots(res, rc);
         }
 
-        /**
+         /*
          * Excludes double roots. Roots are double if they lies enough close with each other. 
          * @param res - the roots 
          * @param rc - the roots count
@@ -174,7 +174,7 @@ namespace org.apache.harmony.awt.gl
             return tc;
         }
 
-        /**
+         /*
          * QuadCurve class provides basic functionality to find curve crossing and calculating bounds
          */
         public class QuadCurve
@@ -292,7 +292,7 @@ namespace org.apache.harmony.awt.gl
 
         }
 
-        /**
+         /*
          * CubicCurve class provides basic functionality to find curve crossing and calculating bounds
          */
         public class CubicCurve
@@ -422,7 +422,7 @@ namespace org.apache.harmony.awt.gl
 
         }
 
-        /**
+         /*
          * Returns how many times ray from point (x,y) cross line.
          */
         public static int crossLine(double x1, double y1, double x2, double y2, double x, double y)
@@ -467,7 +467,7 @@ namespace org.apache.harmony.awt.gl
             return x1 < x2 ? 1 : -1;
         }
 
-        /**
+         /*
          * Returns how many times ray from point (x,y) cross quard curve
          */
         public static int crossQuad(double x1, double y1, double cx, double cy, double x2, double y2, double x, double y)
@@ -502,7 +502,7 @@ namespace org.apache.harmony.awt.gl
             return c.cross(res, rc, py, py);
         }
 
-        /**
+         /*
          * Returns how many times ray from point (x,y) cross cubic curve
          */
         public static int crossCubic(double x1, double y1, double cx1, double cy1, double cx2, double cy2, double x2, double y2, double x, double y)
@@ -536,7 +536,7 @@ namespace org.apache.harmony.awt.gl
             return c.cross(res, rc, py, py);
         }
 
-        /**
+         /*
          * Returns how many times ray from point (x,y) cross path
          */
         public static int crossPath(java.awt.geom.PathIterator p, double x, double y)
@@ -591,7 +591,7 @@ namespace org.apache.harmony.awt.gl
             return cross;
         }
 
-        /**
+         /*
          * Returns how many times ray from point (x,y) cross shape
          */
         public static int crossShape(java.awt.Shape s, double x, double y)
@@ -603,7 +603,7 @@ namespace org.apache.harmony.awt.gl
             return crossPath(s.getPathIterator(null), x, y);
         }
 
-        /**
+         /*
          * Returns true if value enough small
          */
         public static bool isZero(double val)
@@ -611,7 +611,7 @@ namespace org.apache.harmony.awt.gl
             return -DELTA < val && val < DELTA;
         }
 
-        /**
+         /*
          * Sort bound array
          */
         static void sortBound(double[] bound, int bc)
@@ -644,7 +644,7 @@ namespace org.apache.harmony.awt.gl
             }
         }
 
-        /**
+         /*
          * Returns are bounds intersect or not intersect rectangle 
          */
         static int crossBound(double[] bound, int bc, double py1, double py2)
@@ -698,7 +698,7 @@ namespace org.apache.harmony.awt.gl
             return UNKNOWN;
         }
 
-        /**
+         /*
          * Returns how many times rectangle stripe cross line or the are intersect
          */
         public static int intersectLine(double x1, double y1, double x2, double y2, double rx1, double ry1, double rx2, double ry2)
@@ -783,7 +783,7 @@ namespace org.apache.harmony.awt.gl
 
         }
 
-        /**
+         /*
          * Returns how many times rectangle stripe cross quad curve or the are intersect
          */
         public static int intersectQuad(double x1, double y1, double cx, double cy, double x2, double y2, double rx1, double ry1, double rx2, double ry2)
@@ -861,7 +861,7 @@ namespace org.apache.harmony.awt.gl
             return c.cross(res1, rc1, py1, py2);
         }
 
-        /**
+         /*
          * Returns how many times rectangle stripe cross cubic curve or the are intersect
          */
         public static int intersectCubic(double x1, double y1, double cx1, double cy1, double cx2, double cy2, double x2, double y2, double rx1, double ry1, double rx2, double ry2)
@@ -942,7 +942,7 @@ namespace org.apache.harmony.awt.gl
             return c.cross(res1, rc1, py1, py2);
         }
 
-        /**
+         /*
          * Returns how many times rectangle stripe cross path or the are intersect
          */
         public static int intersectPath(java.awt.geom.PathIterator p, double x, double y, double w, double h)
@@ -1009,7 +1009,7 @@ namespace org.apache.harmony.awt.gl
             return cross;
         }
 
-        /**
+         /*
          * Returns how many times rectangle stripe cross shape or the are intersect
          */
         public static int intersectShape(java.awt.Shape s, double x, double y, double w, double h)
@@ -1021,7 +1021,7 @@ namespace org.apache.harmony.awt.gl
             return intersectPath(s.getPathIterator(null), x, y, w, h);
         }
 
-        /**
+         /*
          * Returns true if cross count correspond inside location for non zero path rule
          */
         public static bool isInsideNonZero(int cross)
@@ -1029,7 +1029,7 @@ namespace org.apache.harmony.awt.gl
             return cross != 0;
         }
 
-        /**
+         /*
          * Returns true if cross count correspond inside location for even-odd path rule
          */
         public static bool isInsideEvenOdd(int cross)

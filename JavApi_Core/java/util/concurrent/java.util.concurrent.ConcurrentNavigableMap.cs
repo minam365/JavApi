@@ -9,7 +9,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util.concurrent
 {
-    /**
+     /*
      * A {@link ConcurrentMap} supporting {@link NavigableMap} operations,
      * and recursively so for its navigable sub-maps.
      *
@@ -25,7 +25,7 @@ namespace biz.ritter.javapi.util.concurrent
     public interface ConcurrentNavigableMap<K, V>
         : ConcurrentMap<K, V>, NavigableMap<K, V>
     {
-        /**
+         /*
          * @throws ClassCastException       {@inheritDoc}
          * @throws NullPointerException     {@inheritDoc}
          * @throws IllegalArgumentException {@inheritDoc}
@@ -33,7 +33,7 @@ namespace biz.ritter.javapi.util.concurrent
         ConcurrentNavigableMap<K, V> subMap(K fromKey, bool fromInclusive,
                                            K toKey, bool toInclusive);
 
-        /**
+         /*
          * @throws ClassCastException       {@inheritDoc}
          * @throws NullPointerException     {@inheritDoc}
          * @throws IllegalArgumentException {@inheritDoc}
@@ -41,35 +41,35 @@ namespace biz.ritter.javapi.util.concurrent
         ConcurrentNavigableMap<K, V> headMap(K toKey, bool inclusive);
 
 
-        /**
+         /*
          * @throws ClassCastException       {@inheritDoc}
          * @throws NullPointerException     {@inheritDoc}
          * @throws IllegalArgumentException {@inheritDoc}
          */
         ConcurrentNavigableMap<K, V> tailMap(K fromKey, bool inclusive);
 
-        /**
+         /*
          * @throws ClassCastException       {@inheritDoc}
          * @throws NullPointerException     {@inheritDoc}
          * @throws IllegalArgumentException {@inheritDoc}
          */
         ConcurrentNavigableMap<K, V> subMap(K fromKey, K toKey);
 
-        /**
+         /*
          * @throws ClassCastException       {@inheritDoc}
          * @throws NullPointerException     {@inheritDoc}
          * @throws IllegalArgumentException {@inheritDoc}
          */
         ConcurrentNavigableMap<K, V> headMap(K toKey);
 
-        /**
+         /*
          * @throws ClassCastException       {@inheritDoc}
          * @throws NullPointerException     {@inheritDoc}
          * @throws IllegalArgumentException {@inheritDoc}
          */
         ConcurrentNavigableMap<K, V> tailMap(K fromKey);
 
-        /**
+         /*
          * Returns a reverse order view of the mappings contained in this map.
          * The descending map is backed by this map, so changes to the map are
          * reflected in the descending map, and vice-versa.
@@ -83,7 +83,7 @@ namespace biz.ritter.javapi.util.concurrent
          */
         ConcurrentNavigableMap<K, V> descendingMap();
 
-        /**
+         /*
          * Returns a {@link NavigableSet} view of the keys contained in this map.
          * The set's iterator returns the keys in ascending order.
          * The set is backed by the map, so changes to the map are
@@ -104,7 +104,7 @@ namespace biz.ritter.javapi.util.concurrent
          */
         NavigableSet<K> navigableKeySet();
 
-        /**
+         /*
          * Returns a {@link NavigableSet} view of the keys contained in this map.
          * The set's iterator returns the keys in ascending order.
          * The set is backed by the map, so changes to the map are
@@ -127,7 +127,7 @@ namespace biz.ritter.javapi.util.concurrent
          */
         NavigableSet<K> keySet();
 
-        /**
+         /*
          * Returns a reverse order {@link NavigableSet} view of the keys contained in this map.
          * The set's iterator returns the keys in descending order.
          * The set is backed by the map, so changes to the map are

@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.io
 {
 
-/**
+ /*
  * Signals that the {@link ObjectInputStream#readObject()} method could not
  * read an object due to missing information (for example, a cyclic reference
  * that doesn't match a previous instance, or a missing class descriptor for the
@@ -32,7 +32,7 @@ namespace biz.ritter.javapi.io
 
 		private const long serialVersionUID = 8983558202217591746L;
 
-		/**
+		 /*
      * Constructs a new {@code StreamCorruptedException} with its stack trace
      * filled in.
      */
@@ -41,7 +41,7 @@ namespace biz.ritter.javapi.io
         
 		}
 
-		/**
+		 /*
      * Constructs a new {@code StreamCorruptedException} with its stack trace
      * and detail message filled in.
      * 

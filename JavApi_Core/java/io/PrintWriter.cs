@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.io
 {
 
-    /**
+     /*
      * Wraps either an existing {@link OutputStream} or an existing {@link Writer}
      * and provides convenience methods for printing common data types in a human
      * readable format. No {@code IOException} is thrown by this class. Instead,
@@ -27,17 +27,17 @@ namespace biz.ritter.javapi.io
      * this writer.
      */
     public class PrintWriter : Writer {
-        /**
+         /*
          * The writer to print data to.
          */
         protected Writer outJ;
 
-        /**
+         /*
          * Indicates whether this PrintWriter is in an error state.
          */
         private bool ioError;
 
-        /**
+         /*
          * Indicates whether or not this PrintWriter should flush its contents after
          * printing a new line.
          */
@@ -46,7 +46,7 @@ namespace biz.ritter.javapi.io
         private readonly String lineSeparator = java.lang.SystemJ.getProperty("line.separator");
             //AccessController.doPrivileged(new PriviAction<String>("line.separator")); //$NON-NLS-1$
 
-        /**
+         /*
          * Constructs a new {@code PrintWriter} with {@code out} as its target
          * stream. By default, the new print writer does not automatically flush its
          * contents to the target stream when a newline is encountered.
@@ -60,7 +60,7 @@ namespace biz.ritter.javapi.io
             this(new OutputStreamWriter(outJJ), false){
         }
 
-        /**
+         /*
          * Constructs a new {@code PrintWriter} with {@code out} as its target
          * stream. The parameter {@code autoflush} determines if the print writer
          * automatically flushes its contents to the target stream when a newline is
@@ -78,7 +78,7 @@ namespace biz.ritter.javapi.io
             this(new OutputStreamWriter(outJJ), autoflush){
         }
 
-        /**
+         /*
          * Constructs a new {@code PrintWriter} with {@code wr} as its target
          * writer. By default, the new print writer does not automatically flush its
          * contents to the target writer when a newline is encountered.
@@ -92,7 +92,7 @@ namespace biz.ritter.javapi.io
             this(wr, false){
         }
 
-        /**
+         /*
          * Constructs a new {@code PrintWriter} with {@code out} as its target
          * writer. The parameter {@code autoflush} determines if the print writer
          * automatically flushes its contents to the target writer when a newline is
@@ -111,7 +111,7 @@ namespace biz.ritter.javapi.io
             outJ = wr;
         }
 
-        /**
+         /*
          * Constructs a new {@code PrintWriter} with {@code file} as its target. The
          * virtual machine's default character set is used for character encoding.
          * The print writer does not automatically flush its contents to the target
@@ -131,7 +131,7 @@ namespace biz.ritter.javapi.io
                     new FileOutputStream(file))), false){
         }
 
-        /**
+         /*
          * Constructs a new {@code PrintWriter} with {@code file} as its target. The
          * character set named {@code csn} is used for character encoding.
          * The print writer does not automatically flush its contents to the target
@@ -159,7 +159,7 @@ namespace biz.ritter.javapi.io
                     false){
         }
 
-        /**
+         /*
          * Constructs a new {@code PrintWriter} with the file identified by {@code
          * fileName} as its target. The virtual machine's default character set is
          * used for character encoding. The print writer does not automatically
@@ -180,7 +180,7 @@ namespace biz.ritter.javapi.io
                     new FileOutputStream(fileName))), false){
         }
 
-         /**
+          /*
          * Constructs a new {@code PrintWriter} with the file identified by {@code
          * fileName} as its target. The character set named {@code csn} is used for
          * character encoding. The print writer does not automatically flush its
@@ -208,7 +208,7 @@ namespace biz.ritter.javapi.io
                     new FileOutputStream(fileName)), csn), false){
         }
 
-        /**
+         /*
          * Flushes this writer and returns the value of the error flag.
          * 
          * @return {@code true} if either an {@code IOException} has been thrown
@@ -226,7 +226,7 @@ namespace biz.ritter.javapi.io
             return ioError || delegateJ.checkError();
         }
     
-        /**
+         /*
          * Sets the error state of the stream to false.
          * 
          * @since 1.6
@@ -237,7 +237,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Closes this print writer. Flushes this writer and then closes the target.
          * If an I/O error occurs, this writer's error flag is set to {@code true}.
          */
@@ -255,7 +255,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Ensures that all pending data is sent out to the target. It also
          * flushes the target. If an I/O error occurs, this writer's error
          * state is set to {@code true}.
@@ -275,7 +275,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Writes a string formatted by an intermediate {@code Formatter} to the
          * target using the specified format string and arguments. For the locale,
          * the default value of the current virtual machine instance is used. If
@@ -299,7 +299,7 @@ namespace biz.ritter.javapi.io
             return format(java.util.Locale.getDefault(), formatS, args);
         }
 
-        /**
+         /*
          * Writes a string formatted by an intermediate {@code Formatter} to the
          * target using the specified locale, format string and arguments. If
          * automatic flushing is enabled then this writer is flushed.
@@ -335,7 +335,7 @@ namespace biz.ritter.javapi.io
              */
         }
 
-        /**
+         /*
          * Prints a formatted string. The behavior of this method is the same as
          * this writer's {@code #format(String, Object...)} method. For the locale,
          * the default value of the current virtual machine instance is used.
@@ -358,7 +358,7 @@ namespace biz.ritter.javapi.io
             return format(formatS, args);
         }
 
-        /**
+         /*
          * Prints a formatted string. The behavior of this method is the same as
          * this writer's {@code #format(Locale, String, Object...)} method.
          * 
@@ -383,7 +383,7 @@ namespace biz.ritter.javapi.io
             return format(l, formatS, args);
         }
 
-        /**
+         /*
          * Prints the string representation of the specified character array
          * to the target.
          * 
@@ -395,7 +395,7 @@ namespace biz.ritter.javapi.io
             print(new String(charArray, 0, charArray.Length));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified character to the
          * target.
          * 
@@ -407,7 +407,7 @@ namespace biz.ritter.javapi.io
             print(""+ch);
         }
 
-        /**
+         /*
          * Prints the string representation of the specified double to the target.
          * 
          * @param dnum
@@ -418,7 +418,7 @@ namespace biz.ritter.javapi.io
             print(java.lang.StringJ.valueOf(dnum));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified float to the target.
          * 
          * @param fnum
@@ -429,7 +429,7 @@ namespace biz.ritter.javapi.io
             print(java.lang.StringJ.valueOf(fnum));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified integer to the target.
          * 
          * @param inum
@@ -440,7 +440,7 @@ namespace biz.ritter.javapi.io
             print(java.lang.StringJ.valueOf(inum));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified long to the target.
          * 
          * @param lnum
@@ -451,7 +451,7 @@ namespace biz.ritter.javapi.io
             print(java.lang.StringJ.valueOf(lnum));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified object to the target.
          * 
          * @param obj
@@ -476,7 +476,7 @@ namespace biz.ritter.javapi.io
             write(str != null ? str : java.lang.StringJ.valueOf((Object) null));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified boolean to the target.
          * 
          * @param bool
@@ -487,7 +487,7 @@ namespace biz.ritter.javapi.io
             print(java.lang.StringJ.valueOf(boolean));
         }
 
-        /**
+         /*
          * Prints the string representation of the system property {@code
          * "line.separator"} to the target. Flushes this writer if the autoflush
          * flag is set to {@code true}.
@@ -501,7 +501,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Prints the string representation of the specified character array
          * followed by the system property {@code "line.separator"} to the target.
          * Flushes this writer if the autoflush flag is set to {@code true}.
@@ -514,7 +514,7 @@ namespace biz.ritter.javapi.io
             println(new String(charArray, 0, charArray.Length));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified character followed by
          * the system property {@code "line.separator"} to the target. Flushes this
          * writer if the autoflush flag is set to {@code true}.
@@ -527,7 +527,7 @@ namespace biz.ritter.javapi.io
             println(java.lang.StringJ.valueOf(ch));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified double followed by the
          * system property {@code "line.separator"} to the target. Flushes this
          * writer if the autoflush flag is set to {@code true}.
@@ -540,7 +540,7 @@ namespace biz.ritter.javapi.io
             println(java.lang.StringJ.valueOf(dnum));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified float followed by the
          * system property {@code "line.separator"} to the target. Flushes this
          * writer if the autoflush flag is set to {@code true}.
@@ -553,7 +553,7 @@ namespace biz.ritter.javapi.io
             println(java.lang.StringJ.valueOf(fnum));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified integer followed by the
          * system property {@code "line.separator"} to the target. Flushes this
          * writer if the autoflush flag is set to {@code true}.
@@ -566,7 +566,7 @@ namespace biz.ritter.javapi.io
             println(java.lang.StringJ.valueOf(inum));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified long followed by the
          * system property {@code "line.separator"} to the target. Flushes this
          * writer if the autoflush flag is set to {@code true}.
@@ -579,7 +579,7 @@ namespace biz.ritter.javapi.io
             println(java.lang.StringJ.valueOf(lnum));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified object followed by the
          * system property {@code "line.separator"} to the target. Flushes this
          * writer if the autoflush flag is set to {@code true}.
@@ -592,7 +592,7 @@ namespace biz.ritter.javapi.io
             println(java.lang.StringJ.valueOf(obj));
         }
 
-        /**
+         /*
          * Prints a string followed by the system property {@code "line.separator"}
          * to the target. The string is converted to an array of bytes using the
          * encoding chosen during the construction of this writer. The bytes are
@@ -612,7 +612,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Prints the string representation of the specified boolean followed by the
          * system property {@code "line.separator"} to the target. Flushes this
          * writer if the autoflush flag is set to {@code true}.
@@ -625,7 +625,7 @@ namespace biz.ritter.javapi.io
             println(java.lang.StringJ.valueOf(boolean));
         }
 
-        /**
+         /*
          * Sets the error flag of this writer to {@code true}.
          */
         protected void setError() {
@@ -634,7 +634,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Writes the character buffer {@code buf} to the target.
          * 
          * @param buf
@@ -644,7 +644,7 @@ namespace biz.ritter.javapi.io
             write(buf, 0, buf.Length);
         }
 
-        /**
+         /*
          * Writes {@code count} characters from {@code buffer} starting at {@code
          * offset} to the target.
          * <p>
@@ -666,7 +666,7 @@ namespace biz.ritter.javapi.io
             doWrite(buf, offset, count);
         }
 
-        /**
+         /*
          * Writes one character to the target. Only the two least significant bytes
          * of the integer {@code oneChar} are written.
          * <p>
@@ -695,7 +695,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Writes the characters from the specified string to the target.
          * 
          * @param str
@@ -706,7 +706,7 @@ namespace biz.ritter.javapi.io
             write(str.toCharArray());
         }
 
-        /**
+         /*
          * Writes {@code count} characters from {@code str} starting at {@code
          * offset} to the target.
          * 
@@ -725,7 +725,7 @@ namespace biz.ritter.javapi.io
             write(str.substring(offset, offset + count).toCharArray());
         }
 
-        /**
+         /*
          * Appends the character {@code c} to the target.
          * 
          * @param c
@@ -738,7 +738,7 @@ namespace biz.ritter.javapi.io
             return this;
         }
 
-        /**
+         /*
          * Appends the character sequence {@code csq} to the target. This
          * method works the same way as {@code PrintWriter.print(csq.toString())}.
          * If {@code csq} is {@code null}, then the string "null" is written
@@ -758,7 +758,7 @@ namespace biz.ritter.javapi.io
             return this;
         }
 
-        /**
+         /*
          * Appends a subsequence of the character sequence {@code csq} to the
          * target. This method works the same way as {@code
          * PrintWriter.print(csq.subsequence(start, end).toString())}. If {@code

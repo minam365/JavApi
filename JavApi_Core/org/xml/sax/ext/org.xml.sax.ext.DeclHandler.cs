@@ -7,7 +7,7 @@ using System;
 namespace org.xml.sax.ext
 {
 
-    /**
+     /*
      * SAX2 extension handler for DTD declaration events.
      *
      * <blockquote>
@@ -47,7 +47,7 @@ namespace org.xml.sax.ext
     public interface DeclHandler
     {
 
-        /**
+         /*
          * Report an element type declaration.
          *
          * <p>The content model will consist of the string "EMPTY", the
@@ -67,7 +67,7 @@ namespace org.xml.sax.ext
         //throws  SAXException;
 
 
-        /**
+         /*
          * Report an attribute type declaration.
          *
          * <p>Only the effective (first) declaration for an attribute will
@@ -100,7 +100,7 @@ namespace org.xml.sax.ext
         //throws  SAXException;
 
 
-        /**
+         /*
          * Report an internal entity declaration.
          *
          * <p>Only the effective (first) declaration for each entity
@@ -118,7 +118,7 @@ namespace org.xml.sax.ext
         //throws  SAXException;
 
 
-        /**
+         /*
          * Report a parsed external entity declaration.
          *
          * <p>Only the effective (first) declaration for each entity

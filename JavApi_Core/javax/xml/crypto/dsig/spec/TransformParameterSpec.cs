@@ -22,7 +22,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapix.xml.crypto
 {
 
-/**
+ /*
  * A specification of algorithm parameters for a {@link Transform} 
  * algorithm. The purpose of this interface is to group (and provide type 
  * safety for) all transform parameter specifications. All transform parameter 

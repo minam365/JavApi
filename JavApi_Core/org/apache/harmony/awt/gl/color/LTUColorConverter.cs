@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace org.apache.harmony.awt.gl.color
 {
-    /**
+     /*
      * @author Igor V. Stolyarov
      */
     internal class LUTColorConverter

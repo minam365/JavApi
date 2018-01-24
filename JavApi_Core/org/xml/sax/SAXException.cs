@@ -9,7 +9,7 @@ using java = biz.ritter.javapi;
 namespace org.xml.sax
 {
 
-    /**
+     /*
      * Encapsulate a general SAX error or warning.
      *
      * <blockquote>
@@ -42,7 +42,7 @@ namespace org.xml.sax
     {
 
 
-        /**
+         /*
          * Create a new SAXException.
          */
         public SAXException()
@@ -52,7 +52,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Create a new SAXException.
          *
          * @param message The error or warning message.
@@ -64,7 +64,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Create a new SAXException wrapping an existing exception.
          *
          * <p/>The existing exception will be embedded in the new
@@ -80,7 +80,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Create a new SAXException from an existing exception.
          *
          * <p/>The existing exception will be embedded in the new
@@ -96,7 +96,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Return a detail message for this exception.
          *
          * <p/>If there is an embedded exception, and if the SAXException
@@ -120,7 +120,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Return the embedded exception, if any.
          *
          * @return The embedded exception, or null if there is none.
@@ -131,7 +131,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Override toString to pick up any embedded exception.
          *
          * @return A string representation of this exception.
@@ -155,7 +155,7 @@ namespace org.xml.sax
         //////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * @serial The embedded exception if tunnelling, or null.
          */
         private Exception exception;

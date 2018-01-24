@@ -20,7 +20,7 @@ namespace biz.ritter.javapi.util
 {
 
 
-    /**
+     /*
      * {@code Arrays} contains static methods which operate on arrays.
      * 
      * @since 1.2
@@ -37,7 +37,7 @@ namespace biz.ritter.javapi.util
             /* empty */
         }
 
-        /**
+         /*
          * Fills the specified array with the specified element.
          * @param array
          *            the {@code byte} array to fill.
@@ -52,7 +52,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Fills the specified range in the array with the specified element.
          * 
          * @param array
@@ -77,7 +77,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Fills the specified array with the specified element.
          * 
          * @param array
@@ -93,7 +93,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Fills the specified range in the array with the specified element.
          * 
          * @param array
@@ -118,7 +118,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Fills the specified array with the specified element.
          * 
          * @param array
@@ -134,7 +134,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Fills the specified range in the array with the specified element.
          * 
          * @param array
@@ -159,7 +159,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Fills the specified array with the specified element.
          * 
          * @param array
@@ -175,7 +175,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Fills the specified range in the array with the specified element.
          * 
          * @param array
@@ -200,7 +200,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Fills the specified array with the specified element.
          * 
          * @param array
@@ -216,7 +216,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Fills the specified range in the array with the specified element.
          * 
          * @param array
@@ -241,7 +241,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Fills the specified array with the specified element.
          * 
          * @param array
@@ -257,7 +257,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Fills the specified range in the array with the specified element.
          * 
          * @param array
@@ -282,7 +282,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Fills the specified array with the specified element.
          * 
          * @param array
@@ -298,7 +298,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Fills the specified range in the array with the specified element.
          * 
          * @param array
@@ -323,7 +323,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Fills the specified array with the specified element.
          * 
          * @param array
@@ -339,7 +339,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Fills the specified range in the array with the specified element.
          * 
          * @param array
@@ -364,7 +364,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Fills the specified array with the specified element.
          * 
          * @param array
@@ -380,7 +380,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Fills the specified range in the array with the specified element.
          * 
          * @param array
@@ -404,7 +404,7 @@ namespace biz.ritter.javapi.util
                 array[i] = value;
             }
         }
-        /**
+         /*
          * Fills the specified range in the array with the specified element.
          * 
          * @param array
@@ -446,7 +446,7 @@ namespace biz.ritter.javapi.util
                 throw new java.lang.ArrayIndexOutOfBoundsException("Array index out of range: " + end); //$NON-NLS-1$
             }
         }
-        /**
+         /*
          * Compares the two arrays.
          * 
          * @param array1
@@ -476,7 +476,7 @@ namespace biz.ritter.javapi.util
             }
             return true;
         }
-        /**
+         /*
          * Compares the two arrays.
          * 
          * @param array1
@@ -507,7 +507,7 @@ namespace biz.ritter.javapi.util
             return true;
         }
 
-        /**
+         /*
          * Compares the two arrays.
          * 
          * @param array1
@@ -538,7 +538,7 @@ namespace biz.ritter.javapi.util
             return true;
         }
 
-        /**
+         /*
          * Compares the two arrays.
          * 
          * @param array1
@@ -569,7 +569,7 @@ namespace biz.ritter.javapi.util
             return true;
         }
 
-        /**
+         /*
          * Compares the two arrays.
          * 
          * @param array1
@@ -600,7 +600,7 @@ namespace biz.ritter.javapi.util
             return true;
         }
 
-        /**
+         /*
          * Compares the two arrays.
          * 
          * @param array1
@@ -631,7 +631,7 @@ namespace biz.ritter.javapi.util
             return true;
         }
 
-        /**
+         /*
          * Compares the two arrays.
          * 
          * @param array1
@@ -663,7 +663,7 @@ namespace biz.ritter.javapi.util
             return true;
         }
 
-        /**
+         /*
          * Performs a binary search for the specified element in a part of the
          * specified sorted array.
          * 
@@ -720,7 +720,7 @@ namespace biz.ritter.javapi.util
             return -mid - (value < array[mid] ? 1 : 2);
         }
 
-        /**
+         /*
          * Performs a binary search for the specified element in the specified
          * sorted array.
          * 
@@ -736,7 +736,7 @@ namespace biz.ritter.javapi.util
             return binarySearch(array, 0, array.Length, value);
         }
 
-        /**
+         /*
          * Fills the array with the given value.
          * 
          * @param length
@@ -758,7 +758,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns a {@code List} of the objects in the specified array. The size of the
          * {@code List} cannot be modified, i.e. adding and removing are unsupported, but
          * the elements can be set. Setting an element modifies the underlying
@@ -773,7 +773,7 @@ namespace biz.ritter.javapi.util
             return new ArrayList<T>(array);
         }
 
-        /**
+         /*
          * Sorts the specified range in the array using the specified {@code Comparator}.
          * All elements must be comparable to each other without a
          * {@code ClassCastException} being thrown.
@@ -825,7 +825,7 @@ namespace biz.ritter.javapi.util
         }
 
 
-        /**
+         /*
          * Sorts the specified array using the specified {@code Comparator}. All elements
          * must be comparable to each other without a {@code ClassCastException} being thrown.
          * 
@@ -841,7 +841,7 @@ namespace biz.ritter.javapi.util
         {
             sort(0, array.Length, array, comparator);
         }
-        /**
+         /*
          * Sorts the specified range in the array in ascending natural order. All
          * elements must implement the {@code Comparable} interface and must be
          * comparable to each other without a {@code ClassCastException} being
@@ -890,7 +890,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Performs a sort on the section of the array between the given indices
          * using a mergesort with exponential search algorithm (in which the merge
          * is performed by exponential search). n*log(n) performance is guaranteed
@@ -982,7 +982,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Performs a sort on the section of the array between the given indices
          * using a mergesort with exponential search algorithm (in which the merge
          * is performed by exponential search). n*log(n) performance is guaranteed
@@ -1076,7 +1076,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Performs a sort on the given String array. Elements will be re-ordered into
          * ascending order.
          * 
@@ -1093,7 +1093,7 @@ namespace biz.ritter.javapi.util
             stableStringSort(arr, arr, new String[end], start, end, 0);
         }
 
-        /**
+         /*
          * Performs a sort on the given String array. Elements will be re-ordered into
          * ascending order. Uses a stable ternary quick sort algorithm.
          * 
@@ -1256,7 +1256,7 @@ namespace biz.ritter.javapi.util
             }
             return str.charAt(i);
         }
-        /**
+         /*
          * Copies object from one array to another array with reverse of objects
          * order. Source and destination arrays may be the same.
          * 
@@ -1296,7 +1296,7 @@ namespace biz.ritter.javapi.util
                 }
             }
         }
-        /**
+         /*
          * Swaps the elements at the given indices in the array.
          * 
          * @param a -
@@ -1312,7 +1312,7 @@ namespace biz.ritter.javapi.util
             arr[a] = arr[b];
             arr[b] = tmp;
         }
-        /**
+         /*
          * Finds the place of specified range of specified sorted array, where the
          * element should be inserted for getting sorted array. Uses exponential
          * search algorithm.
@@ -1365,7 +1365,7 @@ namespace biz.ritter.javapi.util
             }
             return l - 1;
         }
-        /**
+         /*
          * Finds the place in the given range of specified sorted array, where the
          * element should be inserted for getting sorted array. Uses exponential
          * search algorithm.

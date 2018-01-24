@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.sql
 {
 
-    /**
+     /*
      * An interface which provides facilities for manipulating an SQL structured type 
      * as a Java object. The {@code Struct} object has a value for each attribute of the SQL structured
      * type.
@@ -25,7 +25,7 @@ namespace biz.ritter.javapi.sql
     public interface Struct
     {
 
-        /**
+         /*
          * Gets the SQL Type name of the SQL structured type that this {@code
          * Struct} represents.
          * 
@@ -35,7 +35,7 @@ namespace biz.ritter.javapi.sql
          */
         String getSQLTypeName();// throws SQLException;
 
-        /**
+         /*
          * Gets the values of the attributes of this SQL structured type. This
          * method uses the type map associated with the {@link Connection} for
          * customized type mappings. Where there is no entry in the type mapping
@@ -48,7 +48,7 @@ namespace biz.ritter.javapi.sql
          */
         Object[] getAttributes();// throws SQLException;
 
-        /**
+         /*
          * Gets the values of the attributes of this SQL structured type. This
          * method uses the supplied type mapping to determine how to map SQL types
          * to their corresponding Java objects. In the

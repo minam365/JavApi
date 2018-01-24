@@ -21,13 +21,13 @@ using System;
 
 namespace biz.ritter.javapix.xml.transform{
 
-/**
+ /*
  * This interface is primarily for the purposes of reporting where
  * an error occurred in the XML source or transformation instructions.
  */
 public interface SourceLocator {
 
-    /**
+     /*
      * Return the public identifier for the current document event.
      *
      * <p>The return value is the public identifier of the document
@@ -40,7 +40,7 @@ public interface SourceLocator {
      */
     String getPublicId();
 
-    /**
+     /*
      * Return the system identifier for the current document event.
      *
      * <p>The return value is the system identifier of the document
@@ -56,7 +56,7 @@ public interface SourceLocator {
      */
     String getSystemId();
 
-    /**
+     /*
      * Return the line number where the current document event ends.
      *
      * <p><strong>Warning:</strong> The return value from the method
@@ -73,7 +73,7 @@ public interface SourceLocator {
      */
     int getLineNumber();
 
-    /**
+     /*
      * Return the character position where the current document event ends.
      *
      * <p><strong>Warning:</strong> The return value from the method

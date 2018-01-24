@@ -10,7 +10,7 @@ namespace org.xml.sax.helpers
 {
 
 
-/**
+ /*
  * Encapsulate Namespace logic for use by applications using SAX,
  * or internally by SAX drivers.
  *
@@ -76,7 +76,7 @@ public class NamespaceSupport
     ////////////////////////////////////////////////////////////////////
 
 
-    /**
+     /*
      * The XML Namespace URI as a constant.
      * The value is <code>http://www.w3.org/XML/1998/namespace</code>
      * as defined in the "Namespaces in XML" * recommendation.
@@ -88,7 +88,7 @@ public class NamespaceSupport
     "http://www.w3.org/XML/1998/namespace";
 
 
-    /**
+     /*
      * The namespace declaration URI as a constant.
      * The value is <code>http://www.w3.org/xmlns/2000/</code>, as defined
      * in a backwards-incompatible erratum to the "Namespaces in XML"
@@ -108,7 +108,7 @@ public class NamespaceSupport
     "http://www.w3.org/xmlns/2000/";
 
 
-    /**
+     /*
      * An empty enumeration.
      */
     private readonly static java.util.Enumeration<Object> EMPTY_ENUMERATION =
@@ -120,7 +120,7 @@ public class NamespaceSupport
     ////////////////////////////////////////////////////////////////////
 
 
-    /**
+     /*
      * Create a new Namespace support object.
      */
     public NamespaceSupport ()
@@ -135,7 +135,7 @@ public class NamespaceSupport
     ////////////////////////////////////////////////////////////////////
 
 
-    /**
+     /*
      * Reset this Namespace support object for reuse.
      *
      * <p/>It is necessary to invoke this method before reusing the
@@ -156,7 +156,7 @@ public class NamespaceSupport
     }
 
 
-    /**
+     /*
      * Start a new Namespace context.
      * The new context will automatically inherit
      * the declarations of its parent context, but it will also keep
@@ -220,7 +220,7 @@ public class NamespaceSupport
     }
 
 
-    /**
+     /*
      * Revert to the previous Namespace context.
      *
      * <p/>Normally, you should pop the context at the end of each
@@ -250,7 +250,7 @@ public class NamespaceSupport
     ////////////////////////////////////////////////////////////////////
 
 
-    /**
+     /*
      * Declare a Namespace prefix.  All prefixes must be declared
      * before they are referenced.  For example, a SAX driver (parser)
      * would scan an element's attributes
@@ -299,7 +299,7 @@ public class NamespaceSupport
     }
 
 
-    /**
+     /*
      * Process a raw XML qualified name, after all declarations in the
      * current context have been handled by {@link #declarePrefix
      * declarePrefix()}.
@@ -355,7 +355,7 @@ public class NamespaceSupport
     }
 
 
-    /**
+     /*
      * Look up a prefix and get the currently-mapped Namespace URI.
      *
      * <p/>This method looks up the prefix in the current context.
@@ -373,7 +373,7 @@ public class NamespaceSupport
     }
 
 
-    /**
+     /*
      * Return anjava.util.Enumeration&lt;Object&gt; of all prefixes whose declarations are
      * active in the current context.
      * This includes declarations from parent contexts that have
@@ -393,7 +393,7 @@ public class NamespaceSupport
     }
 
 
-    /**
+     /*
      * Return one of the prefixes mapped to a Namespace URI.
      *
      * <p/>If more than one prefix is currently mapped to the same
@@ -418,7 +418,7 @@ public class NamespaceSupport
     }
 
 
-    /**
+     /*
      * Return anjava.util.Enumeration&lt;Object&gt; of all prefixes for a given URI whose
      * declarations are active in the current context.
      * This includes declarations from parent contexts that have
@@ -455,7 +455,7 @@ public class NamespaceSupport
     }
 
 
-    /**
+     /*
      * Return an enumeration of all prefixes declared in this context.
      *
      * <p/>The empty (default) prefix will be included in this 
@@ -472,7 +472,7 @@ public class NamespaceSupport
     return currentContext.getDeclaredPrefixes();
     }
 
-    /**
+     /*
      * Controls whether namespace declaration attributes are placed
      * into the {@link #NSDECL NSDECL} namespace
      * by {@link #processName processName()}.  This may only be
@@ -498,7 +498,7 @@ public class NamespaceSupport
     }
     }
 
-    /**
+     /*
      * Returns true if namespace declaration attributes are placed into
      * a namespace.  This behavior is not the default.
      *
@@ -523,7 +523,7 @@ public class NamespaceSupport
     // Internal classes.
     ////////////////////////////////////////////////////////////////////
 
-    /**
+     /*
      * Internal class for a single Namespace context.
      *
      * <p/>This module caches and reuses Namespace contexts,
@@ -537,7 +537,7 @@ public class NamespaceSupport
      */
     sealed class Context {
         private readonly NamespaceSupport outer;
-    /**
+     /*
      * Create the root-level Namespace context.
      */
     internal Context (NamespaceSupport ns)
@@ -547,7 +547,7 @@ public class NamespaceSupport
     }
     
     
-    /**
+     /*
      * (Re)set the parent of this Namespace context.
      * The context must either have been freshly constructed,
      * or must have been cleared.
@@ -567,7 +567,7 @@ public class NamespaceSupport
         declsOK = true;
     }
 
-    /**
+     /*
      * Makes associated state become collectible,
      * invalidating this context.
      * {@link #setParent} must be called before
@@ -584,7 +584,7 @@ public class NamespaceSupport
     }
     
     
-    /**
+     /*
      * Declare a Namespace prefix for this context.
      *
      * @param prefix The prefix to declare.
@@ -620,7 +620,7 @@ public class NamespaceSupport
     }
 
 
-    /**
+     /*
      * Process an XML qualified name in this context.
      *
      * @param qName The XML qualified name.
@@ -703,7 +703,7 @@ public class NamespaceSupport
     }
     
 
-    /**
+     /*
      * Look up the URI associated with a prefix in this context.
      *
      * @param prefix The prefix to look up.
@@ -723,7 +723,7 @@ public class NamespaceSupport
     }
 
 
-    /**
+     /*
      * Look up one of the prefixes associated with a URI in this context.
      *
      * <p/>Since many prefixes may be mapped to the same URI,
@@ -743,7 +743,7 @@ public class NamespaceSupport
     }
     
     
-    /**
+     /*
      * Return anjava.util.Enumeration&lt;Object&gt; of prefixes declared in this context.
      *
      * @return Anjava.util.Enumeration&lt;Object&gt; of prefixes (possibly empty).
@@ -759,7 +759,7 @@ public class NamespaceSupport
     }
     
     
-    /**
+     /*
      * Return anjava.util.Enumeration&lt;Object&gt; of all prefixes currently in force.
      *
      * <p/>The default prefix, if in force, is <em>not</em>
@@ -784,7 +784,7 @@ public class NamespaceSupport
     ////////////////////////////////////////////////////////////////
 
 
-    /**
+     /*
      * Copy on write for the internal tables in this context.
      *
      * <p/>This class is optimized for the normal case where most

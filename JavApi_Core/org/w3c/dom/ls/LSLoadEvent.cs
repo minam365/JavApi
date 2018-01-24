@@ -14,7 +14,7 @@ using org.w3c.dom.events;
 namespace org.w3c.dom.ls
 {
 
-    /**
+     /*
      *  This interface represents a load event object that signals the completion 
      * of a document load. 
      * <p>See also the <a href='http://www.w3.org/TR/2004/REC-DOM-Level-3-LS-20040407'>Document Object Model (DOM) Level 3 Load
@@ -22,12 +22,12 @@ namespace org.w3c.dom.ls
      */
     public interface LSLoadEvent : Event
     {
-        /**
+         /*
          * The document that finished loading.
          */
         Document getNewDocument();
 
-        /**
+         /*
          * The input source that was parsed.
          */
         LSInput getInput();

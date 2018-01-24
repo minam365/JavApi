@@ -15,7 +15,7 @@
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * RandomAccess is implemented by {@code List} implementations that support fast
      * (usually constant time) random access.
      */

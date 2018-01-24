@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.nio
 {
 
-    /**
+     /*
      * This class wraps a char sequence to be a char buffer.
      * <p>
      * Implementation notice:

@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.awt.color
 {
-    /**
+     /*
      * @author Oleg V. Khaschansky
      */
 
@@ -49,7 +49,7 @@ namespace biz.ritter.javapi.awt.color
             throw new java.lang.UnsupportedOperationException("Stub cannot perform this operation"); //$NON-NLS-1$
         }
 
-        /**
+         /*
          * Serializable implementation
          *
          * @throws ObjectStreamException

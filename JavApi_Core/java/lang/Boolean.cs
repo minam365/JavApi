@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang
 {
-    /**
+     /*
      * The wrapper for the primitive type {@code boolean}.
      *
      * @since 1.0
@@ -27,12 +27,12 @@ namespace biz.ritter.javapi.lang
 
         private static readonly long serialVersionUID = -3665804199014368530L;
 
-        /**
+         /*
          * The boolean value of the receiver.
          */
         private readonly bool value;
 
-        /**
+         /*
          * The {@link Class} object that represents the primitive type {@code
          * boolean}.
          */
@@ -41,19 +41,19 @@ namespace biz.ritter.javapi.lang
         // Note: This can't be set to "boolean.class", since *that* is
         // defined to be "java.lang.Boolean.TYPE";
 
-        /**
+         /*
          * The {@code Boolean} object that represents the primitive value
          * {@code true}.
          */
         public static readonly Boolean TRUE = new Boolean(true);
 
-        /**
+         /*
          * The {@code Boolean} object that represents the primitive value
          * {@code false}.
          */
         public static readonly Boolean FALSE = new Boolean(false);
 
-        /**
+         /*
          * Constructs a new {@code Boolean} with its boolean value specified by
          * {@code string}. If {@code string} is not {@code null} and is equal to
          * "true" using a non-case sensitive comparison, the result will be a
@@ -66,7 +66,7 @@ namespace biz.ritter.javapi.lang
         public Boolean(String s) :this(parseBoolean(s)){
         }
 
-        /**
+         /*
          * Constructs a new {@code Boolean} with the specified primitive boolean
          * value.
          * 
@@ -77,7 +77,7 @@ namespace biz.ritter.javapi.lang
             this.value = value;
         }
 
-        /**
+         /*
          * Gets the primitive value of this boolean, either {@code true} or
          * {@code false}.
          * 
@@ -87,7 +87,7 @@ namespace biz.ritter.javapi.lang
             return value;
         }
 
-        /**
+         /*
          * Compares this instance with the specified object and indicates if they
          * are equal. In order to be equal, {@code o} must be an instance of
          * {@code Boolean} and have the same boolean value as this object.
@@ -102,7 +102,7 @@ namespace biz.ritter.javapi.lang
                     || ((o is Boolean) && (value == ((Boolean) o).value));
         }
 
-        /**
+         /*
          * Compares this object to the specified boolean object to determine their
          * relative order.
          * 
@@ -128,7 +128,7 @@ namespace biz.ritter.javapi.lang
             return this.value ? 1 : -1;
         }
 
-        /**
+         /*
          * Returns an integer hash code for this boolean.
          * 
          * @return this boolean's hash code, which is {@code 1231} for {@code true}
@@ -139,7 +139,7 @@ namespace biz.ritter.javapi.lang
             return value ? 1231 : 1237;
         }
 
-        /**
+         /*
          * Returns a string containing a concise, human-readable description of this
          * boolean.
          * 
@@ -151,7 +151,7 @@ namespace biz.ritter.javapi.lang
             return StringJ.valueOf(value);
         }
 
-        /**
+         /*
          * Returns the {@code boolean} value of the system property identified by
          * {@code string}.
          * 
@@ -169,7 +169,7 @@ namespace biz.ritter.javapi.lang
             return (parseBoolean(SystemJ.getProperty(s)));
         }
 
-        /**
+         /*
          * Parses the specified string as a {@code boolean}.
          * 
          * @param s
@@ -183,7 +183,7 @@ namespace biz.ritter.javapi.lang
             return "true".equalsIgnoreCase(s); //$NON-NLS-1$
         }
 
-        /**
+         /*
          * Converts the specified boolean to its string representation.
          * 
          * @param value
@@ -194,7 +194,7 @@ namespace biz.ritter.javapi.lang
             return StringJ.valueOf(value);
         }
 
-        /**
+         /*
          * Parses the specified string as a boolean value.
          * 
          * @param string
@@ -207,7 +207,7 @@ namespace biz.ritter.javapi.lang
             return parseBoolean(s) ? Boolean.TRUE : Boolean.FALSE;
         }
 
-        /**
+         /*
          * Returns a {@code Boolean} instance for the specified boolean value.
          * <p/>
          * If it is not necessary to get a new {@code Boolean} instance, it is

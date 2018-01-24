@@ -8,7 +8,7 @@
 namespace org.w3c.dom.traversal
 {
 
-    /**
+     /*
      * NodeIterators are used to step through a set of nodes, e.g. the set of 
      * nodes in a NodeList, the document subtree governed by a particular node, 
      * the results of a query, or any other set of nodes. The set of nodes to be 
@@ -24,17 +24,17 @@ namespace org.w3c.dom.traversal
      */
     public interface NodeIterator
     {
-        /**
+         /*
          * This attribute determines which node types are presented via the 
          * Iterator. 
          */
         int getWhatToShow();
 
-        /**
+         /*
          * The filter used to screen nodes.
          */
         NodeFilter getFilter();
-        /**
+         /*
          * The value of this flag determines whether entity reference nodes are 
          * expanded. To produce a view of the document that has entity references 
          * expanded and does not expose the entity reference node itself, use the 
@@ -45,7 +45,7 @@ namespace org.w3c.dom.traversal
          * and set expandEntityReferences to true.
          */
         bool getExpandEntityReferences();
-        /**
+         /*
          * Returns the next node in the set and advances the position of the 
          * Iterator in the set. After a NodeIterator is created, the first call to 
          * nextNode() returns the first node in the set.
@@ -53,7 +53,7 @@ namespace org.w3c.dom.traversal
          *   <code>null</code> if there are no more members in that set.
          */
         Node nextNode();
-        /**
+         /*
          * Returns the previous node in the set and moves the position of the 
          * Iterator backwards in the set.
          * @return The previous <code>Node</code> in the set being iterated over, or 

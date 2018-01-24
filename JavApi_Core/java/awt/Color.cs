@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.awt
 {
 
-    /**
+     /*
      * @author Oleg V. Khaschansky
      */
     [Serializable]
@@ -82,7 +82,7 @@ namespace biz.ritter.javapi.awt
     public static readonly Color blue = new Color(0, 0, 255);
 
     public static readonly Color BLUE = blue;
-        /**
+         /*
          * integer RGB value
          */
         int value;

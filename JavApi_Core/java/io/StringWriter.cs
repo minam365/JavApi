@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.io
 {
-    /**
+     /*
      * A specialized {@link Writer} that writes characters to a {@code StringBuffer}
      * in a sequential manner, appending them in the process. The result can later
      * be queried using the {@link #StringWriter(int)} or {@link #toString()}
@@ -31,7 +31,7 @@ namespace biz.ritter.javapi.io
 
         private java.lang.StringBuffer buf;
 
-        /**
+         /*
          * Constructs a new {@code StringWriter} which has a {@link StringBuffer}
          * allocated with the default size of 16 characters. The {@code
          * StringBuffer} is also the {@code lock} used to synchronize access to this
@@ -44,7 +44,7 @@ namespace biz.ritter.javapi.io
             lockJ = buf;
         }
 
-        /**
+         /*
          * Constructs a new {@code StringWriter} which has a {@link StringBuffer}
          * allocated with a size of {@code initialSize} characters. The {@code
          * StringBuffer} is also the {@code lock} used to synchronize access to this
@@ -63,7 +63,7 @@ namespace biz.ritter.javapi.io
             lockJ = buf;
         }
 
-        /**
+         /*
          * Calling this method has no effect. In contrast to most {@code Writer} subclasses,
          * the other methods in {@code StringWriter} do not throw an {@code IOException} if
          * {@code close()} has been called.
@@ -76,7 +76,7 @@ namespace biz.ritter.javapi.io
             /* empty */
         }
 
-        /**
+         /*
          * Calling this method has no effect.
          */
         public override void flush()
@@ -84,7 +84,7 @@ namespace biz.ritter.javapi.io
             /* empty */
         }
 
-        /**
+         /*
          * Gets a reference to this writer's internal {@link StringBuffer}. Any
          * changes made to the returned buffer are reflected in this writer.
          * 
@@ -95,7 +95,7 @@ namespace biz.ritter.javapi.io
             return buf;
         }
 
-        /**
+         /*
          * Gets a copy of the contents of this writer as a string.
          * 
          * @return this writer's contents as a string.
@@ -106,7 +106,7 @@ namespace biz.ritter.javapi.io
             return buf.toString();
         }
 
-        /**
+         /*
          * Writes {@code count} characters starting at {@code offset} in {@code buf}
          * to this writer's {@code StringBuffer}.
          * 
@@ -136,7 +136,7 @@ namespace biz.ritter.javapi.io
             buf.append(cbuf, offset, count);
         }
 
-        /**
+         /*
          * Writes one character to this writer's {@code StringBuffer}. Only the two
          * least significant bytes of the integer {@code oneChar} are written.
          * 
@@ -149,7 +149,7 @@ namespace biz.ritter.javapi.io
             buf.append((char)oneChar);
         }
 
-        /**
+         /*
          * Writes the characters from the specified string to this writer's {@code
          * StringBuffer}.
          * 
@@ -162,7 +162,7 @@ namespace biz.ritter.javapi.io
             buf.append(str);
         }
 
-        /**
+         /*
          * Writes {@code count} characters from {@code str} starting at {@code
          * offset} to this writer's {@code StringBuffer}.
          * 
@@ -183,7 +183,7 @@ namespace biz.ritter.javapi.io
             buf.append(sub);
         }
 
-        /**
+         /*
          * Appends the character {@code c} to this writer's {@code StringBuffer}.
          * This method works the same way as {@link #write(int)}.
          * 
@@ -198,7 +198,7 @@ namespace biz.ritter.javapi.io
             return this;
         }
 
-        /**
+         /*
          * Appends the character sequence {@code csq} to this writer's {@code
          * StringBuffer}. This method works the same way as {@code
          * StringWriter.write(csq.toString())}. If {@code csq} is {@code null}, then
@@ -222,7 +222,7 @@ namespace biz.ritter.javapi.io
             return this;
         }
 
-        /**
+         /*
          * Appends a subsequence of the character sequence {@code csq} to this
          * writer's {@code StringBuffer}. This method works the same way as {@code
          * StringWriter.writer(csq.subsequence(start, end).toString())}. If {@code

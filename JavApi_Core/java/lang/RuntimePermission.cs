@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang
 {
 
-    /**
+     /*
      * Represents the permission to execute a runtime-related function. There is no
      * action list associated with a {@code RuntimePermission}; the user either has
      * the permission or he doesn't.
@@ -28,7 +28,7 @@ namespace biz.ritter.javapi.lang
 
         private static readonly long serialVersionUID = 7399184964622342223L;
 
-        /**
+         /*
          * Constants for runtime permissions used in this package.
          */
         internal static readonly RuntimePermission permissionToSetSecurityManager = new RuntimePermission(
@@ -76,7 +76,7 @@ namespace biz.ritter.javapi.lang
         internal static readonly RuntimePermission permissionToSetContextClassLoader = new RuntimePermission(
                 "setContextClassLoader"); //$NON-NLS-1$
 
-        /**
+         /*
          * Creates an instance of {@code RuntimePermission} with the specified name.
          * 
          * @param permissionName
@@ -87,7 +87,7 @@ namespace biz.ritter.javapi.lang
         {
         }
 
-        /**
+         /*
          * Creates an instance of {@code RuntimePermission} with the specified name
          * and action list. The action list is ignored.
          * 

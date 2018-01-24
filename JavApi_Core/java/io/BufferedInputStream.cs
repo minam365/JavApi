@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.io
 {
 
-    /**
+     /*
      * Wraps an existing {@link InputStream} and <em>buffers</em> the input.
      * Expensive interaction with the underlying input stream is minimized, since
      * most (smaller) requests can be satisfied by accessing the buffer alone. The
@@ -36,33 +36,33 @@ namespace biz.ritter.javapi.io
      * @see BufferedOutputStream
      */
     public class BufferedInputStream : FilterInputStream {
-        /**
+         /*
          * The buffer containing the current bytes read from the target InputStream.
          */
         protected volatile byte[] buf;
 
-        /**
+         /*
          * The total number of bytes inside the byte array {@code buf}.
          */
         protected int count;
 
-        /**
+         /*
          * The current limit, which when passed, invalidates the current mark.
          */
         protected int marklimit;
 
-        /**
+         /*
          * The currently marked position. -1 indicates no mark has been set or the
          * mark has been invalidated.
          */
         protected int markpos = -1;
 
-        /**
+         /*
          * The current position within the byte array {@code buf}.
          */
         protected int pos;
 
-        /**
+         /*
          * Constructs a new {@code BufferedInputStream} on the {@link InputStream}
          * {@code in}. The default buffer size (8 KB) is allocated and all reads
          * can now be filtered through this stream.
@@ -74,7 +74,7 @@ namespace biz.ritter.javapi.io
             buf = new byte[8192];
         }
 
-        /**
+         /*
          * Constructs a new {@code BufferedInputStream} on the {@link InputStream}
          * {@code in}. The buffer size is specified by the parameter {@code size}
          * and all reads are now filtered through this stream.
@@ -94,7 +94,7 @@ namespace biz.ritter.javapi.io
             buf = new byte[size];
         }
 
-        /**
+         /*
          * Returns the number of bytes that are available before this stream will
          * block. This method returns the number of bytes available in the buffer
          * plus those available in the source stream.
@@ -115,7 +115,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Closes this stream. The source stream is closed and any resources
          * associated with it are released.
          * 
@@ -168,7 +168,7 @@ namespace biz.ritter.javapi.io
             return bytesread;
         }
 
-        /**
+         /*
          * Sets a mark position in this stream. The parameter {@code readlimit}
          * indicates how many bytes can be read before a mark is invalidated.
          * Calling {@code reset()} will reposition the stream back to the marked
@@ -189,7 +189,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Indicates whether {@code BufferedInputStream} supports the {@code mark()}
          * and {@code reset()} methods.
          * 
@@ -202,7 +202,7 @@ namespace biz.ritter.javapi.io
             return true;
         }
 
-        /**
+         /*
          * Reads a single byte from this stream and returns it as an integer in the
          * range from 0 to 255. Returns -1 if the end of the source string has been
          * reached. If the internal buffer does not contain any available bytes then
@@ -247,7 +247,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Reads at most {@code length} bytes from this stream and stores them in
          * byte array {@code buffer} starting at offset {@code offset}. Returns the
          * number of bytes actually read or -1 if no bytes were read and the end of
@@ -350,7 +350,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Resets this stream to the last marked location.
          * 
          * @throws IOException
@@ -373,7 +373,7 @@ namespace biz.ritter.javapi.io
             pos = markpos;
         }
 
-        /**
+         /*
          * Skips {@code amount} number of bytes in this stream. Subsequent
          * {@code read()}'s will not return these bytes unless {@code reset()} is
          * used.

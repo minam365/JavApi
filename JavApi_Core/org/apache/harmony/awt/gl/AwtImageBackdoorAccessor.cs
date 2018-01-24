@@ -20,7 +20,7 @@ namespace org.apache.harmony.awt.gl
 
 
 
-    /**
+     /*
      * This class give an opportunity to get access to private data of 
      * some java.awt.image classes 
      * Implementation of this class placed in java.awt.image package

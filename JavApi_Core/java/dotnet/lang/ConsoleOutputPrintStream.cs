@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.dotnet.lang
 {
 
-    /**
+     /*
      * Default OutputStream to write something on Console.
      */
     public class ConsoleOutputPrintStream : java.lang.PrintStream

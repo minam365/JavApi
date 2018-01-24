@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.sql
 {
-    /**
+     /*
      * An interface to a JDBC driver.
      * <p/>
      * The JDBC driver uses URLs to specify the location of specific data. URL
@@ -34,7 +34,7 @@ namespace biz.ritter.javapi.sql
     public interface Driver
     {
 
-        /**
+         /*
          * Returns whether the driver thinks that it can open a connection to the
          * given URL.
          * 
@@ -49,7 +49,7 @@ namespace biz.ritter.javapi.sql
          */
         bool acceptsURL(String url);// throws SQLException;
 
-        /**
+         /*
          * Attempts to make a database connection to a data source specified by a
          * supplied URL.
          * 
@@ -67,21 +67,21 @@ namespace biz.ritter.javapi.sql
          */
         Connection connect(String url, java.util.Properties info);// throws SQLException;
 
-        /**
+         /*
          * Gets the driver's major version number.
          * 
          * @return the major version number of the driver - typically starts at 1.
          */
         int getMajorVersion();
 
-        /**
+         /*
          * Gets the driver's minor version number.
          * 
          * @return the minor version number of the driver - typically starts at 0.
          */
         int getMinorVersion();
 
-        /**
+         /*
          * Gets information about possible properties for this driver.
          * <p/>
          * This method is intended to provide a listing of possible properties that
@@ -107,7 +107,7 @@ namespace biz.ritter.javapi.sql
         DriverPropertyInfo[] getPropertyInfo(String url, java.util.Properties info)
                 ;// throws SQLException;
 
-        /**
+         /*
          * Reports whether this driver is a genuine JDBC CompliantTM driver. The
          * driver may only return {@code true} if it passes all the JDBC compliance
          * tests.

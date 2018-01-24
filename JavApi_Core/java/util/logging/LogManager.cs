@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util.logging
 {
-    /**
+     /*
      * {@code LogManager} is used to maintain configuration properties of the
      * logging framework, and to manage a hierarchical namespace of all named
      * {@code Logger} objects.
@@ -135,15 +135,15 @@ namespace biz.ritter.javapi.util.logging
         // FIXME: use weak reference to avoid heap memory leak
         private Hashtable<String, Logger> loggers;
 
-        /** The configuration properties */
+         /* The configuration properties */
         private Properties props;
 
-        /** the property change listener */
+         /* the property change listener */
         private java.beans.PropertyChangeSupport listeners;
 
-        /** The singleton instance. */
+         /* The singleton instance. */
         private static LogManager manager;
-        /**
+         /*
          * Get the global {@code LogManager} instance.
          *
          * @return the global {@code LogManager} instance
@@ -153,7 +153,7 @@ namespace biz.ritter.javapi.util.logging
             return manager;
         }
 
-        /**
+         /*
          * Default constructor. This is not public because there should be only one
          * {@code LogManager} instance, which can be get by
          * {@code LogManager.getLogManager()}. This is protected so that
@@ -202,7 +202,7 @@ namespace biz.ritter.javapi.util.logging
 
         }
 
-        /**
+         /*
          * Re-initialize the properties and configuration. The initialization
          * process is same as the {@code LogManager} instantiation.
          * <p>
@@ -256,7 +256,7 @@ namespace biz.ritter.javapi.util.logging
         }
 
 
-        /**
+         /*
          * Re-initialize the properties and configuration from the given
          * {@code InputStream}
          * <p>
@@ -277,7 +277,7 @@ namespace biz.ritter.javapi.util.logging
             throw new java.lang.UnsupportedOperationException("Not yet implemented");
             /*readConfigurationImpl(ins);*/
         }
-        /**
+         /*
          * Check that the caller has {@code LoggingPermission("control")} so
          * that it is trusted to modify the configuration for logging framework. If
          * the check passes, just return, otherwise {@code SecurityException}
@@ -297,7 +297,7 @@ namespace biz.ritter.javapi.util.logging
             }*/
         }
 
-        /**
+         /*
  * Returns a named logger associated with the supplied resource bundle.
  *
  * @param resourceBundleName the resource bundle to associate, or null for
@@ -317,7 +317,7 @@ namespace biz.ritter.javapi.util.logging
             }
         }
 
-        /**
+         /*
          * Get the logger with the given name.
          *
          * @param name
@@ -331,7 +331,7 @@ namespace biz.ritter.javapi.util.logging
                 return loggers.get(name);
             }
         }
-        /**
+         /*
          * Get the value of property with given name.
          *
          * @param name
@@ -343,7 +343,7 @@ namespace biz.ritter.javapi.util.logging
             return props.getProperty(name);
         }
 
-        /**
+         /*
          * Reset configuration.
          * <p>
          * All handlers are closed and removed from any named loggers. All loggers'
@@ -379,7 +379,7 @@ namespace biz.ritter.javapi.util.logging
             }
         }
 
-        /**
+         /*
          * Get a {@code Enumeration} of all registered logger names.
          *
          * @return enumeration of registered logger names
@@ -392,7 +392,7 @@ namespace biz.ritter.javapi.util.logging
             }
         }
 
-        /**
+         /*
          * Sets the level on {@code logger} to {@code newLevel}. Any child loggers
          * currently inheriting their level from {@code logger} will be updated
          * recursively.
@@ -431,7 +431,7 @@ namespace biz.ritter.javapi.util.logging
                 }
             }
         }
-        /**
+         /*
          * Add a given logger into the hierarchical namespace. The
          * {@code Logger.addLogger()} factory methods call this method to add newly
          * created Logger. This returns false if a logger with the given name has
@@ -514,7 +514,7 @@ namespace biz.ritter.javapi.util.logging
             }
         }
 
-        /**
+         /*
          * Sets the parent of this logger in the namespace. Callers must first
          * {@link #checkAccess() check security}.
          *

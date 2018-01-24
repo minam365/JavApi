@@ -9,7 +9,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.concurrent
 {
 
-    /**
+     /*
      * A {@link java.util.Map} providing additional atomic
      * <tt>putIfAbsent</tt>, <tt>remove</tt>, and <tt>replace</tt> methods.
      *
@@ -31,7 +31,7 @@ namespace biz.ritter.javapi.util.concurrent
      */
     public interface ConcurrentMap<K, V> : Map<K, V>
     {
-        /**
+         /*
          * If the specified key is not already associated
          * with a value, associate it with the given value.
          * This is equivalent to
@@ -61,7 +61,7 @@ namespace biz.ritter.javapi.util.concurrent
          */
         V putIfAbsent(K key, V value);
 
-        /**
+         /*
          * Removes the entry for a key only if currently mapped to a given value.
          * This is equivalent to
          * <pre>
@@ -83,7 +83,7 @@ namespace biz.ritter.javapi.util.concurrent
          */
         bool remove(Object key, Object value);
 
-        /**
+         /*
          * Replaces the entry for a key only if currently mapped to a given value.
          * This is equivalent to
          * <pre>
@@ -108,7 +108,7 @@ namespace biz.ritter.javapi.util.concurrent
          */
         bool replace(K key, V oldValue, V newValue);
 
-        /**
+         /*
          * Replaces the entry for a key only if currently mapped to some value.
          * This is equivalent to
          * <pre>

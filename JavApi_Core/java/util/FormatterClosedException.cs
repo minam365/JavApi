@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util
 {
-    /**
+     /*
      * A {@code FormatterClosedException} will be thrown if the formatter has been
      * closed.
      * 
@@ -28,7 +28,7 @@ namespace biz.ritter.javapi.util
     public class FormatterClosedException : java.lang.IllegalStateException , java.io.Serializable {
         private static readonly long serialVersionUID = 18111216L;
 
-        /**
+         /*
          * Constructs a new {@code FormatterClosedException} with the stack trace
          * filled in.
          */

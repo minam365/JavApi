@@ -16,7 +16,7 @@ using System;
 
 namespace biz.ritter.javapi.nio.charset
 {
-    /**
+     /*
      * An {@code UnmappableCharacterException} is thrown when an unmappable
      * character for the given charset is encountered.
      */
@@ -31,7 +31,7 @@ namespace biz.ritter.javapi.nio.charset
         // The length of the unmappable character
         private int inputLength;
 
-        /**
+         /*
          * Constructs a new {@code UnmappableCharacterException}.
          * 
          * @param length
@@ -41,7 +41,7 @@ namespace biz.ritter.javapi.nio.charset
             this.inputLength = length;
         }
 
-        /**
+         /*
          * Gets the length of the unmappable character.
          * 
          * @return the length of the unmappable character.
@@ -50,7 +50,7 @@ namespace biz.ritter.javapi.nio.charset
             return this.inputLength;
         }
 
-        /**
+         /*
          * Gets a message describing this exception.
          * 
          * @return a message describing this exception.

@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util.zip
 {
-    /**
+     /*
      * The {@code CheckedOutputStream} class is used to maintain a running checksum
      * of all data written to a stream. The purpose of this checksum is to establish
      * data integrity, by publishing the checksum to other parties wanting to read
@@ -27,7 +27,7 @@ namespace biz.ritter.javapi.util.zip
 
         private readonly Checksum check;
 
-        /**
+         /*
          * Constructs a new {@code CheckedOutputStream} on {@code OutputStream}
          * {@code os}. The checksum is calculated using the algorithm implemented
          * by {@code csum}.
@@ -41,7 +41,7 @@ namespace biz.ritter.javapi.util.zip
             check = cs;
         }
 
-        /**
+         /*
          * Returns the checksum calculated on the stream read so far.
          *
          * @return the updated checksum.
@@ -50,7 +50,7 @@ namespace biz.ritter.javapi.util.zip
             return check;
         }
 
-        /**
+         /*
          * Writes the specified byte to the underlying stream. The checksum is
          * updated with {@code val}.
          *
@@ -64,7 +64,7 @@ namespace biz.ritter.javapi.util.zip
             check.update(val);
         }
 
-        /**
+         /*
          * Writes n bytes of data from {@code buf} starting at offset {@code off} to
          * the underlying stream. The checksum is updated with the bytes written.
          *

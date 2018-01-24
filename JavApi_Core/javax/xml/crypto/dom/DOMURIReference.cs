@@ -22,7 +22,7 @@ using javax = biz.ritter.javapix;
 namespace biz.ritter.javapix.xml.crypto.dom
 {
 
-/**
+ /*
  * A DOM-specific {@link URIReference}. The purpose of this class is to 
  * provide additional context necessary for resolving XPointer URIs or 
  * same-document references. 
@@ -32,7 +32,7 @@ namespace biz.ritter.javapix.xml.crypto.dom
  */
 public interface DOMURIReference : URIReference {
 
-    /**
+     /*
      * Returns the here node.
      *
      * @return the attribute or processing instruction node or the

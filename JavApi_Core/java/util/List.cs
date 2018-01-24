@@ -19,14 +19,14 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * A {@code List} is a collection which maintains an ordering for its elements. Every
      * element in the {@code List} has an index. Each element can thus be accessed by its
      * index, with the first index being zero. Normally, {@code List}s allow duplicate
      * elements, as compared to Sets, where elements have to be unique.
      */
     public interface List<E> : Collection<E> {
-        /**
+         /*
          * Inserts the specified object into this {@code List} at the specified location.
          * The object is inserted before the current element at the specified
          * location. If the location is equal to the size of this {@code List}, the object
@@ -50,7 +50,7 @@ namespace biz.ritter.javapi.util
          */
         void add(int location, E obj);
 
-        /**
+         /*
          * Adds the specified object at the end of this {@code List}.
          * 
          * @param object
@@ -66,7 +66,7 @@ namespace biz.ritter.javapi.util
          */
         new bool add(E obj);
 
-        /**
+         /*
          * Inserts the objects in the specified collection at the specified location
          * in this {@code List}. The objects are added in the order they are returned from
          * the collection's iterator.
@@ -89,7 +89,7 @@ namespace biz.ritter.javapi.util
          */
         bool addAll(int location, Collection<E> collection);
 
-        /**
+         /*
          * Adds the objects in the specified collection to the end of this {@code List}. The
          * objects are added in the order in which they are returned from the
          * collection's iterator.
@@ -108,7 +108,7 @@ namespace biz.ritter.javapi.util
          */
         new bool addAll(Collection<E> collection);
 
-        /**
+         /*
          * Removes all elements from this {@code List}, leaving it empty.
          * 
          * @throws UnsupportedOperationException
@@ -118,7 +118,7 @@ namespace biz.ritter.javapi.util
          */
         new void clear();
 
-        /**
+         /*
          * Tests whether this {@code List} contains the specified object.
          * 
          * @param object
@@ -128,7 +128,7 @@ namespace biz.ritter.javapi.util
          */
         new bool contains(Object obj);
 
-        /**
+         /*
          * Tests whether this {@code List} contains all objects contained in the
          * specified collection.
          * 
@@ -140,7 +140,7 @@ namespace biz.ritter.javapi.util
         new bool containsAll(Collection<E> collection);
 
 
-        /**
+         /*
          * Returns the element at the specified location in this {@code List}.
          * 
          * @param location
@@ -151,7 +151,7 @@ namespace biz.ritter.javapi.util
          */
         E get(int location);
 
-        /**
+         /*
          * Searches this {@code List} for the specified object and returns the index of the
          * first occurrence.
          * 
@@ -162,7 +162,7 @@ namespace biz.ritter.javapi.util
          */
         int indexOf(Object obj);
 
-        /**
+         /*
          * Returns whether this {@code List} contains no elements.
          * 
          * @return {@code true} if this {@code List} has no elements, {@code false}
@@ -171,7 +171,7 @@ namespace biz.ritter.javapi.util
          */
         new bool isEmpty();
 
-        /**
+         /*
          * Returns an iterator on the elements of this {@code List}. The elements are
          * iterated in the same order as they occur in the {@code List}.
          * 
@@ -180,7 +180,7 @@ namespace biz.ritter.javapi.util
          */
         new Iterator<E> iterator();
 
-        /**
+         /*
          * Searches this {@code List} for the specified object and returns the index of the
          * last occurrence.
          * 
@@ -191,7 +191,7 @@ namespace biz.ritter.javapi.util
          */
         int lastIndexOf(Object obj);
 
-        /**
+         /*
          * Returns a {@code List} iterator on the elements of this {@code List}. The elements are
          * iterated in the same order that they occur in the {@code List}.
          * 
@@ -201,7 +201,7 @@ namespace biz.ritter.javapi.util
          */
         ListIterator<E> listIterator();
 
-        /**
+         /*
          * Returns a list iterator on the elements of this {@code List}. The elements are
          * iterated in the same order as they occur in the {@code List}. The iteration
          * starts at the specified location.
@@ -215,7 +215,7 @@ namespace biz.ritter.javapi.util
          */
         ListIterator<E> listIterator(int location);
 
-        /**
+         /*
          * Removes the object at the specified location from this {@code List}.
          * 
          * @param location
@@ -228,7 +228,7 @@ namespace biz.ritter.javapi.util
          */
         E remove(int location);
 
-        /**
+         /*
          * Removes the first occurrence of the specified object from this {@code List}.
          * 
          * @param object
@@ -240,7 +240,7 @@ namespace biz.ritter.javapi.util
          */
         new bool remove(Object obj);
 
-        /**
+         /*
          * Removes all occurrences in this {@code List} of each object in the specified
          * collection.
          * 
@@ -252,7 +252,7 @@ namespace biz.ritter.javapi.util
          */
         new bool removeAll(Collection<E> collection);
 
-        /**
+         /*
          * Removes all objects from this {@code List} that are not contained in the
          * specified collection.
          * 
@@ -264,7 +264,7 @@ namespace biz.ritter.javapi.util
          */
         new bool retainAll(Collection<E> collection);
 
-        /**
+         /*
          * Replaces the element at the specified location in this {@code List} with the
          * specified object. This operation does not change the size of the {@code List}.
          * 
@@ -285,14 +285,14 @@ namespace biz.ritter.javapi.util
          */
         E set(int location, E obj);
 
-        /**
+         /*
          * Returns the number of elements in this {@code List}.
          * 
          * @return the number of elements in this {@code List}.
          */
         new int size();
 
-        /**
+         /*
          * Returns a {@code List} of the specified portion of this {@code List} from the given start
          * index to the end index minus one. The returned {@code List} is backed by this
          * {@code List} so changes to it are reflected by the other.
@@ -308,14 +308,14 @@ namespace biz.ritter.javapi.util
          */
         List<E> subList(int start, int end);
 
-        /**
+         /*
          * Returns an array containing all elements contained in this {@code List}.
          * 
          * @return an array of the elements from this {@code List}.
          */
         new Object[] toArray();
 
-        /**
+         /*
          * Returns an array containing all elements contained in this {@code List}. If the
          * specified array is large enough to hold the elements, the specified array
          * is used, otherwise an array of the same type is created. If the specified

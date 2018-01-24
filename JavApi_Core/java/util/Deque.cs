@@ -18,7 +18,7 @@ namespace biz.ritter.javapi.util
 {
 
 
-    /**
+     /*
      * A kind of collection that can insert or remove element at both ends("double
      * ended queue"). Mostly a deque has no limit of its size.
      * 
@@ -40,7 +40,7 @@ namespace biz.ritter.javapi.util
      */
     public interface Deque<E> : Queue<E> {
 
-        /**
+         /*
          * Inserts an element at the head of this deque if it dose not violate size
          * limit immediately. It is better to use offerFirst(E) if a deque is
          * size-limited.
@@ -59,7 +59,7 @@ namespace biz.ritter.javapi.util
          */
         void addFirst(E e);
 
-        /**
+         /*
          * Inserts an element at the tail of this deque if it dose not violate size
          * limit immediately. It is better to use offerLast(E) if a deque is
          * size-limited.
@@ -78,7 +78,7 @@ namespace biz.ritter.javapi.util
          */
         void addLast(E e);
 
-        /**
+         /*
          * Inserts an element at the head of this deque unless it would violate size
          * limit. It is better than the addFirst(E) method in a size-limited deque,
          * because the latter one may fail to add the element only by throwing an
@@ -97,7 +97,7 @@ namespace biz.ritter.javapi.util
          */
         bool offerFirst(E e);
 
-        /**
+         /*
          * Inserts an element at the tail of this deque unless it would violate size
          * limit. It is better than the addLast(E) method in a size-limited deque,
          * because the latter one may fail to add the element only by throwing an
@@ -116,7 +116,7 @@ namespace biz.ritter.javapi.util
          */
         bool offerLast(E e);
 
-        /**
+         /*
          * Gets and removes the head element of this deque. This method throws an
          * exception if the deque is empty.
          * 
@@ -126,7 +126,7 @@ namespace biz.ritter.javapi.util
          */
         E removeFirst();
 
-        /**
+         /*
          * Gets and removes the tail element of this deque. This method throws an
          * exception if the deque is empty.
          * 
@@ -136,7 +136,7 @@ namespace biz.ritter.javapi.util
          */
         E removeLast();
 
-        /**
+         /*
          * Gets and removes the head element of this deque. This method returns null
          * if the deque is empty.
          * 
@@ -144,7 +144,7 @@ namespace biz.ritter.javapi.util
          */
         E pollFirst();
 
-        /**
+         /*
          * Gets and removes the tail element of this deque. This method returns null
          * if the deque is empty.
          * 
@@ -152,7 +152,7 @@ namespace biz.ritter.javapi.util
          */
         E pollLast();
 
-        /**
+         /*
          * Gets but not removes the head element of this deque. This method throws
          * an exception if the deque is empty.
          * 
@@ -162,7 +162,7 @@ namespace biz.ritter.javapi.util
          */
         E getFirst();
 
-        /**
+         /*
          * Gets but not removes the tail element of this deque. This method throws
          * an exception if the deque is empty.
          * 
@@ -172,7 +172,7 @@ namespace biz.ritter.javapi.util
          */
         E getLast();
 
-        /**
+         /*
          * Gets but not removes the head element of this deque. This method returns
          * null if the deque is empty.
          * 
@@ -180,7 +180,7 @@ namespace biz.ritter.javapi.util
          */
         E peekFirst();
 
-        /**
+         /*
          * Gets but not removes the tail element of this deque. This method returns
          * null if the deque is empty.
          * 
@@ -188,7 +188,7 @@ namespace biz.ritter.javapi.util
          */
         E peekLast();
 
-        /**
+         /*
          * Removes the first equivalent element of the specified object. If the
          * deque does not contain the element, it is unchanged and returns false.
          * 
@@ -204,7 +204,7 @@ namespace biz.ritter.javapi.util
          */
         bool removeFirstOccurrence(Object o);
 
-        /**
+         /*
          * Removes the last equivalent element of the specified object. If the deque
          * does not contain the element, it is unchanged and returns false.
          * 
@@ -220,7 +220,7 @@ namespace biz.ritter.javapi.util
          */
         bool removeLastOccurrence(Object o);
 
-        /**
+         /*
          * Pushes the element to the deque(at the head of the deque), just same as
          * addFirst(E).
          * 
@@ -238,7 +238,7 @@ namespace biz.ritter.javapi.util
          */
         void push(E e);
 
-        /**
+         /*
          * Pops the head element of the deque, just same as removeFirst().
          * 
          * @return the head element
@@ -247,7 +247,7 @@ namespace biz.ritter.javapi.util
          */
         E pop();
 
-        /**
+         /*
          * Returns the iterator in reverse order, from tail to head.
          * 
          * @return the iterator in reverse order

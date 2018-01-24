@@ -28,7 +28,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapix.xml.crypto.dsig
 {
 
-/**
+ /*
  * A representation of the XML <code>Object</code> element as defined in
  * the <a href="http://www.w3.org/TR/xmldsig-core/">
  * W3C Recommendation for XML-Signature Syntax and Processing</a>.
@@ -69,7 +69,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig
  */
 public interface XMLObject : XMLStructure {
 
-    /**
+     /*
      * Returns an {@link java.util.Collections#unmodifiableList unmodifiable 
      * list} of {@link XMLStructure}s contained in this <code>XMLObject</code>,
      * which represent elements from any namespace. 
@@ -84,14 +84,14 @@ public interface XMLObject : XMLStructure {
      */
     java.util.List<Object> getContent();
 
-    /**
+     /*
      * Returns the Id of this <code>XMLObject</code>.
      * 
      * @return the Id (or <code>null</code> if not specified)
      */
     String getId();
     
-    /**
+     /*
      * Returns the mime type of this <code>XMLObject</code>. The
      * mime type is an optional attribute which describes the data within this
      * <code>XMLObject</code> (independent of its encoding).
@@ -100,7 +100,7 @@ public interface XMLObject : XMLStructure {
      */
     String getMimeType();
     
-    /**
+     /*
      * Returns the encoding URI of this <code>XMLObject</code>. The encoding
      * URI identifies the method by which the object is encoded.
      * 

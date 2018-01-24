@@ -14,7 +14,7 @@ using System;
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      *  The <code>DOMConfiguration</code> interface represents the configuration 
      * of a document and maintains a table of recognized parameters. Using the 
      * configuration, it is possible to change 
@@ -360,7 +360,7 @@ namespace org.w3c.dom
      */
     public interface DOMConfiguration
     {
-        /**
+         /*
          * Set the value of a parameter.
          * @param name The name of the parameter to set.
          * @param value  The new value or <code>null</code> if the user wishes to 
@@ -379,7 +379,7 @@ namespace org.w3c.dom
         void setParameter(String name,
                                  Object value);//                             throws DOMException;
 
-        /**
+         /*
          *  Return the value of a parameter if known. 
          * @param name  The name of the parameter. 
          * @return  The current object associated with the specified parameter or 
@@ -390,7 +390,7 @@ namespace org.w3c.dom
          */
         Object getParameter(String name);//                               throws DOMException;
 
-        /**
+         /*
          * Check if setting a parameter to a specific value is supported.
          * @param name The name of the parameter to check.
          * @param value  An object. if <code>null</code>, the returned value is 
@@ -403,7 +403,7 @@ namespace org.w3c.dom
         bool canSetParameter(String name,
                                        Object value);
 
-        /**
+         /*
          *  The list of the parameters supported by this 
          * <code>DOMConfiguration</code> object and for which at least one value 
          * can be set by the application. Note that this list can also contain 

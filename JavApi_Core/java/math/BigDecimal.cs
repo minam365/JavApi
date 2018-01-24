@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.math
 {
-    /**
+     /*
      * This class represents immutable arbitrary precision decimal numbers. Each
      * {@code BigDecimal} instance is represented with a unscaled arbitrary
      * precision mantissa (the unscaled value) and a scale. The value of the {@code
@@ -27,22 +27,22 @@ namespace biz.ritter.javapi.math
     [Serializable]
     public class BigDecimal : java.lang.Number, java.lang.Comparable<BigDecimal>, java.io.Serializable {
 
-        /**
+         /*
          * The constant zero as a {@code BigDecimal}.
          */
         public static readonly BigDecimal ZERO = new BigDecimal(0, 0);
 
-        /**
+         /*
          * The constant one as a {@code BigDecimal}.
          */
         public static readonly BigDecimal ONE = new BigDecimal(1, 0);
 
-        /**
+         /*
          * The constant ten as a {@code BigDecimal}.
          */
         public static readonly BigDecimal TEN = new BigDecimal(10, 0);
 
-        /**
+         /*
          * Rounding mode where positive values are rounded towards positive infinity
          * and negative values towards negative infinity.
          *
@@ -50,14 +50,14 @@ namespace biz.ritter.javapi.math
          */
         public const int ROUND_UP = 0;
 
-        /**
+         /*
          * Rounding mode where the values are rounded towards zero.
          *
          * @see RoundingMode#DOWN
          */
         public const int ROUND_DOWN = 1;
 
-        /**
+         /*
          * Rounding mode to round towards positive infinity. For positive values
          * this rounding mode behaves as {@link #ROUND_UP}, for negative values as
          * {@link #ROUND_DOWN}.
@@ -66,7 +66,7 @@ namespace biz.ritter.javapi.math
          */
         public const int ROUND_CEILING = 2;
 
-        /**
+         /*
          * Rounding mode to round towards negative infinity. For positive values
          * this rounding mode behaves as {@link #ROUND_DOWN}, for negative values as
          * {@link #ROUND_UP}.
@@ -75,7 +75,7 @@ namespace biz.ritter.javapi.math
          */
         public const int ROUND_FLOOR = 3;
 
-        /**
+         /*
          * Rounding mode where values are rounded towards the nearest neighbor.
          * Ties are broken by rounding up.
          *
@@ -83,7 +83,7 @@ namespace biz.ritter.javapi.math
          */
         public const int ROUND_HALF_UP = 4;
 
-        /**
+         /*
          * Rounding mode where values are rounded towards the nearest neighbor.
          * Ties are broken by rounding down.
          *
@@ -91,7 +91,7 @@ namespace biz.ritter.javapi.math
          */
         public const int ROUND_HALF_DOWN = 5;
 
-        /**
+         /*
          * Rounding mode where values are rounded towards the nearest neighbor.
          * Ties are broken by rounding to the even neighbor.
          *
@@ -99,7 +99,7 @@ namespace biz.ritter.javapi.math
          */
         public const int ROUND_HALF_EVEN = 6;
 
-        /**
+         /*
          * Rounding mode where the rounding operations throws an {@code
          * ArithmeticException} for the case that rounding is necessary, i.e. for
          * the case that the value cannot be represented exactly.
@@ -108,33 +108,33 @@ namespace biz.ritter.javapi.math
          */
         public const int ROUND_UNNECESSARY = 7;
 
-        /** This is the serialVersionUID used by the sun implementation. */
+         /* This is the serialVersionUID used by the sun implementation. */
         private static readonly long serialVersionUID = 6108874887143696463L;
 
-        /** The double closer to <code>Log10(2)</code>. */
+         /* The double closer to <code>Log10(2)</code>. */
         private static readonly double LOG10_2 = 0.3010299956639812;
 
-        /** The <code>String</code> representation is cached. */
+         /* The <code>String</code> representation is cached. */
         [NonSerialized]
         private String toStringImage = null;
 
-        /** Cache for the hash code. */
+         /* Cache for the hash code. */
         [NonSerialized]
         private int hashCode = 0;
 
-        /**
+         /*
          * An array with powers of five that fit in the type <code>long</code>
          * (<code>5^0,5^1,...,5^27</code>).
          */
         private static readonly BigInteger[] FIVE_POW;
 
-        /**
+         /*
          * An array with powers of ten that fit in the type <code>long</code>
          * (<code>10^0,10^1,...,10^18</code>).
          */
         private static readonly BigInteger []TEN_POW;
 
-        /**
+         /*
          * An array with powers of ten that fit in the type <code>long</code>
          * (<code>10^0,10^1,...,10^18</code>).
          */
@@ -195,19 +195,19 @@ namespace biz.ritter.javapi.math
     
         private static readonly int BI_SCALED_BY_ZERO_LENGTH = 11;
 
-        /**
+         /*
          * An array with the first <code>BigInteger</code> scaled by zero.
          * (<code>[0,0],[1,0],...,[10,0]</code>).
          */
         private static readonly BigDecimal[] BI_SCALED_BY_ZERO = new BigDecimal[BI_SCALED_BY_ZERO_LENGTH];
 
-        /**
+         /*
          * An array with the zero number scaled by the first positive scales.
          * (<code>0*10^0, 0*10^1, ..., 0*10^10</code>).
          */
         private static readonly BigDecimal []ZERO_SCALED_BY = new BigDecimal[11];
 
-        /** An array filled with characters <code>'0'</code>. */
+         /* An array filled with characters <code>'0'</code>. */
         private static readonly char[] CH_ZEROS = new char[100];
 
         static BigDecimal() {
@@ -235,7 +235,7 @@ namespace biz.ritter.javapi.math
             FIVE_POW = Multiplication.bigFivePows;
         }
 
-        /**
+         /*
          * The arbitrary precision integer (unscaled value) in the internal
          * representation of {@code BigDecimal}.
          */
@@ -245,12 +245,12 @@ namespace biz.ritter.javapi.math
         [NonSerialized]
         private long smallValue;
 
-        /** 
+         /* 
          * The 32-bit integer scale in the internal representation of {@code BigDecimal}.
          */
         private int scaleJ;
 
-        /**
+         /*
          * Represent the number of decimal digits in the unscaled value. This
          * precision is calculated the first time, and used in the following calls
          * of method <code>precision()</code>. Note that some call to the private
@@ -274,7 +274,7 @@ namespace biz.ritter.javapi.math
             this.bitLengthJ = bitLength(smallValue);
         }
 
-        /**
+         /*
          * Constructs a new {@code BigDecimal} instance from a string representation
          * given as a character array.
          *
@@ -385,7 +385,7 @@ namespace biz.ritter.javapi.math
             }    
         }
 
-        /**
+         /*
          * Constructs a new {@code BigDecimal} instance from a string representation
          * given as a character array.
          *
@@ -415,7 +415,7 @@ namespace biz.ritter.javapi.math
             inplaceRound(mc);
         }
 
-        /**
+         /*
          * Constructs a new {@code BigDecimal} instance from a string representation
          * given as a character array.
          *
@@ -431,7 +431,7 @@ namespace biz.ritter.javapi.math
         public BigDecimal(char[] inJ) :this(inJ, 0, inJ.Length){
         }
 
-        /**
+         /*
          * Constructs a new {@code BigDecimal} instance from a string representation
          * given as a character array. The result is rounded according to the
          * specified math context.
@@ -455,7 +455,7 @@ namespace biz.ritter.javapi.math
             inplaceRound(mc);
         }
 
-        /**
+         /*
          * Constructs a new {@code BigDecimal} instance from a string
          * representation.
          *
@@ -469,7 +469,7 @@ namespace biz.ritter.javapi.math
         public BigDecimal(String val) :this(val.toCharArray(), 0, val.length()){
         }
 
-        /**
+         /*
          * Constructs a new {@code BigDecimal} instance from a string
          * representation. The result is rounded according to the specified math
          * context.
@@ -491,7 +491,7 @@ namespace biz.ritter.javapi.math
             inplaceRound(mc);
         }
 
-        /**
+         /*
          * Constructs a new {@code BigDecimal} instance from the 64bit double
          * {@code val}. The constructed big decimal is equivalent to the given
          * double. For example, {@code new BigDecimal(0.1)} is equal to {@code
@@ -557,7 +557,7 @@ namespace biz.ritter.javapi.math
             }
         }
 
-        /**
+         /*
          * Constructs a new {@code BigDecimal} instance from the 64bit double
          * {@code val}. The constructed big decimal is equivalent to the given
          * double. For example, {@code new BigDecimal(0.1)} is equal to {@code
@@ -582,7 +582,7 @@ namespace biz.ritter.javapi.math
             inplaceRound(mc);
         }
 
-        /**
+         /*
          * Constructs a new {@code BigDecimal} instance from the given big integer
          * {@code val}. The scale of the result is {@code 0}.
          *
@@ -593,7 +593,7 @@ namespace biz.ritter.javapi.math
         public BigDecimal(BigInteger val):this(val, 0){
         }
 
-        /**
+         /*
          * Constructs a new {@code BigDecimal} instance from the given big integer
          * {@code val}. The scale of the result is {@code 0}.
          *
@@ -611,7 +611,7 @@ namespace biz.ritter.javapi.math
             inplaceRound(mc);
         }
 
-        /**
+         /*
          * Constructs a new {@code BigDecimal} instance from a given unscaled value
          * {@code unscaledVal} and a given scale. The value of this instance is
          * {@code unscaledVal} 10^(-{@code scale}).
@@ -632,7 +632,7 @@ namespace biz.ritter.javapi.math
             setUnscaledValue(unscaledVal);
         }
 
-        /**
+         /*
          * Constructs a new {@code BigDecimal} instance from a given unscaled value
          * {@code unscaledVal} and a given scale. The value of this instance is
          * {@code unscaledVal} 10^(-{@code scale}). The result is rounded according
@@ -656,7 +656,7 @@ namespace biz.ritter.javapi.math
             inplaceRound(mc);
         }
 
-        /**
+         /*
          * Constructs a new {@code BigDecimal} instance from the given int
          * {@code val}. The scale of the result is 0.
          *
@@ -666,7 +666,7 @@ namespace biz.ritter.javapi.math
         public BigDecimal(int val) :this(val,0){
         }
 
-        /**
+         /*
          * Constructs a new {@code BigDecimal} instance from the given int {@code
          * val}. The scale of the result is {@code 0}. The result is rounded
          * according to the specified math context.
@@ -684,7 +684,7 @@ namespace biz.ritter.javapi.math
             inplaceRound(mc);
         }
 
-        /**
+         /*
          * Constructs a new {@code BigDecimal} instance from the given long {@code
          * val}. The scale of the result is {@code 0}.
          *
@@ -694,7 +694,7 @@ namespace biz.ritter.javapi.math
         public BigDecimal(long val) :this(val,0){
         }
 
-        /**
+         /*
          * Constructs a new {@code BigDecimal} instance from the given long {@code
          * val}. The scale of the result is {@code 0}. The result is rounded
          * according to the specified math context.
@@ -714,7 +714,7 @@ namespace biz.ritter.javapi.math
 
         /* Public Methods */
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} instance whose value is equal to {@code
          * unscaledVal} 10^(-{@code scale}). The scale of the result is {@code
          * scale}, and its unscaled value is {@code unscaledVal}.
@@ -738,7 +738,7 @@ namespace biz.ritter.javapi.math
             return new BigDecimal(unscaledVal, scale);
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} instance whose value is equal to {@code
          * unscaledVal}. The scale of the result is {@code 0}, and its unscaled
          * value is {@code unscaledVal}.
@@ -754,7 +754,7 @@ namespace biz.ritter.javapi.math
             return new BigDecimal(unscaledVal,0);
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} instance whose value is equal to {@code
          * val}. The new decimal is constructed as if the {@code BigDecimal(String)}
          * constructor is called with an argument which is equal to {@code
@@ -780,7 +780,7 @@ namespace biz.ritter.javapi.math
             return new BigDecimal(java.lang.Double.toString(val));
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is {@code this + augend}.
          * The scale of the result is the maximum of the scales of the two
          * arguments.
@@ -830,7 +830,7 @@ namespace biz.ritter.javapi.math
                     Multiplication.multiplyByTenPow(augend.getUnscaledValue(),diffScale)), thisValue.scaleJ);
         }
     
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is {@code this + augend}.
          * The result is rounded according to the passed context {@code mc}.
          *
@@ -883,7 +883,7 @@ namespace biz.ritter.javapi.math
             return larger.round(mc);
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is {@code this - subtrahend}.
          * The scale of the result is the maximum of the scales of the two arguments.
          *
@@ -934,7 +934,7 @@ namespace biz.ritter.javapi.math
             }
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is {@code this - subtrahend}.
          * The result is rounded according to the passed context {@code mc}.
          *
@@ -978,7 +978,7 @@ namespace biz.ritter.javapi.math
             return subtract(subtrahend).round(mc);
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is {@code this *
          * multiplicand}. The scale of the result is the sum of the scales of the
          * two arguments.
@@ -1004,7 +1004,7 @@ namespace biz.ritter.javapi.math
                     multiplicand.getUnscaledValue()), toIntScale(newScale));
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is {@code this *
          * multiplicand}. The result is rounded according to the passed context
          * {@code mc}.
@@ -1024,7 +1024,7 @@ namespace biz.ritter.javapi.math
             return result;
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is {@code this / divisor}.
          * As scale of the result the parameter {@code scale} is used. If rounding
          * is required to meet the specified scale, then the specified rounding mode
@@ -1052,7 +1052,7 @@ namespace biz.ritter.javapi.math
             return divide(divisor, scale, RoundingMode.valueOf(roundingMode));
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is {@code this / divisor}.
          * As scale of the result the parameter {@code scale} is used. If rounding
          * is required to meet the specified scale, then the specified rounding mode
@@ -1177,7 +1177,7 @@ namespace biz.ritter.javapi.math
             return valueOf(quotient, scale);
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is {@code this / divisor}.
          * The scale of the result is the scale of {@code this}. If rounding is
          * required to meet the specified scale, then the specified rounding mode
@@ -1203,7 +1203,7 @@ namespace biz.ritter.javapi.math
             return divide(divisor, scaleJ, RoundingMode.valueOf(roundingMode));
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is {@code this / divisor}.
          * The scale of the result is the scale of {@code this}. If rounding is
          * required to meet the specified scale, then the specified rounding mode
@@ -1227,7 +1227,7 @@ namespace biz.ritter.javapi.math
             return divide(divisor, scaleJ, roundingMode);
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is {@code this / divisor}.
          * The scale of the result is the difference of the scales of {@code this}
          * and {@code divisor}. If the exact result requires more digits, then the
@@ -1305,7 +1305,7 @@ namespace biz.ritter.javapi.math
             return new BigDecimal(p, newScale);
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is {@code this / divisor}.
          * The result is rounded according to the passed context {@code mc}. If the
          * passed math context specifies precision {@code 0}, then this call is
@@ -1379,7 +1379,7 @@ namespace biz.ritter.javapi.math
             return new BigDecimal(integerQuot, toIntScale(newScale), mc);
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is the integral part of
          * {@code this / divisor}. The quotient is rounded down towards zero to the
          * next integer. For example, {@code 0.5/0.2 = 2}.
@@ -1443,7 +1443,7 @@ namespace biz.ritter.javapi.math
                     : new BigDecimal(integralValue, toIntScale(newScale)));
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is the integral part of
          * {@code this / divisor}. The quotient is rounded down towards zero to the
          * next integer. The rounding mode passed with the parameter {@code mc} is
@@ -1555,7 +1555,7 @@ namespace biz.ritter.javapi.math
             return integralValue;
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is {@code this % divisor}.
          * <p/>
          * The remainder is defined as {@code this -
@@ -1573,7 +1573,7 @@ namespace biz.ritter.javapi.math
             return divideAndRemainder(divisor)[1];
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is {@code this % divisor}.
          * <p/>
          * The remainder is defined as {@code this -
@@ -1599,7 +1599,7 @@ namespace biz.ritter.javapi.math
             return divideAndRemainder(divisor, mc)[1];
         }
 
-        /**
+         /*
          * Returns a {@code BigDecimal} array which contains the integral part of
          * {@code this / divisor} at index 0 and the remainder {@code this %
          * divisor} at index 1. The quotient is rounded down towards zero to the
@@ -1624,7 +1624,7 @@ namespace biz.ritter.javapi.math
             return quotAndRem;
         }
 
-        /**
+         /*
          * Returns a {@code BigDecimal} array which contains the integral part of
          * {@code this / divisor} at index 0 and the remainder {@code this %
          * divisor} at index 1. The quotient is rounded down towards zero to the
@@ -1654,7 +1654,7 @@ namespace biz.ritter.javapi.math
             return quotAndRem;
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is {@code this ^ n}. The
          * scale of the result is {@code n} times the scales of {@code this}.
          * <p/>
@@ -1684,7 +1684,7 @@ namespace biz.ritter.javapi.math
             : new BigDecimal(getUnscaledValue().pow(n), toIntScale(newScale)));
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is {@code this ^ n}. The
          * result is rounded according to the passed context {@code mc}.
          * <p/>
@@ -1741,7 +1741,7 @@ namespace biz.ritter.javapi.math
             return accum;
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is the absolute value of
          * {@code this}. The scale of the result is the same as the scale of this.
          *
@@ -1751,7 +1751,7 @@ namespace biz.ritter.javapi.math
             return ((signum() < 0) ? negate() : this);
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is the absolute value of
          * {@code this}. The result is rounded according to the passed context
          * {@code mc}.
@@ -1764,7 +1764,7 @@ namespace biz.ritter.javapi.math
             return round(mc).abs();
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is the {@code -this}. The
          * scale of the result is the same as the scale of this.
          *
@@ -1777,7 +1777,7 @@ namespace biz.ritter.javapi.math
             return new BigDecimal(getUnscaledValue().negate(), scaleJ);
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is the {@code -this}. The
          * result is rounded according to the passed context {@code mc}.
          *
@@ -1789,7 +1789,7 @@ namespace biz.ritter.javapi.math
             return round(mc).negate();
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is {@code +this}. The scale
          * of the result is the same as the scale of this.
          *
@@ -1799,7 +1799,7 @@ namespace biz.ritter.javapi.math
             return this;
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is {@code +this}. The result
          * is rounded according to the passed context {@code mc}.
          *
@@ -1811,7 +1811,7 @@ namespace biz.ritter.javapi.math
             return round(mc);
         }
 
-        /**
+         /*
          * Returns the sign of this {@code BigDecimal}.
          *
          * @return {@code -1} if {@code this &lt; 0},
@@ -1829,7 +1829,7 @@ namespace biz.ritter.javapi.math
             return bitLengthJ == 0 && this.smallValue != -1;
         }
 
-        /**
+         /*
          * Returns the scale of this {@code BigDecimal}. The scale is the number of
          * digits behind the decimal point. The value of this {@code BigDecimal} is
          * the unsignedValue * 10^(-scale). If the scale is negative, then this
@@ -1841,7 +1841,7 @@ namespace biz.ritter.javapi.math
             return scaleJ;
         }
 
-        /**
+         /*
          * Returns the precision of this {@code BigDecimal}. The precision is the
          * number of decimal digits used to represent this decimal. It is equivalent
          * to the number of digits of the unscaled value. The precision of {@code 0}
@@ -1879,7 +1879,7 @@ namespace biz.ritter.javapi.math
             return precisionJ;
         }
 
-        /**
+         /*
          * Returns the unscaled value (mantissa) of this {@code BigDecimal} instance
          * as a {@code BigInteger}. The unscaled value can be computed as {@code
          * this} 10^(scale).
@@ -1890,7 +1890,7 @@ namespace biz.ritter.javapi.math
             return getUnscaledValue();
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is {@code this}, rounded
          * according to the passed context {@code mc}.
          * <p/>
@@ -1915,7 +1915,7 @@ namespace biz.ritter.javapi.math
             return thisBD;
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} instance with the specified scale.
          * <p/>
          * If the new scale is greater than the old scale, then additional zeros are
@@ -1962,7 +1962,7 @@ namespace biz.ritter.javapi.math
             return divideBigIntegers(this.getUnscaledValue(),Multiplication.powerOf10(-diffScale),newScale,roundingMode);
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} instance with the specified scale.
          * <p/>
          * If the new scale is greater than the old scale, then additional zeros are
@@ -1988,7 +1988,7 @@ namespace biz.ritter.javapi.math
             return setScale(newScale, RoundingMode.valueOf(roundingMode));
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} instance with the specified scale. If
          * the new scale is greater than the old scale, then additional zeros are
          * added to the unscaled value. If the new scale is smaller than the old
@@ -2008,7 +2008,7 @@ namespace biz.ritter.javapi.math
             return setScale(newScale, RoundingMode.UNNECESSARY);
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} instance where the decimal point has
 		 * been moved {@code n} places to the left. If {@code n &lt; 0} then the
          * decimal point is moved {@code -n} places to the right.
@@ -2047,7 +2047,7 @@ namespace biz.ritter.javapi.math
             return new BigDecimal(Multiplication.multiplyByTenPow(getUnscaledValue(),(int)-newScale), 0);
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} instance where the decimal point has
          * been moved {@code n} places to the right. If {@code n &lt; 0} then the
          * decimal point is moved {@code -n} places to the left.
@@ -2067,7 +2067,7 @@ namespace biz.ritter.javapi.math
             return movePoint(scaleJ - (long)n);
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} whose value is {@code this} 10^{@code n}.
          * The scale of the result is {@code this.scale()} - {@code n}.
          * The precision of the result is the precision of {@code this}.
@@ -2091,7 +2091,7 @@ namespace biz.ritter.javapi.math
             return new BigDecimal(getUnscaledValue(), toIntScale(newScale));
         }
 
-        /**
+         /*
          * Returns a new {@code BigDecimal} instance with the same value as {@code
          * this} but with a unscaled value where the trailing zeros have been
          * removed. If the unscaled value of {@code this} has n trailing zeros, then
@@ -2136,7 +2136,7 @@ namespace biz.ritter.javapi.math
             return new BigDecimal(strippedBI, toIntScale(newScale));
         }
 
-        /**
+         /*
          * Compares this {@code BigDecimal} with {@code val}. Returns one of the
          * three values {@code 1}, {@code 0}, or {@code -1}. The method behaves as
          * if {@code this.subtract(val)} is computed. If this difference is > 0 then
@@ -2184,7 +2184,7 @@ namespace biz.ritter.javapi.math
             }
         }
 
-        /**
+         /*
          * Returns {@code true} if {@code x} is a {@code BigDecimal} instance and if
          * this instance is equal to this big decimal. Two big decimals are equal if
          * their unscaled value and their scale is equal. For example, 1.0
@@ -2210,7 +2210,7 @@ namespace biz.ritter.javapi.math
             return false;
         }   
 
-        /**
+         /*
          * Returns the minimum of this {@code BigDecimal} and {@code val}.
          *
          * @param val
@@ -2223,7 +2223,7 @@ namespace biz.ritter.javapi.math
             return ((compareTo(val) <= 0) ? this : val);
         }
 
-        /**
+         /*
          * Returns the maximum of this {@code BigDecimal} and {@code val}.
          *
          * @param val
@@ -2236,7 +2236,7 @@ namespace biz.ritter.javapi.math
             return ((compareTo(val) >= 0) ? this : val);
         }
 
-        /**
+         /*
          * Returns a hash code for this {@code BigDecimal}.
          *
          * @return hash code for {@code this}.
@@ -2255,7 +2255,7 @@ namespace biz.ritter.javapi.math
             return hashCode;
         }
 
-        /**
+         /*
          * Returns a canonical string representation of this {@code BigDecimal}. If
          * necessary, scientific notation is used. This representation always prints
          * all significant digits of this value.
@@ -2306,7 +2306,7 @@ namespace biz.ritter.javapi.math
             return toStringImage;
         }
 
-        /**
+         /*
          * Returns a string representation of this {@code BigDecimal}. This
          * representation always prints all significant digits of this value.
          * <p/>
@@ -2372,7 +2372,7 @@ namespace biz.ritter.javapi.math
             return result.toString();
         }
 
-        /**
+         /*
          * Returns a string representation of this {@code BigDecimal}. No scientific
          * notation is used. This methods adds zeros where necessary.
          * <p/>
@@ -2428,7 +2428,7 @@ namespace biz.ritter.javapi.math
             return result.toString();
         }
 
-        /**
+         /*
          * Returns this {@code BigDecimal} as a big integer instance. A fractional
          * part is discarded.
          *
@@ -2444,7 +2444,7 @@ namespace biz.ritter.javapi.math
             }
         }
 
-        /**
+         /*
          * Returns this {@code BigDecimal} as a big integer instance if it has no
          * fractional part. If this {@code BigDecimal} has a fractional part, i.e.
          * if rounding would be necessary, an {@code ArithmeticException} is thrown.
@@ -2475,7 +2475,7 @@ namespace biz.ritter.javapi.math
             }
         }
 
-        /**
+         /*
          * Returns this {@code BigDecimal} as an long value. Any fractional part is
          * discarded. If the integral part of {@code this} is too big to be
          * represented as an long, then {@code this} % 2^64 is returned.
@@ -2490,7 +2490,7 @@ namespace biz.ritter.javapi.math
                     : toBigInteger().longValue());
         }
 
-        /**
+         /*
          * Returns this {@code BigDecimal} as a long value if it has no fractional
          * part and if its value fits to the int range ([-2^{63}..2^{63}-1]). If
          * these conditions are not met, an {@code ArithmeticException} is thrown.
@@ -2503,7 +2503,7 @@ namespace biz.ritter.javapi.math
             return valueExact(64);
         }
 
-        /**
+         /*
          * Returns this {@code BigDecimal} as an int value. Any fractional part is
          * discarded. If the integral part of {@code this} is too big to be
          * represented as an int, then {@code this} % 2^32 is returned.
@@ -2518,7 +2518,7 @@ namespace biz.ritter.javapi.math
                     : toBigInteger().intValue());
         }
 
-        /**
+         /*
          * Returns this {@code BigDecimal} as a int value if it has no fractional
          * part and if its value fits to the int range ([-2^{31}..2^{31}-1]). If
          * these conditions are not met, an {@code ArithmeticException} is thrown.
@@ -2531,7 +2531,7 @@ namespace biz.ritter.javapi.math
             return (int)valueExact(32);
         }
 
-        /**
+         /*
          * Returns this {@code BigDecimal} as a short value if it has no fractional
          * part and if its value fits to the short range ([-2^{15}..2^{15}-1]). If
          * these conditions are not met, an {@code ArithmeticException} is thrown.
@@ -2545,7 +2545,7 @@ namespace biz.ritter.javapi.math
             return (short)valueExact(16);
         }
 
-        /**
+         /*
          * Returns this {@code BigDecimal} as a byte value if it has no fractional
          * part and if its value fits to the byte range ([-128..127]). If these
          * conditions are not met, an {@code ArithmeticException} is thrown.
@@ -2558,7 +2558,7 @@ namespace biz.ritter.javapi.math
             return (byte)valueExact(8);
         }
 
-        /**
+         /*
          * Returns this {@code BigDecimal} as a float value. If {@code this} is too
          * big to be represented as an float, then {@code Float.POSITIVE_INFINITY}
          * or {@code Float.NEGATIVE_INFINITY} is returned.
@@ -2593,7 +2593,7 @@ namespace biz.ritter.javapi.math
             return floatResult;
         }
 
-        /**
+         /*
          * Returns this {@code BigDecimal} as a double value. If {@code this} is too
          * big to be represented as an float, then {@code Double.POSITIVE_INFINITY}
          * or {@code Double.NEGATIVE_INFINITY} is returned.
@@ -2713,7 +2713,7 @@ namespace biz.ritter.javapi.math
             return java.lang.Double.longBitsToDouble(bits);
         }
 
-        /**
+         /*
          * Returns the unit in the last place (ULP) of this {@code BigDecimal}
          * instance. An ULP is the distance to the nearest big decimal with the same
          * precision.
@@ -2734,7 +2734,7 @@ namespace biz.ritter.javapi.math
 
         /* Private Methods */
 
-        /**
+         /*
          * It does all rounding work of the public method
          * {@code round(MathContext)}, performing an inplace rounding
          * without creating a new object.
@@ -2791,7 +2791,7 @@ namespace biz.ritter.javapi.math
         private static int longCompareTo(long value1, long value2) {
             return value1 > value2 ? 1 : (value1 < value2 ? -1 : 0);
         }
-        /**
+         /*
          * This method implements an efficient rounding for numbers which unscaled
          * value fits in the type {@code long}.
          *
@@ -2831,7 +2831,7 @@ namespace biz.ritter.javapi.math
             intVal = null;
         }
 
-        /**
+         /*
          * Return an increment that can be -1,0 or 1, depending of
          * {@code roundingMode}.
          *
@@ -2882,7 +2882,7 @@ namespace biz.ritter.javapi.math
             return increment;
         }
 
-        /**
+         /*
          * If {@code intVal} has a fractional part throws an exception,
          * otherwise it counts the number of bits of value and checks if it's out of
          * the range of the primitive type. If the number fits in the primitive type
@@ -2908,7 +2908,7 @@ namespace biz.ritter.javapi.math
             throw new ArithmeticException("Rounding necessary"); //$NON-NLS-1$
         }
 
-        /**
+         /*
          * If the precision already was calculated it returns that value, otherwise
          * it calculates a very good approximation efficiently . Note that this
          * value will be {@code precision()} or {@code precision()-1}
@@ -2922,7 +2922,7 @@ namespace biz.ritter.javapi.math
                     : (int)((this.bitLengthJ - 1) * LOG10_2)) + 1;
         }
 
-        /**
+         /*
          * It tests if a scale of type {@code long} fits in 32 bits. It
          * returns the same scale being casted to {@code int} type when is
          * possible, otherwise throws an exception.
@@ -2946,7 +2946,7 @@ namespace biz.ritter.javapi.math
             }
         }
 
-        /**
+         /*
          * It returns the value 0 with the most approximated scale of type
          * {@code int}. if {@code longScale > Integer.MAX_VALUE} the
          * scale will be {@code Integer.MAX_VALUE}; if

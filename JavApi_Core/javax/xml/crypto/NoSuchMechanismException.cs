@@ -22,7 +22,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapix.xml.crypto
 {
 
-/**
+ /*
  * This exception is thrown when a particular XML mechanism is requested but
  * is not available in the environment.
  *
@@ -39,7 +39,7 @@ public class NoSuchMechanismException : java.lang.RuntimeException {
 
     private const long serialVersionUID = 4189669069570660166L;
 
-    /**
+     /*
      * The throwable that caused this exception to get thrown, or null if this
      * exception was not caused by another throwable or if the causative
      * throwable is unknown. 
@@ -48,7 +48,7 @@ public class NoSuchMechanismException : java.lang.RuntimeException {
      */
     private java.lang.Throwable cause;
 
-    /**
+     /*
      * Constructs a new <code>NoSuchMechanismException</code> with 
      * <code>null</code> as its detail message.
      */
@@ -56,7 +56,7 @@ public class NoSuchMechanismException : java.lang.RuntimeException {
         
     }
 
-    /**
+     /*
      * Constructs a new <code>NoSuchMechanismException</code> with the 
      * specified detail message. 
      *
@@ -66,7 +66,7 @@ public class NoSuchMechanismException : java.lang.RuntimeException {
         base(message){
     }
 
-    /**
+     /*
      * Constructs a new <code>NoSuchMechanismException</code> with the 
      * specified detail message and cause.  
      * <p>Note that the detail message associated with
@@ -82,7 +82,7 @@ public class NoSuchMechanismException : java.lang.RuntimeException {
         this.cause = cause;
     }
 
-    /**
+     /*
      * Constructs a new <code>NoSuchMechanismException</code> with the 
      * specified cause and a detail message of 
      * <code>(cause==null ? null : cause.toString())</code> (which typically 
@@ -96,7 +96,7 @@ public class NoSuchMechanismException : java.lang.RuntimeException {
         this.cause = cause;
     }
 
-    /**
+     /*
      * Returns the cause of this <code>NoSuchMechanismException</code> or 
      * <code>null</code> if the cause is nonexistent or unknown.  (The 
      * cause is the throwable that caused this 
@@ -109,7 +109,7 @@ public class NoSuchMechanismException : java.lang.RuntimeException {
         return cause;
     }
 
-    /**
+     /*
      * Prints this <code>NoSuchMechanismException</code>, its backtrace and
      * the cause's backtrace to the standard error stream.
      */
@@ -118,7 +118,7 @@ public class NoSuchMechanismException : java.lang.RuntimeException {
         cause.printStackTrace();
     }
 
-    /**
+     /*
      * Prints this <code>NoSuchMechanismException</code>, its backtrace and
      * the cause's backtrace to the specified print stream.
      *
@@ -128,7 +128,7 @@ public class NoSuchMechanismException : java.lang.RuntimeException {
 			this.printStackTrace(new java.io.PrintWriter(s));
     }
 
-    /**
+     /*
      * Prints this <code>NoSuchMechanismException</code>, its backtrace and
      * the cause's backtrace to the specified print writer.
      *

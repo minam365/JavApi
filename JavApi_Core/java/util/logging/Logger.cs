@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.logging
 {
 
-    /**
+     /*
      * Loggers are used to log records to certain outputs, including file, console,
      * etc. They use various handlers to actually do the output-dependent
      * operations.
@@ -58,7 +58,7 @@ namespace biz.ritter.javapi.util.logging
     public class Logger
     {
 
-        /**
+         /*
          * When converting the concurrent collection of handlers to an array, we
          * always pass a zero-length array to avoid size miscalculations. Passing
          * properly-sized arrays is non-atomic, and risks a null element in the
@@ -68,7 +68,7 @@ namespace biz.ritter.javapi.util.logging
          */
         [Obsolete]
         public static readonly Logger global = new Logger(GLOBAL_LOGGER_NAME, default(Logger)); //Basties note: replace "global" with constants
-        /**
+         /*
          * @since 1.6
          */
         public const String GLOBAL_LOGGER_NAME = "global";
@@ -78,31 +78,31 @@ namespace biz.ritter.javapi.util.logging
         // the name of this logger
         private volatile String name;
 
-        /** The parent logger of this logger. */
+         /* The parent logger of this logger. */
         internal Logger parent;
 
-        /** True to notify the parent's handlers of each log message. */
+         /* True to notify the parent's handlers of each log message. */
         private bool notifyParentHandlers = true;
 
-        /** The logging level of this logger, or null if none is set. */
+         /* The logging level of this logger, or null if none is set. */
         internal volatile Level levelObjVal;
 
-    /**
+     /*
      * Child loggers. Should be accessed only while synchronized on {@code
      * LogManager.getLogManager()}.
      */
     internal readonly ArrayList<Logger> children = new ArrayList<Logger>(); //Basties note: is final - so why loose informations...
 
-        /** The filter. */
+         /* The filter. */
         private Filter filter;
 
-        /**
+         /*
          * Indicates whether this logger is named. Only {@link #getAnonymousLogger
          * anonymous loggers} are unnamed.
          */
         private bool isNamed = true;
 
-        /**
+         /*
          * The effective logging level of this logger. In order of preference this
          * is the first applicable of:
          * <ol>
@@ -113,16 +113,16 @@ namespace biz.ritter.javapi.util.logging
          */
         internal volatile int levelIntVal = Level.INFO.intValue();
 
-        /**
+         /*
          * The resource bundle used to localize logging messages. If null, no
          * localization will be performed.
          */
         private volatile String resourceBundleName;
 
-        /** The loaded resource bundle according to the specified name. */
+         /* The loaded resource bundle according to the specified name. */
         private volatile ResourceBundle resourceBundle;
 
-    /**
+     /*
      * The handlers attached to this logger. Eagerly initialized and
      * concurrently modified.
      */
@@ -135,7 +135,7 @@ namespace biz.ritter.javapi.util.logging
         }
 
 
-        /**
+         /*
          * Constructs a {@code Logger} object with the supplied name and resource
          * bundle name; {@code notifiyParentHandlers} is set to {@code true}.
          * <p>
@@ -156,7 +156,7 @@ namespace biz.ritter.javapi.util.logging
             initResourceBundle(resourceBundleName);
         }
 
-    /**
+     /*
      * Initializes this logger's resource bundle.
      *
      * @throws IllegalArgumentException if this logger's resource bundle already
@@ -189,7 +189,7 @@ namespace biz.ritter.javapi.util.logging
         }
     }
 
-        /**
+         /*
          * This method is for compatibility. Tests written to the reference
          * implementation API imply that the isLoggable() method is not called
          * directly. This behavior is important because subclass may override
@@ -206,7 +206,7 @@ namespace biz.ritter.javapi.util.logging
             return l.intValue() >= effectiveLevel;
         }
 
-        /**
+         /*
          * Determines whether this logger will actually log messages of the
          * specified level. The effective level used to do the determination may be
          * inherited from its parent. The default level is {@code Level.INFO}.
@@ -221,7 +221,7 @@ namespace biz.ritter.javapi.util.logging
             return internalIsLoggable(l);
         }
 
-        /**
+         /*
          * Logs a message of level {@code Level.SEVERE}; the message is transmitted
          * to all subscribed handlers.
          *
@@ -233,7 +233,7 @@ namespace biz.ritter.javapi.util.logging
             log(Level.SEVERE, msg);
         }
 
-        /**
+         /*
          * Logs a message of level {@code Level.WARNING}; the message is
          * transmitted to all subscribed handlers.
          *
@@ -245,7 +245,7 @@ namespace biz.ritter.javapi.util.logging
             log(Level.WARNING, msg);
         }
 
-        /**
+         /*
          * Logs a message of level {@code Level.INFO}; the message is transmitted
          * to all subscribed handlers.
          *
@@ -257,7 +257,7 @@ namespace biz.ritter.javapi.util.logging
             log(Level.INFO, msg);
         }
 
-        /**
+         /*
          * Logs a message of level {@code Level.CONFIG}; the message is transmitted
          * to all subscribed handlers.
          *
@@ -269,7 +269,7 @@ namespace biz.ritter.javapi.util.logging
             log(Level.CONFIG, msg);
         }
 
-        /**
+         /*
          * Logs a message of level {@code Level.FINE}; the message is transmitted
          * to all subscribed handlers.
          *
@@ -281,7 +281,7 @@ namespace biz.ritter.javapi.util.logging
             log(Level.FINE, msg);
         }
 
-        /**
+         /*
          * Logs a message of level {@code Level.FINER}; the message is transmitted
          * to all subscribed handlers.
          *
@@ -293,7 +293,7 @@ namespace biz.ritter.javapi.util.logging
             log(Level.FINER, msg);
         }
 
-        /**
+         /*
          * Logs a message of level {@code Level.FINEST}; the message is transmitted
          * to all subscribed handlers.
          *
@@ -305,7 +305,7 @@ namespace biz.ritter.javapi.util.logging
             log(Level.FINEST, msg);
         }
 
-        /**
+         /*
          * Logs a message of the specified level. The message is transmitted to all
          * subscribed handlers.
          *
@@ -327,7 +327,7 @@ namespace biz.ritter.javapi.util.logging
             log(record);
         }
 
-        /**
+         /*
          * Sets the resource bundle and its name for a supplied LogRecord object.
          * This method first tries to use this logger's resource bundle if any,
          * otherwise try to inherit from this logger's parent, recursively up the
@@ -347,7 +347,7 @@ namespace biz.ritter.javapi.util.logging
             }
         }
 
-        /**
+         /*
          * Logs a given log record. Only records with a logging level that is equal
          * or greater than this logger's level will be submitted to this logger's
          * handlers for logging. If {@code getUseParentHandlers()} returns {@code
@@ -392,7 +392,7 @@ namespace biz.ritter.javapi.util.logging
             theParent = temp.parent;
         }
     }
-        /**
+         /*
          * Gets all the handlers associated with this logger.
          *
          * @return an array of all the handlers associated with this logger.
@@ -402,7 +402,7 @@ namespace biz.ritter.javapi.util.logging
             return handlers.toArray(EMPTY_HANDLERS_ARRAY);
         }
 
-        /**
+         /*
          * Gets the flag which indicates whether to use the handlers of this
          * logger's parent to publish incoming log records, potentially recursively
          * up the namespace.
@@ -421,7 +421,7 @@ namespace biz.ritter.javapi.util.logging
             throw new MissingResourceException("loadResourceBundle not yet implemented", typeof(Logger).getClass().getName(), name);
         }
 
-        /**
+         /*
          * Gets a named logger. The returned logger may already exist or may be
          * newly created. In the latter case, its level will be set to the
          * configured level according to the {@code LogManager}'s properties.
@@ -436,7 +436,7 @@ namespace biz.ritter.javapi.util.logging
         {
             return LogManager.getLogManager().getOrCreate(name, null);
         }
-        /**
+         /*
          * Sets the logging level for this logger. A {@code null} level indicates
          * that this logger will inherit its parent's level.
          *
@@ -470,7 +470,7 @@ namespace biz.ritter.javapi.util.logging
             }
         }
     }
-        /**
+         /*
          * Gets the name of this logger, {@code null} for anonymous loggers.
          *
          * @return the name of this logger.
@@ -479,7 +479,7 @@ namespace biz.ritter.javapi.util.logging
         {
             return this.name;
         }
-    /**
+     /*
      * Set the logger's manager and initializes its configuration from the
      * manager's properties.
      */
@@ -523,7 +523,7 @@ namespace biz.ritter.javapi.util.logging
         }
     }
 
-    /**
+     /*
      * Gets the nearest parent of this logger in the namespace, a {@code null}
      * value will be returned if called on the root logger.
      *
@@ -534,7 +534,7 @@ namespace biz.ritter.javapi.util.logging
         return parent;
     }
 
-    /**
+     /*
      * Sets the parent of this logger in the namespace. This method should be
      * used by the {@code LogManager} object only.
      *

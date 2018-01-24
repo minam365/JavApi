@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.io
 {
 
-/**
+ /*
  * A specialized {@link Reader} that reads characters from a {@code String} in
  * a sequential manner.
  * 
@@ -30,7 +30,7 @@ namespace biz.ritter.javapi.io
 		private int pos;
 		private int count;
 
-		/**
+		 /*
      * Construct a new {@code StringReader} with {@code str} as source. The size
      * of the reader is set to the {@code length()} of the string and the Object
      * to synchronize access through is set to {@code str}.
@@ -44,7 +44,7 @@ namespace biz.ritter.javapi.io
 			this.count = str.length ();
 		}
 
-		/**
+		 /*
      * Closes this reader. Once it is closed, read operations on this reader
      * will throw an {@code IOException}. Only the first invocation of this
      * method has any effect.
@@ -55,7 +55,7 @@ namespace biz.ritter.javapi.io
 			str = null;
 		}
 
-		/**
+		 /*
      * Returns a boolean indicating whether this reader is closed.
      * 
      * @return {@code true} if closed, otherwise {@code false}.
@@ -65,7 +65,7 @@ namespace biz.ritter.javapi.io
 			return str == null;
 		}
 
-		/**
+		 /*
      * Sets a mark position in this reader. The parameter {@code readLimit} is
      * ignored for this class. Calling {@code reset()} will reposition the
      * reader back to the marked position.
@@ -94,7 +94,7 @@ namespace biz.ritter.javapi.io
 			}
 		}
 
-		/**
+		 /*
      * Indicates whether this reader supports the {@code mark()} and {@code
      * reset()} methods. This implementation returns {@code true}.
      * 
@@ -106,7 +106,7 @@ namespace biz.ritter.javapi.io
 			return true;
 		}
 
-		/**
+		 /*
      * Reads a single character from the source string and returns it as an
      * integer with the two higher-order bytes set to 0. Returns -1 if the end
      * of the source string has been reached.
@@ -130,7 +130,7 @@ namespace biz.ritter.javapi.io
 			}
 		}
 
-		/**
+		 /*
      * Reads at most {@code len} characters from the source string and stores
      * them at {@code offset} in the character array {@code buf}. Returns the
      * number of characters actually read or -1 if the end of the source string
@@ -181,7 +181,7 @@ namespace biz.ritter.javapi.io
 			}
 		}
 
-		/**
+		 /*
      * Indicates whether this reader is ready to be read without blocking. This
      * implementation always returns {@code true}.
      * 
@@ -202,7 +202,7 @@ namespace biz.ritter.javapi.io
 			}
 		}
 
-		/**
+		 /*
      * Resets this reader's position to the last {@code mark()} location.
      * Invocations of {@code read()} and {@code skip()} will occur from this new
      * location. If this reader has not been marked, it is reset to the
@@ -224,7 +224,7 @@ namespace biz.ritter.javapi.io
 			}
 		}
 
-		/**
+		 /*
      * Moves {@code ns} characters in the source string. Unlike the {@link
      * Reader#skip(long) overridden method}, this method may skip negative skip
      * distances: this rewinds the input so that characters may be read again.

@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * This kind of collection provides advanced operations compared to basic
      * collections, such as insertion, extraction, and inspection.
      * <p/>
@@ -41,7 +41,7 @@ namespace biz.ritter.javapi.util
      */
     public interface Queue<E> : Collection<E> {
 
-        /**
+         /*
          * Inserts the specified element into the queue provided that the condition
          * allows such an operation. The method is generally preferable to
          * {@link Collection#add}, since the latter might throw an exception if the
@@ -54,7 +54,7 @@ namespace biz.ritter.javapi.util
          */
         bool offer(E o);
 
-        /**
+         /*
          * Gets and removes the element at the head of the queue, or returns {@code
          * null} if there is no element in the queue.
          * 
@@ -63,7 +63,7 @@ namespace biz.ritter.javapi.util
          */
         E poll();
 
-        /**
+         /*
          * Gets and removes the element at the head of the queue. Throws a
          * NoSuchElementException if there is no element in the queue.
          * 
@@ -73,7 +73,7 @@ namespace biz.ritter.javapi.util
          */
         E remove();
 
-        /**
+         /*
          * Gets but does not remove the element at the head of the queue.
          * 
          * @return the element at the head of the queue or {@code null} if there is
@@ -81,7 +81,7 @@ namespace biz.ritter.javapi.util
          */
         E peek();
 
-        /**
+         /*
          * Gets but does not remove the element at the head of the queue. Throws a
          * {@code NoSuchElementException} if there is no element in the queue.
          * 

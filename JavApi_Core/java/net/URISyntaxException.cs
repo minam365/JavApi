@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.net
 {
 
-    /**
+     /*
      * A {@code URISyntaxException} will be thrown if some information could not be parsed
      * while creating a URI.
      */
@@ -29,7 +29,7 @@ namespace biz.ritter.javapi.net
 
         private int index;
 
-        /**
+         /*
          * Constructs a new {@code URISyntaxException} instance containing the
          * string that caused the exception, a description of the problem and the
          * index at which the error occurred.
@@ -59,7 +59,7 @@ namespace biz.ritter.javapi.net
             this.index = index;
         }
 
-        /**
+         /*
          * Constructs a new {@code URISyntaxException} instance containing the
          * string that caused the exception and a description of the problem.
          * 
@@ -80,7 +80,7 @@ namespace biz.ritter.javapi.net
             index = -1;
         }
 
-        /**
+         /*
          * Gets the index at which the syntax error was found or {@code -1} if the
          * index is unknown/unavailable.
          * 
@@ -90,7 +90,7 @@ namespace biz.ritter.javapi.net
             return index;
         }
 
-        /**
+         /*
          * Gets a description of the syntax error.
          * 
          * @return the string describing the syntax error.
@@ -99,7 +99,7 @@ namespace biz.ritter.javapi.net
             return base.getMessage();
         }
 
-        /**
+         /*
          * Gets the initial string that contains an invalid syntax.
          * 
          * @return the string that caused the exception.
@@ -108,7 +108,7 @@ namespace biz.ritter.javapi.net
             return input;
         }
 
-        /**
+         /*
          * Gets a description of the exception, including the reason, the string
          * that caused the syntax error and the position of the syntax error if
          * available.

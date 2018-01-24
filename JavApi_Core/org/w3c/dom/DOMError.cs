@@ -14,25 +14,25 @@ using System;
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      * <code>DOMError</code> is an interface that describes an error.
      * <p>See also the <a href='http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407'>Document Object Model (DOM) Level 3 Core Specification</a>.
      * @since DOM Level 3
      */
     public interface DOMError
     {
-        /**
+         /*
          * The severity of the error, either <code>SEVERITY_WARNING</code>, 
          * <code>SEVERITY_ERROR</code>, or <code>SEVERITY_FATAL_ERROR</code>.
          */
         short getSeverity();
 
-        /**
+         /*
          * An implementation specific string describing the error that occurred.
          */
         String getMessage();
 
-        /**
+         /*
          *  A <code>DOMString</code> indicating which related data is expected in 
          * <code>relatedData</code>. Users should refer to the specification of 
          * the error in order to find its <code>DOMString</code> type and 
@@ -47,17 +47,17 @@ namespace org.w3c.dom
          */
         String getType();
 
-        /**
+         /*
          * The related platform dependent exception if any.
          */
         Object getRelatedException();
 
-        /**
+         /*
          *  The related <code>DOMError.type</code> dependent data if any. 
          */
         Object getRelatedData();
 
-        /**
+         /*
          * The location of the error.
          */
         DOMLocator getLocation();
@@ -66,21 +66,21 @@ namespace org.w3c.dom
     public sealed class DOMErrorConstants
     {
         // ErrorSeverity
-        /**
+         /*
          * The severity of the error described by the <code>DOMError</code> is 
          * warning. A <code>SEVERITY_WARNING</code> will not cause the 
          * processing to stop, unless <code>DOMErrorHandler.handleError()</code> 
          * returns <code>false</code>.
          */
         public const short SEVERITY_WARNING = 1;
-        /**
+         /*
          * The severity of the error described by the <code>DOMError</code> is 
          * error. A <code>SEVERITY_ERROR</code> may not cause the processing to 
          * stop if the error can be recovered, unless 
          * <code>DOMErrorHandler.handleError()</code> returns <code>false</code>.
          */
         public const short SEVERITY_ERROR = 2;
-        /**
+         /*
          * The severity of the error described by the <code>DOMError</code> is 
          * fatal error. A <code>SEVERITY_FATAL_ERROR</code> will cause the 
          * normal processing to stop. The return value of 

@@ -34,7 +34,7 @@ import java.security.Provider;
 import java.security.Security;
 */
 
-/**
+ /*
  * A factory for creating {@link XMLSignature} objects from scratch or 
  * for unmarshalling an <code>XMLSignature</code> object from a corresponding
  * XML representation.
@@ -137,12 +137,12 @@ public abstract class XMLSignatureFactory {
     private String mechanismType;
     private java.security.Provider provider;
 
-    /**
+     /*
      * Default constructor, for invocation by subclasses.
      */
     protected XMLSignatureFactory() {}
 
-    /**
+     /*
      * Returns an <code>XMLSignatureFactory</code> that supports the
      * specified XML processing mechanism and representation type (ex: "DOM").
      *
@@ -210,7 +210,7 @@ public abstract class XMLSignatureFactory {
         return providers[0];
     }
 
-    /**
+     /*
      * Returns an <code>XMLSignatureFactory</code> that supports the
      * requested XML processing mechanism and representation type (ex: "DOM"),
      * as supplied by the specified provider. Note that the specified 
@@ -242,7 +242,7 @@ public abstract class XMLSignatureFactory {
         return findInstance(mechanismType, provider);
     }    
 
-    /**
+     /*
      * Returns an <code>XMLSignatureFactory</code> that supports the
      * requested XML processing mechanism and representation type (ex: "DOM"),
      * as supplied by the specified provider. The specified provider must be 
@@ -284,7 +284,7 @@ public abstract class XMLSignatureFactory {
         return findInstance(mechanismType, prov);
     }
 
-    /**
+     /*
      * Returns an <code>XMLSignatureFactory</code> that supports the
      * default XML processing mechanism and representation type ("DOM").
      *
@@ -309,7 +309,7 @@ public abstract class XMLSignatureFactory {
         return getInstance("DOM");
     }
 
-    /**
+     /*
      * Returns the type of the XML processing mechanism and representation
      * supported by this <code>XMLSignatureFactory</code> (ex: "DOM").
      *
@@ -320,7 +320,7 @@ public abstract class XMLSignatureFactory {
         return mechanismType;
     }
 
-    /**
+     /*
      * Returns the provider of this <code>XMLSignatureFactory</code>.
      *
      * @return the provider of this <code>XMLSignatureFactory</code>
@@ -329,7 +329,7 @@ public abstract class XMLSignatureFactory {
         return provider;
     }
 
-    /**
+     /*
      * Creates an <code>XMLSignature</code> and initializes it with the contents
      * of the specified <code>SignedInfo</code> and <code>KeyInfo</code> 
      * objects.
@@ -341,7 +341,7 @@ public abstract class XMLSignatureFactory {
      */
     public abstract XMLSignature newXMLSignature(SignedInfo si, javax.xml.crypto.dsig.keyinfo.KeyInfo ki);
 
-    /**
+     /*
      * Creates an <code>XMLSignature</code> and initializes it with the
      * specified parameters.
      *
@@ -359,7 +359,7 @@ public abstract class XMLSignatureFactory {
     public abstract XMLSignature newXMLSignature(SignedInfo si, javax.xml.crypto.dsig.keyinfo.KeyInfo ki,
         java.util.List<Object> objects, String id, String signatureValueId);
 
-    /**
+     /*
      * Creates a <code>Reference</code> with the specified URI and digest
      * method.
      *
@@ -372,7 +372,7 @@ public abstract class XMLSignatureFactory {
      */
     public abstract Reference newReference(String uri, DigestMethod dm);
 
-    /**
+     /*
      * Creates a <code>Reference</code> with the specified parameters.
      *
      * @param uri the reference URI (may be <code>null</code>)
@@ -392,7 +392,7 @@ public abstract class XMLSignatureFactory {
     public abstract Reference newReference(String uri, DigestMethod dm, 
         java.util.List<Object> transforms, String type, String id);
 
-    /**
+     /*
      * Creates a <code>Reference</code> with the specified parameters and
      * pre-calculated digest value. 
      *
@@ -422,7 +422,7 @@ public abstract class XMLSignatureFactory {
     public abstract Reference newReference(String uri, DigestMethod dm, 
         java.util.List<Object> transforms, String type, String id, byte[] digestValue);
 
-    /**
+     /*
      * Creates a <code>Reference</code> with the specified parameters.
      *
      * <p>This method is useful when a list of transforms have already been
@@ -465,7 +465,7 @@ public abstract class XMLSignatureFactory {
         java.util.List<Object> appliedTransforms, Data result, java.util.List<Object> transforms, String type, 
         String id);
 
-    /**
+     /*
      * Creates a <code>SignedInfo</code> with the specified canonicalization
      * and signature methods, and list of one or more references. 
      *
@@ -483,7 +483,7 @@ public abstract class XMLSignatureFactory {
     public abstract SignedInfo newSignedInfo(CanonicalizationMethod cm,
         SignatureMethod sm, java.util.List<Object> references);
 
-    /**
+     /*
      * Creates a <code>SignedInfo</code> with the specified parameters.
      *
      * @param cm the canonicalization method
@@ -502,7 +502,7 @@ public abstract class XMLSignatureFactory {
         SignatureMethod sm, java.util.List<Object> references, String id);
 
     // Object factory methods
-    /**
+     /*
      * Creates an <code>XMLObject</code> from the specified parameters.
      *
      * @param content a list of {@link XMLStructure}s. The list
@@ -518,7 +518,7 @@ public abstract class XMLSignatureFactory {
     public abstract XMLObject newXMLObject(java.util.List<Object> content, String id, 
         String mimeType, String encoding);
 
-    /**
+     /*
      * Creates a <code>Manifest</code> containing the specified 
      * list of {@link Reference}s. 
      *
@@ -533,7 +533,7 @@ public abstract class XMLSignatureFactory {
      */
     public abstract Manifest newManifest(java.util.List<Object> references);
 
-    /**
+     /*
      * Creates a <code>Manifest</code> containing the specified 
      * list of {@link Reference}s and optional id. 
      *
@@ -549,7 +549,7 @@ public abstract class XMLSignatureFactory {
      */
     public abstract Manifest newManifest(java.util.List<Object> references, String id);
 
-    /**
+     /*
      * Creates a <code>SignatureProperty</code> containing the specified 
      * list of {@link XMLStructure}s, target URI and optional id. 
      *
@@ -568,7 +568,7 @@ public abstract class XMLSignatureFactory {
     public abstract SignatureProperty newSignatureProperty
         (java.util.List<Object> content, String target, String id);
 
-    /**
+     /*
      * Creates a <code>SignatureProperties</code> containing the specified 
      * list of {@link SignatureProperty}s and optional id. 
      *
@@ -587,7 +587,7 @@ public abstract class XMLSignatureFactory {
         (java.util.List<Object> properties, String id);
 
     // Algorithm factory methods
-    /**
+     /*
      * Creates a <code>DigestMethod</code> for the specified algorithm URI 
      * and parameters.
      *
@@ -606,7 +606,7 @@ public abstract class XMLSignatureFactory {
         javax.xml.crypto.dsig.spec.DigestMethodParameterSpec paramsJ) ;//throws NoSuchAlgorithmException,
         //InvalidAlgorithmParameterException;
 
-    /**
+     /*
      * Creates a <code>SignatureMethod</code> for the specified algorithm URI 
      * and parameters.
      *
@@ -625,7 +625,7 @@ public abstract class XMLSignatureFactory {
         javax.xml.crypto.dsig.spec.SignatureMethodParameterSpec paramsJ) ;//throws NoSuchAlgorithmException,
         //InvalidAlgorithmParameterException;
 
-    /**
+     /*
      * Creates a <code>Transform</code> for the specified algorithm URI 
      * and parameters.
      *
@@ -644,7 +644,7 @@ public abstract class XMLSignatureFactory {
         TransformParameterSpec paramsJ) ;//throws NoSuchAlgorithmException,
         //InvalidAlgorithmParameterException;
 
-    /**
+     /*
      * Creates a <code>Transform</code> for the specified algorithm URI 
      * and parameters. The parameters are specified as a mechanism-specific
      * <code>XMLStructure</code> (ex: {@link DOMStructure}). This method is 
@@ -669,7 +669,7 @@ public abstract class XMLSignatureFactory {
         XMLStructure paramsJ) ;//throws NoSuchAlgorithmException,
         //InvalidAlgorithmParameterException;
 
-    /**
+     /*
      * Creates a <code>CanonicalizationMethod</code> for the specified 
      * algorithm URI and parameters.
      *
@@ -688,7 +688,7 @@ public abstract class XMLSignatureFactory {
         String algorithm, C14NMethodParameterSpec paramsJ);// 
         //throws NoSuchAlgorithmException, InvalidAlgorithmParameterException;
 
-    /**
+     /*
      * Creates a <code>CanonicalizationMethod</code> for the specified 
      * algorithm URI and parameters. The parameters are specified as a 
      * mechanism-specific <code>XMLStructure</code> (ex: {@link DOMStructure}). 
@@ -713,7 +713,7 @@ public abstract class XMLSignatureFactory {
         String algorithm, XMLStructure paramsJ); 
         //throws NoSuchAlgorithmException, InvalidAlgorithmParameterException;
 
-    /**
+     /*
      * Returns a <code>KeyInfoFactory</code> that creates <code>KeyInfo</code>
      * objects. The returned <code>KeyInfoFactory</code> has the same 
      * mechanism type and provider as this <code>XMLSignatureFactory</code>.
@@ -727,7 +727,7 @@ public abstract class XMLSignatureFactory {
         return javax.xml.crypto.dsig.keyinfo.KeyInfoFactory.getInstance(getMechanismType(), getProvider());
     }
 
-    /**
+     /*
      * Unmarshals a new <code>XMLSignature</code> instance from a
      * mechanism-specific <code>XMLValidateContext</code> instance.
      *
@@ -744,7 +744,7 @@ public abstract class XMLSignatureFactory {
     public abstract XMLSignature unmarshalXMLSignature
         (XMLValidateContext context) ;//throws MarshalException;
 
-    /**
+     /*
      * Unmarshals a new <code>XMLSignature</code> instance from a
      * mechanism-specific <code>XMLStructure</code> instance.
      * This method is useful if you only want to unmarshal (and not
@@ -763,7 +763,7 @@ public abstract class XMLSignatureFactory {
     public abstract XMLSignature unmarshalXMLSignature
         (XMLStructure xmlStructure) ;//throws MarshalException;
 
-    /**
+     /*
      * Indicates whether a specified feature is supported.
      *
      * @param feature the feature name (as an absolute URI)
@@ -773,7 +773,7 @@ public abstract class XMLSignatureFactory {
      */
     public abstract bool isFeatureSupported(String feature);
 
-    /**
+     /*
      * Returns a reference to the <code>URIDereferencer</code> that is used by 
      * default to dereference URIs in {@link Reference} objects.
      *

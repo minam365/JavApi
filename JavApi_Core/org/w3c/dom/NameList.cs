@@ -14,7 +14,7 @@ using System;
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      *  The <code>NameList</code> interface provides the abstraction of an ordered 
      * collection of parallel pairs of name and namespace values (which could be 
      * null values), without defining or constraining how this collection is 
@@ -25,7 +25,7 @@ namespace org.w3c.dom
      */
     public interface NameList
     {
-        /**
+         /*
          *  Returns the <code>index</code>th name item in the collection. 
          * @param index Index into the collection.
          * @return  The name at the <code>index</code>th position in the 
@@ -34,7 +34,7 @@ namespace org.w3c.dom
          */
         String getName(int index);
 
-        /**
+         /*
          *  Returns the <code>index</code>th namespaceURI item in the collection. 
          * @param index Index into the collection.
          * @return  The namespace URI at the <code>index</code>th position in the 
@@ -43,13 +43,13 @@ namespace org.w3c.dom
          */
         String getNamespaceURI(int index);
 
-        /**
+         /*
          *  The number of pairs (name and namespaceURI) in the list. The range of 
          * valid child node indices is 0 to <code>length-1</code> inclusive. 
          */
         int getLength();
 
-        /**
+         /*
          *  Test if a name is part of this <code>NameList</code>. 
          * @param str  The name to look for. 
          * @return  <code>true</code> if the name has been found, 
@@ -57,7 +57,7 @@ namespace org.w3c.dom
          */
         bool contains(String str);
 
-        /**
+         /*
          *  Test if the pair namespaceURI/name is part of this 
          * <code>NameList</code>. 
          * @param namespaceURI  The namespace URI to look for. 

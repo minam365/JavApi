@@ -42,7 +42,7 @@ namespace biz.ritter.javapi.nio.charset
 
     import org.apache.harmony.niochar.CharsetProviderImpl;
 */
-    /**
+     /*
      * A charset defines a mapping between a Unicode character sequence and a byte
      * sequence. It facilitates the encoding from a Unicode character sequence into
      * a byte sequence, and the decoding from a byte sequence into a Unicode
@@ -103,7 +103,7 @@ namespace biz.ritter.javapi.nio.charset
 
         private static bool inForNameInternal = false;
 
-        /**
+         /*
          * Constructs a <code>Charset</code> object. Duplicated aliases are
          * ignored.
          * 
@@ -183,7 +183,7 @@ namespace biz.ritter.javapi.nio.charset
         }
 
 
-        /**
+         /*
          * Gets a map of all available charsets supported by the runtime.
          * <p>
          * The returned map contains mappings from canonical names to corresponding
@@ -210,7 +210,7 @@ namespace biz.ritter.javapi.nio.charset
         }
 
 
-        /**
+         /*
          * Gets a <code>Charset</code> instance for the specified charset name.
          * 
          * @param charsetName
@@ -227,7 +227,7 @@ namespace biz.ritter.javapi.nio.charset
             return cs;
         }
 
-        /**
+         /*
          * Determines whether the specified charset is supported by this runtime.
          * 
          * @param charsetName
@@ -264,7 +264,7 @@ namespace biz.ritter.javapi.nio.charset
             return cs;
         }
 
-        /**
+         /*
          * Determines whether this charset is a super set of the given charset.
          * 
          * @param charset
@@ -275,21 +275,21 @@ namespace biz.ritter.javapi.nio.charset
          */
         public abstract bool contains(Charset charset);
 
-        /**
+         /*
          * Gets a new instance of an encoder for this charset.
          * 
          * @return a new instance of an encoder for this charset.
          */
         public abstract CharsetEncoder newEncoder();
 
-        /**
+         /*
          * Gets a new instance of a decoder for this charset.
          * 
          * @return a new instance of a decoder for this charset.
          */
         public abstract CharsetDecoder newDecoder();
 
-        /**
+         /*
          * Gets the canonical name of this charset.
          * 
          * @return this charset's name in canonical form.
@@ -298,7 +298,7 @@ namespace biz.ritter.javapi.nio.charset
             return this.canonicalName;
         }
 
-        /**
+         /*
          * Gets the set of this charset's aliases.
          * 
          * @return an unmodifiable set of this charset's aliases.
@@ -307,7 +307,7 @@ namespace biz.ritter.javapi.nio.charset
             return java.util.Collections<Object>.unmodifiableSet(this.aliasesSet);
         }
 
-        /**
+         /*
          * Gets the name of this charset for the default locale.
          * 
          * <p>The default implementation returns the canonical name of this charset.
@@ -319,7 +319,7 @@ namespace biz.ritter.javapi.nio.charset
             return this.canonicalName;
         }
 
-        /**
+         /*
          * Gets the name of this charset for the specified locale.
          *
          * <p>The default implementation returns the canonical name of this charset.
@@ -333,7 +333,7 @@ namespace biz.ritter.javapi.nio.charset
             return this.canonicalName;
         }
 
-        /**
+         /*
          * Indicates whether this charset is known to be registered in the IANA
          * Charset Registry.
          * 
@@ -345,7 +345,7 @@ namespace biz.ritter.javapi.nio.charset
                     && !canonicalName.startsWith("X-"); //$NON-NLS-1$
         }
 
-        /**
+         /*
          * Returns true if this charset supports encoding, false otherwise.
          * 
          * @return true if this charset supports encoding, false otherwise.
@@ -385,7 +385,7 @@ namespace biz.ritter.javapi.nio.charset
             return encode(java.nio.CharBuffer.wrap((java.lang.CharSequence)s.getWrapperInstance()));
         }
 
-        /**
+         /*
          * Decodes the content of the specified byte buffer and writes it to a
          * character buffer that is to be returned.
          * <p>
@@ -415,7 +415,7 @@ namespace biz.ritter.javapi.nio.charset
          * -------------------------------------------------------------------
          */
 
-        /**
+         /*
          * Compares this charset with the given charset. This comparation is
          * based on the case insensitive canonical names of the charsets.
          * 
@@ -434,7 +434,7 @@ namespace biz.ritter.javapi.nio.charset
          * -------------------------------------------------------------------
          */
 
-        /**
+         /*
          * Determines whether this charset equals to the given object. They are
          * considered to be equal if they have the same canonical name.
          * 
@@ -451,7 +451,7 @@ namespace biz.ritter.javapi.nio.charset
             return false;
         }
 
-        /**
+         /*
          * Gets the hash code of this charset.
          * 
          * @return the hash code of this charset.
@@ -461,7 +461,7 @@ namespace biz.ritter.javapi.nio.charset
             return this.canonicalName.GetHashCode();
         }
 
-        /**
+         /*
          * Gets a string representation of this charset. Usually this contains the
          * canonical name of the charset.
          * 
@@ -472,7 +472,7 @@ namespace biz.ritter.javapi.nio.charset
             return "Charset[" + this.canonicalName + "]"; //$NON-NLS-1$//$NON-NLS-2$
         }
 
-        /**
+         /*
          * Gets the system default charset from the virtual machine.
          * 
          * @return the default charset.
@@ -490,7 +490,7 @@ namespace biz.ritter.javapi.nio.charset
 
     }
 #region IgnoreCaseComparator
-    /**
+     /*
         * A comparator that ignores case.
         */
     internal class IgnoreCaseComparator<E> : java.util.Comparator<E> {

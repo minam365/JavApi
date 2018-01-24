@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.beans
 {
-    /**
+     /*
      * The <code>Introspector</code> is a utility for developers to figure out
      * which properties, events, and methods a JavaBean supports.
      * <p>
@@ -53,19 +53,19 @@ namespace biz.ritter.javapi.beans
     {
 
         // Public fields
-        /**
+         /*
          * Constant values to indicate that the <code>Introspector</code> will
          * ignore all <code>BeanInfo</code> class.
          */
         public static readonly int IGNORE_ALL_BEANINFO = 3;
 
-        /**
+         /*
          * Constant values to indicate that the <code>Introspector</code> will
          * ignore the <code>BeanInfo</code> class of the current bean class.
          */
         public static readonly int IGNORE_IMMEDIATE_BEANINFO = 2;
 
-        /**
+         /*
          * Constant values to indicate that the <code>Introspector</code> will use
          * all <code>BeanInfo</code> class which have been found. This is the default one.
          */
@@ -90,7 +90,7 @@ namespace biz.ritter.javapi.beans
         {
         }
 
-        /**
+         /*
          * Decapitalizes a given string according to the rule:
          * <ul>
          * <li>If the first or only character is Upper Case, it is made Lower Case</li>
@@ -121,7 +121,7 @@ namespace biz.ritter.javapi.beans
         }
 
 
-        /**
+         /*
          * Flushes all <code>BeanInfo</code> caches.
          *  
          */
@@ -132,7 +132,7 @@ namespace biz.ritter.javapi.beans
             theCache.clear();
         }
 
-        /**
+         /*
          * Flushes the <code>BeanInfo</code> caches of the specified bean class
          * 
          * @param clazz
@@ -147,7 +147,7 @@ namespace biz.ritter.javapi.beans
             theCache.remove(clazz);
         }
 
-        /**
+         /*
          * Gets the <code>BeanInfo</code> object which contains the information of
          * the properties, events and methods of the specified bean class.
          * 
@@ -173,7 +173,7 @@ namespace biz.ritter.javapi.beans
             return beanInfo;
         }
 
-        /**
+         /*
          * Gets the <code>BeanInfo</code> object which contains the information of
          * the properties, events and methods of the specified bean class. It will
          * not introspect the "stopclass" and its super class.
@@ -202,7 +202,7 @@ namespace biz.ritter.javapi.beans
             return getBeanInfoImplAndInit(beanClass, stopClass, USE_ALL_BEANINFO);
         }
 
-        /**
+         /*
          * Gets the <code>BeanInfo</code> object which contains the information of
          * the properties, events and methods of the specified bean class.
          * <ol>
@@ -240,7 +240,7 @@ namespace biz.ritter.javapi.beans
             return getBeanInfoImplAndInit(beanClass, null, flags);
         }
 
-        /**
+         /*
          * Gets an array of search packages.
          * 
          * @return an array of search packages.

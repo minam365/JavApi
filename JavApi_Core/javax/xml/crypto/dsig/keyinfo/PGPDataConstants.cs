@@ -22,7 +22,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig.keyinfo
 		private PGPDataConstants ()
 		{
 		}
-		/**
+		 /*
      * URI identifying the PGPData KeyInfo type:
      * http://www.w3.org/2000/09/xmldsig#PGPData. This can be specified as the 
      * value of the <code>type</code> parameter of the {@link RetrievalMethod} 

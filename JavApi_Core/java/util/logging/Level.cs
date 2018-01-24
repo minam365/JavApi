@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util.logging
 {
-/**
+ /*
  * {@code Level} objects are used to indicate the level of logging. There are a
  * set of predefined logging levels, each associated with an integer value.
  * Enabling a certain logging level also enables all logging levels with larger
@@ -35,52 +35,52 @@ public class Level : java.io.Serializable {
 
     private static readonly java.util.AbstractList<Level> levels = new java.util.ArrayList<Level>(9);
 
-    /**
+     /*
      * The OFF level provides no logging messages.
      */
     public static readonly Level OFF = new Level("OFF", java.lang.Integer.MAX_VALUE); //$NON-NLS-1$
 
-    /**
+     /*
      * The SEVERE level provides severe failure messages.
      */
     public static readonly Level SEVERE = new Level("SEVERE", 1000); //$NON-NLS-1$
 
-    /**
+     /*
      * The WARNING level provides warnings.
      */
     public static readonly Level WARNING = new Level("WARNING", 900); //$NON-NLS-1$
 
-    /**
+     /*
      * The INFO level provides informative messages.
      */
     public static readonly Level INFO = new Level("INFO", 800); //$NON-NLS-1$
 
-    /**
+     /*
      * The CONFIG level provides static configuration messages.
      */
     public static readonly Level CONFIG = new Level("CONFIG", 700); //$NON-NLS-1$
 
-    /**
+     /*
      * The FINE level provides tracing messages.
      */
     public static readonly Level FINE = new Level("FINE", 500); //$NON-NLS-1$
 
-    /**
+     /*
      * The FINER level provides more detailed tracing messages.
      */
     public static readonly Level FINER = new Level("FINER", 400); //$NON-NLS-1$
 
-    /**
+     /*
      * The FINEST level provides highly detailed tracing messages.
      */
     public static readonly Level FINEST = new Level("FINEST", 300); //$NON-NLS-1$
 
-    /**
+     /*
      * The ALL level provides all logging messages.
      */
     public static readonly Level ALL = new Level("ALL", java.lang.Integer.MIN_VALUE); //$NON-NLS-1$
 
-    /**
+     /*
      * Parses a level name into a {@code Level} object.
      * 
      * @param name
@@ -136,35 +136,35 @@ public class Level : java.io.Serializable {
         return new Level(name, nameAsInt);
     }
 
-    /**
+     /*
      * The name of this Level.
      * 
      * @serial
      */
     private readonly String name;
 
-    /**
+     /*
      * The integer value indicating the level.
      * 
      * @serial
      */
     private readonly int value;
 
-    /**
+     /*
      * The name of the resource bundle used to localize the level name.
      * 
      * @serial
      */
     private readonly String resourceBundleName;
 
-    /**
+     /*
      * The resource bundle associated with this level, used to localize the
      * level name.
      */
     [NonSerialized]
     private ResourceBundle rb;
 
-    /**
+     /*
      * Constructs an instance of {@code Level} taking the supplied name and
      * level value.
      * 
@@ -179,7 +179,7 @@ public class Level : java.io.Serializable {
         this(name, level, null){
     }
 
-    /**
+     /*
      * Constructs an instance of {@code Level} taking the supplied name, level
      * value and resource bundle name.
      * 
@@ -213,7 +213,7 @@ public class Level : java.io.Serializable {
         }
     }
 
-    /**
+     /*
      * Gets the name of this level.
      * 
      * @return this level's name.
@@ -222,7 +222,7 @@ public class Level : java.io.Serializable {
         return this.name;
     }
 
-    /**
+     /*
      * Gets the name of the resource bundle associated with this level.
      * 
      * @return the name of this level's resource bundle.
@@ -231,7 +231,7 @@ public class Level : java.io.Serializable {
         return this.resourceBundleName;
     }
 
-    /**
+     /*
      * Gets the integer value indicating this level.
      * 
      * @return this level's integer value.
@@ -240,7 +240,7 @@ public class Level : java.io.Serializable {
         return this.value;
     }
 
-    /**
+     /*
      * Serialization helper method to maintain singletons and add any new
      * levels.
      * 
@@ -268,7 +268,7 @@ public class Level : java.io.Serializable {
         }
     }
 
-    /**
+     /*
      * Serialization helper to setup transient resource bundle instance.
      * 
      * @param in
@@ -289,7 +289,7 @@ public class Level : java.io.Serializable {
         }
     }
 
-    /**
+     /*
      * Gets the localized name of this level. The default locale is used. If no
      * resource bundle is associated with this level then the original level
      * name is returned.
@@ -308,7 +308,7 @@ public class Level : java.io.Serializable {
         }
     }
 
-    /**
+     /*
      * Compares two {@code Level} objects for equality. They are considered to
      * be equal if they have the same level value.
      * 
@@ -329,7 +329,7 @@ public class Level : java.io.Serializable {
         return ((Level) o).intValue() == this.value;
     }
 
-    /**
+     /*
      * Returns the hash code of this {@code Level} object.
      * 
      * @return this level's hash code.
@@ -339,7 +339,7 @@ public class Level : java.io.Serializable {
         return this.value;
     }
 
-    /**
+     /*
      * Returns the string representation of this {@code Level} object. In
      * this case, it is the level's name.
      * 

@@ -21,7 +21,7 @@ using System;
 namespace biz.ritter.javapix.xml.crypto
 {
 
-/**
+ /*
  * Contains common context information for XML cryptographic operations.
  *
  * <p>This interface contains methods for setting and retrieving properties 
@@ -39,7 +39,7 @@ namespace biz.ritter.javapix.xml.crypto
  */
 public interface XMLCryptoContext {
 
-    /**
+     /*
      * Returns the base URI.
      *
      * @return the base URI, or <code>null</code> if not specified
@@ -47,7 +47,7 @@ public interface XMLCryptoContext {
      */
     String getBaseURI();
 
-    /**
+     /*
      * Sets the base URI.
      *
      * @param baseURI the base URI, or <code>null</code> to remove current
@@ -58,7 +58,7 @@ public interface XMLCryptoContext {
      */
     void setBaseURI(String baseURI);
 
-    /**
+     /*
      * Returns the key selector for finding a key.
      *
      * @return the key selector, or <code>null</code> if not specified
@@ -66,7 +66,7 @@ public interface XMLCryptoContext {
      */
     KeySelector getKeySelector();
 
-    /**
+     /*
      * Sets the key selector for finding a key.
      *
      * @param ks the key selector, or <code>null</code> to remove the current
@@ -75,7 +75,7 @@ public interface XMLCryptoContext {
      */
     void setKeySelector(KeySelector ks);
 
-    /**
+     /*
      * Returns a <code>URIDereferencer</code> that is used to dereference
      * {@link URIReference}s.
      *
@@ -85,7 +85,7 @@ public interface XMLCryptoContext {
      */
     URIDereferencer getURIDereferencer();
 
-    /**
+     /*
      * Sets a <code>URIDereferencer</code> that is used to dereference
      * {@link URIReference}s. The specified <code>URIDereferencer</code>
      * is used in place of an implementation's default 
@@ -97,7 +97,7 @@ public interface XMLCryptoContext {
      */
     void setURIDereferencer(URIDereferencer dereferencer);
 
-    /**
+     /*
      * Returns the namespace prefix that the specified namespace URI is
      * associated with. Returns the specified default prefix if the specified
      * namespace URI has not been bound to a prefix. To bind a namespace URI
@@ -117,7 +117,7 @@ public interface XMLCryptoContext {
      */
     String getNamespacePrefix(String namespaceURI, String defaultPrefix);
 
-    /**
+     /*
      * Maps the specified namespace URI to the specified prefix. If there is
      * already a prefix associated with the specified namespace URI, the old
      * prefix is replaced by the specified prefix.
@@ -134,7 +134,7 @@ public interface XMLCryptoContext {
      */
     String putNamespacePrefix(String namespaceURI, String prefix);
 
-    /**
+     /*
      * Returns the default namespace prefix. The default namespace prefix
      * is the prefix for all namespace URIs not explicitly set by the
      * {@link #putNamespacePrefix putNamespacePrefix} method.
@@ -145,7 +145,7 @@ public interface XMLCryptoContext {
      */
     String getDefaultNamespacePrefix();
 
-    /**
+     /*
      * Sets the default namespace prefix. This sets the namespace prefix for
      * all namespace URIs not explicitly set by the {@link #putNamespacePrefix
      * putNamespacePrefix} method.
@@ -157,7 +157,7 @@ public interface XMLCryptoContext {
      */
     void setDefaultNamespacePrefix(String defaultPrefix);
 
-    /**
+     /*
      * Sets the specified property.
      *
      * @param name the name of the property
@@ -169,7 +169,7 @@ public interface XMLCryptoContext {
      */
     Object setProperty(String name, Object value);
 
-    /**
+     /*
      * Returns the value of the specified property.
      *
      * @param name the name of the property
@@ -180,7 +180,7 @@ public interface XMLCryptoContext {
      */
     Object getProperty(String name);
 
-    /**
+     /*
      * Returns the value to which this context maps the specified key.
      *
      * <p>More formally, if this context contains a mapping from a key 
@@ -199,7 +199,7 @@ public interface XMLCryptoContext {
      */ 
     Object get(Object key);
 
-    /**
+     /*
      * Associates the specified value with the specified key in this context.
      * If the context previously contained a mapping for this key, the old
      * value is replaced by the specified value.

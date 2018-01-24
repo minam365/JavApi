@@ -14,7 +14,7 @@
 
 namespace org.apache.harmony.awt.gl.image
 {
-    /**
+     /*
      * @author Igor V. Stolyarov
      * Created on 13.03.2006
      *

@@ -15,7 +15,7 @@ using java=biz.ritter.javapi;
 namespace org.w3c.dom.ls
 {
 
-    /**
+     /*
      *  This interface represents an output destination for data. 
      * <p> This interface allows an application to encapsulate information about 
      * an output destination in a single object, which may include a URI, a byte 
@@ -51,36 +51,36 @@ namespace org.w3c.dom.ls
      */
     public interface LSOutput
     {
-        /**
+         /*
          *  An attribute of a language and binding dependent type that represents 
          * a writable stream to which 16-bit units can be output. 
          */
         java.io.Writer getCharacterStream();
-        /**
+         /*
          *  An attribute of a language and binding dependent type that represents 
          * a writable stream to which 16-bit units can be output. 
          */
         void setCharacterStream(java.io.Writer characterStream);
 
-        /**
+         /*
          *  An attribute of a language and binding dependent type that represents 
          * a writable stream of bytes. 
          */
         java.io.OutputStream getByteStream();
-        /**
+         /*
          *  An attribute of a language and binding dependent type that represents 
          * a writable stream of bytes. 
          */
         void setByteStream(java.io.OutputStream byteStream);
 
-        /**
+         /*
          *  The system identifier, a URI reference [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>], for this 
          * output destination. 
          * <br> If the system ID is a relative URI reference (see section 5 in [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]), the 
          * behavior is implementation dependent. 
          */
         String getSystemId();
-        /**
+         /*
          *  The system identifier, a URI reference [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>], for this 
          * output destination. 
          * <br> If the system ID is a relative URI reference (see section 5 in [<a href='http://www.ietf.org/rfc/rfc2396.txt'>IETF RFC 2396</a>]), the 
@@ -88,7 +88,7 @@ namespace org.w3c.dom.ls
          */
         void setSystemId(String systemId);
 
-        /**
+         /*
          *  The character encoding to use for the output. The encoding must be a 
          * string acceptable for an XML encoding declaration ([<a href='http://www.w3.org/TR/2004/REC-xml-20040204'>XML 1.0</a>] section 
          * 4.3.3 "Character Encoding in Entities"), it is recommended that 
@@ -97,7 +97,7 @@ namespace org.w3c.dom.ls
          *  should be referred to using their registered names. 
          */
         String getEncoding();
-        /**
+         /*
          *  The character encoding to use for the output. The encoding must be a 
          * string acceptable for an XML encoding declaration ([<a href='http://www.w3.org/TR/2004/REC-xml-20040204'>XML 1.0</a>] section 
          * 4.3.3 "Character Encoding in Entities"), it is recommended that 

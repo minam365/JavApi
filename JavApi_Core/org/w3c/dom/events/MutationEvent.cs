@@ -9,14 +9,14 @@ using System;
 namespace org.w3c.dom.events
 {
 
-    /**
+     /*
      * The <code>MutationEvent</code> interface provides specific contextual  
      * information associated with Mutation events. 
      * @since DOM Level 2
      */
     public interface MutationEvent : Event
     {
-        /**
+         /*
          *  <code>relatedNode</code> is used to identify a secondary node related to 
          * a mutation event. For example, if a mutation event is dispatched to a 
          * node indicating that its parent has changed, the <code>relatedNode</code>
@@ -25,22 +25,22 @@ namespace org.w3c.dom.events
          * the changed node. 
          */
         Node getRelatedNode();
-        /**
+         /*
          *  <code>prevValue</code> indicates the previous value of text nodes and 
          * attributes in attrModified and charDataModified events. 
          */
         String getPrevValue();
-        /**
+         /*
          *  <code>newValue</code> indicates the new value of text nodes and 
          * attributes in attrModified and charDataModified events. 
          */
         String getNewValue();
-        /**
+         /*
          *  <code>attrName</code> indicates the changed attr in the attrModified 
          * event. 
          */
         String getAttrName();
-        /**
+         /*
          * 
          * @param typeArg Specifies the event type.
          * @param canBubbleArg Specifies whether or not the event can bubble.

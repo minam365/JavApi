@@ -6,7 +6,7 @@ using System;
 
 namespace org.xml.sax
 {
-/**
+ /*
  * Receive notification of general document events.
  *
  * <blockquote>
@@ -49,7 +49,7 @@ namespace org.xml.sax
 public interface DocumentHandler {
     
     
-    /**
+     /*
      * Receive an object for locating the origin of SAX document events.
      *
      * <p>SAX parsers are strongly encouraged (though not absolutely
@@ -77,7 +77,7 @@ public interface DocumentHandler {
     void setDocumentLocator (Locator locator);
     
     
-    /**
+     /*
      * Receive notification of the beginning of a document.
      *
      * <p>The SAX parser will invoke this method only once, before any
@@ -90,7 +90,7 @@ public interface DocumentHandler {
     void startDocument ();//	throws SAXException;
     
     
-    /**
+     /*
      * Receive notification of the end of a document.
      *
      * <p>The SAX parser will invoke this method only once, and it will
@@ -105,7 +105,7 @@ public interface DocumentHandler {
     void endDocument ();//	throws SAXException;
     
     
-    /**
+     /*
      * Receive notification of the beginning of an element.
      *
      * <p>The Parser will invoke this method at the beginning of every
@@ -130,7 +130,7 @@ public interface DocumentHandler {
     void startElement (String name, AttributeList atts);//	throws SAXException;
     
     
-    /**
+     /*
      * Receive notification of the end of an element.
      *
      * <p>The SAX parser will invoke this method at the end of every
@@ -148,7 +148,7 @@ public interface DocumentHandler {
     void endElement (String name);//	throws SAXException;
     
     
-    /**
+     /*
      * Receive notification of character data.
      *
      * <p>The Parser will call this method to report each chunk of
@@ -176,7 +176,7 @@ public interface DocumentHandler {
     void characters (char []ch, int start, int length);//	throws SAXException;
     
     
-    /**
+     /*
      * Receive notification of ignorable whitespace in element content.
      *
      * <p>Validating Parsers must use this method to report each chunk
@@ -203,7 +203,7 @@ public interface DocumentHandler {
     void ignorableWhitespace (char []ch, int start, int length);//	throws SAXException;
     
     
-    /**
+     /*
      * Receive notification of a processing instruction.
      *
      * <p>The Parser will invoke this method once for each processing

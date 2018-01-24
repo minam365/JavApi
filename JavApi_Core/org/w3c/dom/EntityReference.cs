@@ -13,7 +13,7 @@
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      * <code>EntityReference</code> objects may be inserted into the structure 
      * model when an entity reference is in the source document, or when the 
      * user wishes to insert an entity reference. Note that character references 

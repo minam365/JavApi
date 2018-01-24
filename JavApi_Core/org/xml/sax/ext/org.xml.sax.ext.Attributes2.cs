@@ -7,7 +7,7 @@ using System;
 namespace org.xml.sax.ext
 {
 
-    /**
+     /*
      * SAX2 extension to augment the per-attribute information
      * provided though {@link Attributes}.
      * If an implementation supports this extension, the attributes
@@ -37,7 +37,7 @@ namespace org.xml.sax.ext
      */
     public interface Attributes2 : Attributes
     {
-        /**
+         /*
          * Returns false unless the attribute was declared in the DTD.
          * This helps distinguish two kinds of attributes that SAX reports
          * as CDATA:  ones that were declared (and hence are usually valid),
@@ -51,7 +51,7 @@ namespace org.xml.sax.ext
          */
         bool isDeclared(int index);
 
-        /**
+         /*
          * Returns false unless the attribute was declared in the DTD.
          * This helps distinguish two kinds of attributes that SAX reports
          * as CDATA:  ones that were declared (and hence are usually valid),
@@ -65,7 +65,7 @@ namespace org.xml.sax.ext
          */
         bool isDeclared(String qName);
 
-        /**
+         /*
          * Returns false unless the attribute was declared in the DTD.
          * This helps distinguish two kinds of attributes that SAX reports
          * as CDATA:  ones that were declared (and hence are usually valid),
@@ -86,7 +86,7 @@ namespace org.xml.sax.ext
          */
         bool isDeclared(String uri, String localName);
 
-        /**
+         /*
          * Returns true unless the attribute value was provided
          * by DTD defaulting.
          *
@@ -98,7 +98,7 @@ namespace org.xml.sax.ext
          */
         bool isSpecified(int index);
 
-        /**
+         /*
          * Returns true unless the attribute value was provided
          * by DTD defaulting.
          *
@@ -117,7 +117,7 @@ namespace org.xml.sax.ext
          */
         bool isSpecified(String uri, String localName);
 
-        /**
+         /*
          * Returns true unless the attribute value was provided
          * by DTD defaulting.
          *

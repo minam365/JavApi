@@ -19,7 +19,7 @@ using org.apache.harmony.security;
 namespace org.apache.harmony.security.fortress
 {
 
-    /**
+     /*
      * This class contains information about all registered providers and preferred
      * implementations for all "serviceName.algName".
      * 
@@ -36,7 +36,7 @@ namespace org.apache.harmony.security.fortress
         // Need refresh flag
         private static bool needRefresh; // = false;
 
-        /**
+         /*
          * Refresh number
          */
         internal static int refreshNumber = 1;
@@ -85,7 +85,7 @@ namespace org.apache.harmony.security.fortress
             Engine.door.renumProviders();
         }
 
-        /**
+         /*
          * Returns registered providers
          * 
          * @return
@@ -95,7 +95,7 @@ namespace org.apache.harmony.security.fortress
             return providers.toArray(new java.security.Provider[providers.size()]);
         }
 
-        /**
+         /*
          * Returns registered providers as List
          * 
          * @return
@@ -105,7 +105,7 @@ namespace org.apache.harmony.security.fortress
             return new java.util.ArrayList<java.security.Provider>(providers);
         }
 
-        /**
+         /*
          * Returns the provider with the specified name
          * 
          * @param name
@@ -120,7 +120,7 @@ namespace org.apache.harmony.security.fortress
             return providersNames.get(name);
         }
 
-        /**
+         /*
          * Inserts a provider at a specified position
          * 
          * @param provider
@@ -140,7 +140,7 @@ namespace org.apache.harmony.security.fortress
             return position;
         }
 
-        /**
+         /*
          * Removes the provider
          * 
          * @param providerNumber
@@ -152,7 +152,7 @@ namespace org.apache.harmony.security.fortress
             setNeedRefresh();
         }
 
-        /**
+         /*
          * 
          * Adds information about provider services into HashMap.
          * 
@@ -191,7 +191,7 @@ namespace org.apache.harmony.security.fortress
             }
         }
 
-        /**
+         /*
          * 
          * Updates services hashtable for all registered providers
          *  
@@ -206,7 +206,7 @@ namespace org.apache.harmony.security.fortress
             needRefresh = false;
         }
 
-        /**
+         /*
          * Returns true if services contain any provider information  
          * @return
          */
@@ -215,7 +215,7 @@ namespace org.apache.harmony.security.fortress
             return services.isEmpty();
         }
 
-        /**
+         /*
          * 
          * Returns service description.
          * Call refresh() before.
@@ -228,7 +228,7 @@ namespace org.apache.harmony.security.fortress
             return services.get(key);
         }
 
-        /**
+         /*
          * Prints Services content  
          */
         // FIXME remove debug function
@@ -243,7 +243,7 @@ namespace org.apache.harmony.security.fortress
             }
         }
 
-        /**
+         /*
          * Set flag needRefresh 
          *
          */
@@ -252,7 +252,7 @@ namespace org.apache.harmony.security.fortress
             needRefresh = true;
         }
 
-        /**
+         /*
          * Refresh services info
          *
          */

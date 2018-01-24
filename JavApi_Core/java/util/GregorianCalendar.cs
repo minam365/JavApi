@@ -19,12 +19,12 @@ namespace biz.ritter.javapi.util
     [Serializable]
     public class GregorianCalendar : Calendar
     {
-        /**
+         /*
          * Value for the BC era.
          */
         public static readonly int BC = 0;
 
-        /**
+         /*
          * Value for the AD era.
          */
         public static readonly int AD = 1;

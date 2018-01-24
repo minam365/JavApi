@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.awt.color
 {
-    /**
+     /*
      * @author Oleg V. Khaschansky
      */
     [Serializable]

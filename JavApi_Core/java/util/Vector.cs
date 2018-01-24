@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * Vector is a variable size contiguous indexable array of objects. The size of
      * the vector is the number of objects it contains. The capacity of the vector
      * is the number of objects it can hold.
@@ -40,17 +40,17 @@ namespace biz.ritter.javapi.util
 
         private static readonly long serialVersionUID = -2767605614048989439L;
 
-        /**
+         /*
          * The number of elements or the size of the vector.
          */
         protected internal int elementCount;
 
-        /**
+         /*
          * The elements of the vector.
          */
         protected internal E[] elementData;
 
-        /**
+         /*
          * How many elements should be added to the vector when it is detected that
          * it needs to grow to accommodate extra entries. If this value is zero or
          * negative the size will be doubled if an increase is needed.
@@ -59,13 +59,13 @@ namespace biz.ritter.javapi.util
 
         private static readonly int DEFAULT_SIZE = 10;
 
-        /**
+         /*
          * Constructs a new vector using the default capacity.
          */
         public Vector() :this(DEFAULT_SIZE, 0){
         }
 
-        /**
+         /*
          * Constructs a new vector using the specified capacity.
          * 
          * @param capacity
@@ -76,7 +76,7 @@ namespace biz.ritter.javapi.util
         public Vector(int capacity) :this(capacity, 0){
         }
 
-        /**
+         /*
          * Constructs a new vector using the specified capacity and capacity
          * increment.
          * 
@@ -96,7 +96,7 @@ namespace biz.ritter.javapi.util
             this.capacityIncrement = capacityIncrement;
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code Vector} containing the elements in
          * {@code collection}. The order of the elements in the new {@code Vector}
          * is dependent on the iteration order of the seed collection.
@@ -115,7 +115,7 @@ namespace biz.ritter.javapi.util
             return new E[size];
         }
 
-        /**
+         /*
          * Adds the specified object into this vector at the specified location. The
          * object is inserted before any element with the same or a higher index
          * increasing their index by 1. If the location is equal to the size of this
@@ -135,7 +135,7 @@ namespace biz.ritter.javapi.util
             insertElementAt(obj, location);
         }
 
-        /**
+         /*
          * Adds the specified object at the end of this vector.
          * 
          * @param object
@@ -154,7 +154,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Inserts the objects in the specified collection at the specified location
          * in this vector. The objects are inserted in the order in which they are
          * returned from the Collection iterator. The elements with an index equal
@@ -198,7 +198,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Adds the objects in the specified collection to the end of this vector.
          * 
          * @param collection
@@ -212,7 +212,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Adds the specified object at the end of this vector.
          * 
          * @param object
@@ -228,7 +228,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns the number of elements this vector can hold without growing.
          * 
          * @return the capacity of this vector.
@@ -241,7 +241,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Removes all elements from this vector, leaving it empty.
          * 
          * @see #isEmpty
@@ -252,7 +252,7 @@ namespace biz.ritter.javapi.util
             removeAllElements();
         }
 
-        /**
+         /*
          * Returns a new vector with the same elements, size, capacity and capacity
          * increment as this vector.
          * 
@@ -271,7 +271,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Searches this vector for the specified object.
          * 
          * @param object
@@ -289,7 +289,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Searches this vector for all objects in the specified collection.
          * 
          * @param collection
@@ -303,7 +303,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Attempts to copy elements contained by this {@code Vector} into the
          * corresponding elements of the supplied {@code Object} array.
          * 
@@ -320,7 +320,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns the element at the specified location in this vector.
          * 
          * @param location
@@ -339,7 +339,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns an enumeration on the elements of this vector. The results of the
          * enumeration may be affected if the contents of this vector is modified.
          * 
@@ -351,7 +351,7 @@ namespace biz.ritter.javapi.util
             return new IAC_VECTOR_ENUMERATION<E> (this);
         }
 
-        /**
+         /*
          * Ensures that this vector can hold the specified number of elements
          * without growing.
          * 
@@ -371,7 +371,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Compares the specified object to this vector and returns if they are
          * equal. The object must be a List which contains the same objects in the
          * same order.
@@ -408,7 +408,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns the first element in this vector.
          * 
          * @return the element at the first position.
@@ -427,7 +427,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns the element at the specified location in this vector.
          * 
          * @param location
@@ -450,7 +450,7 @@ namespace biz.ritter.javapi.util
             elementData = newData;
         }
 
-        /**
+         /*
          * JIT optimization
          */
         private void growByOne() {
@@ -488,7 +488,7 @@ namespace biz.ritter.javapi.util
             elementData = newData;
         }
 
-        /**
+         /*
          * Returns an integer hash code for the receiver. Objects which are equal
          * return the same value for this method.
          * 
@@ -506,7 +506,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Searches in this vector for the index of the specified object. The search
          * for the object starts at the beginning and moves towards the end of this
          * vector.
@@ -523,7 +523,7 @@ namespace biz.ritter.javapi.util
             return indexOf(obj, 0);
         }
 
-        /**
+         /*
          * Searches in this vector for the index of the specified object. The search
          * for the object starts at the specified location and moves towards the end
          * of this vector.
@@ -559,7 +559,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Inserts the specified object into this vector at the specified location.
          * This object is inserted before any previous element at the specified
          * location. All elements with an index equal or greater than
@@ -595,7 +595,7 @@ namespace biz.ritter.javapi.util
 }
         }
 
-        /**
+         /*
          * Returns if this vector has no elements, a size of zero.
          * 
          * @return {@code true} if this vector has no elements, {@code false}
@@ -608,7 +608,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns the last element in this vector.
          * 
          * @return the element at the last position.
@@ -628,7 +628,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Searches in this vector for the index of the specified object. The search
          * for the object starts at the end and moves towards the start of this
          * vector.
@@ -648,7 +648,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Searches in this vector for the index of the specified object. The search
          * for the object starts at the specified location and moves towards the
          * start of this vector.
@@ -687,7 +687,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Removes the object at the specified location from this vector. All
          * elements with an index bigger than {@code location} have their index
          * decreased by 1.
@@ -716,7 +716,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Removes the first occurrence, starting at the beginning and moving
          * towards the end, of the specified object from this vector. All elements
          * with an index bigger than the element that gets removed have their index
@@ -734,7 +734,7 @@ namespace biz.ritter.javapi.util
             return removeElement(obj);
         }
 
-        /**
+         /*
          * Removes all occurrences in this vector of each object in the specified
          * Collection.
          * 
@@ -750,7 +750,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Removes all elements from this vector, leaving the size zero and the
          * capacity unchanged.
          * 
@@ -767,7 +767,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Removes the first occurrence, starting at the beginning and moving
          * towards the end, of the specified object from this vector. All elements
          * with an index bigger than the element that gets removed have their index
@@ -792,7 +792,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Removes the element found at index position {@code location} from
          * this {@code Vector}. All elements with an index bigger than
          * {@code location} have their index decreased by 1.
@@ -822,7 +822,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Removes the objects in the specified range from the start to the, but not
          * including, end index. All elements with an index bigger than or equal to
          * {@code end} have their index decreased by {@code end - start}.
@@ -856,7 +856,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Removes all objects from this vector that are not contained in the
          * specified collection.
          * 
@@ -871,7 +871,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Replaces the element at the specified location in this vector with the
          * specified object.
          * 
@@ -895,7 +895,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Replaces the element at the specified location in this vector with the
          * specified object.
          * 
@@ -917,7 +917,7 @@ namespace biz.ritter.javapi.util
             }  
         }
 
-        /**
+         /*
          * Sets the size of this vector to the specified size. If there are more
          * than length elements in this vector, the elements at end are lost. If
          * there are less than length elements in the vector, the additional
@@ -941,7 +941,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns the number of elements in this vector.
          * 
          * @return the number of elements in this vector.
@@ -955,7 +955,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns a List of the specified portion of this vector from the start
          * index to one less than the end index. The returned List is backed by this
          * vector so changes to one are reflected by the other.
@@ -978,7 +978,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns a new array containing all elements contained in this vector.
          * 
          * @return an array of the elements from this vector.
@@ -991,7 +991,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns an array containing all elements contained in this vector. If the
          * specified array is large enough to hold the elements, the specified array
          * is used, otherwise an array of the same type is created. If the specified
@@ -1018,7 +1018,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns the string representation of this vector.
          * 
          * @return the string representation of this vector.
@@ -1050,7 +1050,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Sets the capacity of this vector to be the same as the size.
          * 
          * @see #capacity

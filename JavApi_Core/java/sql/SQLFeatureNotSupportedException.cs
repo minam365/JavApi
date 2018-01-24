@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.sql
 {
 
-    /**
+     /*
      * An exception, which is subclass of SQLNonTransientException, is thrown when
      * various the JDBC driver does not support an optional JDBC feature.
      */
@@ -27,7 +27,7 @@ namespace biz.ritter.javapi.sql
 
         private const long serialVersionUID = -1026510870282316051L;
 
-        /**
+         /*
          * Creates an SQLFeatureNotSupportedException object. The Reason string is
          * set to null, the SQLState string is set to null and the Error Code is set
          * to 0.
@@ -37,7 +37,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLFeatureNotSupportedException object. The Reason string is
          * set to the given reason string, the SQLState string is set to null and
          * the Error Code is set to 0.
@@ -50,7 +50,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLFeatureNotSupportedException object. The Reason string is
          * set to the given reason string, the SQLState string is set to the given
          * SQLState string and the Error Code is set to 0.
@@ -65,7 +65,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLFeatureNotSupportedException object. The Reason string is
          * set to the given reason string, the SQLState string is set to the given
          * SQLState string and the Error Code is set to the given error code value.
@@ -83,7 +83,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLFeatureNotSupportedException object. The Reason string is
          * set to the null if cause == null or cause.toString() if cause!=null,and
          * the cause java.lang.Throwable object is set to the given cause java.lang.Throwable object.
@@ -97,7 +97,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLFeatureNotSupportedException object. The Reason string is
          * set to the given and the cause java.lang.Throwable object is set to the given cause
          * java.lang.Throwable object.
@@ -113,7 +113,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLFeatureNotSupportedException object. The Reason string is
          * set to the given reason string, the SQLState string is set to the given
          * SQLState string and the cause java.lang.Throwable object is set to the given cause
@@ -133,7 +133,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLFeatureNotSupportedException object. The Reason string is
          * set to the given reason string, the SQLState string is set to the given
          * SQLState string , the Error Code is set to the given error code value,

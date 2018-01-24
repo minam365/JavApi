@@ -17,7 +17,7 @@ using org.apache.harmony.awt.gl.color;
 
 namespace biz.ritter.javapi.awt.color
 {
-/**
+ /*
  * @author Oleg V. Khaschansky
  */
 

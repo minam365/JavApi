@@ -15,7 +15,7 @@ using java=biz.ritter.javapi;
 namespace org.w3c.dom.ls
 {
 
-    /**
+     /*
      *  Parser or write operations may throw an <code>LSException</code> if the 
      * processing is stopped. The processing can be stopped due to a 
      * <code>DOMError</code> with a severity of 
@@ -38,12 +38,12 @@ namespace org.w3c.dom.ls
         }
         public short code;
         // LSExceptionCode
-        /**
+         /*
          *  If an attempt was made to load a document, or an XML Fragment, using 
          * <code>LSParser</code> and the processing has been stopped. 
          */
         public static readonly short PARSE_ERR = 81;
-        /**
+         /*
          *  If an attempt was made to serialize a <code>Node</code> using 
          * <code>LSSerializer</code> and the processing has been stopped. 
          */

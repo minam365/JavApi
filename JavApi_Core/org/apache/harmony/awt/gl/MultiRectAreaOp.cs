@@ -16,23 +16,23 @@ using java = biz.ritter.javapi;
 
 namespace org.apache.harmony.awt.gl
 {
-/**
+ /*
  * @author Denis M. Kishenko
  */
 
 public class MultiRectAreaOp {
 
-    /**
+     /*
      * Rectangle buffer capacity
      */
     public const int RECT_CAPACITY = 16;
     
-    /**
+     /*
      * If number of rectangle in MultiRectArea object less than MAX_SIMPLE simple algorithm applies 
      */
     private const int MAX_SIMPLE = 8;
 
-    /**
+     /*
      * Create buffer
      */
     public static int[] createBuf(int capacity) {
@@ -44,7 +44,7 @@ public class MultiRectAreaOp {
         return buf;
     }
 
-    /**
+     /*
      * Checks buffer size and reallocate if necessary  
      */
     public static int[] checkBufSize(int[] buf, int capacity) {
@@ -58,7 +58,7 @@ public class MultiRectAreaOp {
         return buf;
     }
 
-    /**
+     /*
      * Region class provides basic functionlity for MultiRectArea objects to make logical operations 
      */
     internal class Region {
@@ -301,7 +301,7 @@ public class MultiRectAreaOp {
 
     }
 
-    /**
+     /*
      * Intersection class provides intersection of two MultiRectAre aobjects
      */
     internal class Intersection {
@@ -432,7 +432,7 @@ public class MultiRectAreaOp {
 
     }
 
-    /**
+     /*
      * Union class provides union of two MultiRectAre aobjects
      */
     internal class Union {
@@ -709,7 +709,7 @@ public class MultiRectAreaOp {
 
     }
 
-    /**
+     /*
      * Subtraction class provides subtraction of two MultiRectAre aobjects
      */
     internal class Subtraction {

@@ -17,7 +17,7 @@ using System;
 namespace biz.ritter.javapi.awt
 {
 
-    /**
+     /*
      * Shape
      * @author Alexey A. Petrenko
      */

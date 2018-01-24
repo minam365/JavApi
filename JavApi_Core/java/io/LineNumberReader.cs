@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.io
 {
 
-    /**
+     /*
      * Wraps an existing {@link Reader} and counts the line terminators encountered
      * while reading the data. The line number starts at 0 and is incremented any
      * time {@code '\r'}, {@code '\n'} or {@code "\r\n"} is read. The class has an
@@ -36,7 +36,7 @@ namespace biz.ritter.javapi.io
 
         private bool markedLastWasCR;
 
-        /**
+         /*
          * Constructs a new LineNumberReader on the Reader {@code in}. The internal
          * buffer gets the default size (8 KB).
          * 
@@ -48,7 +48,7 @@ namespace biz.ritter.javapi.io
         {
         }
 
-        /**
+         /*
          * Constructs a new LineNumberReader on the Reader {@code in}. The size of
          * the internal buffer is specified by the parameter {@code size}.
          * 
@@ -64,7 +64,7 @@ namespace biz.ritter.javapi.io
         {
         }
 
-        /**
+         /*
          * Returns the current line number for this reader. Numbering starts at 0.
          * 
          * @return the current line number.
@@ -77,7 +77,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Sets a mark position in this reader. The parameter {@code readlimit}
          * indicates how many characters can be read before the mark is invalidated.
          * Sending {@code reset()} will reposition this reader back to the marked
@@ -104,7 +104,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Reads a single character from the source reader and returns it as an
          * integer with the two higher-order bytes set to 0. Returns -1 if the end
          * of the source reader has been reached.
@@ -148,7 +148,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Reads at most {@code count} characters from the source reader and stores
          * them in the character array {@code buffer} starting at {@code offset}.
          * Returns the number of characters actually read or -1 if no characters
@@ -205,7 +205,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Returns the next line of text available from this reader. A line is
          * represented by 0 or more characters followed by {@code '\r'},
          * {@code '\n'}, {@code "\r\n"} or the end of the stream. The returned
@@ -235,7 +235,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Resets this reader to the last marked location. It also resets the line
          * count to what is was when this reader was marked. This implementation
          * resets the source reader.
@@ -258,7 +258,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Sets the line number of this reader to the specified {@code lineNumber}.
          * Note that this may have side effects on the line number associated with
          * the last marked position.
@@ -276,7 +276,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Skips {@code count} number of characters in this reader. Subsequent
          * {@code read()}'s will not return these characters unless {@code reset()}
          * is used. This implementation skips {@code count} number of characters in

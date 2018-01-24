@@ -21,7 +21,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapix.xml.crypto.dsig.spec
 {
 
-/**
+ /*
  * Parameters for the W3C Recommendation:
  * <a href="http://www.w3.org/TR/xml-exc-c14n/">
  * Exclusive XML Canonicalization (C14N) algorithm</a>. The
@@ -49,12 +49,12 @@ public sealed class ExcC14NParameterSpec : C14NMethodParameterSpec {
 
     private java.util.List<Object> preList;
 
-    /**
+     /*
      * Indicates the default namespace ("#default").
      */
     public static readonly String DEFAULT = "#default";
 
-    /**
+     /*
      * Creates a <code>ExcC14NParameterSpec</code> with an empty prefix 
      * list.
      */
@@ -62,7 +62,7 @@ public sealed class ExcC14NParameterSpec : C14NMethodParameterSpec {
         preList = java.util.Collections<Object>.EMPTY_LIST;
     }
 
-    /**
+     /*
      * Creates a <code>ExcC14NParameterSpec</code> with the specified list
      * of prefixes. The list is copied to protect against subsequent 
      * modification.
@@ -90,7 +90,7 @@ public sealed class ExcC14NParameterSpec : C14NMethodParameterSpec {
         return java.util.Collections<Object>.unmodifiableList(new java.util.ArrayList<Object>(list));
     }
 
-    /**
+     /*
      * Returns the inclusive namespace prefix list. Each entry in the list
      * is a <code>String</code> that represents a namespace prefix.
      *

@@ -14,19 +14,19 @@ namespace org.apache.harmony.security.fortress
         // Two-args set of arguments to default constructor of a Permission.
         private static readonly java.lang.Class[] TWO_ARGS = { typeof(String).getClass(), typeof(String).getClass() };
 
-        /** 
+         /* 
          * Specific exception to signal that property expansion failed 
          * due to unknown key. 
          */
         public class ExpansionFailedException : java.lang.Exception
         {
 
-            /**
+             /*
              * @serial
              */
             private static readonly long serialVersionUID = 2869748055182612000L;
 
-            /** 
+             /* 
              * Constructor with user-friendly message parameter. 
              */
             public ExpansionFailedException(String message) :
@@ -34,7 +34,7 @@ namespace org.apache.harmony.security.fortress
             {
             }
 
-            /** 
+             /* 
              * Constructor with user-friendly message and causing error. 
              */
             public ExpansionFailedException(String message, java.lang.Throwable cause) :
@@ -47,7 +47,7 @@ namespace org.apache.harmony.security.fortress
         private const String END_MARK = "}"; //$NON-NLS-1$
         private static readonly int START_OFFSET = START_MARK.length();
         private static readonly int END_OFFSET = END_MARK.length();
-        /**
+         /*
          * Substitutes all entries like ${some.key}, found in specified string, 
          * for specified values.
          * If some key is unknown, throws ExpansionFailedException. 
@@ -84,7 +84,7 @@ namespace org.apache.harmony.security.fortress
         }
 
 
-        /**
+         /*
          * Checks whether the objects from <code>what</code> array are all
          * presented in <code>where</code> array.
          * 
@@ -126,7 +126,7 @@ namespace org.apache.harmony.security.fortress
             }
             return true;
         }
-        /**
+         /*
          * Tries to find a suitable constructor and instantiate a new Permission
          * with specified parameters.  
          *
@@ -184,7 +184,7 @@ namespace org.apache.harmony.security.fortress
             }
             throw new java.lang.IllegalArgumentException("No suitable constructors found in permission class : " + targetType + ". Zero, one or two-argument constructor is expected");
         }
-        /** 
+         /* 
          * Auxiliary action for accessing specific security property. 
          */
         public class SecurityPropertyAccessor : java.security.PrivilegedAction<String>
@@ -192,7 +192,7 @@ namespace org.apache.harmony.security.fortress
 
             private String keyJ;
 
-            /** 
+             /* 
              * Constructor with a property key parameter. 
              */
             public SecurityPropertyAccessor(String key)
@@ -207,7 +207,7 @@ namespace org.apache.harmony.security.fortress
                 return this;
             }
 
-            /** 
+             /* 
              * Returns specified security property. 
              */
             public String run()

@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.io
 {
 
-/**
+ /*
  * A specialized {@link InputStream} that reads bytes from a {@code String} in
  * a sequential manner.
  * 
@@ -26,22 +26,22 @@ namespace biz.ritter.javapi.io
 	[Obsolete]
 	public class StringBufferInputStream : InputStream
 	{
-		/**
+		 /*
      * The source string containing the data to read.
      */
 		protected String buffer;
 
-		/**
+		 /*
      * The total number of characters in the source string.
      */
 		protected int count;
 
-		/**
+		 /*
      * The current position within the source string.
      */
 		protected int pos;
 
-		/**
+		 /*
      * Construct a new {@code StringBufferInputStream} with {@code str} as
      * source. The size of the stream is set to the {@code length()} of the
      * string.
@@ -61,7 +61,7 @@ namespace biz.ritter.javapi.io
 		}
 
 		private Object lockJ = new Object ();
-		/**
+		 /*
      * Returns the number of bytes that are available before this stream will
      * block.
      * 
@@ -74,7 +74,7 @@ namespace biz.ritter.javapi.io
 			}
 		}
 
-		/**
+		 /*
      * Reads a single byte from the source string and returns it as an integer
      * in the range from 0 to 255. Returns -1 if the end of the source string
      * has been reached.
@@ -90,7 +90,7 @@ namespace biz.ritter.javapi.io
 			}
 		}
 
-		/**
+		 /*
      * Reads at most {@code length} bytes from the source string and stores them
      * in the byte array {@code b} starting at {@code offset}.
      * 
@@ -146,7 +146,7 @@ namespace biz.ritter.javapi.io
 			}
 		}
 
-		/**
+		 /*
      * Resets this stream to the beginning of the source string.
      */
     
@@ -157,7 +157,7 @@ namespace biz.ritter.javapi.io
 			}
 		}
 
-		/**
+		 /*
      * Skips {@code n} characters in the source string. It does nothing and
      * returns 0 if {@code n} is negative. Less than {@code n} characters are
      * skipped if the end of the source string is reached before the operation

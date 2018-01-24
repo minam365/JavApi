@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util.zip
 {
-    /**
+     /*
      * This class provides random read access to a <i>ZIP-archive</i> file.
      * <p/>
      * While {@code ZipInputStream} provides stream based read access to a
@@ -47,12 +47,12 @@ namespace biz.ritter.javapi.util.zip
                 CENNAM = 28, CENEXT = 30, CENCOM = 32, CENDSK = 34, CENATT = 36,
                 CENATX = 38, CENOFF = 42, ENDSUB = 8, ENDTOT = 10, ENDSIZ = 12,
                 ENDOFF = 16, ENDCOM = 20;
-        /**
+         /*
          * Open ZIP file for read.
          */
         public static readonly int OPEN_READ = 1;
 
-        /**
+         /*
          * Delete ZIP file when closed.
          */
         public static readonly int OPEN_DELETE = 4;
@@ -68,7 +68,7 @@ namespace biz.ritter.javapi.util.zip
         private readonly LinkedHashMap<String, ZipEntry> mEntries
                 = new LinkedHashMap<String, ZipEntry>();
 
-        /**
+         /*
          * Constructs a new {@code ZipFile} with the specified file.
          *
          * @param file
@@ -82,7 +82,7 @@ namespace biz.ritter.javapi.util.zip
             this(file, OPEN_READ){
         }
 
-        /**
+         /*
          * Opens a file as <i>ZIP-archive</i>. "mode" must be {@code OPEN_READ} or
          * {@code OPEN_DELETE} . The latter sets the "delete on exit" flag through a
          * file.
@@ -118,7 +118,7 @@ namespace biz.ritter.javapi.util.zip
             readCentralDir();
         }
 
-        /**
+         /*
          * Opens a ZIP archived file.
          *
          * @param name
@@ -144,7 +144,7 @@ namespace biz.ritter.javapi.util.zip
             close();
         }
 
-        /**
+         /*
          * Closes this ZIP file. This method is idempotent.
          *
          * @throws IOException
@@ -178,7 +178,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Returns an enumeration of the entries. The entries are listed in the
          * order in which they appear in the ZIP archive.
          *
@@ -191,7 +191,7 @@ namespace biz.ritter.javapi.util.zip
             return new IAC_ZipEntryEnumeration (iterator,this);
         }
 
-        /**
+         /*
          * Gets the ZIP entry with the specified name from this {@code ZipFile}.
          *
          * @param entryName
@@ -213,7 +213,7 @@ namespace biz.ritter.javapi.util.zip
             return ze;
         }
 
-        /**
+         /*
          * Returns an input stream on the data of the specified {@code ZipEntry}.
          *
          * @param entry
@@ -257,7 +257,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Gets the file name of this {@code ZipFile}.
          *
          * @return the file name of this {@code ZipFile}.
@@ -266,7 +266,7 @@ namespace biz.ritter.javapi.util.zip
             return fileName;
         }
 
-        /**
+         /*
          * Returns the number of {@code ZipEntries} in this {@code ZipFile}.
          *
          * @return the number of entries in this file.
@@ -277,7 +277,7 @@ namespace biz.ritter.javapi.util.zip
             return mEntries.size();
         }
 
-        /**
+         /*
          * Find the central directory and read the contents.
          *
          * <p>The central directory can be followed by a variable-length comment
@@ -379,7 +379,7 @@ namespace biz.ritter.javapi.util.zip
 
     }
 
-    /**
+     /*
         * Wrap a stream around a RandomAccessFile.  The RandomAccessFile is shared
         * among all streams returned by getInputStream(), so we have to synchronize
         * access to it.  (We can optimize this by adding buffering here to reduce

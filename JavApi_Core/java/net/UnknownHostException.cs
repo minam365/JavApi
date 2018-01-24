@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.net
 {
-    /**
+     /*
      * Is thrown when a hostname can not be resolved.
      */
     [Serializable]
@@ -25,7 +25,7 @@ namespace biz.ritter.javapi.net
 
         private static readonly long serialVersionUID = -4639126076052875403L;
 
-        /**
+         /*
          * Constructs a new {@code UnknownHostException} instance with its walkback
          * filled in.
          */
@@ -34,7 +34,7 @@ namespace biz.ritter.javapi.net
         {
         }
 
-        /**
+         /*
          * Constructs a new {@code UnknownHostException} instance with its walkback
          * and message filled in.
          * 

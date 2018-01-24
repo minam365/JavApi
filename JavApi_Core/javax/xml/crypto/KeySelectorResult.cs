@@ -22,7 +22,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapix.xml.crypto
 {
 
-/**
+ /*
  * The result returned by the {@link KeySelector#select KeySelector.select} 
  * method.
  * <p>
@@ -37,7 +37,7 @@ namespace biz.ritter.javapix.xml.crypto
  */
 public interface KeySelectorResult {
 
-    /**
+     /*
      * Returns the selected key.
      *
      * @return the selected key, or <code>null</code> if none can be found

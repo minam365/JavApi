@@ -22,7 +22,7 @@ namespace biz.ritter.javapi.util.jar
         private readonly String jarName;
 
 
-        /**
+         /*
          * Constructs and returns a new instance of {@code JarVerifier}.
          *
          * @param name
@@ -33,7 +33,7 @@ namespace biz.ritter.javapi.util.jar
             jarName = name;
         }
 
-        /**
+         /*
          * Add a new meta entry to the internal collection of data held on each JAR
          * entry in the {@code META-INF} directory including the manifest
          * file itself. Files associated with the signing of a JAR would also be

@@ -14,7 +14,7 @@ using System;
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      * When associating an object to a key on a node using <code>setUserData</code>
      *  the application can provide a handler that gets called when the node the 
      * object is associated to is being cloned or imported. This can be used by 
@@ -24,7 +24,7 @@ namespace org.w3c.dom
      */
     public interface UserDataHandler
     {
-        /**
+         /*
          * This method is called whenever the node for which this handler is 
          * registered is imported or cloned.
          * @param operation Specifies the type of operation that is being 
@@ -46,19 +46,19 @@ namespace org.w3c.dom
     public sealed class UserDataHandlerConstants
     {
         // OperationType
-        /**
+         /*
          * The node is cloned.
          */
         public const short NODE_CLONED = 1;
-        /**
+         /*
          * The node is imported.
          */
         public const short NODE_IMPORTED = 2;
-        /**
+         /*
          * The node is deleted.
          */
         public const short NODE_DELETED = 3;
-        /**
+         /*
          * The node is renamed.
          */
         public const short NODE_RENAMED = 4;

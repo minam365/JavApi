@@ -19,7 +19,7 @@ namespace biz.ritter.javapi.text
 
     public sealed class CharacterIteratorConstants
     {
-        /**
+         /*
          * A constant which indicates that there is no character at the current
          * index.
          */
@@ -35,7 +35,7 @@ namespace biz.ritter.javapi.text
     public interface CharacterIterator : java.lang.Cloneable
     {
 
-        /**
+         /*
          * Returns the character at the current index.
          * 
          * @return the current character, or {@code DONE} if the current index is
@@ -43,7 +43,7 @@ namespace biz.ritter.javapi.text
          */
         char current();
 
-        /**
+         /*
          * Sets the current position to the begin index and returns the character at
          * the new position.
          * 
@@ -51,28 +51,28 @@ namespace biz.ritter.javapi.text
          */
         char first();
 
-        /**
+         /*
          * Returns the begin index.
          * 
          * @return the index of the first character of the iteration.
          */
         int getBeginIndex();
 
-        /**
+         /*
          * Returns the end index.
          * 
          * @return the index one past the last character of the iteration.
          */
         int getEndIndex();
 
-        /**
+         /*
          * Returns the current index.
          * 
          * @return the current index.
          */
         int getIndex();
 
-        /**
+         /*
          * Sets the current position to the end index - 1 and returns the character
          * at the new position.
          * 
@@ -80,7 +80,7 @@ namespace biz.ritter.javapi.text
          */
         char last();
 
-        /**
+         /*
          * Increments the current index and returns the character at the new index.
          * 
          * @return the character at the next index, or {@code DONE} if the next
@@ -88,7 +88,7 @@ namespace biz.ritter.javapi.text
          */
         char next();
 
-        /**
+         /*
          * Decrements the current index and returns the character at the new index.
          * 
          * @return the character at the previous index, or {@code DONE} if the
@@ -96,7 +96,7 @@ namespace biz.ritter.javapi.text
          */
         char previous();
 
-        /**
+         /*
          * Sets the current index to a new position and returns the character at the
          * new index.
          * 

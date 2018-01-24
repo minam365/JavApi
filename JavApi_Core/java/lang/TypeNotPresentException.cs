@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang
 {
 
-/**
+ /*
  * Thrown when a program tries to access a class, interface, enum or annotation
  * type through a string that contains the type's name and the type cannot be
  * found. This exception is an unchecked alternative to
@@ -30,7 +30,7 @@ public class TypeNotPresentException : RuntimeException {
 
     private String typeNameJ;
 
-    /**
+     /*
      * Constructs a new {@code TypeNotPresentException} with the current stack
      * trace, a detail message that includes the name of the type that could not
      * be found and the {@code Throwable} that caused this exception.
@@ -45,7 +45,7 @@ public class TypeNotPresentException : RuntimeException {
         this.typeNameJ = typeName;
     }
 
-    /**
+     /*
      * Gets the fully qualified name of the type that could not be found.
      * 
      * @return the name of the type that caused this exception.

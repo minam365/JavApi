@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.net
 {
 
-    /**
+     /*
      * This class represents permissions to configure the access to network
      * resources.
      * <p/>
@@ -41,7 +41,7 @@ namespace biz.ritter.javapi.net
 
         private static readonly long serialVersionUID = -8343910153355041693L;
 
-        /**
+         /*
          * Creates an instance of this class with the given name.
          * 
          * @param name
@@ -52,7 +52,7 @@ namespace biz.ritter.javapi.net
         {
         }
 
-        /**
+         /*
          * Creates an instance of this class with the given name and an action list.
          * The action list is ignored and should be {@code null}.
          * 

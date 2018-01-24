@@ -22,7 +22,7 @@ namespace biz.ritter.javapi.util
     // Basties note: Needed a better implementation, class is only compiler friendly...
 
 
-    /**
+     /*
      * The {@code BitSet} class implements a bit field. Each element in a
      * {@code BitSet} can be on(1) or off(0). A {@code BitSet} is created with a
      * given size and grows if this size is exceeded. Growth is always rounded to a
@@ -30,7 +30,7 @@ namespace biz.ritter.javapi.util
      */
     [Serializable]
     public class BitSet : java.io.Serializable, java.lang.Cloneable{
-    /**
+     /*
      * The {@code BitSet} class implements a bit field. Each element in a
      * {@code BitSet} can be on(1) or off(0). A {@code BitSet} is created with a
      * given size and grows if this size is exceeded. Growth is always rounded to a
@@ -68,7 +68,7 @@ namespace biz.ritter.javapi.util
         [NonSerialized]
         private bool isLengthActual;
 
-        /**
+         /*
          * Create a new {@code BitSet} with size equal to 64 bits.
          * 
          * @see #clear(int)
@@ -85,7 +85,7 @@ namespace biz.ritter.javapi.util
             isLengthActual = true;
         }
 
-        /**
+         /*
          * Create a new {@code BitSet} with size equal to nbits. If nbits is not a
          * multiple of 64, then create a {@code BitSet} with size nbits rounded to
          * the next closest multiple of 64.
@@ -111,7 +111,7 @@ namespace biz.ritter.javapi.util
             isLengthActual = true;
         }
 
-        /**
+         /*
          * Private constructor called from get(int, int) method
          * 
          * @param bits
@@ -125,7 +125,7 @@ namespace biz.ritter.javapi.util
             this.isLengthActual = isLengthActual;
         }
 
-        /**
+         /*
          * Creates a copy of this {@code BitSet}.
          * 
          * @return a copy of this {@code BitSet}.
@@ -143,7 +143,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Compares the argument to this {@code BitSet} and returns whether they are
          * equal. The object must be an instance of {@code BitSet} with the same
          * bits set.
@@ -196,7 +196,7 @@ namespace biz.ritter.javapi.util
             return false;
         }
 
-        /**
+         /*
          * Increase the size of the internal array to accommodate {@code pos} bits.
          * The new array max index will be a multiple of 64.
          * 
@@ -209,7 +209,7 @@ namespace biz.ritter.javapi.util
             bits = tempBits;
         }
 
-        /**
+         /*
          * Computes the hash code for this {@code BitSet}. If two {@code BitSet}s are equal
          * the have to return the same result for {@code hashCode()}.
          * 
@@ -227,7 +227,7 @@ namespace biz.ritter.javapi.util
             return (int) ((x >> 32) ^ x);
         }
 
-        /**
+         /*
          * Retrieves the bit at index {@code pos}. Grows the {@code BitSet} if
          * {@code pos > size}.
          * 
@@ -258,7 +258,7 @@ namespace biz.ritter.javapi.util
             return false;
         }
 
-        /**
+         /*
          * Retrieves the bits starting from {@code pos1} to {@code pos2} and returns
          * back a new bitset made of these bits. Grows the {@code BitSet} if
          * {@code pos2 > size}.
@@ -332,7 +332,7 @@ namespace biz.ritter.javapi.util
                     newbits[actualLen - 1] != 0);
         }
 
-        /**
+         /*
          * Sets the bit at index {@code pos} to 1. Grows the {@code BitSet} if
          * {@code pos > size}.
          * 
@@ -361,7 +361,7 @@ namespace biz.ritter.javapi.util
             needClear();
         }
 
-        /**
+         /*
          * Sets the bit at index {@code pos} to {@code val}. Grows the
          * {@code BitSet} if {@code pos > size}.
          * 
@@ -381,7 +381,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Sets the bits starting from {@code pos1} to {@code pos2}. Grows the
          * {@code BitSet} if {@code pos2 > size}.
          * 
@@ -432,7 +432,7 @@ namespace biz.ritter.javapi.util
             this.needClearJ = true;
         }
 
-        /**
+         /*
          * Sets the bits starting from {@code pos1} to {@code pos2} to the given
          * {@code val}. Grows the {@code BitSet} if {@code pos2 > size}.
          * 
@@ -455,7 +455,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Clears all the bits in this {@code BitSet}.
          * 
          * @see #clear(int)
@@ -472,7 +472,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Clears the bit at index {@code pos}. Grows the {@code BitSet} if
          * {@code pos > size}.
          * 
@@ -500,7 +500,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Clears the bits starting from {@code pos1} to {@code pos2}. Grows the
          * {@code BitSet} if {@code pos2 > size}.
          * 
@@ -548,7 +548,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Flips the bit at index {@code pos}. Grows the {@code BitSet} if
          * {@code pos > size}.
          * 
@@ -575,7 +575,7 @@ namespace biz.ritter.javapi.util
             needClear();
         }
 
-        /**
+         /*
          * Flips the bits starting from {@code pos1} to {@code pos2}. Grows the
          * {@code BitSet} if {@code pos2 > size}.
          * 
@@ -622,7 +622,7 @@ namespace biz.ritter.javapi.util
             needClear();
         }
 
-        /**
+         /*
          * Checks if these two {@code BitSet}s have at least one bit set to true in the same
          * position.
          * 
@@ -652,7 +652,7 @@ namespace biz.ritter.javapi.util
             return false;
         }
 
-        /**
+         /*
          * Performs the logical AND of this {@code BitSet} with another
          * {@code BitSet}. The values of this {@code BitSet} are changed accordingly.
          * 
@@ -683,7 +683,7 @@ namespace biz.ritter.javapi.util
             isLengthActual = !((actualArrayLength > 0) && (bits[actualArrayLength - 1] == 0));
         }
 
-        /**
+         /*
          * Clears all bits in the receiver which are also set in the parameter
          * {@code BitSet}. The values of this {@code BitSet} are changed accordingly.
          * 
@@ -707,7 +707,7 @@ namespace biz.ritter.javapi.util
             isLengthActual = !((actualArrayLength > 0) && (bits[actualArrayLength - 1] == 0));
         }
 
-        /**
+         /*
          * Performs the logical OR of this {@code BitSet} with another {@code BitSet}.
          * The values of this {@code BitSet} are changed accordingly.
          *
@@ -740,7 +740,7 @@ namespace biz.ritter.javapi.util
             needClear();
         }
 
-        /**
+         /*
          * Performs the logical XOR of this {@code BitSet} with another {@code BitSet}.
          * The values of this {@code BitSet} are changed accordingly.
          *
@@ -773,7 +773,7 @@ namespace biz.ritter.javapi.util
             needClear();
         }
 
-        /**
+         /*
          * Returns the number of bits this {@code BitSet} has.
          * 
          * @return the number of bits contained in this {@code BitSet}.
@@ -783,7 +783,7 @@ namespace biz.ritter.javapi.util
             return bits.Length << OFFSET;
         }
 
-        /**
+         /*
          * Returns the number of bits up to and including the highest bit set.
          * 
          * @return the length of the {@code BitSet}.
@@ -818,7 +818,7 @@ namespace biz.ritter.javapi.util
             return actualArrayLength;
         }
 
-        /**
+         /*
          * Returns a string containing a concise, human-readable description of the
          * receiver.
          * 
@@ -850,7 +850,7 @@ namespace biz.ritter.javapi.util
             return sb.toString();
         }
 
-        /**
+         /*
          * Returns the position of the first bit that is {@code true} on or after {@code pos}.
          * 
          * @param pos
@@ -895,7 +895,7 @@ namespace biz.ritter.javapi.util
             return -1;
         }
 
-        /**
+         /*
          * Returns the position of the first bit that is {@code false} on or after {@code pos}.
          * 
          * @param pos
@@ -942,7 +942,7 @@ namespace biz.ritter.javapi.util
             return bssize;
         }
 
-        /**
+         /*
          * Returns true if all the bits in this {@code BitSet} are set to false.
          * 
          * @return {@code true} if the {@code BitSet} is empty,
@@ -961,7 +961,7 @@ namespace biz.ritter.javapi.util
             return true;
         }
 
-        /**
+         /*
          * Returns the number of bits that are {@code true} in this {@code BitSet}.
          * 
          * @return the number of {@code true} bits in the set.

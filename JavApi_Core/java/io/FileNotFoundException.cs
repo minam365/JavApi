@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.io
 {
-    /**
+     /*
      * Thrown when a file specified by a program cannot be found.
      */
     [Serializable]
@@ -27,7 +27,7 @@ namespace biz.ritter.javapi.io
 
         private static readonly long serialVersionUID = -897856973823710492L;
 
-        /**
+         /*
          * Constructs a new {@code FileNotFoundException} with its stack trace
          * filled in.
          */
@@ -36,7 +36,7 @@ namespace biz.ritter.javapi.io
         {
         }
 
-        /**
+         /*
          * Constructs a new {@code FileNotFoundException} with its stack trace and
          * detail message filled in.
          * 

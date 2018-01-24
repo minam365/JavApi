@@ -3,7 +3,7 @@ using System;
 
 namespace biz.ritter.javapi.awt.geom
 {
-/**
+ /*
  * @author Denis M. Kishenko
  */
     public abstract class Point2D : java.lang.Cloneable

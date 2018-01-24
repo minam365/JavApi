@@ -15,7 +15,7 @@ using System;
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      *  The <code>TypeInfo</code> interface represents a type referenced from 
      * <code>Element</code> or <code>Attr</code> nodes, specified in the schemas 
      * associated with the document. The type is a pair of a namespace URI and 
@@ -96,20 +96,20 @@ namespace org.w3c.dom
      */
     public interface TypeInfo
     {
-        /**
+         /*
          *  The name of a type declared for the associated element or attribute, 
          * or <code>null</code> if unknown. 
          */
         String getTypeName();
 
-        /**
+         /*
          *  The namespace of the type declared for the associated element or 
          * attribute or <code>null</code> if the element does not have 
          * declaration or if no namespace information is available. 
          */
         String getTypeNamespace();
 
-        /**
+         /*
          *  This method returns if there is a derivation between the reference 
          * type definition, i.e. the <code>TypeInfo</code> on which the method 
          * is being called, and the other type definition, i.e. the one passed 
@@ -139,7 +139,7 @@ namespace org.w3c.dom
     public sealed class TypeInfoConstants
     {
         // DerivationMethods
-        /**
+         /*
          *  If the document's schema is an XML Schema [<a href='http://www.w3.org/TR/2001/REC-xmlschema-1-20010502/'>XML Schema Part 1</a>]
          * , this constant represents the derivation by <a href='http://www.w3.org/TR/2001/REC-xmlschema-1-20010502/#key-typeRestriction'>
          * restriction</a> if complex types are involved, or a <a href='http://www.w3.org/TR/2001/REC-xmlschema-1-20010502/#element-restriction'>
@@ -151,7 +151,7 @@ namespace org.w3c.dom
          * from the reference type definition, and all the <em>derivation methods</em> involved are restriction. 
          */
         public static readonly int DERIVATION_RESTRICTION = 0x00000001;
-        /**
+         /*
          *  If the document's schema is an XML Schema [<a href='http://www.w3.org/TR/2001/REC-xmlschema-1-20010502/'>XML Schema Part 1</a>]
          * , this constant represents the derivation by <a href='http://www.w3.org/TR/2001/REC-xmlschema-1-20010502/#key-typeExtension'>
          * extension</a>. 
@@ -161,7 +161,7 @@ namespace org.w3c.dom
          * reference type definition, and at least one of the <em>derivation methods</em> involved is an extension. 
          */
         public static readonly int DERIVATION_EXTENSION = 0x00000002;
-        /**
+         /*
          *  If the document's schema is an XML Schema [<a href='http://www.w3.org/TR/2001/REC-xmlschema-1-20010502/'>XML Schema Part 1</a>]
          * , this constant represents the <a href='http://www.w3.org/TR/2001/REC-xmlschema-1-20010502/#element-union'>
          * union</a> if simple types are involved. 
@@ -175,7 +175,7 @@ namespace org.w3c.dom
          * as the other type definition. 
          */
         public static readonly int DERIVATION_UNION = 0x00000004;
-        /**
+         /*
          *  If the document's schema is an XML Schema [<a href='http://www.w3.org/TR/2001/REC-xmlschema-1-20010502/'>XML Schema Part 1</a>]
          * , this constant represents the <a href='http://www.w3.org/TR/2001/REC-xmlschema-1-20010502/#element-list'>list</a>. 
          * <br> The reference type definition is derived by list from the other 

@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang{
 
-/**
+ /*
  * Thrown when the virtual machine notices that a program tries to reference,
  * on a class or object, a field that does not exist.
  * <p>
@@ -26,7 +26,7 @@ public class NoSuchFieldError : IncompatibleClassChangeError {
 
     private const long serialVersionUID = -3456430195886129035L;
 
-    /**
+     /*
      * Constructs a new {@code NoSuchFieldError} that includes the current stack
      * trace.
      */
@@ -34,7 +34,7 @@ public class NoSuchFieldError : IncompatibleClassChangeError {
         
     }
 
-    /**
+     /*
      * Constructs a new {@code NoSuchFieldError} with the current stack trace
      * and the specified detail message.
      * 

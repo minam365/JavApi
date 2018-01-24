@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * SortedSet is a Set which iterates over its elements in a sorted order. The
      * order is determined either by the elements natural ordering, or by a
      * {@link Comparator} which is passed into a concrete implementation at
@@ -31,14 +31,14 @@ namespace biz.ritter.javapi.util
      */
     public interface SortedSet<E> : Set<E> {
     
-        /**
+         /*
          * Returns the comparator used to compare elements in this {@code SortedSet}.
          * 
          * @return a comparator or null if the natural ordering is used.
          */
         Comparator<E> comparator();
 
-        /**
+         /*
          * Returns the first element in this {@code SortedSet}. The first element
          * is the lowest element.
          * 
@@ -48,7 +48,7 @@ namespace biz.ritter.javapi.util
          */
         E first();
 
-        /**
+         /*
          * Returns a {@code SortedSet} of the specified portion of this
          * {@code SortedSet} which contains elements less than the end element. The
          * returned {@code SortedSet} is backed by this {@code SortedSet} so changes
@@ -66,7 +66,7 @@ namespace biz.ritter.javapi.util
          */
         SortedSet<E> headSet(E end);
 
-        /**
+         /*
          * Returns the last element in this {@code SortedSet}. The last element is
          * the highest element.
          * 
@@ -76,7 +76,7 @@ namespace biz.ritter.javapi.util
          */
         E last();
 
-        /**
+         /*
          * Returns a {@code SortedSet} of the specified portion of this
          * {@code SortedSet} which contains elements greater or equal to the start
          * element but less than the end element. The returned {@code SortedSet} is
@@ -100,7 +100,7 @@ namespace biz.ritter.javapi.util
          */
         SortedSet<E> subSet(E start, E end);
 
-        /**
+         /*
          * Returns a {@code SortedSet} of the specified portion of this
          * {@code SortedSet} which contains elements greater or equal to the start
          * element. The returned {@code SortedSet} is backed by this

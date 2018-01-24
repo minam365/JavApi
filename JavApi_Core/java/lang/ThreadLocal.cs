@@ -16,7 +16,7 @@ using System;
 namespace biz.ritter.javapi.lang
 {
 
-    /**
+     /*
      * Implements a thread-local storage, that is, a variable for which each thread
      * has its own value. All threads share the same {@code ThreadLocal} object,
      * but each sees a different value when accessing it, and changes made by one
@@ -27,7 +27,7 @@ namespace biz.ritter.javapi.lang
      */
     public class ThreadLocal<T>
     {
-        /**
+         /*
          * Creates a new thread-local variable.
          */
         public ThreadLocal()
@@ -35,7 +35,7 @@ namespace biz.ritter.javapi.lang
         {
         }
 
-        /**
+         /*
          * Returns the value of this variable for the current thread. If an entry
          * doesn't yet exist for this variable on this thread, this method will
          * create an entry, populating the value with the result of
@@ -49,7 +49,7 @@ namespace biz.ritter.javapi.lang
             return (T)Thread.currentThread().getThreadLocal(tlo);
         }
 
-        /**
+         /*
          * Provides the initial value of this variable for the current thread.
          * The default implementation returns {@code null}.
          *
@@ -60,7 +60,7 @@ namespace biz.ritter.javapi.lang
             return default(T);
         }
 
-        /**
+         /*
          * Sets the value of this variable for the current thread. If set to
          * {@code null}, the value will be set to null and the underlying entry will
          * still be present.
@@ -73,7 +73,7 @@ namespace biz.ritter.javapi.lang
             Thread.currentThread().setThreadLocal(tlo, value);
         }
 
-        /**
+         /*
          * Removes the entry for this variable in the current thread. If this call
          * is followed by a {@link #get()} before a {@link #set},
          * {@code #get()} will call {@link #initialValue()} and create a new

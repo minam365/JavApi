@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.security
 {
 
-/**
+ /*
  * {@code SecureRandom} is an engine class which is capable of generating
  * cryptographically secure pseudo-random numbers.
  */
@@ -52,7 +52,7 @@ public class SecureRandom : Random {
 		[NonSerialized]
     private static SecureRandom internalSecureRandom;
     
-    /**
+     /*
      * Constructs a new instance of {@code SecureRandom}. An implementation for
      * the highest-priority provider is returned. The constructed instance will
      * not have been seeded.
@@ -74,7 +74,7 @@ public class SecureRandom : Random {
         }    
     }
 
-    /**
+     /*
      * Constructs a new instance of {@code SecureRandom}. An implementation for
      * the highest-priority provider is returned. The constructed instance will
      * be seeded with the parameter.
@@ -99,7 +99,7 @@ public class SecureRandom : Random {
         return null;
     }
     
-    /**
+     /*
      * Constructs a new instance of {@code SecureRandom} using the given
      * implementation from the specified provider.
      * 
@@ -122,7 +122,7 @@ public class SecureRandom : Random {
         this.secureRandomSpi = secureRandomSpi;
     }
 
-    /**
+     /*
      * Returns a new instance of {@code SecureRandom} that utilizes the
      * specified algorithm.
      * 
@@ -146,7 +146,7 @@ public class SecureRandom : Random {
         }
     }
 
-    /**
+     /*
      * Returns a new instance of {@code SecureRandom} that utilizes the
      * specified algorithm from the specified provider.
      * 
@@ -176,7 +176,7 @@ public class SecureRandom : Random {
         return getInstance(algorithm, p);    
     }
 
-    /**
+     /*
      * Returns a new instance of {@code SecureRandom} that utilizes the
      * specified algorithm from the specified provider.
      * 
@@ -205,7 +205,7 @@ public class SecureRandom : Random {
         }
     }
 
-    /**
+     /*
      * Returns the provider associated with this {@code SecureRandom}.
      * 
      * @return the provider associated with this {@code SecureRandom}.
@@ -214,7 +214,7 @@ public class SecureRandom : Random {
         return provider;
     }
     
-    /**
+     /*
      * Returns the name of the algorithm of this {@code SecureRandom}.
      * 
      * @return the name of the algorithm of this {@code SecureRandom}.
@@ -223,7 +223,7 @@ public class SecureRandom : Random {
         return algorithm;
     }
 
-    /**
+     /*
      * Reseeds this {@code SecureRandom} instance with the specified {@code
      * seed}. The seed of this {@code SecureRandom} instance is supplemented,
      * not replaced.
@@ -237,7 +237,7 @@ public class SecureRandom : Random {
 			}
     }
 
-    /**
+     /*
      * Reseeds this this {@code SecureRandom} instance with the eight bytes
      * described by the representation of the given {@code long seed}. The seed
      * of this {@code SecureRandom} instance is supplemented, not replaced.
@@ -262,7 +262,7 @@ public class SecureRandom : Random {
         setSeed(byteSeed);
     }
 
-    /**
+     /*
      * Generates and stores random bytes in the given {@code byte[]} for each
      * array element.
      * 
@@ -276,7 +276,7 @@ public class SecureRandom : Random {
 			}
     }
 
-    /**
+     /*
      * Generates and returns an {@code int} containing the specified number of
      * random bits (right justified, with leading zeros).
      * 
@@ -306,7 +306,7 @@ public class SecureRandom : Random {
         return ret;
     }
 
-    /**
+     /*
      * Generates and returns the specified number of seed bytes, computed using
      * the seed generation algorithm used by this {@code SecureRandom}.
      * 
@@ -321,7 +321,7 @@ public class SecureRandom : Random {
         return internalSecureRandom.generateSeed(numBytes);
     }
 
-    /**
+     /*
      * Generates and returns the specified number of seed bytes, computed using
      * the seed generation algorithm used by this {@code SecureRandom}.
      * 

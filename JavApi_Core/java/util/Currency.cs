@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util
 {
-    /**
+     /*
      * This class represents a currency as identified in the ISO 4217 currency
      * codes. 
      */
@@ -29,14 +29,14 @@ namespace biz.ritter.javapi.util
 
         private RegionInfo region;
 
-        /**
+         /*
          * @param currencyCode
          */
         private Currency(RegionInfo region) {
             this.region = region;
         }
 
-        /**
+         /*
          * Returns the {@code Currency} instance for this currency code.
          * <p>
          * 
@@ -60,7 +60,7 @@ namespace biz.ritter.javapi.util
             throw new java.lang.IllegalArgumentException("currency code is not a supported ISO 4217 currency code");
         }
 
-        /**
+         /*
          * Returns the {@code Currency} instance for this {@code Locale}'s country.
          * 
          * @param locale
@@ -85,7 +85,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns this {@code Currency}'s ISO 4217 currency code.
          * 
          * @return this {@code Currency}'s ISO 4217 currency code.
@@ -94,7 +94,7 @@ namespace biz.ritter.javapi.util
             return region.ISOCurrencySymbol;
         }
     
-        /**
+         /*
          * Returns the symbol for this currency in the default locale. For instance,
          * if the default locale is the US, the symbol of the US dollar is "$". For
          * other locales it may be "US$". If no symbol can be determined, the ISO
@@ -106,7 +106,7 @@ namespace biz.ritter.javapi.util
             return getSymbol(Locale.getDefault());
         }
 
-        /**
+         /*
          * Returns the symbol for this currency in the given {@code Locale}.
          * <p>
          * If the locale doesn't have any countries (e.g.
@@ -136,7 +136,7 @@ namespace biz.ritter.javapi.util
             return locale.delegateInstance.NumberFormat.CurrencySymbol;
         }
 
-        /**
+         /*
          * Returns the default number of fraction digits for this currency. For
          * instance, the default number of fraction digits for the US dollar is 2.
          * For the Japanese Yen the number is 0. In the case of pseudo-currencies,
@@ -149,7 +149,7 @@ namespace biz.ritter.javapi.util
             return l.delegateInstance.NumberFormat.NumberDecimalDigits;
         }
 
-        /**
+         /*
          * Returns ISO 4217 currency code.
          * 
          * @return ISO 4217 currency code.

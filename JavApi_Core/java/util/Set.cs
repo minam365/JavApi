@@ -18,7 +18,7 @@ namespace biz.ritter.javapi.util
 {
 
 
-    /**
+     /*
      * A {@code Set} is a data structure which does not allow duplicate elements.
      *
      * @since 1.2

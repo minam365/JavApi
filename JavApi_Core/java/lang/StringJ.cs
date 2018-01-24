@@ -152,7 +152,7 @@ namespace biz.ritter.javapi.lang
             return this.delegateInstance.matches(expr);
         }
 
-        /**
+         /*
          * Creates a new string containing the specified characters in the character
          * array. Modifying the character array after creating the string has no
          * effect on the string.
@@ -175,7 +175,7 @@ namespace biz.ritter.javapi.lang
             return new StringJ(start, length, data);
         }
 
-        /**
+         /*
          * Converts the specified integer to its string representation.
          * 
          * @param value
@@ -205,7 +205,7 @@ namespace biz.ritter.javapi.lang
                  srcEnd - srcBegin);
         }
 
-        /**
+         /*
          * Converts the specified boolean to its string representation. When the
          * boolean is {@code true} return {@code "true"}, otherwise return {@code
          * "false"}.
@@ -219,7 +219,7 @@ namespace biz.ritter.javapi.lang
             return value ? "true" : "false"; //$NON-NLS-1$ //$NON-NLS-2$
         }
 
-        /**
+         /*
          * Creates a new string containing the characters in the specified character
          * array. Modifying the character array after creating the string has no
          * effect on the string.
@@ -235,7 +235,7 @@ namespace biz.ritter.javapi.lang
             return new String(data, 0, data.Length);
         }
 
-        /**
+         /*
          * Converts the specified character to its string representation.
          * 
          * @param value
@@ -257,7 +257,7 @@ namespace biz.ritter.javapi.lang
             return s.ToString();
         }
 
-        /**
+         /*
          * Converts the specified double to its string representation.
          * 
          * @param value
@@ -269,7 +269,7 @@ namespace biz.ritter.javapi.lang
             return Double.toString(value);
         }
 
-        /**
+         /*
          * Converts the specified float to its string representation.
          * 
          * @param value
@@ -281,7 +281,7 @@ namespace biz.ritter.javapi.lang
             return Float.toString(value);
         }
 
-        /**
+         /*
          * Converts the specified long to its string representation.
          * 
          * @param value
@@ -293,7 +293,7 @@ namespace biz.ritter.javapi.lang
             return Long.toString(value);
         }
 
-        /**
+         /*
          * Converts the specified object to its string representation. If the object
          * is null return the string {@code "null"}, otherwise use {@code
          * toString()} to get the string representation.

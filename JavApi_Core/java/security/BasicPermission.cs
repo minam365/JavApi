@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.security
 {
 
-    /**
+     /*
      * {@code BasicPermission} is the common base class of all permissions which
      * have a name but no action lists. A {@code BasicPermission} is granted or it
      * is not.
@@ -42,7 +42,7 @@ namespace biz.ritter.javapi.security
 
         private static readonly long serialVersionUID = 6279438298436773498L;
 
-        /**
+         /*
          * Constructs a new instance of {@code BasicPermission} with the specified
          * name.
          *
@@ -57,7 +57,7 @@ namespace biz.ritter.javapi.security
             checkName(name);
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code BasicPermission} with the specified
          * name. The {@code action} parameter is ignored.
          *
@@ -76,7 +76,7 @@ namespace biz.ritter.javapi.security
             checkName(name);
         }
 
-        /**
+         /*
          * Checks name parameter
          */
         private void checkName(String name)
@@ -91,7 +91,7 @@ namespace biz.ritter.javapi.security
             }
         }
 
-        /**
+         /*
          * Compares the specified object with this {@code BasicPermission} for
          * equality. Returns {@code true} if the specified object has the same class
          * and the two {@code Permissions}s have the same name.
@@ -119,7 +119,7 @@ namespace biz.ritter.javapi.security
             return false;
         }
 
-        /**
+         /*
          * Returns the hash code value for this {@code BasicPermission}. Returns the
          * same hash code for {@code BasicPermission}s that are equal to each other
          * as required by the general contract of {@link Object#hashCode}.
@@ -133,7 +133,7 @@ namespace biz.ritter.javapi.security
             return getName().GetHashCode();
         }
 
-        /**
+         /*
          * Returns the actions associated with this permission. Since {@code
          * BasicPermission} instances have no actions, an empty string is returned.
          *
@@ -144,7 +144,7 @@ namespace biz.ritter.javapi.security
             return ""; //$NON-NLS-1$
         }
 
-        /**
+         /*
          * Indicates whether the specified permission is implied by this permission.
          *
          * @param permission
@@ -174,7 +174,7 @@ namespace biz.ritter.javapi.security
             return false;
         }
 
-        /**
+         /*
          * Checks if {@code thisName} implies {@code thatName},
          * accordingly to hierarchical property naming convention.
          * It is assumed that names cannot be {@code null} or empty.
@@ -211,7 +211,7 @@ namespace biz.ritter.javapi.security
             return true;
         }
 
-        /**
+         /*
          * Returns an empty {@link PermissionCollection} for holding permissions.
          * <p/>
          * For {@code PermissionCollection} (and subclasses which do not override
@@ -230,7 +230,7 @@ namespace biz.ritter.javapi.security
             return new BasicPermissionCollection();
         }
 
-        /**
+         /*
          * Checks name after default deserialization.
          */
         private void readObject(java.io.ObjectInputStream inJ)// throws IOException,

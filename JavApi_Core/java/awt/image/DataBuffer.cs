@@ -17,7 +17,7 @@ using org.apache.harmony.awt.gl.image;
 
 namespace biz.ritter.javapi.awt.image
 {
-/**
+ /*
  * @author Igor V. Stolyarov
  */
 

@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.security
 {
 
-    /**
+     /*
      * {@code SecurityPermission} objects guard access to the mechanisms which
      * implement security. Security permissions have names, but not actions.
      */
@@ -27,7 +27,7 @@ namespace biz.ritter.javapi.security
 
         private static readonly long serialVersionUID = 5236109936224050470L;
 
-        /**
+         /*
          * Constructs a new instance of {@code SecurityPermission} with the given
          * name.
          *
@@ -39,7 +39,7 @@ namespace biz.ritter.javapi.security
         {
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code SecurityPermission} with the given
          * {@code name} and {@code action} list. The action list is ignored - it is
          * existing for compatibility reasons only.

@@ -22,7 +22,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapix.xml.crypto
 {
 
-/**
+ /*
  * A representation of a <code>Data</code> type containing an octet stream.
  */
 public class OctetStreamData : Data {
@@ -31,7 +31,7 @@ public class OctetStreamData : Data {
     private String uri;
     private String mimeType;
 
-    /**
+     /*
      * Creates a new <code>OctetStreamData</code>.
      *
      * @param octetStream the input stream containing the octets
@@ -45,7 +45,7 @@ public class OctetStreamData : Data {
         this.octetStream = octetStream;
     }
 
-    /**
+     /*
      * Creates a new <code>OctetStreamData</code>.
      *
      * @param octetStream the input stream containing the octets
@@ -66,7 +66,7 @@ public class OctetStreamData : Data {
         this.mimeType = mimeType;
     }
 
-    /**
+     /*
      * Returns the input stream of this <code>OctetStreamData</code>.
      *
      * @return the input stream of this <code>OctetStreamData</code>.
@@ -75,7 +75,7 @@ public class OctetStreamData : Data {
         return octetStream;
     }
 
-    /**
+     /*
      * Returns the URI String identifying the data object represented by this
      * <code>OctetStreamData</code>.
      *
@@ -85,7 +85,7 @@ public class OctetStreamData : Data {
         return uri;
     }
 
-    /**
+     /*
      * Returns the MIME type associated with the data object represented by this
      * <code>OctetStreamData</code>.
      *

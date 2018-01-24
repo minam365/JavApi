@@ -9,7 +9,7 @@ namespace org.xml.sax.ext
 {
 
 
-    /**
+     /*
      * This class extends the SAX2 base handler class to support the
      * SAX2 {@link LexicalHandler}, {@link DeclHandler}, and
      * {@link EntityResolver2} extensions.  Except for overriding the
@@ -35,7 +35,7 @@ namespace org.xml.sax.ext
     public class DefaultHandler2 : DefaultHandler
         , LexicalHandler, DeclHandler, EntityResolver2
     {
-        /** Constructs a handler which ignores all parsing events. */
+         /* Constructs a handler which ignores all parsing events. */
         public DefaultHandler2() { }
 
 
@@ -92,7 +92,7 @@ namespace org.xml.sax.ext
 
         // SAX2 ext-1.1 EntityResolver2
 
-        /**
+         /*
          * Tells the parser that if no external subset has been declared
          * in the document text, none should be used.
          */
@@ -100,7 +100,7 @@ namespace org.xml.sax.ext
         //throws  SAXException, IOException
         { return null; }
 
-        /**
+         /*
          * Tells the parser to resolve the systemId against the baseURI
          * and read the entity text from that resulting absolute URI.
          * Note that because the older
@@ -116,7 +116,7 @@ namespace org.xml.sax.ext
 
         // SAX1 EntityResolver
 
-        /**
+         /*
          * Invokes
          * {@link EntityResolver2#resolveEntity EntityResolver2.resolveEntity()}
          * with null entity name and base URI.

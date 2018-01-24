@@ -7,7 +7,7 @@ using System;
 namespace org.xml.sax
 {
 
-    /**
+     /*
      * Basic interface for SAX error handlers.
      *
      * <blockquote>
@@ -51,7 +51,7 @@ namespace org.xml.sax
     {
 
 
-        /**
+         /*
          * Receive notification of a warning.
          *
          * <p>SAX parsers will use this method to report conditions that
@@ -75,7 +75,7 @@ namespace org.xml.sax
         void warning(SAXParseException exception);//throws SAXException;
 
 
-        /**
+         /*
          * Receive notification of a recoverable error.
          *
          * <p>This corresponds to the definition of "error" in section 1.2
@@ -103,7 +103,7 @@ namespace org.xml.sax
         void error(SAXParseException exception);//throws SAXException;
 
 
-        /**
+         /*
          * Receive notification of a non-recoverable error.
          *
          * <p><strong>There is an apparent contradiction between the

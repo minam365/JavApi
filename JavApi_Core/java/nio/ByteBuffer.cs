@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.nio
 {
 
-    /**
+     /*
      * A buffer for bytes.
      * <p />
      * A byte buffer can be created in either one of the following ways:
@@ -37,7 +37,7 @@ namespace biz.ritter.javapi.nio
     public abstract class ByteBuffer : java.nio.Buffer, java.lang.Comparable<ByteBuffer>
     {
 
-        /**
+         /*
          * Creates a byte buffer based on a newly allocated byte array.
          * 
          * @param capacity
@@ -53,7 +53,7 @@ namespace biz.ritter.javapi.nio
             return BufferFactory.newByteBuffer(capacity);
         }
 
-        /**
+         /*
          * Creates a direct byte buffer based on a newly allocated memory block.
          * 
          * @param capacity
@@ -69,7 +69,7 @@ namespace biz.ritter.javapi.nio
             return BufferFactory.newDirectByteBuffer(capacity);
         }*/
 
-        /**
+         /*
          * Creates a new byte buffer by wrapping the given byte array.
          * <p />
          * Calling this method has the same effect as
@@ -83,7 +83,7 @@ namespace biz.ritter.javapi.nio
             return BufferFactory.newByteBuffer(array);
         }
 
-        /**
+         /*
          * Creates a new byte buffer by wrapping the given byte array.
          * <p />
          * The new buffer's position will be {@code start}, limit will be
@@ -114,12 +114,12 @@ namespace biz.ritter.javapi.nio
             return buf;
         }
 
-        /**
+         /*
          * The byte order of this buffer, default is {@code BIG_ENDIAN}.
          */
         protected internal ByteOrder orderJ = ByteOrder.BIG_ENDIAN;
 
-        /**
+         /*
          * Constructs a {@code ByteBuffer} with given capacity.
          * 
          * @param capacity
@@ -128,7 +128,7 @@ namespace biz.ritter.javapi.nio
         protected internal ByteBuffer(int capacity) : base (capacity) {
         }
 
-        /**
+         /*
          * Returns the byte array which this buffer is based on, if there is one.
          * 
          * @return the byte array which this buffer is based on.
@@ -141,7 +141,7 @@ namespace biz.ritter.javapi.nio
             return protectedArray();
         }
 
-        /**
+         /*
          * Returns the offset of the byte array which this buffer is based on, if
          * there is one.
          * <p />
@@ -158,7 +158,7 @@ namespace biz.ritter.javapi.nio
             return protectedArrayOffset();
         }
 
-        /**
+         /*
          * Returns a read-only buffer that shares its content with this buffer.
          * <p />
          * The returned buffer is guaranteed to be a new instance, even if this
@@ -173,7 +173,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract ByteBuffer asReadOnlyBuffer();
 
-        /**
+         /*
          * Compacts this byte buffer.
          * <p />
          * The remaining bytes will be moved to the head of the
@@ -187,7 +187,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract ByteBuffer compact();
 
-        /**
+         /*
          * Compares the remaining bytes of this buffer to another byte buffer's
          * remaining bytes.
          * 
@@ -218,7 +218,7 @@ namespace biz.ritter.javapi.nio
             return remaining() - otherBuffer.remaining();
         }
 
-        /**
+         /*
          * Returns a duplicated buffer that shares its content with this buffer.
          * <p />
          * The duplicated buffer's position, limit, capacity and mark are the same
@@ -233,7 +233,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract ByteBuffer duplicate();
 
-        /**
+         /*
          * Checks whether this byte buffer is equal to another object.
          * <p />
          * If {@code other} is not a byte buffer then {@code false} is returned. Two
@@ -265,7 +265,7 @@ namespace biz.ritter.javapi.nio
             return equalSoFar;
         }
 
-        /**
+         /*
          * Returns the byte at the current position and increases the position by 1.
          * 
          * @return the byte at the current position.
@@ -274,7 +274,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract byte get();
 
-        /**
+         /*
          * Reads bytes from the current position into the specified byte array and
          * increases the position by the number of bytes read.
          * <p />
@@ -291,7 +291,7 @@ namespace biz.ritter.javapi.nio
             return get(dest, 0, dest.Length);
         }
 
-        /**
+         /*
          * Reads bytes from the current position into the specified byte array,
          * starting at the specified offset, and increases the position by the
          * number of bytes read.
@@ -325,7 +325,7 @@ namespace biz.ritter.javapi.nio
             return this;
         }
 
-        /**
+         /*
          * Returns the byte at the specified index and does not change the position.
          * 
          * @param index
@@ -337,7 +337,7 @@ namespace biz.ritter.javapi.nio
         public abstract byte get(int index);
 
 
-        /**
+         /*
          * Indicates whether this buffer is based on a byte array and provides
          * read/write access.
          * 
@@ -348,7 +348,7 @@ namespace biz.ritter.javapi.nio
             return protectedHasArray();
         }
 
-        /**
+         /*
          * Calculates this buffer's hash code from the remaining chars. The
          * position, limit, capacity and mark don't affect the hash code.
          *
@@ -363,7 +363,7 @@ namespace biz.ritter.javapi.nio
             return hash;
         }
 
-        /**
+         /*
          * Returns the byte order used by this buffer when converting bytes from/to
          * other primitive types.
          * <p />
@@ -377,7 +377,7 @@ namespace biz.ritter.javapi.nio
             return this.orderJ;
         }
 
-        /**
+         /*
          * Sets the byte order of this buffer.
          * 
          * @param byteOrder
@@ -396,28 +396,28 @@ namespace biz.ritter.javapi.nio
             return this;
         }
 
-        /**
+         /*
          * Child class implements this method to realize {@code array()}.
          * 
          * @see #array()
          */
         protected abstract byte[] protectedArray();
 
-        /**
+         /*
          * Child class implements this method to realize {@code arrayOffset()}.
          * 
          * @see #arrayOffset()
          */
         protected abstract int protectedArrayOffset();
 
-        /**
+         /*
          * Child class implements this method to realize {@code hasArray()}.
          * 
          * @see #hasArray()
          */
         protected abstract bool protectedHasArray();
 
-        /**
+         /*
          * Writes the given byte to the current position and increases the position
          * by 1.
          * 
@@ -431,7 +431,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract ByteBuffer put(byte b);
 
-        /**
+         /*
          * Writes bytes in the given byte array to the current position and
          * increases the position by the number of bytes written.
          * <p />
@@ -450,7 +450,7 @@ namespace biz.ritter.javapi.nio
             return put(src, 0, src.Length);
         }
 
-        /**
+         /*
          * Writes bytes in the given byte array, starting from the specified offset,
          * to the current position and increases the position by the number of bytes
          * written.
@@ -486,7 +486,7 @@ namespace biz.ritter.javapi.nio
             return this;
         }
 
-        /**
+         /*
          * Writes all the remaining bytes of the {@code src} byte buffer to this
          * buffer's current position, and increases both buffers' position by the
          * number of bytes copied.
@@ -515,7 +515,7 @@ namespace biz.ritter.javapi.nio
             return this;
         }
 
-        /**
+         /*
          * Write a byte to the specified index of this buffer without changing the
          * position.
          * 
@@ -531,7 +531,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract ByteBuffer put(int index, byte b);
 
-        /**
+         /*
          * Returns a sliced buffer that shares its content with this buffer.
          * <p />
          * The sliced buffer's capacity will be this buffer's
@@ -548,7 +548,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract ByteBuffer slice();
 
-        /**
+         /*
          * Returns a string representing the state of this byte buffer.
          * 
          * @return a string representing the state of this byte buffer.
@@ -564,7 +564,7 @@ namespace biz.ritter.javapi.nio
             buf.Append(limit());
             return buf.toString();
         }
-        /**
+         /*
          * Returns the int at the current position and increases the position by 4.
          * <p />
          * The 4 bytes starting at the current position are composed into a int
@@ -575,7 +575,7 @@ namespace biz.ritter.javapi.nio
          *                if the position is greater than {@code limit - 4}.
          */
         public abstract int getInt();
-        /**
+         /*
          * Returns the int at the specified index.
          * <p />
          * The 4 bytes starting at the specified index are composed into a int
@@ -591,7 +591,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract int getInt(int index);
 
-        /**
+         /*
          * Returns the long at the current position and increases the position by 8.
          * <p />
          * The 8 bytes starting at the current position are composed into a long
@@ -603,7 +603,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract long getLong();
 
-        /**
+         /*
          * Returns the long at the specified index.
          * <p />
          * The 8 bytes starting at the specified index are composed into a long
@@ -619,7 +619,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract long getLong(int index);
 
-        /**
+         /*
          * Returns the short at the current position and increases the position by 2.
          * <p />
          * The 2 bytes starting at the current position are composed into a short
@@ -631,7 +631,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract short getShort();
 
-        /**
+         /*
          * Returns the short at the specified index.
          * <p />
          * The 2 bytes starting at the specified index are composed into a short
@@ -647,7 +647,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract short getShort(int index);
 
-        /**
+         /*
          * Returns the char at the current position and increases the position by 2.
          * <p />
          * The 2 bytes starting at the current position are composed into a char
@@ -659,7 +659,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract char getChar();
 
-        /**
+         /*
          * Returns the char at the specified index.
          * <p />
          * The 2 bytes starting from the specified index are composed into a char
@@ -675,7 +675,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract char getChar(int index);
 
-        /**
+         /*
          * Writes the given char to the current position and increases the position
          * by 2.
          * <p />
@@ -691,7 +691,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract ByteBuffer putChar(char value);
 
-        /**
+         /*
          * Writes the given char to the specified index of this buffer.
          * <p />
          * The char is converted to bytes using the current byte order. The position
@@ -710,7 +710,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract ByteBuffer putChar(int index, char value);
 
-        /**
+         /*
          * Writes the given short to the current position and increases the position
          * by 2.
          * <p />
@@ -726,7 +726,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract ByteBuffer putShort(short value);
 
-        /**
+         /*
          * Writes the given short to the specified index of this buffer.
          * <p />
          * The short is converted to bytes using the current byte order. The

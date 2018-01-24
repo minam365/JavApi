@@ -35,7 +35,7 @@ namespace biz.ritter.javapi.net
     
         internal const String allLegal = unreserved + reserved;
         private readonly System.Uri delegateInstance;
-        /**
+         /*
          * Creates a new URI instance according to the given string {@code uri}.
          *
          * @param uri
@@ -60,7 +60,7 @@ namespace biz.ritter.javapi.net
 			return System.Web.HttpUtility.UrlDecode (this.delegateInstance.AbsoluteUri);
 		}
 
-        /**
+         /*
          * Creates a new URI instance using the given arguments. This constructor
          * first creates a temporary URI string from the given components. This
          * string will be parsed later on to create the URI instance.
@@ -104,7 +104,7 @@ namespace biz.ritter.javapi.net
             }
         }
 
-        /**
+         /*
          * Creates a new URI instance using the given arguments. This constructor
          * first creates a temporary URI string from the given components. This
          * string will be parsed later on to create the URI instance.
@@ -204,7 +204,7 @@ namespace biz.ritter.javapi.net
             }
         }
 
-        /**
+         /*
          * Creates a new URI instance using the given arguments. This constructor
          * first creates a temporary URI string from the given components. This
          * string will be parsed later on to create the URI instance.
@@ -228,7 +228,7 @@ namespace biz.ritter.javapi.net
             
         }
 
-        /**
+         /*
          * Creates a new URI instance using the given arguments. This constructor
          * first creates a temporary URI string from the given components. This
          * string will be parsed later on to create the URI instance.
@@ -314,7 +314,7 @@ namespace biz.ritter.javapi.net
                 throw new java.lang.RuntimeException(e.toString());
             }
         }
-        /**
+         /*
          * Parses the given argument {@code uri} and creates an appropriate URI
          * instance.
          *
@@ -332,7 +332,7 @@ namespace biz.ritter.javapi.net
             return result;
         }
 
-        /**
+         /*
          * Returns the textual string representation of this URI instance.
          *
          * @return the textual string representation of this URI.
@@ -341,7 +341,7 @@ namespace biz.ritter.javapi.net
             return this.delegateInstance.ToString();
         }
 
-        /**
+         /*
          * Converts this URI instance to a URL.
          *
          * @return the created URL representing the same resource as this URI.

@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.prefs
 {
 
-    /**
+     /*
      * This is the event class to indicate that one child of the preference node has
      * been added or deleted.
      * <p/>
@@ -40,7 +40,7 @@ namespace biz.ritter.javapi.util.prefs
         private readonly Preferences parent;
         private readonly Preferences child;
 
-        /**
+         /*
          * Constructs a new {@code NodeChangeEvent} instance.
          * 
          * @param p
@@ -57,7 +57,7 @@ namespace biz.ritter.javapi.util.prefs
             child = c;
         }
 
-        /**
+         /*
          * Gets the {@code Preferences} instance that fired this event.
          * 
          * @return the {@code Preferences} instance that fired this event.
@@ -67,7 +67,7 @@ namespace biz.ritter.javapi.util.prefs
             return parent;
         }
 
-        /**
+         /*
          * Gets the child {@code Preferences} node that was added or removed.
          * 
          * @return the added or removed child {@code Preferences} node.
@@ -77,7 +77,7 @@ namespace biz.ritter.javapi.util.prefs
             return child;
         }
 
-        /**
+         /*
          * This method always throws a {@code NotSerializableException}, because
          * this object cannot be serialized,
          */
@@ -86,7 +86,7 @@ namespace biz.ritter.javapi.util.prefs
             throw new java.io.NotSerializableException();
         }
 
-        /**
+         /*
          * This method always throws a {@code NotSerializableException}, because
          * this object cannot be serialized,
          */

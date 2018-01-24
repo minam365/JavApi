@@ -72,7 +72,7 @@ namespace biz.ritter.javapi.security
         private Provider.Service lastServicesByType;
 
 
-        /**
+         /*
          * Returns the service with the specified {@code type} implementing the
          * specified {@code algorithm}, or {@code null} if no such implementation
          * exists.
@@ -138,7 +138,7 @@ namespace biz.ritter.javapi.security
             }
         }
 
-        /**
+         /*
          * Returns true if this provider implements the given algorithm. Caller
          * must specify the cryptographic service and specify constraints via the
          * attribute name and value.
@@ -220,7 +220,7 @@ namespace biz.ritter.javapi.security
         }
         return null;
     }
-        /**
+         /*
          * Get the service of the specified type
          *  
          */
@@ -248,7 +248,7 @@ namespace biz.ritter.javapi.security
             }
         }
 
-        /**
+         /*
          * Returns an unmodifiable {@code Set} of all services registered by this
          * provider.
          *
@@ -281,7 +281,7 @@ namespace biz.ritter.javapi.security
             }
         }
 
-        /**
+         /*
          * 
          * Set the provider preference order number.
          * 
@@ -292,7 +292,7 @@ namespace biz.ritter.javapi.security
             providerNumber = n;
         }
 
-        /**
+         /*
          * 
          * Get the provider preference order number.
          * 
@@ -463,7 +463,7 @@ namespace biz.ritter.javapi.security
             lastServicesSet = null;
         }
 
-        /**
+         /*
          * Returns the name of this provider.
          *
          * @return the name of this provider.
@@ -473,7 +473,7 @@ namespace biz.ritter.javapi.security
             return name;
         }
 
-        /**
+         /*
          * {@code Service} represents a service in the Java Security infrastructure.
          * Each service describes its type, the algorithm it implements, to which
          * provider it belongs and other properties.
@@ -504,7 +504,7 @@ namespace biz.ritter.javapi.security
             // For newInstance() optimization
             private String lastClassName;
 
-            /**
+             /*
              * Constructs a new instance of {@code Service} with the given
              * attributes.
              *
@@ -543,7 +543,7 @@ namespace biz.ritter.javapi.security
                 this.attributes = attributes;
             }
 
-            /**
+             /*
              * Returns the type of this {@code Service}. For example {@code
              * KeyPairGenerator}.
              *
@@ -554,7 +554,7 @@ namespace biz.ritter.javapi.security
                 return type;
             }
 
-            /**
+             /*
              * Returns the name of the algorithm implemented by this {@code
              * Service}.
              *
@@ -566,7 +566,7 @@ namespace biz.ritter.javapi.security
                 return algorithm;
             }
 
-            /**
+             /*
              * Returns the {@code Provider} this {@code Service} belongs to.
              *
              * @return the {@code Provider} this {@code Service} belongs to.
@@ -576,7 +576,7 @@ namespace biz.ritter.javapi.security
                 return provider;
             }
 
-            /**
+             /*
              * Returns the name of the class implementing this {@code Service}.
              *
              * @return the name of the class implementing this {@code Service}.
@@ -586,7 +586,7 @@ namespace biz.ritter.javapi.security
                 return className;
             }
 
-            /**
+             /*
              * Returns the value of the attribute with the specified {@code name}.
              *
              * @param name
@@ -618,7 +618,7 @@ namespace biz.ritter.javapi.security
                 return aliases.iterator();
             }
 
-            /**
+             /*
              * Creates and returns a new instance of the implementation described by
              * this {@code Service}.
              *
@@ -699,7 +699,7 @@ namespace biz.ritter.javapi.security
                 }
             }
 
-            /**
+             /*
              * Indicates whether this {@code Service} supports the specified
              * constructor parameter.
              *
@@ -713,7 +713,7 @@ namespace biz.ritter.javapi.security
                 return true;
             }
 
-            /**
+             /*
              * Returns a string containing a concise, human-readable description of
              * this {@code Service}.
              *

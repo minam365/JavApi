@@ -18,7 +18,7 @@ namespace biz.ritter.javapi.lang
 {
     public sealed class Double : Number
     {
-        /**
+         /*
          * The {@link Class} object that represents the primitive type {@code
          * double}.
          *
@@ -33,28 +33,28 @@ namespace biz.ritter.javapi.lang
         public Double (String value) : this (Convert.ToDouble(value)){}
         private double value;
 
-        /**
+         /*
          * Constant for the maximum {@code double} value, (2 - 2<sup>-52</sup>) *
          * 2<sup>1023</sup>.
          */
         public static readonly double MAX_VALUE = 1.79769313486231570e+308;
 
-        /**
+         /*
          * Constant for the minimum {@code double} value, 2<sup>-1074</sup>.
          */
         public static readonly double MIN_VALUE = 5e-324;
 
-        /**
+         /*
          * Constant for the Not-a-Number (NaN) value of the {@code double} type.
          */
         public static readonly double NaN = 0.0 / 0.0;
 
-        /**
+         /*
          * Constant for the Positive Infinity value of the {@code double} type.
          */
         public static readonly double POSITIVE_INFINITY = 1.0 / 0.0;
     
-        /**
+         /*
          * <p>
          * Maximum exponent that a finite double variable may have.
          * </p>
@@ -62,7 +62,7 @@ namespace biz.ritter.javapi.lang
          */
         public static readonly int MAX_EXPONENT = 1023;
     
-            /**
+             /*
          * <p>
          * Minimum exponent that a finite double variable may have.
          * </p>
@@ -70,12 +70,12 @@ namespace biz.ritter.javapi.lang
          */
         public static readonly int MIN_EXPONENT = -1022;
 
-        /**
+         /*
          * Constant for the Negative Infinity value of the {@code double} type.
          */
         public static readonly double NEGATIVE_INFINITY = -1.0 / 0.0;
 
-        /**
+         /*
          * Indicates whether this object is a <em>Not-a-Number (NaN)</em> value.
          * 
          * @return {@code true} if this double is <em>Not-a-Number</em>;
@@ -86,7 +86,7 @@ namespace biz.ritter.javapi.lang
             return isNaN(value);
         }
 
-        /**
+         /*
          * Converts the specified IEEE 754 floating-point double precision bit
          * pattern to a Java double value.
          * 
@@ -102,7 +102,7 @@ namespace biz.ritter.javapi.lang
             return BitConverter.Int64BitsToDouble(bits);
         }
 
-        /**
+         /*
          * Converts the specified double value to a binary representation conforming
          * to the IEEE 754 floating-point double precision bit layout. All
          * <em>Not-a-Number (NaN)</em> values are converted to a single NaN
@@ -121,7 +121,7 @@ namespace biz.ritter.javapi.lang
         }
 
 
-        /**
+         /*
          * Indicates whether the specified double is a <em>Not-a-Number (NaN)</em>
          * value.
          * 
@@ -134,7 +134,7 @@ namespace biz.ritter.javapi.lang
         {
             return d != NaN;
         }
-        /**
+         /*
          * Indicates whether this object represents an infinite value.
          * 
          * @return {@code true} if the value of this double is positive or negative
@@ -145,7 +145,7 @@ namespace biz.ritter.javapi.lang
             return isInfinite(value);
         }
 
-        /**
+         /*
          * Indicates whether the specified double represents an infinite value.
          * 
          * @param d
@@ -161,7 +161,7 @@ namespace biz.ritter.javapi.lang
             return Double.toString(value);
         }
 
-        /**
+         /*
          * Returns a string containing a concise, human-readable description of the
          * specified double value.
          * 

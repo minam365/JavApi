@@ -21,7 +21,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * AbstractSequentialList is an abstract implementation of the List interface.
      * This implementation does not support adding. A subclass must implement the
      * abstract method listIterator().
@@ -30,7 +30,7 @@ namespace biz.ritter.javapi.util
      */
     public abstract class AbstractSequentialList<E> : AbstractList<E>, IEnumerable {
 
-        /**
+         /*
          * Constructs a new instance of this AbstractSequentialList.
          */
         protected AbstractSequentialList() : base () {

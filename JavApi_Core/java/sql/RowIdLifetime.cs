@@ -14,7 +14,7 @@
 
 namespace biz.ritter.javapi.sql
 {
-    /**
+     /*
      * An enumeration to describe the life-time of RowID.
      * 
      * @since 1.6

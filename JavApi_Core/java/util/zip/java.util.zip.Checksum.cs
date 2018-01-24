@@ -16,26 +16,26 @@
 namespace biz.ritter.javapi.util.zip
 {
 
-    /**
+     /*
      * Holds information about a checksum which was computed with the methods
      * implementing a checksum algorithm.
      */
     public interface Checksum {
 
-        /**
+         /*
          * Returns the current calculated checksum value.
          *
          * @return the checksum.
          */
         long getValue();
 
-        /**
+         /*
          * Resets the checksum value applied before beginning calculations on a new
          * stream of data.
          */
         void reset();
 
-        /**
+         /*
          * Updates the checksum with the given bytes.
          *
          * @param buf
@@ -47,7 +47,7 @@ namespace biz.ritter.javapi.util.zip
          */
         void update(byte[] buf, int off, int nbytes);
 
-        /**
+         /*
          * Updates the checksum value with the given byte.
          *
          * @param val

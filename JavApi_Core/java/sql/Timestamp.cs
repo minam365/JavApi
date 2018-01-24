@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.sql
 {
-    /**
+     /*
      * A Java representation of the SQL {@code TIMESTAMP} type. It provides the
      * capability of representing the SQL {@code TIMESTAMP} nanosecond value, in
      * addition to the regular date/time value which has millisecond resolution.
@@ -47,7 +47,7 @@ namespace biz.ritter.javapi.sql
         // The regex pattern of yyyy-mm-dd hh:mm:ss
         private const String TIME_FORMAT_REGEX = "[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}.*"; //$NON-NLS-1$
 
-        /**
+         /*
          * Returns a {@code Timestamp} corresponding to the time specified by the
          * supplied values for <i>Year</i>, <i>Month</i>, <i>Date</i>, <i>Hour</i>,
          * <i>Minutes</i>, <i>Seconds</i> and <i>Nanoseconds</i>.
@@ -83,7 +83,7 @@ namespace biz.ritter.javapi.sql
             nanos = theNano;
         }
 
-        /**
+         /*
          * Returns a {@code Timestamp} object corresponding to the time represented
          * by a supplied time value.
          * 
@@ -101,7 +101,7 @@ namespace biz.ritter.javapi.sql
             setTimeImpl(theTime);
         }
 
-        /**
+         /*
          * Returns {@code true} if this timestamp object is later than the supplied
          * timestamp, otherwise returns {@code false}.
          * 
@@ -139,7 +139,7 @@ namespace biz.ritter.javapi.sql
             }
         }
 
-        /**
+         /*
          * Returns {@code true} if this {@code Timestamp} object is earlier than the
          * supplied timestamp, otherwise returns {@code false}.
          * 
@@ -177,7 +177,7 @@ namespace biz.ritter.javapi.sql
             }
         }
 
-        /**
+         /*
          * Compares this {@code Timestamp} object with a supplied {@code Timestamp}
          * object.
          * 
@@ -224,7 +224,7 @@ namespace biz.ritter.javapi.sql
             return 0;
         }
 
-        /**
+         /*
          * Compares this {@code Timestamp} object with a supplied {@code Timestamp}
          * object.
          * 
@@ -283,7 +283,7 @@ namespace biz.ritter.javapi.sql
             return false;
         }
 
-        /**
+         /*
          * Tests to see if this timestamp is equal to a supplied timestamp.
          * 
          * @param theTimestamp
@@ -302,7 +302,7 @@ namespace biz.ritter.javapi.sql
                     && (this.getNanos() == theTimestamp.getNanos());
         }
 
-        /**
+         /*
          * Gets this {@code Timestamp}'s nanosecond value
          * 
          * @return The timestamp's nanosecond value, an integer between 0 and
@@ -313,7 +313,7 @@ namespace biz.ritter.javapi.sql
             return nanos;
         }
 
-        /**
+         /*
          * Returns the time represented by this {@code Timestamp} object, as a long
          * value containing the number of milliseconds since the Epoch (January 1
          * 1970, 00:00:00.000 GMT).
@@ -329,7 +329,7 @@ namespace biz.ritter.javapi.sql
             return theTime;
         }
 
-        /**
+         /*
          * Sets the nanosecond value for this {@code Timestamp}.
          *
          * @param n
@@ -348,7 +348,7 @@ namespace biz.ritter.javapi.sql
             nanos = n;
         }
 
-        /**
+         /*
          * Sets the time represented by this {@code Timestamp} object to the
          * supplied time, defined as the number of milliseconds since the Epoch
          * (January 1 1970, 00:00:00.000 GMT).
@@ -386,7 +386,7 @@ namespace biz.ritter.javapi.sql
             setNanos(milliseconds * 1000000);
         }
 
-        /**
+         /*
          * Returns the timestamp formatted as a String in the JDBC Timestamp Escape
          * format, which is {@code "yyyy-mm-dd hh:mm:ss.nnnnnnnnn"}.
          * 
@@ -440,7 +440,7 @@ namespace biz.ritter.javapi.sql
             sb.append(str);
         }
 
-        /**
+         /*
          * Creates a {@code Timestamp} object with a time value equal to the time
          * specified by a supplied String holding the time in JDBC timestamp escape
          * format, which is {@code "yyyy-mm-dd hh:mm:ss.nnnnnnnnn}"

@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang.reflect{
 
-/**
+ /*
  * {@code Proxy} defines methods for creating dynamic proxy classes and instances.
  * A proxy class implements a declared set of interfaces and delegates method
  * invocations to an {@code InvocationHandler}.
@@ -39,7 +39,7 @@ public class Proxy : java.io.Serializable {
 
     private static int NextClassNameIndex = 0;
 
-    /**
+     /*
      * The invocation handler on which the method calls are dispatched.
      */
     protected InvocationHandler h;
@@ -47,7 +47,7 @@ public class Proxy : java.io.Serializable {
     private Proxy() {
     }
 
-    /**
+     /*
      * Constructs a new {@code Proxy} instance with the specified invocation
      * handler.
      *
@@ -62,7 +62,7 @@ public class Proxy : java.io.Serializable {
 
 
 
-    /**
+     /*
      * Indicates whether or not the specified class is a dynamically generated
      * proxy class.
      * 
@@ -82,7 +82,7 @@ public class Proxy : java.io.Serializable {
         }
     }
 
-    /**
+     /*
      * Returns the invocation handler of the specified proxy instance.
      * 
      * @param proxy

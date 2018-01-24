@@ -15,7 +15,7 @@
 namespace biz.ritter.javapi.security
 {
 
-    /**
+     /*
      * {@code PrivilegedAction} represents an action that can be executed privileged
      * regarding access control. Instances of {@code PrivilegedAction} can be
      * executed on {@code AccessController.doPrivileged()}.
@@ -27,7 +27,7 @@ namespace biz.ritter.javapi.security
      */
     public interface PrivilegedAction<T>
     {
-        /**
+         /*
          * Returns the result of running the action.
          *
          * @return the result of running the action.

@@ -18,7 +18,7 @@ namespace org.apache.harmony.luni.util
     internal sealed class URLUtil
     {
 
-        /**
+         /*
          * Canonicalize the path, i.e. remove ".." and "." occurences.
          *
          * @param path the path to be canonicalized

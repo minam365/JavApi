@@ -20,7 +20,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * Class {@code AbstractCollection} is an abstract implementation of the {@code
      * Collection} interface. A subclass must implement the abstract methods {@code
      * iterator()} and {@code size()} to create an immutable collection. To create a
@@ -30,7 +30,7 @@ namespace biz.ritter.javapi.util
      * @since 1.2
      */
     public abstract class AbstractCollection<E> : Collection<E> {
-        /**
+         /*
          * Constructs a new instance of this AbstractCollection.
          */
         protected AbstractCollection() : base () {
@@ -40,7 +40,7 @@ namespace biz.ritter.javapi.util
             throw new java.lang.UnsupportedOperationException();
         }
 
-        /**
+         /*
          * Attempts to add all of the objects contained in {@code collection}
          * to the contents of this {@code Collection} (optional). This implementation
          * iterates over the given {@code Collection} and calls {@code add} for each
@@ -80,7 +80,7 @@ namespace biz.ritter.javapi.util
             return result;
         }
 
-        /**
+         /*
          * Removes all elements from this {@code Collection}, leaving it empty (optional).
          * This implementation iterates over this {@code Collection} and calls the {@code
          * remove} method on each element. If the iterator does not support removal
@@ -104,7 +104,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Tests whether this {@code Collection} contains the specified object. This
          * implementation iterates over this {@code Collection} and tests, whether any
          * element is equal to the given object. If {@code object != null} then
@@ -141,7 +141,7 @@ namespace biz.ritter.javapi.util
             return false;
         }
 
-        /**
+         /*
          * Tests whether this {@code Collection} contains all objects contained in the
          * specified {@code Collection}. This implementation iterates over the specified
          * {@code Collection}. If one element returned by the iterator is not contained in
@@ -171,7 +171,7 @@ namespace biz.ritter.javapi.util
             return true;
         }
 
-        /**
+         /*
          * Returns if this {@code Collection} contains no elements. This implementation
          * tests, whether {@code size} returns 0.
          * 
@@ -184,7 +184,7 @@ namespace biz.ritter.javapi.util
             return size() == 0;
         }
 
-        /**
+         /*
          * Returns an instance of {@link Iterator} that may be used to access the
          * objects contained by this {@code Collection}. The order in which the elements are
          * returned by the {@link Iterator} is not defined unless the instance of the
@@ -197,7 +197,7 @@ namespace biz.ritter.javapi.util
          */
         public abstract Iterator<E> iterator();
 
-        /**
+         /*
          * Removes one instance of the specified object from this {@code Collection} if one
          * is contained (optional). This implementation iterates over this
          * {@code Collection} and tests for each element {@code e} returned by the iterator,
@@ -241,7 +241,7 @@ namespace biz.ritter.javapi.util
             return false;
         }
 
-        /**
+         /*
          * Removes all occurrences in this {@code Collection} of each object in the
          * specified {@code Collection} (optional). After this method returns none of the
          * elements in the passed {@code Collection} can be found in this {@code Collection}
@@ -282,7 +282,7 @@ namespace biz.ritter.javapi.util
             return result;
         }
 
-        /**
+         /*
          * Removes all objects from this {@code Collection} that are not also found in the
          * {@code Collection} passed (optional). After this method returns this {@code Collection}
          * will only contain elements that also can be found in the {@code Collection}
@@ -323,7 +323,7 @@ namespace biz.ritter.javapi.util
             return result;
         }
 
-        /**
+         /*
          * Returns a count of how many objects this {@code Collection} contains.
          * <p>
          * In this class this method is declared abstract and has to be implemented
@@ -370,7 +370,7 @@ namespace biz.ritter.javapi.util
             */
         }
 
-        /**
+         /*
          * Returns the string representation of this {@code Collection}. The presentation
          * has a specific format. It is enclosed by square brackets ("[]"). Elements
          * are separated by ', ' (comma and space).

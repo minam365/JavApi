@@ -17,11 +17,11 @@ using java = biz.ritter.javapi;
 namespace org.apache.harmony.awt
 {
 
-    /**
+     /*
      * @author Pavel Dolgov
      */
 
-    /**
+     /*
      * ReadOnlyIterator
      */
     internal sealed class ReadOnlyIterator<E> : java.util.Iterator<E>

@@ -18,20 +18,20 @@ namespace biz.ritter.javapi.util
 {
 
 
-    /**
+     /*
      * A map that has its keys ordered. The sorting is according to either the
      * natural ordering of its keys or the ordering given by a specified comparator.
      */
     public interface SortedMap<K,V> : Map<K,V> {
     
-        /**
+         /*
          * Returns the comparator used to compare keys in this sorted map.
          * 
          * @return the comparator or {@code null} if the natural order is used.
          */
         Comparator<K> comparator();
 
-        /**
+         /*
          * Returns the first key in this sorted map.
          * 
          * @return the first key in this sorted map.
@@ -40,7 +40,7 @@ namespace biz.ritter.javapi.util
          */
         K firstKey();
 
-        /**
+         /*
          * Returns a sorted map over a range of this sorted map with all keys that
          * are less than the specified {@code endKey}. Changes to the returned
          * sorted map are reflected in this sorted map and vice versa.
@@ -63,7 +63,7 @@ namespace biz.ritter.javapi.util
          */
         SortedMap<K,V> headMap(K endKey);
 
-        /**
+         /*
          * Returns the last key in this sorted map.
          * 
          * @return the last key in this sorted map.
@@ -72,7 +72,7 @@ namespace biz.ritter.javapi.util
          */
         K lastKey();
 
-        /**
+         /*
          * Returns a sorted map over a range of this sorted map with all keys
          * greater than or equal to the specified {@code startKey} and less than the
          * specified {@code endKey}. Changes to the returned sorted map are
@@ -99,7 +99,7 @@ namespace biz.ritter.javapi.util
          */
         SortedMap<K,V> subMap(K startKey, K endKey);
 
-        /**
+         /*
          * Returns a sorted map over a range of this sorted map with all keys that
          * are greater than or equal to the specified {@code startKey}. Changes to
          * the returned sorted map are reflected in this sorted map and vice versa.

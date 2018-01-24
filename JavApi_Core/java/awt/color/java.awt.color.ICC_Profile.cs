@@ -17,7 +17,7 @@ using org.apache.harmony.awt.gl.color;
 
 namespace biz.ritter.javapi.awt.color
 {
-    /**
+     /*
      * @author Oleg V. Khaschansky
      */
     [Serializable]
@@ -264,12 +264,12 @@ namespace biz.ritter.javapi.awt.color
 
         public const int icXYZNumberX = 8;
 
-        /**
+         /*
          * Size of a profile header
          */
         private const int headerSize = 128;
 
-        /**
+         /*
          * header magic number
          */
         private const int headerMagicNumber = 0x61637370;
@@ -281,26 +281,26 @@ namespace biz.ritter.javapi.awt.color
         private static ICC_Profile pyccProfile;
         private static ICC_Profile linearRGBProfile;
 
-        /**
+         /*
          *  Handle to the current profile
          */
         [NonSerialized]
         private long profileHandle = 0;
 
-        /**
+         /*
          * If handle is used by another class
          * this object is not responsible for closing profile
          */
         [NonSerialized]
         private bool handleStolen = false;
 
-        /**
+         /*
          * Cached header data
          */
         [NonSerialized]
         private byte[] headerData = null;
 
-        /**
+         /*
          * Serialization support
          */
         [NonSerialized]
@@ -310,7 +310,7 @@ namespace biz.ritter.javapi.awt.color
         {
             return csFromSignature(getIntFromHeader(icHdrColorSpace));
         }
-        /**
+         /*
          * Converts ICC color space signature to the java predefined
          * color space type
          * @param signature
@@ -378,7 +378,7 @@ namespace biz.ritter.javapi.awt.color
             throw new java.lang.IllegalArgumentException("Color space doesn't comply with ICC specification"); //$NON-NLS-1$
         }
 
-        /**
+         /*
          * Reads integer from the profile header at the specified position
          * @param idx - offset in bytes from the beginning of the header
          * @return

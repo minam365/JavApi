@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util.prefs{
 
-/**
+ /*
  * This abstract class is a partial implementation of the abstract class
  * Preferences, which can be used to simplify {@code Preferences} provider's
  * implementation. This class defines nine abstract SPI methods, which must be
@@ -33,9 +33,9 @@ public abstract class AbstractPreferences : Preferences {
      * ----------------------------------------------------------- Class fields
      * -----------------------------------------------------------
      */
-    /** the unhandled events collection */
+     /* the unhandled events collection */
     private static readonly List<EventObject> events = new LinkedList<EventObject>();
-    /** the event dispatcher thread */
+     /* the event dispatcher thread */
     private static readonly EventDispatcher dispatcher = new EventDispatcher(
             "Preference Event Dispatcher"); //$NON-NLS-1$
 
@@ -70,7 +70,7 @@ public abstract class AbstractPreferences : Preferences {
      * fields (package-private)
      * -----------------------------------------------------------
      */
-    /** true if this node is in user preference hierarchy */
+     /* true if this node is in user preference hierarchy */
     bool userNode;
 
     /*
@@ -78,16 +78,16 @@ public abstract class AbstractPreferences : Preferences {
      * fields (private)
      * -----------------------------------------------------------
      */
-    /** Marker class for 'lock' field. */
+     /* Marker class for 'lock' field. */
     private class Lock {
     }
 
-    /**
+     /*
      * The object used to lock this node.
      */
     protected internal readonly Object lockJ;
 
-    /**
+     /*
      * This field is true if this node is created while it doesn't exist in the
      * backing store. This field's default value is false, and it is checked
      * when the node creation is completed, and if it is true, the node change
@@ -95,7 +95,7 @@ public abstract class AbstractPreferences : Preferences {
      */
     protected bool newNode;
 
-    /** cached child nodes */
+     /* cached child nodes */
     private Map<String, AbstractPreferences> cachedNode;
 
     // the collections of listeners
@@ -118,7 +118,7 @@ public abstract class AbstractPreferences : Preferences {
      * ----------------------------------------------------------- Constructors
      * -----------------------------------------------------------
      */
-    /**
+     /*
      * Constructs a new {@code AbstractPreferences} instance using the given
      * parent node and node name.
      * 
@@ -151,7 +151,7 @@ public abstract class AbstractPreferences : Preferences {
      * ----------------------------------------------------------- Methods
      * -----------------------------------------------------------
      */
-    /**
+     /*
      * Returns an array of all cached child nodes.
      * 
      * @return the array of cached child nodes.
@@ -161,7 +161,7 @@ public abstract class AbstractPreferences : Preferences {
                 new AbstractPreferences[cachedNode.size()]);
     }
 
-    /**
+     /*
      * Returns the child node with the specified name or {@code null} if it
      * doesn't exist. Implementers can assume that the name supplied to this
      * method will be a valid node name string (conforming to the node naming
@@ -193,7 +193,7 @@ public abstract class AbstractPreferences : Preferences {
 
     }
 
-    /**
+     /*
      * Returns whether this node has been removed by invoking the method {@code
      * removeNode()}.
      * 
@@ -206,7 +206,7 @@ public abstract class AbstractPreferences : Preferences {
         }
     }
 
-    /**
+     /*
      * Flushes changes of this node to the backing store. This method should
      * only flush this node and should not include the descendant nodes. Any
      * implementation that wants to provide functionality to flush all nodes at
@@ -218,7 +218,7 @@ public abstract class AbstractPreferences : Preferences {
      */
 		protected abstract void flushSpi ();// throws BackingStoreException;
 
-    /**
+     /*
      * Returns the names of all of the child nodes of this node or an empty
      * array if this node has no children. The names of cached children are not
      * required to be returned.
@@ -230,7 +230,7 @@ public abstract class AbstractPreferences : Preferences {
      */
 		protected abstract String[] childrenNamesSpi ();// throws BackingStoreException;
 
-    /**
+     /*
      * Returns the child preference node with the given name, creating it if it
      * does not exist. The caller of this method should ensure that the given
      * name is valid and that this node has not been removed or cached. If the
@@ -247,7 +247,7 @@ public abstract class AbstractPreferences : Preferences {
      */
     protected abstract AbstractPreferences childSpi(String name);
 
-    /**
+     /*
      * Puts the given key-value pair into this node. Caller of this method
      * should ensure that both of the given values are valid and that this node
      * has not been removed.
@@ -259,7 +259,7 @@ public abstract class AbstractPreferences : Preferences {
      */
     protected abstract void putSpi(String name, String value);
 
-    /**
+     /*
      * Gets the preference value mapped to the given key. The caller of this
      * method should ensure that the given key is valid and that this node has
      * not been removed. This method should not throw any exceptions but if it
@@ -272,7 +272,7 @@ public abstract class AbstractPreferences : Preferences {
      */
     protected abstract String getSpi(String key);
 
-    /**
+     /*
      * Returns an array of all preference keys of this node or an empty array if
      * no preferences have been found. The caller of this method should ensure
      * that this node has not been removed.
@@ -284,7 +284,7 @@ public abstract class AbstractPreferences : Preferences {
      */
 		protected abstract String[] keysSpi();// throws BackingStoreException;
 
-    /**
+     /*
      * Removes this node from the preference hierarchy tree. The caller of this
      * method should ensure that this node has no child nodes, which means the
      * method {@link Preferences#removeNode() Preferences.removeNode()} should
@@ -297,7 +297,7 @@ public abstract class AbstractPreferences : Preferences {
      */
 		protected abstract void removeNodeSpi();// throws BackingStoreException;
 
-    /**
+     /*
      * Removes the preference with the specified key. The caller of this method
      * should ensure that the given key is valid and that this node has not been
      * removed.
@@ -307,7 +307,7 @@ public abstract class AbstractPreferences : Preferences {
      */
     protected abstract void removeSpi(String key);
 
-    /**
+     /*
      * Synchronizes this node with the backing store. This method should only
      * synchronize this node and should not include the descendant nodes. An
      * implementation that wants to provide functionality to synchronize all

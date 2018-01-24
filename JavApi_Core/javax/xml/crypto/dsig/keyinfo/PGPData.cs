@@ -21,7 +21,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapix.xml.crypto.dsig
 {
 
-/**
+ /*
  * A representation of the XML <code>PGPData</code> element as defined in 
  * the <a href="http://www.w3.org/TR/xmldsig-core/">
  * W3C Recommendation for XML-Signature Syntax and Processing</a>. A
@@ -63,7 +63,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig
  */
 public interface PGPData : XMLStructure {
 
-    /**
+     /*
      * Returns the PGP public key identifier of this <code>PGPData</code> as 
      * defined in <a href="http://www.ietf.org/rfc/rfc2440.txt">RFC 2440</a>, 
      * section 11.2.
@@ -74,7 +74,7 @@ public interface PGPData : XMLStructure {
      */
     byte[] getKeyId();
 
-    /**
+     /*
      * Returns the PGP key material packet of this <code>PGPData</code> as
      * defined in <a href="http://www.ietf.org/rfc/rfc2440.txt">RFC 2440</a>, 
      * section 5.5.
@@ -85,7 +85,7 @@ public interface PGPData : XMLStructure {
      */
     byte[] getKeyPacket();
 
-    /**
+     /*
      * Returns an {@link Collections#unmodifiableList unmodifiable list}
      * of {@link XMLStructure}s representing elements from an external 
      * namespace. 

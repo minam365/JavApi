@@ -14,7 +14,7 @@ using System;
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      * This interface represents an entity, either parsed or unparsed, in an XML 
      * document. Note that this models the entity itself not the entity 
      * declaration. <code>Entity</code> declaration modeling has been left for a 
@@ -50,19 +50,19 @@ namespace org.w3c.dom
      */
     public interface Entity : Node
     {
-        /**
+         /*
          * The public identifier associated with the entity, if specified. If the 
          * public identifier was not specified, this is <code>null</code>.
          */
         String getPublicId();
 
-        /**
+         /*
          * The system identifier associated with the entity, if specified. If the 
          * system identifier was not specified, this is <code>null</code>.
          */
         String getSystemId();
 
-        /**
+         /*
          * For unparsed entities, the name of the notation for the entity. For 
          * parsed entities, this is <code>null</code>. 
          */

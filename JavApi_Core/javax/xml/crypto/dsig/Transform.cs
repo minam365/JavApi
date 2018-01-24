@@ -21,7 +21,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapix.xml.crypto.dsig
 { 
-/**
+ /*
  * A representation of the XML <code>Transform</code> element as 
  * defined in the <a href="http://www.w3.org/TR/xmldsig-core/">
  * W3C Recommendation for XML-Signature Syntax and Processing</a>. 
@@ -61,7 +61,7 @@ public interface Transform : XMLStructure, AlgorithmMethod {
      // getParameterSpec comes also form Interface AlgorithmMethod
      //java.security.spec.AlgorithmParameterSpec getParameterSpec();
 
-    /**
+     /*
      * Transforms the specified data using the underlying transform algorithm.
      *
      * @param data the data to be transformed
@@ -75,7 +75,7 @@ public interface Transform : XMLStructure, AlgorithmMethod {
     Data transform(Data data, XMLCryptoContext context)
         ;//throws TransformException;
 
-    /**
+     /*
      * Transforms the specified data using the underlying transform algorithm.
      * If the output of this transform is an <code>OctetStreamData</code>, then 
      * this method returns <code>null</code> and the bytes are written to the 

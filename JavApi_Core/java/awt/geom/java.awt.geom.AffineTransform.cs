@@ -16,7 +16,7 @@ using System;
 
 namespace biz.ritter.javapi.awt.geom
 {
-    /**
+     /*
      * @author Denis M. Kishenko
      */
     [Serializable]
@@ -36,17 +36,17 @@ namespace biz.ritter.javapi.awt.geom
         public const int TYPE_MASK_SCALE = TYPE_UNIFORM_SCALE | TYPE_GENERAL_SCALE;
         public const int TYPE_MASK_ROTATION = TYPE_QUADRANT_ROTATION | TYPE_GENERAL_ROTATION;
 
-        /**
+         /*
          * The <code>TYPE_UNKNOWN</code> is an initial type value
          */
         const int TYPE_UNKNOWN = -1;
 
-        /**
+         /*
          * The min value equivalent to zero. If absolute value less then ZERO it considered as zero.  
          */
         const double ZERO = 1E-10;
 
-        /**
+         /*
          * The values of transformation matrix
          */
         double m00;
@@ -56,7 +56,7 @@ namespace biz.ritter.javapi.awt.geom
         double m02;
         double m12;
 
-        /**
+         /*
          * The transformation <code>type</code> 
          */
         [NonSerialized]
@@ -420,7 +420,7 @@ namespace biz.ritter.javapi.awt.geom
             concatenate(AffineTransform.getRotateInstance(angle, px, py));
         }
 
-        /** 
+         /* 
          * Multiply matrix of two AffineTransform objects 
          * @param t1 - the AffineTransform object is a multiplicand
          * @param t2 - the AffineTransform object is a multiplier
@@ -720,7 +720,7 @@ namespace biz.ritter.javapi.awt.geom
         }
 
 
-        /**
+         /*
          * Write AffineTrasform object to the output steam.
          * @param stream - the output stream
          * @throws IOException - if there are I/O errors while writing to the output strem
@@ -731,7 +731,7 @@ namespace biz.ritter.javapi.awt.geom
         }
 
 
-        /**
+         /*
          * Read AffineTransform object from the input stream
          * @param stream - the input steam
          * @throws IOException - if there are I/O errors while reading from the input strem

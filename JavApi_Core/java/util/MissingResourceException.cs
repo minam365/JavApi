@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util
 {
-    /**
+     /*
      * A {@code MissingResourceException} is thrown by ResourceBundle when a
      * resource bundle cannot be found or a resource is missing from a resource
      * bundle.
@@ -32,7 +32,7 @@ namespace biz.ritter.javapi.util
 
         protected internal String className, key;
 
-        /**
+         /*
          * Constructs a new {@code MissingResourceException} with the stack trace,
          * message, the class name of the resource bundle and the name of the
          * missing resource filled in.
@@ -50,7 +50,7 @@ namespace biz.ritter.javapi.util
             this.key = resourceName;
         }
 
-        /**
+         /*
          * Returns the class name of the resource bundle from which a resource could
          * not be found, or in the case of a missing resource, the name of the
          * missing resource bundle.
@@ -61,7 +61,7 @@ namespace biz.ritter.javapi.util
             return className;
         }
 
-        /**
+         /*
          * Returns the name of the missing resource, or an empty string if the
          * resource bundle is missing.
          * 

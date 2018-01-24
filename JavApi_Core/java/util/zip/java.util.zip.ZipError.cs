@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util.zip
 {
-    /**
+     /*
      * This error is thrown when an unrecoverable ZIP error has occurred.
      */
     [Serializable]
@@ -25,7 +25,7 @@ namespace biz.ritter.javapi.util.zip
 
         private static readonly long serialVersionUID = 853973422266861979L;
 
-        /**
+         /*
          * the Constructor
          * 
          * @param s

@@ -8,7 +8,7 @@ using org.xml.sax.helpers;
 namespace org.xml.sax.ext
 {
 
-    /**
+     /*
      * SAX2 extension helper for holding additional Entity information,
      * implementing the {@link Locator2} interface.
      *
@@ -29,14 +29,14 @@ namespace org.xml.sax.ext
         private String version;
 
 
-        /**
+         /*
          * Construct a new, empty Locator2Impl object.
          * This will not normally be useful, since the main purpose
          * of this class is to make a snapshot of an existing Locator.
          */
         public Locator2Impl() { }
 
-        /**
+         /*
          * Copy an existing Locator or Locator2 object.
          * If the object implements Locator2, values of the
          * <em>encoding</em> and <em>version</em>strings are copied,
@@ -60,7 +60,7 @@ namespace org.xml.sax.ext
         // Locator2 method implementations
         ////////////////////////////////////////////////////////////////////
 
-        /**
+         /*
          * Returns the current value of the version property.
          *
          * @see #setXMLVersion
@@ -68,7 +68,7 @@ namespace org.xml.sax.ext
         public String getXMLVersion()
         { return version; }
 
-        /**
+         /*
          * Returns the current value of the encoding property.
          *
          * @see #setEncoding
@@ -81,7 +81,7 @@ namespace org.xml.sax.ext
         // Setters 
         ////////////////////////////////////////////////////////////////////
 
-        /**
+         /*
          * Assigns the current value of the version property.
          *
          * @param version the new "version" value
@@ -90,7 +90,7 @@ namespace org.xml.sax.ext
         public void setXMLVersion(String version)
         { this.version = version; }
 
-        /**
+         /*
          * Assigns the current value of the encoding property.
          *
          * @param encoding the new "encoding" value

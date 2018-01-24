@@ -16,21 +16,21 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.math
 {
-    /**
+     /*
      * Static library that provides all multiplication of {@link BigInteger} methods.
      */
     internal class Multiplication {
 
-        /** Just to denote that this class can't be instantiated. */
+         /* Just to denote that this class can't be instantiated. */
         private Multiplication() {}
 
-        /**
+         /*
          * Break point in digits (number of {@code int} elements)
          * between Karatsuba and Pencil and Paper multiply.
          */
         internal static readonly int whenUseKaratsuba = 63; // an heuristic value
 
-        /**
+         /*
          * An array with powers of ten that fit in the type {@code int}.
          * ({@code 10^0,10^1,...,10^9})
          */
@@ -38,7 +38,7 @@ namespace biz.ritter.javapi.math
             1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000
         };
     
-        /**
+         /*
          * An array with powers of five that fit in the type {@code int}.
          * ({@code 5^0,5^1,...,5^13})
          */
@@ -47,13 +47,13 @@ namespace biz.ritter.javapi.math
             1953125, 9765625, 48828125, 244140625, 1220703125
         };
 
-        /**
+         /*
          * An array with the first powers of ten in {@code BigInteger} version.
          * ({@code 10^0,10^1,...,10^31})
          */
         internal static readonly BigInteger[] bigTenPows = new BigInteger[32];
 
-        /**
+         /*
          * An array with the first powers of five in {@code BigInteger} version.
          * ({@code 5^0,5^1,...,5^31})
          */
@@ -76,7 +76,7 @@ namespace biz.ritter.javapi.math
             }
         }
 
-        /**
+         /*
          * Performs a multiplication of two BigInteger and hides the algorithm used.
          * @see BigInteger#multiply(BigInteger)
          */
@@ -84,7 +84,7 @@ namespace biz.ritter.javapi.math
             return karatsuba(x, y);
         }
 
-        /**
+         /*
          * Performs the multiplication with the Karatsuba's algorithm.
          * <b>Karatsuba's algorithm:</b>
          *<tt>
@@ -132,7 +132,7 @@ namespace biz.ritter.javapi.math
             return upper.add(middle).add(lower);
         }
 
-        /**
+         /*
          * Multiplies two BigIntegers.
          * Implements traditional scholar algorithm described by Knuth.
          *
@@ -274,7 +274,7 @@ namespace biz.ritter.javapi.math
             }
         }
 
-        /**
+         /*
          * Multiplies an array of integers by an integer value
          * and saves the result in {@code res}.
          * @param a the array of integers
@@ -293,7 +293,7 @@ namespace biz.ritter.javapi.math
         }
 
     
-        /**
+         /*
          * Multiplies an array of integers by an integer value.
          * @param a the array of integers
          * @param aSize the number of elements of intArray to be multiplied
@@ -304,7 +304,7 @@ namespace biz.ritter.javapi.math
             return multiplyByInt(a, a, aSize, factor);
         }
     
-        /**
+         /*
          * Multiplies a number by a positive integer.
          * @param val an arbitrary {@code BigInteger}
          * @param factor a positive {@code int} number
@@ -360,7 +360,7 @@ namespace biz.ritter.javapi.math
             return res;
         }
 
-        /**
+         /*
          *  Performs a<sup>2</sup>
          *  @param a The number to square.
          *  @param aLen The length of the number to square.
@@ -393,7 +393,7 @@ namespace biz.ritter.javapi.math
             return res;
         }
 
-        /**
+         /*
          * Multiplies a number by a power of ten.
          * This method is used in {@code BigDecimal} class.
          * @param val the number to be multiplied
@@ -407,7 +407,7 @@ namespace biz.ritter.javapi.math
             : val.multiply(powerOf10(exp)));
         }
     
-        /**
+         /*
          * It calculates a power of ten, which exponent could be out of 32-bit range.
          * Note that internally this method will be used in the worst case with
          * an exponent equals to: {@code Integer.MAX_VALUE - Integer.MIN_VALUE}.
@@ -471,7 +471,7 @@ namespace biz.ritter.javapi.math
             return res;
         }
     
-        /**
+         /*
          * Multiplies a number by a power of five.
          * This method is used in {@code BigDecimal} class.
          * @param val the number to be multiplied
@@ -489,7 +489,7 @@ namespace biz.ritter.javapi.math
             }
         }
 
-        /**
+         /*
          * Computes the value unsigned ((uint)a*(uint)b + (uint)c + (uint)d). This
          * method could improve the readability and performance of the code.
          * 

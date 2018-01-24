@@ -20,7 +20,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapix.xml.crypto.dsig.spec
 {
-/**
+ /*
  * Parameters for the W3C Recommendation
  * <a href="http://www.w3.org/TR/xmldsig-filter2/">
  * XPath Filter 2.0 Transform Algorithm</a>.
@@ -36,7 +36,7 @@ public sealed class XPathFilter2ParameterSpec : TransformParameterSpec {
 
     private readonly java.util.List<XPathType> xPathList;
 
-    /**
+     /*
      * Creates an <code>XPathFilter2ParameterSpec</code>.
      *
      * @param xPathList a list of one or more {@link XPathType} objects. The 
@@ -62,7 +62,7 @@ public sealed class XPathFilter2ParameterSpec : TransformParameterSpec {
         return java.util.Collections<XPathType>.unmodifiableList(new java.util.ArrayList<XPathType>(list));
     }
 
-    /**
+     /*
      * Returns a list of one or more {@link XPathType} objects. 
      * <p>
      * This implementation returns an {@link Collections#unmodifiableList

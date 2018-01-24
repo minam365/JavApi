@@ -8,7 +8,7 @@ using System;
 namespace org.xml.sax
 {
 
-    /**
+     /*
      * Interface for a list of XML attributes.
      *
      * <blockquote>
@@ -76,7 +76,7 @@ namespace org.xml.sax
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Return the number of attributes in the list.
          *
          * <p>Once you know the number of attributes, you can iterate
@@ -92,7 +92,7 @@ namespace org.xml.sax
         int getLength();
 
 
-        /**
+         /*
          * Look up an attribute's Namespace URI by index.
          *
          * @param index The attribute index (zero-based).
@@ -104,7 +104,7 @@ namespace org.xml.sax
         String getURI(int index);
 
 
-        /**
+         /*
          * Look up an attribute's local name by index.
          *
          * @param index The attribute index (zero-based).
@@ -116,7 +116,7 @@ namespace org.xml.sax
         String getLocalName(int index);
 
 
-        /**
+         /*
          * Look up an attribute's XML qualified (prefixed) name by index.
          *
          * @param index The attribute index (zero-based).
@@ -128,7 +128,7 @@ namespace org.xml.sax
         String getQName(int index);
 
 
-        /**
+         /*
          * Look up an attribute's type by index.
          *
          * <p>The attribute type is one of the strings "CDATA", "ID",
@@ -151,7 +151,7 @@ namespace org.xml.sax
         String getType(int index);
 
 
-        /**
+         /*
          * Look up an attribute's value by index.
          *
          * <p>If the attribute value is a list of tokens (IDREFS,
@@ -173,7 +173,7 @@ namespace org.xml.sax
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Look up the index of an attribute by Namespace name.
          *
          * @param uri The Namespace URI, or the empty string if
@@ -185,7 +185,7 @@ namespace org.xml.sax
         int getIndex(String uri, String localName);
 
 
-        /**
+         /*
          * Look up the index of an attribute by XML qualified (prefixed) name.
          *
          * @param qName The qualified (prefixed) name.
@@ -195,7 +195,7 @@ namespace org.xml.sax
         int getIndex(String qName);
 
 
-        /**
+         /*
          * Look up an attribute's type by Namespace name.
          *
          * <p>See {@link #getType(int) getType(int)} for a description
@@ -211,7 +211,7 @@ namespace org.xml.sax
         String getType(String uri, String localName);
 
 
-        /**
+         /*
          * Look up an attribute's type by XML qualified (prefixed) name.
          *
          * <p>See {@link #getType(int) getType(int)} for a description
@@ -225,7 +225,7 @@ namespace org.xml.sax
         String getType(String qName);
 
 
-        /**
+         /*
          * Look up an attribute's value by Namespace name.
          *
          * <p>See {@link #getValue(int) getValue(int)} for a description
@@ -240,7 +240,7 @@ namespace org.xml.sax
         String getValue(String uri, String localName);
 
 
-        /**
+         /*
          * Look up an attribute's value by XML qualified (prefixed) name.
          *
          * <p>See {@link #getValue(int) getValue(int)} for a description

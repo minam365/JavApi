@@ -23,7 +23,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig
 		private XMLObjectConstants ()
 		{
 		}
-		/**
+		 /*
      * URI that identifies the <code>Object</code> element (this can be 
      * specified as the value of the <code>type</code> parameter of the 
      * {@link Reference} class to identify the referent's type).

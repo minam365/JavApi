@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * TreeSet is an implementation of SortedSet. All optional operations (adding
      * and removing) are supported. The elements can be any objects which are
      * comparable to each other either using their natural order or a specified
@@ -34,7 +34,7 @@ namespace biz.ritter.javapi.util
 
         private static readonly long serialVersionUID = -2479143000061671589L;
 
-        /** Keys are this set's elements. Values are always Boolean.TRUE */
+         /* Keys are this set's elements. Values are always Boolean.TRUE */
         [NonSerialized]
         private NavigableMap<E, Object> backingMap;
 
@@ -46,7 +46,7 @@ namespace biz.ritter.javapi.util
             backingMap = map;
         }
 
-        /**
+         /*
          * Constructs a new empty instance of {@code TreeSet} which uses natural
          * ordering.
          */
@@ -55,7 +55,7 @@ namespace biz.ritter.javapi.util
             backingMap = new TreeMap<E, Object>();
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code TreeSet} which uses natural ordering
          * and containing the unique elements in the specified collection.
          * 
@@ -72,7 +72,7 @@ namespace biz.ritter.javapi.util
             addAll(collection);
         }
 
-        /**
+         /*
          * Constructs a new empty instance of {@code TreeSet} which uses the
          * specified comparator.
          * 
@@ -84,7 +84,7 @@ namespace biz.ritter.javapi.util
             backingMap = new TreeMap<E, Object>(comparator);
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code TreeSet} containing the elements of
          * the specified SortedSet and using the same Comparator.
          * 
@@ -101,7 +101,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Adds the specified object to this {@code TreeSet}.
          * 
          * @param object
@@ -121,7 +121,7 @@ namespace biz.ritter.javapi.util
             return backingMap.put(obj, java.lang.Boolean.TRUE) == null;
         }
 
-        /**
+         /*
          * Adds the objects in the specified collection to this {@code TreeSet}.
          * 
          * @param collection
@@ -140,7 +140,7 @@ namespace biz.ritter.javapi.util
             return base.addAll(collection);
         }
 
-        /**
+         /*
          * Removes all elements from this {@code TreeSet}, leaving it empty.
          * 
          * @see #isEmpty
@@ -152,7 +152,7 @@ namespace biz.ritter.javapi.util
             backingMap.clear();
         }
 
-        /**
+         /*
          * Returns a new {@code TreeSet} with the same elements, size and comparator
          * as this {@code TreeSet}.
          * 
@@ -181,7 +181,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns the comparator used to compare elements in this {@code TreeSet}.
          * 
          * @return a Comparator or null if the natural ordering is used
@@ -191,7 +191,7 @@ namespace biz.ritter.javapi.util
             return backingMap.comparator();
         }
 
-        /**
+         /*
          * Searches this {@code TreeSet} for the specified object.
          * 
          * @param object
@@ -211,7 +211,7 @@ namespace biz.ritter.javapi.util
             return backingMap.containsKey(obj);
         }
 
-        /**
+         /*
          * Returns true if this {@code TreeSet} has no element, otherwise false.
          * 
          * @return true if this {@code TreeSet} has no element.
@@ -223,7 +223,7 @@ namespace biz.ritter.javapi.util
             return backingMap.isEmpty();
         }
 
-        /**
+         /*
          * Returns an Iterator on the elements of this {@code TreeSet}.
          * 
          * @return an Iterator on the elements of this {@code TreeSet}.
@@ -235,7 +235,7 @@ namespace biz.ritter.javapi.util
             return backingMap.keySet().iterator();
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableSet#descendingIterator()
@@ -246,7 +246,7 @@ namespace biz.ritter.javapi.util
             return descendingSet().iterator();
         }
 
-        /**
+         /*
          * Removes an occurrence of the specified object from this {@code TreeSet}.
          * 
          * @param object
@@ -266,7 +266,7 @@ namespace biz.ritter.javapi.util
             return backingMap.remove(obj) != null;
         }
 
-        /**
+         /*
          * Returns the number of elements in this {@code TreeSet}.
          * 
          * @return the number of elements in this {@code TreeSet}.
@@ -277,7 +277,7 @@ namespace biz.ritter.javapi.util
             return backingMap.size();
         }
 
-        /**
+         /*
          * Answers the first element in this TreeSet.
          * 
          * @return the first element
@@ -290,7 +290,7 @@ namespace biz.ritter.javapi.util
             return backingMap.firstKey();
         }
 
-        /**
+         /*
          * Answers the last element in this TreeSet.
          * 
          * @return the last element
@@ -303,7 +303,7 @@ namespace biz.ritter.javapi.util
             return backingMap.lastKey();
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableSet#pollFirst()
@@ -315,7 +315,7 @@ namespace biz.ritter.javapi.util
             return (null == entry) ? default(E) : entry.getKey();
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableSet#pollLast()
@@ -327,7 +327,7 @@ namespace biz.ritter.javapi.util
             return (null == entry) ? default(E) : entry.getKey();
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableSet#higher(java.lang.Object)
@@ -338,7 +338,7 @@ namespace biz.ritter.javapi.util
             return backingMap.higherKey(e);
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableSet#lower(java.lang.Object)
@@ -349,7 +349,7 @@ namespace biz.ritter.javapi.util
             return backingMap.lowerKey(e);
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableSet#ceiling(java.lang.Object)
@@ -360,7 +360,7 @@ namespace biz.ritter.javapi.util
             return backingMap.ceilingKey(e);
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableSet#floor(java.lang.Object)
@@ -371,7 +371,7 @@ namespace biz.ritter.javapi.util
             return backingMap.floorKey(e);
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableSet#descendingSet()
@@ -384,7 +384,7 @@ namespace biz.ritter.javapi.util
                     : (descendingSetJ = new TreeSet<E>(backingMap.descendingMap()));
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableSet#subSet(Object, boolean, Object, boolean)
@@ -404,7 +404,7 @@ namespace biz.ritter.javapi.util
             throw new java.lang.IllegalArgumentException();
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableSet#headSet(Object, boolean)
@@ -425,7 +425,7 @@ namespace biz.ritter.javapi.util
             return new TreeSet<E>(backingMap.headMap(end, endInclusive));
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.NavigableSet#tailSet(Object, boolean)
@@ -446,7 +446,7 @@ namespace biz.ritter.javapi.util
             return new TreeSet<E>(backingMap.tailMap(start, startInclusive));
         }
 
-        /**
+         /*
          * Answers a SortedSet of the specified portion of this TreeSet which
          * contains elements greater or equal to the start element but less than the
          * end element. The returned SortedSet is backed by this TreeSet so changes
@@ -471,7 +471,7 @@ namespace biz.ritter.javapi.util
             return subSet(start, true, end, false);
         }
 
-        /**
+         /*
          * Answers a SortedSet of the specified portion of this TreeSet which
          * contains elements less than the end element. The returned SortedSet is
          * backed by this TreeSet so changes to one are reflected by the other.
@@ -492,7 +492,7 @@ namespace biz.ritter.javapi.util
             return headSet(end, false);
         }
 
-        /**
+         /*
          * Answers a SortedSet of the specified portion of this TreeSet which
          * contains elements greater or equal to the start element. The returned
          * SortedSet is backed by this TreeSet so changes to one are reflected by

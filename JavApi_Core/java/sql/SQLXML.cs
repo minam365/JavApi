@@ -18,7 +18,7 @@ using javax = biz.ritter.javapix;
 namespace biz.ritter.javapi.sql
 {
 
-    /**
+     /*
      * TODO Javadoc
      */
     public interface SQLXML

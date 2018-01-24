@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util.logging
 {
-/**
+ /*
  * {@code LoggingMXBean} is the management interface for the logging sub-system.
  * <p>
  * The ObjectName for identifying the {@code LoggingMXBean} in a bean server is
@@ -27,7 +27,7 @@ namespace biz.ritter.javapi.util.logging
  */
 public interface LoggingMXBean {
 
-    /**
+     /*
      * Gets the string value of the logging level of a logger. An empty string
      * is returned when the logger's level is defined by its parent. A
      * {@code null} is returned if the specified logger does not exist.
@@ -39,7 +39,7 @@ public interface LoggingMXBean {
      */
     String getLoggerLevel(String loggerName);
 
-    /**
+     /*
      * Gets a list of all currently registered logger names. This is performed
      * using the {@link LogManager#getLoggerNames()}.
      * 
@@ -47,7 +47,7 @@ public interface LoggingMXBean {
      */
     java.util.List<String> getLoggerNames();
 
-    /**
+     /*
      * Gets the name of the parent logger of a logger. If the logger doesn't
      * exist then {@code null} is returned. If the logger is the root logger,
      * then an empty {@code String} is returned.
@@ -58,7 +58,7 @@ public interface LoggingMXBean {
      */
     String getParentLoggerName(String loggerName);
 
-    /**
+     /*
      * Sets the log level of a logger. LevelName set to {@code null} means the
      * level is inherited from the nearest non-null ancestor.
      * 

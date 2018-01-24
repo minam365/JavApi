@@ -22,7 +22,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig.keyinfo
 		private KeyValueConstants ()
 		{
 		}
-		/**
+		 /*
      * URI identifying the DSA KeyValue KeyInfo type:
      * http://www.w3.org/2000/09/xmldsig#DSAKeyValue. This can be specified as 
      * the value of the <code>type</code> parameter of the 
@@ -32,7 +32,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig.keyinfo
 		internal const String DSA_TYPE =
 			"http://www.w3.org/2000/09/xmldsig#DSAKeyValue";
 		
-		/**
+		 /*
      * URI identifying the RSA KeyValue KeyInfo type:
      * http://www.w3.org/2000/09/xmldsig#RSAKeyValue. This can be specified as
      * the value of the <code>type</code> parameter of the 

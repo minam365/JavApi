@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.io
 {
-    /**
+     /*
      * Parses a stream into a set of defined tokens, one at a time. The different
      * types of tokens that can be found are numbers, identifiers, quoted strings,
      * and different comment styles. The class can be used for limited processing
@@ -27,44 +27,44 @@ namespace biz.ritter.javapi.io
      * near a full parser.
      */
     public class StreamTokenizer {
-        /**
+         /*
          * Contains a number if the current token is a number ({@code ttype} ==
          * {@code TT_NUMBER}).
          */
         public double nval;
 
-        /**
+         /*
          * Contains a string if the current token is a word ({@code ttype} ==
          * {@code TT_WORD}).
          */
         public String sval;
 
-        /**
+         /*
          * The constant representing the end of the stream.
          */
         public const int TT_EOF = -1;
 
-        /**
+         /*
          * The constant representing the end of the line.
          */
         public const int TT_EOL = '\n';
 
-        /**
+         /*
          * The constant representing a number token.
          */
         public const int TT_NUMBER = -2;
 
-        /**
+         /*
          * The constant representing a word token.
          */
         public const int TT_WORD = -3;
 
-        /**
+         /*
          * Internal representation of unknown state.
          */
         private const int TT_UNKNOWN = -4;
 
-        /**
+         /*
          * After calling {@code nextToken()}, {@code ttype} contains the type of
          * token that has been read. When a single character is read, its value
          * converted to an integer is stored in {@code ttype}. For a quoted string,
@@ -80,7 +80,7 @@ namespace biz.ritter.javapi.io
          */
         public int ttype = TT_UNKNOWN;
 
-        /**
+         /*
          * Internal character meanings, 0 implies TOKEN_ORDINARY
          */
         private byte[] tokenTypes = new byte[256];
@@ -116,7 +116,7 @@ namespace biz.ritter.javapi.io
 
         private int peekChar = -2;
 
-        /**
+         /*
          * Private constructor to initialize the default values according to the
          * specification.
          */
@@ -152,7 +152,7 @@ namespace biz.ritter.javapi.io
              */
         }
 
-        /**
+         /*
          * Constructs a new {@code StreamTokenizer} with {@code is} as source input
          * stream. This constructor is deprecated; instead, the constructor that
          * takes a {@code Reader} as an arugment should be used.
@@ -171,7 +171,7 @@ namespace biz.ritter.javapi.io
             inStream = isJ;
         }
 
-        /**
+         /*
          * Constructs a new {@code StreamTokenizer} with {@code r} as source reader.
          * The tokenizer's initial state is as follows:
          * <ul>
@@ -197,7 +197,7 @@ namespace biz.ritter.javapi.io
             inReader = r;
         }
 
-        /**
+         /*
          * Specifies that the character {@code ch} shall be treated as a comment
          * character.
          * 
@@ -211,7 +211,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Specifies whether the end of a line is significant and should be returned
          * as {@code TT_EOF} in {@code ttype} by this tokenizer.
          * 
@@ -223,7 +223,7 @@ namespace biz.ritter.javapi.io
             isEOLSignificant = flag;
         }
 
-        /**
+         /*
          * Returns the current line number.
          * 
          * @return this tokenizer's current line number.
@@ -233,7 +233,7 @@ namespace biz.ritter.javapi.io
             return lineNumber;
         }
 
-        /**
+         /*
          * Specifies whether word tokens should be converted to lower case when they
          * are stored in {@code sval}.
          * 
@@ -246,7 +246,7 @@ namespace biz.ritter.javapi.io
             forceLowercase = flag;
         }
 
-        /**
+         /*
          * Parses the next token from this tokenizer's source stream or reader. The
          * type of the token is stored in the {@code ttype} field, additional
          * information may be stored in the {@code nval} or {@code sval} fields.
@@ -482,7 +482,7 @@ namespace biz.ritter.javapi.io
             return (ttype = currentChar);
         }
 
-        /**
+         /*
          * Specifies that the character {@code ch} shall be treated as an ordinary
          * character by this tokenizer. That is, it has no special meaning as a
          * comment character, word component, white space, string delimiter or
@@ -498,7 +498,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Specifies that the characters in the range from {@code low} to {@code hi}
          * shall be treated as an ordinary character by this tokenizer. That is,
          * they have no special meaning as a comment character, word component,
@@ -522,7 +522,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Specifies that this tokenizer shall parse numbers.
          */
         public virtual void parseNumbers()
@@ -534,7 +534,7 @@ namespace biz.ritter.javapi.io
             tokenTypes['-'] |= TOKEN_DIGIT;
         }
 
-        /**
+         /*
          * Indicates that the current token should be pushed back and returned again
          * the next time {@code nextToken()} is called.
          */
@@ -543,7 +543,7 @@ namespace biz.ritter.javapi.io
             pushBackToken = true;
         }
 
-        /**
+         /*
          * Specifies that the character {@code ch} shall be treated as a quote
          * character.
          * 
@@ -565,7 +565,7 @@ namespace biz.ritter.javapi.io
             return inStream.read();
         }
 
-        /**
+         /*
          * Specifies that all characters shall be treated as ordinary characters.
          */
         public virtual void resetSyntax()
@@ -575,7 +575,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Specifies whether "slash-slash" (C++-style) comments shall be recognized.
          * This kind of comment ends at the end of the line.
          * 
@@ -588,7 +588,7 @@ namespace biz.ritter.javapi.io
             slashSlashCommentsJ = flag;
         }
 
-        /**
+         /*
          * Specifies whether "slash-star" (C-style) comments shall be recognized.
          * Slash-star comments cannot be nested and end when a star-slash
          * combination is found.
@@ -602,7 +602,7 @@ namespace biz.ritter.javapi.io
             slashStarCommentsJ = flag;
         }
 
-        /**
+         /*
          * Returns the state of this tokenizer in a readable format.
          * 
          * @return the current state of this tokenizer.
@@ -642,7 +642,7 @@ namespace biz.ritter.javapi.io
             return result.toString();
         }
 
-        /**
+         /*
          * Specifies that the characters in the range from {@code low} to {@code hi}
          * shall be treated as whitespace characters by this tokenizer.
          * 
@@ -664,7 +664,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Specifies that the characters in the range from {@code low} to {@code hi}
          * shall be treated as word characters by this tokenizer. A word consists of
          * a word character followed by zero or more word or number characters.

@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang
 {
-    /**
+     /*
      * Thrown when a program attempts to access a constructor which is not
      * accessible from the location where the reference is made.
      */
@@ -25,14 +25,14 @@ namespace biz.ritter.javapi.lang
     public class InstantiationException : Exception {
         private static readonly long serialVersionUID = -8441929162975509110L;
 
-        /**
+         /*
          * Constructs a new {@code InstantiationException} that includes the current
          * stack trace.
          */
         public InstantiationException() :base(){
         }
 
-        /**
+         /*
          * Constructs a new {@code InstantiationException} with the current stack
          * trace and the specified detail message.
          * 
@@ -42,7 +42,7 @@ namespace biz.ritter.javapi.lang
         public InstantiationException(String detailMessage) : base (detailMessage){
         }
 
-        /**
+         /*
          * Constructs a new {@code InstantiationException} with the current stack
          * trace and the class that caused this exception.
          * 

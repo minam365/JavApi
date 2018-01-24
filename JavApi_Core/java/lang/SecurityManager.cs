@@ -18,7 +18,7 @@ namespace biz.ritter.javapi.lang
 {
     public class SecurityManager
     {
-    /**
+     /*
      * Flag to indicate whether a security check is in progress.
      * 
      * @deprecated Use {@link #checkPermission}
@@ -33,7 +33,7 @@ namespace biz.ritter.javapi.lang
 
             // Here can be some security checks and if it fails, throw a new SecurityException
         }
-        /**
+         /*
          * Checks whether the calling thread is allowed to access the resource being
          * guarded by the specified permission object.
          *

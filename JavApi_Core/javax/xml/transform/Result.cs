@@ -20,7 +20,7 @@ namespace biz.ritter.javapix.xml.transform
     //Basties note: Come from com.springsource.org.apache.xmlcommons
     //  $Id: Result.java 446598 2006-09-15 12:55:40Z jeremias $
 
-    /**
+     /*
      * <p>An object that implements this interface contains the information
      * needed to build a transformation result tree.</p>
      * 
@@ -29,7 +29,7 @@ namespace biz.ritter.javapix.xml.transform
     public interface Result
     {
 
-        /**
+         /*
          * Set the system identifier for this Result.
          *
          * <p>If the Result is not to be written to a file, the system identifier is optional.
@@ -40,7 +40,7 @@ namespace biz.ritter.javapix.xml.transform
          */
         void setSystemId(String systemId);
 
-        /**
+         /*
          * Get the system identifier that was set with setSystemId.
          *
          * @return The system identifier that was set with setSystemId,
@@ -51,7 +51,7 @@ namespace biz.ritter.javapix.xml.transform
 
     public sealed class ResultConstants
     {
-        /**
+         /*
          * The name of the processing instruction that is sent if the
          * result tree disables output escaping.
          *
@@ -73,7 +73,7 @@ namespace biz.ritter.javapix.xml.transform
         public const String PI_DISABLE_OUTPUT_ESCAPING =
             "javax.xml.transform.disable-output-escaping";
 
-        /**
+         /*
          * The name of the processing instruction that is sent
          * if the result tree enables output escaping at some point after having
          * received a PI_DISABLE_OUTPUT_ESCAPING processing instruction.

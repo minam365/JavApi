@@ -17,13 +17,13 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.math
 {
-    /**
+     /*
      * Specifies the rounding behavior for operations whose results cannot be
      * represented exactly.
      */
     public class RoundingMode {
 
-        /**
+         /*
          * Rounding mode where positive values are rounded towards positive infinity
          * and negative values towards negative infinity.
          * <br/>
@@ -31,14 +31,14 @@ namespace biz.ritter.javapi.math
          */
 		protected internal static RoundingMode UP = new RoundingMode (BigDecimal.ROUND_UP);
 
-        /**
+         /*
          * Rounding mode where the values are rounded towards zero.
          * <br/>
          * Rule: {@code x.round().abs() &lt;= x.abs()}
          */
 		protected internal static RoundingMode DOWN= new RoundingMode (BigDecimal.ROUND_DOWN);
 
-        /**
+         /*
          * Rounding mode to round towards positive infinity. For positive values
          * this rounding mode behaves as {@link #UP}, for negative values as
          * {@link #DOWN}.
@@ -47,7 +47,7 @@ namespace biz.ritter.javapi.math
          */
 		protected internal static RoundingMode CEILING= new RoundingMode (BigDecimal.ROUND_CEILING);
 
-        /**
+         /*
          * Rounding mode to round towards negative infinity. For positive values
          * this rounding mode behaves as {@link #DOWN}, for negative values as
          * {@link #UP}.
@@ -56,19 +56,19 @@ namespace biz.ritter.javapi.math
          */
 		protected internal static RoundingMode FLOOR= new RoundingMode (BigDecimal.ROUND_FLOOR);
 
-        /**
+         /*
          * Rounding mode where values are rounded towards the nearest neighbor. Ties
          * are broken by rounding up.
          */
 		protected internal static RoundingMode HALF_UP= new RoundingMode (BigDecimal.ROUND_HALF_UP);
 
-        /**
+         /*
          * Rounding mode where values are rounded towards the nearest neighbor. Ties
          * are broken by rounding down.
          */
 		protected internal static RoundingMode HALF_DOWN= new RoundingMode (BigDecimal.ROUND_HALF_DOWN);
 
-        /**
+         /*
          * Rounding mode where values are rounded towards the nearest neighbor. Ties
          * are broken by rounding to the even neighbor.
          */
@@ -81,15 +81,15 @@ namespace biz.ritter.javapi.math
         /// </summary>
         protected internal static RoundingMode UNNECESSARY= new RoundingMode (BigDecimal.ROUND_UNNECESSARY);
 
-        /** The old constant of <code>BigDecimal</code>. */
+         /* The old constant of <code>BigDecimal</code>. */
         private readonly int bigDecimalRM;
 
-        /** It sets the old constant. */
+         /* It sets the old constant. */
         protected internal RoundingMode(int rm) {
             bigDecimalRM = rm;
         }
 
-        /**
+         /*
          * Converts rounding mode constants from class {@code BigDecimal} into
          * {@code RoundingMode} values.
          *
@@ -121,7 +121,7 @@ namespace biz.ritter.javapi.math
             }
         }
         #region TODO refactoring to Typ java.lang.Enum<T>
-        /**
+         /*
          * Converts rounding mode constants from class {@code BigDecimal} into
          * {@code RoundingMode} values.
          *

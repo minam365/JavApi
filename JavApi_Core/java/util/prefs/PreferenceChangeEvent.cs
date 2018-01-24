@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.prefs
 {
 
-    /**
+     /*
      * This is the event class to indicate that a preference has been added, deleted
      * or updated.
      * <p>
@@ -41,7 +41,7 @@ namespace biz.ritter.javapi.util.prefs
 
         private readonly String value;
 
-        /**
+         /*
          * Construct a new {@code PreferenceChangeEvent} instance.
          *
          * @param p
@@ -61,7 +61,7 @@ namespace biz.ritter.javapi.util.prefs
             value = v;
         }
 
-        /**
+         /*
          * Gets the key of the changed preference.
          *
          * @return the changed preference's key.
@@ -71,7 +71,7 @@ namespace biz.ritter.javapi.util.prefs
             return key;
         }
 
-        /**
+         /*
          * Gets the new value of the changed preference or {@code null} if the
          * preference has been removed.
          *
@@ -83,7 +83,7 @@ namespace biz.ritter.javapi.util.prefs
             return value;
         }
 
-        /**
+         /*
          * Gets the {@code Preferences} instance that fired this event.
          *
          * @return the {@code Preferences} instance that fired this event.
@@ -93,7 +93,7 @@ namespace biz.ritter.javapi.util.prefs
             return node;
         }
 
-        /**
+         /*
          * This method always throws a {@code NotSerializableException},
          * because this object cannot be serialized,
          */
@@ -102,7 +102,7 @@ namespace biz.ritter.javapi.util.prefs
             throw new java.io.NotSerializableException();
         }
 
-        /**
+         /*
          * This method always throws a {@code NotSerializableException},
          * because this object cannot be serialized,
          */

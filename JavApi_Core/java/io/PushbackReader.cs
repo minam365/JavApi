@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.io
 {
 
-    /**
+     /*
      * Wraps an existing {@link Reader} and adds functionality to "push back"
      * characters that have been read, so that they can be read again. Parsers may
      * find this useful. The number of characters which may be pushed back can be
@@ -30,19 +30,19 @@ namespace biz.ritter.javapi.io
 
         private const String MESSAGE_STREAM_IS_CLOSED = "Stream is closed";
 
-        /**
+         /*
          * The {@code char} array containing the chars to read.
          */
         char[] buf;
 
-        /**
+         /*
          * The current position within the char array {@code buf}. A value
          * equal to buf.length indicates no chars available. A value of 0 indicates
          * the buffer is full.
          */
         int pos;
 
-        /**
+         /*
          * Constructs a new {@code PushbackReader} with the specified reader as
          * source. The size of the pushback buffer is set to the default value of 1
          * character.
@@ -55,7 +55,7 @@ namespace biz.ritter.javapi.io
             pos = 1;
         }
 
-        /**
+         /*
          * Constructs a new {@code PushbackReader} with {@code in} as source reader.
          * The size of the pushback buffer is set to {@code size}.
          * 
@@ -74,7 +74,7 @@ namespace biz.ritter.javapi.io
             pos = size;
         }
 
-        /**
+         /*
          * Closes this reader. This implementation closes the source reader
          * and releases the pushback buffer.
          * 
@@ -89,7 +89,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Marks the current position in this stream. Setting a mark is not
          * supported in this class; this implementation always throws an
          * {@code IOException}.
@@ -105,7 +105,7 @@ namespace biz.ritter.javapi.io
             throw new IOException(); //$NON-NLS-1$ Messages.getString("luni.D4")
         }
 
-        /**
+         /*
          * Indicates whether this reader supports the {@code mark(int)} and
          * {@code reset()} methods. {@code PushbackReader} does not support them, so
          * it returns {@code false}.
@@ -118,7 +118,7 @@ namespace biz.ritter.javapi.io
             return false;
         }
 
-        /**
+         /*
          * Reads a single character from this reader and returns it as an integer
          * with the two higher-order bytes set to 0. Returns -1 if the end of the
          * reader has been reached. If the pushback buffer does not contain any
@@ -150,7 +150,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Reads at most {@code length} bytes from this reader and stores them in
          * byte array {@code buffer} starting at {@code offset}. Characters are
          * read from the pushback buffer first, then from the source reader if more
@@ -213,7 +213,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Indicates whether this reader is ready to be read without blocking.
          * Returns {@code true} if this reader will not block when {@code read} is
          * called, {@code false} if unknown or blocking will occur.
@@ -236,7 +236,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Resets this reader to the last marked position. Resetting the reader is
          * not supported in this class; this implementation always throws an
          * {@code IOException}.
@@ -249,7 +249,7 @@ namespace biz.ritter.javapi.io
             throw new IOException(); //$NON-NLS-1$
         }
 
-        /**
+         /*
          * Pushes all the characters in {@code buffer} back to this reader. The
          * characters are pushed back in such a way that the next character read
          * from this reader is buffer[0], then buffer[1] and so on.
@@ -272,7 +272,7 @@ namespace biz.ritter.javapi.io
             unread(buffer, 0, buffer.Length);
         }
 
-        /**
+         /*
          * Pushes a subset of the characters in {@code buffer} back to this reader.
          * The subset is defined by the start position {@code offset} within
          * {@code buffer} and the number of characters specified by {@code length}.
@@ -329,7 +329,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Pushes the specified character {@code oneChar} back to this reader. This
          * is done in such a way that the next character read from this reader is
          * {@code (char) oneChar}.
@@ -356,7 +356,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Skips {@code count} characters in this reader. This implementation skips
          * characters in the pushback buffer first and then in the source reader if
          * necessary.

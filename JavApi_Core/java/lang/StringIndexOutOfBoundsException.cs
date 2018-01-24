@@ -20,7 +20,7 @@ using System.Text;
 
 namespace biz.ritter.javapi.lang
 {
-    /**
+     /*
      * Thrown by <code>String</code> methods to indicate that an index
      * is either negative or greater than the size of the string.  For
      * some methods such as the charAt method, this exception also is
@@ -33,7 +33,7 @@ namespace biz.ritter.javapi.lang
      */
     public
     class StringIndexOutOfBoundsException : IndexOutOfBoundsException {
-        /**
+         /*
          * Constructs a <code>StringIndexOutOfBoundsException</code> with no 
          * detail message. 
          *
@@ -41,7 +41,7 @@ namespace biz.ritter.javapi.lang
          */
         public StringIndexOutOfBoundsException() :base(){}
 
-        /**
+         /*
          * Constructs a <code>StringIndexOutOfBoundsException</code> with 
          * the specified detail message. 
          *
@@ -49,7 +49,7 @@ namespace biz.ritter.javapi.lang
          */
         public StringIndexOutOfBoundsException(String s) :base (s){}
 
-        /**
+         /*
          * Constructs a new <code>StringIndexOutOfBoundsException</code> 
          * class with an argument indicating the illegal index. 
          *

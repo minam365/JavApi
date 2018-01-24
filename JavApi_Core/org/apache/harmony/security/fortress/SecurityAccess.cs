@@ -17,27 +17,27 @@ using java = biz.ritter.javapi;
 namespace org.apache.harmony.security.fortress
 {
 
-    /**
+     /*
      *
      * This interface provides access to package visible api in java.security
      * @author Boris V. Kuznetsov
      */
     public interface SecurityAccess
     {
-        /**
+         /*
          * Access to Security.renumProviders()
          *
          */
         void renumProviders();
 
-        /**
+         /*
          * Access to Service.getAliases()
          * @param s
          * @return
          */
         java.util.Iterator<String> getAliases(java.security.Provider.Service s);
 
-        /**
+         /*
          * Access to Provider.getService(String type)
          * @param p
          * @param type

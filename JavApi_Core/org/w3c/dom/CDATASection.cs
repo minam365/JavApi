@@ -13,7 +13,7 @@
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      * CDATA sections are used to escape blocks of text containing characters that 
      * would otherwise be regarded as markup. The only delimiter that is 
      * recognized in a CDATA section is the "]]&gt;" string that ends the CDATA 

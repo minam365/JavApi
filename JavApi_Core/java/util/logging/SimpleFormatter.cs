@@ -16,18 +16,18 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util.logging
 {
-/**
+ /*
  * {@code SimpleFormatter} can be used to print a summary of the information
  * contained in a {@code LogRecord} object in a human readable format.
  */
 public class SimpleFormatter : Formatter {
-    /**
+     /*
      * Constructs a new {@code SimpleFormatter}.
      */
     public SimpleFormatter() :base(){
     }
 
-    /**
+     /*
      * Converts a {@link LogRecord} object into a human readable string
      * representation.
      *

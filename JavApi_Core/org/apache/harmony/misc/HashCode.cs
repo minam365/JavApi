@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace org.apache.harmony.misc
 {
-/**
+ /*
  * This class is a convenience method to sequentially calculate hash code of the
  * object based on the field values. The result depends on the order of elements
  * appended. The exact formula is the same as for
@@ -62,7 +62,7 @@ namespace org.apache.harmony.misc
  * @see java.util.List#hashCode()
  */
 internal sealed class HashCode {
-    /**
+     /*
      * The hashCode value before any data is appended, equals to 1. 
      * @see java.util.List#hashCode()
      */
@@ -70,14 +70,14 @@ internal sealed class HashCode {
     
     private int hashCodeJ = EMPTY_HASH_CODE;
     
-    /**
+     /*
      * Returns accumulated hashCode
      */
     public int hashCode() {
         return hashCodeJ;
     }
     
-    /**
+     /*
      * Combines hashCode of previous elements sequence and value's hashCode.
      * @param hashCode previous hashCode value
      * @param value new element
@@ -88,7 +88,7 @@ internal sealed class HashCode {
         return combine(hashCode, v);
     }
     
-    /**
+     /*
      * Combines hashCode of previous elements sequence and value's hashCode.
      * @param hashCode previous hashCode value
      * @param value new element
@@ -99,7 +99,7 @@ internal sealed class HashCode {
         return combine(hashCode, v);
     }
 
-    /**
+     /*
      * Combines hashCode of previous elements sequence and value's hashCode.
      * @param hashCode previous hashCode value
      * @param value new element
@@ -110,7 +110,7 @@ internal sealed class HashCode {
         return combine(hashCode, v);
     }
     
-    /**
+     /*
      * Combines hashCode of previous elements sequence and value's hashCode.
      * @param hashCode previous hashCode value
      * @param value new element
@@ -121,7 +121,7 @@ internal sealed class HashCode {
         return combine(hashCode, v);
     }
 
-    /**
+     /*
      * Combines hashCode of previous elements sequence and value's hashCode.
      * @param hashCode previous hashCode value
      * @param value new element
@@ -131,7 +131,7 @@ internal sealed class HashCode {
         return combine(hashCode, value.GetHashCode());
     }
     
-    /**
+     /*
      * Combines hashCode of previous elements sequence and value's hashCode.
      * @param hashCode previous hashCode value
      * @param value new element
@@ -141,7 +141,7 @@ internal sealed class HashCode {
         return 31 * hashCode + value;
     }
     
-    /**
+     /*
      * Appends value's hashCode to the current hashCode.
      * @param value new element
      * @return this
@@ -151,7 +151,7 @@ internal sealed class HashCode {
         return this;
     }
     
-    /**
+     /*
      * Appends value's hashCode to the current hashCode.
      * @param value new element
      * @return this
@@ -161,7 +161,7 @@ internal sealed class HashCode {
         return this;
     }
     
-    /**
+     /*
      * Appends value's hashCode to the current hashCode.
      * @param value new element
      * @return this
@@ -171,7 +171,7 @@ internal sealed class HashCode {
         return this;
     }
     
-    /**
+     /*
      * Appends value's hashCode to the current hashCode.
      * @param value new element
      * @return this
@@ -181,7 +181,7 @@ internal sealed class HashCode {
         return this;
     }
     
-    /**
+     /*
      * Appends value's hashCode to the current hashCode.
      * @param value new element
      * @return this
@@ -191,7 +191,7 @@ internal sealed class HashCode {
         return this;
     }
     
-    /**
+     /*
      * Appends value's hashCode to the current hashCode.
      * @param value new element
      * @return this

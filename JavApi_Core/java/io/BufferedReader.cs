@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.io
 {
 
-    /**
+     /*
      * Wraps an existing {@link Reader} and <em>buffers</em> the input. Expensive
      * interaction with the underlying reader is minimized, since most (smaller)
      * requests can be satisfied by accessing the buffer alone. The drawback is that
@@ -41,7 +41,7 @@ namespace biz.ritter.javapi.io
         private const String MESSAGE_READER_IS_CLOSED = "reader is closed";
         private Reader inJ;
 
-        /**
+         /*
          * The characters that can be read and refilled in bulk. We maintain three
          * indices into this buffer:<pre>
          *     { X X X X X X X X X X X X - - }
@@ -71,7 +71,7 @@ namespace biz.ritter.javapi.io
 
         private int markLimit = -1;
 
-        /**
+         /*
          * Constructs a new BufferedReader on the Reader {@code in}. The
          * buffer gets the default size (8 KB).
          * 
@@ -83,7 +83,7 @@ namespace biz.ritter.javapi.io
             buf = new char[8192];
         }
 
-        /**
+         /*
          * Constructs a new BufferedReader on the Reader {@code in}. The buffer
          * size is specified by the parameter {@code size}.
          * 
@@ -102,7 +102,7 @@ namespace biz.ritter.javapi.io
             buf = new char[size];
         }
 
-        /**
+         /*
          * Closes this reader. This implementation closes the buffered source reader
          * and releases the buffer. Nothing is done if this reader has already been
          * closed.
@@ -120,7 +120,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Populates the buffer with data. It is an error to call this method when
          * the buffer still contains data; ie. if {@code pos &lt; end}.
          *
@@ -167,7 +167,7 @@ namespace biz.ritter.javapi.io
             return count;
         }
 
-        /**
+         /*
          * Indicates whether or not this reader is closed.
          * 
          * @return {@code true} if this reader is closed, {@code false}
@@ -177,7 +177,7 @@ namespace biz.ritter.javapi.io
             return buf == null;
         }
 
-        /**
+         /*
          * Sets a mark position in this reader. The parameter {@code markLimit}
          * indicates how many characters can be read before the mark is invalidated.
          * Calling {@code reset()} will reposition the reader back to the marked
@@ -207,7 +207,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Indicates whether this reader supports the {@code mark()} and
          * {@code reset()} methods. This implementation returns {@code true}.
          * 
@@ -219,7 +219,7 @@ namespace biz.ritter.javapi.io
             return true;
         }
 
-        /**
+         /*
          * Reads a single character from this reader and returns it with the two
          * higher-order bytes set to 0. If possible, BufferedReader returns a
          * character from the buffer. If there are no characters available in the
@@ -245,7 +245,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Reads at most {@code length} characters from this reader and stores them
          * at {@code offset} in the character array {@code buffer}. Returns the
          * number of characters actually read or -1 if the end of the source reader
@@ -335,7 +335,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Peeks at the next input character, refilling the buffer if necessary. If
          * this character is a newline character ("\n"), it is discarded.
          */
@@ -347,7 +347,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Returns the next line of text available from this reader. A line is
          * represented by zero or more characters followed by {@code '\n'},
          * {@code '\r'}, {@code "\r\n"} or the end of the reader. The string does
@@ -437,7 +437,7 @@ namespace biz.ritter.javapi.io
 
         }
 
-        /**
+         /*
          * Indicates whether this reader is ready to be read without blocking.
          *
          * @return {@code true} if this reader will not block when {@code read} is
@@ -458,7 +458,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Resets this reader's position to the last {@code mark()} location.
          * Invocations of {@code read()} and {@code skip()} will occur from this new
          * location.
@@ -481,7 +481,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Skips {@code amount} characters in this reader. Subsequent
          * {@code read()}s will not return these characters unless {@code reset()}
          * is used. Skipping characters may invalidate a mark if {@code markLimit}

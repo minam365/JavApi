@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.net
 {
 
-    /**
+     /*
      * This {@code SocketException} may be thrown during socket creation or setting
      * options, and is the superclass of all other socket related exceptions.
      */
@@ -27,14 +27,14 @@ namespace biz.ritter.javapi.net
 
         private static readonly long serialVersionUID = -5935874303556886934L;
 
-        /**
+         /*
          * Constructs a new {@code SocketException} instance with its walkback
          * filled in.
          */
         public SocketException() :base (){
         }
 
-        /**
+         /*
          * Constructs a new {@code SocketException} instance with its walkback and
          * message filled in.
          * 

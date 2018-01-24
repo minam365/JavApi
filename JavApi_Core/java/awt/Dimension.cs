@@ -17,7 +17,7 @@ using org.apache.harmony.misc;
 
 namespace biz.ritter.javapi.awt
 {
-    /**
+     /*
      * @author Denis M. Kishenko
      */
     [Serializable]

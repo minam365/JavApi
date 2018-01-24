@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.io
 {
-	/**
+	 /*
  * Signals a problem during the serialization or deserialization of an
  * object. Possible reasons include:
  * <ul>
@@ -36,12 +36,12 @@ namespace biz.ritter.javapi.io
 
 		private const long serialVersionUID = -4333316296251054416L;
 
-		/**
+		 /*
      * The fully qualified name of the class that caused the problem.
      */
 		public String classname;
 
-		/**
+		 /*
      * Constructs a new {@code InvalidClassException} with its stack trace and
      * detailed message filled in.
      * 
@@ -53,7 +53,7 @@ namespace biz.ritter.javapi.io
 		{
 		}
 
-		/**
+		 /*
      * Constructs a new {@code InvalidClassException} with its stack trace,
      * detail message and the fully qualified name of the class which caused the
      * exception filled in.
@@ -69,7 +69,7 @@ namespace biz.ritter.javapi.io
 			this.classname = className;
 		}
 
-		/**
+		 /*
      * Returns the detail message which was provided when the exception was
      * created. {@code null} is returned if no message was provided at creation
      * time. If a detail message as well as a class name are provided, then the

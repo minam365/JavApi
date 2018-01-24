@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
  
 namespace biz.ritter.javapi.io
 {
-	/**
+	 /*
  * Collects {@link FilePermission} objects and allows to query whether a
  * particular permission is implied by it.
  */
@@ -28,14 +28,14 @@ internal sealed class FilePermissionCollection : java.security.PermissionCollect
 
     internal java.util.Vector<java.security.Permission> permissions = new java.util.Vector<java.security.Permission>();
 
-    /**
+     /*
      * Construct a new FilePermissionCollection
      */
     public FilePermissionCollection() :base(){
         
     }
 
-    /**
+     /*
      * Add a permission object to the permission collection.
      * 
      * @param permission
@@ -59,7 +59,7 @@ internal sealed class FilePermissionCollection : java.security.PermissionCollect
         }
     }
 
-    /**
+     /*
      * Returns an enumeration for the collection of permissions.
      * 
      * @return a permission enumeration for this permission collection.
@@ -70,7 +70,7 @@ internal sealed class FilePermissionCollection : java.security.PermissionCollect
         return permissions.elements();
     }
 
-    /**
+     /*
      * Indicates whether this permissions collection implies a specific
      * {@code permission}.
      * 

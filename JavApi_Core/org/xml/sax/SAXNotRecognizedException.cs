@@ -10,7 +10,7 @@ namespace org.xml.sax
 {
 
 
-    /**
+     /*
      * Exception class for an unrecognized identifier.
      *
      * <blockquote>
@@ -32,7 +32,7 @@ namespace org.xml.sax
     public class SAXNotRecognizedException : SAXException
     {
 
-        /**
+         /*
          * Default constructor.
          */
         public SAXNotRecognizedException()
@@ -41,7 +41,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Construct a new exception with the given message.
          *
          * @param message The text message of the exception.

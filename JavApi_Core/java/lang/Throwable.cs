@@ -23,7 +23,7 @@ namespace biz.ritter.javapi.lang
     public class Throwable : System.Exception, java.io.Serializable
     {
 
-        /**
+         /*
          * A fully-expanded representation of the stack trace.
          */
         private StackTraceElement[] stackTrace;
@@ -72,7 +72,7 @@ namespace biz.ritter.javapi.lang
             this.printStackTrace(SystemJ.err);
         }
 
-        /**
+         /*
          * Writes a printable representation of this {@code Throwable}'s stack trace
          * to the specified print stream. If the {@code Throwable} contains a
          * {@link #getCause() cause}, the method will be invoked recursively for
@@ -86,7 +86,7 @@ namespace biz.ritter.javapi.lang
             this.printStackTrace(new java.io.PrintWriter(err,true));
         }
 
-        /**
+         /*
             * Writes a printable representation of this {@code Throwable}'s stack trace
             * to the specified print writer. If the {@code Throwable} contains a
             * {@link #getCause() cause}, the method will be invoked recursively for the
@@ -132,7 +132,7 @@ namespace biz.ritter.javapi.lang
                     .append(msg).toString();
         }
 
-        /**
+         /*
          * Returns an array of StackTraceElements. Each StackTraceElement represents
          * a entry on the stack. Cache the stack trace in the stackTrace field,
          * returning the cached field when it has already been initialized.
@@ -181,7 +181,7 @@ namespace biz.ritter.javapi.lang
             }
             return result;
         }
-        /**
+         /*
          * Returns the cause of this {@code Throwable}, or {@code null} if there is
          * no cause.
          * 
@@ -196,7 +196,7 @@ namespace biz.ritter.javapi.lang
             return cause;
         }
 
-        /**
+         /*
          * Counts the number of duplicate stack frames, starting from the
          * end of the stack.
          * 
@@ -224,7 +224,7 @@ namespace biz.ritter.javapi.lang
             }
             return duplicates;
         }
-        /**
+         /*
          * Returns the array of stack trace elements of this {@code Throwable}. Each
          * {@code StackTraceElement} represents an entry in the call stack. The
          * element at position 0 is the top of the stack, that is, the stack frame

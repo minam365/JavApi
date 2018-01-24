@@ -9,7 +9,7 @@ using System;
 namespace org.w3c.dom.events
 {
 
-    /**
+     /*
      *  The <code>DocumentEvent</code> interface provides a mechanism by which the 
      * a user can create an Event of a type supported by the implementation. It 
      * is expected that the <code>DocumentEvent</code> interface will be 
@@ -19,7 +19,7 @@ namespace org.w3c.dom.events
      */
     public interface DocumentEvent
     {
-        /**
+         /*
          * 
          * @param type The <code>type</code> paramater specifies the type of 
          *   <code>Event</code> to be created.  If the <code>Event</code> type 

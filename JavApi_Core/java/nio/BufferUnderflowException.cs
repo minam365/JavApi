@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.nio
 {
-    /**
+     /*
      * A <code>BufferUnderflowException</code> is thrown when elements are read
      * from a buffer but there are not enough remaining elements in the buffer.
      */
@@ -27,7 +27,7 @@ namespace biz.ritter.javapi.nio
 
         private static readonly long serialVersionUID = -1713313658691622206L;
 
-        /**
+         /*
          * Constructs a <code>BufferUnderflowException</code>.
          */
         public BufferUnderflowException() : base (){

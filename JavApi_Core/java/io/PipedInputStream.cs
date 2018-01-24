@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.io
 {
-    /**
+     /*
      * Receives information from a communications pipe. When two threads want to
      * pass data back and forth, one creates a piped output stream and the other one
      * creates a piped input stream.
@@ -31,32 +31,32 @@ namespace biz.ritter.javapi.io
 
         private bool isClosed = false;
 
-        /**
+         /*
          * The circular buffer through which data is passed.
          */
         protected internal byte[] buffer;
 
-        /**
+         /*
          * The index in {@code buffer} where the next byte will be written.
          */
         protected int inJ = -1;
 
-        /**
+         /*
          * The index in {@code buffer} where the next byte will be read.
          */
         protected int outJ = 0;
 
-        /**
+         /*
          * The size of the default pipe in bytes.
          */
         protected internal static readonly int PIPE_SIZE = 1024;
 
-        /**
+         /*
          * Indicates if this pipe is connected.
          */
         internal bool isConnected = false;
 
-        /**
+         /*
          * Constructs a new unconnected {@code PipedInputStream}. The resulting
          * stream must be connected to a {@link PipedOutputStream} before data may
          * be read from it.
@@ -66,7 +66,7 @@ namespace biz.ritter.javapi.io
             /* empty */
         }
 
-        /**
+         /*
          * Constructs a new {@code PipedInputStream} connected to the
          * {@link PipedOutputStream} {@code out}. Any data written to the output
          * stream can be read from the this input stream.
@@ -81,7 +81,7 @@ namespace biz.ritter.javapi.io
             connect(outJ);
         }
 
-        /**
+         /*
          * Constructs a new PipedInputStream connected to the PipedOutputStream
          * <code>out</code> and uses the specified buffer size. Any data written
          * to the output stream can be read from this input stream.
@@ -103,7 +103,7 @@ namespace biz.ritter.javapi.io
             connect(outJ);
         }
 
-        /**
+         /*
          * Constructs a new unconnected PipedInputStream and uses the specified
          * buffer size. The resulting Stream must be connected to a
          * PipedOutputStream before data may be read from it.
@@ -123,7 +123,7 @@ namespace biz.ritter.javapi.io
             buffer = new byte[pipeSize];
         }
 
-        /**
+         /*
          * Returns the number of bytes that are available before this stream will
          * block. This implementation returns the number of bytes written to this
          * pipe that have not been read yet.
@@ -144,7 +144,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Closes this stream. This implementation releases the buffer used for the
          * pipe and notifies all threads waiting to read or write.
          * 
@@ -164,7 +164,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Connects this {@code PipedInputStream} to a {@link PipedOutputStream}.
          * Any data written to the output stream becomes readable in this input
          * stream.
@@ -179,7 +179,7 @@ namespace biz.ritter.javapi.io
             src.connect(this);
         }
 
-        /**
+         /*
          * Reads a single byte from this stream and returns it as an integer in the
          * range from 0 to 255. Returns -1 if the end of this stream has been
          * reached. If there is no data in the pipe, this method blocks until data
@@ -264,7 +264,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Reads at most {@code count} bytes from this stream and stores them in the
          * byte array {@code bytes} starting at {@code offset}. Blocks until at
          * least one byte has been read, the end of the stream is detected or an
@@ -409,7 +409,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Receives a byte and stores it in this stream's {@code buffer}. This
          * method is called by {@link PipedOutputStream#write(int)}. The least
          * significant byte of the integer {@code oneByte} is stored at index

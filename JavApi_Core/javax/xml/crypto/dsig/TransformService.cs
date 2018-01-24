@@ -254,7 +254,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig
             return providers[0];
         }
 
-        /**
+         /*
          * Returns the mechanism type supported by this <code>TransformService</code>.
          *
          * @return the mechanism type
@@ -264,7 +264,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig
             return mechanism;
         }
 
-        /**
+         /*
          * Returns the URI of the algorithm supported by this
          * <code>TransformService</code>.
          *
@@ -285,7 +285,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig
             return provider;
         }
 
-        /**
+         /*
          * Initializes this <code>TransformService</code> with the specified 
          * parameters.
          *
@@ -301,7 +301,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig
         public abstract void init(TransformParameterSpec paramsJ)
             ;//throws InvalidAlgorithmParameterException;
 
-        /**
+         /*
          * Marshals the algorithm-specific parameters. If there are no parameters
          * to be marshalled, this method returns without throwing an exception.
          *
@@ -319,7 +319,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig
             (XMLStructure parent, XMLCryptoContext context)
             ;//throws MarshalException;
 
-        /**
+         /*
          * Initializes this <code>TransformService</code> with the specified 
          * parameters and document context. 
          *

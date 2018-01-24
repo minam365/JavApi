@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.security
 {
 
-    /**
+     /*
      * {@code MessageDigestSpi} is the Service Provider Interface (SPI) definition
      * for {@link MessageDigest}. Examples of digest algorithms are MD5 and SHA. A
      * digest is a secure one way hash function for a stream of bytes. It acts like
@@ -28,7 +28,7 @@ namespace biz.ritter.javapi.security
     public abstract class MessageDigestSpi
     {
 
-        /**
+         /*
          * Returns the engine digest length in bytes. If the implementation does not
          * implement this function {@code 0} is returned.
          * 
@@ -39,7 +39,7 @@ namespace biz.ritter.javapi.security
             return 0;
         }
 
-        /**
+         /*
          * Updates this {@code MessageDigestSpi} using the given {@code byte}.
          * 
          * @param input
@@ -48,7 +48,7 @@ namespace biz.ritter.javapi.security
          */
         protected internal abstract void engineUpdate(byte input);
 
-        /**
+         /*
          * Updates this {@code MessageDigestSpi} using the given {@code byte[]}.
          * 
          * @param input
@@ -63,7 +63,7 @@ namespace biz.ritter.javapi.security
          */
         protected internal abstract void engineUpdate(byte[] input, int offset, int len);
 
-        /**
+         /*
          * Updates this {@code MessageDigestSpi} using the given {@code input}.
          * 
          * @param input
@@ -93,7 +93,7 @@ namespace biz.ritter.javapi.security
             }
         }
 
-        /**
+         /*
          * Computes and returns the final hash value for this
          * {@link MessageDigestSpi}. After the digest is computed the receiver is
          * reset.
@@ -103,7 +103,7 @@ namespace biz.ritter.javapi.security
          */
         protected internal abstract byte[] engineDigest();
 
-        /**
+         /*
          * Computes and stores the final hash value for this
          * {@link MessageDigestSpi}. After the digest is computed the receiver is
          * reset.
@@ -148,7 +148,7 @@ namespace biz.ritter.javapi.security
             return tmp.Length;
         }
 
-        /**
+         /*
          * Puts this {@code MessageDigestSpi} back in an initial state, such that it
          * is ready to compute a one way hash value.
          */

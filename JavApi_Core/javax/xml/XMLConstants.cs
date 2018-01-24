@@ -23,7 +23,7 @@ using javax = biz.ritter.javapix;
 namespace biz.ritter.javapix.xml
 {
 
-    /**
+     /*
      * Utility class to contain basic XML values as constants.
      *
      * @author <a href="mailto:Jeff.Suttor@Sun.com">Jeff Suttor</a>
@@ -41,14 +41,14 @@ namespace biz.ritter.javapix.xml
     public sealed class XMLConstants
     {
 
-        /**
+         /*
          * Private constructor to prevent instantiation.
          */
         private XMLConstants()
         {
         }
 
-        /**
+         /*
          * <p>Namespace URI to use to represent that there is no Namespace.</p>
          *
          * <p>Defined by the Namespace specification to be "".</p>
@@ -58,7 +58,7 @@ namespace biz.ritter.javapix.xml
          */
         public const String NULL_NS_URI = "";
 
-        /**
+         /*
          * <p>Prefix to use to represent the default XML Namespace.</p>
          *
          * <p>Defined by the XML specification to be "".</p>
@@ -68,7 +68,7 @@ namespace biz.ritter.javapix.xml
          */
         public const String DEFAULT_NS_PREFIX = "";
 
-        /**
+         /*
          * <p>The official XML Namespace name URI.</p>
          *
          * <p>Defined by the XML specification to be
@@ -80,7 +80,7 @@ namespace biz.ritter.javapix.xml
         public const String XML_NS_URI =
             "http://www.w3.org/XML/1998/namespace";
 
-        /**
+         /*
          * <p>The official XML Namespace prefix.</p>
          *
          * <p>Defined by the XML specification to be "<code>xml</code>".</p>
@@ -90,7 +90,7 @@ namespace biz.ritter.javapix.xml
          */
         public const String XML_NS_PREFIX = "xml";
 
-        /**
+         /*
          * <p>The official XML attribute used for specifying XML Namespace
          * declarations, {@link #XMLNS_ATTRIBUTE
          * XMLConstants.XMLNS_ATTRIBUTE}, Namespace name URI.</p>
@@ -106,7 +106,7 @@ namespace biz.ritter.javapix.xml
         public const String XMLNS_ATTRIBUTE_NS_URI =
             "http://www.w3.org/2000/xmlns/";
 
-        /**
+         /*
          * <p>The official XML attribute used for specifying XML Namespace
          * declarations.</p>
          *
@@ -119,7 +119,7 @@ namespace biz.ritter.javapix.xml
          */
         public const String XMLNS_ATTRIBUTE = "xmlns";
 
-        /**
+         /*
          * <p>W3C XML Schema Namespace URI.</p>
          * 
          * <p>Defined to be "<code>http://www.w3.org/2001/XMLSchema</code>".</p>
@@ -131,7 +131,7 @@ namespace biz.ritter.javapix.xml
         public const String W3C_XML_SCHEMA_NS_URI =
             "http://www.w3.org/2001/XMLSchema";
 
-        /**
+         /*
          * <p>W3C XML Schema Instance Namespace URI.</p>
          * 
          * <p>Defined to be "<code>http://www.w3.org/2001/XMLSchema-instance</code>".</p>
@@ -143,7 +143,7 @@ namespace biz.ritter.javapix.xml
         public const String W3C_XML_SCHEMA_INSTANCE_NS_URI =
             "http://www.w3.org/2001/XMLSchema-instance";
 
-        /**
+         /*
          * <p>W3C XPath Datatype Namespace URI.</p>
          * 
          * <p>Defined to be "<code>http://www.w3.org/2003/11/xpath-datatypes</code>".</p>
@@ -152,14 +152,14 @@ namespace biz.ritter.javapix.xml
          */
         public const String W3C_XPATH_DATATYPE_NS_URI = "http://www.w3.org/2003/11/xpath-datatypes";
 
-        /**
+         /*
          * <p>XML Document Type Declaration Namespace URI as an arbitrary value.</p>
          * 
          * <p>Since not formally defined by any existing standard, arbitrarily define to be "<code>http://www.w3.org/TR/REC-xml</code>".</p>
          */
         public const String XML_DTD_NS_URI = "http://www.w3.org/TR/REC-xml";
 
-        /**
+         /*
          * <p>RELAX NG Namespace URI.</p>
          * 
          * <p>Defined to be "<code>http://relaxng.org/ns/structure/1.0</code>".</p>
@@ -168,7 +168,7 @@ namespace biz.ritter.javapix.xml
          */
         public const String RELAXNG_NS_URI = "http://relaxng.org/ns/structure/1.0";
 
-        /**
+         /*
          * <p>Feature for secure processing.</p>
          * 
          * <ul>

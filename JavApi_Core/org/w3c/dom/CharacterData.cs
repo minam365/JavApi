@@ -14,7 +14,7 @@ using System;
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      * The <code>CharacterData</code> interface : Node with a set of 
      * attributes and methods for accessing character data in the DOM. For 
      * clarity this set is defined here rather than on each object that uses 
@@ -30,7 +30,7 @@ namespace org.w3c.dom
      */
      public interface CharacterData : Node
     {
-        /**
+         /*
          * The character data of the node that implements this interface. The DOM 
          * implementation may not put arbitrary limits on the amount of data 
          * that may be stored in a <code>CharacterData</code> node. However, 
@@ -48,14 +48,14 @@ namespace org.w3c.dom
         String getData();//                            throws DOMException;
         void setData(String data);//                            throws DOMException;
 
-        /**
+         /*
          * The number of 16-bit units that are available through <code>data</code> 
          * and the <code>substringData</code> method below. This may have the 
          * value zero, i.e., <code>CharacterData</code> nodes may be empty.
          */
         int getLength();
 
-        /**
+         /*
          * Extracts a range of data from the node.
          * @param offsetStart offset of substring to extract.
          * @param countThe number of 16-bit units to extract.
@@ -73,7 +73,7 @@ namespace org.w3c.dom
         String substringData(int offset,
                                     int count);//                                throws DOMException;
 
-        /**
+         /*
          * Append the string to the end of the character data of the node. Upon 
          * success, <code>data</code> provides access to the concatenation of 
          * <code>data</code> and the <code>DOMString</code> specified.
@@ -83,7 +83,7 @@ namespace org.w3c.dom
          */
         void appendData(String arg);//                           throws DOMException;
 
-        /**
+         /*
          * Insert a string at the specified 16-bit unit offset.
          * @param offsetThe character offset at which to insert.
          * @param argThe <code>DOMString</code> to insert.
@@ -96,7 +96,7 @@ namespace org.w3c.dom
         void insertData(int offset,
                                String arg);//                           throws DOMException;
 
-        /**
+         /*
          * Remove a range of 16-bit units from the node. Upon success, 
          * <code>data</code> and <code>length</code> reflect the change.
          * @param offsetThe offset from which to start removing.
@@ -114,7 +114,7 @@ namespace org.w3c.dom
         void deleteData(int offset,
                                int count);//throws DOMException;
 
-        /**
+         /*
          * Replace the characters starting at the specified 16-bit unit offset 
          * with the specified string.
          * @param offsetThe offset from which to start replacing.

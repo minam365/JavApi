@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * A {@code MissingFormatWidthException} will be thrown if the format width is
      * missing but is required.
      * 
@@ -30,7 +30,7 @@ namespace biz.ritter.javapi.util
 
         private String s;
 
-        /**
+         /*
          * Constructs a new {@code MissingFormatWidthException} with the specified
          * format specifier.
          * 
@@ -46,7 +46,7 @@ namespace biz.ritter.javapi.util
             this.s = s;
         }
 
-        /**
+         /*
          * Returns the format specifier associated with the exception.
          * 
          * @return the format specifier associated with the exception.
@@ -56,7 +56,7 @@ namespace biz.ritter.javapi.util
             return s;
         }
 
-        /**
+         /*
          * Returns the message of the exception.
          * 
          * @return the message of the exception.

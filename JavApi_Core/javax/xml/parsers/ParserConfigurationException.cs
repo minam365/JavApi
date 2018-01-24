@@ -22,7 +22,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapix.xml.parsers{
 
-/**
+ /*
  * Indicates a serious configuration error.
  *
  * @author <a href="mailto:Jeff.Suttor@Sun.com">Jeff Suttor</a>
@@ -31,7 +31,7 @@ namespace biz.ritter.javapix.xml.parsers{
 
 public class ParserConfigurationException : java.lang.Exception {
 
-    /**
+     /*
      * Create a new <code>ParserConfigurationException</code> with no
      * detail message.
      */
@@ -40,7 +40,7 @@ public class ParserConfigurationException : java.lang.Exception {
         
     }
 
-    /**
+     /*
      * Create a new <code>ParserConfigurationException</code> with
      * the <code>String</code> specified as an error message.
      *

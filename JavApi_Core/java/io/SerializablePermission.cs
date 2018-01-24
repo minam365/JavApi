@@ -18,7 +18,7 @@ namespace biz.ritter.javapi.io
 {
 
 
-/**
+ /*
  * Is used to enable access to potentially unsafe serialization operations. It
  * does have a name but no action list. The following table lists valid
  * permission names:
@@ -43,7 +43,7 @@ namespace biz.ritter.javapi.io
 		// Serializable field
 		private String actions;
 
-		/**
+		 /*
      * Constructs a new {@code SerializablePermission} with the specified name.
      * 
      * @param permissionName
@@ -54,7 +54,7 @@ namespace biz.ritter.javapi.io
 		{
 		}
 
-		/**
+		 /*
      * Constructs a new {@code SerializablePermission} with the specified name.
      * The action list is ignored.
      * 

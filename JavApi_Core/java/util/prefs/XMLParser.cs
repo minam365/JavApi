@@ -36,7 +36,7 @@ import org.xml.sax.SAXParseException;
 */
 namespace biz.ritter.javapi.util.prefs
 {
-	/**
+	 /*
  * Utility class for the Preferences import/export from XML file.
  */
 	internal class XMLParser
@@ -414,7 +414,7 @@ namespace biz.ritter.javapi.util.prefs
 			}
 		}
 
-		/**
+		 /*
      * Load preferences from file, if cannot load, create a new one.
      * 
      * @param file

@@ -16,7 +16,7 @@ using System;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * FormattableFlags are used as a parameter to
      * {@link Formattable#formatTo(Formatter, int, int, int)} and change the output
      * format in {@code Formattable}s. The validation and interpretation of the
@@ -32,7 +32,7 @@ namespace biz.ritter.javapi.util
             //prevent this class from being instantiated
         }
 
-        /**
+         /*
          * Denotes the output is to be left-justified. In order to fill the minimum
          * width requirement, spaces('\u0020') will be appended at the end of the
          * specified output element. If no such flag is set, the output is
@@ -42,7 +42,7 @@ namespace biz.ritter.javapi.util
          */
         public const int LEFT_JUSTIFY = 1;
 
-        /**
+         /*
          * Denotes the output is to be converted to upper case in the way the locale
          * parameter of Formatter.formatTo() requires. The output has the same
          * effect as {@code String.toUpperCase(java.util.Locale)}.
@@ -51,7 +51,7 @@ namespace biz.ritter.javapi.util
          */
         public const int UPPERCASE = 2;
 
-        /**
+         /*
          * Denotes the output is to be formatted in an alternate form. The definition
          * of the alternate form is determined by the {@code Formattable}.
          * 

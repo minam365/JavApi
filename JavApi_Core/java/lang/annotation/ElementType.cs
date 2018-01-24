@@ -17,7 +17,7 @@
 
 namespace biz.ritter.javapi.lang.annotation{
 
-/**
+ /*
  * Defines an enumeration for Java program elements. It is used in conjunction
  * with the {@link Target} meta-annotation to restrict the use of an annotation
  * to certain program elements.
@@ -25,35 +25,35 @@ namespace biz.ritter.javapi.lang.annotation{
  * @since 1.5
  */
 public enum ElementType {
-    /**
+     /*
      * Class, interface or enum declaration.
      */
     TYPE,
-    /**
+     /*
      * Field declaration.
      */
     FIELD,
-    /**
+     /*
      * Method declaration.
      */
     METHOD,
-    /**
+     /*
      * Parameter declaration.
      */
     PARAMETER,
-    /**
+     /*
      * Constructor declaration.
      */
     CONSTRUCTOR,
-    /**
+     /*
      * Local variable declaration.
      */
     LOCAL_VARIABLE,
-    /**
+     /*
      * Annotation type declaration.
      */
     ANNOTATION_TYPE,
-    /**
+     /*
      * Package declaration.
      */
     PACKAGE

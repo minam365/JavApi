@@ -8,7 +8,7 @@
 namespace org.w3c.dom.traversal
 {
 
-    /**
+     /*
      * <code>DocumentTraversal</code> contains methods that creates Iterators to 
      * traverse a node and its children in document order (depth first, pre-order 
      * traversal, which is equivalent to the order in which the start tags occur 
@@ -17,7 +17,7 @@ namespace org.w3c.dom.traversal
      */
     public interface DocumentTraversal
     {
-        /**
+         /*
          * 
          * @param root The node which will be iterated together with its children. 
          *   The iterator is initially positioned just before this node. The 
@@ -38,7 +38,7 @@ namespace org.w3c.dom.traversal
                                                      int whatToShow,
                                                      NodeFilter filter,
                                                      bool entityReferenceExpansion);
-        /**
+         /*
          * Create a new TreeWalker over the subtree rooted by the specified node.
          * @param root The node which will serve as the root for the 
          *   <code>TreeWalker</code>. The currentNode of the TreeWalker is set to 

@@ -10,7 +10,7 @@ using org.w3c.dom.views;
 namespace org.w3c.dom.events
 {
 
-    /**
+     /*
      * The <code>KeyEvent</code> interface provides specific contextual  
      * information associated with Key events. 
      * @since DOM Level 2
@@ -18,41 +18,41 @@ namespace org.w3c.dom.events
     public interface KeyEvent : UIEvent
     {
 
-        /**
+         /*
          *  <code>ctrlKey</code> indicates whether the 'ctrl' key was depressed 
          * during the firing of the event. 
          */
         bool getCtrlKey();
-        /**
+         /*
          *  <code>shiftKey</code> indicates whether the 'shift' key was depressed 
          * during the firing of the event. 
          */
         bool getShiftKey();
-        /**
+         /*
          *  <code>altKey</code> indicates whether the 'alt' key was depressed during 
          * the firing of the event.  On some platforms this key may map to an 
          * alternative key name. 
          */
         bool getAltKey();
-        /**
+         /*
          *  <code>metaKey</code> indicates whether the 'meta' key was depressed 
          * during the firing of the event.  On some platforms this key may map to 
          * an alternative key name. 
          */
         bool getMetaKey();
-        /**
+         /*
          *  The value of <code>keyCode</code> holds the virtual key code value of 
          * the key which was depressed if the event is a key event.  Otherwise, the 
          * value is zero. 
          */
         int getKeyCode();
-        /**
+         /*
          *  <code>charCode</code> holds the value of the Unicode character 
          * associated with the depressed key if the event is a key event.  
          * Otherwise, the value is zero. 
          */
         int getCharCode();
-        /**
+         /*
          * 
          * @param typeArg Specifies the event type.
          * @param canBubbleArg Specifies whether or not the event can bubble.

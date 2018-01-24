@@ -20,7 +20,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang.annotation
 {
-	/**
+	 /*
  * Indicates that an element of an annotation type was accessed that was added
  * after the type was compiled or serialized. This does not apply to new
  * elements that have default values.
@@ -33,7 +33,7 @@ namespace biz.ritter.javapi.lang.annotation
 		private java.lang.Class annotationTypeJ;
 		private String elementNameJ;
 
-		/**
+		 /*
      * Constructs an instance with the incomplete annotation type and the name
      * of the element that's missing.
      *
@@ -50,7 +50,7 @@ namespace biz.ritter.javapi.lang.annotation
 			this.elementNameJ = elementName;
 		}
 
-		/**
+		 /*
      * Returns the annotation type.
      *
      * @return a Class instance.
@@ -60,7 +60,7 @@ namespace biz.ritter.javapi.lang.annotation
 			return annotationTypeJ;
 		}
 
-		/**
+		 /*
      * Returns the incomplete element's name.
      *
      * @return the name of the element.

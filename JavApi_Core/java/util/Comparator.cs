@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util
 {
-    /**
+     /*
      * A {@code Comparator} is used to compare two objects to determine their ordering with
      * respect to each other. On a given {@code Collection}, a {@code Comparator} can be used to
      * obtain a sorted {@code Collection} which is <i>totally ordered</i>. For a {@code Comparator}
@@ -29,7 +29,7 @@ namespace biz.ritter.javapi.util
      * @since 1.2
      */
     public interface Comparator<T> {
-        /**
+         /*
          * Compares the two specified objects to determine their relative ordering. The ordering
          * implied by the return value of this method for all possible pairs of
          * {@code (object1, object2)} should form an <i>equivalence relation</i>.
@@ -54,7 +54,7 @@ namespace biz.ritter.javapi.util
          */
         int compare(T object1, T object2);
 
-        /**
+         /*
          * Compares this {@code Comparator} with the specified {@code Object} and indicates whether they
          * are equal. In order to be equal, {@code object} must represent the same object
          * as this instance using a class-specific comparison.

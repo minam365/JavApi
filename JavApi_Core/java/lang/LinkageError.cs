@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang
 {
-    /**
+     /*
      * {@code LinkageError} is the superclass of all error classes that occur when
      * loading and linking class files.
      * 
@@ -28,14 +28,14 @@ namespace biz.ritter.javapi.lang
 
         private static readonly long serialVersionUID = 3579600108157160122L;
 
-        /**
+         /*
          * Constructs a new {@code LinkageError} that includes the current stack
          * trace.
          */
         public LinkageError() :base(){
         }
 
-        /**
+         /*
          * Constructs a new {@code LinkageError} with the current stack trace and
          * the specified detail message.
          * 

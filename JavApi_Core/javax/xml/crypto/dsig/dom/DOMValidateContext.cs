@@ -22,7 +22,7 @@ using javax = biz.ritter.javapix;
 namespace biz.ritter.javapix.xml.crypto.dsig.dom
 {
 
-/**
+ /*
  * A DOM-specific {@link XMLValidateContext}. This class contains additional 
  * methods to specify the location in a DOM tree where an {@link XMLSignature} 
  * is to be unmarshalled and validated from.
@@ -47,7 +47,7 @@ public class DOMValidateContext : biz.ritter.javapix.xml.crypto.dom.DOMCryptoCon
 
     private org.w3c.dom.Node node;
 
-    /**
+     /*
      * Creates a <code>DOMValidateContext</code> containing the specified key
      * selector and node.
      *
@@ -67,7 +67,7 @@ public class DOMValidateContext : biz.ritter.javapix.xml.crypto.dom.DOMCryptoCon
         this.node = node;
     }
 
-    /**
+     /*
      * Creates a <code>DOMValidateContext</code> containing the specified key
      * and node. The validating key will be stored in a 
      * {@link KeySelector#singletonKeySelector singleton KeySelector} that
@@ -90,7 +90,7 @@ public class DOMValidateContext : biz.ritter.javapix.xml.crypto.dom.DOMCryptoCon
         this.node = node;
     }
 
-    /**
+     /*
      * Sets the node.
      *
      * @param node the node 
@@ -104,7 +104,7 @@ public class DOMValidateContext : biz.ritter.javapix.xml.crypto.dom.DOMCryptoCon
         this.node = node;
     }
 
-    /**
+     /*
      * Returns the node.
      *
      * @return the node (never <code>null</code>)

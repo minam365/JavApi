@@ -18,7 +18,7 @@ using org.apache.harmony.security.fortress;
 namespace biz.ritter.javapi.security
 {
 
-/**
+ /*
  * An {@code UnresolvedPermission} represents a {@code Permission} whose type
  * should be resolved lazy and not during initialization time of the {@code
  * Policy}. {@code UnresolvedPermission}s contain all information to be replaced
@@ -44,7 +44,7 @@ public sealed class UnresolvedPermission : Permission, java.io.Serializable {
         [NonSerialized]
     private int hash;
 
-    /**
+     /*
      * Constructs a new instance of {@code UnresolvedPermission}. The supplied
      * parameters are used when this instance is resolved to the concrete
      * {@code Permission}.
@@ -93,7 +93,7 @@ public sealed class UnresolvedPermission : Permission, java.io.Serializable {
         // }
     }
 
-    /**
+     /*
      * Compares the specified object with this {@code UnresolvedPermission} for
      * equality and returns {@code true} if the specified object is equal,
      * {@code false} otherwise. To be equal, the specified object needs to be an
@@ -126,7 +126,7 @@ public sealed class UnresolvedPermission : Permission, java.io.Serializable {
         return false;
     }
 
-    /**
+     /*
      * check whether given array of certificates are equivalent
      */
     private bool equalsCertificates(Certificate[] certs1,
@@ -180,7 +180,7 @@ public sealed class UnresolvedPermission : Permission, java.io.Serializable {
         return true;
     }
 
-    /**
+     /*
      * Returns the hash code value for this {@code UnresolvedPermission}.
      * Returns the same hash code for {@code UnresolvedPermission}s that are
      * equal to each other as required by the general contract of
@@ -204,7 +204,7 @@ public sealed class UnresolvedPermission : Permission, java.io.Serializable {
         return hash;
     }
 
-    /**
+     /*
      * Returns an empty string since there are no actions allowed for {@code
      * UnresolvedPermission}. The actions, specified in the constructor, are
      * used when the concrete permission is resolved and created.
@@ -216,7 +216,7 @@ public sealed class UnresolvedPermission : Permission, java.io.Serializable {
         return ""; //$NON-NLS-1$
     }
 
-    /**
+     /*
      * Returns the name of the permission this {@code UnresolvedPermission} is
      * resolved to.
      *
@@ -227,7 +227,7 @@ public sealed class UnresolvedPermission : Permission, java.io.Serializable {
         return name;
     }
 
-    /**
+     /*
      * Returns the actions of the permission this {@code UnresolvedPermission}
      * is resolved to.
      *
@@ -238,7 +238,7 @@ public sealed class UnresolvedPermission : Permission, java.io.Serializable {
         return actions;
     }
 
-    /**
+     /*
      * Returns the fully qualified class name of the permission this {@code
      * UnresolvedPermission} is resolved to.
      *
@@ -249,7 +249,7 @@ public sealed class UnresolvedPermission : Permission, java.io.Serializable {
         return base.getName();
     }
 
-    /**
+     /*
      * Returns the certificates of the permission this {@code
      * UnresolvedPermission} is resolved to.
      *
@@ -265,7 +265,7 @@ public sealed class UnresolvedPermission : Permission, java.io.Serializable {
         return null;
     }
 
-    /**
+     /*
      * Indicates whether the specified permission is implied by this {@code
      * UnresolvedPermission}. {@code UnresolvedPermission} objects imply nothing
      * since nothing is known about them yet.
@@ -283,7 +283,7 @@ public sealed class UnresolvedPermission : Permission, java.io.Serializable {
         return false;
     }
 
-    /**
+     /*
      * Returns a string containing a concise, human-readable description of this
      * {@code UnresolvedPermission} including its target name and its target
      * actions.
@@ -295,7 +295,7 @@ public sealed class UnresolvedPermission : Permission, java.io.Serializable {
             + actions + ")"; //$NON-NLS-1$
     }
 
-    /**
+     /*
      * Returns a new {@code PermissionCollection} for holding {@code
      * UnresolvedPermission} objects.
      *
@@ -307,7 +307,7 @@ public sealed class UnresolvedPermission : Permission, java.io.Serializable {
         return new UnresolvedPermissionCollection();
     }
 
-    /**
+     /*
      * Tries to resolve this permission into the specified class.
      * <p/>
      * It is assumed that the class has a proper name (as returned by {@code
@@ -377,7 +377,7 @@ public sealed class UnresolvedPermission : Permission, java.io.Serializable {
         }
     }
 
-    /** 
+     /* 
      * Reads the object from stream and checks target type for validity. 
      *
     private void readObject(ObjectInputStream in) throws IOException,

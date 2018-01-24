@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.zip
 {
 
-    /**
+     /*
      * An instance of {@code ZipEntry} represents an entry within a <i>ZIP-archive</i>.
      * An entry has attributes such as name (= path) or the size of its data. While
      * an entry identifies data stored in an archive, it does not hold the data
@@ -41,17 +41,17 @@ namespace biz.ritter.javapi.util.zip
         protected internal int nameLen = -1;
         protected internal long mLocalHeaderRelOffset = -1;
 
-        /**
+         /*
          * Zip entry state: Deflated.
          */
         public const int DEFLATED = 8;
 
-        /**
+         /*
          * Zip entry state: Stored.
          */
         public const int STORED = 0;
 
-        /**
+         /*
          * Constructs a new {@code ZipEntry} with the specified name.
          *
          * @param name
@@ -69,7 +69,7 @@ namespace biz.ritter.javapi.util.zip
             this.name = name;
         }
 
-        /**
+         /*
          * Gets the comment for this {@code ZipEntry}.
          *
          * @return the comment for this {@code ZipEntry}, or {@code null} if there
@@ -80,7 +80,7 @@ namespace biz.ritter.javapi.util.zip
             return comment;
         }
 
-        /**
+         /*
          * Gets the compressed size of this {@code ZipEntry}.
          *
          * @return the compressed size, or -1 if the compressed size has not been
@@ -90,7 +90,7 @@ namespace biz.ritter.javapi.util.zip
             return compressedSize;
         }
 
-        /**
+         /*
          * Gets the checksum for this {@code ZipEntry}.
          *
          * @return the checksum, or -1 if the checksum has not been set.
@@ -99,7 +99,7 @@ namespace biz.ritter.javapi.util.zip
             return crc;
         }
 
-        /**
+         /*
          * Gets the extra information for this {@code ZipEntry}.
          *
          * @return a byte array containing the extra information, or {@code null} if
@@ -109,7 +109,7 @@ namespace biz.ritter.javapi.util.zip
             return extra;
         }
 
-        /**
+         /*
          * Gets the compression method for this {@code ZipEntry}.
          *
          * @return the compression method, either {@code DEFLATED}, {@code STORED}
@@ -119,7 +119,7 @@ namespace biz.ritter.javapi.util.zip
             return compressionMethod;
         }
 
-        /**
+         /*
          * Gets the name of this {@code ZipEntry}.
          *
          * @return the entry name.
@@ -128,7 +128,7 @@ namespace biz.ritter.javapi.util.zip
             return name;
         }
 
-        /**
+         /*
          * Gets the uncompressed size of this {@code ZipEntry}.
          *
          * @return the uncompressed size, or {@code -1} if the size has not been
@@ -138,7 +138,7 @@ namespace biz.ritter.javapi.util.zip
             return size;
         }
 
-        /**
+         /*
          * Gets the last modification time of this {@code ZipEntry}.
          *
          * @return the last modification time as the number of milliseconds since
@@ -160,7 +160,7 @@ namespace biz.ritter.javapi.util.zip
             return -1;
         }
 
-        /**
+         /*
          * Determine whether or not this {@code ZipEntry} is a directory.
          *
          * @return {@code true} when this {@code ZipEntry} is a directory, {@code
@@ -170,7 +170,7 @@ namespace biz.ritter.javapi.util.zip
             return name.charAt(name.length() - 1) == '/';
         }
 
-        /**
+         /*
          * Sets the comment for this {@code ZipEntry}.
          *
          * @param string
@@ -184,7 +184,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Sets the compressed size for this {@code ZipEntry}.
          *
          * @param value
@@ -194,7 +194,7 @@ namespace biz.ritter.javapi.util.zip
             compressedSize = value;
         }
 
-        /**
+         /*
          * Sets the checksum for this {@code ZipEntry}.
          *
          * @param value
@@ -210,7 +210,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Sets the extra information for this {@code ZipEntry}.
          *
          * @param data
@@ -226,7 +226,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Sets the compression method for this {@code ZipEntry}.
          *
          * @param value
@@ -242,7 +242,7 @@ namespace biz.ritter.javapi.util.zip
             compressionMethod = value;
         }
 
-        /**
+         /*
          * Sets the uncompressed size of this {@code ZipEntry}.
          *
          * @param value
@@ -258,7 +258,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Sets the modification time of this {@code ZipEntry}.
          *
          * @param value
@@ -282,7 +282,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Returns the string representation of this {@code ZipEntry}.
          *
          * @return the string representation of this {@code ZipEntry}.
@@ -291,7 +291,7 @@ namespace biz.ritter.javapi.util.zip
             return name;
         }
 
-        /**
+         /*
          * Constructs a new {@code ZipEntry} using the values obtained from {@code
          * ze}.
          *
@@ -312,7 +312,7 @@ namespace biz.ritter.javapi.util.zip
             mLocalHeaderRelOffset = ze.mLocalHeaderRelOffset;
         }
 
-        /**
+         /*
          * Returns a shallow copy of this entry.
          *
          * @return a copy of this entry.
@@ -321,7 +321,7 @@ namespace biz.ritter.javapi.util.zip
             return new ZipEntry(this);
         }
 
-        /**
+         /*
          * Returns the hash code for this {@code ZipEntry}.
          *
          * @return the hash code of the entry.

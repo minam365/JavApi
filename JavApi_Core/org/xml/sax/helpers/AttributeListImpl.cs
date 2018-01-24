@@ -7,7 +7,7 @@ using java = biz.ritter.javapi;
 
 namespace org.xml.sax.helpers
 {
-    /**
+     /*
      * Default implementation for AttributeList.
      *
      * <blockquote>
@@ -63,7 +63,7 @@ namespace org.xml.sax.helpers
     public class AttributeListImpl : AttributeList
     {
 
-        /**
+         /*
          * Create an empty attribute list.
          *
          * <p>This constructor is most useful for parser writers, who
@@ -78,7 +78,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Construct a persistent copy of an existing attribute list.
          *
          * <p>This constructor is most useful for application writers,
@@ -100,7 +100,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Set the attribute list, discarding previous contents.
          *
          * <p>This method allows an application writer to reuse an
@@ -121,7 +121,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Add an attribute to an attribute list.
          *
          * <p>This method is provided for SAX parser writers, to allow them
@@ -142,7 +142,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Remove an attribute from the list.
          *
          * <p>SAX application writers can use this method to filter an
@@ -169,7 +169,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Clear the attribute list.
          *
          * <p>SAX parser writers can use this method to reset the attribute
@@ -193,7 +193,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Return the number of attributes in the list.
          *
          * @return The number of attributes in the list.
@@ -205,7 +205,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Get the name of an attribute (by position).
          *
          * @param i The position of the attribute in the list.
@@ -230,7 +230,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Get the type of an attribute (by position).
          *
          * @param i The position of the attribute in the list.
@@ -257,7 +257,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Get the value of an attribute (by position).
          *
          * @param i The position of the attribute in the list.
@@ -282,7 +282,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Get the type of an attribute (by name).
          *
          * @param name The attribute name.
@@ -297,7 +297,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Get the value of an attribute (by name).
          *
          * @param name The attribute name.

@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang
 {
-    /**
+     /*
      * Thrown when an invalid value is passed to a string-to-number conversion
      * method.
      */
@@ -25,14 +25,14 @@ namespace biz.ritter.javapi.lang
 
         private static readonly long serialVersionUID = -2848938806368998894L;
 
-        /**
+         /*
          * Constructs a new {@code NumberFormatException} that includes the current
          * stack trace.
          */
         public NumberFormatException() : base() {
         }
 
-        /**
+         /*
          * Constructs a new {@code NumberFormatException} with the current stack
          * trace and the specified detail message.
          * 

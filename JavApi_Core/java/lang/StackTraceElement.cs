@@ -20,7 +20,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang
 {
 
-    /**
+     /*
      * A representation of a single stack frame. Arrays of {@code StackTraceElement}
      * are stored in {@link Throwable} objects to represent the whole state of the
      * call stack at the time a {@code Throwable} gets thrown.
@@ -41,7 +41,7 @@ namespace biz.ritter.javapi.lang
 
         internal int lineNumber;
 
-        /**
+         /*
          * Constructs a new {@code StackTraceElement} for a specified execution
          * point.
          *
@@ -69,7 +69,7 @@ namespace biz.ritter.javapi.lang
             lineNumber = line;
         }
 
-        /**
+         /*
          * <p>
          * Private, nullary constructor for VM use only.
          * </p>
@@ -77,7 +77,7 @@ namespace biz.ritter.javapi.lang
         private StackTraceElement() : base(){
         }
 
-        /**
+         /*
          * Compares this instance with the specified object and indicates if they
          * are equal. In order to be equal, the following conditions must be
          * fulfilled:
@@ -132,7 +132,7 @@ namespace biz.ritter.javapi.lang
             return true;
         }
 
-        /**
+         /*
          * Returns the fully qualified name of the class belonging to this
          * {@code StackTraceElement}.
          * 
@@ -142,7 +142,7 @@ namespace biz.ritter.javapi.lang
             return (declaringClass == null) ? "<unknown class>" : declaringClass;
         }
 
-        /**
+         /*
          * Returns the name of the Java source file containing class belonging to
          * this {@code StackTraceElement}.
          * 
@@ -153,7 +153,7 @@ namespace biz.ritter.javapi.lang
             return fileName;
         }
 
-        /**
+         /*
          * Returns the line number in the source for the class belonging to this
          * {@code StackTraceElement}.
          * 
@@ -164,7 +164,7 @@ namespace biz.ritter.javapi.lang
             return lineNumber;
         }
 
-        /**
+         /*
          * Returns the name of the method belonging to this {@code
          * StackTraceElement}.
          * 
@@ -188,7 +188,7 @@ namespace biz.ritter.javapi.lang
             return methodName.GetHashCode() ^ declaringClass.GetHashCode();
         }
 
-        /**
+         /*
          * Indicates if the method name returned by {@link #getMethodName()} is
          * implemented as a native method.
          * 

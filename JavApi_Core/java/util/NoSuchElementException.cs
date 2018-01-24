@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util
 {
-    /**
+     /*
      * A {@code NoSuchElementException} is thrown when trying to retrieve an element
      * past the end of an Enumeration, or the first or last element from an empty
      * Vector.
@@ -30,14 +30,14 @@ namespace biz.ritter.javapi.util
 
         private static readonly long serialVersionUID = 6769829250639411880L;
 
-        /**
+         /*
          * Constructs a new {@code NoSuchElementException} with the current stack
          * trace filled in.
          */
         public NoSuchElementException() : base() {
         }
 
-        /**
+         /*
          * Constructs a new {@code NoSuchElementException} with the current stack
          * trace and message filled in.
          * 

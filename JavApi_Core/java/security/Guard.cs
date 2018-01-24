@@ -16,13 +16,13 @@ using System;
 namespace biz.ritter.javapi.security
 {
 
-    /**
+     /*
      * {@code Guard} implementors protect access to other objects.
      */
     public interface Guard
     {
 
-        /**
+         /*
          * Checks whether access to the specified {@code Object} should be granted.
          * This method returns silently if access is granted, otherwise a {@code
          * SecurityException} is thrown.

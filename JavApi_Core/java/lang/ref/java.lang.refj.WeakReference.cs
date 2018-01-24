@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang.refj
 {
 
-    /**
+     /*
      * Implements a weak reference, which is the middle of the three types of
      * references. Once the garbage collector decides that an object {@code obj} is
      * is <a href="package.html#definitions">weakly-reachable</a>, the following
@@ -74,7 +74,7 @@ namespace biz.ritter.javapi.lang.refj
      */
     public class WeakReference<T> : Reference<T> {
 
-        /**
+         /*
          * Constructs a new weak reference to the given referent. The newly created
          * reference is not registered with any reference queue.
          *
@@ -84,7 +84,7 @@ namespace biz.ritter.javapi.lang.refj
             initReference(r);
         }
 
-        /**
+         /*
          * Constructs a new weak reference to the given referent. The newly created
          * reference is registered with the given reference queue.
          *

@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util
 {
-    /**
+     /*
      * {@code Stack} is a Last-In/First-Out(LIFO) data structure which represents a
      * stack of objects. It enables users to pop to and push from the stack,
      * including null objects. There is no limit to the size of the stack.
@@ -28,13 +28,13 @@ namespace biz.ritter.javapi.util
 
         private static readonly long serialVersionUID = 1224463164541339165L;
 
-        /**
+         /*
          * Constructs a stack with the default size of {@code Vector}.
          */
         public Stack() :base() {
         }
 
-        /**
+         /*
          * Returns whether the stack is empty or not.
          * 
          * @return {@code true} if the stack is empty, {@code false} otherwise.
@@ -43,7 +43,7 @@ namespace biz.ritter.javapi.util
             return isEmpty();
         }
 
-        /**
+         /*
          * Returns the element at the top of the stack without removing it.
          * 
          * @return the element at the top of the stack.
@@ -61,7 +61,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns the element at the top of the stack and removes it.
          * 
          * @return the element at the top of the stack.
@@ -83,7 +83,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Pushes the specified object onto the top of the stack.
          * 
          * @param object
@@ -97,7 +97,7 @@ namespace biz.ritter.javapi.util
             return obj;
         }
 
-        /**
+         /*
          * Returns the index of the first occurrence of the object, starting from
          * the top of the stack.
          * 

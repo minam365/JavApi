@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.awt.image
 {
-    /**
+     /*
      * @author Igor V. Stolyarov
      */
 

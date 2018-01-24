@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang
 {
-    /**
+     /*
      * Thrown when the virtual machine notices that it has gotten into an undefined
      * state.
      */
@@ -25,14 +25,14 @@ namespace biz.ritter.javapi.lang
 
         private static readonly long serialVersionUID = -9062593416125562365L;
 
-        /**
+         /*
          * Constructs a new {@code InternalError} that includes the current stack
          * trace.
          */
         public InternalError() : base (){
         }
 
-        /**
+         /*
          * Constructs a new {@code InternalError} with the current stack trace and
          * the specified detail message.
          * 

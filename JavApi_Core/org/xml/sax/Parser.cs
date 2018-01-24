@@ -8,7 +8,7 @@ using java = biz.ritter.javapi;
 namespace org.xml.sax
 {
 
-    /**
+     /*
      * Basic interface for SAX (Simple API for XML) parsers.
      *
      * <blockquote>
@@ -51,7 +51,7 @@ namespace org.xml.sax
     public interface Parser
     {
 
-        /**
+         /*
          * Allow an application to request a locale for errors and warnings.
          *
          * <p>SAX parsers are not required to provide localisation for errors
@@ -69,7 +69,7 @@ namespace org.xml.sax
         void setLocale(java.util.Locale locale);//	throws SAXException;
 
 
-        /**
+         /*
          * Allow an application to register a custom entity resolver.
          *
          * <p>If the application does not register an entity resolver, the
@@ -88,7 +88,7 @@ namespace org.xml.sax
         void setEntityResolver(EntityResolver resolver);
 
 
-        /**
+         /*
          * Allow an application to register a DTD event handler.
          *
          * <p>If the application does not register a DTD handler, all DTD
@@ -107,7 +107,7 @@ namespace org.xml.sax
         void setDTDHandler(DTDHandler handler);
 
 
-        /**
+         /*
          * Allow an application to register a document event handler.
          *
          * <p>If the application does not register a document handler, all
@@ -126,7 +126,7 @@ namespace org.xml.sax
         void setDocumentHandler(DocumentHandler handler);
 
 
-        /**
+         /*
          * Allow an application to register an error event handler.
          *
          * <p>If the application does not register an error event handler,
@@ -146,7 +146,7 @@ namespace org.xml.sax
         void setErrorHandler(ErrorHandler handler);
 
 
-        /**
+         /*
          * Parse an XML document.
          *
          * <p>The application can use this method to instruct the SAX parser
@@ -176,7 +176,7 @@ namespace org.xml.sax
         void parse(InputSource source);//	throws SAXException, IOException;
 
 
-        /**
+         /*
          * Parse an XML document from a system identifier (URI).
          *
          * <p>This method is a shortcut for the common case of reading a

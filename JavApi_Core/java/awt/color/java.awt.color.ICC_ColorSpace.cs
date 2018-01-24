@@ -17,7 +17,7 @@ using org.apache.harmony.awt.gl.color;
 
 namespace biz.ritter.javapi.awt.color
 {
-    /**
+     /*
      * @author Oleg V. Khaschansky
      */
 
@@ -27,7 +27,7 @@ namespace biz.ritter.javapi.awt.color
     {
         private static readonly long serialVersionUID = 3455889114070431483L;
 
-        /**
+         /*
          * According to ICC specification (from http://www.color.org)
          * "For the CIEXYZ encoding, each component (X, Y, and Z)
          * is encoded as a u1Fixed15Number".

@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.nio.charset
 {
 
-    /**
+     /*
      * A {@code CoderMalfunctionError} is thrown when the encoder/decoder is
      * malfunctioning.
      */
@@ -30,7 +30,7 @@ namespace biz.ritter.javapi.nio.charset
          */
         private static readonly long serialVersionUID = -1151412348057794301L;
 
-        /**
+         /*
          * Constructs a new {@code CoderMalfunctionError}.
          * 
          * @param ex

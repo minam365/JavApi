@@ -32,7 +32,7 @@ namespace org.apache.harmony.awt.gl.color
         // For scaling rasters, false if transfer type is double or float
         bool isTTypeIntegral = false;
 
-        /**
+         /*
          * Use this method only for double of float transfer types.
          * Extracts scaling data from the color space signature
          * and other tags, stored in the profile
@@ -90,7 +90,7 @@ namespace org.apache.harmony.awt.gl.color
                     (maxValues[i] - channelMinValues[i]) / MAX_SHORT;
             }
         }
-        /**
+         /*
          * Extracts scaling data from the color space
          * @param cs - color space
          */
@@ -114,7 +114,7 @@ namespace org.apache.harmony.awt.gl.color
             }
         }
 
-        /**
+         /*
         * Scales one pixel and puts obtained values to the chanData
         * @param pixelData - input pixel
         * @param chanData - output buffer
@@ -129,7 +129,7 @@ namespace org.apache.harmony.awt.gl.color
                             channelMulipliers[chan] + 0.5f);
             }
         }
-        /**
+         /*
          * Unscales one pixel and puts obtained values to the pixelData
          * @param pixelData - output pixel
          * @param chanData - input buffer

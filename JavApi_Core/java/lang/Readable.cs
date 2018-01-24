@@ -18,13 +18,13 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang
 {
-    /**
+     /*
      * Represents a sequence of characters that can be incrementally read (copied)
      * into a {@link CharBuffer}.
      */
     public interface Readable {
 
-        /**
+         /*
          * Reads characters into the specified {@code CharBuffer}. The maximum
          * number of characters read is {@code CharBuffer.remaining()}.
          * 

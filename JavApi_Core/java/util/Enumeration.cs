@@ -15,7 +15,7 @@
 
 namespace biz.ritter.javapi.util
 {
-    /**
+     /*
      * An Enumeration is used to sequence over a collection of objects.
      * <p>
      * Preferably an {@link Iterator} should be used. {@code Iterator} replaces the
@@ -28,7 +28,7 @@ namespace biz.ritter.javapi.util
      */
     public interface Enumeration<E> {
 
-        /**
+         /*
          * Returns whether this {@code Enumeration} has more elements.
          * 
          * @return {@code true} if there are more elements, {@code false} otherwise.
@@ -36,7 +36,7 @@ namespace biz.ritter.javapi.util
          */
         bool hasMoreElements();
 
-        /**
+         /*
          * Returns the next element in this {@code Enumeration}.
          * 
          * @return the next element..

@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util
 {
-    /**
+     /*
      * The {@code StringTokenizer} class allows an application to break a string
      * into tokens by performing code point comparison. The {@code StringTokenizer}
      * methods do not distinguish among identifiers, numbers, and quoted strings,
@@ -155,7 +155,7 @@ namespace biz.ritter.javapi.util
                 throw new java.lang.NullPointerException();
         }
 
-        /**
+         /*
          * Returns the number of unprocessed tokens remaining in the string.
          * 
          * @return number of tokens that can be retreived before an {@code
@@ -181,7 +181,7 @@ namespace biz.ritter.javapi.util
             return count;
         }
 
-        /**
+         /*
          * Returns {@code true} if unprocessed tokens remain. This method is
          * implemented in order to satisfy the {@code Enumeration} interface.
          * 
@@ -191,7 +191,7 @@ namespace biz.ritter.javapi.util
             return hasMoreTokens();
         }
 
-        /**
+         /*
          * Returns {@code true} if unprocessed tokens remain.
          * 
          * @return {@code true} if unprocessed tokens remain.
@@ -214,7 +214,7 @@ namespace biz.ritter.javapi.util
             return false;
         }
 
-        /**
+         /*
          * Returns the next token in the string as an {@code Object}. This method is
          * implemented in order to satisfy the {@code Enumeration} interface.
          * 
@@ -226,7 +226,7 @@ namespace biz.ritter.javapi.util
             return nextToken();
         }
 
-        /**
+         /*
          * Returns the next token in the string as a {@code String}.
          * 
          * @return next token in the string as a {@code String}.
@@ -263,7 +263,7 @@ namespace biz.ritter.javapi.util
             throw new NoSuchElementException();
         }
 
-        /**
+         /*
          * Returns the next token in the string as a {@code String}. The delimiters
          * used are changed to the specified delimiters.
          * 

@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang.reflect{
 
-/**
+ /*
  * This class represents a field. Information about the field can be accessed,
  * and the field's value can be accessed dynamically.
  */
@@ -32,7 +32,7 @@ public sealed class Field : AccessibleObject, Member {
      * This class must be implemented by the VM vendor.
      */
 
-    /**
+     /*
      * Prevent this class from being instantiated
      */
     private Field(){
@@ -51,7 +51,7 @@ public sealed class Field : AccessibleObject, Member {
      */
     //native String getSignature();
 
-    /**
+     /*
      * Indicates whether or not this field is synthetic.
      *
      * @return {@code true} if this field is synthetic, {@code false} otherwise
@@ -60,7 +60,7 @@ public sealed class Field : AccessibleObject, Member {
         return false;
     }
 
-    /**
+     /*
      * Returns the string representation of this field, including the field's
      * generic type.
      *
@@ -71,7 +71,7 @@ public sealed class Field : AccessibleObject, Member {
         return null;
     }
 
-    /**
+     /*
      * Indicates whether or not this field is an enumeration constant.
      *
      * @return {@code true} if this field is an enumeration constant, {@code
@@ -82,7 +82,7 @@ public sealed class Field : AccessibleObject, Member {
         return false;
     }
 
-    /**
+     /*
      * Returns the generic type of this field.
      *
      * @return the generic type
@@ -99,7 +99,7 @@ public sealed class Field : AccessibleObject, Member {
         return null;
     }
 
-    /**
+     /*
      * Indicates whether or not the specified {@code object} is equal to this
      * field. To be equal, the specified object must be an instance of
      * {@code Field} with the same declaring class, type and name as this field.
@@ -114,7 +114,7 @@ public sealed class Field : AccessibleObject, Member {
 		return false;
 	}
 
-    /**
+     /*
      * Returns the value of the field in the specified object. This reproduces
      * the effect of {@code object.fieldName}
      * <p/>
@@ -147,7 +147,7 @@ public sealed class Field : AccessibleObject, Member {
 			return resultObj;
 		}
 
-    /**
+     /*
      * Returns the value of the field in the specified object as a {@code
      * boolean}. This reproduces the effect of {@code object.fieldName}
      * <p>
@@ -181,7 +181,7 @@ public sealed class Field : AccessibleObject, Member {
 			throw new IllegalArgumentException ("Attempt to get int field " + objectJ.getClass().getName()+"."+this.getName() + " with illegal data type conversion to " + "boolean");
 		}
 
-    /**
+     /*
      * Returns the value of the field in the specified object as a {@code byte}.
      * This reproduces the effect of {@code object.fieldName}
      * <p/>
@@ -215,7 +215,7 @@ public sealed class Field : AccessibleObject, Member {
 			throw new IllegalArgumentException ("Attempt to get int field " + objectJ.getClass().getName()+"."+this.getName() + " with illegal data type conversion to " + "byte");
 		}
 
-    /**
+     /*
      * Returns the value of the field in the specified object as a {@code char}.
      * This reproduces the effect of {@code object.fieldName}
      * <p/>
@@ -249,7 +249,7 @@ public sealed class Field : AccessibleObject, Member {
 			throw new IllegalArgumentException ("Attempt to get int field " + objectJ.getClass().getName()+"."+this.getName() + " with illegal data type conversion to " + "char");
 		}
 
-    /**
+     /*
      * Returns the class that declares this field.
      *
      * @return the declaring class
@@ -258,7 +258,7 @@ public sealed class Field : AccessibleObject, Member {
 		return null;
 	}
 
-    /**
+     /*
      * Returns the value of the field in the specified object as a {@code
      * double}. This reproduces the effect of {@code object.fieldName}
      * <p>
@@ -291,7 +291,7 @@ public sealed class Field : AccessibleObject, Member {
 				return (((java.lang.Double)resultObj).doubleValue());
 			throw new IllegalArgumentException ("Attempt to get int field " + objectJ.getClass().getName()+"."+this.getName() + " with illegal data type conversion to " + "double");
 		}
-    /**
+     /*
      * Returns the value of the field in the specified object as a {@code float}.
      * This reproduces the effect of {@code object.fieldName}
      * <p>
@@ -325,7 +325,7 @@ public sealed class Field : AccessibleObject, Member {
 			throw new IllegalArgumentException ("Attempt to get int field " + objectJ.getClass().getName()+"."+this.getName() + " with illegal data type conversion to " + "float");
 		}
 
-    /**
+     /*
      * Returns the value of the field in the specified object as an {@code int}.
      * This reproduces the effect of {@code object.fieldName}
      * <p>
@@ -359,7 +359,7 @@ public sealed class Field : AccessibleObject, Member {
 			throw new IllegalArgumentException ("Attempt to get int field " + objectJ.getClass().getName()+"."+this.getName() + " with illegal data type conversion to " + "int");
 		}
 
-    /**
+     /*
      * Returns the value of the field in the specified object as a {@code long}.
      * This reproduces the effect of {@code object.fieldName}
      * <p>
@@ -393,7 +393,7 @@ public sealed class Field : AccessibleObject, Member {
 			throw new IllegalArgumentException ("Attempt to get int field " + objectJ.getClass().getName()+"."+this.getName() + " with illegal data type conversion to " + "long");
 		}
 
-    /**
+     /*
      * Returns the modifiers for this field. The {@link Modifier} class should
      * be used to decode the result.
      *
@@ -404,7 +404,7 @@ public sealed class Field : AccessibleObject, Member {
 			throw new UnsupportedOperationException ("Not yet implemented");
 		}
 
-    /**
+     /*
      * Returns the name of this field.
      *
      * @return the name of this field
@@ -413,7 +413,7 @@ public sealed class Field : AccessibleObject, Member {
 		return this.name;
 	}
 
-    /**
+     /*
      * Returns the value of the field in the specified object as a {@code short}
      * . This reproduces the effect of {@code object.fieldName}
      * <p>
@@ -447,7 +447,7 @@ public sealed class Field : AccessibleObject, Member {
 			throw new IllegalArgumentException ("Attempt to get int field " + objectJ.getClass().getName()+"."+this.getName() + " with illegal data type conversion to " + "short");
 		}
 
-    /**
+     /*
      * Return the {@link Class} associated with the type of this field.
      *
      * @return the type of this field
@@ -456,7 +456,7 @@ public sealed class Field : AccessibleObject, Member {
 		return null;
 	}
 
-    /**
+     /*
      * Returns an integer hash code for this field. Objects which are equal
      * return the same value for this method.
      * <p>
@@ -472,7 +472,7 @@ public sealed class Field : AccessibleObject, Member {
 		return 0;
 	}
 
-    /**
+     /*
      * Sets the value of the field in the specified object to the value. This
      * reproduces the effect of {@code object.fieldName = value}
      * <p>
@@ -512,7 +512,7 @@ public sealed class Field : AccessibleObject, Member {
 			}
 		}
 
-    /**
+     /*
      * Sets the value of the field in the specified object to the {@code
      * boolean} value. This reproduces the effect of {@code object.fieldName =
      * value}
@@ -551,7 +551,7 @@ public sealed class Field : AccessibleObject, Member {
 			}
 		}
 
-    /**
+     /*
      * Sets the value of the field in the specified object to the {@code byte}
      * value. This reproduces the effect of {@code object.fieldName = value}
      * <p>
@@ -589,7 +589,7 @@ public sealed class Field : AccessibleObject, Member {
 			}
 		}
 
-    /**
+     /*
      * Sets the value of the field in the specified object to the {@code char}
      * value. This reproduces the effect of {@code object.fieldName = value}
      * <p>
@@ -627,7 +627,7 @@ public sealed class Field : AccessibleObject, Member {
 			}
 		}
 
-    /**
+     /*
      * Sets the value of the field in the specified object to the {@code double}
      * value. This reproduces the effect of {@code object.fieldName = value}
      * <p>
@@ -665,7 +665,7 @@ public sealed class Field : AccessibleObject, Member {
 			}
 		}
 
-    /**
+     /*
      * Sets the value of the field in the specified object to the {@code float}
      * value. This reproduces the effect of {@code object.fieldName = value}
      * <p>
@@ -703,7 +703,7 @@ public sealed class Field : AccessibleObject, Member {
 			}
 		}
 
-    /**
+     /*
      * Set the value of the field in the specified object to the {@code int}
      * value. This reproduces the effect of {@code object.fieldName = value}
      * <p>
@@ -741,7 +741,7 @@ public sealed class Field : AccessibleObject, Member {
 			}
 		}
 
-    /**
+     /*
      * Sets the value of the field in the specified object to the {@code long}
      * value. This reproduces the effect of {@code object.fieldName = value}
      * <p>
@@ -779,7 +779,7 @@ public sealed class Field : AccessibleObject, Member {
 			}
 		}
 
-    /**
+     /*
      * Sets the value of the field in the specified object to the {@code short}
      * value. This reproduces the effect of {@code object.fieldName = value}
      * <p>
@@ -817,7 +817,7 @@ public sealed class Field : AccessibleObject, Member {
 			}
 		}
 
-    /**
+     /*
      * Returns a string containing a concise, human-readable description of this
      * field.
      * <p>

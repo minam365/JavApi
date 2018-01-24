@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.math
 {
 
-    /**
+     /*
      * Static library that provides all the <b>bit level</b> operations for
      * {@link BigInteger}. The operations are:
      * <ul type="circle">
@@ -35,10 +35,10 @@ namespace biz.ritter.javapi.math
      */
     class BitLevel {
 
-        /** Just to denote that this class can't be instantiated. */
+         /* Just to denote that this class can't be instantiated. */
         private BitLevel() {}
 
-        /** @see BigInteger#bitLength() */
+         /* @see BigInteger#bitLength() */
         internal static int bitLength(BigInteger val) {
             if (val.sign == 0) {
                 return 0;
@@ -58,7 +58,7 @@ namespace biz.ritter.javapi.math
             return bLength;
         }
 
-        /** @see BigInteger#bitCount() */
+         /* @see BigInteger#bitCount() */
         internal static int bitCount(BigInteger val) {
             int bCount = 0;
 
@@ -83,7 +83,7 @@ namespace biz.ritter.javapi.math
             return bCount;
         }
 
-        /**
+         /*
          * Performs a fast bit testing for positive numbers. The bit to to be tested
          * must be in the range {@code [0, val.bitLength()-1]}
          */
@@ -92,7 +92,7 @@ namespace biz.ritter.javapi.math
             return ((val.digits[n >> 5] & (1 << (n & 31))) != 0);
         }
 
-        /**
+         /*
          * Check if there are 1s in the lowest bits of this BigInteger
          * 
          * @param numberOfBits the number of the lowest bits to check
@@ -109,7 +109,7 @@ namespace biz.ritter.javapi.math
             return ((i != intCount) || (digits[i] << (32 - bitCount) != 0));
         }
 
-        /** @see BigInteger#shiftLeft(int) */
+         /* @see BigInteger#shiftLeft(int) */
         internal static BigInteger shiftLeft(BigInteger source, int count) {
             int intCount = count >> 5;
             count &= 31; // %= 32
@@ -123,7 +123,7 @@ namespace biz.ritter.javapi.math
             return result;
         }
 
-        /**
+         /*
          * Performs {@code val &lt;&lt;= count}.
          */
         // val should have enough place (and one digit more)
@@ -138,7 +138,7 @@ namespace biz.ritter.javapi.math
             val.unCache();
         }
     
-        /**
+         /*
          * Abstractly shifts left an array of integers in little endian (i.e. shift
          * it right). Total shift distance in bits is intCount * 32 + count
          * 
@@ -166,7 +166,7 @@ namespace biz.ritter.javapi.math
             }
         }
 
-        /**
+         /*
          * Shifts the source digits left one bit, creating a value whose magnitude
          * is doubled.
          *
@@ -200,7 +200,7 @@ namespace biz.ritter.javapi.math
             return result;
         }
 
-        /** @see BigInteger#shiftRight(int) */
+         /* @see BigInteger#shiftRight(int) */
         internal static BigInteger shiftRight(BigInteger source, int count) {
             int intCount = count >> 5; // count of integers
             count &= 31; // count of remaining bits
@@ -235,7 +235,7 @@ namespace biz.ritter.javapi.math
             return result;
         }
 
-        /**
+         /*
          * Performs {@code val >>= count} where {@code val} is a positive number.
          */
         internal static void inplaceShiftRight(BigInteger val, int count) {
@@ -261,7 +261,7 @@ namespace biz.ritter.javapi.math
             val.unCache();
         }
 
-        /**
+         /*
          * Shifts right an array of integers. Total shift distance in bits is
          * intCount * 32 + count.
          * 
@@ -302,7 +302,7 @@ namespace biz.ritter.javapi.math
         }
 
     
-        /**
+         /*
          * Performs a flipBit on the BigInteger, returning a BigInteger with the the
          * specified bit flipped.
          * @param intCount: the index of the element of the digits array where the operation will be performed

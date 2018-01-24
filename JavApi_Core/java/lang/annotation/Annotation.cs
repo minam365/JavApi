@@ -28,7 +28,7 @@ namespace biz.ritter.javapi.lang.annotation
 		System.String toString ();
 	}
 
-	/**
+	 /*
      * Defines the interface implemented by all annotations. Note that the interface
      * itself is <i>not</i> an annotation, and neither is an interface that simply
      * extends this one. Only the compiler is able to create proper annotation
@@ -39,7 +39,7 @@ namespace biz.ritter.javapi.lang.annotation
      */
 	public abstract class AbstractAnnotation : System.Attribute, Annotation
 	{
-		/**
+		 /*
          * Returns the type of this annotation.
          *
          * @return A {@code Class} instance representing the annotation type.
@@ -49,7 +49,7 @@ namespace biz.ritter.javapi.lang.annotation
 			return this.GetType ();
 		}
 
-		/**
+		 /*
          * Determines whether or not this annotation is equivalent to the annotation
          * passed. This is determined according to the following rules:
          * 
@@ -95,7 +95,7 @@ namespace biz.ritter.javapi.lang.annotation
 			return this.Equals (obj);
 		}
 
-		/**
+		 /*
          * Returns the hash code of this annotation. The hash code is determined
          * according to the following rules:
          * 
@@ -133,7 +133,7 @@ namespace biz.ritter.javapi.lang.annotation
 			return this.GetHashCode ();
 		}
 
-		/**
+		 /*
          * Returns a {@code String} representation of this annotation. It is not
          * strictly defined what the representation has to look like, but it usually
          * consists of the name of the annotation, preceded by a "@". If the

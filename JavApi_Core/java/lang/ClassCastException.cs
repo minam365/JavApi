@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang
 {
 
-    /**
+     /*
      * Thrown when a program attempts to cast a an object to a type with which it is
      * not compatible.
      */
@@ -27,14 +27,14 @@ namespace biz.ritter.javapi.lang
     public class ClassCastException : RuntimeException {
         private static readonly long serialVersionUID = -9223365651070458532L;
 
-        /**
+         /*
          * Constructs a new {@code ClassCastException} that includes the current
          * stack trace.
          */
         public ClassCastException() : base () {
         }
 
-        /**
+         /*
          * Constructs a new {@code ClassCastException} with the current stack trace
          * and the specified detail message.
          * 
@@ -44,7 +44,7 @@ namespace biz.ritter.javapi.lang
         public ClassCastException(String detailMessage) : base (detailMessage) {
         }
 
-        /**
+         /*
          * Constructs a new {@code ClassCastException} with the current stack trace
          * and a detail message based on the source and target class.
          * 

@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.nio
 {
 
-    /**
+     /*
      * A {@code ReadOnlyBufferException} is thrown when some write operation is
      * called on a read-only buffer.
      */
@@ -25,7 +25,7 @@ namespace biz.ritter.javapi.nio
 
         private static readonly long serialVersionUID = -1210063976496234090L;
 
-        /**
+         /*
          * Constructs a {@code ReadOnlyBufferException}.
          */
         public ReadOnlyBufferException() : base() {

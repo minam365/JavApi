@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.security
 {
 
-/**
+ /*
  * Specific {@code PermissionCollection} for storing {@code BasicPermissions} of
  * arbitrary type.
  * 
@@ -44,7 +44,7 @@ internal sealed class BasicPermissionCollection : PermissionCollection {
 
     private java.lang.Class permClass;
 
-    /**
+     /*
      * Adds a permission to the collection. The first added permission must be a
      * subclass of BasicPermission, next permissions must be of the same class
      * as the first one.
@@ -84,7 +84,7 @@ internal sealed class BasicPermissionCollection : PermissionCollection {
         allEnabled = allEnabled || (name.length() == 1 && '*' == name.charAt(0));
     }
 
-    /**
+     /*
      * Returns enumeration of contained elements.
      */
     
@@ -92,7 +92,7 @@ internal sealed class BasicPermissionCollection : PermissionCollection {
         return java.util.Collections<Permission>.enumeration(items.values());
     }
 
-    /**
+     /*
      * Indicates whether the argument permission is implied by the receiver.
      * 
      * @return boolean {@code true} if the argument permission is implied by the

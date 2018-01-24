@@ -3,7 +3,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.awt.image
 {
-    /**
+     /*
      * @author Igor V. Stolyarov
      */
     public sealed class DataBufferShort : DataBuffer

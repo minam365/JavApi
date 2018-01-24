@@ -20,7 +20,7 @@ using biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * A {@code MissingFormatArgumentException} will be thrown if there is no
      * corresponding argument with the specified conversion or an argument index
      * that refers to a missing argument.
@@ -33,7 +33,7 @@ namespace biz.ritter.javapi.util
 
         private String s;
 
-        /**
+         /*
          * Constructs a new {@code MissingFormatArgumentException} with the
          * specified conversion that lacks the argument.
          * 
@@ -47,7 +47,7 @@ namespace biz.ritter.javapi.util
             this.s = s;
         }
 
-        /**
+         /*
          * Returns the conversion associated with the exception.
          * 
          * @return the conversion associated with the exception.
@@ -56,7 +56,7 @@ namespace biz.ritter.javapi.util
             return s;
         }
 
-        /**
+         /*
          * Returns the message of the exception.
          * 
          * @return the message of the exception.

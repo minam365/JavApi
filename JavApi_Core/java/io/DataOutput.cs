@@ -21,7 +21,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.io
 {
 	
-	/**
+	 /*
 	 * Defines an interface for classes that are able to write typed data to some
 	 * target. Typically, this data can be read in by a class which implements
 	 * DataInput. Types that can be written include byte, 16-bit short, 32-bit int,
@@ -33,7 +33,7 @@ namespace biz.ritter.javapi.io
 	 */
 	public interface DataOutput {
 	
-	    /**
+	     /*
 	     * Writes the entire contents of the byte array {@code buffer} to this
 	     * stream.
 	     * 
@@ -46,7 +46,7 @@ namespace biz.ritter.javapi.io
 	     */
 	    void write(byte[] buffer);
 	
-	    /**
+	     /*
 	     * Writes {@code count} bytes from the byte array {@code buffer} starting at
 	     * offset {@code index}.
 	     * 
@@ -63,7 +63,7 @@ namespace biz.ritter.javapi.io
 	     */
 	    void write(byte[] buffer, int offset, int count);
 	
-	    /**
+	     /*
 	     * Writes the specified 8-bit byte.
 	     * 
 	     * @param oneByte
@@ -74,7 +74,7 @@ namespace biz.ritter.javapi.io
 	     */
 	    void write(int oneByte);
 	
-	    /**
+	     /*
 	     * Writes the specified boolean.
 	     * 
 	     * @param val
@@ -85,7 +85,7 @@ namespace biz.ritter.javapi.io
 	     */
 	    void writeBoolean(bool val);
 	
-	    /**
+	     /*
 	     * Writes the specified 8-bit byte.
 	     * 
 	     * @param val
@@ -97,7 +97,7 @@ namespace biz.ritter.javapi.io
 	     */
 	    void writeByte(int val);
 	
-	    /**
+	     /*
 	     * Writes the low order 8-bit bytes from the specified string.
 	     * 
 	     * @param str
@@ -109,7 +109,7 @@ namespace biz.ritter.javapi.io
 	     */
 	    void writeBytes(String str);
 	
-	    /**
+	     /*
 	     * Writes the specified 16-bit character. Only the two least significant
 	     * bytes of the integer {@code oneByte} are written, with the higher one
 	     * written first. This represents the Unicode value of the char.
@@ -122,7 +122,7 @@ namespace biz.ritter.javapi.io
 	     */
 	    void writeChar(int val);
 	
-	    /**
+	     /*
 	     * Writes the 16-bit characters contained in {@code str}.
 	     * 
 	     * @param str
@@ -133,7 +133,7 @@ namespace biz.ritter.javapi.io
 	     */
 	    void writeChars(String str);
 	
-	    /**
+	     /*
 	     * Writes the specified 64-bit double. The resulting output is the eight
 	     * bytes returned by {@link Double#doubleToLongBits(double)}.
 	     * 
@@ -145,7 +145,7 @@ namespace biz.ritter.javapi.io
 	     */
 	    void writeDouble(double val);
 	
-	    /**
+	     /*
 	     * Writes the specified 32-bit float. The resulting output is the four bytes
 	     * returned by {@link Float#floatToIntBits(float)}.
 	     * 
@@ -157,7 +157,7 @@ namespace biz.ritter.javapi.io
 	     */
 	    void writeFloat(float val);
 	
-	    /**
+	     /*
 	     * Writes the specified 32-bit int. The resulting output is the four bytes,
 	     * highest order first, of {@code val}.
 	     * 
@@ -169,7 +169,7 @@ namespace biz.ritter.javapi.io
 	     */
 	    void writeInt(int val);
 	
-	    /**
+	     /*
 	     * Writes the specified 64-bit long. The resulting output is the eight
 	     * bytes, highest order first, of {@code val}.
 	     * 
@@ -181,7 +181,7 @@ namespace biz.ritter.javapi.io
 	     */
 	    void writeLong(long val);
 	
-	    /**
+	     /*
 	     * Writes the specified 16-bit short. Only the lower two bytes of {@code
 	     * val} are written with the higher one written first.
 	     * 
@@ -194,7 +194,7 @@ namespace biz.ritter.javapi.io
 	     */
 	    void writeShort(int val);
 	
-	    /**
+	     /*
 	     * Writes the specified string encoded in {@link DataInput modified UTF-8}.
 	     * 
 	     * @param str

@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-/**
+ /*
  * An {@code InvalidPropertiesFormatException} is thrown if loading the XML
  * document defining the properties does not follow the {@code Properties}
  * specification.
@@ -32,7 +32,7 @@ public class InvalidPropertiesFormatException : java.io.IOException {
     
     private const long serialVersionUID = 7763056076009360219L;
 
-    /**
+     /*
      * Constructs a new {@code InvalidPropertiesFormatException} with the
      * current stack trace and message filled in.
      * 
@@ -42,7 +42,7 @@ public class InvalidPropertiesFormatException : java.io.IOException {
 		public InvalidPropertiesFormatException(String m) :base(m){
     }
 
-    /**
+     /*
      * Constructs a new {@code InvalidPropertiesFormatException} with the cause
      * for the Exception.
      * 

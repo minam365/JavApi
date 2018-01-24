@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * An AbstractSet is an abstract implementation of the Set interface. This
      * implementation does not support adding. A subclass must implement the
      * abstract methods iterator() and size().
@@ -28,13 +28,13 @@ namespace biz.ritter.javapi.util
      */
     public abstract class AbstractSet<E> : AbstractCollection<E>, Set<E> {
 
-        /**
+         /*
          * Constructs a new instance of this AbstractSet.
          */
         protected AbstractSet() : base (){
         }
 
-        /**
+         /*
          * Compares the specified object to this Set and returns true if they are
          * equal. The object must be an instance of Set and contain the same
          * objects.
@@ -63,7 +63,7 @@ namespace biz.ritter.javapi.util
             return false;
         }
 
-        /**
+         /*
          * Returns the hash code for this set. Two set which are equal must return
          * the same value. This implementation calculates the hash code by adding
          * each element's hash code.
@@ -81,7 +81,7 @@ namespace biz.ritter.javapi.util
             return result;
         }
 
-        /**
+         /*
          * Removes all occurrences in this collection which are contained in the
          * specified collection.
          * 
@@ -110,7 +110,7 @@ namespace biz.ritter.javapi.util
             }
             return result;
         }
-        /**
+         /*
          * Searches this set for all objects in the specified collection.
          * 
          * @param collection
@@ -128,7 +128,7 @@ namespace biz.ritter.javapi.util
             return true;
         }
 
-        /**
+         /*
          * Removes all objects from this set that are not contained in the specified
          * collection.
          * 

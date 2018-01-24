@@ -19,7 +19,7 @@
 
 namespace biz.ritter.javapix.xml.validation
 {
-	/**
+	 /*
  * Immutable in-memory representation of grammar.
  * 
  * <p/>
@@ -61,7 +61,7 @@ namespace biz.ritter.javapix.xml.validation
  */
 	public abstract class Schema
 	{
-		/**
+		 /*
      * Constructor for the derived class.
      * 
      * <p/>
@@ -71,7 +71,7 @@ namespace biz.ritter.javapix.xml.validation
 		{
 		}
 
-		/**
+		 /*
      * Creates a new {@link Validator} for this {@link Schema}.
      * 
      * <p/>
@@ -83,7 +83,7 @@ namespace biz.ritter.javapix.xml.validation
      */
 		public abstract Validator newValidator ();
 
-		/**
+		 /*
      * Creates a new {@link ValidatorHandler} for this {@link Schema}.
      * 
      * @return

@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.io
 {
 
-/**
+ /*
  * The top level class for character conversion exceptions.
  */
 	[Serializable]
@@ -25,7 +25,7 @@ public class CharConversionException : IOException {
 
     private const long serialVersionUID = -8680016352018427031L;
 
-    /**
+     /*
      * Constructs a new {@code CharConversionException} with its stack trace
      * filled in.
      */
@@ -33,7 +33,7 @@ public class CharConversionException : IOException {
         
     }
 
-    /**
+     /*
      * Constructs a new {@code CharConversionException} with its stack trace and
      * detail message filled in.
      * 

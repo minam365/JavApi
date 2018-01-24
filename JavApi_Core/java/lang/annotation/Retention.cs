@@ -17,7 +17,7 @@
 
 namespace biz.ritter.javapi.lang.annotation
 {
-	/**
+	 /*
  * Defines a meta-annotation for determining the scope of retention for an
  * annotation. If the retention annotation is not set {@code
  * RetentionPolicy.CLASS} is used as default retention.
@@ -37,7 +37,7 @@ namespace biz.ritter.javapi.lang.annotation
 			this.policy = newPolicy;
 		}
 
-		/**
+		 /*
      * Returns the retention policy for the annotation.
      * 
      * @return a retention policy as defined in {@code RetentionPolicy}

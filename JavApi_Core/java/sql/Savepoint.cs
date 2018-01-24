@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.sql
 {
 
-    /**
+     /*
      * A savepoint is an instant during the current transaction that can be utilized
      * by a rollback via the {@link Connection#rollback} command. Rolling back to a
      * particular savepoint means that all changes that occurred after that
@@ -26,7 +26,7 @@ namespace biz.ritter.javapi.sql
     public interface Savepoint
     {
 
-        /**
+         /*
          * Returns the constructed ID for this savepoint.
          * 
          * @return the ID for this savepoint.
@@ -35,7 +35,7 @@ namespace biz.ritter.javapi.sql
          */
         int getSavepointId();// throws SQLException;
 
-        /**
+         /*
          * Returns the name for this savepoint.
          * 
          * @return the name of this savepoint.

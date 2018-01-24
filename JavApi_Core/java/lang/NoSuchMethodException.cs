@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang
 {
 
-    /**
+     /*
      * Thrown when the virtual machine notices that a program tries to reference,
      * on a class or object, a method that does not exist.
      */
@@ -28,7 +28,7 @@ namespace biz.ritter.javapi.lang
 
         private readonly static long serialVersionUID = 5034388446362600923L;
 
-        /**
+         /*
          * Constructs a new {@code NoSuchMethodException} that includes the current
          * stack trace.
          */
@@ -37,7 +37,7 @@ namespace biz.ritter.javapi.lang
         {
         }
 
-        /**
+         /*
           * Constructs a new {@code NoSuchMethodException} with the current stack
           * trace and the specified detail message.
           * 

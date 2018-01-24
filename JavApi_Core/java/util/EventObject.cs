@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util
 {
-    /**
+     /*
      * {@code EventObject}s represent events. Typically applications subclass this class to
      * add event specific information.
      * 
@@ -27,13 +27,13 @@ namespace biz.ritter.javapi.util
     
         private static readonly long serialVersionUID = 5516075349620653480L;
 
-        /**
+         /*
          * The event source.
          */
         [NonSerialized]
         protected Object source;
 
-        /**
+         /*
          * Constructs a new instance of this class.
          * 
          * @param source
@@ -47,7 +47,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns the event source.
          * 
          * @return the object which fired the event.
@@ -56,7 +56,7 @@ namespace biz.ritter.javapi.util
             return source;
         }
 
-        /**
+         /*
          * Returns the string representation of this {@code EventObject}.
          * 
          * @return the string representation of this {@code EventObject}.

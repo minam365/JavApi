@@ -21,7 +21,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapix.xml.crypto.dsig.spec
 {
 
-/**
+ /*
  * Parameters for the <a href="http://www.w3.org/TR/xmldsig-core/#sec-MACs">
  * XML Signature HMAC Algorithm</a>. The parameters include an optional output 
  * length which specifies the MAC truncation length in bits. The resulting 
@@ -45,7 +45,7 @@ public sealed class HMACParameterSpec : SignatureMethodParameterSpec {
 
     private int	outputLength;
 
-    /**
+     /*
      * Creates an <code>HMACParameterSpec</code> with the specified truncation
      * length.
      *
@@ -55,7 +55,7 @@ public sealed class HMACParameterSpec : SignatureMethodParameterSpec {
         this.outputLength = outputLength;
     }
 
-    /**
+     /*
      * Returns the truncation length.
      *
      * @return the truncation length in number of bits

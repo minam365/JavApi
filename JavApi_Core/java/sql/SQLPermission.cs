@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.sql
 {
 
-    /**
+     /*
      * A Permission relating to security access control in the {@code java.sql}
      * package.
      * <p/>
@@ -36,7 +36,7 @@ namespace biz.ritter.javapi.sql
 
         private const long serialVersionUID = -1439323187199563495L;
 
-        /**
+         /*
          * Creates a new {@code SQLPermission} object with the specified name.
          * 
          * @param name
@@ -48,7 +48,7 @@ namespace biz.ritter.javapi.sql
 
         }
 
-        /**
+         /*
          * Creates a new {@code SQLPermission} object with the specified name.
          * 
          * @param name

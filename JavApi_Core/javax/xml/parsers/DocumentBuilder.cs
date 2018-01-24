@@ -25,7 +25,7 @@ using org.xml.sax;
 
 namespace biz.ritter.javapix.xml.parsers
 {
-	/**
+	 /*
  * Defines the API to obtain DOM Document instances from an XML
  * document. Using this class, an application programmer can obtain a
  * {@link Document} from XML.<p/>
@@ -50,12 +50,12 @@ namespace biz.ritter.javapix.xml.parsers
 	{
 		private static readonly bool DEBUG = false;
 
-		/** Protected constructor */
+		 /* Protected constructor */
 		protected DocumentBuilder ()
 		{
 		}
 
-		/**
+		 /*
 	  * <p>Reset this <code>DocumentBuilder</code> to its original configuration.</p>
 	  * 
 	  * <p><code>DocumentBuilder</code> is reset to the same state as when it was created with
@@ -80,7 +80,7 @@ namespace biz.ritter.javapix.xml.parsers
 			);
 		}
 
-		/**
+		 /*
      * Parse the content of the given <code>InputStream</code> as an XML
      * document and return a new DOM {@link Document} object.
      * An <code>IllegalArgumentException</code> is thrown if the
@@ -104,7 +104,7 @@ namespace biz.ritter.javapix.xml.parsers
 			return parse (inJ);
 		}
 
-		/**
+		 /*
      * Parse the content of the given <code>InputStream</code> as an
      * XML document and return a new DOM {@link Document} object.
      * An <code>IllegalArgumentException</code> is thrown if the
@@ -129,7 +129,7 @@ namespace biz.ritter.javapix.xml.parsers
 			return parse (inJ);
 		}
 
-		/**
+		 /*
      * Parse the content of the given URI as an XML document
      * and return a new DOM {@link Document} object.
      * An <code>IllegalArgumentException</code> is thrown if the
@@ -152,7 +152,7 @@ namespace biz.ritter.javapix.xml.parsers
 			return parse (inJ);
 		}
 
-		/**
+		 /*
      * Parse the content of the given file as an XML document
      * and return a new DOM {@link Document} object.
      * An <code>IllegalArgumentException</code> is thrown if the
@@ -181,7 +181,7 @@ namespace biz.ritter.javapix.xml.parsers
 			return parse (inJ);
 		}
 
-		/**
+		 /*
      * Parse the content of the given input source as an XML document
      * and return a new DOM {@link Document} object.
      * An <code>IllegalArgumentException</code> is thrown if the
@@ -196,7 +196,7 @@ namespace biz.ritter.javapix.xml.parsers
     
 		public abstract Document parse (InputSource isJ);
 		//throws  SAXException, IOException;
-		/**
+		 /*
      * Indicates whether or not this parser is configured to
      * understand namespaces.
      *
@@ -206,7 +206,7 @@ namespace biz.ritter.javapix.xml.parsers
 
 		public abstract bool isNamespaceAware ();
 
-		/**
+		 /*
      * Indicates whether or not this parser is configured to
      * validate XML documents.
      *
@@ -216,7 +216,7 @@ namespace biz.ritter.javapix.xml.parsers
     
 		public abstract bool isValidating ();
 
-		/**
+		 /*
      * Specify the {@link EntityResolver} to be used to resolve
      * entities present in the XML document to be parsed. Setting
      * this to <code>null</code> will result in the underlying
@@ -229,7 +229,7 @@ namespace biz.ritter.javapix.xml.parsers
 
 		public abstract void setEntityResolver (EntityResolver er);
 
-		/**
+		 /*
      * Specify the {@link ErrorHandler} to be used by the parser.
      * Setting this to <code>null</code> will result in the underlying
      * implementation using it's own default implementation and
@@ -240,7 +240,7 @@ namespace biz.ritter.javapix.xml.parsers
 
 		public abstract void setErrorHandler (ErrorHandler eh);
 
-		/**
+		 /*
      * Obtain a new instance of a DOM {@link Document} object
      * to build a DOM tree with.
      *
@@ -249,7 +249,7 @@ namespace biz.ritter.javapix.xml.parsers
     
 		public abstract Document newDocument ();
 
-		/**
+		 /*
      * Obtain an instance of a {@link DOMImplementation} object.
      *
      * @return A new instance of a <code>DOMImplementation</code>.
@@ -257,7 +257,7 @@ namespace biz.ritter.javapix.xml.parsers
 
 		public abstract DOMImplementation getDOMImplementation ();
 
-		/** <p>Get a reference to the the {@link Schema} being used by
+		 /* <p>Get a reference to the the {@link Schema} being used by
      * the XML processor.</p>
      *
      * <p>If no schema is being used, <code>null</code> is returned.</p>
@@ -283,7 +283,7 @@ namespace biz.ritter.javapix.xml.parsers
 			);
 		}
 
-		/**
+		 /*
      * <p>Get the XInclude processing mode for this parser.</p>
      * 
      * @return

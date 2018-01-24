@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.security
 {
 
-/**
+ /*
  * {@code Permissions} represents a {@code PermissionCollection} where the
  * contained permissions can be of different types. The permissions are
  * organized in their appropriate {@code PermissionCollection} obtained by
@@ -41,7 +41,7 @@ public sealed class Permissions : PermissionCollection,
 
     private bool allEnabled;  // = false;
 
-    /**
+     /*
      * Adds the given {@code Permission} to this heterogeneous {@code
      * PermissionCollection}. The {@code permission} is stored in its
      * appropriate {@code PermissionCollection}.
@@ -91,7 +91,7 @@ public sealed class Permissions : PermissionCollection,
         return new MetaEnumeration(klasses.values().iterator());
     }
 
-    /**
+     /*
      * An auxiliary implementation for enumerating individual permissions from a
      * collection of PermissionCollections.
      * 
@@ -102,7 +102,7 @@ public sealed class Permissions : PermissionCollection,
 
         private java.util.Enumeration<Permission> current;
 
-        /**
+         /*
          * Initiates this enumeration.
          * 
          * @param outer an iterator over external collection of
@@ -123,14 +123,14 @@ public sealed class Permissions : PermissionCollection,
             return null;
         }
 
-        /**
+         /*
          * Indicates if there are more elements to enumerate.
          */
         public bool hasMoreElements() {
             return current != null /* && current.hasMoreElements() */;
         }
 
-        /**
+         /*
          * Returns next element.
          */
         public Permission nextElement() {
@@ -217,7 +217,7 @@ public sealed class Permissions : PermissionCollection,
         }
     }
 
-    /**
+     /*
      * Outputs fields via default mechanism.
      *
     private void writeObject(java.io.ObjectOutputStream out) throws IOException {

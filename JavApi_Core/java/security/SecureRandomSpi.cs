@@ -19,7 +19,7 @@ namespace biz.ritter.javapi.security
 {
 
 
-/**
+ /*
  * {@code SecureRandomSpi} is the <i>Service Provider Interface</i> (<b>SPI</b>) definition
  * for {@link SecureRandom}.
  * 
@@ -30,7 +30,7 @@ public abstract class SecureRandomSpi : java.io.Serializable {
     
     private const long serialVersionUID = -2991854161009191830L;
                 
-    /**
+     /*
      * Reseeds this {@code SecureRandomSpi} instance with the specified {@code
      * seed}. The seed of this {@code SecureRandomSpi} instance is supplemented,
      * not replaced.
@@ -40,7 +40,7 @@ public abstract class SecureRandomSpi : java.io.Serializable {
      */
     protected abstract void engineSetSeed(byte[] seed);
     
-    /**
+     /*
      * Generates and stores random bytes in the given {@code byte[]} for each
      * array element.
      * 
@@ -49,7 +49,7 @@ public abstract class SecureRandomSpi : java.io.Serializable {
      */
     protected abstract void engineNextBytes(byte[] bytes);
     
-    /**
+     /*
      * Generates and returns the specified number of seed bytes, computed using
      * the seed generation algorithm used by this {@code SecureRandomSpi}.
      * 

@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.security
 {
-    /**
+     /*
      *{@code DigestException} is a general message digest exception.
      */
     [Serializable]
@@ -25,7 +25,7 @@ namespace biz.ritter.javapi.security
 
         private static readonly long serialVersionUID = 5821450303093652515L;
 
-        /**
+         /*
          * Constructs a new instance of {@code DigestException} with the
          * given message.
          *
@@ -37,14 +37,14 @@ namespace biz.ritter.javapi.security
         {
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code DigestException}.
          */
         public DigestException()
         {
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code DigestException} with the
          * given message and the cause.
          *
@@ -58,7 +58,7 @@ namespace biz.ritter.javapi.security
         {
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code DigestException} with the
          * cause.
          *

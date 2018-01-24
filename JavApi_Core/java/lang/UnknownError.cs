@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang
 {
 
-/**
+ /*
  * Thrown when the virtual machine must throw an error which does not match any
  * known exceptional condition.
  */
@@ -25,7 +25,7 @@ public class UnknownError : VirtualMachineError {
 
     private const long serialVersionUID = 2524784860676771849L;
 
-    /**
+     /*
      * Constructs a new {@code UnknownError} that includes the current stack
      * trace.
      */
@@ -33,7 +33,7 @@ public class UnknownError : VirtualMachineError {
         
     }
 
-    /**
+     /*
      * Constructs a new {@code UnknownError} with the current stack trace and
      * the specified detail message.
      * 

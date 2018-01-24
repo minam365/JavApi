@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.sql
 {
 
-    /**
+     /*
      * An exception, which is subclass of SQLException, is thrown when one or more
      * client info properties could not be set on a Connection.
      */
@@ -28,7 +28,7 @@ namespace biz.ritter.javapi.sql
 
         private java.util.Map<String, ClientInfoStatus> failedProperties = null;
 
-        /**
+         /*
          * Creates an SQLClientInfoException object. The Reason string is set to
          * null, the SQLState string is set to null and the Error Code is set to 0.
          */
@@ -37,7 +37,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLClientInfoException object. The Reason string is set to the
          * given reason string, the SQLState string is set to null and the Error
          * Code is set to 0, and the Map&lt;String,ClientInfoStatus&gt; object is set to
@@ -53,7 +53,7 @@ namespace biz.ritter.javapi.sql
             this.failedProperties = failedProperties;
         }
 
-        /**
+         /*
          * Creates an SQLClientInfoException object. The Reason string is set to the
          * null if cause == null or cause.toString() if cause!=null, the cause
          * Throwable object is set to the given cause Throwable object, and the Map&lt;String,ClientInfoStatus&gt;
@@ -73,7 +73,7 @@ namespace biz.ritter.javapi.sql
             this.failedProperties = failedProperties;
         }
 
-        /**
+         /*
          * Creates an SQLClientInfoException object. The Reason string is set to
          * reason, and the Map&lt;String,ClientInfoStatus&gt; object is set to the failed
          * properties.
@@ -91,7 +91,7 @@ namespace biz.ritter.javapi.sql
             this.failedProperties = failedProperties;
         }
 
-        /**
+         /*
          * Creates an SQLClientInfoException object. The Reason string is set to
          * reason, the cause Throwable object is set to the given cause Throwable
          * object, and the Map&lt;String,ClientInfoStatus&gt; object is set to the failed
@@ -113,7 +113,7 @@ namespace biz.ritter.javapi.sql
             this.failedProperties = failedProperties;
         }
 
-        /**
+         /*
          * Creates an SQLClientInfoException object. The Reason string is set to
          * reason, the SQLState string is set to the sqlState, the Error Code is set
          * to the vendorCode and the Map&lt;String,ClientInfoStatus&gt; object is set to
@@ -137,7 +137,7 @@ namespace biz.ritter.javapi.sql
             this.failedProperties = failedProperties;
         }
 
-        /**
+         /*
          * Creates an SQLClientInfoException object. The Reason string is set to
          * reason, the SQLState string is set to the sqlState, the Error Code is set
          * to the vendorCode the cause Throwable object is set to the given cause
@@ -165,7 +165,7 @@ namespace biz.ritter.javapi.sql
             this.failedProperties = failedProperties;
         }
 
-        /**
+         /*
          * Creates an SQLClientInfoException object. The Reason string is set to
          * reason, the SQLState string is set to the sqlState, and the Map&lt;String,ClientInfoStatus&gt;
          * object is set to the failed properties.
@@ -185,7 +185,7 @@ namespace biz.ritter.javapi.sql
             this.failedProperties = failedProperties;
         }
 
-        /**
+         /*
          * Creates an SQLClientInfoException object. The Reason string is set to
          * reason, the SQLState string is set to the sqlState, the Error Code is set
          * to the vendorCode, and the Map&lt;String,ClientInfoStatus&gt; object is set to
@@ -209,7 +209,7 @@ namespace biz.ritter.javapi.sql
             this.failedProperties = failedProperties;
         }
 
-        /**
+         /*
          * returns that the client info properties which could not be set
          * 
          * @return the list of ClientInfoStatus objects indicate client info

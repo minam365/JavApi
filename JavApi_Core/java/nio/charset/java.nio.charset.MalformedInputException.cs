@@ -15,7 +15,7 @@ using System;
 
 namespace biz.ritter.javapi.nio.charset
 {
-    /**
+     /*
      * A {@code MalformedInputException} is thrown when a malformed input is
      * encountered, for example if a byte sequence is illegal for the given charset.
      */
@@ -30,7 +30,7 @@ namespace biz.ritter.javapi.nio.charset
         // the length of the malformed input
         private int inputLength;
 
-        /**
+         /*
          * Constructs a new {@code MalformedInputException}.
          * 
          * @param length
@@ -40,7 +40,7 @@ namespace biz.ritter.javapi.nio.charset
             this.inputLength = length;
         }
 
-        /**
+         /*
          * Gets the length of the malformed input.
          * 
          * @return the length of the malformed input.
@@ -49,7 +49,7 @@ namespace biz.ritter.javapi.nio.charset
             return this.inputLength;
         }
 
-        /**
+         /*
          * Gets a message describing this exception.
          * 
          * @return a message describing this exception.

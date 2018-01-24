@@ -9,7 +9,7 @@ namespace org.xml.sax
 {
 
 
-    /**
+     /*
      * Interface for reading an XML document using callbacks.
      *
      * <blockquote>
@@ -66,7 +66,7 @@ namespace org.xml.sax
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Look up the value of a feature flag.
          *
          * <p>The feature name is any fully-qualified URI.  It is
@@ -125,7 +125,7 @@ namespace org.xml.sax
         bool getFeature(String name);//throws SAXNotRecognizedException, SAXNotSupportedException;
 
 
-        /**
+         /*
          * Set the value of a feature flag.
          *
          * <p>The feature name is any fully-qualified URI.  It is
@@ -151,7 +151,7 @@ namespace org.xml.sax
         void setFeature(String name, bool value);//throws SAXNotRecognizedException, SAXNotSupportedException;
 
 
-        /**
+         /*
          * Look up the value of a property.
          *
          * <p>The property name is any fully-qualified URI.  It is
@@ -179,7 +179,7 @@ namespace org.xml.sax
         Object getProperty(String name);//throws SAXNotRecognizedException, SAXNotSupportedException;
 
 
-        /**
+         /*
          * Set the value of a property.
          *
          * <p>The property name is any fully-qualified URI.  It is
@@ -213,7 +213,7 @@ namespace org.xml.sax
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Allow an application to register an entity resolver.
          *
          * <p>If the application does not register an entity resolver,
@@ -229,7 +229,7 @@ namespace org.xml.sax
         void setEntityResolver(EntityResolver resolver);
 
 
-        /**
+         /*
          * Return the current entity resolver.
          *
          * @return The current entity resolver, or null if none
@@ -239,7 +239,7 @@ namespace org.xml.sax
         EntityResolver getEntityResolver();
 
 
-        /**
+         /*
          * Allow an application to register a DTD event handler.
          *
          * <p>If the application does not register a DTD handler, all DTD
@@ -255,7 +255,7 @@ namespace org.xml.sax
         void setDTDHandler(DTDHandler handler);
 
 
-        /**
+         /*
          * Return the current DTD handler.
          *
          * @return The current DTD handler, or null if none
@@ -265,7 +265,7 @@ namespace org.xml.sax
         DTDHandler getDTDHandler();
 
 
-        /**
+         /*
          * Allow an application to register a content event handler.
          *
          * <p>If the application does not register a content handler, all
@@ -282,7 +282,7 @@ namespace org.xml.sax
         void setContentHandler(ContentHandler handler);
 
 
-        /**
+         /*
          * Return the current content handler.
          *
          * @return The current content handler, or null if none
@@ -292,7 +292,7 @@ namespace org.xml.sax
         ContentHandler getContentHandler();
 
 
-        /**
+         /*
          * Allow an application to register an error event handler.
          *
          * <p>If the application does not register an error handler, all
@@ -311,7 +311,7 @@ namespace org.xml.sax
         void setErrorHandler(ErrorHandler handler);
 
 
-        /**
+         /*
          * Return the current error handler.
          *
          * @return The current error handler, or null if none
@@ -326,7 +326,7 @@ namespace org.xml.sax
         // Parsing.
         ////////////////////////////////////////////////////////////////////
 
-        /**
+         /*
          * Parse an XML document.
          *
          * <p>The application can use this method to instruct the XML
@@ -371,7 +371,7 @@ namespace org.xml.sax
         void parse(InputSource input);//throws IOException, SAXException;
 
 
-        /**
+         /*
          * Parse an XML document from a system identifier (URI).
          *
          * <p>This method is a shortcut for the common case of reading a

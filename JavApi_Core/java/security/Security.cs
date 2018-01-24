@@ -20,7 +20,7 @@ using org.apache.harmony.security.fortress;
 namespace biz.ritter.javapi.security
 {
 
-    /**
+     /*
      * {@code Security} is the central class in the Java Security API. It manages
      * the list of security {@code Provider} that have been installed into this
      * runtime environment.
@@ -111,7 +111,7 @@ namespace biz.ritter.javapi.security
             Engine.door = new SecurityDoor();
         }
 
-        /**
+         /*
          * This class can't be instantiated.
          */
         private Security()
@@ -127,7 +127,7 @@ namespace biz.ritter.javapi.security
             secprops.put("security.provider.4", "org.bouncycastle.jce.provider.BouncyCastleProvider");  //$NON-NLS-1$ //$NON-NLS-2$
         }
 
-        /**
+         /*
          * Returns value for the specified algorithm with the specified name.
          *
          * @param algName
@@ -162,7 +162,7 @@ namespace biz.ritter.javapi.security
             return null;
         }
 
-        /**
+         /*
          * Insert the given {@code Provider} at the specified {@code position}. The
          * positions define the preference order in which providers are searched for
          * requested algorithms.
@@ -207,7 +207,7 @@ namespace biz.ritter.javapi.security
             }
         }
 
-        /**
+         /*
          * Adds the given {@code provider} to the collection of providers at the
          * next available position.
          * <p/>
@@ -229,7 +229,7 @@ namespace biz.ritter.javapi.security
             return insertProviderAt(provider, 0);
         }
 
-        /**
+         /*
          * Removes the {@code Provider} with the specified name form the collection
          * of providers. If the the {@code Provider} with the specified name is
          * removed, all provider at a greater position are shifted down one
@@ -280,7 +280,7 @@ namespace biz.ritter.javapi.security
             }
         }
 
-        /**
+         /*
          * Returns an array containing all installed providers. The providers are
          * ordered according their preference order.
          *
@@ -294,7 +294,7 @@ namespace biz.ritter.javapi.security
             }
         }
 
-        /**
+         /*
          * Returns the {@code Provider} with the specified name. Returns {@code
          * null} if name is {@code null} or no provider with the specified name is
          * installed.
@@ -311,7 +311,7 @@ namespace biz.ritter.javapi.security
             }
         }
 
-        /**
+         /*
          * Returns the array of providers which meet the user supplied string
          * filter. The specified filter must be supplied in one of two formats:
          * <nl>
@@ -361,7 +361,7 @@ namespace biz.ritter.javapi.security
             return getProviders(hm);
         }
 
-        /**
+         /*
          * Returns the array of providers which meet the user supplied set of
          * filters. The filter must be supplied in one of two formats:
          * <nl>
@@ -464,7 +464,7 @@ namespace biz.ritter.javapi.security
             }
         }
 
-        /**
+         /*
          * Returns the value of the security property named by the argument.
          * <p/>
          * If a {@code SecurityManager} is installed, code calling this method needs
@@ -498,7 +498,7 @@ namespace biz.ritter.javapi.security
             return property;
         }
 
-        /**
+         /*
          * Sets the value of the specified security property.
          * <p/>
          * If a {@code SecurityManager} is installed, code calling this method needs
@@ -524,7 +524,7 @@ namespace biz.ritter.javapi.security
             secprops.put(key, datnum);
         }
 
-        /**
+         /*
          * Returns a {@code Set} of all registered algorithms for the specified
          * cryptographic service. {@code "Signature"}, {@code "Cipher"} and {@code
          * "KeyStore"} are examples for such kind of services.
@@ -554,7 +554,7 @@ namespace biz.ritter.javapi.security
             return result;
         }
 
-        /**
+         /*
          * 
          * Update sequence numbers of all providers.
          *  

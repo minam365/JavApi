@@ -40,7 +40,7 @@ public sealed class XPathFilterParameterSpec : TransformParameterSpec {
     private String xPath;
     private java.util.Map<String,String> nsMap;
 
-    /**
+     /*
      * Creates an <code>XPathFilterParameterSpec</code> with the specified 
      * XPath expression.
      *
@@ -55,7 +55,7 @@ public sealed class XPathFilterParameterSpec : TransformParameterSpec {
         this.nsMap = new java.util.HashMap<String,String>();//Collections.EMPTY_MAP;
     }
 
-    /**
+     /*
      * Creates an <code>XPathFilterParameterSpec</code> with the specified 
      * XPath expression and namespace map. The map is copied to protect against
      * subsequent modification.
@@ -82,7 +82,7 @@ public sealed class XPathFilterParameterSpec : TransformParameterSpec {
         return java.util.Collections<Object>.unmodifiableMap(new java.util.HashMap<String,String>(map));
     }
 
-    /**
+     /*
      * Returns the XPath expression to be evaluated.
      *
      * @return the XPath expression to be evaluated
@@ -91,7 +91,7 @@ public sealed class XPathFilterParameterSpec : TransformParameterSpec {
         return xPath;
     }
 
-    /**
+     /*
      * Returns a map of namespace prefixes. Each key is a namespace prefix 
      * <code>String</code> that maps to a corresponding namespace URI 
      * <code>String</code>.

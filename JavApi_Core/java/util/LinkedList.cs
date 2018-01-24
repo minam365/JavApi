@@ -20,7 +20,7 @@ namespace biz.ritter.javapi.util
 {
 
 
-    /**
+     /*
      * LinkedList is an implementation of List, backed by a linked list. All
      * optional operations are supported, adding, removing and replacing. The
      * elements can be any objects.
@@ -38,7 +38,7 @@ namespace biz.ritter.javapi.util
         internal Link<E> voidLink;
 
 
-        /**
+         /*
          * Constructs a new empty instance of {@code LinkedList}.
          */
         public LinkedList() {
@@ -47,7 +47,7 @@ namespace biz.ritter.javapi.util
             voidLink.next = voidLink;
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code LinkedList} that holds all of the
          * elements contained in the specified {@code collection}. The order of the
          * elements in this new {@code LinkedList} will be determined by the
@@ -63,7 +63,7 @@ namespace biz.ritter.javapi.util
             addAll(collection);
         }
 
-        /**
+         /*
          * Inserts the specified object into this {@code LinkedList} at the
          * specified location. The object is inserted before any previous element at
          * the specified location. If the location is equal to the size of this
@@ -100,7 +100,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Adds the specified object at the end of this {@code LinkedList}.
          * 
          * @param object
@@ -121,7 +121,7 @@ namespace biz.ritter.javapi.util
             return true;
         }
 
-        /**
+         /*
          * Inserts the objects in the specified collection at the specified location
          * in this {@code LinkedList}. The objects are added in the order they are
          * returned from the collection's iterator.
@@ -176,7 +176,7 @@ namespace biz.ritter.javapi.util
             return true;
         }
 
-        /**
+         /*
          * Adds the objects in the specified Collection to this {@code LinkedList}.
          * 
          * @param collection
@@ -208,7 +208,7 @@ namespace biz.ritter.javapi.util
             return true;
         }
 
-        /**
+         /*
          * Adds the specified object at the beginning of this {@code LinkedList}.
          * 
          * @param object
@@ -228,7 +228,7 @@ namespace biz.ritter.javapi.util
             return true;
         }
 
-        /**
+         /*
          * Adds the specified object at the end of this {@code LinkedList}.
          * 
          * @param object
@@ -238,7 +238,7 @@ namespace biz.ritter.javapi.util
             addLastImpl(obj);
         }
 
-        /**
+         /*
          * Removes all elements from this {@code LinkedList}, leaving it empty.
          * 
          * @see List#isEmpty
@@ -254,7 +254,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns a new {@code LinkedList} with the same elements and size as this
          * {@code LinkedList}.
          * 
@@ -274,7 +274,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Searches this {@code LinkedList} for the specified object.
          * 
          * @param object
@@ -321,7 +321,7 @@ namespace biz.ritter.javapi.util
             throw new java.lang.IndexOutOfBoundsException();
         }
 
-        /**
+         /*
          * Returns the first element in this {@code LinkedList}.
          * 
          * @return the first element.
@@ -340,7 +340,7 @@ namespace biz.ritter.javapi.util
             throw new NoSuchElementException();
         }
 
-        /**
+         /*
          * Returns the last element in this {@code LinkedList}.
          * 
          * @return the last element
@@ -379,7 +379,7 @@ namespace biz.ritter.javapi.util
             return -1;
         }
 
-        /**
+         /*
          * Searches this {@code LinkedList} for the specified object and returns the
          * index of the last occurrence.
          * 
@@ -412,7 +412,7 @@ namespace biz.ritter.javapi.util
             return -1;
         }
 
-        /**
+         /*
          * Returns a ListIterator on the elements of this {@code LinkedList}. The
          * elements are iterated in the same order that they occur in the
          * {@code LinkedList}. The iteration starts at the specified location.
@@ -429,7 +429,7 @@ namespace biz.ritter.javapi.util
             return new LinkIterator<E>(this, location);
         }
 
-        /**
+         /*
          * Removes the object at the specified location from this {@code LinkedList}.
          * 
          * @param location
@@ -467,7 +467,7 @@ namespace biz.ritter.javapi.util
             return removeFirstOccurrenceImpl(obj);
         }
 
-        /**
+         /*
          * Removes the first object from this {@code LinkedList}.
          * 
          * @return the removed object.
@@ -491,7 +491,7 @@ namespace biz.ritter.javapi.util
             throw new java.util.NoSuchElementException();
         }
 
-        /**
+         /*
          * Removes the last object from this {@code LinkedList}.
          * 
          * @return the removed object.
@@ -515,7 +515,7 @@ namespace biz.ritter.javapi.util
             throw new java.util.NoSuchElementException();
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.Deque#descendingIterator()
@@ -525,7 +525,7 @@ namespace biz.ritter.javapi.util
             return new ReverseLinkIterator<E>(this);
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.Deque#offerFirst(java.lang.Object)
@@ -535,7 +535,7 @@ namespace biz.ritter.javapi.util
             return addFirstImpl(e);
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.Deque#offerLast(java.lang.Object)
@@ -545,7 +545,7 @@ namespace biz.ritter.javapi.util
             return addLastImpl(e);
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.Deque#peekFirst()
@@ -555,7 +555,7 @@ namespace biz.ritter.javapi.util
             return peekFirstImpl();
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.Deque#peekLast()
@@ -566,7 +566,7 @@ namespace biz.ritter.javapi.util
             return (last == voidLink) ? default(E) : last.data;
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.Deque#pollFirst()
@@ -576,7 +576,7 @@ namespace biz.ritter.javapi.util
             return (sizeJ == 0) ? default(E) : removeFirstImpl();
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.Deque#pollLast()
@@ -586,7 +586,7 @@ namespace biz.ritter.javapi.util
             return (sizeJ == 0) ? default(E) : removeLastImpl();
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.Deque#pop()
@@ -596,7 +596,7 @@ namespace biz.ritter.javapi.util
             return removeFirstImpl();
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.Deque#push(java.lang.Object)
@@ -606,7 +606,7 @@ namespace biz.ritter.javapi.util
             addFirstImpl(e);
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.Deque#removeFirstOccurrence(java.lang.Object)
@@ -616,7 +616,7 @@ namespace biz.ritter.javapi.util
             return removeFirstOccurrenceImpl(o);
         }
 
-        /**
+         /*
          * {@inheritDoc}
          * 
          * @see java.util.Deque#removeLastOccurrence(java.lang.Object)
@@ -643,7 +643,7 @@ namespace biz.ritter.javapi.util
             return false;
         }
 
-        /**
+         /*
          * Replaces the element at the specified location in this {@code LinkedList}
          * with the specified object.
          * 
@@ -679,7 +679,7 @@ namespace biz.ritter.javapi.util
             throw new java.lang.IndexOutOfBoundsException();
         }
 
-        /**
+         /*
          * Returns the number of elements in this {@code LinkedList}.
          * 
          * @return the number of elements in this {@code LinkedList}.
@@ -714,7 +714,7 @@ namespace biz.ritter.javapi.util
             return getFirstImpl();
         }
 
-        /**
+         /*
          * Returns a new array containing all elements contained in this
          * {@code LinkedList}.
          * 

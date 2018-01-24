@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.sql
 {
-    /**
+     /*
      * An {@code Exception} class that is used in conjunction with JDBC operations.
      * It provides information about problems encountered with database access and
      * other problems related to JDBC
@@ -50,7 +50,7 @@ namespace biz.ritter.javapi.sql
 
         private SQLException next = null;
 
-        /**
+         /*
          * Creates an {@code SQLException} object. The reason string is set to
          * {@code null}, the {@code SQLState} string is set to {@code null} and the
          * error code is set to 0.
@@ -60,7 +60,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an {@code SQLException} object. The reason string is set to the given
          * reason string, the {@code SQLState} string is set to {@code null} and the error code is
          * set to 0.
@@ -73,7 +73,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an {@code SQLException} object. The reason string is set to the
          * given reason string, the {@code SQLState} string is set to the given
          * {@code SQLState} string and the error code is set to 0.
@@ -88,7 +88,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an {@code SQLException} object. The reason string is set to the
          * given reason string, the {@code SQLState} string is set to the given
          * {@code SQLState} string and the error code is set to the given error code
@@ -108,7 +108,7 @@ namespace biz.ritter.javapi.sql
             vendorCode = theErrorCode;
         }
 
-        /**
+         /*
          * Creates an SQLException object. The Reason string is set to the null if
          * cause == null or cause.toString() if cause!=null,and the cause Throwable
          * object is set to the given cause Throwable object.
@@ -124,7 +124,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLException object. The Reason string is set to the given and
          * the cause Throwable object is set to the given cause Throwable object.
          * 
@@ -141,7 +141,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLException object. The Reason string is set to the given
          * reason string, the SQLState string is set to the given SQLState string
          * and the cause Throwable object is set to the given cause Throwable
@@ -162,7 +162,7 @@ namespace biz.ritter.javapi.sql
             SQLState = theSQLState;
         }
 
-        /**
+         /*
          * Creates an SQLException object. The Reason string is set to the given
          * reason string, the SQLState string is set to the given SQLState string ,
          * the Error Code is set to the given error code value, and the cause
@@ -186,7 +186,7 @@ namespace biz.ritter.javapi.sql
             vendorCode = theErrorCode;
         }
 
-        /**
+         /*
          * Returns the integer error code for this {@code SQLException}.
          * 
          * @return The integer error code for this {@code SQLException}. The meaning
@@ -197,7 +197,7 @@ namespace biz.ritter.javapi.sql
             return vendorCode;
         }
 
-        /**
+         /*
          * Retrieves the {@code SQLException} chained to this {@code SQLException},
          * if any.
          * 
@@ -210,7 +210,7 @@ namespace biz.ritter.javapi.sql
             return next;
         }
 
-        /**
+         /*
          * Retrieves the {@code SQLState} description string for this {@code
          * SQLException} object.
          * 
@@ -228,7 +228,7 @@ namespace biz.ritter.javapi.sql
             return SQLState;
         }
 
-        /**
+         /*
          * Adds the SQLException to the end of this {@code SQLException} chain.
          * 
          * @param ex
@@ -247,7 +247,7 @@ namespace biz.ritter.javapi.sql
             }
         }
 
-        /**
+         /*
          * Answer an iterator over the chained SQLExceptions.
          */
         public java.util.Iterator<java.lang.Throwable> iterator()

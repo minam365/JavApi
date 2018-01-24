@@ -19,14 +19,14 @@ using org.apache.harmony.archive.util;
 namespace biz.ritter.javapi.util.jar
 {
     #region Attributes
-    /**
+     /*
      * The {@code Attributes} class is used to store values for manifest entries.
      * Attribute keys are generally instances of {@code Attributes.Name}. Values
      * associated with attribute keys are of type {@code String}.
      */
     public class Attributes : java.lang.Cloneable, java.util.Map<Object, Object> {
 
-        /**
+         /*
          * The {@code Attributes} as name/value pairs. Maps the attribute names (as
          * {@link Attributes.Name}) of a JAR file manifest to arbitrary values. The
          * attribute names thus are obtained from the {@link Manifest} for
@@ -35,14 +35,14 @@ namespace biz.ritter.javapi.util.jar
         protected Map<Object, Object> map;
 
 
-        /**
+         /*
          * Constructs an {@code Attributes} instance.
          */
         public Attributes() {
             map = new HashMap<Object, Object>();
         }
 
-        /**
+         /*
          * Constructs an {@code Attributes} instance obtaining keys and values from
          * the parameter {@code attrib}.
          *
@@ -53,7 +53,7 @@ namespace biz.ritter.javapi.util.jar
             map = (Map<Object, Object>) ((java.util.HashMap<Object,Object>) attrib.map).clone();
         }
 
-        /**
+         /*
          * Constructs an {@code Attributes} instance with initial capacity of size
          * {@code size}.
          *
@@ -64,14 +64,14 @@ namespace biz.ritter.javapi.util.jar
             map = new java.util.HashMap<Object, Object>();//size);
         }
 
-        /**
+         /*
          * Removes all key/value pairs from this {@code Attributes}.
          */
         public void clear() {
             map.clear();
         }
 
-        /**
+         /*
          * Determines whether this {@code Attributes} contains the specified key.
          *
          * @param key
@@ -82,7 +82,7 @@ namespace biz.ritter.javapi.util.jar
             return map.containsKey(key);
         }
 
-        /**
+         /*
          * Determines whether this {@code Attributes} contains the specified value.
          *
          * @param value
@@ -93,7 +93,7 @@ namespace biz.ritter.javapi.util.jar
             return map.containsValue(value);
         }
 
-        /**
+         /*
          * Returns a set containing map entries for each of the key/value pair
          * contained in this {@code Attributes}.
          *
@@ -103,7 +103,7 @@ namespace biz.ritter.javapi.util.jar
             return map.entrySet();
         }
 
-        /**
+         /*
          * Returns the value associated with the parameter key.
          *
          * @param key
@@ -115,7 +115,7 @@ namespace biz.ritter.javapi.util.jar
             return map.get(key);
         }
 
-        /**
+         /*
          * Determines whether this {@code Attributes} contains any keys.
          *
          * @return {@code true} if one or more keys exist, {@code false} otherwise.
@@ -124,7 +124,7 @@ namespace biz.ritter.javapi.util.jar
             return map.isEmpty();
         }
 
-        /**
+         /*
          * Returns a {@code Set} containing all the keys found in this {@code
          * Attributes}.
          *
@@ -134,7 +134,7 @@ namespace biz.ritter.javapi.util.jar
             return map.keySet();
         }
 
-        /**
+         /*
          * Stores key/value pairs in this {@code Attributes}.
          *
          * @param key
@@ -151,7 +151,7 @@ namespace biz.ritter.javapi.util.jar
             return map.put((AttributesNS.Name) key, (String) value);
         }
 
-        /**
+         /*
          * Stores all the key/value pairs in the argument in this {@code
          * Attributes}.
          *
@@ -166,7 +166,7 @@ namespace biz.ritter.javapi.util.jar
             this.map.putAll(attrib);
         }
 
-        /**
+         /*
          * Deletes the key/value pair with key {@code key} from this {@code
          * Attributes}.
          *
@@ -179,7 +179,7 @@ namespace biz.ritter.javapi.util.jar
             return map.remove(key);
         }
 
-        /**
+         /*
          * Returns the number of key/value pairs associated with this {@code
          * Attributes}.
          *
@@ -189,7 +189,7 @@ namespace biz.ritter.javapi.util.jar
             return map.size();
         }
 
-        /**
+         /*
          * Returns a collection of all the values present in this {@code
          * Attributes}.
          *
@@ -210,7 +210,7 @@ namespace biz.ritter.javapi.util.jar
             return clone;
         }
 
-        /**
+         /*
          * Returns the hash code of this {@code Attributes}.
          *
          * @return the hash code of this object.
@@ -219,7 +219,7 @@ namespace biz.ritter.javapi.util.jar
             return map.GetHashCode();
         }
 
-        /**
+         /*
          * Determines if this {@code Attributes} and the parameter {@code
          * Attributes} are equal. Two {@code Attributes} instances are equal if they
          * contain the same keys and values.
@@ -239,7 +239,7 @@ namespace biz.ritter.javapi.util.jar
             return false;
         }
 
-        /**
+         /*
          * Returns the value associated with the parameter {@code Attributes.Name}
          * key.
          *
@@ -252,7 +252,7 @@ namespace biz.ritter.javapi.util.jar
             return (String) map.get(name);
         }
 
-        /**
+         /*
          * Returns the string associated with the parameter name.
          *
          * @param name
@@ -264,7 +264,7 @@ namespace biz.ritter.javapi.util.jar
             return (String) map.get(new AttributesNS.Name(name));
         }
 
-        /**
+         /*
          * Stores the value {@code val} associated with the key {@code name} in this
          * {@code Attributes}.
          *
@@ -281,7 +281,7 @@ namespace biz.ritter.javapi.util.jar
     #endregion
 
     namespace AttributesNS {
-        /**
+         /*
             * The name part of the name/value pairs constituting an attribute as
             * defined by the specification of the JAR manifest. May be composed of the
             * following ASCII signs as defined in the EBNF below:
@@ -297,99 +297,99 @@ namespace biz.ritter.javapi.util.jar
 
             private int hashCode;
 
-            /**
+             /*
                 * The class path (a main attribute).
                 */
             public static readonly Name CLASS_PATH = new Name("Class-Path"); //$NON-NLS-1$
 
-            /**
+             /*
                 * The version of the manifest file (a main attribute).
                 */
             public static readonly Name MANIFEST_VERSION = new Name("Manifest-Version"); //$NON-NLS-1$
 
-            /**
+             /*
                 * The main class's name (for stand-alone applications).
                 */
             public static readonly Name MAIN_CLASS = new Name("Main-Class"); //$NON-NLS-1$
 
-            /**
+             /*
                 * Defines the signature version of the JAR file.
                 */
             public static readonly Name SIGNATURE_VERSION = new Name(
                     "Signature-Version"); //$NON-NLS-1$
 
-            /**
+             /*
                 * The {@code Content-Type} manifest attribute.
                 */
             public static readonly Name CONTENT_TYPE = new Name("Content-Type"); //$NON-NLS-1$
 
-            /**
+             /*
                 * The {@code Sealed} manifest attribute which may have the value
                 * {@code true} for sealed archives.
                 */
             public static readonly Name SEALED = new Name("Sealed"); //$NON-NLS-1$
 
-            /**
+             /*
                 * The {@code Implementation-Title} attribute whose value is a string
                 * that defines the title of the extension implementation.
                 */
             public static readonly Name IMPLEMENTATION_TITLE = new Name(
                     "Implementation-Title"); //$NON-NLS-1$
 
-            /**
+             /*
                 * The {@code Implementation-Version} attribute defining the version of
                 * the extension implementation.
                 */
             public static readonly Name IMPLEMENTATION_VERSION = new Name(
                     "Implementation-Version"); //$NON-NLS-1$
 
-            /**
+             /*
                 * The {@code Implementation-Vendor} attribute defining the organization
                 * that maintains the extension implementation.
                 */
             public static readonly Name IMPLEMENTATION_VENDOR = new Name(
                     "Implementation-Vendor"); //$NON-NLS-1$
 
-            /**
+             /*
                 * The {@code Specification-Title} attribute defining the title of the
                 * extension specification.
                 */
             public static readonly Name SPECIFICATION_TITLE = new Name(
                     "Specification-Title"); //$NON-NLS-1$
 
-            /**
+             /*
                 * The {@code Specification-Version} attribute defining the version of
                 * the extension specification.
                 */
             public static readonly Name SPECIFICATION_VERSION = new Name(
                     "Specification-Version"); //$NON-NLS-1$
 
-            /**
+             /*
                 * The {@code Specification-Vendor} attribute defining the organization
                 * that maintains the extension specification.
                 */
             public static readonly Name SPECIFICATION_VENDOR = new Name(
                     "Specification-Vendor"); //$NON-NLS-1$
 
-            /**
+             /*
                 * The {@code Extension-List} attribute defining the extensions that are
                 * needed by the applet.
                 */
             public static readonly Name EXTENSION_LIST = new Name("Extension-List"); //$NON-NLS-1$
 
-            /**
+             /*
                 * The {@code Extension-Name} attribute which defines the unique name of
                 * the extension.
                 */
             public static readonly Name EXTENSION_NAME = new Name("Extension-Name"); //$NON-NLS-1$
 
-            /**
+             /*
                 * The {@code Extension-Installation} attribute.
                 */
             public static readonly Name EXTENSION_INSTALLATION = new Name(
                     "Extension-Installation"); //$NON-NLS-1$
 
-            /**
+             /*
                 * The {@code Implementation-Vendor-Id} attribute specifies the vendor
                 * of an extension implementation if the applet requires an
                 * implementation from a specific vendor.
@@ -397,7 +397,7 @@ namespace biz.ritter.javapi.util.jar
             public static readonly Name IMPLEMENTATION_VENDOR_ID = new Name(
                     "Implementation-Vendor-Id"); //$NON-NLS-1$
 
-            /**
+             /*
                 * The {@code Implementation-URL} attribute specifying a URL that can be
                 * used to obtain the most recent version of the extension if the
                 * required version is not already installed.
@@ -407,7 +407,7 @@ namespace biz.ritter.javapi.util.jar
 
             protected internal static readonly Name NAME = new Name("Name"); //$NON-NLS-1$
 
-            /**
+             /*
                 * A String which must satisfy the following EBNF grammar to specify an
                 * additional attribute:
                 *
@@ -440,7 +440,7 @@ namespace biz.ritter.javapi.util.jar
                 }
             }
 
-            /**
+             /*
                 * A private constructor for a trusted attribute name.
                 */
             protected internal Name(byte[] buf) {
@@ -451,7 +451,7 @@ namespace biz.ritter.javapi.util.jar
                 return name;
             }
 
-            /**
+             /*
                 * Returns this attribute name.
                 *
                 * @return the attribute name.
@@ -465,7 +465,7 @@ namespace biz.ritter.javapi.util.jar
                 }
             }
 
-            /**
+             /*
                 * Returns whether the argument provided is the same as the attribute
                 * name.
                 *
@@ -482,7 +482,7 @@ namespace biz.ritter.javapi.util.jar
 
                 return Util.asciiEqualsIgnoreCase(name, ((Name) obj).name);
             }
-            /**
+             /*
              * Computes a hash code of the name.
              *
              * @return the hash value computed from the name.

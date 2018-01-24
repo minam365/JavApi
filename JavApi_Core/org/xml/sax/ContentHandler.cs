@@ -8,7 +8,7 @@ using System;
 
 namespace org.xml.sax
 {
-	/**
+	 /*
  * Receive notification of the logical content of a document.
  *
  * <blockquote>
@@ -58,7 +58,7 @@ namespace org.xml.sax
  */
 	public interface ContentHandler
 	{
-		/**
+		 /*
      * Receive an object for locating the origin of SAX document events.
      *
      * <p>SAX parsers are strongly encouraged (though not absolutely
@@ -87,7 +87,7 @@ namespace org.xml.sax
      */
 		void setDocumentLocator (Locator locator);
 
-		/**
+		 /*
      * Receive notification of the beginning of a document.
      *
      * <p>The SAX parser will invoke this method only once, before any
@@ -100,7 +100,7 @@ namespace org.xml.sax
      */
 		void startDocument ();
 		//throws SAXException;
-		/**
+		 /*
      * Receive notification of the end of a document.
      *
      * <p><strong>There is an apparent contradiction between the
@@ -123,7 +123,7 @@ namespace org.xml.sax
      */
 		void endDocument ();
 		//throws SAXException;
-		/**
+		 /*
      * Begin the scope of a prefix-URI Namespace mapping.
      *
      * <p>The information from this event is not necessary for
@@ -163,7 +163,7 @@ namespace org.xml.sax
      */
 		void startPrefixMapping (String prefix, String uri);
 		//throws SAXException;
-		/**
+		 /*
      * End the scope of a prefix-URI mapping.
      *
      * <p>See {@link #startPrefixMapping startPrefixMapping} for 
@@ -181,7 +181,7 @@ namespace org.xml.sax
      */
 		void endPrefixMapping (String prefix);
 		//	throws SAXException;
-		/**
+		 /*
      * Receive notification of the beginning of an element.
      *
      * <p>The Parser will invoke this method at the beginning of every
@@ -248,7 +248,7 @@ namespace org.xml.sax
 		void startElement (String uri, String localName,
 		                     String qName, Attributes atts);
 		//throws SAXException;
-		/**
+		 /*
      * Receive notification of the end of an element.
      *
      * <p>The SAX parser will invoke this method at the end of every
@@ -272,7 +272,7 @@ namespace org.xml.sax
 		void endElement (String uri, String localName,
 		                   String qName);
 		//	throws SAXException;
-		/**
+		 /*
      * Receive notification of character data.
      *
      * <p>The Parser will call this method to report each chunk of
@@ -317,7 +317,7 @@ namespace org.xml.sax
      */
 		void characters (char[] ch, int start, int length);
 		//	throws SAXException;
-		/**
+		 /*
      * Receive notification of ignorable whitespace in element content.
      *
      * <p>Validating Parsers must use this method to report each chunk
@@ -344,7 +344,7 @@ namespace org.xml.sax
      */
 		void ignorableWhitespace (char[] ch, int start, int length);
 		//	throws SAXException;
-		/**
+		 /*
      * Receive notification of a processing instruction.
      *
      * <p>The Parser will invoke this method once for each processing
@@ -368,7 +368,7 @@ namespace org.xml.sax
      */
 		void processingInstruction (String target, String data);
 		//	throws SAXException;
-		/**
+		 /*
      * Receive notification of a skipped entity.
      * This is not called for entity references within markup constructs
      * such as element start tags or markup declarations.  (The XML

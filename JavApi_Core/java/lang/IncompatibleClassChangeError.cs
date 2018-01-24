@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang{
 
 
-	/**
+	 /*
 	 * {@code IncompatibleClassChangeError} is the superclass of all classes which
 	 * represent errors that occur when inconsistent class files are loaded into
 	 * the same running image.
@@ -28,7 +28,7 @@ namespace biz.ritter.javapi.lang{
 
 	    private const long serialVersionUID = -4914975503642802119L;
 
-	    /**
+	     /*
 	     * Constructs a new {@code IncompatibleClassChangeError} that includes the
 	     * current stack trace.
 	     */
@@ -36,7 +36,7 @@ namespace biz.ritter.javapi.lang{
 	        
 	    }
 
-	    /**
+	     /*
 	     * Constructs a new {@code IncompatibleClassChangeError} with the current
 	     * stack trace and the specified detail message.
 	     * 

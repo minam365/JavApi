@@ -16,13 +16,13 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.sql
 {
-    /**
+     /*
      * A Java representation of the SQL {@code ARRAY} type.
      */
     public interface Array
     {
 
-        /**
+         /*
          * Retrieves the contents of the SQL {@code ARRAY} value as a Java array
          * object.
          * 
@@ -32,7 +32,7 @@ namespace biz.ritter.javapi.sql
          */
         Object getArray();// throws SQLException;
 
-        /**
+         /*
          * Returns part of the SQL {@code ARRAY} associated with this array,
          * starting at a particular {@code index} and comprising up to {@code count}
          * successive elements of the SQL array.
@@ -48,7 +48,7 @@ namespace biz.ritter.javapi.sql
          */
         Object getArray(long index, int count);// throws SQLException;
 
-        /**
+         /*
          * Returns part of the SQL {@code ARRAY} associated with this array,
          * starting at a particular {@code index} and comprising up to {@code count}
          * successive elements of the SQL array.
@@ -68,7 +68,7 @@ namespace biz.ritter.javapi.sql
         Object getArray(long index, int count, java.util.Map<String, java.lang.Class> map)
                ;// throws SQLException;
 
-        /**
+         /*
          * Returns the data from the underlying SQL {@code ARRAY} as a Java array.
          * 
          * @param map
@@ -80,7 +80,7 @@ namespace biz.ritter.javapi.sql
          */
         Object getArray(java.util.Map<String, java.lang.Class> map);// throws SQLException;
 
-        /**
+         /*
          * Returns the JDBC type of the entries in this array's underlying 
          * SQL array.
          * 
@@ -90,7 +90,7 @@ namespace biz.ritter.javapi.sql
          */
         int getBaseType();// throws SQLException;
 
-        /**
+         /*
          * Returns the SQL type name of the entries in this array's underlying 
          * SQL array.
          * 
@@ -100,7 +100,7 @@ namespace biz.ritter.javapi.sql
          */
         String getBaseTypeName();// throws SQLException;
 
-        /**
+         /*
          * Returns a ResultSet object which holds the entries of the SQL {@code
          * ARRAY} associated with this array.
          * 
@@ -110,7 +110,7 @@ namespace biz.ritter.javapi.sql
          */
         ResultSet getResultSet();// throws SQLException;
 
-        /**
+         /*
          * Returns a {@code ResultSet} object that holds the entries of a subarray,
          * beginning at a particular index and comprising up to {@code count} 
          * successive entries.
@@ -126,7 +126,7 @@ namespace biz.ritter.javapi.sql
          */
         ResultSet getResultSet(long index, int count);// throws SQLException;
 
-        /**
+         /*
          * Returns a {@code ResultSet} object that holds the entries of a subarray,
          * beginning at a particular index and comprising up to {@code count} 
          * successive entries.
@@ -147,7 +147,7 @@ namespace biz.ritter.javapi.sql
         ResultSet getResultSet(long index, int count,
                 java.util.Map<String, java.lang.Class> map);// throws SQLException;
 
-        /**
+         /*
          * Returns a {@code ResultSet} object which holds the entries of the SQL
          * {@code ARRAY} associated with this array.
          * 
@@ -161,7 +161,7 @@ namespace biz.ritter.javapi.sql
         ResultSet getResultSet(java.util.Map<String, java.lang.Class> map)
                ;// throws SQLException;
 
-        /**
+         /*
          * TODO Javadoc
          * 
          * @throws SQLException

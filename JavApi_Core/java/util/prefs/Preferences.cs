@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.prefs
 {
 
-    /**
+     /*
      * An instance of the class {@code Preferences} represents one node in a
      * preference tree, which provides a mechanism to store and access configuration
      * data in a hierarchical way. Two hierarchy trees are maintained, one for
@@ -82,17 +82,17 @@ namespace biz.ritter.javapi.util.prefs
      */
     public abstract class Preferences
     {
-        /**
+         /*
          * Maximum size in characters allowed for a preferences key.
          */
         public const int MAX_KEY_LENGTH = 80;
 
-        /**
+         /*
          * Maximum size in characters allowed for a preferences name.
          */
         public const int MAX_NAME_LENGTH = 80;
 
-        /**
+         /*
          * Maximum size in characters allowed for a preferences value.
          */
         public const int MAX_VALUE_LENGTH = 8192;
@@ -201,7 +201,7 @@ namespace biz.ritter.javapi.util.prefs
             return null;
         }
 
-        /**
+         /*
          * Default constructor, for use by subclasses only.
          */
         protected Preferences() :
@@ -209,14 +209,14 @@ namespace biz.ritter.javapi.util.prefs
         {
         }
 
-        /**
+         /*
          * Gets the absolute path string of this preference node.
          * 
          * @return the preference node's absolute path string.
          */
         public abstract String absolutePath();
 
-        /**
+         /*
          * Returns the names of all children of this node or an empty string if this
          * node has no children.
          * 
@@ -229,7 +229,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract String[] childrenNames();//throws BackingStoreException;
 
-        /**
+         /*
          * Removes all preferences of this node.
          * 
          * @throws BackingStoreException
@@ -240,7 +240,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract void clear();// throws BackingStoreException;
 
-        /**
+         /*
          * Exports all of the preferences of this node to a XML document using the
          * given output stream.
          * <p>
@@ -267,7 +267,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract void exportNode(java.io.OutputStream ostream);// throws IOException, BackingStoreException;
 
-        /**
+         /*
          * Exports all of the preferences of this node and all its descendants to a
          * XML document using the given output stream.
          * <p>
@@ -295,7 +295,7 @@ namespace biz.ritter.javapi.util.prefs
         public abstract void exportSubtree(java.io.OutputStream ostream);// throws IOException,
         //BackingStoreException;
 
-        /**
+         /*
          * Forces all pending updates to this node and its descendants to be
          * persisted in the backing store.
          * <p>
@@ -309,7 +309,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract void flush();// throws BackingStoreException;
 
-        /**
+         /*
          * Gets the {@code String} value mapped to the given key or its default
          * value if no value is mapped or no backing store is available.
          * <p>
@@ -331,7 +331,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract String get(String key, String deflt);
 
-        /**
+         /*
          * Gets the {@code boolean} value mapped to the given key or its default
          * value if no value is mapped, if the backing store is unavailable, or if
          * the value is invalid.
@@ -359,7 +359,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract bool getBoolean(String key, bool deflt);
 
-        /**
+         /*
          * Gets the {@code byte} array value mapped to the given key or its default
          * value if no value is mapped, if the backing store is unavailable, or if
          * the value is an invalid string.
@@ -388,7 +388,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract byte[] getByteArray(String key, byte[] deflt);
 
-        /**
+         /*
          * Gets the {@code double} value mapped to the given key or its default
          * value if no value is mapped, if the backing store is unavailable, or if
          * the value is an invalid string.
@@ -416,7 +416,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract double getDouble(String key, double deflt);
 
-        /**
+         /*
          * Gets the {@code float} value mapped to the given key or its default value
          * if no value is mapped, if the backing store is unavailable, or if the
          * value is an invalid string.
@@ -445,7 +445,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract float getFloat(String key, float deflt);
 
-        /**
+         /*
          * Gets the {@code int} value mapped to the given key or its default value
          * if no value is mapped, if the backing store is unavailable, or if the
          * value is an invalid string.
@@ -474,7 +474,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract int getInt(String key, int deflt);
 
-        /**
+         /*
          * Gets the {@code long} value mapped to the given key or its default value
          * if no value is mapped, if the backing store is unavailable, or if the
          * value is an invalid string.
@@ -502,7 +502,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract long getLong(String key, long deflt);
 
-        /**
+         /*
          * Imports all the preferences from an XML document using the given input
          * stream.
          * <p>
@@ -541,7 +541,7 @@ namespace biz.ritter.javapi.util.prefs
             //XMLParser.importPrefs(istream);
         }
 
-        /**
+         /*
          * Returns whether this is a user preference node.
          * 
          * @return {@code true}, if this is a user preference node, {@code false} if
@@ -549,7 +549,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract bool isUserNode();
 
-        /**
+         /*
          * Returns all preference keys stored in this node or an empty array if no
          * key was found.
          * 
@@ -562,14 +562,14 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract String[] keys();//throws BackingStoreException;
 
-        /**
+         /*
          * Returns the name of this node.
          * 
          * @return the name of this node.
          */
         public abstract String name();
 
-        /**
+         /*
          * Returns the preference node with the given path name. The path name can
          * be relative or absolute. The requested node and its ancestors will
          * be created if they do not exist.
@@ -590,7 +590,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract Preferences node(String path);
 
-        /**
+         /*
          * Returns whether the preference node with the given path name exists. The
          * path is treated as relative to this node if it doesn't start with a slash,
          * otherwise it is treated as an absolute path.
@@ -617,7 +617,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract bool nodeExists(String path);// throws BackingStoreException;
 
-        /**
+         /*
          * Returns the parent preference node of this node or {@code null} if this
          * node is the root node.
          * 
@@ -627,7 +627,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract Preferences parent();
 
-        /**
+         /*
          * Adds a new preference to this node using the given key and value or
          * updates the value if a preference with the given key already exists.
          * 
@@ -646,7 +646,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract void put(String key, String value);
 
-        /**
+         /*
          * Adds a new preference with a {@code boolean} value to this node using the
          * given key and value or updates the value if a preference with the given
          * key already exists.
@@ -665,7 +665,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract void putBoolean(String key, bool value);
 
-        /**
+         /*
          * Adds a new preference to this node using the given key and the string
          * form of the given value or updates the value if a preference with the
          * given key already exists.
@@ -690,7 +690,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract void putByteArray(String key, byte[] value);
 
-        /**
+         /*
          * Adds a new preference to this node using the given key and {@code double}
          * value or updates the value if a preference with the
          * given key already exists.
@@ -713,7 +713,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract void putDouble(String key, double value);
 
-        /**
+         /*
          * Adds a new preference to this node using the given key and {@code float}
          * value or updates the value if a preference with the
          * given key already exists.
@@ -736,7 +736,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract void putFloat(String key, float value);
 
-        /**
+         /*
          * Adds a new preference to this node using the given key and {@code int}
          * value or updates the value if a preference with the
          * given key already exists.
@@ -759,7 +759,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract void putInt(String key, int value);
 
-        /**
+         /*
          * Adds a new preference to this node using the given key and {@code long}
          * value or updates the value if a preference with the
          * given key already exists.
@@ -782,7 +782,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract void putLong(String key, long value);
 
-        /**
+         /*
          * Removes the preference mapped to the given key from this node.
          * 
          * @param key
@@ -794,7 +794,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract void remove(String key);
 
-        /**
+         /*
          * Removes this preference node with all its descendants. The removal won't
          * necessarily be persisted until the method {@code flush()} is invoked.
          * 
@@ -808,7 +808,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract void removeNode();// throws BackingStoreException;
 
-        /**
+         /*
          * Registers a {@code NodeChangeListener} instance for this node, which will
          * handle {@code NodeChangeEvent}s. {@code NodeChangeEvent}s will be fired
          * when a child node has been added to or removed from this node.
@@ -822,7 +822,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract void addNodeChangeListener(NodeChangeListener ncl);
 
-        /**
+         /*
          * Registers a {@code PreferenceChangeListener} instance for this node,
          * which will handle {@code PreferenceChangeEvent}s. {@code
          * PreferenceChangeEvent}s will be fired when a preference has been added
@@ -837,7 +837,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract void addPreferenceChangeListener(PreferenceChangeListener pcl);
 
-        /**
+         /*
          * Removes the given {@code NodeChangeListener} instance from this node.
          * 
          * @param ncl
@@ -849,7 +849,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract void removeNodeChangeListener(NodeChangeListener ncl);
 
-        /**
+         /*
          * Removes the given {@code PreferenceChangeListener} instance from this
          * node.
          * 
@@ -862,7 +862,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract void removePreferenceChangeListener(PreferenceChangeListener pcl);
 
-        /**
+         /*
          * Synchronizes the data of this preference node and its descendants with
          * the back-end preference store. Any changes found in the back-end data
          * should be reflected in this node and its descendants, and at the same
@@ -876,7 +876,7 @@ namespace biz.ritter.javapi.util.prefs
          */
         public abstract void sync();// throws BackingStoreException;
 
-        /**
+         /*
          * Returns the system preference node for the package of the given class.
          * The absolute path of the returned node is one slash followed by the given
          * class's full package name, replacing each period character ('.') with
@@ -902,7 +902,7 @@ namespace biz.ritter.javapi.util.prefs
             return factory.systemRoot().node(getNodeName(c));
         }
 
-        /**
+         /*
          * Returns the root node of the system preference hierarchy.
          * 
          * @return the system preference hierarchy root node.
@@ -926,7 +926,7 @@ namespace biz.ritter.javapi.util.prefs
             }
         }
 
-        /**
+         /*
          * Returns the user preference node for the package of the given class.
          * The absolute path of the returned node is one slash followed by the given
          * class's full package name, replacing each period character ('.') with
@@ -963,7 +963,7 @@ namespace biz.ritter.javapi.util.prefs
             return "/" + p.getName().replace('.', '/'); //$NON-NLS-1$
         }
 
-        /**
+         /*
          * Returns the root node of the user preference hierarchy.
          * 
          * @return the user preference hierarchy root node.
@@ -977,7 +977,7 @@ namespace biz.ritter.javapi.util.prefs
             return factory.userRoot();
         }
 
-        /**
+         /*
          * Returns a string representation of this node. The format is "User/System
          * Preference Node: " followed by this node's absolute path.
          * 

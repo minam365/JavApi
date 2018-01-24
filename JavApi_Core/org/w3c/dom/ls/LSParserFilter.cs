@@ -14,7 +14,7 @@ using org.w3c.dom;
 namespace org.w3c.dom.ls
 {
 
-    /**
+     /*
      *  <code>LSParserFilter</code>s provide applications the ability to examine 
      * nodes as they are being constructed while parsing. As each node is 
      * examined, it may be modified or removed, or the entire parse may be 
@@ -46,7 +46,7 @@ namespace org.w3c.dom.ls
      */
     public interface LSParserFilter
     {
-        /**
+         /*
          *  The parser will call this method after each <code>Element</code> start 
          * tag has been scanned, but before the remainder of the 
          * <code>Element</code> is processed. The intent is to allow the 
@@ -91,7 +91,7 @@ namespace org.w3c.dom.ls
          */
         short startElement(Element elementArg);
 
-        /**
+         /*
          * This method will be called by the parser at the completion of the 
          * parsing of each node. The node and all of its descendants will exist 
          * and be complete. The parent node will also exist, although it may be 
@@ -135,7 +135,7 @@ namespace org.w3c.dom.ls
          */
         short acceptNode(Node nodeArg);
 
-        /**
+         /*
          *  Tells the <code>LSParser</code> what types of nodes to show to the 
          * method <code>LSParserFilter.acceptNode</code>. If a node is not shown 
          * to the filter using this attribute, it is automatically included in 
@@ -154,20 +154,20 @@ namespace org.w3c.dom.ls
     public sealed class LSParserFilterConstants
     {
         // Constants returned by startElement and acceptNode
-        /**
+         /*
          * Accept the node.
          */
         public static readonly short FILTER_ACCEPT = 1;
-        /**
+         /*
          * Reject the node and its children.
          */
         public static readonly short FILTER_REJECT = 2;
-        /**
+         /*
          * Skip this single node. The children of this node will still be 
          * considered. 
          */
         public static readonly short FILTER_SKIP = 3;
-        /**
+         /*
          *  Interrupt the normal processing of the document. 
          */
         public static readonly short FILTER_INTERRUPT = 4;

@@ -10,7 +10,7 @@ using java = biz.ritter.javapi;
 namespace org.xml.sax.helpers
 {
 
-/**
+ /*
  * Factory for creating an XML reader.
  *
  * <blockquote>
@@ -45,7 +45,7 @@ namespace org.xml.sax.helpers
  */
 sealed public class XMLReaderFactory
 {
-    /**
+     /*
      * Private constructor.
      *
      * <p>This constructor prevents the class from being instantiated.</p>
@@ -56,7 +56,7 @@ sealed public class XMLReaderFactory
 
     private static readonly String property = "org.xml.sax.driver";
 
-    /**
+     /*
      * Attempt to create an XMLReader from system defaults.
      * In environments which can support it, the name of the XMLReader
      * class is determined by trying each these options in order, and
@@ -157,7 +157,7 @@ sealed public class XMLReaderFactory
     }
 
 
-    /**
+     /*
      * Attempt to create an XML reader from a class name.
      *
      * <p>Given a class name, this method attempts to load

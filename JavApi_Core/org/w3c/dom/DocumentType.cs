@@ -14,7 +14,7 @@ using System;
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      * Each <code>Document</code> has a <code>doctype</code> attribute whose value 
      * is either <code>null</code> or a <code>DocumentType</code> object. The 
      * <code>DocumentType</code> interface in the DOM Core provides an interface 
@@ -26,13 +26,13 @@ namespace org.w3c.dom
      */
     public interface DocumentType : Node
     {
-        /**
+         /*
          * The name of DTD; i.e., the name immediately following the 
          * <code>DOCTYPE</code> keyword.
          */
         String getName();
 
-        /**
+         /*
          * A <code>NamedNodeMap</code> containing the general entities, both 
          * external and internal, declared in the DTD. Parameter entities are 
          * not contained. Duplicates are discarded. For example in: 
@@ -49,7 +49,7 @@ namespace org.w3c.dom
          */
         NamedNodeMap getEntities();
 
-        /**
+         /*
          * A <code>NamedNodeMap</code> containing the notations declared in the 
          * DTD. Duplicates are discarded. Every node in this map also implements 
          * the <code>Notation</code> interface.
@@ -58,19 +58,19 @@ namespace org.w3c.dom
          */
         NamedNodeMap getNotations();
 
-        /**
+         /*
          * The public identifier of the external subset.
          * @since DOM Level 2
          */
         String getPublicId();
 
-        /**
+         /*
          * The system identifier of the external subset.
          * @since DOM Level 2
          */
         String getSystemId();
 
-        /**
+         /*
          * The internal subset as a string.The actual content returned depends on 
          * how much information is available to the implementation. This may 
          * vary depending on various parameters, including the XML processor 

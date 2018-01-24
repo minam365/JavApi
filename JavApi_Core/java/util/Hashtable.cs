@@ -34,7 +34,7 @@ namespace biz.ritter.javapi.util
         {
         }
 
-		public Hashtable(int defaultSize) : base () {}
+        public Hashtable(int defaultSize) : base () {}
 
         public override void clear()
         {

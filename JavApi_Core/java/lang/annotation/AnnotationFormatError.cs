@@ -20,7 +20,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang.annotation
 {
-	/**
+	 /*
  * Indicates that an annotation in the binary representation of a class is
  * syntactically incorrect and the annotation parser is unable to process it.
  * This exception is unlikely to ever occur, given that the code has been
@@ -32,7 +32,7 @@ namespace biz.ritter.javapi.lang.annotation
 	{
 		private const long serialVersionUID = -4256701562333669892L;
 
-		/**
+		 /*
      * Constructs an instance with the message provided.
      *
      * @param message
@@ -43,7 +43,7 @@ namespace biz.ritter.javapi.lang.annotation
 		{
 		}
 
-		/**
+		 /*
      * Constructs an instance with a message and a cause.
      *
      * @param message
@@ -56,7 +56,7 @@ namespace biz.ritter.javapi.lang.annotation
 		{
 		}
 
-		/**
+		 /*
      * Constructs an instance with a cause. If the cause is not
      * {@code null}, then {@code cause.toString()} is used as the
      * error's message.

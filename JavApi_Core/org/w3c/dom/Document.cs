@@ -14,7 +14,7 @@ using System;
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      * The <code>Document</code> interface represents the entire HTML or XML 
      * document. Conceptually, it is the root of the document tree, and provides 
      * the primary access to the document's data.
@@ -28,7 +28,7 @@ namespace org.w3c.dom
      */
     public interface Document : Node
     {
-        /**
+         /*
          * The Document Type Declaration (see <code>DocumentType</code>) 
          * associated with this document. For HTML documents as well as XML 
          * documents without a document type declaration this returns 
@@ -40,20 +40,20 @@ namespace org.w3c.dom
          */
         DocumentType getDoctype();
 
-        /**
+         /*
          * The <code>DOMImplementation</code> object that handles this document. A 
          * DOM application may use objects from multiple implementations.
          */
         DOMImplementation getImplementation();
 
-        /**
+         /*
          * This is a convenience attribute that allows direct access to the child 
          * node that is the root element of the document. For HTML documents, 
          * this is the element with the tagName "HTML".
          */
         Element getDocumentElement();
 
-        /**
+         /*
          * Creates an element of the type specified. Note that the instance 
          * returned implements the <code>Element</code> interface, so attributes 
          * can be specified directly on the returned object.
@@ -76,27 +76,27 @@ namespace org.w3c.dom
          */
         Element createElement(String tagName);//                                 throws DOMException;
 
-        /**
+         /*
          * Creates an empty <code>DocumentFragment</code> object. 
          * @return A new <code>DocumentFragment</code>.
          */
         DocumentFragment createDocumentFragment();
 
-        /**
+         /*
          * Creates a <code>Text</code> node given the specified string.
          * @param dataThe data for the node.
          * @return The new <code>Text</code> object.
          */
         Text createTextNode(String data);
 
-        /**
+         /*
          * Creates a <code>Comment</code> node given the specified string.
          * @param dataThe data for the node.
          * @return The new <code>Comment</code> object.
          */
         Comment createComment(String data);
 
-        /**
+         /*
          * Creates a <code>CDATASection</code> node whose value is the specified 
          * string.
          * @param dataThe data for the <code>CDATASection</code> contents.
@@ -106,7 +106,7 @@ namespace org.w3c.dom
          */
         CDATASection createCDATASection(String data);//                                           throws DOMException;
 
-        /**
+         /*
          * Creates a <code>ProcessingInstruction</code> node given the specified 
          * name and data strings.
          * @param targetThe target part of the processing instruction.
@@ -120,7 +120,7 @@ namespace org.w3c.dom
         ProcessingInstruction createProcessingInstruction(String target,
                                                                 String data);//                                                             throws DOMException;
 
-        /**
+         /*
          * Creates an <code>Attr</code> of the given name. Note that the 
          * <code>Attr</code> instance can then be set on an <code>Element</code> 
          * using the <code>setAttributeNode</code> method. 
@@ -137,7 +137,7 @@ namespace org.w3c.dom
          */
         Attr createAttribute(String name);//                                throws DOMException;
 
-        /**
+         /*
          * Creates an <code>EntityReference</code> object. In addition, if the 
          * referenced entity is known, the child list of the 
          * <code>EntityReference</code> node is made the same as that of the 
@@ -156,7 +156,7 @@ namespace org.w3c.dom
          */
         EntityReference createEntityReference(String name);//                                                 throws DOMException;
 
-        /**
+         /*
          * Returns a <code>NodeList</code> of all the <code>Elements</code> with a 
          * given tag name in the order in which they are encountered in a 
          * preorder traversal of the <code>Document</code> tree. 
@@ -167,7 +167,7 @@ namespace org.w3c.dom
          */
         NodeList getElementsByTagName(String tagname);
 
-        /**
+         /*
          * Imports a node from another document to this document. The returned 
          * node has no parent; (<code>parentNode</code> is <code>null</code>). 
          * The source node is not altered or removed from the original document; 
@@ -268,7 +268,7 @@ namespace org.w3c.dom
         Node importNode(Node importedNode,
                                bool deep);//                           throws DOMException;
 
-        /**
+         /*
          * Creates an element of the given qualified name and namespace URI. 
          * HTML-only DOM implementations do not need to implement this method.
          * @param namespaceURIThe namespace URI of the element to create.
@@ -296,7 +296,7 @@ namespace org.w3c.dom
         Element createElementNS(String namespaceURI,
                                        String qualifiedName);//                                   throws DOMException;
 
-        /**
+         /*
          * Creates an attribute of the given qualified name and namespace URI. 
          * HTML-only DOM implementations do not need to implement this method.
          * @param namespaceURIThe namespace URI of the attribute to create.
@@ -327,7 +327,7 @@ namespace org.w3c.dom
         Attr createAttributeNS(String namespaceURI,
                                       String qualifiedName);//                                  throws DOMException;
 
-        /**
+         /*
          * Returns a <code>NodeList</code> of all the <code>Elements</code> with a 
          * given local name and namespace URI in the order in which they are 
          * encountered in a preorder traversal of the <code>Document</code> tree.
@@ -342,7 +342,7 @@ namespace org.w3c.dom
         NodeList getElementsByTagNameNS(String namespaceURI,
                                                String localName);
 
-        /**
+         /*
          * Returns the <code>Element</code> whose <code>ID</code> is given by 
          * <code>elementId</code>. If no such element exists, returns 
          * <code>null</code>. Behavior is not defined if more than one element 

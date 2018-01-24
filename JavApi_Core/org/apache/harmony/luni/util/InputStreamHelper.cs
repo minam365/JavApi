@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace org.apache.harmony.luni.util
 {
 
-    /**
+     /*
      * The class contains static {@link java.io.InputStream} utilities.
      */
     internal class InputStreamHelper {
@@ -26,7 +26,7 @@ namespace org.apache.harmony.luni.util
          *               protected internal and so we do not use reflection.
          */
 
-        /**
+         /*
          * Reads all bytes from {@link java.io.ByteArrayInputStream} using its
          * underlying buffer directly.
          * 
@@ -56,7 +56,7 @@ namespace org.apache.harmony.luni.util
             return buffer;
         }
 
-        /**
+         /*
          * The utility method for reading the whole input stream into a snapshot
          * buffer. To speed up the access it works with an underlying buffer for a
          * given {@link java.io.ByteArrayInputStream}.
@@ -81,7 +81,7 @@ namespace org.apache.harmony.luni.util
             throw new java.lang.UnsupportedOperationException();
         }
 
-        /**
+         /*
          * Reads all the bytes from the given input stream.
          * 
          * Calls read multiple times on the given input stream until it receives an
@@ -126,25 +126,25 @@ namespace org.apache.harmony.luni.util
         }
     }
 #region ExposedByteArrayinputStream
-    /**
+     /*
         * The extension of <code>ByteArrayInputStream</code> which exposes an
         * underlying buffer.
         */
     internal class ExposedByteArrayInputStream : java.io.ByteArrayInputStream {
 
-        /**
+         /*
             * @see java.io.ByteArrayInputStream(byte[])
             */
         public ExposedByteArrayInputStream(byte[] buf) :base(buf){
         }
 
-        /**
+         /*
             * @see java.io.ByteArrayInputStream(byte[], int, int)
             */
         public ExposedByteArrayInputStream(byte[] buf, int offset, int length) :base(buf, offset, length){
         }
 
-        /**
+         /*
             * Reads the whole stream and returns the stream snapshot.
             */
         public virtual byte[] expose() {

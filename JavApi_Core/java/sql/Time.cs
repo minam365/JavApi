@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.sql
 {
-    /**
+     /*
      * Java representation of an SQL {@code TIME} value. Provides utilities to 
      * format and parse the time's representation as a String in JDBC escape format.
      */
@@ -26,7 +26,7 @@ namespace biz.ritter.javapi.sql
 
         private const long serialVersionUID = 8397324403548013681L;
 
-        /**
+         /*
          * Constructs a {@code Time} object using the supplied values for <i>Hour</i>,
          * <i>Minute</i> and <i>Second</i>. The <i>Year</i>, <i>Month</i> and
          * <i>Day</i> elements of the {@code Time} object are set to the date
@@ -52,7 +52,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Constructs a {@code Time} object using a supplied time specified in
          * milliseconds.
          * 
@@ -65,7 +65,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * @deprecated This method is deprecated and must not be used. An SQL
          *             {@code Time} object does not have a {@code Date} component.
          * @return does not return anything.
@@ -78,7 +78,7 @@ namespace biz.ritter.javapi.sql
             throw new java.lang.IllegalArgumentException();
         }
 
-        /**
+         /*
          * @deprecated This method is deprecated and must not be used. An SQL
          *             {@code Time} object does not have a <i>Day</i> component.
          * @return does not return anything.
@@ -91,7 +91,7 @@ namespace biz.ritter.javapi.sql
             throw new java.lang.IllegalArgumentException();
         }
 
-        /**
+         /*
          * @deprecated This method is deprecated and must not be used. An SQL
          *             {@code Time} object does not have a <i>Month</i> component.
          * @return does not return anything.
@@ -104,7 +104,7 @@ namespace biz.ritter.javapi.sql
             throw new java.lang.IllegalArgumentException();
         }
 
-        /**
+         /*
          * @deprecated This method is deprecated and must not be used. An SQL
          *             {@code Time} object does not have a <i>Year</i> component.
          * @return does not return anything.
@@ -117,7 +117,7 @@ namespace biz.ritter.javapi.sql
             throw new java.lang.IllegalArgumentException();
         }
 
-        /**
+         /*
          * @deprecated This method is deprecated and must not be used. An SQL
          *             {@code Time} object does not have a {@code Date} component.
          * @throws IllegalArgumentException
@@ -129,7 +129,7 @@ namespace biz.ritter.javapi.sql
             throw new java.lang.IllegalArgumentException();
         }
 
-        /**
+         /*
          * @deprecated This method is deprecated and must not be used. An SQL
          *             {@code Time} object does not have a <i>Month</i> component.
          * @throws IllegalArgumentException
@@ -141,7 +141,7 @@ namespace biz.ritter.javapi.sql
             throw new java.lang.IllegalArgumentException();
         }
 
-        /**
+         /*
          * @deprecated This method is deprecated and must not be used. An SQL
          *             {@code Time} object does not have a <i>Year</i> component.
          * @throws IllegalArgumentException
@@ -153,7 +153,7 @@ namespace biz.ritter.javapi.sql
             throw new java.lang.IllegalArgumentException();
         }
 
-        /**
+         /*
          * Sets the time for this {@code Time} object to the supplied milliseconds
          * value.
          * 
@@ -167,7 +167,7 @@ namespace biz.ritter.javapi.sql
             base.setTime(time);
         }
 
-        /**
+         /*
          * Formats the {@code Time} as a String in JDBC escape format: {@code
          * hh:mm:ss}.
          * 
@@ -202,7 +202,7 @@ namespace biz.ritter.javapi.sql
             sb.append(str);
         }
 
-        /**
+         /*
          * Creates a {@code Time} object from a string holding a time represented in
          * JDBC escape format: {@code hh:mm:ss}.
          * <p/>

@@ -52,7 +52,7 @@ namespace biz.ritter.javapi.util.logging
 			return result;
 		}
 		
-		/**
+		 /*
      * Constructs a {@code Handler} object with a default error manager instance
      * {@code ErrorManager}, the default encoding, and the default logging
      * level {@code Level.ALL}. It has no filter and no formatter.
@@ -84,7 +84,7 @@ namespace biz.ritter.javapi.util.logging
 		}
 		
 
-		/**
+		 /*
      * init the common properties, including filter, level, formatter, and
      * encoding
      */
@@ -140,7 +140,7 @@ namespace biz.ritter.javapi.util.logging
 			}
 		}
 
-		/**
+		 /*
          * Closes this handler. A flush operation will be performed and all the
          * associated resources will be freed. Client applications should not use
          * this handler after closing it.
@@ -151,12 +151,12 @@ namespace biz.ritter.javapi.util.logging
          */
         public abstract void close();
 
-        /**
+         /*
          * Flushes any buffered output.
          */
         public abstract void flush();
 
-        /**
+         /*
          * Accepts a logging request and sends it to the the target.
          * 
          * @param record
@@ -164,7 +164,7 @@ namespace biz.ritter.javapi.util.logging
          */
         public abstract void publish(LogRecord record);
 
-        /**
+         /*
          * Sets the logging level of the messages logged by this handler, levels
          * lower than this value will be dropped.
          * 
@@ -186,7 +186,7 @@ namespace biz.ritter.javapi.util.logging
             this.level = newLevel;
         }
 
-		/**
+		 /*
      * Gets the character encoding used by this handler, {@code null} for
      * default encoding.
      * 
@@ -196,7 +196,7 @@ namespace biz.ritter.javapi.util.logging
 			return this.encoding;
 		}
 		
-		/**
+		 /*
      * Gets the error manager used by this handler to report errors during
      * logging.
      * 
@@ -210,7 +210,7 @@ namespace biz.ritter.javapi.util.logging
 			return this.errorMan;
 		}
 		
-		/**
+		 /*
      * Gets the filter used by this handler.
      * 
      * @return the filter used by this handler (possibly {@code null}).
@@ -219,7 +219,7 @@ namespace biz.ritter.javapi.util.logging
 			return this.filter;
 		}
 		
-		/**
+		 /*
      * Gets the formatter used by this handler to format the logging messages.
      * 
      * @return the formatter used by this handler (possibly {@code null}).
@@ -228,7 +228,7 @@ namespace biz.ritter.javapi.util.logging
 			return this.formatter;
 		}
 
-		/**
+		 /*
      * Gets the logging level of this handler, records with levels lower than
      * this value will be dropped.
      * 
@@ -238,7 +238,7 @@ namespace biz.ritter.javapi.util.logging
 			return this.level;
 		}
 		
-		/**
+		 /*
      * Determines whether the supplied log record needs to be logged. The
      * logging levels will be checked as well as the filter.
      * 
@@ -259,7 +259,7 @@ namespace biz.ritter.javapi.util.logging
 			return false;
 		}
 		
-		/**
+		 /*
      * Reports an error to the error manager associated with this handler,
      * {@code ErrorManager} is used for that purpose. No security checks are
      * done, therefore this is compatible with environments where the caller
@@ -276,7 +276,7 @@ namespace biz.ritter.javapi.util.logging
 			this.errorMan.error(msg, ex, code);
 		}
 
-		/**
+		 /*
      * Sets the character encoding used by this handler. A {@code null} value
      * indicates the use of the default encoding. This internal method does
      * not check security.
@@ -304,7 +304,7 @@ namespace biz.ritter.javapi.util.logging
 			}
 		}
 		
-		/**
+		 /*
      * Sets the character encoding used by this handler, {@code null} indicates
      * a default encoding.
      * 
@@ -323,7 +323,7 @@ namespace biz.ritter.javapi.util.logging
 		}
 
 
-		/**
+		 /*
      * Sets the error manager for this handler.
      * 
      * @param em
@@ -342,7 +342,7 @@ namespace biz.ritter.javapi.util.logging
 			this.errorMan = em;
 		}
 		
-		/**
+		 /*
      * Sets the formatter to be used by this handler. This internal method does
      * not check security.
      * 
@@ -356,7 +356,7 @@ namespace biz.ritter.javapi.util.logging
 			this.formatter = newFormatter;
 		}
 		
-		/**
+		 /*
      * Sets the formatter to be used by this handler.
      * 
      * @param newFormatter

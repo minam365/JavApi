@@ -20,7 +20,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapix.xml.crypto.dsig
 {
-/**
+ /*
  * A representation of the XML <code>Manifest</code> element as defined in 
  * the <a href="http://www.w3.org/TR/xmldsig-core/">
  * W3C Recommendation for XML-Signature Syntax and Processing</a>.
@@ -53,7 +53,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig
  */
 public interface Manifest : XMLStructure {
  
-    /**
+     /*
      * Returns the Id of this <code>Manifest</code>.
      *
      * @return the Id  of this <code>Manifest</code> (or <code>null</code> 
@@ -61,7 +61,7 @@ public interface Manifest : XMLStructure {
      */
     String getId();
     
-    /**
+     /*
      * Returns an {@link java.util.Collections#unmodifiableList unmodifiable 
      * list} of one or more {@link Reference}s that are contained in this
      * <code>Manifest</code>. 

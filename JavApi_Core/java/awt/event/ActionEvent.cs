@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.awt.eventj
 {
-    /**
+     /*
      * @author Michael Danilov
      */
     [Serializable]

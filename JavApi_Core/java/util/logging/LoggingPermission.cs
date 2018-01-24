@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util.logging
 {
-/**
+ /*
  * The permission required to control the logging when run with a
  * {@code SecurityManager}.
  */
@@ -26,7 +26,7 @@ public sealed class LoggingPermission : java.security.BasicPermission, java.secu
     // for serialization compatibility with J2SE 1.4.2
     private const long serialVersionUID = 63564341580231582L;
 
-    /**
+     /*
      * Constructs a {@code LoggingPermission} object required to control the
      * logging. The {@code SecurityManager} checks the permissions.
      * <p>

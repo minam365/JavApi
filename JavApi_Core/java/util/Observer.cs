@@ -19,7 +19,7 @@ namespace biz.ritter.javapi.util
 {
 
 
-    /**
+     /*
      * {@code Observer} is the interface to be implemented by objects that 
      * receive notification of updates on an {@code Observable} object.
      * 
@@ -27,7 +27,7 @@ namespace biz.ritter.javapi.util
      */
     public interface Observer {
 
-        /**
+         /*
          * This method is called if the specified {@code Observable} object's
          * {@code notifyObservers} method is called (because the {@code Observable} 
          * object has been updated.

@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.sql
 {
 
-    /**
+     /*
      * This interface represents an SQL Ref - a data object containing a cursor
      * or pointer to a result table.
      * <p/>
@@ -34,7 +34,7 @@ namespace biz.ritter.javapi.sql
     public interface Ref
     {
 
-        /**
+         /*
          * Gets the fully-qualified SQL name of the SQL structured type that this
          * {@code Ref} references.
          * 
@@ -44,7 +44,7 @@ namespace biz.ritter.javapi.sql
          */
         String getBaseTypeName();// throws SQLException;
 
-        /**
+         /*
          * Gets the SQL structured type instance referenced by this {@code Ref}.
          * 
          * @return a Java object whose type is defined by the mapping for the SQL
@@ -54,7 +54,7 @@ namespace biz.ritter.javapi.sql
          */
         Object getObject();// throws SQLException;
 
-        /**
+         /*
          * Returns the associated object and uses the relevant mapping to convert it
          * to a Java type.
          * 
@@ -67,7 +67,7 @@ namespace biz.ritter.javapi.sql
          */
         Object getObject(java.util.Map<String, java.lang.Class> map);// throws SQLException;
 
-        /**
+         /*
          * Sets the value of the structured type that this {@code Ref} references to
          * a supplied object.
          * 

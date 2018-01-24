@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.io
 {
 
-    /**
+     /*
      * Signals that an object that is not serializable has been passed into the
      * {@code ObjectOutput.writeObject()} method. This can happen if the object
      * does not implement {@code Serializable} or {@code Externalizable}, or if it
@@ -33,7 +33,7 @@ namespace biz.ritter.javapi.io
 
         private const long serialVersionUID = 2906642554793891381L;
 
-        /**
+         /*
          * Constructs a new {@code NotSerializableException} with its stack trace
          * filled in.
          */
@@ -42,7 +42,7 @@ namespace biz.ritter.javapi.io
         {
         }
 
-        /**
+         /*
          * Constructs a new {@link NotSerializableException} with its stack trace
          * and detail message filled in.
          * 

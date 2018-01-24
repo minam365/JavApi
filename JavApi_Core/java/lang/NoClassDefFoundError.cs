@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang
 {
-    /**
+     /*
      * Thrown when the virtual machine is unable to locate a class which it has been
      * asked to load.
      */
@@ -25,14 +25,14 @@ namespace biz.ritter.javapi.lang
 
         private static readonly long serialVersionUID = 9095859863287012458L;
 
-        /**
+         /*
          * Constructs a new {@code NoClassDefFoundError} that includes the current
          * stack trace.
          */
         public NoClassDefFoundError():base() {
         }
 
-        /**
+         /*
          * Constructs a new {@code NoClassDefFoundError} with the current stack
          * trace and the specified detail message.
          * 

@@ -10,7 +10,7 @@ using java = biz.ritter.javapi;
 namespace org.xml.sax.helpers
 {
 
-/**
+ /*
  * Create a new instance of a class by name.
  *
  * <blockquote>
@@ -33,7 +33,7 @@ namespace org.xml.sax.helpers
  */
 class NewInstance {
 
-    /**
+     /*
      * Creates a new instance of the specified class name
      *
      * Package private so this code is not exposed at the API level.
@@ -51,7 +51,7 @@ class NewInstance {
         return driverClass.newInstance();
     }
 
-    /**
+     /*
      * Figure out which ClassLoader to use.  For JDK 1.2 and later use
      * the context ClassLoader.
      */           

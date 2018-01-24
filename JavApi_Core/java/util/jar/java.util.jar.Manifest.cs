@@ -17,17 +17,17 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util.jar
 {
-    /**
+     /*
      * The {@code Manifest} class is used to obtain attribute information for a
      * {@code JarFile} and its entries.
      */
     public class Manifest : java.lang.Cloneable {
-        /**
+         /*
          * Manifest bytes are used for delayed entry parsing.
          */
         private InitManifest im;
 
-        /**
+         /*
          * The end of the main attributes section in the manifest is needed in
          * verification.
          */
@@ -47,7 +47,7 @@ namespace biz.ritter.javapi.util.jar
         private HashMap<String, Attributes> entries = new HashMap<String, Attributes>();
         private HashMap<String, Chunk> chunks;
 
-        /**
+         /*
          * Creates a new {@code Manifest} instance. The new instance will have the
          * same attributes as those found in the parameter {@code Manifest}.
          *
@@ -65,7 +65,7 @@ namespace biz.ritter.javapi.util.jar
             }
             read(isJ);
         }
-        /**
+         /*
          * Returns a map containing the {@code Attributes} for each entry in the
          * {@code Manifest}.
          *
@@ -86,7 +86,7 @@ namespace biz.ritter.javapi.util.jar
         }
 
 
-        /**
+         /*
          * Creates a copy of this {@code Manifest}. The returned {@code Manifest}
          * will equal the {@code Manifest} from which it was cloned.
          *
@@ -97,7 +97,7 @@ namespace biz.ritter.javapi.util.jar
         }
 
 
-        /**
+         /*
          * Returns the {@code Attributes} associated with the parameter entry
          * {@code name}.
          *
@@ -110,7 +110,7 @@ namespace biz.ritter.javapi.util.jar
         {
             return getEntries().get(name);
         }
-        /**
+         /*
          * Constructs a new {@code Manifest} instance obtaining attribute
          * information from the specified input stream.
          *

@@ -16,14 +16,14 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.sql
 {
-    /**
+     /*
      * An interface used to get information about the types and properties of
      * parameters in a {@code PreparedStatement}.
      */
     public interface ParameterMetaData : Wrapper
     {
 
-        /**
+         /*
          * Gets the fully-qualified name of the Java class which should be passed as
          * a parameter to the method {@code PreparedStatement.setObject}.
          * 
@@ -38,7 +38,7 @@ namespace biz.ritter.javapi.sql
          */
         String getParameterClassName(int paramIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the number of parameters in the {@code PreparedStatement} for which
          * this {@code ParameterMetaData} contains information.
          * 
@@ -48,7 +48,7 @@ namespace biz.ritter.javapi.sql
          */
         int getParameterCount();// throws SQLException;
 
-        /**
+         /*
          * Gets the mode of the specified parameter. Can be one of:
          * <ul>
          * <li>ParameterMetaData.parameterModeIn</li>
@@ -66,7 +66,7 @@ namespace biz.ritter.javapi.sql
          */
         int getParameterMode(int paramIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the SQL type of a specified parameter.
          * 
          * @param paramIndex
@@ -79,7 +79,7 @@ namespace biz.ritter.javapi.sql
          */
         int getParameterType(int paramIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the database-specific type name of a specified parameter.
          * 
          * @param paramIndex
@@ -93,7 +93,7 @@ namespace biz.ritter.javapi.sql
          */
         String getParameterTypeName(int paramIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the number of decimal digits for a specified parameter.
          * 
          * @param paramIndex
@@ -106,7 +106,7 @@ namespace biz.ritter.javapi.sql
          */
         int getPrecision(int paramIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the number of digits after the decimal point for a specified
          * parameter.
          * 
@@ -120,7 +120,7 @@ namespace biz.ritter.javapi.sql
          */
         int getScale(int paramIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets whether {@code null} values are allowed for the specified parameter.
          * The returned value is one of:
          * <ul>
@@ -138,7 +138,7 @@ namespace biz.ritter.javapi.sql
          */
         int isNullable(int paramIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets whether values for the specified parameter can be signed numbers.
          * 
          * @param paramIndex
@@ -153,37 +153,37 @@ namespace biz.ritter.javapi.sql
     }
     public sealed class ParameterMetaDataConstants
     {
-        /**
+         /*
          * Indicates that the parameter mode is {@code IN}.
          */
         public const int parameterModeIn = 1;
 
-        /**
+         /*
          * Indicates that the parameter mode is {@code INOUT}.
          */
         public const int parameterModeInOut = 2;
 
-        /**
+         /*
          * Indicates that the parameter mode is {@code OUT}.
          */
         public const int parameterModeOut = 4;
 
-        /**
+         /*
          * Indicates that the parameter mode is not known.
          */
         public const int parameterModeUnknown = 0;
 
-        /**
+         /*
          * Indicates that a parameter is not permitted to be {@code NULL}.
          */
         public const int parameterNoNulls = 0;
 
-        /**
+         /*
          * Indicates that a parameter is permitted to be {@code NULL}.
          */
         public const int parameterNullable = 1;
 
-        /**
+         /*
          * Indicates that whether a parameter is allowed to be {@code null} or not
          * is not known.
          */

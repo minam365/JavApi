@@ -16,13 +16,13 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.sql
 {
-    /**
+     /*
      * Provides information about the columns returned in a {@code ResultSet}.
      */
     public interface ResultSetMetaData : Wrapper
     {
 
-        /**
+         /*
          * Returns the title of an indexed column's catalog.
          * 
          * @param column
@@ -33,7 +33,7 @@ namespace biz.ritter.javapi.sql
          */
         String getCatalogName(int column);// throws SQLException;
 
-        /**
+         /*
          * Returns the fully-qualified type of the class that is produced when
          * invoking {@code ResultSet.getObject} to recover this column's value.
          * 
@@ -46,7 +46,7 @@ namespace biz.ritter.javapi.sql
          */
         String getColumnClassName(int column);// throws SQLException;
 
-        /**
+         /*
          * Returns number of columns contained in the associated result set.
          * 
          * @return the column count.
@@ -55,7 +55,7 @@ namespace biz.ritter.javapi.sql
          */
         int getColumnCount();// throws SQLException;
 
-        /**
+         /*
          * Returns the indexed column's standard maximum width, expressed in number
          * of characters.
          * 
@@ -67,7 +67,7 @@ namespace biz.ritter.javapi.sql
          */
         int getColumnDisplaySize(int column);// throws SQLException;
 
-        /**
+         /*
          * Returns a recommended title for the indexed column, to be used when the
          * title needs to be displayed.
          * 
@@ -79,7 +79,7 @@ namespace biz.ritter.javapi.sql
          */
         String getColumnLabel(int column);// throws SQLException;
 
-        /**
+         /*
          * Returns the title of the indexed column.
          * 
          * @param column
@@ -90,7 +90,7 @@ namespace biz.ritter.javapi.sql
          */
         String getColumnName(int column);// throws SQLException;
 
-        /**
+         /*
          * Returns the type of the indexed column as SQL type code.
          * 
          * @param column
@@ -102,7 +102,7 @@ namespace biz.ritter.javapi.sql
          */
         int getColumnType(int column);// throws SQLException;
 
-        /**
+         /*
          * Returns the type name of the indexed column.
          * 
          * @param column
@@ -113,7 +113,7 @@ namespace biz.ritter.javapi.sql
          */
         String getColumnTypeName(int column);// throws SQLException;
 
-        /**
+         /*
          * Returns the decimal precision of the indexed column.
          * 
          * @param column
@@ -124,7 +124,7 @@ namespace biz.ritter.javapi.sql
          */
         int getPrecision(int column);// throws SQLException;
 
-        /**
+         /*
          * Returns the number of digits to the right of the decimal point of the
          * indexed column.
          * 
@@ -136,7 +136,7 @@ namespace biz.ritter.javapi.sql
          */
         int getScale(int column);// throws SQLException;
 
-        /**
+         /*
          * Returns the name of the indexed columns schema.
          * 
          * @param column
@@ -147,7 +147,7 @@ namespace biz.ritter.javapi.sql
          */
         String getSchemaName(int column);// throws SQLException;
 
-        /**
+         /*
          * Returns the title of the indexed columns table.
          * 
          * @param column
@@ -158,7 +158,7 @@ namespace biz.ritter.javapi.sql
          */
         String getTableName(int column);// throws SQLException;
 
-        /**
+         /*
          * Returns an indication of whether the indexed column is automatically
          * incremented and is therefore read-only.
          * 
@@ -171,7 +171,7 @@ namespace biz.ritter.javapi.sql
          */
         bool isAutoIncrement(int column);// throws SQLException;
 
-        /**
+         /*
          * Returns an indication of whether the case of the indexed column is
          * important.
          * 
@@ -183,7 +183,7 @@ namespace biz.ritter.javapi.sql
          */
         bool isCaseSensitive(int column);// throws SQLException;
 
-        /**
+         /*
          * Returns whether the indexed column contains a monetary amount.
          * 
          * @param column
@@ -194,7 +194,7 @@ namespace biz.ritter.javapi.sql
          */
         bool isCurrency(int column);// throws SQLException;
 
-        /**
+         /*
          * Returns an indication of whether writing to the indexed column is
          * guaranteed to be successful.
          * 
@@ -206,7 +206,7 @@ namespace biz.ritter.javapi.sql
          */
         bool isDefinitelyWritable(int column);// throws SQLException;
 
-        /**
+         /*
          * Returns whether the indexed column is nullable.
          * 
          * @param column
@@ -217,7 +217,7 @@ namespace biz.ritter.javapi.sql
          */
         int isNullable(int column);// throws SQLException;
 
-        /**
+         /*
          * Returns an indication of whether writing to the indexed column is
          * guaranteed to be unsuccessful.
          * 
@@ -229,7 +229,7 @@ namespace biz.ritter.javapi.sql
          */
         bool isReadOnly(int column);// throws SQLException;
 
-        /**
+         /*
          * Returns an indication of whether the indexed column is searchable.
          * 
          * @param column
@@ -241,7 +241,7 @@ namespace biz.ritter.javapi.sql
          */
         bool isSearchable(int column);// throws SQLException;
 
-        /**
+         /*
          * Returns an indication of whether the values contained in the indexed
          * column are signed.
          * 
@@ -253,7 +253,7 @@ namespace biz.ritter.javapi.sql
          */
         bool isSigned(int column);// throws SQLException;
 
-        /**
+         /*
          * Returns an indication of whether writing to the indexed column is
          * possible.
          * 
@@ -267,17 +267,17 @@ namespace biz.ritter.javapi.sql
     }
     public sealed class ResultSetMetaDataConstants
     {
-        /**
+         /*
          * Indicates that a column cannot contain {@code NULL} values.
          */
         public const int columnNoNulls = 0;
 
-        /**
+         /*
          * Indicates that a column can contain {@code NULL} values.
          */
         public const int columnNullable = 1;
 
-        /**
+         /*
          * Indicates that it is unknown whether a column can contain {@code NULL}s or not.
          */
         public const int columnNullableUnknown = 2;

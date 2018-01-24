@@ -19,7 +19,7 @@ using org.apache.harmony.luni.util;
 namespace biz.ritter.javapi.util.zip
 {
 
-    /**
+     /*
      * This class provides an implementation of {@code FilterInputStream} that
      * uncompresses data from a <i>ZIP-archive</i> input stream.
      * <p>
@@ -63,7 +63,7 @@ namespace biz.ritter.javapi.util.zip
 
         private char[] charBuf = new char[256];
 
-        /**
+         /*
          * Constructs a new {@code ZipInputStream} from the specified input stream.
          *
          * @param stream
@@ -75,7 +75,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Closes this {@code ZipInputStream}.
          *
          * @throws IOException
@@ -89,7 +89,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Closes the current ZIP entry and positions to read the next entry.
          *
          * @throws IOException
@@ -183,7 +183,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Reads the next entry from this {@code ZipInputStream} or {@code null} if
          * no more entries are present.
          *
@@ -280,7 +280,7 @@ namespace biz.ritter.javapi.util.zip
 
         /* Read 4 bytes from the buffer and store it as an int */
 
-        /**
+         /*
          * Reads up to the specified number of uncompressed bytes into the buffer
          * starting at the offset.
          *
@@ -348,7 +348,7 @@ namespace biz.ritter.javapi.util.zip
             return read;
         }
 
-        /**
+         /*
          * Skips up to the specified number of bytes in the current ZIP entry.
          *
          * @param value
@@ -376,7 +376,7 @@ namespace biz.ritter.javapi.util.zip
             return skipped;
         }
 
-        /**
+         /*
          * Returns 0 if the {@code EOF} has been reached, otherwise returns 1.
          *
          * @return 0 after {@code EOF} of current entry, 1 otherwise.
@@ -391,7 +391,7 @@ namespace biz.ritter.javapi.util.zip
             return (currentEntry == null || inRead < currentEntry.size) ? 1 : 0;
         }
 
-        /**
+         /*
          * creates a {@link ZipEntry } with the given name.
          *
          * @param name

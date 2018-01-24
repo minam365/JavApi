@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.io
 {
 
-    /**
+     /*
      * Wraps an existing {@link Writer} and <em>buffers</em> the output. Expensive
      * interaction with the underlying reader is minimized, since most (smaller)
      * requests can be satisfied by accessing the buffer alone. The drawback is that
@@ -46,7 +46,7 @@ namespace biz.ritter.javapi.io
 
         private String lineSeparator = java.lang.SystemJ.getProperty("line.separator"); //$NON-NLS-1$
 
-        /**
+         /*
          * Constructs a new {@code BufferedWriter} with {@code outj} as the writer
          * for which to buffer write operations. The buffer size is set to the
          * default value of 8 KB.
@@ -61,7 +61,7 @@ namespace biz.ritter.javapi.io
             buf = new char[8192];
         }
 
-        /**
+         /*
          * Constructs a new {@code BufferedWriter} with {@code outj} as the writer
          * for which to buffer write operations. The buffer size is set to {@code
          * size}.
@@ -84,7 +84,7 @@ namespace biz.ritter.javapi.io
             this.buf = new char[size];
         }
 
-        /**
+         /*
          * Closes this writer. The contents of the buffer are flushed, the target
          * writer is closed, and the buffer is released. Only the first invocation
          * of close has any effect.
@@ -133,7 +133,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Flushes this writer. The contents of the buffer are committed to the
          * target writer and it is then flushed.
          * 
@@ -154,7 +154,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Flushes the internal buffer.
          */
         private void flushInternal()
@@ -166,7 +166,7 @@ namespace biz.ritter.javapi.io
             pos = 0;
         }
 
-        /**
+         /*
          * Indicates whether this writer is closed.
          * 
          * @return {@code true} if this writer is closed, {@code false} otherwise.
@@ -176,7 +176,7 @@ namespace biz.ritter.javapi.io
             return outj == null;
         }
 
-        /**
+         /*
          * Writes a newline to this writer. A newline is determined by the System
          * property "line.separator". The target writer may or may not be flushed
          * when a newline is written.
@@ -189,7 +189,7 @@ namespace biz.ritter.javapi.io
             write(lineSeparator, 0, lineSeparator.length());
         }
 
-        /**
+         /*
          * Writes {@code count} characters starting at {@code offset} in
          * {@code cbuf} to this writer. If {@code count} is greater than this
          * writer's buffer, then the buffer is flushed and the characters are
@@ -257,7 +257,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Writes the character {@code oneChar} to this writer. If the buffer
          * gets full by writing this character, this writer is flushed. Only the
          * lower two bytes of the integer {@code oneChar} are written.
@@ -284,7 +284,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Writes {@code count} characters starting at {@code offset} in {@code str}
          * to this writer. If {@code count} is greater than this writer's buffer,
          * then this writer is flushed and the remaining characters are written

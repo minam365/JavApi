@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang{
 
-	/**
+	 /*
 	 * Thrown by the virtual machine when an abstract method is called.
 	 * <p>
 	 * Note that this can only occur when inconsistent class files have been loaded,
@@ -26,7 +26,7 @@ namespace biz.ritter.javapi.lang{
 
 	    private const long serialVersionUID = -1654391082989018462L;
 
-	    /**
+	     /*
 	     * Constructs a new {@code AbstractMethodError} that includes the current
 	     * stack trace.
 	     */
@@ -34,7 +34,7 @@ namespace biz.ritter.javapi.lang{
 	        
 	    }
 
-	    /**
+	     /*
 	     * Constructs a new {@code AbstractMethodError} with the current stack trace
 	     * and the specified detail message.
 	     *

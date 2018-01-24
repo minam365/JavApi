@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.io
 {
 
-/**
+ /*
  * Signals that the {@link ObjectInputStream#readObject()} method has detected
  * an exception marker in the input stream. This marker indicates that exception
  * occurred when the object was serialized, and this marker was inserted instead
@@ -33,13 +33,13 @@ namespace biz.ritter.javapi.io
 
 		private const long serialVersionUID = -3326426625597282442L;
 
-		/**
+		 /*
      * The exception that occured when writeObject() was attempting to serialize
      * the object.
      */
 		public java.lang.Exception detail;
 
-		/**
+		 /*
      * Constructs a new {@code WriteAbortedException} with its stack trace,
      * detail message and the exception which caused the underlying problem when
      * serializing the object filled in.
@@ -56,7 +56,7 @@ namespace biz.ritter.javapi.io
 			initCause (rootCause);
 		}
 
-		/**
+		 /*
      * Gets the extra information message which was provided when this exception
      * was created. Returns {@code null} if no message was provided at creation
      * time.
@@ -73,7 +73,7 @@ namespace biz.ritter.javapi.io
 			return msg;
 		}
 
-		/**
+		 /*
      * Gets the cause of this exception or {@code null} if there is no cause.
      * 
      * @return the exception cause.

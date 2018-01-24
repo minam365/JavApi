@@ -298,38 +298,38 @@ namespace biz.ritter.javapi.awt.geom
         class Iterator : PathIterator
         {
 
-            /**
+             /*
              * The x coordinate of left-upper rectangle corner
              */
             double x;
 
-            /**
+             /*
              * The y coordinate of left-upper rectangle corner
              */
             double y;
 
 
-            /**
+             /*
              * The width of rectangle
              */
             double width;
 
-            /**
+             /*
              * The height of rectangle
              */
             double height;
 
-            /**
+             /*
              * The path iterator transformation
              */
             AffineTransform t;
 
-            /**
+             /*
              * The current segmenet index
              */
             int index;
 
-            /**
+             /*
              * Constructs a new Rectangle2D.Iterator for given rectangle and transformation
              * @param r - the source Rectangle2D object
              * @param at - the AffineTransform object to apply rectangle path 

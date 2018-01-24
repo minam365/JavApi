@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.security
 {
 
-    /**
+     /*
      * Specific {@code PermissionCollection} for storing {@code AllPermission}s. All
      * instances of {@code AllPermission} are equivalent, so it is enough to store a
      * single added instance.
@@ -37,7 +37,7 @@ namespace biz.ritter.javapi.security
         [NonSerialized]
         private Permission all;
 
-        /**
+         /*
          * Adds an {@code AllPermission} to the collection.
          */
 
@@ -54,7 +54,7 @@ namespace biz.ritter.javapi.security
             all = permission;
         }
 
-        /**
+         /*
          * Returns the enumeration of the collection.
          */
         public override java.util.Enumeration<Permission> elements()
@@ -62,7 +62,7 @@ namespace biz.ritter.javapi.security
             return new SingletonEnumeration<Permission>(all);
         }
 
-        /**
+         /*
          * An auxiliary implementation for enumerating a single object.
          * 
          */
@@ -71,7 +71,7 @@ namespace biz.ritter.javapi.security
 
             private E element;
 
-            /**
+             /*
              * Constructor taking the single element.
              * @param single the element
              */
@@ -80,7 +80,7 @@ namespace biz.ritter.javapi.security
                 element = single;
             }
 
-            /**
+             /*
              * Returns true if the element is not enumerated yet.
              */
             public bool hasMoreElements()
@@ -88,7 +88,7 @@ namespace biz.ritter.javapi.security
                 return element != null;
             }
 
-            /**
+             /*
              * Returns the element and clears internal reference to it.
              */
             public E nextElement()
@@ -103,7 +103,7 @@ namespace biz.ritter.javapi.security
             }
         }
 
-        /**
+         /*
          * Indicates whether the argument permission is implied by the receiver.
          * {@code AllPermission} objects imply all other permissions.
          * 

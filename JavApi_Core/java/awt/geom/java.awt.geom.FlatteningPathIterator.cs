@@ -6,88 +6,88 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.awt.geom
 {
-/**
+ /*
  * @author Denis M. Kishenko
  */
 
 public class FlatteningPathIterator : PathIterator {
 
-    /**
+     /*
      * The default points buffer size
      */
     private const int BUFFER_SIZE = 16;
     
-    /**
+     /*
      * The default curve subdivision limit
      */
     private const int BUFFER_LIMIT = 16;
 
-    /**
+     /*
      * The points buffer capacity
      */
     private const int BUFFER_CAPACITY = 16;
     
-    /**
+     /*
      * The type of current segment to be flat
      */
     int bufType;
     
-    /**
+     /*
      * The curve subdivision limit
      */
     int bufLimit;
     
-    /**
+     /*
      * The current points buffer size
      */
     int bufSize;
     
-    /**
+     /*
      * The inner cursor position in points buffer 
      */
     int bufIndex;
     
-    /**
+     /*
      * The current subdivision count
      */
     int bufSubdiv;
 
-    /**
+     /*
      * The points buffer 
      */
     double [] buf;
     
-    /**
+     /*
      * The indicator of empty points buffer
      */
     bool bufEmpty = true;
     
-    /**
+     /*
      * The source PathIterator
      */
     PathIterator p;
     
-    /**
+     /*
      * The flatness of new path 
      */
     double flatness;
     
-    /**
+     /*
      * The square of flatness
      */
     double flatness2;
     
-    /**
+     /*
      * The x coordinate of previous path segment
      */
     double px;
 
-    /**
+     /*
      * The y coordinate of previous path segment
      */
     double py;
     
-    /**
+     /*
      * The tamporary buffer for getting points from PathIterator
      */
     double[] coords = new double[6];
@@ -134,7 +134,7 @@ public class FlatteningPathIterator : PathIterator {
         return bufEmpty && p.isDone();
     }
 
-    /**
+     /*
      * Calculates flat path points for current segment of the source shape.
      * 
      * Line segment is flat by itself. Flatness of quad and cubic curves evaluated by getFlatnessSq() method.  

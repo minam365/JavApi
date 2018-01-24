@@ -9,7 +9,7 @@ using System;
 namespace org.w3c.dom.events
 {
 
-    /**
+     /*
      * The <code>EventTarget</code> interface is implemented by all 
      * <code>Node</code>s in  an implementation which supports the DOM Event 
      * Model.  The interface allows registration and removal of 
@@ -19,7 +19,7 @@ namespace org.w3c.dom.events
      */
     public interface EventTarget
     {
-        /**
+         /*
          * This method allows the registration of event listeners on the event 
          * target.  
          * @param type The event type for which the user is registering
@@ -40,7 +40,7 @@ namespace org.w3c.dom.events
          void addEventListener(String type,
                                                    EventListener listener,
                                                    bool useCapture);
-        /**
+         /*
          * This method allows the removal of event listeners from the event target.  
          * If an <code>EventListener</code> is removed from an 
          * <code>EventTarget</code> while it is  processing an event, it will 
@@ -62,7 +62,7 @@ namespace org.w3c.dom.events
          void removeEventListener(String type,
                                                       EventListener listener,
                                                       bool useCapture);
-        /**
+         /*
          * This method allows the dispatch of events into the implementations event 
          * model.  Events dispatched in this manner will have the same capturing 
          * and bubbling behavior as events dispatched directly by the 

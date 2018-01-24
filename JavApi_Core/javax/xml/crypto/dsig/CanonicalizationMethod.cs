@@ -21,7 +21,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapix.xml.crypto.dsig
 {
 
-/**
+ /*
  * A representation of the XML <code>CanonicalizationMethod</code> 
  * element as defined in the 
  * <a href="http://www.w3.org/TR/xmldsig-core/">
@@ -49,7 +49,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig
  */
 public interface CanonicalizationMethod : Transform {
 
-    /**
+     /*
      * Returns the algorithm-specific input parameters associated with this 
      * <code>CanonicalizationMethod</code>.
      *

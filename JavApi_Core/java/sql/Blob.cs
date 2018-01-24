@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.sql
 {
-    /**
+     /*
      * A Java interface representing the SQL {@code BLOB} type.
      * <p/>
      * An SQL {@code BLOB} type stores a large array of binary data (bytes) as the
@@ -30,7 +30,7 @@ namespace biz.ritter.javapi.sql
     public interface Blob
     {
 
-        /**
+         /*
          * Retrieves this {@code Blob} object as a binary stream.
          * 
          * @return a binary {@code InputStream} giving access to the {@code Blob}
@@ -40,7 +40,7 @@ namespace biz.ritter.javapi.sql
          */
         java.io.InputStream getBinaryStream();// throws SQLException;
 
-        /**
+         /*
          * Gets a portion of the value of this {@code Blob} as an array of bytes.
          * 
          * @param pos
@@ -55,7 +55,7 @@ namespace biz.ritter.javapi.sql
          */
         byte[] getBytes(long pos, int length);// throws SQLException;
 
-        /**
+         /*
          * Gets the number of bytes in this {@code Blob} object.
          * 
          * @return a {@code long} value with the length of the {@code Blob} in
@@ -65,7 +65,7 @@ namespace biz.ritter.javapi.sql
          */
         long length();// throws SQLException;
 
-        /**
+         /*
          * Search for the position in this {@code Blob} at which a specified pattern
          * begins, starting at a specified position within the {@code Blob}.
          * 
@@ -83,7 +83,7 @@ namespace biz.ritter.javapi.sql
          */
         long position(Blob pattern, long start);// throws SQLException;
 
-        /**
+         /*
          * Search for the position in this {@code Blob} at which the specified
          * pattern begins, starting at a specified position within the {@code Blob}.
          * 
@@ -101,7 +101,7 @@ namespace biz.ritter.javapi.sql
          */
         long position(byte[] pattern, long start);// throws SQLException;
 
-        /**
+         /*
          * Gets a stream that can be used to write binary data to this {@code Blob}.
          * 
          * @param pos
@@ -115,7 +115,7 @@ namespace biz.ritter.javapi.sql
          */
         java.io.OutputStream setBinaryStream(long pos);// throws SQLException;
 
-        /**
+         /*
          * Writes a specified array of bytes to this {@code Blob} object, starting
          * at a specified position. Returns the number of bytes written.
          * 
@@ -132,7 +132,7 @@ namespace biz.ritter.javapi.sql
          */
         int setBytes(long pos, byte[] theBytes);// throws SQLException;
 
-        /**
+         /*
          * Writes a portion of a specified byte array to this {@code Blob}. Returns
          * the number of bytes written.
          * 
@@ -155,7 +155,7 @@ namespace biz.ritter.javapi.sql
         int setBytes(long pos, byte[] theBytes, int offset, int len)
                ;// throws SQLException;
 
-        /**
+         /*
          * Truncate the value of this {@code Blob} object to a specified length in
          * bytes.
          * 
@@ -167,14 +167,14 @@ namespace biz.ritter.javapi.sql
          */
         void truncate(long len);// throws SQLException;
 
-        /**
+         /*
          * TODO Javadoc
          * 
          * @throws SQLException
          */
         void free();// throws SQLException;
 
-        /**
+         /*
          * TODO Javadoc
          * 
          * @throws SQLException

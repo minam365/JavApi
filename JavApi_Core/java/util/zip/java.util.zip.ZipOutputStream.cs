@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.zip
 {
 
-    /**
+     /*
      * This class provides an implementation of {@code FilterOutputStream} that
      * compresses data entries into a <i>ZIP-archive</i> output stream.
      * <p>
@@ -37,12 +37,12 @@ namespace biz.ritter.javapi.util.zip
      */
     public class ZipOutputStream : DeflaterOutputStream{//, ZipConstants {
 
-        /**
+         /*
          * Indicates deflated entries.
          */
         public static readonly int DEFLATED = 8;
 
-        /**
+         /*
          * Indicates uncompressed entries.
          */
         public static readonly int STORED = 0;
@@ -69,7 +69,7 @@ namespace biz.ritter.javapi.util.zip
 
         private byte[] nameBytes;
 
-        /**
+         /*
          * Constructs a new {@code ZipOutputStream} with the specified output
          * stream.
          *
@@ -79,7 +79,7 @@ namespace biz.ritter.javapi.util.zip
         public ZipOutputStream(java.io.OutputStream p1) :base(p1, new Deflater(Deflater.DEFAULT_COMPRESSION, true)){
         }
 
-        /**
+         /*
          * Closes the current {@code ZipEntry}, if any, and the underlying output
          * stream. If the stream is already closed this method does nothing.
          *
@@ -95,7 +95,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Closes the current {@code ZipEntry}. Any entry terminal data is written
          * to the underlying stream.
          *
@@ -180,7 +180,7 @@ namespace biz.ritter.javapi.util.zip
             done = false;
         }
 
-        /**
+         /*
          * Indicates that all entries have been written to the stream. Any terminal
          * information is written to the underlying stream.
          *
@@ -222,7 +222,7 @@ namespace biz.ritter.javapi.util.zip
 
         }
 
-        /**
+         /*
          * Writes entry information to the underlying stream. Data associated with
          * the entry can then be written using {@code write()}. After data is
          * written {@code closeEntry()} must be called to complete the writing of
@@ -312,7 +312,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Sets the {@code ZipFile} comment associated with the file being written.
          *
          * @param comment
@@ -325,7 +325,7 @@ namespace biz.ritter.javapi.util.zip
             this.comment = comment;
         }
 
-        /**
+         /*
          * Sets the compression level to be used for writing entry data. This level
          * may be set on a per entry basis. The level must have a value between -1
          * and 8 according to the {@code Deflater} compression level bounds.
@@ -342,7 +342,7 @@ namespace biz.ritter.javapi.util.zip
             compressLevel = level;
         }
 
-        /**
+         /*
          * Sets the compression method to be used when compressing entry data.
          * method must be one of {@code STORED} (for no compression) or {@code
          * DEFLATED}.
@@ -374,7 +374,7 @@ namespace biz.ritter.javapi.util.zip
 
         }
 
-        /**
+         /*
          * Writes data for the current entry to the underlying stream.
          *
          * @exception IOException

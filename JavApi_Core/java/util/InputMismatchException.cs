@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-/**
+ /*
  * An {@code InputMismatchException} is thrown by a scanner to indicate that the
  * next token does not match or is out of range for the type specified in the
  * pattern.
@@ -31,14 +31,14 @@ namespace biz.ritter.javapi.util
 
     private const long serialVersionUID = 8811230760997066428L;
 
-    /**
+     /*
      * Constructs a new {@code InputMismatchException} with the current stack
      * trace filled in.
      */
     public InputMismatchException() :base(){
     }
 
-    /**
+     /*
      * Constructs a new {@code InputMismatchException} with the stack trace
      * filled in and {@code msg} as its error message.
      * 

@@ -8,7 +8,7 @@ using java = biz.ritter.javapi;
 
 namespace org.xml.sax.helpers
 {
-    /**
+     /*
      * Base class for deriving an XML filter.
      *
      * <blockquote>
@@ -45,7 +45,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Construct an empty XML filter, with no parent.
          *
          * <p>This filter will have no parent: you must assign a parent
@@ -63,7 +63,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Construct an XML filter with the specified parent.
          *
          * @see #setParent
@@ -82,7 +82,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Set the parent reader.
          *
          * <p>This is the {@link org.xml.sax.XMLReader XMLReader} from which 
@@ -101,7 +101,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Get the parent reader.
          *
          * @return The parent XML reader, or null if none is set.
@@ -119,7 +119,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Set the value of a feature.
          *
          * <p>This will always fail if the parent is null.</p>
@@ -146,7 +146,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Look up the value of a feature.
          *
          * <p>This will always fail if the parent is null.</p>
@@ -173,7 +173,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Set the value of a property.
          *
          * <p>This will always fail if the parent is null.</p>
@@ -200,7 +200,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Look up the value of a property.
          *
          * @param name The property name.
@@ -225,7 +225,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Set the entity resolver.
          *
          * @param resolver The new entity resolver.
@@ -236,7 +236,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Get the current entity resolver.
          *
          * @return The current entity resolver, or null if none was set.
@@ -247,7 +247,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Set the DTD event handler.
          *
          * @param handler the new DTD handler
@@ -258,7 +258,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Get the current DTD event handler.
          *
          * @return The current DTD handler, or null if none was set.
@@ -269,7 +269,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Set the content event handler.
          *
          * @param handler the new content handler
@@ -280,7 +280,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Get the content event handler.
          *
          * @return The current content handler, or null if none was set.
@@ -291,7 +291,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Set the error event handler.
          *
          * @param handler the new error handler
@@ -302,7 +302,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Get the current error event handler.
          *
          * @return The current error handler, or null if none was set.
@@ -313,7 +313,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Parse a document.
          *
          * @param input The input source for the document entity.
@@ -331,7 +331,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Parse a document.
          *
          * @param systemId The system identifier as a fully-qualified URI.
@@ -354,7 +354,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Filter an external entity resolution.
          *
          * @param publicId The entity's public identifier, or null.
@@ -386,7 +386,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Filter a notation declaration event.
          *
          * @param name The notation name.
@@ -405,7 +405,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Filter an unparsed entity declaration event.
          *
          * @param name The entity name.
@@ -433,7 +433,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Filter a new document locator event.
          *
          * @param locator The document locator.
@@ -448,7 +448,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Filter a start document event.
          *
          * @exception org.xml.sax.SAXException The client may throw
@@ -464,7 +464,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Filter an end document event.
          *
          * @exception org.xml.sax.SAXException The client may throw
@@ -480,7 +480,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Filter a start Namespace prefix mapping event.
          *
          * @param prefix The Namespace prefix.
@@ -498,7 +498,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Filter an end Namespace prefix mapping event.
          *
          * @param prefix The Namespace prefix.
@@ -515,7 +515,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Filter a start element event.
          *
          * @param uri The element's Namespace URI, or the empty string.
@@ -537,7 +537,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Filter an end element event.
          *
          * @param uri The element's Namespace URI, or the empty string.
@@ -557,7 +557,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Filter a character data event.
          *
          * @param ch An array of characters.
@@ -576,7 +576,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Filter an ignorable whitespace event.
          *
          * @param ch An array of characters.
@@ -595,7 +595,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Filter a processing instruction event.
          *
          * @param target The processing instruction target.
@@ -613,7 +613,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Filter a skipped entity event.
          *
          * @param name The name of the skipped entity.
@@ -636,7 +636,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Filter a warning event.
          *
          * @param e The warning as an exception.
@@ -653,7 +653,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Filter an error event.
          *
          * @param e The error as an exception.
@@ -670,7 +670,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Filter a fatal error event.
          *
          * @param e The error as an exception.
@@ -693,7 +693,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Set up before a parse.
          *
          * <p>Before every parse, check whether the parent is

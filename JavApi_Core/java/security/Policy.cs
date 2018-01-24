@@ -18,7 +18,7 @@ using org.apache.harmony.security.fortress;
 namespace biz.ritter.javapi.security
 {
 
-/**
+ /*
  * {@code Policy} is the common super type of classes which represent a system
  * security policy. The {@code Policy} specifies which permissions apply to
  * which code sources.
@@ -81,7 +81,7 @@ public abstract class Policy {
         }
     }
 
-    /**
+     /*
      * Answers a Policy object with the specified type and the specified
      * parameter.
      * 
@@ -137,7 +137,7 @@ public abstract class Policy {
         }
     }
 
-    /**
+     /*
      * Answers a Policy object of the specified type.
      * 
      * A new Policy object encapsulating the PolicySpi implementation from the
@@ -188,7 +188,7 @@ public abstract class Policy {
         return getInstanceImpl(type, paramsJ, impProvider);
     }
 
-    /**
+     /*
      * Answers a Policy object of the specified type.
      * 
      * A new Policy object encapsulating the PolicySpi implementation from the
@@ -254,7 +254,7 @@ public abstract class Policy {
         }
     }
 
-    /**
+     /*
      * Answers Policy parameters.
      * 
      * This method will only answer non-null parameters if it was obtained via a
@@ -268,7 +268,7 @@ public abstract class Policy {
         return paramsJ;
     }
 
-    /**
+     /*
      * Answers the Provider of this Policy.
      * 
      * This method will only answer non-null Provider if it was obtained via a
@@ -282,7 +282,7 @@ public abstract class Policy {
         return provider;
     }
 
-    /**
+     /*
      * Answers the type of this Policy.
      * 
      * This method will only answer non-null type if it was obtained via a call
@@ -298,7 +298,7 @@ public abstract class Policy {
 
     public static readonly UNSUPPORTED_EMPTY_COLLECTION_IMPL UNSUPPORTED_EMPTY_COLLECTION = new UNSUPPORTED_EMPTY_COLLECTION_IMPL();
 
-    /**
+     /*
      * A read-only empty PermissionCollection instance.
      * 
      * @since 1.6
@@ -330,7 +330,7 @@ public abstract class Policy {
         }
     }
 
-    /**
+     /*
      * A marker interface for Policy parameters.
      * 
      * @since 1.6
@@ -339,7 +339,7 @@ public abstract class Policy {
         // a marker interface
     }
 
-    /**
+     /*
      * Returns a {@code PermissionCollection} describing what permissions are
      * allowed for the specified {@code CodeSource} based on the current
      * security policy.
@@ -359,7 +359,7 @@ public abstract class Policy {
                 .engineGetPermissions(cs);
     }
 
-    /**
+     /*
      * Reloads the policy configuration for this {@code Policy} instance.
      */
     public void refresh() {
@@ -368,7 +368,7 @@ public abstract class Policy {
         }
     }
 
-    /**
+     /*
      * Returns a {@code PermissionCollection} describing what permissions are
      * allowed for the specified {@code ProtectionDomain} (more specifically,
      * its {@code CodeSource}) based on the current security policy.
@@ -410,7 +410,7 @@ public abstract class Policy {
         return permissions;		
     }
 
-    /**
+     /*
      * Indicates whether the specified {@code Permission} is implied by the
      * {@code PermissionCollection} of the specified {@code ProtectionDomain}.
      *
@@ -452,7 +452,7 @@ public abstract class Policy {
         return implies;
     }
 
-    /**
+     /*
      * Returns the current system security policy. If no policy has been
      * instantiated then this is done using the security property {@code
      * "policy.provider"}.
@@ -511,7 +511,7 @@ public abstract class Policy {
             }
     }
     
-    /**
+     /*
      * Returns {@code true} if system policy provider is instantiated.
      */
     static bool isSet() {
@@ -521,7 +521,7 @@ public abstract class Policy {
 
     private static readonly Object lockJ = new Object ();
 
-    /**
+     /*
      * Shortcut accessor for friendly classes, to skip security checks.
      * If active policy was set to <code>null</code>, loads default provider, 
      * so this method never returns <code>null</code>. <br/>
@@ -536,7 +536,7 @@ public abstract class Policy {
 }
     }
 
-    /**
+     /*
      * Sets the system wide policy.
      * <p/>
      * If a {@code SecurityManager} is installed, code calling this method needs

@@ -14,7 +14,7 @@ using System;
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      * The <code>DOMImplementation</code> interface provides a number of methods 
      * for performing operations that are independent of any particular instance 
      * of the document object model.
@@ -22,7 +22,7 @@ namespace org.w3c.dom
      */
     public interface DOMImplementation
     {
-        /**
+         /*
          * Test if the DOM implementation implements a specific feature.
          * @param featureThe name of the feature to test (case-insensitive). The 
          *   values used by DOM features are defined throughout the DOM Level 2 
@@ -44,7 +44,7 @@ namespace org.w3c.dom
         bool hasFeature(String feature,
                                   String version);
 
-        /**
+         /*
          * Creates an empty <code>DocumentType</code> node. Entity declarations 
          * and notations are not made available. Entity reference expansions and 
          * default attribute additions do not occur. It is expected that a 
@@ -68,7 +68,7 @@ namespace org.w3c.dom
                                                String publicId,
                                                String systemId);//                                           throws DOMException;
 
-        /**
+         /*
          * Creates an XML <code>Document</code> object of the specified type with 
          * its document element. HTML-only DOM implementations do not need to 
          * implement this method.

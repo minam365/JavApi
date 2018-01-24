@@ -21,7 +21,7 @@ using org.xml.sax;
 
 namespace biz.ritter.javapix.xml.validation
 {
-	/**
+	 /*
  * Streaming validator that works on SAX stream.
  * 
  * <p/>
@@ -103,7 +103,7 @@ namespace biz.ritter.javapix.xml.validation
  */
 	public abstract class ValidatorHandler : ContentHandler
 	{
-		/**
+		 /*
      * Constructor for derived classes.
      * 
      * <p/>
@@ -118,7 +118,7 @@ namespace biz.ritter.javapix.xml.validation
 		{
 		}
 
-		/**
+		 /*
      * Sets the {@link ContentHandler} which receives
      * the augmented validation result.
      *
@@ -168,7 +168,7 @@ namespace biz.ritter.javapix.xml.validation
      */
 		public abstract void setContentHandler (ContentHandler receiver);
 
-		/**
+		 /*
      * Gets the {@link ContentHandler} which receives the
      * augmented validation result.
      * 
@@ -182,7 +182,7 @@ namespace biz.ritter.javapix.xml.validation
      */
 		public abstract ContentHandler getContentHandler ();
 
-		/**
+		 /*
      * Sets the {@link ErrorHandler} to receive errors encountered
      * during the validation.
      * 
@@ -234,7 +234,7 @@ namespace biz.ritter.javapix.xml.validation
      */
 		public abstract void setErrorHandler (ErrorHandler errorHandler);
 
-		/**
+		 /*
      * Gets the current {@link ErrorHandler} set to this {@link ValidatorHandler}.
      * 
      * @return
@@ -247,7 +247,7 @@ namespace biz.ritter.javapix.xml.validation
      */
 		public abstract ErrorHandler getErrorHandler ();
 
-		/**
+		 /*
      * Sets the {@link LSResourceResolver} to customize
      * resource resolution while in a validation episode.
      * 
@@ -286,7 +286,7 @@ namespace biz.ritter.javapix.xml.validation
      */
 		public abstract void setResourceResolver (org.w3c.dom.ls.LSResourceResolver resourceResolver);
 
-		/**
+		 /*
      * Gets the current {@link LSResourceResolver} set to this {@link ValidatorHandler}.
      * 
      * @return
@@ -299,7 +299,7 @@ namespace biz.ritter.javapix.xml.validation
      */
 		public abstract org.w3c.dom.ls.LSResourceResolver getResourceResolver ();
 
-		/**
+		 /*
      * Obtains the {@link TypeInfoProvider} implementation of this
      * {@link ValidatorHandler}.
      * 
@@ -320,7 +320,7 @@ namespace biz.ritter.javapix.xml.validation
      */
 		public abstract TypeInfoProvider getTypeInfoProvider ();
 
-		/**
+		 /*
      * Look up the value of a feature flag.
      *
      * <p/>The feature name is any fully-qualified URI.  It is
@@ -350,7 +350,7 @@ namespace biz.ritter.javapix.xml.validation
 			throw new SAXNotRecognizedException (name);
 		}
 
-		/**
+		 /*
      * Set the value of a feature flag.
      *
      * <p>
@@ -385,7 +385,7 @@ namespace biz.ritter.javapix.xml.validation
 			throw new SAXNotRecognizedException (name);
 		}
 
-		/**
+		 /*
      * Set the value of a property.
      *
      * <p>The property name is any fully-qualified URI.  It is
@@ -416,7 +416,7 @@ namespace biz.ritter.javapix.xml.validation
 			throw new SAXNotRecognizedException (name);
 		}
 
-		/**
+		 /*
      * Look up the value of a property.
      *
      * <p>The property name is any fully-qualified URI.  It is

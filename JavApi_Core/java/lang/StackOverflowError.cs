@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang
 {
 
-/**
+ /*
  * Thrown when the depth of the callstack of the running program excedes some
  * platform or virtual machine specific limit. Typically, this will occur only
  * when a program becomes infinitely recursive, but it can also occur in
@@ -27,7 +27,7 @@ public class StackOverflowError : java.lang.VirtualMachineError {
 
     private const long serialVersionUID = 8609175038441759607L;
 
-    /**
+     /*
      * Constructs a new {@code StackOverflowError} that includes the current
      * stack trace.
      */
@@ -35,7 +35,7 @@ public class StackOverflowError : java.lang.VirtualMachineError {
         
     }
 
-    /**
+     /*
      * Constructs a new {@code StackOverflowError} with the current stack trace
      * and the specified detail message.
      * 

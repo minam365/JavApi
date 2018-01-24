@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.security
 {
 
-    /**
+     /*
      * A default {@code PermissionCollection} implementation that uses a hashtable.
      * Each hashtable entry stores a Permission object as both the key and the
      * value.
@@ -33,7 +33,7 @@ namespace biz.ritter.javapi.security
 
         private readonly java.util.Hashtable<Permission, Permission> perms = new java.util.Hashtable<Permission, Permission>();
 
-        /**
+         /*
          * Adds the argument to the collection.
          *
          * @param permission
@@ -44,7 +44,7 @@ namespace biz.ritter.javapi.security
             perms.put(permission, permission);
         }
 
-        /**
+         /*
          * Returns an enumeration of the permissions in the receiver.
          *
          * @return Enumeration the permissions in the receiver.
@@ -54,7 +54,7 @@ namespace biz.ritter.javapi.security
             return perms.elements();
         }
 
-        /**
+         /*
          * Indicates whether the argument permission is implied by the permissions
          * contained in the receiver.
          *

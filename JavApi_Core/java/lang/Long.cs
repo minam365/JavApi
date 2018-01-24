@@ -26,7 +26,7 @@ namespace biz.ritter.javapi.lang
             Long returnValue = new Long(sysD);
             return returnValue;
         }
-        /**
+         /*
          * The {@link Class} object that represents the primitive type {@code long}.
          */
         public static readonly Type TYPE = new long[0].GetType().GetElementType();
@@ -80,7 +80,7 @@ namespace biz.ritter.javapi.lang
         {
             return long.Parse(s);
         }
-        /**
+         /*
          * Parses the specified string as a signed long value using the specified
          * radix. The ASCII character \u002d ('-') is recognized as the minus sign.
          * 
@@ -138,7 +138,7 @@ namespace biz.ritter.javapi.lang
             }
             return result;
         }
-        /**
+         /*
          * Converts the specified long value into its decimal string representation.
          * The returned string is a concatenation of a minus sign if the number is
          * negative and characters from '0' to '9'.
@@ -152,7 +152,7 @@ namespace biz.ritter.javapi.lang
             return toString(l, 10);
         }
 
-        /**
+         /*
          * Converts the specified long value into a string representation based on
          * the specified radix. The returned string is a concatenation of a minus
          * sign if the number is negative and characters from '0' to '9' and 'a' to
@@ -210,7 +210,7 @@ namespace biz.ritter.javapi.lang
             }
             return new java.lang.StringJ(0, buffer.Length, buffer).ToString();
         }
-        /**
+         /*
          * Determines the number of trailing zeros in the specified long value after
          * the {@link #lowestOneBit(long) lowest one bit}.
          *
@@ -224,7 +224,7 @@ namespace biz.ritter.javapi.lang
             return bitCount((lng & -lng) - 1);
         }
 
-        /**
+         /*
          * Counts the number of 1 bits in the specified long value; this is also
          * referred to as population count.
          *
@@ -243,7 +243,7 @@ namespace biz.ritter.javapi.lang
             i = (i & 0x0000FFFF) + ((i >> 16) & 0x0000FFFF);
             return i;
         }
-        /**
+         /*
          * Reverses the order of the bits of the specified long value.
          * 
          * @param lng
@@ -263,7 +263,7 @@ namespace biz.ritter.javapi.lang
             return reverseBytes(lng);
         }
 
-        /**
+         /*
          * Reverses the order of the bytes of the specified long value.
          * 
          * @param lng
@@ -283,7 +283,7 @@ namespace biz.ritter.javapi.lang
             return (b0 | b1 | b2 | b3 | b4 | b5 | b6 | b7);
         }
 
-        /**
+         /*
          * Returns the value of the {@code signum} function for the specified long
          * value.
          * 
@@ -297,7 +297,7 @@ namespace biz.ritter.javapi.lang
         {
             return (lng == 0 ? 0 : (lng < 0 ? -1 : 1));
         }
-        /**
+         /*
          * Determines the number of leading zeros in the specified long value prior
          * to the {@link #highestOneBit(long) highest one bit}.
          *

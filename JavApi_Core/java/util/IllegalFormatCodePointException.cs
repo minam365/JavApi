@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util
 {
-    /**
+     /*
      * An {@code IllegalFormatCodePointException} will be thrown if an invalid
      * Unicode code point (defined by {@link Character#isValidCodePoint(int)}) is
      * passed as a parameter to a Formatter.
@@ -31,7 +31,7 @@ namespace biz.ritter.javapi.util
 
         private int c;
 
-        /**
+         /*
          * Constructs a new {@code IllegalFormatCodePointException} which is
          * specified by the invalid Unicode code point.
          * 
@@ -43,7 +43,7 @@ namespace biz.ritter.javapi.util
             this.c = c;
         }
 
-        /**
+         /*
          * Returns the invalid Unicode code point.
          * 
          * @return the invalid Unicode code point.
@@ -53,7 +53,7 @@ namespace biz.ritter.javapi.util
             return c;
         }
 
-        /**
+         /*
          * Returns the message string of the IllegalFormatCodePointException.
          * 
          * @return the message string of the IllegalFormatCodePointException.

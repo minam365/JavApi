@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang
 {
 
-/**
+ /*
  * Thrown when an attempt is made to invoke a native for which an implementation
  * could not be found.
  */
@@ -25,7 +25,7 @@ public class UnsatisfiedLinkError : LinkageError {
 
     private const long serialVersionUID = -4019343241616879428L;
 
-    /**
+     /*
      * Constructs a new {@code UnsatisfiedLinkError} that includes the current
      * stack trace.
      */
@@ -33,7 +33,7 @@ public class UnsatisfiedLinkError : LinkageError {
         
     }
 
-    /**
+     /*
      * Constructs a new {@code UnsatisfiedLinkError} with the current stack
      * trace and the specified detail message.
      * 

@@ -22,7 +22,7 @@ using javax = biz.ritter.javapix;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * {@code TimeZone} represents a time zone offset, taking into account
      * daylight savings.
      * <p/>
@@ -75,12 +75,12 @@ namespace biz.ritter.javapi.util
     {
         private const long serialVersionUID = 3581463369166924961L;
 
-        /**
+         /*
          * The SHORT display name style.
          */
         public const int SHORT = 0;
 
-        /**
+         /*
          * The LONG display name style.
          */
         public const int LONG = 1;
@@ -105,14 +105,14 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Constructs a new instance of this class.
          */
         public TimeZone()
         {
         }
 
-        /**
+         /*
          * Returns a new {@code TimeZone} with the same ID, {@code rawOffset} and daylight savings
          * time rules as this {@code TimeZone}.
          *
@@ -132,7 +132,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Gets the ID of this {@code TimeZone}.
          * 
          * @return the time zone ID string.
@@ -142,7 +142,7 @@ namespace biz.ritter.javapi.util
             return ID;
         }
 
-        /**
+         /*
          * Gets the daylight savings offset in milliseconds for this {@code TimeZone}.
          * <p/>
          * This implementation returns 3600000 (1 hour), or 0 if the time zone does
@@ -164,7 +164,7 @@ namespace biz.ritter.javapi.util
             return 0;
         }
 
-        /**
+         /*
          * Gets the offset from GMT of this {@code TimeZone} for the specified date. The
          * offset includes daylight savings time if the specified date is within the
          * daylight savings time period.
@@ -182,7 +182,7 @@ namespace biz.ritter.javapi.util
             return getRawOffset();
         }
 
-        /**
+         /*
          * Gets the offset from GMT of this {@code TimeZone} for the specified date and
          * time. The offset includes daylight savings time if the specified date and
          * time are within the daylight savings time period.
@@ -205,7 +205,7 @@ namespace biz.ritter.javapi.util
         abstract public int getOffset(int era, int year, int month, int day,
                 int dayOfWeek, int time);
 
-        /**
+         /*
          * Gets the offset for standard time from GMT for this {@code TimeZone}.
          * 
          * @return the offset from GMT in milliseconds.
@@ -249,7 +249,7 @@ namespace biz.ritter.javapi.util
             return buf.toString();
         }
 
-        /**
+         /*
          * Returns whether the specified {@code TimeZone} has the same raw offset as this
          * {@code TimeZone}.
          * 
@@ -267,7 +267,7 @@ namespace biz.ritter.javapi.util
             return getRawOffset() == zone.getRawOffset();
         }
 
-        /**
+         /*
          * Returns whether the specified {@code Date} is in the daylight savings time period for
          * this {@code TimeZone}.
          * 
@@ -291,7 +291,7 @@ namespace biz.ritter.javapi.util
             return result;
         }
 
-        /**
+         /*
          * Sets the ID of this {@code TimeZone}.
          * 
          * @param name
@@ -306,7 +306,7 @@ namespace biz.ritter.javapi.util
             ID = name;
         }
 
-        /**
+         /*
          * Sets the offset for standard time from GMT for this {@code TimeZone}.
          * 
          * @param offset
@@ -314,7 +314,7 @@ namespace biz.ritter.javapi.util
          */
         abstract public void setRawOffset(int offset);
 
-        /**
+         /*
          * Returns whether this {@code TimeZone} has a daylight savings time period.
          * 
          * @return {@code true} if this {@code TimeZone} has a daylight savings time period, {@code false}

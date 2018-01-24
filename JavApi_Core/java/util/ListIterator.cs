@@ -19,13 +19,13 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * An ListIterator is used to sequence over a List of objects. ListIterator can
      * move backwards or forwards through the list.
      */
     public interface ListIterator<E> : Iterator<E> {
     
-        /**
+         /*
          * Inserts the specified object into the list between {@code next} and
          * {@code previous}. The object inserted will be the previous object.
          * 
@@ -40,7 +40,7 @@ namespace biz.ritter.javapi.util
          */
         void add(E obj);
 
-        /**
+         /*
          * Returns whether there are more elements to iterate.
          * 
          * @return {@code true} if there are more elements, {@code false} otherwise.
@@ -48,7 +48,7 @@ namespace biz.ritter.javapi.util
          */
         new bool hasNext();
 
-        /**
+         /*
          * Returns whether there are previous elements to iterate.
          * 
          * @return {@code true} if there are previous elements, {@code false}
@@ -57,7 +57,7 @@ namespace biz.ritter.javapi.util
          */
         bool hasPrevious();
 
-        /**
+         /*
          * Returns the next object in the iteration.
          * 
          * @return the next object.
@@ -67,7 +67,7 @@ namespace biz.ritter.javapi.util
          */
         new E next();
 
-        /**
+         /*
          * Returns the index of the next object in the iteration.
          * 
          * @return the index of the next object, or the size of the list if the
@@ -78,7 +78,7 @@ namespace biz.ritter.javapi.util
          */
         int nextIndex();
 
-        /**
+         /*
          * Returns the previous object in the iteration.
          * 
          * @return the previous object.
@@ -88,7 +88,7 @@ namespace biz.ritter.javapi.util
          */
          E previous();
 
-        /**
+         /*
          * Returns the index of the previous object in the iteration.
          * 
          * @return the index of the previous object, or -1 if the iterator is at the
@@ -99,7 +99,7 @@ namespace biz.ritter.javapi.util
          */
         int previousIndex();
 
-        /**
+         /*
          * Removes the last object returned by {@code next} or {@code previous} from
          * the list.
          * 
@@ -112,7 +112,7 @@ namespace biz.ritter.javapi.util
          */
         new void remove();
 
-        /**
+         /*
          * Replaces the last object returned by {@code next} or {@code previous}
          * with the specified object.
          * 

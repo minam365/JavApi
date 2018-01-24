@@ -9,7 +9,7 @@ using java = biz.ritter.javapi;
 
 namespace org.xml.sax.helpers
 {
-    /**
+     /*
      * Adapt a SAX1 Parser as a SAX2 XMLReader.
      *
      * <blockquote>
@@ -44,7 +44,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Construct a new parser adapter.
          *
          * <p>Use the "org.xml.sax.parser" property to locate the
@@ -100,7 +100,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Construct a new parser adapter.
          *
          * <p>Note that the embedded parser cannot be changed once the
@@ -118,7 +118,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Internal setup method.
          *
          * @param parser The embedded parser.
@@ -154,7 +154,7 @@ namespace org.xml.sax.helpers
         private readonly static String XMLNS_URIs = FEATURES + "xmlns-uris";
 
 
-        /**
+         /*
          * Set a feature flag for the parser.
          *
          * <p>The only features recognized are namespaces and 
@@ -201,7 +201,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Check a parser feature flag.
          *
          * <p>The only features recognized are namespaces and 
@@ -237,7 +237,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Set a parser property.
          *
          * <p>No properties are currently recognized.</p>
@@ -257,7 +257,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Get a parser property.
          *
          * <p>No properties are currently recognized.</p>
@@ -277,7 +277,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Set the entity resolver.
          *
          * @param resolver The new entity resolver.
@@ -289,7 +289,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Return the current entity resolver.
          *
          * @return The current entity resolver, or null if none was supplied.
@@ -301,7 +301,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Set the DTD handler.
          *
          * @param handler the new DTD handler
@@ -313,7 +313,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Return the current DTD handler.
          *
          * @return the current DTD handler, or null if none was supplied
@@ -325,7 +325,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Set the content handler.
          *
          * @param handler the new content handler
@@ -337,7 +337,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Return the current content handler.
          *
          * @return The current content handler, or null if none was supplied.
@@ -349,7 +349,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Set the error handler.
          *
          * @param handler The new error handler.
@@ -361,7 +361,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Return the current error handler.
          *
          * @return The current error handler, or null if none was supplied.
@@ -373,7 +373,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Parse an XML document.
          *
          * @param systemId The absolute URL of the document.
@@ -391,7 +391,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Parse an XML document.
          *
          * @param input An input source for the document.
@@ -429,7 +429,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Adapter implementation method; do not call.
          * Adapt a SAX1 document locator event.
          *
@@ -446,7 +446,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Adapter implementation method; do not call.
          * Adapt a SAX1 start document event.
          *
@@ -464,7 +464,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Adapter implementation method; do not call.
          * Adapt a SAX1 end document event.
          *
@@ -482,7 +482,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Adapter implementation method; do not call.
          * Adapt a SAX1 startElement event.
          *
@@ -637,7 +637,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Adapter implementation method; do not call.
          * Adapt a SAX1 end element event.
          *
@@ -676,7 +676,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Adapter implementation method; do not call.
          * Adapt a SAX1 characters event.
          *
@@ -697,7 +697,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Adapter implementation method; do not call.
          * Adapt a SAX1 ignorable whitespace event.
          *
@@ -718,7 +718,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Adapter implementation method; do not call.
          * Adapt a SAX1 processing instruction event.
          *
@@ -744,7 +744,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Initialize the parser before each run.
          */
         private void setupParser()
@@ -774,7 +774,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Process a qualified (prefixed) name.
          *
          * <p>If the name has an undeclared prefix, use only the qname
@@ -806,7 +806,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Report a non-fatal error.
          *
          * @param message The error message.
@@ -821,7 +821,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Construct an exception for the current context.
          *
          * @param message The error message.
@@ -839,7 +839,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Throw an exception if we are parsing.
          *
          * <p>Use this method to detect illegal feature or
@@ -900,7 +900,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Adapt a SAX1 AttributeList as a SAX2 Attributes object.
          *
          * <p>This class is in the Public Domain, and comes with NO
@@ -915,7 +915,7 @@ namespace org.xml.sax.helpers
         {
             private readonly ParserAdapter outer;
 
-            /**
+             /*
              * Construct a new adapter.
              */
             internal AttributeListAdapter(ParserAdapter pa)
@@ -924,7 +924,7 @@ namespace org.xml.sax.helpers
             }
 
 
-            /**
+             /*
              * Set the embedded AttributeList.
              *
              * <p>This method must be invoked before any of the others
@@ -938,7 +938,7 @@ namespace org.xml.sax.helpers
             }
 
 
-            /**
+             /*
              * Return the length of the attribute list.
              *
              * @return The number of attributes in the list.
@@ -950,7 +950,7 @@ namespace org.xml.sax.helpers
             }
 
 
-            /**
+             /*
              * Return the Namespace URI of the specified attribute.
              *
              * @param The attribute's index.
@@ -963,7 +963,7 @@ namespace org.xml.sax.helpers
             }
 
 
-            /**
+             /*
              * Return the local name of the specified attribute.
              *
              * @param The attribute's index.
@@ -976,7 +976,7 @@ namespace org.xml.sax.helpers
             }
 
 
-            /**
+             /*
              * Return the qualified (prefixed) name of the specified attribute.
              *
              * @param The attribute's index.
@@ -988,7 +988,7 @@ namespace org.xml.sax.helpers
             }
 
 
-            /**
+             /*
              * Return the type of the specified attribute.
              *
              * @param The attribute's index.
@@ -1000,7 +1000,7 @@ namespace org.xml.sax.helpers
             }
 
 
-            /**
+             /*
              * Return the value of the specified attribute.
              *
              * @param The attribute's index.
@@ -1012,7 +1012,7 @@ namespace org.xml.sax.helpers
             }
 
 
-            /**
+             /*
              * Look up an attribute index by Namespace name.
              *
              * @param uri The Namespace URI or the empty string.
@@ -1026,7 +1026,7 @@ namespace org.xml.sax.helpers
             }
 
 
-            /**
+             /*
              * Look up an attribute index by qualified (prefixed) name.
              *
              * @param qName The qualified name.
@@ -1047,7 +1047,7 @@ namespace org.xml.sax.helpers
             }
 
 
-            /**
+             /*
              * Look up the type of an attribute by Namespace name.
              *
              * @param uri The Namespace URI
@@ -1060,7 +1060,7 @@ namespace org.xml.sax.helpers
             }
 
 
-            /**
+             /*
              * Look up the type of an attribute by qualified (prefixed) name.
              *
              * @param qName The qualified name.
@@ -1072,7 +1072,7 @@ namespace org.xml.sax.helpers
             }
 
 
-            /**
+             /*
              * Look up the value of an attribute by Namespace name.
              *
              * @param uri The Namespace URI
@@ -1085,7 +1085,7 @@ namespace org.xml.sax.helpers
             }
 
 
-            /**
+             /*
              * Look up the value of an attribute by qualified (prefixed) name.
              *
              * @param qName The qualified name.

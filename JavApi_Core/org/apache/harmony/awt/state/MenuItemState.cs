@@ -16,11 +16,11 @@ using java = biz.ritter.javapi;
 
 namespace org.apache.harmony.awt.state
 {
-    /**
+     /*
      * @author Pavel Dolgov
      */
 
-    /**
+     /*
      * State of menu item
      */
 

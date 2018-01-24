@@ -8,7 +8,7 @@ using org.apache.harmony.awt.gl;
 
 namespace biz.ritter.javapi.awt.geom
 {
-    /**
+     /*
  * @author Denis M. Kishenko
  */
 
@@ -18,42 +18,42 @@ namespace biz.ritter.javapi.awt.geom
     public const int WIND_EVEN_ODD = PathIteratorConstants.WIND_EVEN_ODD;
     public const int WIND_NON_ZERO = PathIteratorConstants.WIND_NON_ZERO;
 
-    /**
+     /*
      * The buffers size
      */
     private const int BUFFER_SIZE = 10;
     
-    /**
+     /*
      * The buffers capacity
      */
     private const int BUFFER_CAPACITY = 10;
 
-    /**
+     /*
      * The point's types buffer
      */
     byte[] types;
     
-    /**
+     /*
      * The points buffer
      */
     float[] points;
     
-    /**
+     /*
      * The point's type buffer size
      */
     int typeSize;
     
-    /**
+     /*
      * The points buffer size
      */
     int pointSize;
     
-    /**
+     /*
      * The path rule 
      */
     int rule;
 
-    /**
+     /*
      * The space amount in points buffer for different segmenet's types
      */
     static int [] pointShift = {
@@ -68,34 +68,34 @@ namespace biz.ritter.javapi.awt.geom
      */
     class Iterator : PathIterator {
 
-        /**
+         /*
          * The current cursor position in types buffer
          */
         int typeIndex;
         
-        /**
+         /*
          * The current cursor position in points buffer
          */
         int pointIndex;
         
-        /**
+         /*
          * The source GeneralPath object
          */
         GeneralPath p;
         
-        /**
+         /*
          * The path iterator transformation
          */
         AffineTransform t;
 
-        /**
+         /*
          * Constructs a new GeneralPath.Iterator for given general path
          * @param path - the source GeneralPath object
          */
         Iterator(GeneralPath path) :this(path, null){
         }
 
-        /**
+         /*
          * Constructs a new GeneralPath.Iterator for given general path and transformation
          * @param path - the source GeneralPath object
          * @param at - the AffineTransform object to apply rectangle path
@@ -184,7 +184,7 @@ namespace biz.ritter.javapi.awt.geom
         return rule;
     }
 
-    /**
+     /*
      * Checks points and types buffer size to add pointCount points. If necessary realloc buffers to enlarge size.   
      * @param pointCount - the point count to be added in buffer
      */
@@ -359,7 +359,7 @@ namespace biz.ritter.javapi.awt.geom
         return getBounds2D().getBounds();
     }
 
-    /**
+     /*
      * Checks cross count according to path rule to define is it point inside shape or not. 
      * @param cross - the point cross count
      * @return true if point is inside path, or false otherwise 

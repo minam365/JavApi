@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.sql
 {
 
-    /**
+     /*
      * This class is an actual usage of the wrapper pattern for JDBC classes.
      * Developers can get the delegate instance when the instance may be a proxy
      * class.
@@ -27,7 +27,7 @@ namespace biz.ritter.javapi.sql
     public interface Wrapper
     {
 
-        /**
+         /*
          * Answers an object that implements the given interface. If the caller is
          * not a wrapper, a SQLException will be thrown.
          * 
@@ -39,7 +39,7 @@ namespace biz.ritter.javapi.sql
          */
         T unwrap<T>(java.lang.Class iface);// throws SQLException;
 
-        /**
+         /*
          * If the caller is a wrapper of the class or implements the given
          * interface, the methods return false and vice versa.
          * 

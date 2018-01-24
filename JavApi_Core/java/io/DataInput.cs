@@ -15,7 +15,7 @@ using System;
 
 namespace biz.ritter.javapi.io
 {
-    /**
+     /*
      * Defines an interface for classes that are able to read typed data from some
      * source. Typically, this data has been written by a class which implements
      * {@link DataOutput}. Types that can be read include byte, 16-bit short, 32-bit
@@ -44,7 +44,7 @@ namespace biz.ritter.javapi.io
      * @see RandomAccessFile
      */
     public interface DataInput {
-        /**
+         /*
          * Reads a boolean.
          * 
          * @return the next boolean value.
@@ -56,7 +56,7 @@ namespace biz.ritter.javapi.io
          */
         bool readBoolean() ;
 
-        /**
+         /*
          * Reads an 8-bit byte value.
          * 
          * @return the next byte value.
@@ -68,7 +68,7 @@ namespace biz.ritter.javapi.io
          */
         byte readByte();
 
-        /**
+         /*
          * Reads a 16-bit character value.
          * 
          * @return the next char value.
@@ -80,7 +80,7 @@ namespace biz.ritter.javapi.io
          */
         char readChar();
 
-        /**
+         /*
          * Reads a 64-bit double value.
          * 
          * @return the next double value.
@@ -92,7 +92,7 @@ namespace biz.ritter.javapi.io
          */
         double readDouble();
 
-        /**
+         /*
          * Reads a 32-bit float value.
          * 
          * @return the next float value.
@@ -104,7 +104,7 @@ namespace biz.ritter.javapi.io
          */
         float readFloat();
 
-        /**
+         /*
          * Reads bytes into the byte array {@code buffer}. This method will block
          * until {@code buffer.length} number of bytes have been read.
          * 
@@ -119,7 +119,7 @@ namespace biz.ritter.javapi.io
          */
         void readFully(byte[] buffer);
 
-        /**
+         /*
          * Reads bytes and stores them in the byte array {@code buffer} starting at
          * offset {@code offset}. This method blocks until {@code count} number of
          * bytes have been read.
@@ -140,7 +140,7 @@ namespace biz.ritter.javapi.io
          */
         void readFully(byte[] buffer, int offset, int count);
 
-        /**
+         /*
          * Reads a 32-bit integer value.
          * 
          * @return the next int value.
@@ -152,7 +152,7 @@ namespace biz.ritter.javapi.io
          */
         int readInt();
 
-        /**
+         /*
          * Returns a string containing the next line of text available from this
          * stream. A line is made of zero or more characters followed by {@code
          * '\n'}, {@code '\r'}, {@code "\r\n"} or the end of the stream. The string
@@ -167,7 +167,7 @@ namespace biz.ritter.javapi.io
          */
         String readLine();
 
-        /**
+         /*
          * Reads a 64-bit long value.
          * 
          * @return the next long value.
@@ -179,7 +179,7 @@ namespace biz.ritter.javapi.io
          */
         long readLong();
 
-        /**
+         /*
          * Reads a 16-bit short value.
          * 
          * @return the next short value.
@@ -191,7 +191,7 @@ namespace biz.ritter.javapi.io
          */
         short readShort();
 
-        /**
+         /*
          * Reads an unsigned 8-bit byte value and returns it as an int.
          * 
          * @return the next unsigned byte value.
@@ -203,7 +203,7 @@ namespace biz.ritter.javapi.io
          */
         int readUnsignedByte();
 
-        /**
+         /*
          * Reads a 16-bit unsigned short value and returns it as an int.
          * 
          * @return the next unsigned short value.
@@ -215,7 +215,7 @@ namespace biz.ritter.javapi.io
          */
         int readUnsignedShort();
 
-        /**
+         /*
          * Reads a string encoded with {@link DataInput modified UTF-8}.
          * 
          * @return the next string encoded with {@link DataInput modified UTF-8}.
@@ -227,7 +227,7 @@ namespace biz.ritter.javapi.io
          */
         String readUTF();
 
-        /**
+         /*
          * Skips {@code count} number of bytes. This method will not throw an
          * {@link EOFException} if the end of the input is reached before
          * {@code count} bytes where skipped.

@@ -22,7 +22,7 @@ namespace biz.ritter.javapi.dotnet.nio.charset
         public CharsetProviderImpl() {
         }
 
-        /**
+         /*
          * Answers an iterator over the list of available charsets.
          * 
          * @return available charsets.
@@ -38,7 +38,7 @@ namespace biz.ritter.javapi.dotnet.nio.charset
             return charset.iterator();
         }
 
-        /**
+         /*
          * Answers the charset with the given canonical or alias name.
          * 
          * Subsequent requests for the same charset will answer the same instance.
@@ -66,7 +66,7 @@ namespace biz.ritter.javapi.dotnet.nio.charset
         {
             return this.encoding;
         }
-        /**
+         /*
          * Determines whether this charset is a super set of the given charset.
          * 
          * @param charset
@@ -80,7 +80,7 @@ namespace biz.ritter.javapi.dotnet.nio.charset
             return false;
         }
 
-        /**
+         /*
          * Gets a new instance of an encoder for this charset.
          * 
          * @return a new instance of an encoder for this charset.
@@ -90,7 +90,7 @@ namespace biz.ritter.javapi.dotnet.nio.charset
             return new CharsetEncoderImpl(this);
         }
 
-        /**
+         /*
          * Gets a new instance of a decoder for this charset.
          * 
          * @return a new instance of a decoder for this charset.

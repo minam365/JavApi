@@ -13,7 +13,7 @@
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      *  <code>DOMErrorHandler</code> is a callback interface that the DOM 
      * implementation can call when reporting errors that happens while 
      * processing XML data, or when doing some other processing (e.g. validating 
@@ -29,7 +29,7 @@ namespace org.w3c.dom
      */
     public interface DOMErrorHandler
     {
-        /**
+         /*
          * This method is called on the error handler when an error occurs.
          * <br> If an exception is thrown from this method, it is considered to be 
          * equivalent of returning <code>true</code>. 

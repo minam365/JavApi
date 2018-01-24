@@ -136,7 +136,7 @@ namespace biz.ritter.javapi.util
             return more;
         }
 
-        /**
+         /*
          * Returns the next element in this {@code Enumeration}.
          * 
          * @return the next element..

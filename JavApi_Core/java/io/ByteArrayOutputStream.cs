@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.io
 {
-    /**
+     /*
      * A specialized {@link OutputStream} for class for writing content to an
      * (internal) byte array. As bytes are written to this stream, the byte array
      * may be expanded to hold more bytes. When the writing is considered to be
@@ -28,17 +28,17 @@ namespace biz.ritter.javapi.io
      * @see ByteArrayInputStream
      */
     public class ByteArrayOutputStream : OutputStream {
-        /**
+         /*
          * The byte array containing the bytes written.
          */
         protected byte[] buf;
 
-        /**
+         /*
          * The number of bytes written.
          */
         protected int count;
 
-        /**
+         /*
          * Constructs a new ByteArrayOutputStream with a default size of 32 bytes.
          * If more than 32 bytes are written to this instance, the underlying byte
          * array will expand.
@@ -47,7 +47,7 @@ namespace biz.ritter.javapi.io
             buf = new byte[32];
         }
 
-        /**
+         /*
          * Constructs a new {@code ByteArrayOutputStream} with a default size of
          * {@code size} bytes. If more than {@code size} bytes are written to this
          * instance, the underlying byte array will expand.
@@ -66,7 +66,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Closes this stream. This releases system resources used for this stream.
          * 
          * @throws IOException
@@ -93,7 +93,7 @@ namespace biz.ritter.javapi.io
             buf = newbuf;
         }
 
-        /**
+         /*
          * Resets this stream to the beginning of the underlying byte array. All
          * subsequent writes will overwrite any bytes previously stored in this
          * stream.
@@ -104,7 +104,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Returns the total number of bytes written to this stream so far.
          * 
          * @return the number of bytes written to this stream.
@@ -113,7 +113,7 @@ namespace biz.ritter.javapi.io
             return count;
         }
 
-        /**
+         /*
          * Returns the contents of this ByteArrayOutputStream as a byte array. Any
          * changes made to the receiver after returning will not be reflected in the
          * byte array returned to the caller.
@@ -128,7 +128,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Returns the contents of this ByteArrayOutputStream as a string. Any
          * changes made to the receiver after returning will not be reflected in the
          * string returned to the caller.
@@ -141,7 +141,7 @@ namespace biz.ritter.javapi.io
             return new java.lang.StringJ(buf, 0, count).ToString();
         }
 
-        /**
+         /*
          * Returns the contents of this ByteArrayOutputStream as a string. Each byte
          * {@code b} in this stream is converted to a character {@code c} using the
          * following function:
@@ -164,7 +164,7 @@ namespace biz.ritter.javapi.io
             return new String(newBuf);
         }
 
-        /**
+         /*
          * Returns the contents of this ByteArrayOutputStream as a string converted
          * according to the encoding declared in {@code enc}.
          * 
@@ -179,7 +179,7 @@ namespace biz.ritter.javapi.io
             return new java.lang.StringJ(buf, 0, count, enc).ToString();
         }
 
-        /**
+         /*
          * Writes {@code count} bytes from the byte array {@code buffer} starting at
          * offset {@code index} to this stream.
          * 
@@ -215,7 +215,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Writes the specified byte {@code oneByte} to the OutputStream. Only the
          * low order byte of {@code oneByte} is written.
          * 
@@ -232,7 +232,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Takes the contents of this stream and writes it to the output stream
          * {@code out}.
          * 

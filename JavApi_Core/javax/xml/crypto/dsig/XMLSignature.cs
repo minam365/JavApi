@@ -30,7 +30,7 @@ using javax = biz.ritter.javapix;
 namespace biz.ritter.javapix.xml.crypto.dsig
 {
  
-/**
+ /*
  * A representation of the XML <code>Signature</code> element as 
  * defined in the <a href="http://www.w3.org/TR/xmldsig-core/">
  * W3C Recommendation for XML-Signature Syntax and Processing</a>.
@@ -71,7 +71,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig
  */
 public interface XMLSignature : XMLStructure {
 
-    /**
+     /*
      * Validates the signature according to the 
      * <a href="http://www.w3.org/TR/xmldsig-core/#sec-CoreValidation">
      * core validation processing rules</a>. This method validates the 
@@ -95,21 +95,21 @@ public interface XMLSignature : XMLStructure {
     bool validate(XMLValidateContext validateContext) 
         ;//throws XMLSignatureException;
 
-    /**
+     /*
      * Returns the key info of this <code>XMLSignature</code>.
      *
      * @return the key info (may be <code>null</code> if not specified)
      */
     javax.xml.crypto.dsig.keyinfo.KeyInfo getKeyInfo();
 
-    /**
+     /*
      * Returns the signed info of this <code>XMLSignature</code>.
      *
      * @return the signed info (never <code>null</code>)
      */
     SignedInfo getSignedInfo();
     
-    /**
+     /*
      * Returns an {@link java.util.Collections#unmodifiableList unmodifiable
      * list} of {@link XMLObject}s contained in this <code>XMLSignature</code>. 
      *
@@ -118,21 +118,21 @@ public interface XMLSignature : XMLStructure {
      */
     java.util.List<Object> getObjects();
 
-    /**
+     /*
      * Returns the optional Id of this <code>XMLSignature</code>.
      *
      * @return the Id (may be <code>null</code> if not specified)
      */
     String getId();
       
-    /**
+     /*
      * Returns the signature value of this <code>XMLSignature</code>.
      *
      * @return the signature value 
      */
     XMLSignatureNS.SignatureValue getSignatureValue();
 
-    /**
+     /*
      * Signs this <code>XMLSignature</code>.
      *
      * <p>If this method throws an exception, this <code>XMLSignature</code> and
@@ -151,7 +151,7 @@ public interface XMLSignature : XMLStructure {
     void sign(biz.ritter.javapix.xml.crypto.dsig.XMLSignContext signContext);// throws MarshalException, 
         //XMLSignatureException;
 
-    /**
+     /*
      * Returns the result of the {@link KeySelector}, if specified, after
      * this <code>XMLSignature</code> has been signed or validated.
      *
@@ -163,7 +163,7 @@ public interface XMLSignature : XMLStructure {
 
 }
 namespace XMLSignatureNS {
-    /**
+     /*
      * A representation of the XML <code>SignatureValue</code> element as 
      * defined in the <a href="http://www.w3.org/TR/xmldsig-core/">
      * W3C Recommendation for XML-Signature Syntax and Processing</a>. 
@@ -184,7 +184,7 @@ namespace XMLSignatureNS {
      * @author JSR 105 Expert Group
      */
     public interface SignatureValue : XMLStructure {
-        /**
+         /*
          * Returns the optional <code>Id</code> attribute of this
          * <code>SignatureValue</code>, which permits this element to be
          * referenced from elsewhere.
@@ -194,7 +194,7 @@ namespace XMLSignatureNS {
          */
         String getId();
 
-        /**
+         /*
          * Returns the signature value of this <code>SignatureValue</code>.
          *
          * @return the signature value (may be <code>null</code> if the
@@ -204,7 +204,7 @@ namespace XMLSignatureNS {
          */
         byte[] getValue();
 
-        /**
+         /*
          * Validates the signature value. This method performs a
          * cryptographic validation of the signature calculated over the
          * <code>SignedInfo</code> of the <code>XMLSignature</code>.

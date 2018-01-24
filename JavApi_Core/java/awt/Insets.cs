@@ -18,7 +18,7 @@ using org.apache.harmony.misc;
 
 namespace biz.ritter.javapi.awt
 {
-    /**
+     /*
      * @author Dmitry A. Durnev
      */
     [Serializable]

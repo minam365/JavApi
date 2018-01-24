@@ -14,7 +14,7 @@ using org.w3c.dom.traversal;
 namespace org.w3c.dom.ls
 {
 
-    /**
+     /*
      *  <code>LSSerializerFilter</code>s provide applications the ability to 
      * examine nodes as they are being serialized and decide what nodes should 
      * be serialized or not. The <code>LSSerializerFilter</code> interface is 
@@ -44,7 +44,7 @@ namespace org.w3c.dom.ls
      */
     public interface LSSerializerFilter : NodeFilter
     {
-        /**
+         /*
          *  Tells the <code>LSSerializer</code> what types of nodes to show to the 
          * filter. If a node is not shown to the filter using this attribute, it 
          * is automatically serialized. See <code>NodeFilter</code> for 

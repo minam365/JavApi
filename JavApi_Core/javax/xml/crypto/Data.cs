@@ -21,7 +21,7 @@ using System;
 namespace biz.ritter.javapix.xml.crypto
 {
 	
-	/**
+	 /*
 	 * An abstract representation of the result of dereferencing a 
 	 * {@link URIReference} or the input/output of subsequent {@link Transform}s.
 	 * The primary purpose of this interface is to group and provide type safety

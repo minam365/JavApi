@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang
 {
 
-    /**
+     /*
      * Thrown when a monitor operation is attempted when the monitor is not in the
      * correct state, for example when a thread attempts to exit a monitor which it
      * does not own.
@@ -28,14 +28,14 @@ namespace biz.ritter.javapi.lang
 
         private static readonly long serialVersionUID = 3713306369498869069L;
 
-        /**
+         /*
          * Constructs a new {@code IllegalMonitorStateException} that includes the
          * current stack trace.
          */
         public IllegalMonitorStateException() : base() {
         }
 
-        /**
+         /*
          * Constructs a new {@code IllegalArgumentException} with the current stack
          * trace and the specified detail message.
          * 

@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * An {@code IllegalFormatConversionException} will be thrown when the parameter
      * is incompatible with the corresponding format specifier.
      * 
@@ -35,7 +35,7 @@ namespace biz.ritter.javapi.util
 
         private java.lang.Class arg;
 
-        /**
+         /*
          * Constructs a new {@code IllegalFormatConversionException} with the class
          * of the mismatched conversion and corresponding parameter.
          * 
@@ -54,7 +54,7 @@ namespace biz.ritter.javapi.util
             this.arg = arg;
         }
 
-        /**
+         /*
          * Returns the class of the mismatched parameter.
          * 
          * @return the class of the mismatched parameter.
@@ -64,7 +64,7 @@ namespace biz.ritter.javapi.util
             return arg;
         }
 
-        /**
+         /*
          * Returns the incompatible conversion.
          * 
          * @return the incompatible conversion.
@@ -74,7 +74,7 @@ namespace biz.ritter.javapi.util
             return c;
         }
 
-        /**
+         /*
          * Returns the message string of the IllegalFormatConversionException.
          * 
          * @return the message string of the IllegalFormatConversionException.

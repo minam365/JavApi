@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.sql
 {
 
-    /**
+     /*
      * An interface which provides comprehensive information about the database
      * management system and its supported features.
      * <p/>
@@ -36,7 +36,7 @@ namespace biz.ritter.javapi.sql
     public interface DatabaseMetaData : Wrapper
     {
 
-        /**
+         /*
          * Returns whether all procedures returned by {@link #getProcedures} can be
          * called by the current user.
          * 
@@ -47,7 +47,7 @@ namespace biz.ritter.javapi.sql
          */
         bool allProceduresAreCallable();//throws SQLException;
 
-        /**
+         /*
          * Returns whether all the tables returned by {@code getTables} can be used
          * by the current user in a {@code SELECT} statement.
          * 
@@ -58,7 +58,7 @@ namespace biz.ritter.javapi.sql
          */
         bool allTablesAreSelectable();//throws SQLException;
 
-        /**
+         /*
          * Returns whether a data definition statement in a transaction forces a {@code
          * commit} of the transaction.
          * 
@@ -69,7 +69,7 @@ namespace biz.ritter.javapi.sql
          */
         bool dataDefinitionCausesTransactionCommit();//throws SQLException;
 
-        /**
+         /*
          * Returns whether the database ignores data definition statements within a
          * transaction.
          * 
@@ -80,7 +80,7 @@ namespace biz.ritter.javapi.sql
          */
         bool dataDefinitionIgnoredInTransactions();//throws SQLException;
 
-        /**
+         /*
          * Returns whether a visible row delete can be detected by calling
          * {@link ResultSet#rowDeleted}.
          * 
@@ -96,7 +96,7 @@ namespace biz.ritter.javapi.sql
          */
         bool deletesAreDetected(int type);//throws SQLException;
 
-        /**
+         /*
          * Returns whether the return value of {@code getMaxRowSize} includes the
          * SQL data types {@code LONGVARCHAR} and {@code LONGVARBINARY}.
          * 
@@ -107,7 +107,7 @@ namespace biz.ritter.javapi.sql
          */
         bool doesMaxRowSizeIncludeBlobs();//throws SQLException;
 
-        /**
+         /*
          * Returns a {@code ResultSet} describing a subset of the attributes of a 
          * specified SQL User Defined Type (UDT) for a specified schema and catalog.
          * The subset is determined by restricting to those attributes whose 
@@ -196,7 +196,7 @@ namespace biz.ritter.javapi.sql
                 String typeNamePattern, String attributeNamePattern)
                 ;//throws SQLException;
 
-        /**
+         /*
          * Returns a list of a table's optimal set of columns that uniquely
          * identify the rows. The results are ordered by {@code SCOPE} (see below).
          * <p/>
@@ -258,7 +258,7 @@ namespace biz.ritter.javapi.sql
         ResultSet getBestRowIdentifier(String catalog, String schema,
                 String table, int scope, bool nullable);//throws SQLException;
 
-        /**
+         /*
          * Returns the set of catalog names available in this database. The set is
          * returned ordered by catalog name.
          * 
@@ -270,7 +270,7 @@ namespace biz.ritter.javapi.sql
          */
         ResultSet getCatalogs();//throws SQLException;
 
-        /**
+         /*
          * Returns the separator that this database uses between a catalog name and
          * table name.
          * 
@@ -280,7 +280,7 @@ namespace biz.ritter.javapi.sql
          */
         String getCatalogSeparator();//throws SQLException;
 
-        /**
+         /*
          * Returns the term that the database vendor prefers term for "catalog".
          * 
          * @return a String with the vendor's term for "catalog".
@@ -289,7 +289,7 @@ namespace biz.ritter.javapi.sql
          */
         String getCatalogTerm();//throws SQLException;
 
-        /**
+         /*
          * Returns a description of access rights for a table's columns. Only access
          * rights matching the criteria for the column name are returned.
          * <p/>
@@ -333,7 +333,7 @@ namespace biz.ritter.javapi.sql
         ResultSet getColumnPrivileges(String catalog, String schema,
                 String table, String columnNamePattern);//throws SQLException;
 
-        /**
+         /*
          * Returns a description of table columns available in a specified catalog.
          * Only descriptions meeting the specified catalog, schema, table, and column
          * names are returned.
@@ -412,7 +412,7 @@ namespace biz.ritter.javapi.sql
                 String tableNamePattern, String columnNamePattern)
                 ;//throws SQLException;
 
-        /**
+         /*
          * Returns the database connection that created this metadata.
          * 
          * @return the connection to the database.
@@ -421,7 +421,7 @@ namespace biz.ritter.javapi.sql
          */
         Connection getConnection();//throws SQLException;
 
-        /**
+         /*
          * Returns a list of foreign key columns in a given foreign key table that
          * reference the primary key columns of a supplied primary key table. This
          * describes how one table imports the key of another table. It would be
@@ -522,7 +522,7 @@ namespace biz.ritter.javapi.sql
                 String primarySchema, String primaryTable, String foreignCatalog,
                 String foreignSchema, String foreignTable);//throws SQLException;
 
-        /**
+         /*
          * Returns the major version number of the database software.
          * 
          * @return the major version number of the database software.
@@ -531,7 +531,7 @@ namespace biz.ritter.javapi.sql
          */
         int getDatabaseMajorVersion();//throws SQLException;
 
-        /**
+         /*
          * Returns the minor version number of the database software.
          * 
          * @return the minor version number of the database software.
@@ -540,7 +540,7 @@ namespace biz.ritter.javapi.sql
          */
         int getDatabaseMinorVersion();//throws SQLException;
 
-        /**
+         /*
          * Returns the name of the database software.
          * 
          * @return a {@code String} with the name of the database software.
@@ -549,7 +549,7 @@ namespace biz.ritter.javapi.sql
          */
         String getDatabaseProductName();//throws SQLException;
 
-        /**
+         /*
          * Returns the version number of this database software.
          * 
          * @return a {@code String} with the version number of the database
@@ -559,7 +559,7 @@ namespace biz.ritter.javapi.sql
          */
         String getDatabaseProductVersion();//throws SQLException;
 
-        /**
+         /*
          * Returns the default transaction isolation level for this database.
          * 
          * @return the default transaction isolation level. One of the following values:
@@ -575,21 +575,21 @@ namespace biz.ritter.javapi.sql
          */
         int getDefaultTransactionIsolation();//throws SQLException;
 
-        /**
+         /*
          * Returns the JDBC driver's major version number.
          * 
          * @return the driver's major version number.
          */
         int getDriverMajorVersion();
 
-        /**
+         /*
          * Returns the JDBC driver's minor version number.
          * 
          * @return the driver's minor version number.
          */
         int getDriverMinorVersion();
 
-        /**
+         /*
          * Returns the name of this JDBC driver.
          * 
          * @return a {@code String} containing the name of the JDBC driver
@@ -598,7 +598,7 @@ namespace biz.ritter.javapi.sql
          */
         String getDriverName();//throws SQLException;
 
-        /**
+         /*
          * Returns the version number of this JDBC driver.
          * 
          * @return a {@code String} containing the complete version number of the
@@ -608,7 +608,7 @@ namespace biz.ritter.javapi.sql
          */
         String getDriverVersion();//throws SQLException;
 
-        /**
+         /*
          * Returns a list of the foreign key columns that reference the primary key
          * columns of a specified table (the foreign keys exported by a table).
          * <p/>
@@ -696,7 +696,7 @@ namespace biz.ritter.javapi.sql
         ResultSet getExportedKeys(String catalog, String schema, String table)
                 ;//throws SQLException;
 
-        /**
+         /*
          * Returns a string of characters that may be used in unquoted identifier
          * names. The characters {@code a-z}, {@code A-Z}, {@code 0-9} and {@code _}
          * are always permitted.
@@ -707,7 +707,7 @@ namespace biz.ritter.javapi.sql
          */
         String getExtraNameCharacters();//throws SQLException;
 
-        /**
+         /*
          * Returns the string used to quote SQL identifiers. Returns " " (space) if
          * identifier quoting not supported.
          * 
@@ -717,7 +717,7 @@ namespace biz.ritter.javapi.sql
          */
         String getIdentifierQuoteString();//throws SQLException;
 
-        /**
+         /*
          * Returns a list columns in a table that are both primary keys and
          * referenced by the table's foreign key columns (that is, the primary keys
          * imported by a table).
@@ -805,7 +805,7 @@ namespace biz.ritter.javapi.sql
         ResultSet getImportedKeys(String catalog, String schema, String table)
                 ;//throws SQLException;
 
-        /**
+         /*
          * Returns a list of indices and statistics for a specified table.
          * <p/>
          * The list is returned as a {@code ResultSet}, with one row for each index
@@ -877,7 +877,7 @@ namespace biz.ritter.javapi.sql
         ResultSet getIndexInfo(String catalog, String schema, String table,
                 bool unique, bool approximate);//throws SQLException;
 
-        /**
+         /*
          * Returns this driver's major JDBC version number.
          * 
          * @return the major JDBC version number.
@@ -886,7 +886,7 @@ namespace biz.ritter.javapi.sql
          */
         int getJDBCMajorVersion();//throws SQLException;
 
-        /**
+         /*
          * Returns the minor JDBC version number for this driver.
          * 
          * @return the Minor JDBC Version Number.
@@ -895,7 +895,7 @@ namespace biz.ritter.javapi.sql
          */
         int getJDBCMinorVersion();//throws SQLException;
 
-        /**
+         /*
          * Get the maximum number of hex characters in an in-line binary literal for
          * this database.
          * 
@@ -906,7 +906,7 @@ namespace biz.ritter.javapi.sql
          */
         int getMaxBinaryLiteralLength();//throws SQLException;
 
-        /**
+         /*
          * Returns the maximum size of a catalog name in this database.
          * 
          * @return the maximum size in characters for a catalog name. If the limit
@@ -916,7 +916,7 @@ namespace biz.ritter.javapi.sql
          */
         int getMaxCatalogNameLength();//throws SQLException;
 
-        /**
+         /*
          * Returns the maximum size for a character literal in this database.
          * 
          * @return the maximum size in characters for a character literal. If the
@@ -927,7 +927,7 @@ namespace biz.ritter.javapi.sql
          */
         int getMaxCharLiteralLength();//throws SQLException;
 
-        /**
+         /*
          * Returns the maximum size for a Column name for this database.
          * 
          * @return the maximum number of characters for a Column name. If the limit
@@ -937,7 +937,7 @@ namespace biz.ritter.javapi.sql
          */
         int getMaxColumnNameLength();//throws SQLException;
 
-        /**
+         /*
          * Get the maximum number of columns in a {@code GROUP BY} clause for this
          * database.
          * 
@@ -949,7 +949,7 @@ namespace biz.ritter.javapi.sql
          */
         int getMaxColumnsInGroupBy();//throws SQLException;
 
-        /**
+         /*
          * Returns the maximum number of columns in an Index for this database.
          * 
          * @return the maximum number of columns in an Index. If the limit is
@@ -959,7 +959,7 @@ namespace biz.ritter.javapi.sql
          */
         int getMaxColumnsInIndex();//throws SQLException;
 
-        /**
+         /*
          * Returns the maximum number of columns in an {@code ORDER BY} clause for
          * this database.
          * 
@@ -971,7 +971,7 @@ namespace biz.ritter.javapi.sql
          */
         int getMaxColumnsInOrderBy();//throws SQLException;
 
-        /**
+         /*
          * Returns the maximum number of columns in a {@code SELECT} list for this
          * database.
          * 
@@ -983,7 +983,7 @@ namespace biz.ritter.javapi.sql
          */
         int getMaxColumnsInSelect();//throws SQLException;
 
-        /**
+         /*
          * Returns the maximum number of columns in a table for this database.
          * 
          * @return the maximum number of columns in a table. If the limit is
@@ -993,7 +993,7 @@ namespace biz.ritter.javapi.sql
          */
         int getMaxColumnsInTable();//throws SQLException;
 
-        /**
+         /*
          * Returns the database's maximum number of concurrent connections.
          * 
          * @return the maximum number of connections. If the limit is unknown, or
@@ -1003,7 +1003,7 @@ namespace biz.ritter.javapi.sql
          */
         int getMaxConnections();//throws SQLException;
 
-        /**
+         /*
          * Returns the maximum length of a cursor name for this database.
          * 
          * @return the maximum number of characters in a cursor name. If the limit
@@ -1013,7 +1013,7 @@ namespace biz.ritter.javapi.sql
          */
         int getMaxCursorNameLength();//throws SQLException;
 
-        /**
+         /*
          * Returns the maximum length in bytes for an Index for this database. This
          * covers all the parts of a composite index.
          * 
@@ -1024,7 +1024,7 @@ namespace biz.ritter.javapi.sql
          */
         int getMaxIndexLength();//throws SQLException;
 
-        /**
+         /*
          * Returns the maximum number of characters for a procedure name in this
          * database.
          * 
@@ -1036,7 +1036,7 @@ namespace biz.ritter.javapi.sql
          */
         int getMaxProcedureNameLength();//throws SQLException;
 
-        /**
+         /*
          * Returns the maximum number of bytes within a single row for this
          * database.
          * 
@@ -1047,7 +1047,7 @@ namespace biz.ritter.javapi.sql
          */
         int getMaxRowSize();//throws SQLException;
 
-        /**
+         /*
          * Returns the maximum number of characters in a schema name for this
          * database.
          * 
@@ -1058,7 +1058,7 @@ namespace biz.ritter.javapi.sql
          */
         int getMaxSchemaNameLength();//throws SQLException;
 
-        /**
+         /*
          * Returns the maximum number of characters in an SQL statement for this
          * database.
          * 
@@ -1070,7 +1070,7 @@ namespace biz.ritter.javapi.sql
          */
         int getMaxStatementLength();//throws SQLException;
 
-        /**
+         /*
          * Get the maximum number of simultaneously open active statements for this
          * database.
          * 
@@ -1081,7 +1081,7 @@ namespace biz.ritter.javapi.sql
          */
         int getMaxStatements();//throws SQLException;
 
-        /**
+         /*
          * Returns the maximum size for a table name in the database.
          * 
          * @return the maximum size in characters for a table name. If the limit is
@@ -1091,7 +1091,7 @@ namespace biz.ritter.javapi.sql
          */
         int getMaxTableNameLength();//throws SQLException;
 
-        /**
+         /*
          * Returns the maximum number of tables permitted in a {@code SELECT}
          * statement for the database.
          * 
@@ -1103,7 +1103,7 @@ namespace biz.ritter.javapi.sql
          */
         int getMaxTablesInSelect();//throws SQLException;
 
-        /**
+         /*
          * Returns the maximum number of characters in a user name for the database.
          * 
          * @return the maximum number of characters in a user name. If the limit is
@@ -1113,7 +1113,7 @@ namespace biz.ritter.javapi.sql
          */
         int getMaxUserNameLength();//throws SQLException;
 
-        /**
+         /*
          * Returns a list of the math functions available with this database. These
          * are used in the JDBC function escape clause and are the Open Group CLI
          * math function names.
@@ -1125,7 +1125,7 @@ namespace biz.ritter.javapi.sql
          */
         String getNumericFunctions();//throws SQLException;
 
-        /**
+         /*
          * Returns a list of the primary key columns of a specified table.
          * <p/>
          * The list is returned as a {@code ResultSet} with one row for each primary
@@ -1162,7 +1162,7 @@ namespace biz.ritter.javapi.sql
         ResultSet getPrimaryKeys(String catalog, String schema, String table)
                 ;//throws SQLException;
 
-        /**
+         /*
          * Returns a list of parameter and result columns for the stored procedures
          * belonging to a specified catalog.
          * <p/>
@@ -1241,7 +1241,7 @@ namespace biz.ritter.javapi.sql
                 String procedureNamePattern, String columnNamePattern)
                 ;//throws SQLException;
 
-        /**
+         /*
          * Returns a list of the stored procedures available in a specified catalog.
          * <p/>
          * The list is returned as a {@code ResultSet} with one row for each stored
@@ -1289,7 +1289,7 @@ namespace biz.ritter.javapi.sql
         ResultSet getProcedures(String catalog, String schemaPattern,
                 String procedureNamePattern);//throws SQLException;
 
-        /**
+         /*
          * Returns the database vendor's preferred name for "procedure".
          * 
          * @return a String with the vendor's preferred name for "procedure".
@@ -1298,7 +1298,7 @@ namespace biz.ritter.javapi.sql
          */
         String getProcedureTerm();//throws SQLException;
 
-        /**
+         /*
          * Returns the result set's default holdability.
          * 
          * @return one of {@code ResultSet.HOLD_CURSORS_OVER_COMMIT} or {@code
@@ -1308,7 +1308,7 @@ namespace biz.ritter.javapi.sql
          */
         int getResultSetHoldability();//throws SQLException;
 
-        /**
+         /*
          * Returns a list of the schema names in the database. The list is returned
          * as a {@code ResultSet}, ordered by the schema name, with one row per
          * schema in the following format:
@@ -1324,7 +1324,7 @@ namespace biz.ritter.javapi.sql
          */
         ResultSet getSchemas();//throws SQLException;
 
-        /**
+         /*
          * Returns the database vendor's preferred term for "schema".
          * 
          * @return a String which is the vendor's preferred term for schema.
@@ -1333,7 +1333,7 @@ namespace biz.ritter.javapi.sql
          */
         String getSchemaTerm();//throws SQLException;
 
-        /**
+         /*
          * Returns the string that is used to escape wildcard characters. This
          * string is used to escape the {@code '_'} and {@code '%'} wildcard
          * characters in catalog search pattern strings. {@code '_'} is used to represent any single
@@ -1346,7 +1346,7 @@ namespace biz.ritter.javapi.sql
          */
         String getSearchStringEscape();//throws SQLException;
 
-        /**
+         /*
          * Returns a list of all the SQL keywords that are NOT also SQL92 keywords
          * for the database.
          * 
@@ -1357,7 +1357,7 @@ namespace biz.ritter.javapi.sql
          */
         String getSQLKeywords();//throws SQLException;
 
-        /**
+         /*
          * States the type of {@code SQLState} value returned by {@code
          * SQLException.getSQLState}. This can either be the X/Open (now known as
          * Open Group) SQL CLI form or the SQL99 form.
@@ -1370,7 +1370,7 @@ namespace biz.ritter.javapi.sql
          */
         int getSQLStateType();//throws SQLException;
 
-        /**
+         /*
          * Returns a list of string functions available with the database. These
          * functions are used in JDBC function escape clause and follow the Open
          * Group CLI string function names definition.
@@ -1382,7 +1382,7 @@ namespace biz.ritter.javapi.sql
          */
         String getStringFunctions();//throws SQLException;
 
-        /**
+         /*
          * Returns a listing of the hierarchies of tables in a specified schema in
          * the database.
          * <p/>
@@ -1423,7 +1423,7 @@ namespace biz.ritter.javapi.sql
         ResultSet getSuperTables(String catalog, String schemaPattern,
                 String tableNamePattern);//throws SQLException;
 
-        /**
+         /*
          * Returns the User Defined Type (UDT) hierarchies for a given schema. Only
          * the immediate parent/child relationship is described. If a UDT does not
          * have a direct supertype, it is not listed.
@@ -1464,7 +1464,7 @@ namespace biz.ritter.javapi.sql
         ResultSet getSuperTypes(String catalog, String schemaPattern,
                 String typeNamePattern);//throws SQLException;
 
-        /**
+         /*
          * Returns a list of system functions available with the database. These are
          * names used in the JDBC function escape clause and are Open Group CLI
          * function names.
@@ -1476,7 +1476,7 @@ namespace biz.ritter.javapi.sql
          */
         String getSystemFunctions();//throws SQLException;
 
-        /**
+         /*
          * Returns a description of access rights for each table present in a
          * catalog. Table privileges can apply to one or more columns in the table -
          * but are not guaranteed to apply to all columns.
@@ -1521,7 +1521,7 @@ namespace biz.ritter.javapi.sql
         ResultSet getTablePrivileges(String catalog, String schemaPattern,
                 String tableNamePattern);//throws SQLException;
 
-        /**
+         /*
          * Returns a description of the tables in a specified catalog.
          * <p/>
          * The descriptions are returned as rows in a {@code ResultSet}, one row for
@@ -1574,7 +1574,7 @@ namespace biz.ritter.javapi.sql
         ResultSet getTables(String catalog, String schemaPattern,
                 String tableNamePattern, String[] types);//throws SQLException;
 
-        /**
+         /*
          * Returns a list of table types supported by the database.
          * <p/>
          * The list is returned as a {@code ResultSet} with one row per table type,
@@ -1593,7 +1593,7 @@ namespace biz.ritter.javapi.sql
          */
         ResultSet getTableTypes();//throws SQLException;
 
-        /**
+         /*
          * Returns a list of time and date functions available for the database.
          * 
          * @return a string containing a comma separated list of the time and date
@@ -1603,7 +1603,7 @@ namespace biz.ritter.javapi.sql
          */
         String getTimeDateFunctions();//throws SQLException;
 
-        /**
+         /*
          * Get a list of the standard SQL types supported by this database. The list
          * is returned as a {@code ResultSet}, with one row for each type, ordered
          * by the {@code DATA_TYPE} value, where the data in each row is structured
@@ -1661,7 +1661,7 @@ namespace biz.ritter.javapi.sql
          */
         ResultSet getTypeInfo();//throws SQLException;
 
-        /**
+         /*
          * Returns a description of the User Defined Types (UDTs) defined in a given
          * schema, which includes the types {@code DISTINCT}, {@code STRUCT} and
          * {@code JAVA_OBJECT}.
@@ -1709,7 +1709,7 @@ namespace biz.ritter.javapi.sql
         ResultSet getUDTs(String catalog, String schemaPattern,
                 String typeNamePattern, int[] types);//throws SQLException;
 
-        /**
+         /*
          * Returns the URL for this database.
          * 
          * @return the URL for the database. {@code null} if it cannot be generated.
@@ -1718,7 +1718,7 @@ namespace biz.ritter.javapi.sql
          */
         String getURL();//throws SQLException;
 
-        /**
+         /*
          * Determine the user name as known by the database.
          * 
          * @return the user name.
@@ -1727,7 +1727,7 @@ namespace biz.ritter.javapi.sql
          */
         String getUserName();//throws SQLException;
 
-        /**
+         /*
          * Returns which of a table's columns are automatically updated when any
          * value in a row is updated.
          * <p/>
@@ -1775,7 +1775,7 @@ namespace biz.ritter.javapi.sql
         ResultSet getVersionColumns(String catalog, String schema,
                 String table);//throws SQLException;
 
-        /**
+         /*
          * Determines whether a visible row insert can be detected by calling {@code
          * ResultSet.rowInserted}.
          * 
@@ -1792,7 +1792,7 @@ namespace biz.ritter.javapi.sql
          */
         bool insertsAreDetected(int type);//throws SQLException;
 
-        /**
+         /*
          * Determine whether a fully qualified table name is prefixed or suffixed to
          * a fully qualified table name.
          * 
@@ -1803,7 +1803,7 @@ namespace biz.ritter.javapi.sql
          */
         bool isCatalogAtStart();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database is in read-only mode.
          * 
          * @return {@code true} if the database is in read-only mode, {@code false}
@@ -1813,7 +1813,7 @@ namespace biz.ritter.javapi.sql
          */
         bool isReadOnly();//throws SQLException;
 
-        /**
+         /*
          * Determines whether updates are made to a copy of, or directly on, Large Objects
          * ({@code LOB}s).
          * 
@@ -1824,7 +1824,7 @@ namespace biz.ritter.javapi.sql
          */
         bool locatorsUpdateCopy();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database handles concatenations between {@code NULL} and
          * non-{@code NULL} values by producing a {@code NULL} output.
          * 
@@ -1835,7 +1835,7 @@ namespace biz.ritter.javapi.sql
          */
         bool nullPlusNonNullIsNull();//throws SQLException;
 
-        /**
+         /*
          * Determines whether {@code NULL} values are always sorted to the end of sorted
          * results regardless of requested sort order. This means that they will
          * appear at the end of sorted lists whatever other non-{@code NULL} values
@@ -1848,7 +1848,7 @@ namespace biz.ritter.javapi.sql
          */
         bool nullsAreSortedAtEnd();//throws SQLException;
 
-        /**
+         /*
          * Determines whether {@code NULL} values are always sorted at the start of the
          * sorted list, irrespective of the sort order. This means that they appear
          * at the start of sorted lists, whatever other values may be present.
@@ -1860,7 +1860,7 @@ namespace biz.ritter.javapi.sql
          */
         bool nullsAreSortedAtStart();//throws SQLException;
 
-        /**
+         /*
          * Determines whether {@code NULL} values are sorted high - i.e. they are sorted
          * as if they are higher than any other values.
          * 
@@ -1871,7 +1871,7 @@ namespace biz.ritter.javapi.sql
          */
         bool nullsAreSortedHigh();//throws SQLException;
 
-        /**
+         /*
          * Determines whether {@code NULL} values are sorted low - i.e. they are sorted as
          * if they are lower than any other values.
          * 
@@ -1882,7 +1882,7 @@ namespace biz.ritter.javapi.sql
          */
         bool nullsAreSortedLow();//throws SQLException;
 
-        /**
+         /*
          * Determines whether deletes made by others are visible, for a specified {@code
          * ResultSet} type.
          * 
@@ -1898,7 +1898,7 @@ namespace biz.ritter.javapi.sql
          */
         bool othersDeletesAreVisible(int type);//throws SQLException;
 
-        /**
+         /*
          * Determines whether inserts made by others are visible, for a specified {@code
          * ResultSet} type.
          * 
@@ -1914,7 +1914,7 @@ namespace biz.ritter.javapi.sql
          */
         bool othersInsertsAreVisible(int type);//throws SQLException;
 
-        /**
+         /*
          * Determines whether updates made by others are visible, for a specified {@code
          * ResultSet} type.
          * 
@@ -1930,7 +1930,7 @@ namespace biz.ritter.javapi.sql
          */
         bool othersUpdatesAreVisible(int type);//throws SQLException;
 
-        /**
+         /*
          * Determines whether a {@code ResultSet} can see its own deletes, for a
          * specified {@code ResultSet} type.
          * 
@@ -1946,7 +1946,7 @@ namespace biz.ritter.javapi.sql
          */
         bool ownDeletesAreVisible(int type);//throws SQLException;
 
-        /**
+         /*
          * Determines whether a {@code ResultSet} can see its own inserts, for a
          * specified {@code ResultSet} type.
          * 
@@ -1962,7 +1962,7 @@ namespace biz.ritter.javapi.sql
          */
         bool ownInsertsAreVisible(int type);//throws SQLException;
 
-        /**
+         /*
          * Determines whether a {@code ResultSet} can see its own updates, for a
          * specified {@code ResultSet} type.
          * 
@@ -1978,7 +1978,7 @@ namespace biz.ritter.javapi.sql
          */
         bool ownUpdatesAreVisible(int type);//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database treats SQL identifiers that are in mixed
          * case (and unquoted) as case insensitive. If {@code true} then the
          * database stores them in lower case.
@@ -1990,7 +1990,7 @@ namespace biz.ritter.javapi.sql
          */
         bool storesLowerCaseIdentifiers();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database considers mixed case quoted SQL
          * identifiers as case insensitive and stores them in lower case.
          * 
@@ -2001,7 +2001,7 @@ namespace biz.ritter.javapi.sql
          */
         bool storesLowerCaseQuotedIdentifiers();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database considers mixed case unquoted SQL
          * identifiers as case insensitive and stores them in mixed case.
          * 
@@ -2012,7 +2012,7 @@ namespace biz.ritter.javapi.sql
          */
         bool storesMixedCaseIdentifiers();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database considers identifiers as case insensitive
          * if they are mixed case quoted SQL. The database stores them in mixed
          * case.
@@ -2024,7 +2024,7 @@ namespace biz.ritter.javapi.sql
          */
         bool storesMixedCaseQuotedIdentifiers();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database considers mixed case unquoted SQL
          * identifiers as case insensitive and stores them in upper case.
          * 
@@ -2035,7 +2035,7 @@ namespace biz.ritter.javapi.sql
          */
         bool storesUpperCaseIdentifiers();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database considers mixed case quoted SQL
          * identifiers as case insensitive and stores them in upper case.
          * 
@@ -2046,7 +2046,7 @@ namespace biz.ritter.javapi.sql
          */
         bool storesUpperCaseQuotedIdentifiers();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database supports {@code ALTER TABLE} operation with
          * {@code ADD COLUMN}.
          * 
@@ -2057,7 +2057,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsAlterTableWithAddColumn();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database supports {@code ALTER TABLE} operation with
          * {@code DROP COLUMN}.
          * 
@@ -2068,7 +2068,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsAlterTableWithDropColumn();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database supports the ANSI92 entry level SQL grammar.
          * 
          * @return {@code true} if the ANSI92 entry level SQL grammar is supported,
@@ -2078,7 +2078,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsANSI92EntryLevelSQL();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database supports the ANSI92 full SQL grammar.
          * 
          * @return {@code true} if the ANSI92 full SQL grammar is supported, {@code
@@ -2088,7 +2088,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsANSI92FullSQL();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database supports the ANSI92 intermediate SQL Grammar.
          * 
          * @return {@code true} if the ANSI92 intermediate SQL grammar is supported,
@@ -2098,7 +2098,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsANSI92IntermediateSQL();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database supports batch updates.
          * 
          * @return {@code true} if batch updates are supported, {@code false}
@@ -2108,7 +2108,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsBatchUpdates();//throws SQLException;
 
-        /**
+         /*
          * Determines whether catalog names may be used in data manipulation
          * statements.
          * 
@@ -2119,7 +2119,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsCatalogsInDataManipulation();//throws SQLException;
 
-        /**
+         /*
          * Determines whether catalog names can be used in index definition statements.
          * 
          * @return {@code true} if catalog names can be used in index definition
@@ -2129,7 +2129,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsCatalogsInIndexDefinitions();//throws SQLException;
 
-        /**
+         /*
          * Determines whether catalog names can be used in privilege definition
          * statements.
          * 
@@ -2140,7 +2140,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsCatalogsInPrivilegeDefinitions();//throws SQLException;
 
-        /**
+         /*
          * Determines whether catalog names can be used in procedure call statements.
          * 
          * @return {@code true} if catalog names can be used in procedure call
@@ -2150,7 +2150,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsCatalogsInProcedureCalls();//throws SQLException;
 
-        /**
+         /*
          * Determines whether catalog names may be used in table definition statements.
          * 
          * @return {@code true} if catalog names can be used in definition
@@ -2160,7 +2160,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsCatalogsInTableDefinitions();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database supports column aliasing.
          * <p/>
          * If aliasing is supported, then the SQL AS clause is used to provide names
@@ -2173,7 +2173,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsColumnAliasing();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database supports the {@code CONVERT} operation between
          * SQL types.
          * 
@@ -2184,7 +2184,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsConvert();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database supports {@code CONVERT} operation for two
          * supplied SQL types.
          * 
@@ -2200,7 +2200,7 @@ namespace biz.ritter.javapi.sql
         bool supportsConvert(int fromType, int toType)
                 ;//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database supports the Core SQL Grammar for ODBC.
          * 
          * @return {@code true} if the Core SQL Grammar is supported, {@code false}
@@ -2210,7 +2210,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsCoreSQLGrammar();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database supports correlated sub-queries.
          * 
          * @return {@code true} if the database does support correlated sub-queries
@@ -2220,7 +2220,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsCorrelatedSubqueries();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database allows both data definition and data
          * manipulation statements inside a transaction.
          * 
@@ -2232,7 +2232,7 @@ namespace biz.ritter.javapi.sql
         bool supportsDataDefinitionAndDataManipulationTransactions()
                 ;//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database only allows data manipulation statements inside
          * a transaction.
          * 
@@ -2244,7 +2244,7 @@ namespace biz.ritter.javapi.sql
         bool supportsDataManipulationTransactionsOnly()
                 ;//throws SQLException;
 
-        /**
+         /*
          * Determines whether table correlation names are required to be different from
          * the names of the tables, when they are supported.
          * 
@@ -2255,7 +2255,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsDifferentTableCorrelationNames();//throws SQLException;
 
-        /**
+         /*
          * Determines whether expressions in {@code ORDER BY} lists are supported.
          * 
          * @return {@code true} if expressions in {@code ORDER BY} lists are
@@ -2265,7 +2265,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsExpressionsInOrderBy();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the Extended SQL Grammar for ODBC is supported.
          * 
          * @return {@code true} if the Extended SQL Grammar is supported, {@code
@@ -2275,7 +2275,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsExtendedSQLGrammar();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database supports full nested outer joins.
          * 
          * @return {@code true} if full nested outer joins are supported, {@code
@@ -2285,7 +2285,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsFullOuterJoins();//throws SQLException;
 
-        /**
+         /*
          * Determines whether auto generated keys can be returned when a statement
          * executes.
          * 
@@ -2296,7 +2296,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsGetGeneratedKeys();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database supports {@code GROUP BY} clauses.
          * 
          * @return {@code true} if the {@code GROUP BY} clause is supported, {@code
@@ -2306,7 +2306,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsGroupBy();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database supports using a column name in a {@code GROUP
          * BY} clause not included in the {@code SELECT} statement as long as all of
          * the columns in the {@code SELECT} statement are used in the {@code GROUP
@@ -2319,7 +2319,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsGroupByBeyondSelect();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database supports using a column name in a {@code GROUP
          * BY} clause that is not in the {@code SELECT} statement.
          * 
@@ -2330,7 +2330,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsGroupByUnrelated();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database supports SQL Integrity Enhancement
          * Facility.
          * 
@@ -2341,7 +2341,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsIntegrityEnhancementFacility();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database supports a {@code LIKE} escape clause.
          * 
          * @return {@code true} if LIKE escape clause is supported, {@code false}
@@ -2351,7 +2351,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsLikeEscapeClause();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database provides limited support for outer join
          * operations.
          * 
@@ -2363,7 +2363,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsLimitedOuterJoins();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database supports Minimum SQL Grammar for ODBC.
          * 
          * @return {@code true} if the Minimum SQL Grammar is supported, {@code
@@ -2373,7 +2373,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsMinimumSQLGrammar();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database treats mixed case unquoted SQL identifiers as
          * case sensitive storing them in mixed case.
          * 
@@ -2384,7 +2384,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsMixedCaseIdentifiers();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database considers mixed case quoted SQL
          * identifiers as case sensitive, storing them in mixed case.
          * 
@@ -2395,7 +2395,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsMixedCaseQuotedIdentifiers();//throws SQLException;
 
-        /**
+         /*
          * Determines whether it is possible for a single {@code CallableStatement} to
          * return multiple {@code ResultSet}s simultaneously.
          * 
@@ -2407,7 +2407,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsMultipleOpenResults();//throws SQLException;
 
-        /**
+         /*
          * Determines whether retrieving multiple {@code ResultSet}s from a single
          * call to the {@code execute} method is supported.
          * 
@@ -2418,7 +2418,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsMultipleResultSets();//throws SQLException;
 
-        /**
+         /*
          * Determines whether multiple simultaneous transactions on
          * different connections are supported.
          * 
@@ -2429,7 +2429,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsMultipleTransactions();//throws SQLException;
 
-        /**
+         /*
          * Determines whether callable statements with named parameters is supported.
          * 
          * @return {@code true} if named parameters can be used with callable
@@ -2439,7 +2439,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsNamedParameters();//throws SQLException;
 
-        /**
+         /*
          * Determines whether columns in the database can be defined as non-nullable.
          * 
          * @return {@code true} if columns can be defined non-nullable, {@code
@@ -2449,7 +2449,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsNonNullableColumns();//throws SQLException;
 
-        /**
+         /*
          * Determines whether keeping cursors open across commit operations is
          * supported.
          * 
@@ -2460,7 +2460,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsOpenCursorsAcrossCommit();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database can keep cursors open across rollback
          * operations.
          * 
@@ -2471,7 +2471,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsOpenCursorsAcrossRollback();//throws SQLException;
 
-        /**
+         /*
          * Determines whether keeping statements open across commit operations is
          * supported.
          * 
@@ -2482,7 +2482,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsOpenStatementsAcrossCommit();//throws SQLException;
 
-        /**
+         /*
          * Determines whether keeping statements open across rollback operations is
          * supported.
          * 
@@ -2493,7 +2493,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsOpenStatementsAcrossRollback();//throws SQLException;
 
-        /**
+         /*
          * Determines whether using a column in an {@code ORDER BY} clause that is
          * not in the {@code SELECT} statement is supported.
          * 
@@ -2504,7 +2504,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsOrderByUnrelated();//throws SQLException;
 
-        /**
+         /*
          * Determines whether outer join operations are supported.
          * 
          * @return {@code true} if outer join operations are supported, {@code
@@ -2514,7 +2514,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsOuterJoins();//throws SQLException;
 
-        /**
+         /*
          * Determines whether positioned {@code DELETE} statements are supported.
          * 
          * @return {@code true} if the database supports positioned {@code DELETE}
@@ -2524,7 +2524,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsPositionedDelete();//throws SQLException;
 
-        /**
+         /*
          * Determines whether positioned {@code UPDATE} statements are supported.
          * 
          * @return {@code true} if the database supports positioned {@code UPDATE}
@@ -2534,7 +2534,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsPositionedUpdate();//throws SQLException;
 
-        /**
+         /*
          * Determines whether there is support for a given concurrency style for the
          * given {@code ResultSet}.
          * 
@@ -2558,7 +2558,7 @@ namespace biz.ritter.javapi.sql
         bool supportsResultSetConcurrency(int type, int concurrency)
                 ;//throws SQLException;
 
-        /**
+         /*
          * Determines whether the supplied {@code ResultSet} holdability mode is
          * supported.
          * 
@@ -2574,7 +2574,7 @@ namespace biz.ritter.javapi.sql
         bool supportsResultSetHoldability(int holdability)
                 ;//throws SQLException;
 
-        /**
+         /*
          * Determines whether the supplied {@code ResultSet} type is supported.
          * 
          * @param type
@@ -2589,7 +2589,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsResultSetType(int type);//throws SQLException;
 
-        /**
+         /*
          * Determines whether savepoints for transactions are supported.
          * 
          * @return {@code true} if savepoints are supported, {@code false}
@@ -2599,7 +2599,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsSavepoints();//throws SQLException;
 
-        /**
+         /*
          * Determines whether a schema name may be used in a data manipulation
          * statement.
          * 
@@ -2610,7 +2610,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsSchemasInDataManipulation();//throws SQLException;
 
-        /**
+         /*
          * Determines whether a schema name may be used in an index definition
          * statement.
          * 
@@ -2621,7 +2621,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsSchemasInIndexDefinitions();//throws SQLException;
 
-        /**
+         /*
          * Determines whether a database schema name can be used in a privilege
          * definition statement.
          * 
@@ -2632,7 +2632,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsSchemasInPrivilegeDefinitions();//throws SQLException;
 
-        /**
+         /*
          * Determines whether a procedure call statement may be contain in a schema name.
          * 
          * @return {@code true} if a schema name can be used in a procedure call,
@@ -2642,7 +2642,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsSchemasInProcedureCalls();//throws SQLException;
 
-        /**
+         /*
          * Determines whether a schema name can be used in a table definition statement.
          * 
          * @return {@code true} if a schema name can be used in a table definition,
@@ -2652,7 +2652,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsSchemasInTableDefinitions();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the {@code SELECT FOR UPDATE} statement is supported.
          * 
          * @return {@code true} if {@code SELECT FOR UPDATE} statements are
@@ -2662,7 +2662,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsSelectForUpdate();//throws SQLException;
 
-        /**
+         /*
          * Determines whether statement pooling is supported.
          * 
          * @return {@code true} of the database does support statement pooling,
@@ -2672,7 +2672,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsStatementPooling();//throws SQLException;
 
-        /**
+         /*
          * Determines whether stored procedure calls using the stored procedure
          * escape syntax is supported.
          * 
@@ -2683,7 +2683,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsStoredProcedures();//throws SQLException;
 
-        /**
+         /*
          * Determines whether subqueries in comparison expressions are supported.
          * 
          * @return {@code true} if subqueries are supported in comparison
@@ -2693,7 +2693,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsSubqueriesInComparisons();//throws SQLException;
 
-        /**
+         /*
          * Determines whether subqueries in {@code EXISTS} expressions are supported.
          * 
          * @return {@code true} if subqueries are supported in {@code EXISTS}
@@ -2703,7 +2703,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsSubqueriesInExists();//throws SQLException;
 
-        /**
+         /*
          * Determines whether subqueries in {@code IN} statements are supported.
          * 
          * @return {@code true} if subqueries are supported in {@code IN} statements,
@@ -2713,7 +2713,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsSubqueriesInIns();//throws SQLException;
 
-        /**
+         /*
          * Determines whether subqueries in quantified expressions are supported.
          * 
          * @return {@code true} if subqueries are supported, otherwise {@code false}.
@@ -2722,7 +2722,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsSubqueriesInQuantifieds();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the database has table correlation names support.
          * 
          * @return {@code true} if table correlation names are supported, otherwise
@@ -2732,7 +2732,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsTableCorrelationNames();//throws SQLException;
 
-        /**
+         /*
          * Determines whether a specified transaction isolation level is supported.
          * 
          * @param level
@@ -2749,7 +2749,7 @@ namespace biz.ritter.javapi.sql
         bool supportsTransactionIsolationLevel(int level)
                 ;//throws SQLException;
 
-        /**
+         /*
          * Determines whether transactions are supported.
          * <p/>
          * If transactions are not supported, then the {@code commit} method does
@@ -2763,7 +2763,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsTransactions();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the {@code SQL UNION} operation is supported.
          * 
          * @return {@code true} of the database does support {@code UNION}, otherwise
@@ -2773,7 +2773,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsUnion();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the {@code SQL UNION ALL} operation is supported.
          * 
          * @return {@code true} if the database does support {@code UNION ALL},
@@ -2783,7 +2783,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsUnionAll();//throws SQLException;
 
-        /**
+         /*
          * Determines whether the method {@code ResultSet.rowUpdated} can detect a visible
          * row update for the specified {@code ResultSet} type.
          * 
@@ -2798,7 +2798,7 @@ namespace biz.ritter.javapi.sql
          */
         bool updatesAreDetected(int type);//throws SQLException;
 
-        /**
+         /*
          * Determines whether this database uses a file for each table.
          * 
          * @return {@code true} if the database uses one file for each table,
@@ -2808,7 +2808,7 @@ namespace biz.ritter.javapi.sql
          */
         bool usesLocalFilePerTable();//throws SQLException;
 
-        /**
+         /*
          * Determines whether this database uses a local file to store tables.
          * 
          * @return {@code true} if the database stores tables in a local file,
@@ -2818,7 +2818,7 @@ namespace biz.ritter.javapi.sql
          */
         bool usesLocalFiles();//throws SQLException;
 
-        /**
+         /*
          * Answers the lifetime for which a RowId object remains valid if this data
          * source supports the SQL ROWID type
          * 
@@ -2828,7 +2828,7 @@ namespace biz.ritter.javapi.sql
          */
         RowIdLifetime getRowIdLifetime();//throws SQLException;
 
-        /**
+         /*
          * Answers the schema names ordered by TABLE_CATALOG and TABLE_SCHEM.
          * 
          * @param catalog
@@ -2842,7 +2842,7 @@ namespace biz.ritter.javapi.sql
         ResultSet getSchemas(String catalog, String schemaPattern)
                 ;//throws SQLException;
 
-        /**
+         /*
          * Determin if this database supports invoking user-defined or vendor
          * functions using the stored procedure escape syntax.
          * 
@@ -2853,7 +2853,7 @@ namespace biz.ritter.javapi.sql
          */
         bool supportsStoredFunctionsUsingCallSyntax();//throws SQLException;
 
-        /**
+         /*
          * Determin if a SQLException while autoCommit is true inidcates that all
          * open ResultSets are closed, even ones that are holdable
          * 
@@ -2863,7 +2863,7 @@ namespace biz.ritter.javapi.sql
          */
         bool autoCommitFailureClosesAllResultSets();//throws SQLException;
 
-        /**
+         /*
          * Answers a list of the client info properties of the driver.
          * 
          * @return a list of the client info
@@ -2872,7 +2872,7 @@ namespace biz.ritter.javapi.sql
          */
         ResultSet getClientInfoProperties();//throws SQLException;
 
-        /**
+         /*
          * Answers a description of the system and user functions available
          * according to the given catalog.
          * 
@@ -2889,7 +2889,7 @@ namespace biz.ritter.javapi.sql
         ResultSet getFunctions(String catalog, String schemaPattern,
                 String functionNamePattern);//throws SQLException;
 
-        /**
+         /*
          * Answers a description according to the given catalog's system or user
          * function parameters and return type.
          * 
@@ -2912,329 +2912,329 @@ namespace biz.ritter.javapi.sql
 
     public sealed class DatabaseMetaDataConstants
     {
-        /**
+         /*
          * States that it may not be permitted to store {@code NULL} values.
          */
         public const short attributeNoNulls = 0;
 
-        /**
+         /*
          * States that {@code NULL} values are definitely permitted.
          */
         public const short attributeNullable = 1;
 
-        /**
+         /*
          * States that whether {@code NULL} values are permitted is unknown.
          */
         public const short attributeNullableUnknown = 2;
 
-        /**
+         /*
          * States the best row identifier is <em>NOT</em> a pseudo column.
          */
         public const int bestRowNotPseudo = 1;
 
-        /**
+         /*
          * States that the best row identifier is a pseudo column.
          */
         public const int bestRowPseudo = 2;
 
-        /**
+         /*
          * States that the remainder of the current session is used as the scope for
          * the best row identifier.
          */
         public const int bestRowSession = 2;
 
-        /**
+         /*
          * States that best row identifier scope lasts only while the row is being
          * used.
          */
         public const int bestRowTemporary = 0;
 
-        /**
+         /*
          * States that the remainder of the current transaction is used as the scope
          * for the best row identifier.
          */
         public const int bestRowTransaction = 1;
 
-        /**
+         /*
          * States that the best row identifier may or may not be a pseudo column.
          */
         public const int bestRowUnknown = 0;
 
-        /**
+         /*
          * States that the column must not allow {@code NULL} values.
          */
         public const int columnNoNulls = 0;
 
-        /**
+         /*
          * States that the column definitely allows {@code NULL} values.
          */
         public const int columnNullable = 1;
 
-        /**
+         /*
          * States that it is unknown whether the columns may be nulled.
          */
         public const int columnNullableUnknown = 2;
 
-        /**
+         /*
          * For the column {@code UPDATE_RULE}, states that when the primary key is
          * updated, the foreign key (imported key) is changed accordingly.
          */
         public const int importedKeyCascade = 0;
 
-        /**
+         /*
          * States that the evaluation of foreign key constraints is deferred (delayed
          * until commit).
          */
         public const int importedKeyInitiallyDeferred = 5;
 
-        /**
+         /*
          * States that the evaluation of foreign key constraint is {@code IMMEDIATE}
          * .
          */
         public const int importedKeyInitiallyImmediate = 6;
 
-        /**
+         /*
          * For the columns {@code UPDATE_RULE} and {@code DELETE_RULE}, states that
          * if the primary key has been imported, it cannot be updated or deleted.
          */
         public const int importedKeyNoAction = 3;
 
-        /**
+         /*
          * States that the evaluation of foreign key constraint must not be {@code
          * DEFERRED}.
          */
         public const int importedKeyNotDeferrable = 7;
 
-        /**
+         /*
          * States that a primary key must not be updated when imported as a foreign
          * key by some other table. Used for the column {@code UPDATE_RULE}.
          */
         public const int importedKeyRestrict = 1;
 
-        /**
+         /*
          * States that when the primary key is modified (updated or deleted) the
          * foreign (imported) key is changed to its default value. Applies to the
          * {@code UPDATE_RULE} and {@code DELETE_RULE} columns.
          */
         public const int importedKeySetDefault = 4;
 
-        /**
+         /*
          * States that when the primary key is modified (updated or deleted) the
          * foreign (imported) key is changed to {@code NULL}. Applies to the {@code
          * UPDATE_RULE} and {@code DELETE_RULE} columns.
          */
         public const int importedKeySetNull = 2;
 
-        /**
+         /*
          * States that the column stores {@code IN} type parameters.
          */
         public const int procedureColumnIn = 1;
 
-        /**
+         /*
          * States that this column stores {@code INOUT} type parameters.
          */
         public const int procedureColumnInOut = 2;
 
-        /**
+         /*
          * States that this column stores {@code OUT} type parameters.
          */
         public const int procedureColumnOut = 4;
 
-        /**
+         /*
          * States that the column stores results.
          */
         public const int procedureColumnResult = 3;
 
-        /**
+         /*
          * States that the column stores return values.
          */
         public const int procedureColumnReturn = 5;
 
-        /**
+         /*
          * States that type of the column is unknown.
          */
         public const int procedureColumnUnknown = 0;
 
-        /**
+         /*
          * States that {@code NULL} values are not permitted.
          */
         public const int procedureNoNulls = 0;
 
-        /**
+         /*
          * States that the procedure does not return a result.
          */
         public const int procedureNoResult = 1;
 
-        /**
+         /*
          * States that {@code NULL} values are permitted.
          */
         public const int procedureNullable = 1;
 
-        /**
+         /*
          * States that it is unknown whether {@code NULL} values are permitted.
          */
         public const int procedureNullableUnknown = 2;
 
-        /**
+         /*
          * States that it is unknown whether or not the procedure returns a result.
          */
         public const int procedureResultUnknown = 0;
 
-        /**
+         /*
          * States that the procedure returns a result.
          */
         public const int procedureReturnsResult = 2;
 
-        /**
+         /*
          * States that the value is an SQL99 {@code SQLSTATE} value.
          */
         public const int sqlStateSQL99 = 2;
 
-        /**
+         /*
          * States that the value is an SQL {@code CLI SQLSTATE} value as defined by
          * the X/Open standard.
          */
         public const int sqlStateXOpen = 1;
 
-        /**
+         /*
          * States that this table index is a clustered index.
          */
         public const short tableIndexClustered = 1;
 
-        /**
+         /*
          * States that this table index is a hashed index.
          */
         public const short tableIndexHashed = 2;
 
-        /**
+         /*
          * States this table's index is neither a clustered index, not a hashed
          * index, and not a table statistics index; i.e. it is something else.
          */
         public const short tableIndexOther = 3;
 
-        /**
+         /*
          * States this column has the table's statistics, and that it is returned in
          * conjunction with the table's index description.
          */
         public const short tableIndexStatistic = 0;
 
-        /**
+         /*
          * States that a {@code NULL} value is <em>NOT</em> permitted for
          * this data type.
          */
         public const int typeNoNulls = 0;
 
-        /**
+         /*
          * States that a {@code NULL} value is permitted for this data type.
          */
         public const int typeNullable = 1;
 
-        /**
+         /*
          * States that it is unknown if a {@code NULL} value is permitted for
          * this data type.
          */
         public const int typeNullableUnknown = 2;
 
-        /**
+         /*
          * States that this column shall not be used for {@code WHERE} statements
          * with a {@code LIKE} clause.
          */
         public const int typePredBasic = 2;
 
-        /**
+         /*
          * States that this column can only be used in a {@code WHERE...LIKE}
          * statement.
          */
         public const int typePredChar = 1;
 
-        /**
+         /*
          * States that this column does not support searches.
          */
         public const int typePredNone = 0;
 
-        /**
+         /*
          * States that the column is searchable.
          */
         public const int typeSearchable = 3;
 
-        /**
+         /*
          * States that the version column is known to be not a pseudo column.
          */
         public const int versionColumnNotPseudo = 1;
 
-        /**
+         /*
          * States that this version column is known to be a pseudo column.
          */
         public const int versionColumnPseudo = 2;
 
-        /**
+         /*
          * States that the version column may be a pseudo column or not.
          */
         public const int versionColumnUnknown = 0;
 
-        /**
+         /*
          * States that the method DatabaseMetaData.getSQLStateType may returns an
          * SQLSTATE value or not.
          */
         public const int sqlStateSQL = 2;
 
-        /**
+         /*
          * States that the parameter or column is an IN parameter
          */
         public const int functionColumnIn = 1;
 
-        /**
+         /*
          * States that the parameter or column is an INOUT parameter
          */
         public const int functionColumnInOut = 2;
 
-        /**
+         /*
          * States that the parameter or column is an OUT parameter
          */
         public const int functionColumnOut = 3;
 
-        /**
+         /*
          * States that the parameter or column is a return value
          */
         public const int functionReturn = 4;
 
-        /**
+         /*
          * States that the parameter of function is unknown
          */
         public const int functionColumnUnknown = 0;
 
-        /**
+         /*
          * States that the parameter or column is a column in a result set
          */
         public const int functionColumnResult = 5;
 
-        /**
+         /*
          * States that NULL values are not allowed
          */
         public const int functionNoNulls = 0;
 
-        /**
+         /*
          * States that NULL values are allowed
          */
         public const int functionNullable = 1;
 
-        /**
+         /*
          * States that whether NULL values are allowed is unknown
          */
         public const int functionNullableUnknown = 2;
 
-        /**
+         /*
          * States that it is not known whether the function returns a result or a
          * table
          */
         public const int functionResultUnknown = 0;
 
-        /**
+         /*
          * States that the function does not return a table
          */
         public const int functionNoTable = 1;
 
-        /**
+         /*
          * States that the function returns a table.
          */
         public const int functionReturnsTable = 2;

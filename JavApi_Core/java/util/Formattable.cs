@@ -16,7 +16,7 @@ using System;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * Classes that handle custom formatting for the 's' specifier of {@code Formatter}
      * should implement the {@code Formattable} interface. It gives basic control over
      * formatting objects.
@@ -27,7 +27,7 @@ namespace biz.ritter.javapi.util
     public interface Formattable
     {
 
-        /**
+         /*
          * Formats the object using the specified {@code Formatter}.
          * 
          * @param formatter

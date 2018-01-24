@@ -41,12 +41,12 @@ namespace biz.ritter.javapi.io
     {
         protected internal static readonly String TOKEN_NULL = "null"; //$NON-NLS-1$
 
-        /**
+         /*
          * The object used to synchronize access to the writer.
          */
         protected Object lockJ;
 
-        /**
+         /*
          * Constructs a new {@code Writer} with {@code this} as the object used to
          * synchronize critical sections.
          */
@@ -56,7 +56,7 @@ namespace biz.ritter.javapi.io
             this.lockJ = this;
         }
 
-        /**
+         /*
          * Constructs a new {@code Writer} with {@code lock} used to synchronize
          * critical sections.
          * 
@@ -74,7 +74,7 @@ namespace biz.ritter.javapi.io
             this.lockJ = lockJ;
         }
 
-        /**
+         /*
          * Closes this writer. Implementations of this method should free any
          * resources associated with the writer.
          * 
@@ -83,7 +83,7 @@ namespace biz.ritter.javapi.io
          */
         public abstract void close(); //throws IOException;
 
-        /**
+         /*
          * Flushes this writer. Implementations of this method should ensure that
          * all buffered characters are written to the target.
          * 
@@ -92,7 +92,7 @@ namespace biz.ritter.javapi.io
          */
         public abstract void flush();// throws IOException;
 
-        /**
+         /*
          * Writes the entire character buffer {@code buf} to the target.
          * 
          * @param buf
@@ -105,7 +105,7 @@ namespace biz.ritter.javapi.io
             write(buf, 0, buf.Length);
         }
 
-        /**
+         /*
          * Writes {@code count} characters starting at {@code offset} in {@code buf}
          * to the target.
          *
@@ -123,7 +123,7 @@ namespace biz.ritter.javapi.io
          */
         public abstract void write(char[] buf, int offset, int count);// throws IOException;
 
-        /**
+         /*
          * Writes one character to the target. Only the two least significant bytes
          * of the integer {@code oneChar} are written.
          * 
@@ -142,7 +142,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Writes the characters from the specified string to the target.
          * 
          * @param str
@@ -155,7 +155,7 @@ namespace biz.ritter.javapi.io
             write(str, 0, str.length());
         }
 
-        /**
+         /*
          * Writes {@code count} characters from {@code str} starting at {@code
          * offset} to the target.
          * 
@@ -186,7 +186,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Appends the character {@code c} to the target. This method works the same
          * way as {@link #write(int)}.
          * 
@@ -202,7 +202,7 @@ namespace biz.ritter.javapi.io
             return this;
         }
 
-        /**
+         /*
          * Appends the character sequence {@code csq} to the target. This method
          * works the same way as {@code Writer.write(csq.toString())}. If {@code
          * csq} is {@code null}, then the string "null" is written to the target
@@ -227,7 +227,7 @@ namespace biz.ritter.javapi.io
             return this;
         }
 
-        /**
+         /*
          * Appends a subsequence of the character sequence {@code csq} to the
          * target. This method works the same way as {@code
          * Writer.writer(csq.subsequence(start, end).toString())}. If {@code

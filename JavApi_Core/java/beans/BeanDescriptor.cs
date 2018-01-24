@@ -24,7 +24,7 @@ namespace biz.ritter.javapi.beans
 
         private java.lang.Class customizerClass;
 
-        /**
+         /*
          * <p>
          * Constructs an instance with the bean's {@link Class} and a customizer
          * {@link Class}. The descriptor's {@link #getName()} is set as the
@@ -47,7 +47,7 @@ namespace biz.ritter.javapi.beans
             this.customizerClass = customizerClass;
         }
 
-        /**
+         /*
          * <p>
          * Constructs an instance with the bean's {@link Class}. The descriptor's
          * {@link #getName()} is set as the unqualified name of the
@@ -62,7 +62,7 @@ namespace biz.ritter.javapi.beans
         {
         }
 
-        /**
+         /*
          * <p>
          * Gets the bean's customizer {@link Class}/
          * </p>
@@ -74,7 +74,7 @@ namespace biz.ritter.javapi.beans
             return customizerClass;
         }
 
-        /**
+         /*
          * <p>
          * Gets the bean's {@link Class}.
          * </p>
@@ -86,7 +86,7 @@ namespace biz.ritter.javapi.beans
             return beanClass;
         }
 
-        /**
+         /*
          * <p>
          * Utility method for getting the unqualified name of a {@link Class}.
          * </p>

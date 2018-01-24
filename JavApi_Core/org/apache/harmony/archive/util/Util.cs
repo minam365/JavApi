@@ -18,12 +18,12 @@ using java = biz.ritter.javapi;
 namespace org.apache.harmony.archive.util
 {
 
-    /**
+     /*
      * Helpers for the archive module.
      */
     public class Util {
 
-        /**
+         /*
          * Returns whether the given source string ends with the suffix, ignoring
          * case and assuming that the strings are ascii encoded.
          * 
@@ -50,7 +50,7 @@ namespace org.apache.harmony.archive.util
             return true;
         }
 
-        /**
+         /*
          * Compares the given byte arrays and returns whether they are equal,
          * ignoring case differences and assuming they are ascii-encoded strings.
          * 
@@ -81,7 +81,7 @@ namespace org.apache.harmony.archive.util
             return true;
         }
 
-        /**
+         /*
          * Compares the given strings and returns whether they are equal, ignoring
          * case differences and assuming they are ascii-encoded strings.
          * 

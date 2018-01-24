@@ -21,7 +21,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapix.xml.parsers
 {
-	/**
+	 /*
  * This class is duplicated for each JAXP subpackage so keep it in
  * sync.  It is package private.
  *
@@ -34,19 +34,19 @@ namespace biz.ritter.javapix.xml.parsers
  */
 	internal sealed class FactoryFinder
 	{
-		/**
+		 /*
      * <p>Debug flag to trace loading process.</p>
      */
 		private static bool debug = false;
-		/**
+		 /*
      * <p>Cache properties for performance.</p>
      */
 		private static java.util.Properties cacheProps = new java.util.Properties ();
-		/**
+		 /*
      * <p>First time requires initialization overhead.</p>
      */
 		private static bool firstTime = true;
-		/**
+		 /*
      * Default columns per line.
      */
 		private const int DEFAULT_LINE_LENGTH = 80;
@@ -75,7 +75,7 @@ namespace biz.ritter.javapix.xml.parsers
 			}
 		}
 
-		/**
+		 /*
      * Create an instance of a class using the specified ClassLoader and
      * optionally fall back to the current ClassLoader if not found.
      *
@@ -134,7 +134,7 @@ namespace biz.ritter.javapix.xml.parsers
 			}
 		}
 
-		/**
+		 /*
      * Finds the implementation Class object in the specified order.  Main
      * entry point.
      * @return Class object of factory, never null
@@ -323,7 +323,7 @@ namespace biz.ritter.javapix.xml.parsers
 		{
 			private java.lang.Exception exception;
 
-			/**
+			 /*
          * Construct a new instance with the specified detail string and
          * exception.
          */

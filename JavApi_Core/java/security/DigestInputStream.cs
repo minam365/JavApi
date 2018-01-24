@@ -19,20 +19,20 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.security
 {
-	/**
+	 /*
  * {@code DigestInputStream} is a {@code FilterInputStream} which maintains an
  * associated message digest.
  */
 	public class DigestInputStream : java.io.FilterInputStream
 	{
-		/**
+		 /*
      * The message digest for this stream.
      */
 		protected MessageDigest digest;
 		// Indicates whether digest functionality is on or off
 		private bool isOn = true;
 
-		/**
+		 /*
      * Constructs a new instance of this {@code DigestInputStream}, using the
      * given {@code stream} and the {@code digest}.
      *
@@ -47,7 +47,7 @@ namespace biz.ritter.javapi.security
 			this.digest = digest;
 		}
 
-		/**
+		 /*
      * Returns the message digest for this stream.
      *
      * @return the message digest for this stream.
@@ -57,7 +57,7 @@ namespace biz.ritter.javapi.security
 			return digest;
 		}
 
-		/**
+		 /*
      * Sets the message digest which this stream will use.
      *
      * @param digest
@@ -68,7 +68,7 @@ namespace biz.ritter.javapi.security
 			this.digest = digest;
 		}
 
-		/**
+		 /*
      * Reads the next byte and returns it as an {@code int}. Updates the digest
      * for the byte if this function is {@link #on(boolean)}.
      * <p/>
@@ -92,7 +92,7 @@ namespace biz.ritter.javapi.security
 			return byteRead;
 		}
 
-		/**
+		 /*
      * Reads {@code len} bytes into the specified {@code byte[]}, starting from
      * the specified offset. Updates the digest if this function is
      * {@link #on(boolean)}.
@@ -125,7 +125,7 @@ namespace biz.ritter.javapi.security
 			return bytesRead;
 		}
 
-		/**
+		 /*
      * Enables or disables the digest function (default is on).
      *
      * @param on
@@ -138,7 +138,7 @@ namespace biz.ritter.javapi.security
 			isOn = on;
 		}
 
-		/**
+		 /*
      * Returns a string containing a concise, human-readable description of this
      * {@code DigestInputStream} including the digest.
      *

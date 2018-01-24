@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util
 {
-    /**
+     /*
      * HashSet is an implementation of a Set. All optional operations (adding and
      * removing) are supported. The elements can be any objects.
      */
@@ -28,7 +28,7 @@ namespace biz.ritter.javapi.util
 
         protected internal HashMap<E, HashSet<E>> backingMap;
 
-        /**
+         /*
          * Constructs a new empty instance of {@code HashSet}.
          */
         public HashSet()
@@ -37,7 +37,7 @@ namespace biz.ritter.javapi.util
         {
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code HashSet} with the specified capacity.
          * 
          * @param capacity
@@ -49,7 +49,7 @@ namespace biz.ritter.javapi.util
         {
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code HashSet} with the specified capacity
          * and load factor.
          * 
@@ -65,7 +65,7 @@ namespace biz.ritter.javapi.util
         {
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code HashSet} containing the unique
          * elements in the specified collection.
          * 
@@ -86,7 +86,7 @@ namespace biz.ritter.javapi.util
             this.backingMap = backingMap;
         }
 
-        /**
+         /*
          * Adds the specified object to this {@code HashSet} if not already present.
          * 
          * @param object
@@ -98,7 +98,7 @@ namespace biz.ritter.javapi.util
             return backingMap.put(obj, this) == null;
         }
 
-        /**
+         /*
          * Removes all elements from this {@code HashSet}, leaving it empty.
          * 
          * @see #isEmpty
@@ -108,7 +108,7 @@ namespace biz.ritter.javapi.util
             backingMap.clear();
         }
 
-        /**
+         /*
          * Returns a new {@code HashSet} with the same elements and size as this
          * {@code HashSet}.
          * 
@@ -125,7 +125,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Searches this {@code HashSet} for the specified object.
          * 
          * @param object
@@ -137,7 +137,7 @@ namespace biz.ritter.javapi.util
             return backingMap.containsKey(obj);
         }
 
-        /**
+         /*
          * Returns true if this {@code HashSet} has no elements, false otherwise.
          * 
          * @return {@code true} if this {@code HashSet} has no elements,
@@ -148,7 +148,7 @@ namespace biz.ritter.javapi.util
             return backingMap.isEmpty();
         }
 
-        /**
+         /*
          * Returns an Iterator on the elements of this {@code HashSet}.
          * 
          * @return an Iterator on the elements of this {@code HashSet}.
@@ -158,7 +158,7 @@ namespace biz.ritter.javapi.util
             return backingMap.keySet().iterator();
         }
 
-        /**
+         /*
          * Removes the specified object from this {@code HashSet}.
          * 
          * @param object
@@ -169,7 +169,7 @@ namespace biz.ritter.javapi.util
             return backingMap.remove(obj) != null;
         }
 
-        /**
+         /*
          * Returns the number of elements in this {@code HashSet}.
          * 
          * @return the number of elements in this {@code HashSet}.

@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.text
 {
 
-    /**
+     /*
      * Identifies fields in formatted strings. If a {@code FieldPosition} is passed
      * to the format method with such a parameter, then the indices will be set to
      * the start and end indices of the field in the formatted string.
@@ -36,7 +36,7 @@ namespace biz.ritter.javapi.text
 
         private FormatNS.Field myAttribute;
 
-        /**
+         /*
          * Constructs a new {@code FieldPosition} for the specified field.
          * 
          * @param field
@@ -46,7 +46,7 @@ namespace biz.ritter.javapi.text
             myField = field;
         }
 
-        /**
+         /*
          * Constructs a new {@code FieldPosition} for the specified {@code Field}
          * attribute.
          * 
@@ -58,7 +58,7 @@ namespace biz.ritter.javapi.text
             myField = -1;
         }
 
-        /**
+         /*
          * Constructs a new {@code FieldPosition} for the specified {@code Field}
          * attribute and field id.
          * 
@@ -76,7 +76,7 @@ namespace biz.ritter.javapi.text
             beginIndex = endIndex = 0;
         }
 
-        /**
+         /*
          * Compares the specified object to this field position and indicates if
          * they are equal. In order to be equal, {@code object} must be an instance
          * of {@code FieldPosition} with the same field, begin index and end index.
@@ -97,7 +97,7 @@ namespace biz.ritter.javapi.text
                     && beginIndex == pos.beginIndex && endIndex == pos.endIndex;
         }
 
-        /**
+         /*
          * Returns the index of the beginning of the field.
          * 
          * @return the first index of the field.
@@ -106,7 +106,7 @@ namespace biz.ritter.javapi.text
             return beginIndex;
         }
 
-        /**
+         /*
          * Returns the index one past the end of the field.
          * 
          * @return one past the index of the last character in the field.
@@ -115,7 +115,7 @@ namespace biz.ritter.javapi.text
             return endIndex;
         }
 
-        /**
+         /*
          * Returns the field which is being identified.
          * 
          * @return the field constant.
@@ -124,7 +124,7 @@ namespace biz.ritter.javapi.text
             return myField;
         }
 
-        /**
+         /*
          * Returns the attribute which is being identified.
          * 
          * @return the field.
@@ -139,7 +139,7 @@ namespace biz.ritter.javapi.text
             return attributeHash + myField * 10 + beginIndex * 100 + endIndex;
         }
 
-        /**
+         /*
          * Sets the index of the beginning of the field.
          * 
          * @param index
@@ -149,7 +149,7 @@ namespace biz.ritter.javapi.text
             beginIndex = index;
         }
 
-        /**
+         /*
          * Sets the index of the end of the field.
          * 
          * @param index
@@ -159,7 +159,7 @@ namespace biz.ritter.javapi.text
             endIndex = index;
         }
 
-        /**
+         /*
          * Returns the string representation of this field position.
          * 
          * @return the string representation of this field position.

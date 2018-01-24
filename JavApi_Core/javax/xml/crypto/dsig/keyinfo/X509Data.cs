@@ -22,7 +22,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig.keyinfo
 {
 
 
-/**
+ /*
  * A representation of the XML <code>X509Data</code> element as defined in 
  * the <a href="http://www.w3.org/TR/xmldsig-core/">
  * W3C Recommendation for XML-Signature Syntax and Processing</a>. An
@@ -70,7 +70,7 @@ namespace biz.ritter.javapix.xml.crypto.dsig.keyinfo
 //@@@ check for illegal combinations of data violating MUSTs in W3c spec
 public interface X509Data : XMLStructure {
 
-    /**
+     /*
      * Returns an {@link java.util.Collections#unmodifiableList unmodifiable 
      * list} of the content in this <code>X509Data</code>. Valid types are 
      * {@link String} (subject names), <code>byte[]</code> (subject key ids), 

@@ -18,7 +18,7 @@ namespace biz.ritter.javapi.sql
 {
 
 
-    /**
+     /*
      * An enumeration to describe the reason why a property cannot be set by calling
      * Connection.setClientInfo.
      * 

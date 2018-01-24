@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util
 {
-    /**
+     /*
      * The unchecked exception will be thrown out if there are duplicate flags given
      * out in the format specifier.
      *
@@ -32,7 +32,7 @@ namespace biz.ritter.javapi.util
 
         private String flags;
 
-        /**
+         /*
          * Constructs a new {@code DuplicateFormatFlagsException} with the flags
          * containing duplicates.
          * 
@@ -46,7 +46,7 @@ namespace biz.ritter.javapi.util
             flags = f;
         }
 
-        /**
+         /*
          * Returns the format flags that contain a duplicate flag.
          * 
          * @return the format flags that contain a duplicate flag.
@@ -55,7 +55,7 @@ namespace biz.ritter.javapi.util
             return flags;
         }
 
-        /**
+         /*
          * Returns the message string of the DuplicateFormatFlagsException.
          * 
          * @return the message string of the DuplicateFormatFlagsException.

@@ -17,14 +17,14 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.security
 {
 
-    /**
+     /*
      * {@code Key} is the common interface for all keys.
      * 
      * @see PublicKey
      * @see PrivateKey
      */
     public interface Key : java.io.Serializable {
-        /**
+         /*
          * Returns the name of the algorithm of this key. If the algorithm is
          * unknown, {@code null} is returned.
          * 
@@ -33,7 +33,7 @@ namespace biz.ritter.javapi.security
          */
         String getAlgorithm();
 
-        /**
+         /*
          * Returns the name of the format used to encode this key, or {@code null}
          * if it can not be encoded.
          * 
@@ -42,7 +42,7 @@ namespace biz.ritter.javapi.security
          */
         String getFormat();
 
-        /**
+         /*
          * Returns the encoded form of this key, or {@code null} if encoding is not
          * supported by this key.
          * 

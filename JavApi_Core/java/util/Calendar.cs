@@ -20,121 +20,121 @@ namespace biz.ritter.javapi.util
     {
 
         #region Constant fields
-        /**
+         /*
      * Value of the {@code MONTH} field indicating the first month of the
      * year.
      */
         public const int JANUARY = 0;
 
-        /**
+         /*
          * Value of the {@code MONTH} field indicating the second month of
          * the year.
          */
         public const int FEBRUARY = 1;
 
-        /**
+         /*
          * Value of the {@code MONTH} field indicating the third month of the
          * year.
          */
         public const int MARCH = 2;
 
-        /**
+         /*
          * Value of the {@code MONTH} field indicating the fourth month of
          * the year.
          */
         public const int APRIL = 3;
 
-        /**
+         /*
          * Value of the {@code MONTH} field indicating the fifth month of the
          * year.
          */
         public const int MAY = 4;
 
-        /**
+         /*
          * Value of the {@code MONTH} field indicating the sixth month of the
          * year.
          */
         public const int JUNE = 5;
 
-        /**
+         /*
          * Value of the {@code MONTH} field indicating the seventh month of
          * the year.
          */
         public const int JULY = 6;
 
-        /**
+         /*
          * Value of the {@code MONTH} field indicating the eighth month of
          * the year.
          */
         public const int AUGUST = 7;
 
-        /**
+         /*
          * Value of the {@code MONTH} field indicating the ninth month of the
          * year.
          */
         public const int SEPTEMBER = 8;
 
-        /**
+         /*
          * Value of the {@code MONTH} field indicating the tenth month of the
          * year.
          */
         public const int OCTOBER = 9;
 
-        /**
+         /*
          * Value of the {@code MONTH} field indicating the eleventh month of
          * the year.
          */
         public const int NOVEMBER = 10;
 
-        /**
+         /*
          * Value of the {@code MONTH} field indicating the twelfth month of
          * the year.
          */
         public const int DECEMBER = 11;
 
-        /**
+         /*
          * Value of the {@code MONTH} field indicating the thirteenth month
          * of the year. Although {@code GregorianCalendar} does not use this
          * value, lunar calendars do.
          */
         public const int UNDECIMBER = 12;
 
-        /**
+         /*
          * Value of the {@code DAY_OF_WEEK} field indicating Sunday.
          */
         public const int SUNDAY = 1;
 
-        /**
+         /*
          * Value of the {@code DAY_OF_WEEK} field indicating Monday.
          */
         public const int MONDAY = 2;
 
-        /**
+         /*
          * Value of the {@code DAY_OF_WEEK} field indicating Tuesday.
          */
         public const int TUESDAY = 3;
 
-        /**
+         /*
          * Value of the {@code DAY_OF_WEEK} field indicating Wednesday.
          */
         public const int WEDNESDAY = 4;
 
-        /**
+         /*
          * Value of the {@code DAY_OF_WEEK} field indicating Thursday.
          */
         public const int THURSDAY = 5;
 
-        /**
+         /*
          * Value of the {@code DAY_OF_WEEK} field indicating Friday.
          */
         public const int FRIDAY = 6;
 
-        /**
+         /*
          * Value of the {@code DAY_OF_WEEK} field indicating Saturday.
          */
         public const int SATURDAY = 7;
 
-        /**
+         /*
          * Field number for {@code get} and {@code set} indicating the
          * era, e.g., AD or BC in the Julian calendar. This is a calendar-specific
          * value; see subclass documentation.
@@ -144,13 +144,13 @@ namespace biz.ritter.javapi.util
          */
         public static readonly int ERA = 0;
 
-        /**
+         /*
          * Field number for {@code get} and {@code set} indicating the
          * year. This is a calendar-specific value; see subclass documentation.
          */
         public static readonly int YEAR = 1;
 
-        /**
+         /*
          * Field number for {@code get} and {@code set} indicating the
          * month. This is a calendar-specific value. The first month of the year is
          * {@code JANUARY}; the last depends on the number of months in a
@@ -172,7 +172,7 @@ namespace biz.ritter.javapi.util
          */
         public static readonly int MONTH = 2;
 
-        /**
+         /*
          * Field number for {@code get} and {@code set} indicating the
          * week number within the current year. The first week of the year, as
          * defined by {@code getFirstDayOfWeek()} and
@@ -185,7 +185,7 @@ namespace biz.ritter.javapi.util
          */
         public static readonly int WEEK_OF_YEAR = 3;
 
-        /**
+         /*
          * Field number for {@code get} and {@code set} indicating the
          * week number within the current month. The first week of the month, as
          * defined by {@code getFirstDayOfWeek()} and
@@ -198,7 +198,7 @@ namespace biz.ritter.javapi.util
          */
         public static readonly int WEEK_OF_MONTH = 4;
 
-        /**
+         /*
          * Field number for {@code get} and {@code set} indicating the
          * day of the month. This is a synonym for {@code DAY_OF_MONTH}. The
          * first day of the month has value 1.
@@ -207,7 +207,7 @@ namespace biz.ritter.javapi.util
          */
         public static readonly int DATE = 5;
 
-        /**
+         /*
          * Field number for {@code get} and {@code set} indicating the
          * day of the month. This is a synonym for {@code DATE}. The first
          * day of the month has value 1.
@@ -216,14 +216,14 @@ namespace biz.ritter.javapi.util
          */
         public static readonly int DAY_OF_MONTH = 5;
 
-        /**
+         /*
          * Field number for {@code get} and {@code set} indicating the
          * day number within the current year. The first day of the year has value
          * 1.
          */
         public static readonly int DAY_OF_YEAR = 6;
 
-        /**
+         /*
          * Field number for {@code get} and {@code set} indicating the
          * day of the week. This field takes values {@code SUNDAY},
          * {@code MONDAY}, {@code TUESDAY}, {@code WEDNESDAY},
@@ -240,7 +240,7 @@ namespace biz.ritter.javapi.util
          */
         public static readonly int DAY_OF_WEEK = 7;
 
-        /**
+         /*
          * Field number for {@code get} and {@code set} indicating the
          * ordinal number of the day of the week within the current month. Together
          * with the {@code DAY_OF_WEEK} field, this uniquely specifies a day
@@ -266,7 +266,7 @@ namespace biz.ritter.javapi.util
          */
         public static readonly int DAY_OF_WEEK_IN_MONTH = 8;
 
-        /**
+         /*
          * Field number for {@code get} and {@code set} indicating
          * whether the {@code HOUR} is before or after noon. E.g., at
          * 10:04:15.250 PM the {@code AM_PM} is {@code PM}.
@@ -276,19 +276,19 @@ namespace biz.ritter.javapi.util
          * @see #HOUR
          */
         public static readonly int AM_PM = 9;
-        /**
+         /*
          * Value of the {@code AM_PM} field indicating the period of the day
          * from midnight to just before noon.
          */
         public static readonly int AM = 0;
 
-        /**
+         /*
          * Value of the {@code AM_PM} field indicating the period of the day
          * from noon to just before midnight.
          */
         public static readonly int PM = 1;
 
-        /**
+         /*
          * Field number for {@code get} and {@code set} indicating the
          * hour of the morning or afternoon. {@code HOUR} is used for the
          * 12-hour clock. E.g., at 10:04:15.250 PM the {@code HOUR} is 10.
@@ -298,7 +298,7 @@ namespace biz.ritter.javapi.util
          */
         public static readonly int HOUR = 10;
 
-        /**
+         /*
          * Field number for {@code get} and {@code set} indicating the
          * hour of the day. {@code HOUR_OF_DAY} is used for the 24-hour
          * clock. E.g., at 10:04:15.250 PM the {@code HOUR_OF_DAY} is 22.
@@ -307,21 +307,21 @@ namespace biz.ritter.javapi.util
          */
         public static readonly int HOUR_OF_DAY = 11;
 
-        /**
+         /*
          * Field number for {@code get} and {@code set} indicating the
          * minute within the hour. E.g., at 10:04:15.250 PM the {@code MINUTE}
          * is 4.
          */
         public static readonly int MINUTE = 12;
 
-        /**
+         /*
          * Field number for {@code get} and {@code set} indicating the
          * second within the minute. E.g., at 10:04:15.250 PM the
          * {@code SECOND} is 15.
          */
         public static readonly int SECOND = 13;
 
-        /**
+         /*
          * Field number for {@code get} and {@code set} indicating the
          * millisecond within the second. E.g., at 10:04:15.250 PM the
          * {@code MILLISECOND} is 250.

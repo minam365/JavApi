@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace org.apache.harmony.luni.util
 {
 
-/**
+ /*
  * Helper class to avoid multiple anonymous inner class for
  * <code>{@link java.security.AccessController#doPrivileged(PrivilegedAction)}</code>
  * calls.
@@ -38,7 +38,7 @@ public class PriviAction<T> : java.security.PrivilegedAction<T> {
 
     private const int GET_SECURITY_PROPERTY = 4;
 
-    /**
+     /*
      * Creates a PrivilegedAction to get the security property with the given
      * name.
      * 
@@ -56,7 +56,7 @@ public class PriviAction<T> : java.security.PrivilegedAction<T> {
         this.arg1 = arg;
     }
 
-    /**
+     /*
      * Creates a PrivilegedAction to get the current security policy object.
      * 
      * @see Policy#getPolicy
@@ -65,7 +65,7 @@ public class PriviAction<T> : java.security.PrivilegedAction<T> {
         action = GET_SECURITY_POLICY;
     }
 
-    /**
+     /*
      * Creates a PrivilegedAction to disable the access checks to the given
      * object.
      * 
@@ -80,7 +80,7 @@ public class PriviAction<T> : java.security.PrivilegedAction<T> {
         arg1 = obj;
     }
 
-    /**
+     /*
      * Creates a PrivilegedAction to return the value of the system property
      * with the given key.
      * 
@@ -94,7 +94,7 @@ public class PriviAction<T> : java.security.PrivilegedAction<T> {
         arg1 = property;
     }
 
-    /**
+     /*
      * Creates a PrivilegedAction to return the value of the system property
      * with the given key.
      * 
@@ -111,7 +111,7 @@ public class PriviAction<T> : java.security.PrivilegedAction<T> {
         arg2 = defaultAnswer;
     }
 
-    /**
+     /*
      * Performs the actual privileged computation as defined by the constructor.
      * 
      * @see java.security.PrivilegedAction#run()

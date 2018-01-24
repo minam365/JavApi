@@ -7,7 +7,7 @@ using System;
 namespace org.xml.sax
 {
 
-    /**
+     /*
      * Receive notification of basic DTD-related events.
      *
      * <blockquote>
@@ -53,7 +53,7 @@ namespace org.xml.sax
     {
 
 
-        /**
+         /*
          * Receive notification of a notation declaration event.
          *
          * <p>It is up to the application to record the notation for later
@@ -85,7 +85,7 @@ namespace org.xml.sax
                            String systemId);//	throws SAXException;
 
 
-        /**
+         /*
          * Receive notification of an unparsed entity declaration event.
          *
          * <p>Note that the notation name corresponds to a notation

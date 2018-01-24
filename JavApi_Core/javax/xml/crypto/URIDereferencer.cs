@@ -28,7 +28,7 @@ using System;
 namespace biz.ritter.javapix.xml.crypto
 {
 
-/**
+ /*
  * A dereferencer of {@link URIReference}s.
  * <p>
  * The result of dereferencing a <code>URIReference</code> is either an 
@@ -46,7 +46,7 @@ namespace biz.ritter.javapix.xml.crypto
  */
 public interface URIDereferencer {
 
-    /**
+     /*
      * Dereferences the specified <code>URIReference</code> and returns the 
      * dereferenced data.
      *

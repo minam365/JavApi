@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util.jar
 {
-/**
+ /*
  * Represents a single file in a JAR archive together with the manifest
  * attributes and digital signatures associated with it.
  *
@@ -29,7 +29,7 @@ namespace biz.ritter.javapi.util.jar
         private Attributes attributes;
 
         protected internal JarFile parentJar;
-        /**
+         /*
          * Creates a new {@code JarEntry} named name.
          *
          * @param name
@@ -40,7 +40,7 @@ namespace biz.ritter.javapi.util.jar
         {
         }
 
-        /**
+         /*
          * Creates a new {@code JarEntry} using the values obtained from entry.
          *
          * @param entry
@@ -51,7 +51,7 @@ namespace biz.ritter.javapi.util.jar
         {
         }
 
-        /**
+         /*
          * Returns the {@code Attributes} object associated with this entry or
          * {@code null} if none exists.
          *

@@ -7,7 +7,7 @@ namespace org.apache.harmony.security.fortress
 {
 
 
-    /**
+     /*
      * 
      * This class implements common functionality for all engine classes
      * @author Boris V. Kuznetsov
@@ -27,22 +27,22 @@ namespace org.apache.harmony.security.fortress
 
         private int refreshNumber;
 
-        /**
+         /*
          * Provider
          */
         public java.security.Provider provider;
 
-        /**
+         /*
          * SPI instance
          */
         public Object spi;
 
-        /**
+         /*
          * Access to package visible api in java.security
          */
         public static SecurityAccess door;
 
-        /**
+         /*
          * Creates a Engine object
          * 
          * @param service
@@ -52,7 +52,7 @@ namespace org.apache.harmony.security.fortress
             this.serviceName = service;
         }
 
-        /**
+         /*
          * 
          * Finds the appropriate service implementation and creates instance of the
          * class that implements corresponding Service Provider Interface.
@@ -100,7 +100,7 @@ namespace org.apache.harmony.security.fortress
             }
         }
 
-        /**
+         /*
          * 
          * Finds the appropriate service implementation and creates instance of the
          * class that implements corresponding Service Provider Interface.

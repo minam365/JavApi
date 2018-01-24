@@ -16,14 +16,14 @@
 namespace biz.ritter.javapi.util.logging
 {
 
-    /**
+     /*
      * A {@code Filter} provides a mechanism for exercising fine-grained control
      * over which records get logged.
      */
     public interface Filter
     {
 
-        /**
+         /*
          * Checks {@code record} to determine if it should be logged.
          * 
          * @param record

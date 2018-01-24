@@ -25,13 +25,13 @@ namespace biz.ritter.javapi.lang
 
         private static readonly long serialVersionUID = -5116101128118950844L;
 
-        /**
+         /*
          * Constructs a new {@code ArrayIndexOutOfBoundsException} that includes the
          * current stack trace.
          */
         public ArrayIndexOutOfBoundsException() :base (){}
 
-        /**
+         /*
          * Constructs a new {@code ArrayIndexOutOfBoundsException} with the current
          * stack trace and a detail message that is based on the specified invalid
          * {@code index}.
@@ -44,7 +44,7 @@ namespace biz.ritter.javapi.lang
         {// luni.36=Array index out of range\: {0}
         }
 
-        /**
+         /*
          * Constructs a new {@code ArrayIndexOutOfBoundsException} with the current
          * stack trace and the specified detail message.
          *

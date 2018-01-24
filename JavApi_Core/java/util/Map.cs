@@ -32,7 +32,7 @@ namespace biz.ritter.javapi.util
     /// <typeparam name="V">value type</typeparam>
     public interface Map<K,V> {
 
-        /**
+         /*
          * Removes all elements from this {@code Map}, leaving it empty.
          * 
          * @throws UnsupportedOperationException
@@ -42,7 +42,7 @@ namespace biz.ritter.javapi.util
          */
         void clear();
 
-        /**
+         /*
          * Returns whether this {@code Map} contains the specified key.
          * 
          * @param key
@@ -52,7 +52,7 @@ namespace biz.ritter.javapi.util
          */
         bool containsKey(Object key);
 
-        /**
+         /*
          * Returns whether this {@code Map} contains the specified value.
          * 
          * @param value
@@ -62,7 +62,7 @@ namespace biz.ritter.javapi.util
          */
         bool containsValue(Object value);
 
-        /**
+         /*
          * Returns a {@code Set} containing all of the mappings in this {@code Map}. Each mapping is
          * an instance of {@link Map.Entry}. As the {@code Set} is backed by this {@code Map},
          * changes in one will be reflected in the other.
@@ -71,7 +71,7 @@ namespace biz.ritter.javapi.util
          */
         Set<MapNS.Entry<K,V>> entrySet();
 
-        /**
+         /*
          * Compares the argument to the receiver, and returns {@code true} if the
          * specified object is a {@code Map} and both {@code Map}s contain the same mappings.
          * 
@@ -85,7 +85,7 @@ namespace biz.ritter.javapi.util
         bool equals(Object obj);
          */
 
-        /**
+         /*
          * Returns the value of the mapping with the specified key.
          * 
          * @param key
@@ -95,7 +95,7 @@ namespace biz.ritter.javapi.util
          */
         V get(Object key);
 
-        /**
+         /*
          * Returns an integer hash code for the receiver. {@code Object}s which are equal
          * return the same value for this method.
          * 
@@ -105,7 +105,7 @@ namespace biz.ritter.javapi.util
         int hashCode();
          */
 
-        /**
+         /*
          * Returns whether this map is empty.
          * 
          * @return {@code true} if this map has no elements, {@code false}
@@ -114,7 +114,7 @@ namespace biz.ritter.javapi.util
          */
         bool isEmpty();
 
-        /**
+         /*
          * Returns a set of the keys contained in this {@code Map}. The {@code Set} is backed by
          * this {@code Map} so changes to one are reflected by the other. The {@code Set} does not
          * support adding.
@@ -123,7 +123,7 @@ namespace biz.ritter.javapi.util
          */
         Set<K> keySet();
 
-        /**
+         /*
          * Maps the specified key to the specified value.
          * 
          * @param key
@@ -145,7 +145,7 @@ namespace biz.ritter.javapi.util
          */
         V put(K key, V value);
 
-        /**
+         /*
          * Copies every mapping in the specified {@code Map} to this {@code Map}.
          * 
          * @param map
@@ -163,7 +163,7 @@ namespace biz.ritter.javapi.util
          */
         void putAll(Map<K,V> map);
 
-        /**
+         /*
          * Removes a mapping with the specified key from this {@code Map}.
          * 
          * @param key
@@ -175,14 +175,14 @@ namespace biz.ritter.javapi.util
          */
         V remove(Object key);
 
-        /**
+         /*
          * Returns the number of mappings in this {@code Map}.
          * 
          * @return the number of mappings in this {@code Map}.
          */
         int size();
 
-        /**
+         /*
          * Returns a {@code Collection} of the values contained in this {@code Map}. The {@code Collection}
          * is backed by this {@code Map} so changes to one are reflected by the other. The
          * {@code Collection} supports {@link Collection#remove}, {@link Collection#removeAll}, 
@@ -206,26 +206,26 @@ namespace biz.ritter.javapi.util
     }
     
     namespace MapNS {
-        /**
+         /*
          * {@code Map.Entry} is a key/value mapping contained in a {@code Map}.
          */
         public interface Entry<K, V>
         {
-            /**
+             /*
              * Returns the key.
              * 
              * @return the key
              */
             K getKey();
 
-            /**
+             /*
              * Returns the value.
              * 
              * @return the value
              */
             V getValue();
 
-            /**
+             /*
              * Returns an integer hash code for the receiver. {@code Object} which are
              * equal return the same value for this method.
              * 
@@ -235,7 +235,7 @@ namespace biz.ritter.javapi.util
             int hashCode();
              */
 
-            /**
+             /*
              * Sets the value of this entry to the specified value, replacing any
              * existing value.
              * 

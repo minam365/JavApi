@@ -22,7 +22,7 @@ using javax = biz.ritter.javapix;
 namespace biz.ritter.javapix.xml.crypto.dsig.dom
 {
 
-/**
+ /*
  * A DOM-specific {@link XMLSignContext}. This class contains additional methods
  * to specify the location in a DOM tree where an {@link XMLSignature}
  * object is to be marshalled when generating the signature.
@@ -42,7 +42,7 @@ public class DOMSignContext : biz.ritter.javapix.xml.crypto.dom.DOMCryptoContext
     private org.w3c.dom.Node parent;
     private org.w3c.dom.Node nextSibling;
 
-    /**
+     /*
      * Creates a <code>DOMSignContext</code> with the specified signing key
      * and parent node. The signing key is stored in a
      * {@link KeySelector#singletonKeySelector singleton KeySelector} that is
@@ -67,7 +67,7 @@ public class DOMSignContext : biz.ritter.javapix.xml.crypto.dom.DOMCryptoContext
         this.parent = parent;
     }
 
-    /**
+     /*
      * Creates a <code>DOMSignContext</code> with the specified signing key,
      * parent and next sibling nodes. The signing key is stored in a
      * {@link KeySelector#singletonKeySelector singleton KeySelector} that is
@@ -97,7 +97,7 @@ public class DOMSignContext : biz.ritter.javapix.xml.crypto.dom.DOMCryptoContext
         this.nextSibling = nextSibling;
     }
 
-    /**
+     /*
      * Creates a <code>DOMSignContext</code> with the specified key selector
      * and parent node. The marshalled <code>XMLSignature</code> will be added 
      * as the last child element of the specified parent node unless a next 
@@ -120,7 +120,7 @@ public class DOMSignContext : biz.ritter.javapix.xml.crypto.dom.DOMCryptoContext
         this.parent = parent;
     }
 
-    /**
+     /*
      * Creates a <code>DOMSignContext</code> with the specified key selector,
      * parent and next sibling nodes. The marshalled <code>XMLSignature</code> 
      * will be inserted as a child element of the specified parent node and 
@@ -147,7 +147,7 @@ public class DOMSignContext : biz.ritter.javapix.xml.crypto.dom.DOMCryptoContext
         this.nextSibling = nextSibling;
     }
 
-    /**
+     /*
      * Sets the parent node.
      *
      * @param parent the parent node. The marshalled <code>XMLSignature</code> 
@@ -162,7 +162,7 @@ public class DOMSignContext : biz.ritter.javapix.xml.crypto.dom.DOMCryptoContext
         this.parent = parent;
     }
 
-    /**
+     /*
      * Sets the next sibling node. 
      *
      * @param nextSibling the next sibling node. The marshalled 
@@ -174,7 +174,7 @@ public class DOMSignContext : biz.ritter.javapix.xml.crypto.dom.DOMCryptoContext
         this.nextSibling = nextSibling;
     }
 
-    /**
+     /*
      * Returns the parent node.
      *
      * @return the parent node (never <code>null</code>)
@@ -184,7 +184,7 @@ public class DOMSignContext : biz.ritter.javapix.xml.crypto.dom.DOMCryptoContext
         return parent;
     }
 
-    /**
+     /*
      * Returns the nextSibling node.
      *
      * @return the nextSibling node, or <code>null</code> if not specified.

@@ -17,24 +17,24 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.io
 {
 
-/**
+ /*
  * Concatenates two or more existing {@link InputStream}s. Reads are taken from
  * the first stream until it ends, then the next stream is used, until the last
  * stream returns end of file.
  */
 	public class SequenceInputStream : InputStream
 	{
-		/**
+		 /*
      * An enumeration which will return types of InputStream.
      */
 		private java.util.Enumeration<InputStream> e;
 
-		/**
+		 /*
      * The current input stream.
      */
 		private InputStream inJ;
 
-		/**
+		 /*
      * Constructs a new {@code SequenceInputStream} using the two streams
      * {@code s1} and {@code s2} as the sequence of streams to read from.
      * 
@@ -56,7 +56,7 @@ namespace biz.ritter.javapi.io
 			inJ = s1;
 		}
 
-		/**
+		 /*
      * Constructs a new SequenceInputStream using the elements returned from
      * Enumeration {@code e} as the stream sequence. The instances returned by
      * {@code e.nextElement()} must be of type {@link InputStream}.
@@ -77,7 +77,7 @@ namespace biz.ritter.javapi.io
 			}
 		}
 
-		/**
+		 /*
      * Returns the number of bytes that are available before the current input stream will
      * block.
      * 
@@ -94,7 +94,7 @@ namespace biz.ritter.javapi.io
 			return 0;
 		}
 
-		/**
+		 /*
      * Closes all streams in this sequence of input stream.
      * 
      * @throws IOException
@@ -109,7 +109,7 @@ namespace biz.ritter.javapi.io
 			e = null;
 		}
 
-		/**
+		 /*
      * Sets up the next InputStream or leaves it alone if there are none left.
      * 
      * @throws IOException
@@ -129,7 +129,7 @@ namespace biz.ritter.javapi.io
 			}
 		}
 
-		/**
+		 /*
      * Reads a single byte from this sequence of input streams and returns it as
      * an integer in the range from 0 to 255. It tries to read from the current
      * stream first; if the end of this stream has been reached, it reads from
@@ -156,7 +156,7 @@ namespace biz.ritter.javapi.io
 			return -1;
 		}
 
-		/**
+		 /*
      * Reads at most {@code count} bytes from this sequence of input streams and
      * stores them in the byte array {@code buffer} starting at {@code offset}.
      * Blocks only until at least 1 byte has been read, the end of the stream

@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.sql
 {
 
-    /**
+     /*
      * A class holding information about driver properties of a database connection.
      * This class is returned by the
      * {@link Driver#getPropertyInfo(String, java.util.Properties)} method and
@@ -26,36 +26,36 @@ namespace biz.ritter.javapi.sql
     public class DriverPropertyInfo
     {
 
-        /**
+         /*
          * If the value member can be chosen from a set of possible values, they are
          * contained here. Otherwise choices is {@code null}.
          */
         public String[] choices;
 
-        /**
+         /*
          * A description of the property. May be {@code null}.
          */
         public String description;
 
-        /**
+         /*
          * The name of the property.
          */
         public String name;
 
-        /**
+         /*
          * {@code true} when the value member must be provided during {@code
          * Driver.connect}. {@code false} otherwise.
          */
         public bool required;
 
-        /**
+         /*
          * The current value associated with this property. It is depending on the
          * data gathered by the {@code getPropertyInfo} method, the general Java
          * environment and the driver's default values.
          */
         public String value;
 
-        /**
+         /*
          * Creates a {@code DriverPropertyInfo} instance with the supplied name and
          * value. Other class members take their default values.
          * 

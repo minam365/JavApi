@@ -19,7 +19,7 @@ using org.apache.harmony.security.fortress;
 namespace biz.ritter.javapi.security
 {
 
-    /**
+     /*
      * {@code MessageDigest} is an engine class which is capable of generating one
      * way hash values for arbitrary input, utilizing the algorithm it was
      * initialized with.
@@ -41,7 +41,7 @@ namespace biz.ritter.javapi.security
         // The algorithm.
         private String algorithm;
 
-        /**
+         /*
          * Constructs a new instance of {@code MessageDigest} with the name of
          * the algorithm to use.
          * 
@@ -53,7 +53,7 @@ namespace biz.ritter.javapi.security
             this.algorithm = algorithm;
         }
 
-        /**
+         /*
          * Returns a new instance of {@code MessageDigest} that utilizes the
          * specified algorithm.
          * 
@@ -88,7 +88,7 @@ namespace biz.ritter.javapi.security
             }
         }
 
-        /**
+         /*
          * Returns a new instance of {@code MessageDigest} that utilizes the
          * specified algorithm from the specified provider.
          * 
@@ -119,7 +119,7 @@ namespace biz.ritter.javapi.security
             return getInstance(algorithm, p);
         }
 
-        /**
+         /*
          * Returns a new instance of {@code MessageDigest} that utilizes the
          * specified algorithm from the specified provider.
          * 
@@ -161,7 +161,7 @@ namespace biz.ritter.javapi.security
             }
         }
 
-        /**
+         /*
          * Puts this {@code MessageDigest} back in an initial state, such that it is
          * ready to compute a one way hash value.
          */
@@ -170,7 +170,7 @@ namespace biz.ritter.javapi.security
             engineReset();
         }
 
-        /**
+         /*
          * Updates this {@code MessageDigest} using the given {@code byte}.
          * 
          * @param arg0
@@ -182,7 +182,7 @@ namespace biz.ritter.javapi.security
             engineUpdate(arg0);
         }
 
-        /**
+         /*
          * Updates this {@code MessageDigest} using the given {@code byte[]}.
          * 
          * @param input
@@ -208,7 +208,7 @@ namespace biz.ritter.javapi.security
             engineUpdate(input, offset, len);
         }
 
-        /**
+         /*
          * Updates this {@code MessageDigest} using the given {@code byte[]}.
          * 
          * @param input
@@ -225,7 +225,7 @@ namespace biz.ritter.javapi.security
             engineUpdate(input, 0, input.Length);
         }
 
-        /**
+         /*
          * Computes and returns the final hash value for this {@link MessageDigest}.
          * After the digest is computed the receiver is reset.
          * 
@@ -237,7 +237,7 @@ namespace biz.ritter.javapi.security
             return engineDigest();
         }
 
-        /**
+         /*
          * Computes and stores the final hash value for this {@link MessageDigest}.
          * After the digest is computed the receiver is reset.
          * 
@@ -268,7 +268,7 @@ namespace biz.ritter.javapi.security
             return engineDigest(buf, offset, len);
         }
 
-        /**
+         /*
          * Performs the final update and then computes and returns the final hash
          * value for this {@link MessageDigest}. After the digest is computed the
          * receiver is reset.
@@ -284,7 +284,7 @@ namespace biz.ritter.javapi.security
             return digest();
         }
 
-        /**
+         /*
          * Returns a string containing a concise, human-readable description of this
          * {@code MessageDigest} including the name of its algorithm.
          * 
@@ -295,7 +295,7 @@ namespace biz.ritter.javapi.security
             return "MESSAGE DIGEST " + algorithm; //$NON-NLS-1$
         }
 
-        /**
+         /*
          * Indicates whether to digest are equal by performing a simply
          * byte-per-byte compare of the two digests.
          * 
@@ -325,7 +325,7 @@ namespace biz.ritter.javapi.security
             return result;
         }
 
-        /**
+         /*
          * Returns the name of the algorithm of this {@code MessageDigest}.
          * 
          * @return the name of the algorithm of this {@code MessageDigest}
@@ -335,7 +335,7 @@ namespace biz.ritter.javapi.security
             return algorithm;
         }
 
-        /**
+         /*
          * Returns the provider associated with this {@code MessageDigest}.
          * 
          * @return the provider associated with this {@code MessageDigest}
@@ -345,7 +345,7 @@ namespace biz.ritter.javapi.security
             return provider;
         }
 
-        /**
+         /*
          * Returns the engine digest length in bytes. If the implementation does not
          * implement this function or is not an instance of {@code Cloneable},
          * {@code 0} is returned.
@@ -384,7 +384,7 @@ namespace biz.ritter.javapi.security
             throw new java.lang.CloneNotSupportedException();
         }
 
-        /**
+         /*
          * Updates this {@code MessageDigest} using the given {@code input}.
          * 
          * @param input
@@ -395,7 +395,7 @@ namespace biz.ritter.javapi.security
             engineUpdate(input);
         }
 
-        /**
+         /*
          * 
          * The internal MessageDigest implementation
          * 

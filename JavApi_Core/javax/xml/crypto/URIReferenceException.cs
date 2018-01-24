@@ -22,7 +22,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapix.xml.crypto
 {
 
-/**
+ /*
  * Indicates an exceptional condition thrown while dereferencing a 
  * {@link URIReference}.
  *
@@ -39,7 +39,7 @@ public class URIReferenceException : java.lang.Exception {
 
     private const long serialVersionUID = 7173469703932561419L;
 
-    /**
+     /*
      * The throwable that caused this exception to get thrown, or null if this
      * exception was not caused by another throwable or if the causative
      * throwable is unknown. 
@@ -50,7 +50,7 @@ public class URIReferenceException : java.lang.Exception {
 
     private URIReference uriReference;
 
-    /**
+     /*
      * Constructs a new <code>URIReferenceException</code> with 
      * <code>null</code> as its detail message.
      */
@@ -58,7 +58,7 @@ public class URIReferenceException : java.lang.Exception {
         base(){
     }
 
-    /**
+     /*
      * Constructs a new <code>URIReferenceException</code> with the specified 
      * detail message. 
      *
@@ -68,7 +68,7 @@ public class URIReferenceException : java.lang.Exception {
         base(message){
     }
 
-    /**
+     /*
      * Constructs a new <code>URIReferenceException</code> with the 
      * specified detail message and cause.  
      * <p>Note that the detail message associated with
@@ -84,7 +84,7 @@ public class URIReferenceException : java.lang.Exception {
         this.cause = cause;
     }
 
-    /**
+     /*
      * Constructs a new <code>URIReferenceException</code> with the 
      * specified detail message, cause and <code>URIReference</code>.
      * <p>Note that the detail message associated with
@@ -108,7 +108,7 @@ public class URIReferenceException : java.lang.Exception {
         this.uriReference = uriReference;
     }
 
-    /**
+     /*
      * Constructs a new <code>URIReferenceException</code> with the specified 
      * cause and a detail message of <code>(cause==null ? null : 
      * cause.toString())</code> (which typically contains the class and detail 
@@ -122,7 +122,7 @@ public class URIReferenceException : java.lang.Exception {
         this.cause = cause;
     }
 
-    /**
+     /*
      * Returns the <code>URIReference</code> that was being dereferenced
      * when the exception was thrown.
      *
@@ -133,7 +133,7 @@ public class URIReferenceException : java.lang.Exception {
         return uriReference;
     }
 
-    /**
+     /*
      * Returns the cause of this <code>URIReferenceException</code> or 
      * <code>null</code> if the cause is nonexistent or unknown.  (The 
      * cause is the throwable that caused this 
@@ -146,7 +146,7 @@ public class URIReferenceException : java.lang.Exception {
         return cause;
     }
 
-    /**
+     /*
      * Prints this <code>URIReferenceException</code>, its backtrace and
      * the cause's backtrace to the standard error stream.
      */
@@ -155,7 +155,7 @@ public class URIReferenceException : java.lang.Exception {
         cause.printStackTrace();
     }
 
-    /**
+     /*
      * Prints this <code>URIReferenceException</code>, its backtrace and
      * the cause's backtrace to the specified print stream.
      *
@@ -165,7 +165,7 @@ public class URIReferenceException : java.lang.Exception {
 			this.printStackTrace(new java.io.PrintWriter(s));
     }
 
-    /**
+     /*
      * Prints this <code>URIReferenceException</code>, its backtrace and
      * the cause's backtrace to the specified print writer.
      *

@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * Observable is used to notify a group of Observer objects when a change
      * occurs. On creation, the set of observers is empty. After a change occurred,
      * the application can call the {@link #notifyObservers()} method. This will
@@ -35,13 +35,13 @@ namespace biz.ritter.javapi.util
 
         protected internal bool changed = false;
 
-        /**
+         /*
          * Constructs a new {@code Observable} object.
          */
         public Observable() : base () {
         }
 
-        /**
+         /*
          * Adds the specified observer to the list of observers. If it is already
          * registered, it is not added a second time.
          * 
@@ -59,7 +59,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Clears the changed flag for this {@code Observable}. After calling
          * {@code clearChanged()}, {@code hasChanged()} will return {@code false}.
          */
@@ -68,7 +68,7 @@ namespace biz.ritter.javapi.util
             changed = false;
         }
 
-        /**
+         /*
          * Returns the number of observers registered to this {@code Observable}.
          * 
          * @return the number of observers.
@@ -78,7 +78,7 @@ namespace biz.ritter.javapi.util
             return observers.size();
         }
 
-        /**
+         /*
          * Removes the specified observer from the list of observers. Passing null
          * won't do anything.
          * 
@@ -92,7 +92,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Removes all observers from the list of observers.
          */
         public virtual void deleteObservers()
@@ -102,7 +102,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Returns the changed flag for this {@code Observable}.
          * 
          * @return {@code true} when the changed flag for this {@code Observable} is
@@ -113,7 +113,7 @@ namespace biz.ritter.javapi.util
             return changed;
         }
 
-        /**
+         /*
          * If {@code hasChanged()} returns {@code true}, calls the {@code update()}
          * method for every observer in the list of observers using null as the
          * argument. Afterwards, calls {@code clearChanged()}.
@@ -125,7 +125,7 @@ namespace biz.ritter.javapi.util
             notifyObservers(null);
         }
 
-        /**
+         /*
          * If {@code hasChanged()} returns {@code true}, calls the {@code update()}
          * method for every Observer in the list of observers using the specified
          * argument. Afterwards calls {@code clearChanged()}.
@@ -152,7 +152,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Sets the changed flag for this {@code Observable}. After calling
          * {@code setChanged()}, {@code hasChanged()} will return {@code true}.
          */

@@ -18,17 +18,17 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.zip
 {
 
-    /**
+     /*
      * An inputstream filter to compress data by the compressing format of Deflate.
      */
     public class DeflaterInputStream : java.io.FilterInputStream {
 
-        /**
+         /*
          * The Deflater used by this DeflaterInputStream
          */
         protected readonly Deflater def;
 
-        /**
+         /*
          * The internal input data buffer used by this DeflaterInputStream.
          */
         protected readonly byte[] buf;
@@ -41,7 +41,7 @@ namespace biz.ritter.javapi.util.zip
 
         private bool availableJ = true;
 
-        /**
+         /*
          * Constructs a DeflaterInputStream with the default Deflater and internal
          * input buffer length.
          * 
@@ -51,7 +51,7 @@ namespace biz.ritter.javapi.util.zip
         public DeflaterInputStream(java.io.InputStream inJ) :this(inJ, new Deflater(), defaultsize){
         }
 
-        /**
+         /*
          * Constructs a DeflaterInputStream with a specified Deflater and the
          * default internal input buffer length.
          * 
@@ -63,7 +63,7 @@ namespace biz.ritter.javapi.util.zip
         public DeflaterInputStream(java.io.InputStream inJ, Deflater defl) :this(inJ, defl, defaultsize){
         }
 
-        /**
+         /*
          * Constructs a DeflaterInputStream with a specified Deflater and input
          * buffer length.
          * 
@@ -85,7 +85,7 @@ namespace biz.ritter.javapi.util.zip
             buf = new byte[bufLen];
         }
 
-        /**
+         /*
          * Closes the underlying input stream and discards any remaining uncompressed
          * data.
          */
@@ -95,7 +95,7 @@ namespace biz.ritter.javapi.util.zip
             inJ.close();
         }
 
-        /**
+         /*
          * Reads a byte from the compressed input stream.
          * 
          * @return the byte or -1 if the end of the compressed input stream has been
@@ -117,7 +117,7 @@ namespace biz.ritter.javapi.util.zip
             return r;
         }
 
-        /**
+         /*
          * Reads compressed data into a byte buffer.
          * 
          * @param b
@@ -172,7 +172,7 @@ namespace biz.ritter.javapi.util.zip
             return count;
         }
 
-        /**
+         /*
          * Skips n bytes from the DeflateInputStream.
          * 
          * @param n
@@ -200,7 +200,7 @@ namespace biz.ritter.javapi.util.zip
             return skipped;
         }
 
-        /**
+         /*
          * Returns 1 to denote there is data to read while 0 if no data is
          * available. The returned value does not denote how many bytes that can be
          * read.
@@ -217,7 +217,7 @@ namespace biz.ritter.javapi.util.zip
             return 0;
         }
 
-        /**
+         /*
          * Denotes whether this inputstream support mark()/reset() operation. Always
          * returns false since the two operaions are not supported in
          * DeflaterInputStream.
@@ -229,7 +229,7 @@ namespace biz.ritter.javapi.util.zip
             return false;
         }
 
-        /**
+         /*
          * Not supported in DeflaterInputStream and just does nothing.
          * 
          * @param limit
@@ -241,7 +241,7 @@ namespace biz.ritter.javapi.util.zip
             // do nothing
         }
 
-        /**
+         /*
          * Not supported in DeflaterInputStream and just throws IOException.
          */
         

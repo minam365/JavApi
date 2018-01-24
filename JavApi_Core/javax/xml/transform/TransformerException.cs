@@ -22,7 +22,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapix.xml.transform{
 
-/**
+ /*
  * This class specifies an exceptional condition that occurred
  * during the transformation process.
  */
@@ -31,10 +31,10 @@ public class TransformerException : java.lang.Exception {
     // Added serialVersionUID to preserve binary compatibility 
     private const long serialVersionUID = 975798773772956428L;
 
-    /** Field locator specifies where the error occurred */
+     /* Field locator specifies where the error occurred */
     SourceLocator locator;
 
-    /**
+     /*
      * Method getLocator retrieves an instance of a SourceLocator
      * object that specifies where an error occurred.
      *
@@ -44,7 +44,7 @@ public class TransformerException : java.lang.Exception {
         return locator;
     }
 
-    /**
+     /*
      * Method setLocator sets an instance of a SourceLocator
      * object that specifies where an error occurred.
      *
@@ -54,10 +54,10 @@ public class TransformerException : java.lang.Exception {
         locator = location;
     }
 
-    /** Field containedException specifies a wrapped exception.  May be null. */
+     /* Field containedException specifies a wrapped exception.  May be null. */
     java.lang.Throwable containedException;
 
-    /**
+     /*
      * This method retrieves an exception that this exception wraps.
      *
      * @return An Throwable object, or null.
@@ -67,7 +67,7 @@ public class TransformerException : java.lang.Exception {
         return containedException;
     }
 
-    /**
+     /*
      * Returns the cause of this throwable or <code>null</code> if the
      * cause is nonexistent or unknown.  (The cause is the throwable that
      * caused this throwable to get thrown.)
@@ -79,7 +79,7 @@ public class TransformerException : java.lang.Exception {
                 : containedException);
     }
 
-    /**
+     /*
      * Initializes the <i>cause</i> of this throwable to the specified value.
      * (The cause is the throwable that caused this throwable to get thrown.)
      *
@@ -120,7 +120,7 @@ public class TransformerException : java.lang.Exception {
 			}
     }
 
-    /**
+     /*
      * Create a new TransformerException.
      *
      * @param message The error or warning message.
@@ -133,7 +133,7 @@ public class TransformerException : java.lang.Exception {
         this.locator            = null;
     }
 
-    /**
+     /*
      * Create a new TransformerException wrapping an existing exception.
      *
      * @param e The exception to be wrapped.
@@ -146,7 +146,7 @@ public class TransformerException : java.lang.Exception {
         this.locator            = null;
     }
 
-    /**
+     /*
      * Wrap an existing exception in a TransformerException.
      *
      * <p>This is used for throwing processor exceptions before
@@ -166,7 +166,7 @@ public class TransformerException : java.lang.Exception {
         this.locator            = null;
     }
 
-    /**
+     /*
      * Create a new TransformerException from a message and a Locator.
      *
      * <p>This constructor is especially useful when an application is
@@ -184,7 +184,7 @@ public class TransformerException : java.lang.Exception {
         this.locator            = locator;
     }
 
-    /**
+     /*
      * Wrap an existing exception in a TransformerException.
      *
      * @param message The error or warning message, or null to
@@ -201,7 +201,7 @@ public class TransformerException : java.lang.Exception {
         this.locator            = locator;
     }
 
-    /**
+     /*
      * Get the error message with location information
      * appended.
      *
@@ -241,7 +241,7 @@ public class TransformerException : java.lang.Exception {
         return sbuffer.toString();
     }
 
-    /**
+     /*
      * Get the location information as a string.
      *
      * @return A string with location info, or null
@@ -276,7 +276,7 @@ public class TransformerException : java.lang.Exception {
         }
     }
 
-    /**
+     /*
      * Print the the trace of methods from where the error
      * originated.  This will trace all nested exception
      * objects, as well as this object.
@@ -285,7 +285,7 @@ public class TransformerException : java.lang.Exception {
         printStackTrace(new java.io.PrintWriter(java.lang.SystemJ.err, true));
     }
 
-    /**
+     /*
      * Print the the trace of methods from where the error
      * originated.  This will trace all nested exception
      * objects, as well as this object.
@@ -295,7 +295,7 @@ public class TransformerException : java.lang.Exception {
         printStackTrace(new java.io.PrintWriter(s));
     }
 
-    /**
+     /*
      * Print the the trace of methods from where the error
      * originated.  This will trace all nested exception
      * objects, as well as this object.

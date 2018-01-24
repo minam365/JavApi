@@ -18,7 +18,7 @@ namespace org.apache.harmony.luni.util
 
     internal class BinarySearch {
 
-        /**
+         /*
          * Search the sorted characters in the string and return an exact index or
          * -1.
          * 
@@ -43,7 +43,7 @@ namespace org.apache.harmony.luni.util
             return -1;
         }
 
-        /**
+         /*
          * Search the sorted characters in the string and return the nearest index.
          * 
          * @param data

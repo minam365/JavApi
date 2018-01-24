@@ -23,7 +23,7 @@ using javax = biz.ritter.javapix;
 namespace biz.ritter.javapix.xml.namespacej
 {
 
-    /** 
+     /* 
      * &lt;p&gt;&lt;code&gt;QName&lt;/code&gt; represents a &lt;strong&gt;qualified name&lt;/strong&gt;
      * as defined in the XML specifications: &lt;a
      * href="http://www.w3.org/TR/xmlschema-2/#QName"&gt;XML Schema Part2:
@@ -64,7 +64,7 @@ namespace biz.ritter.javapix.xml.namespacej
     public class QName : java.io.Serializable
     {
 
-        /**
+         /*
          * &lt;p&gt;Stream Unique Identifier.&lt;/p&gt;
          * 
          * &lt;p&gt;To enable the compatibility &lt;code&gt;serialVersionUID&lt;/code&gt;
@@ -74,12 +74,12 @@ namespace biz.ritter.javapix.xml.namespacej
          */
         private static readonly long serialVersionUID;
 
-        /**
+         /*
          * &lt;p&gt;The original default Stream Unique Identifier.&lt;/p&gt;
          */
         private const long defaultSerialVersionUID = -9120448754896609940L;
 
-        /**
+         /*
          * &lt;p&gt;The compatibility Stream Unique Identifier that was introduced
          * with Java 5 SE SDK.&lt;/p&gt;
          */
@@ -97,28 +97,28 @@ namespace biz.ritter.javapix.xml.namespacej
             serialVersionUID = !"1.0".equals(compatPropValue) ? defaultSerialVersionUID : compatabilitySerialVersionUID;
         }
 
-        /**
+         /*
          * &lt;p&gt;Namespace URI of this &lt;code&gt;QName&lt;/code&gt;.&lt;/p&gt;
          */
         private readonly String namespaceURI;
 
-        /**
+         /*
          * &lt;p&gt;local part of this &lt;code&gt;QName&lt;/code&gt;.&lt;/p&gt;
          */
         private readonly String localPart;
 
-        /**
+         /*
          * &lt;p&gt;prefix of this &lt;code&gt;QName&lt;/code&gt;.&lt;/p&gt;
          */
         private String prefix;
 
-        /**
+         /*
          * &lt;p&gt;&lt;code&gt;String&lt;/code&gt; representation of this &lt;code&gt;QName&lt;/code&gt;.&lt;/p&gt;
          */
         [NonSerialized]
         private String qNameAsString;
 
-        /** 
+         /* 
          * &lt;p&gt;&lt;code&gt;QName&lt;/code&gt; constructor specifying the Namespace URI
          * and local part.&lt;/p&gt;
          *
@@ -161,7 +161,7 @@ namespace biz.ritter.javapix.xml.namespacej
         {
         }
 
-        /** 
+         /* 
          * &lt;p&gt;&lt;code&gt;QName&lt;/code&gt; constructor specifying the Namespace URI,
          * local part and prefix.&lt;/p&gt;
          *
@@ -226,7 +226,7 @@ namespace biz.ritter.javapix.xml.namespacej
             this.prefix = prefix;
         }
 
-        /** 
+         /* 
          * &lt;p&gt;&lt;code&gt;QName&lt;/code&gt; constructor specifying the local part.&lt;/p&gt;
          *
          * &lt;p&gt;If the local part is &lt;code&gt;null&lt;/code&gt; an
@@ -269,7 +269,7 @@ namespace biz.ritter.javapix.xml.namespacej
         {
         }
 
-        /** 
+         /* 
          * &lt;p&gt;Get the Namespace URI of this &lt;code&gt;QName&lt;/code&gt;.&lt;/p&gt;
          *
          * @return Namespace URI of this &lt;code&gt;QName&lt;/code&gt;
@@ -279,7 +279,7 @@ namespace biz.ritter.javapix.xml.namespacej
             return namespaceURI;
         }
 
-        /**
+         /*
          * &lt;p&gt;Get the local part of this &lt;code&gt;QName&lt;/code&gt;.&lt;/p&gt;
          *
          *  @return local part of this &lt;code&gt;QName&lt;/code&gt;
@@ -289,7 +289,7 @@ namespace biz.ritter.javapix.xml.namespacej
             return localPart;
         }
 
-        /** 
+         /* 
          * &lt;p&gt;Get the prefix of this &lt;code&gt;QName&lt;/code&gt;.&lt;/p&gt;
          *
          * &lt;p&gt;The prefix assigned to a &lt;code&gt;QName&lt;/code&gt; might
@@ -305,7 +305,7 @@ namespace biz.ritter.javapix.xml.namespacej
             return prefix;
         }
 
-        /**
+         /*
          * &lt;p&gt;Test this &lt;code&gt;QName&lt;/code&gt; for equality with another
          * &lt;code&gt;Object&lt;/code&gt;.&lt;/p&gt;
          *
@@ -343,7 +343,7 @@ namespace biz.ritter.javapix.xml.namespacej
             return false;
         }
 
-        /**
+         /*
          * &lt;p&gt;Generate the hash code for this &lt;code&gt;QName&lt;/code&gt;.&lt;/p&gt;
          *
          * &lt;p&gt;The hash code is calculated using both the Namespace URI and
@@ -361,7 +361,7 @@ namespace biz.ritter.javapix.xml.namespacej
             return namespaceURI.GetHashCode() ^ localPart.GetHashCode();
         }
 
-        /** 
+         /* 
          * &lt;p&gt;&lt;code&gt;String&lt;/code&gt; representation of this
          * &lt;code&gt;QName&lt;/code&gt;.&lt;/p&gt;
          *
@@ -407,7 +407,7 @@ namespace biz.ritter.javapix.xml.namespacej
             return _qNameAsString;
         }
 
-        /** 
+         /* 
          * &lt;p&gt;&lt;code&gt;QName&lt;/code&gt; derived from parsing the formatted
          * &lt;code&gt;String&lt;/code&gt;.&lt;/p&gt;
          *

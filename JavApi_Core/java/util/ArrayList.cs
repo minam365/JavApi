@@ -38,7 +38,7 @@ namespace biz.ritter.javapi.util
         [NonSerialized]
         private E[] array;
 
-        /**
+         /*
          * Constructs a new instance of {@code ArrayList} with ten capacity.
          */
         public ArrayList() : base (){

@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.io
 {
 
-    /**
+     /*
      * Signals that an incorrectly encoded UTF-8 string has been encountered, most
      * likely while reading some {@link DataInputStream}.
      * 
@@ -29,14 +29,14 @@ namespace biz.ritter.javapi.io
 
         private static readonly long serialVersionUID = 420743449228280612L;
 
-        /**
+         /*
          * Constructs a new {@code UTFDataFormatException} with its stack trace
          * filled in.
          */
         public UTFDataFormatException() :base(){
         }
 
-        /**
+         /*
          * Constructs a new {@code UTFDataFormatException} with its stack trace and
          * detail message filled in.
          * 

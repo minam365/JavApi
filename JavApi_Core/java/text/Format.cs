@@ -19,7 +19,7 @@ namespace biz.ritter.javapi.text
 {
 
 
-    /**
+     /*
      * The base class for all formats.
      * <p>
      * This is an abstract base class which specifies the protocol for classes which
@@ -59,13 +59,13 @@ namespace biz.ritter.javapi.text
 
         private static readonly long serialVersionUID = -299282585814624189L;
 
-        /**
+         /*
          * Constructs a new {@code Format} instance.
          */
         public Format() {
         }
 
-        /**
+         /*
          * Returns a copy of this {@code Format} instance.
          * 
          * @return a shallow copy of this format.
@@ -112,7 +112,7 @@ namespace biz.ritter.javapi.text
             return output.toString();
         }
 
-        /**
+         /*
          * Formats the specified object using the rules of this format.
          * 
          * @param object
@@ -125,7 +125,7 @@ namespace biz.ritter.javapi.text
             return format(obj, new java.lang.StringBuffer(), new FieldPosition(0)) .toString();
         }
 
-        /**
+         /*
          * Appends the specified object to the specified string buffer using the
          * rules of this format.
          * <p>
@@ -147,7 +147,7 @@ namespace biz.ritter.javapi.text
          */
         public abstract java.lang.StringBuffer format(Object obj, java.lang.StringBuffer buffer, FieldPosition field);
 
-        /**
+         /*
          * Formats the specified object using the rules of this format and returns
          * an {@code AttributedCharacterIterator} with the formatted string and no
          * attributes.
@@ -166,7 +166,7 @@ namespace biz.ritter.javapi.text
             return new AttributedString(format(obj)).getIterator();
         }
 
-        /**
+         /*
          * Parses the specified string using the rules of this format.
          * 
          * @param string
@@ -185,7 +185,7 @@ namespace biz.ritter.javapi.text
             return result;
         }
 
-        /**
+         /*
          * Parses the specified string starting at the index specified by
          * {@code position}. If the string is successfully parsed then the index of
          * the {@code ParsePosition} is updated to the index following the parsed
@@ -285,7 +285,7 @@ namespace biz.ritter.javapi.text
     }
 #region IAC_Field
     namespace FormatNS {
-    /**
+     /*
     * Inner class used to represent {@code Format} attributes in the
     * {@code AttributedCharacterIterator} that the
     * {@code formatToCharacterIterator()} method returns in {@code Format}
@@ -296,7 +296,7 @@ namespace biz.ritter.javapi.text
 
         private static readonly long serialVersionUID = 276966692217360283L;
 
-        /**
+         /*
             * Constructs a new instance of {@code Field} with the given field name.
             *
             * @param fieldName

@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.nio
 {
 
-    /**
+     /*
      * A buffer is a list of elements of a specific primitive type.
      * <p>
      * A buffer can be described by the following properties:
@@ -49,7 +49,7 @@ namespace biz.ritter.javapi.nio
     public abstract class Buffer
     {
 
-        /**
+         /*
          * <code>UNSET_MARK</code> means the mark has not been set.
          */
         public readonly static int UNSET_MARK = -1;
@@ -59,13 +59,13 @@ namespace biz.ritter.javapi.nio
         /// </summary>
         protected internal readonly int capacityJ;
 
-        /**
+         /*
          * <code>limit - 1</code> is the last element that can be read or written.
          * Limit must be no less than zero and no greater than <code>capacity</code>.
          */
         protected internal int limitJ;
 
-        /**
+         /*
          * Mark is where position will be set when <code>reset()</code> is called.
          * Mark is not set by default. Mark is always no less than zero and no
          * greater than <code>position</code>.
@@ -78,7 +78,7 @@ namespace biz.ritter.javapi.nio
         /// </summary>
         protected internal int positionJ = 0;
 
-        /**
+         /*
          * Construct a buffer with the specified capacity.
          * 
          * @param capacity
@@ -93,7 +93,7 @@ namespace biz.ritter.javapi.nio
         }
 
     
-        /**
+         /*
          * Answers the array that backs this buffer.
          * 
          * It wants to allow array-backed buffers to be passed to native code more
@@ -117,7 +117,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract Object array();
     
-        /**
+         /*
          * Returns the offset within this buffer's backing array of the first
          * element of the buffer (optional operation).
          * 
@@ -139,7 +139,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract int arrayOffset();
 
-        /**
+         /*
          * Returns the capacity of this buffer.
          * 
          * @return the number of elements that are contained in this buffer.
@@ -148,7 +148,7 @@ namespace biz.ritter.javapi.nio
             return this.capacityJ;
         }
 
-        /**
+         /*
          * Clears this buffer.
          * <p>
          * While the content of this buffer is not changed, the following internal
@@ -165,7 +165,7 @@ namespace biz.ritter.javapi.nio
             return this;
         }
 
-        /**
+         /*
          * Flips this buffer.
          * <p>
          * The limit is set to the current position, then the position is set to
@@ -184,7 +184,7 @@ namespace biz.ritter.javapi.nio
 
 
     
-        /**
+         /*
          * Answers if this buffer is backed by an available array.
          * 
          * If it returns true then the <code>array</code> and
@@ -197,7 +197,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract bool hasArray();
 
-        /**
+         /*
          * Indicates if there are elements remaining in this buffer, that is if
          * {@code position < limit}.
          * 
@@ -208,7 +208,7 @@ namespace biz.ritter.javapi.nio
             return positionJ < limitJ;
         }
     
-        /**
+         /*
          * Answers if this buffer is direct.
          * 
          * @return true if and only if this buffer is direct
@@ -217,7 +217,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract bool isDirect();
 
-        /**
+         /*
          * Indicates whether this buffer is read-only.
          * 
          * @return {@code true} if this buffer is read-only, {@code false}
@@ -225,7 +225,7 @@ namespace biz.ritter.javapi.nio
          */
         public abstract bool isReadOnly();
 
-        /**
+         /*
          * Returns the limit of this buffer.
          * 
          * @return the limit of this buffer.
@@ -234,7 +234,7 @@ namespace biz.ritter.javapi.nio
             return limitJ;
         }
 
-        /**
+         /*
          * Sets the limit of this buffer.
          * <p>
          * If the current position in the buffer is in excess of
@@ -264,7 +264,7 @@ namespace biz.ritter.javapi.nio
             return this;
         }
 
-        /**
+         /*
          * Marks the current position, so that the position may return to this point
          * later by calling <code>reset()</code>.
          * 
@@ -275,7 +275,7 @@ namespace biz.ritter.javapi.nio
             return this;
         }
 
-        /**
+         /*
          * Returns the position of this buffer.
          * 
          * @return the value of this buffer's current position.
@@ -284,7 +284,7 @@ namespace biz.ritter.javapi.nio
             return positionJ;
         }
 
-        /**
+         /*
          * Sets the position of this buffer.
          * <p>
          * If the mark is set and it is greater than the new position, then it is
@@ -318,7 +318,7 @@ namespace biz.ritter.javapi.nio
             return limitJ - positionJ;
         }
 
-        /**
+         /*
          * Resets the position of this buffer to the <code>mark</code>.
          * 
          * @return this buffer.
@@ -333,7 +333,7 @@ namespace biz.ritter.javapi.nio
             return this;
         }
 
-        /**
+         /*
          * Rewinds this buffer.
          * <p>
          * The position is set to zero, and the mark is cleared. The content of this

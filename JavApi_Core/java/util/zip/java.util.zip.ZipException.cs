@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util.zip
 {
-    /**
+     /*
      * This runtime exception is thrown by {@code ZipFile} and {@code
      * ZipInputStream} when the file or stream is not a valid ZIP file.
      *
@@ -30,13 +30,13 @@ namespace biz.ritter.javapi.util.zip
 
         private static readonly long serialVersionUID = 8000196834066748623L;
 
-        /**
+         /*
          * Constructs a new {@code ZipException} instance.
          */
         public ZipException() : base(){
         }
 
-        /**
+         /*
          * Constructs a new {@code ZipException} instance with the specified
          * message.
          *

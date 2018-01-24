@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.security
 {
 
-    /**
+     /*
      * {@code NoSuchAlgorithmException} indicates that a requested algorithm could
      * not be found.
      */
@@ -27,7 +27,7 @@ namespace biz.ritter.javapi.security
 
         private static readonly long serialVersionUID = -7443947487218346562L;
 
-        /**
+         /*
          * Constructs a new instance of {@code NoSuchAlgorithmException} with the
          * given message.
          *
@@ -39,14 +39,14 @@ namespace biz.ritter.javapi.security
         {
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code NoSuchAlgorithmException}.
          */
         public NoSuchAlgorithmException()
         {
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code NoSuchAlgorithmException} with the
          * given message and the cause.
          *
@@ -60,7 +60,7 @@ namespace biz.ritter.javapi.security
         {
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code NoSuchAlgorithmException} with the
          * cause.
          *

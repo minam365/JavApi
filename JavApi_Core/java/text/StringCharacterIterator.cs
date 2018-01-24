@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.text
 {
 
-    /**
+     /*
      * An implementation of {@link CharacterIterator} for strings.
      */
     public sealed class StringCharacterIterator : CharacterIterator
@@ -28,7 +28,7 @@ namespace biz.ritter.javapi.text
 
         int start, end, offset;
 
-        /**
+         /*
          * Constructs a new {@code StringCharacterIterator} on the specified string.
          * The begin and current indices are set to the beginning of the string, the
          * end index is set to the length of the string.
@@ -43,7 +43,7 @@ namespace biz.ritter.javapi.text
             end = stringJ.length();
         }
 
-        /**
+         /*
          * Constructs a new {@code StringCharacterIterator} on the specified string
          * with the current index set to the specified value. The begin index is set
          * to the beginning of the string, the end index is set to the length of the
@@ -69,7 +69,7 @@ namespace biz.ritter.javapi.text
             offset = location;
         }
 
-        /**
+         /*
          * Constructs a new {@code StringCharacterIterator} on the specified string
          * with the begin, end and current index set to the specified values.
          * 
@@ -100,7 +100,7 @@ namespace biz.ritter.javapi.text
             offset = location;
         }
 
-        /**
+         /*
          * Returns a new {@code StringCharacterIterator} with the same source
          * string, begin, end, and current index as this iterator.
          * 
@@ -120,7 +120,7 @@ namespace biz.ritter.javapi.text
             }
         }
 
-        /**
+         /*
          * Returns the character at the current index in the source string.
          * 
          * @return the current character, or {@code CharacterIteratorConstants.DONE} if the current index is
@@ -135,7 +135,7 @@ namespace biz.ritter.javapi.text
             return stringJ.charAt(offset);
         }
 
-        /**
+         /*
          * Compares the specified object with this {@code StringCharacterIterator}
          * and indicates if they are equal. In order to be equal, {@code object}
          * must be an instance of {@code StringCharacterIterator} that iterates over
@@ -159,7 +159,7 @@ namespace biz.ritter.javapi.text
                     && offset == it.offset;
         }
 
-        /**
+         /*
          * Sets the current position to the begin index and returns the character at
          * the new position in the source string.
          * 
@@ -176,7 +176,7 @@ namespace biz.ritter.javapi.text
             return stringJ.charAt(offset);
         }
 
-        /**
+         /*
          * Returns the begin index in the source string.
          * 
          * @return the index of the first character of the iteration.
@@ -186,7 +186,7 @@ namespace biz.ritter.javapi.text
             return start;
         }
 
-        /**
+         /*
          * Returns the end index in the source string.
          * 
          * @return the index one past the last character of the iteration.
@@ -196,7 +196,7 @@ namespace biz.ritter.javapi.text
             return end;
         }
 
-        /**
+         /*
          * Returns the current index in the source string.
          * 
          * @return the current index.
@@ -212,7 +212,7 @@ namespace biz.ritter.javapi.text
             return stringJ.GetHashCode() + start + end + offset;
         }
 
-        /**
+         /*
          * Sets the current position to the end index - 1 and returns the character
          * at the new position.
          * 
@@ -229,7 +229,7 @@ namespace biz.ritter.javapi.text
             return stringJ.charAt(offset);
         }
 
-        /**
+         /*
          * Increments the current index and returns the character at the new index.
          *
          * @return the character at the next index, or {@code CharacterIteratorConstants.DONE} if the next
@@ -245,7 +245,7 @@ namespace biz.ritter.javapi.text
             return stringJ.charAt(++offset);
         }
 
-        /**
+         /*
          * Decrements the current index and returns the character at the new index.
          * 
          * @return the character at the previous index, or {@code CharacterIteratorConstants.DONE} if the
@@ -260,7 +260,7 @@ namespace biz.ritter.javapi.text
             return stringJ.charAt(--offset);
         }
 
-        /**
+         /*
          * Sets the current index in the source string.
          * 
          * @param location
@@ -285,7 +285,7 @@ namespace biz.ritter.javapi.text
             return stringJ.charAt(offset);
         }
 
-        /**
+         /*
          * Sets the source string to iterate over. The begin and end positions are
          * set to the start and end of this string.
          * 

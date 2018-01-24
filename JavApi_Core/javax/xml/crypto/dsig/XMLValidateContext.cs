@@ -22,7 +22,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapix.xml.crypto.dsig
 {
 
-/**
+ /*
  * Contains context information for validating XML Signatures. This interface
  * is primarily intended for type-safety.
  *

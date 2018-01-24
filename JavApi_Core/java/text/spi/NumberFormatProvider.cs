@@ -18,14 +18,14 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.text.spi
 {
 
-    /**
+     /*
      * This abstract class should be extended by service provider which provides
      * instances of <code>NumberFormat</code> class.
      */
     public abstract class NumberFormatProvider : java.util.spi.LocaleServiceProvider
     {
 
-        /**
+         /*
          * The constructor
          * 
          */
@@ -34,7 +34,7 @@ namespace biz.ritter.javapi.text.spi
             // Do nothing.
         }
 
-        /**
+         /*
          * Get an instance of <code>NumberFormat</code> class which formats
          * monetary values for the given locale.
          * 
@@ -49,7 +49,7 @@ namespace biz.ritter.javapi.text.spi
          */
         public abstract NumberFormat getCurrencyInstance(java.util.Locale locale);
 
-        /**
+         /*
          * Get an instance of <code>NumberFormat</code> class which formats
          * integer values for the given locale. The returned number format instance
          * is configured to round floating point numbers to the nearest integer
@@ -67,7 +67,7 @@ namespace biz.ritter.javapi.text.spi
          */
         public abstract NumberFormat getIntegerInstance(java.util.Locale locale);
 
-        /**
+         /*
          * Get an instance of <code>NumberFormat</code> class which is for general
          * use for the given locale.
          * 
@@ -82,7 +82,7 @@ namespace biz.ritter.javapi.text.spi
          */
         public abstract NumberFormat getNumberInstance(java.util.Locale locale);
 
-        /**
+         /*
          * Get an instance of <code>NumberFormat</code> class which formats
          * percentage values for the given locale.
          * 

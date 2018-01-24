@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang
 {
-    /**
+     /*
      * Thrown when a program attempts to access a field or method which is not
      * accessible from the location where the reference is made.
      */
@@ -25,14 +25,14 @@ namespace biz.ritter.javapi.lang
     public class IllegalAccessException : Exception {
 
         private static readonly long serialVersionUID = 6616958222490762034L;
-        /**
+         /*
          * Constructs a new {@code IllegalAccessException} that includes the current
          * stack trace.
          */
         public IllegalAccessException() :base(){
         }
 
-        /**
+         /*
          * Constructs a new {@code IllegalAccessException} with the current stack
          * trace and the specified detail message.
          * 

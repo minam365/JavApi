@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.nio.charset
 {
 
-    /**
+     /*
      * A converter that can convert a byte sequence from a charset into a 16-bit
      * Unicode character sequence.
      * <p>
@@ -113,7 +113,7 @@ namespace biz.ritter.javapi.nio.charset
         // the current status
         private int status;
 
-        /**
+         /*
          * Constructs a new <code>CharsetDecoder</code> using the given
          * <code>Charset</code>, average number and maximum number of characters
          * created by this decoder for one input byte, and the default replacement
@@ -150,7 +150,7 @@ namespace biz.ritter.javapi.nio.charset
             replace = "\ufffd"; //$NON-NLS-1$
         }
 
-        /**
+         /*
          * Gets the average number of characters created by this decoder for a
          * single input byte.
          * 
@@ -161,7 +161,7 @@ namespace biz.ritter.javapi.nio.charset
             return averChars;
         }
 
-        /**
+         /*
          * Gets the <code>Charset</code> which this decoder uses.
          * 
          * @return the <code>Charset</code> which this decoder uses.
@@ -170,7 +170,7 @@ namespace biz.ritter.javapi.nio.charset
             return cs;
         }
 
-        /**
+         /*
          * This is a facade method for the decoding operation.
          * <p>
          * This method decodes the remaining byte sequence of the given byte buffer
@@ -264,7 +264,7 @@ namespace biz.ritter.javapi.nio.charset
             return result;
         }
 
-        /**
+         /*
          * Decodes bytes starting at the current position of the given input buffer,
          * and writes the equivalent character sequence into the given output buffer
          * from its current position.
@@ -386,7 +386,7 @@ namespace biz.ritter.javapi.nio.charset
             }
         }
 
-        /**
+         /*
          * Decodes bytes into characters. This method is called by the
          * {@link #decode(ByteBuffer, CharBuffer, boolean) decode} method.
          * <p>
@@ -420,7 +420,7 @@ namespace biz.ritter.javapi.nio.charset
          */
         protected abstract CoderResult decodeLoop(ByteBuffer inJ, CharBuffer outJ);
 
-        /**
+         /*
          * Gets the charset detected by this decoder; this method is optional.
          * <p>
          * If implementing an auto-detecting charset, then this decoder returns the
@@ -446,7 +446,7 @@ namespace biz.ritter.javapi.nio.charset
             throw new java.lang.UnsupportedOperationException();
         }
 
-        /**
+         /*
          * Flushes this decoder.
          * 
          * This method will call {@link #implFlush(CharBuffer) implFlush}. Some
@@ -489,7 +489,7 @@ namespace biz.ritter.javapi.nio.charset
             return result;
         }
 
-        /**
+         /*
          * Flushes this decoder. The default implementation does nothing and always
          * returns <code>CoderResult.UNDERFLOW</code>; this method can be
          * overridden if needed.
@@ -503,7 +503,7 @@ namespace biz.ritter.javapi.nio.charset
             return CoderResult.UNDERFLOW;
         }
 
-        /**
+         /*
          * Notifies that this decoder's <code>CodingErrorAction</code> specified
          * for malformed input error has been changed. The default implementation
          * does nothing; this method can be overridden if needed.
@@ -515,7 +515,7 @@ namespace biz.ritter.javapi.nio.charset
             // default implementation is empty
         }
 
-        /**
+         /*
          * Notifies that this decoder's <code>CodingErrorAction</code> specified
          * for unmappable character error has been changed. The default
          * implementation does nothing; this method can be overridden if needed.
@@ -527,7 +527,7 @@ namespace biz.ritter.javapi.nio.charset
             // default implementation is empty
         }
 
-        /**
+         /*
          * Notifies that this decoder's replacement has been changed. The default
          * implementation does nothing; this method can be overridden if needed.
          * 
@@ -538,7 +538,7 @@ namespace biz.ritter.javapi.nio.charset
             // default implementation is empty
         }
 
-        /**
+         /*
          * Reset this decoder's charset related state. The default implementation
          * does nothing; this method can be overridden if needed.
          */
@@ -546,7 +546,7 @@ namespace biz.ritter.javapi.nio.charset
             // default implementation is empty
         }
 
-        /**
+         /*
          * Indicates whether this decoder implements an auto-detecting charset.
          * 
          * @return <code>true</code> if this decoder implements an auto-detecting
@@ -556,7 +556,7 @@ namespace biz.ritter.javapi.nio.charset
             return false;
         }
 
-        /**
+         /*
          * Indicates whether this decoder has detected a charset; this method is
          * optional.
          * <p>
@@ -584,7 +584,7 @@ namespace biz.ritter.javapi.nio.charset
             throw new java.lang.UnsupportedOperationException();
         }
 
-        /**
+         /*
          * Gets this decoder's <code>CodingErrorAction</code> when malformed input
          * occurred during the decoding process.
          * 
@@ -595,7 +595,7 @@ namespace biz.ritter.javapi.nio.charset
             return malformAction;
         }
 
-        /**
+         /*
          * Gets the maximum number of characters which can be created by this
          * decoder for one input byte, must be positive.
          * 
@@ -606,7 +606,7 @@ namespace biz.ritter.javapi.nio.charset
             return maxChars;
         }
 
-        /**
+         /*
          * Sets this decoder's action on malformed input errors.
          * 
          * This method will call the
@@ -628,7 +628,7 @@ namespace biz.ritter.javapi.nio.charset
             return this;
         }
 
-        /**
+         /*
          * Sets this decoder's action on unmappable character errors.
          * 
          * This method will call the
@@ -651,7 +651,7 @@ namespace biz.ritter.javapi.nio.charset
             return this;
         }
 
-        /**
+         /*
          * Gets the replacement string, which is never null or empty.
          * 
          * @return the replacement string, cannot be null or empty.
@@ -660,7 +660,7 @@ namespace biz.ritter.javapi.nio.charset
             return replace;
         }
 
-        /**
+         /*
          * Sets the new replacement string.
          * 
          * This method first checks the given replacement's validity, then changes
@@ -691,7 +691,7 @@ namespace biz.ritter.javapi.nio.charset
             return this;
         }
 
-        /**
+         /*
          * Resets this decoder. This method will reset the internal status, and then
          * calls <code>implReset()</code> to reset any status related to the
          * specific charset.
@@ -704,7 +704,7 @@ namespace biz.ritter.javapi.nio.charset
             return this;
         }
 
-        /**
+         /*
          * Gets this decoder's <code>CodingErrorAction</code> when an unmappable
          * character error occurred during the decoding process.
          * 

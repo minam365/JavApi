@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.security
 {
 
-    /**
+     /*
      * {@code GeneralSecurityException} is a general security exception and the
      * baseclass for all security specific exceptions.
      */
@@ -26,7 +26,7 @@ namespace biz.ritter.javapi.security
 
         private static readonly long serialVersionUID = 894798122053539237L;
 
-        /**
+         /*
          * Constructs a new instance of {@code GeneralSecurityException} with the
          * given message.
          *
@@ -38,14 +38,14 @@ namespace biz.ritter.javapi.security
         {
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code GeneralSecurityException}.
          */
         public GeneralSecurityException()
         {
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code GeneralSecurityException} with the
          * given message and the cause.
          *
@@ -59,7 +59,7 @@ namespace biz.ritter.javapi.security
         {
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code GeneralSecurityException} with the
          * cause.
          *

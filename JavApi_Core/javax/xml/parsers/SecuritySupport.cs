@@ -22,7 +22,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapix.xml.parsers
 {
-	/**
+	 /*
  * This class is duplicated for each JAXP subpackage so keep it in sync.
  * It is package private and therefore is not exposed as part of the JAXP
  * API.

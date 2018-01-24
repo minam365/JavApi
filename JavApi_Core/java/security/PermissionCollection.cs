@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.security
 {
 
-    /**
+     /*
      * {@code PermissionCollection} is the common base class for all collections
      * that provide a convenient method for determining whether or not a given
      * permission is implied by any of the permissions present in this collection.
@@ -38,7 +38,7 @@ namespace biz.ritter.javapi.security
 
         private bool readOnly; // = false;
 
-        /**
+         /*
          * Adds the specified {@code Permission} to this collection.
          * 
          * @param permission
@@ -48,7 +48,7 @@ namespace biz.ritter.javapi.security
          */
         public abstract void add(Permission permission);
 
-        /**
+         /*
          * Returns an enumeration over all {@link Permission}s encapsulated by this
          * {@code PermissionCollection}.
          * 
@@ -56,7 +56,7 @@ namespace biz.ritter.javapi.security
          */
         public abstract java.util.Enumeration<Permission> elements();
 
-        /**
+         /*
          * Indicates whether the specified permission is implied by this {@code
          * PermissionCollection}.
          * 
@@ -67,7 +67,7 @@ namespace biz.ritter.javapi.security
          */
         public abstract bool implies(Permission permission);
 
-        /**
+         /*
          * Indicates whether new permissions can be added to this {@code
          * PermissionCollection}.
          * 
@@ -79,7 +79,7 @@ namespace biz.ritter.javapi.security
             return readOnly;
         }
 
-        /**
+         /*
          * Marks this {@code PermissionCollection} as read only, so that no new
          * permissions can be added to it.
          */
@@ -88,7 +88,7 @@ namespace biz.ritter.javapi.security
             readOnly = true;
         }
 
-        /**
+         /*
          * Returns a string containing a concise, human-readable description of this
          * {@code PermissionCollection}.
          * 

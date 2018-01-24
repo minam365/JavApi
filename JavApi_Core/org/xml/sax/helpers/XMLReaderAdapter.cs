@@ -10,7 +10,7 @@ using java = biz.ritter.javapi;
 namespace org.xml.sax.helpers
 {
 
-    /**
+     /*
      * Adapt a SAX2 XMLReader as a SAX1 Parser.
      *
      * <blockquote>
@@ -43,7 +43,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Create a new adapter.
          *
          * <p>Use the "org.xml.sax.driver" property to locate the SAX2
@@ -60,7 +60,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Create a new adapter.
          *
          * <p>Create a new adapter, wrapped around a SAX2 XMLReader.
@@ -77,7 +77,7 @@ namespace org.xml.sax.helpers
 
 
 
-        /**
+         /*
          * Internal setup.
          *
          * @param xmlReader The embedded XMLReader.
@@ -99,7 +99,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Set the locale for error reporting.
          *
          * <p>This is not supported in SAX2, and will always throw
@@ -116,7 +116,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Register the entity resolver.
          *
          * @param resolver The new resolver.
@@ -128,7 +128,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Register the DTD event handler.
          *
          * @param handler The new DTD event handler.
@@ -140,7 +140,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Register the SAX1 document event handler.
          *
          * <p>Note that the SAX1 document handler has no Namespace
@@ -155,7 +155,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Register the error event handler.
          *
          * @param handler The new error event handler.
@@ -167,7 +167,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Parse the document.
          *
          * <p>This method will throw an exception if the embedded
@@ -189,7 +189,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Parse the document.
          *
          * <p>This method will throw an exception if the embedded
@@ -212,7 +212,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Set up the XML reader.
          */
         private void setupXMLReader()
@@ -238,7 +238,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Set a document locator.
          *
          * @param locator The document locator.
@@ -251,7 +251,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Start document event.
          *
          * @exception org.xml.sax.SAXException The client may raise a
@@ -266,7 +266,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * End document event.
          *
          * @exception org.xml.sax.SAXException The client may raise a
@@ -281,7 +281,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Adapt a SAX2 start prefix mapping event.
          *
          * @param prefix The prefix being mapped.
@@ -293,7 +293,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Adapt a SAX2 end prefix mapping event.
          *
          * @param prefix The prefix being mapped.
@@ -304,7 +304,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Adapt a SAX2 start element event.
          *
          * @param uri The Namespace URI.
@@ -327,7 +327,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Adapt a SAX2 end element event.
          *
          * @param uri The Namespace URI.
@@ -346,7 +346,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Adapt a SAX2 characters event.
          *
          * @param ch An array of characters.
@@ -364,7 +364,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Adapt a SAX2 ignorable whitespace event.
          *
          * @param ch An array of characters.
@@ -382,7 +382,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Adapt a SAX2 processing instruction event.
          *
          * @param target The processing instruction target.
@@ -399,7 +399,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Adapt a SAX2 skipped entity event.
          *
          * @param name The name of the skipped entity.
@@ -428,7 +428,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Internal class to wrap a SAX2 Attributes object for SAX1.
          */
         sealed class AttributesAdapter : AttributeList
@@ -438,7 +438,7 @@ namespace org.xml.sax.helpers
             }
 
 
-            /**
+             /*
              * Set the embedded Attributes object.
              *
              * @param The embedded SAX2 Attributes.
@@ -449,7 +449,7 @@ namespace org.xml.sax.helpers
             }
 
 
-            /**
+             /*
              * Return the number of attributes.
              *
              * @return The length of the attribute list.
@@ -461,7 +461,7 @@ namespace org.xml.sax.helpers
             }
 
 
-            /**
+             /*
              * Return the qualified (prefixed) name of an attribute by position.
              *
              * @return The qualified name.
@@ -473,7 +473,7 @@ namespace org.xml.sax.helpers
             }
 
 
-            /**
+             /*
              * Return the type of an attribute by position.
              *
              * @return The type.
@@ -485,7 +485,7 @@ namespace org.xml.sax.helpers
             }
 
 
-            /**
+             /*
              * Return the value of an attribute by position.
              *
              * @return The value.
@@ -497,7 +497,7 @@ namespace org.xml.sax.helpers
             }
 
 
-            /**
+             /*
              * Return the type of an attribute by qualified (prefixed) name.
              *
              * @return The type.
@@ -509,7 +509,7 @@ namespace org.xml.sax.helpers
             }
 
 
-            /**
+             /*
              * Return the value of an attribute by qualified (prefixed) name.
              *
              * @return The value.

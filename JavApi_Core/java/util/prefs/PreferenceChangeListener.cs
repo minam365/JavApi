@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.prefs
 {
 
-    /**
+     /*
      * This interface is used to handle preferences change events. The
      * implementation of this interface can be installed by the {@code Preferences}
      * instance.
@@ -31,7 +31,7 @@ namespace biz.ritter.javapi.util.prefs
     public interface PreferenceChangeListener : EventListener
     {
 
-        /**
+         /*
          * This method gets invoked whenever a preference is added, deleted or
          * updated.
          * 

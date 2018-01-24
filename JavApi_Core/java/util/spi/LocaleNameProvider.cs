@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.spi
 {
 
-    /**
+     /*
      * LocaleNameProvider is an abstract class to get localized names from service
      * providers.
      * 
@@ -28,7 +28,7 @@ namespace biz.ritter.javapi.util.spi
     public abstract class LocaleNameProvider : LocaleServiceProvider
     {
 
-        /**
+         /*
          * The constructor
          * 
          */
@@ -37,7 +37,7 @@ namespace biz.ritter.javapi.util.spi
             // do nothing
         }
 
-        /**
+         /*
          * Gets the localized name for the specified language code in "ISO 639" and
          * the specified locale to display.
          * 
@@ -53,7 +53,7 @@ namespace biz.ritter.javapi.util.spi
          */
         public abstract String getDisplayLanguage(String code, Locale locale);
 
-        /**
+         /*
          * Gets the localized name for the specified country code in "ISO 3166" and
          * the specified locale to display.
          * 
@@ -69,7 +69,7 @@ namespace biz.ritter.javapi.util.spi
          */
         public abstract String getDisplayCountry(String code, Locale locale);
 
-        /**
+         /*
          * Gets the localized name for the specified variant code and the specified
          * locale to display.
          * 

@@ -7,7 +7,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.awt.geom
 {
-/**
+ /*
  * @author Denis M. Kishenko
  */
 
@@ -177,37 +177,37 @@ public abstract class Line2D : Shape, java.lang.Cloneable {
      */
     class Iterator : PathIterator {
 
-        /**
+         /*
          * The x coordinate of the start line point
          */
         double x1;
         
-        /**
+         /*
          * The y coordinate of the start line point
          */
         double y1;
         
-        /**
+         /*
          * The x coordinate of the end line point
          */
         double x2;
         
-        /**
+         /*
          * The y coordinate of the end line point
          */
         double y2;
 
-        /**
+         /*
          * The path iterator transformation
          */
         AffineTransform t;
 
-        /**
+         /*
          * The current segmenet index
          */
         int index;
 
-        /**
+         /*
          * Constructs a new Line2D.Iterator for given line and transformation
          * @param l - the source Line2D object
          * @param at - the AffineTransform object to apply rectangle path

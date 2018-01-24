@@ -19,19 +19,19 @@ namespace biz.ritter.javapi.util.zip
 {
     public class InflaterInputStream : java.io.FilterInputStream {
 
-        /**
+         /*
          * The inflater used for this stream.
          */
         protected Inflater inf;
 
-        /**
+         /*
          * The input buffer used for decompression.
          */
         protected byte[] buf;
 
         internal const int BUF_SIZE = 512;
 
-        /**
+         /*
          * This is the most basic constructor. You only need to pass the {@code
          * InputStream} from which the compressed data is to be read from. Default
          * settings for the {@code Inflater} and internal buffer are be used. In
@@ -43,7 +43,7 @@ namespace biz.ritter.javapi.util.zip
         public InflaterInputStream(java.io.InputStream isJ) :this(isJ, new Inflater(), BUF_SIZE){
         }
 
-        /**
+         /*
          * This constructor lets you pass a specifically initialized Inflater,
          * for example one that expects no ZLIB header.
          *
@@ -55,7 +55,7 @@ namespace biz.ritter.javapi.util.zip
         public InflaterInputStream(java.io.InputStream isJ, Inflater inf) :this(isJ, inf, BUF_SIZE){
         }
 
-        /**
+         /*
          * This constructor lets you specify both the {@code Inflater} as well as
          * the internal buffer size to be used.
          *
@@ -78,21 +78,21 @@ namespace biz.ritter.javapi.util.zip
         }
 
 
-        /**
+         /*
          * The length of the buffer.
          */
         protected int len;
 
         protected internal bool closed;
 
-        /**
+         /*
          * True if this stream's last byte has been returned to the user. This
          * could be because the underlying stream has been exhausted, or if errors
          * were encountered while inflating that stream.
          */
         protected internal bool eof;
 
-        /**
+         /*
          * Reads a single byte of decompressed data.
          *
          * @return the byte read.
@@ -108,7 +108,7 @@ namespace biz.ritter.javapi.util.zip
             return b[0] & 0xff;
         }
 
-        /**
+         /*
          * Reads up to {@code nbytes} of decompressed data and stores it in
          * {@code buffer} starting at {@code off}.
          *
@@ -182,7 +182,7 @@ namespace biz.ritter.javapi.util.zip
             } while (true);
         }
 
-        /**
+         /*
          * Fills the input buffer with data to be decompressed.
          *
          * @throws IOException
@@ -197,7 +197,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Skips up to n bytes of uncompressed data.
          *
          * @param nbytes
@@ -227,7 +227,7 @@ namespace biz.ritter.javapi.util.zip
             throw new java.lang.IllegalArgumentException();
         }
 
-        /**
+         /*
          * Returns 0 when this stream has exhausted its input; and 1 otherwise.
          * A result of 1 does not guarantee that further bytes can be returned,
          * with or without blocking.
@@ -255,7 +255,7 @@ namespace biz.ritter.javapi.util.zip
             return 1;
         }
 
-        /**
+         /*
          * Closes the input stream.
          *
          * @throws IOException
@@ -270,7 +270,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Marks the current position in the stream. This implementation overrides
          * the super type implementation to do nothing at all.
          *
@@ -281,7 +281,7 @@ namespace biz.ritter.javapi.util.zip
             // do nothing
         }
 
-        /**
+         /*
          * Reset the position of the stream to the last marked position. This
          * implementation overrides the supertype implementation and always throws
          * an {@link IOException IOException} when called.
@@ -293,7 +293,7 @@ namespace biz.ritter.javapi.util.zip
             throw new java.io.IOException();
         }
 
-        /**
+         /*
          * Returns whether the receiver implements {@code mark} semantics. This type
          * does not support {@code mark()}, so always responds {@code false}.
          *

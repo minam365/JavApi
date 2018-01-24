@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.spi
 {
 
-    /**
+     /*
      * CurrencyNameProvider is an abstract class to get localized currency symbols
      * from service providers.
      * 
@@ -28,7 +28,7 @@ namespace biz.ritter.javapi.util.spi
     public abstract class CurrencyNameProvider : LocaleServiceProvider
     {
 
-        /**
+         /*
          * The constructor
          * 
          */
@@ -37,7 +37,7 @@ namespace biz.ritter.javapi.util.spi
             // do nothing
         }
 
-        /**
+         /*
          * Returns the symbol for the specified currency
          * 
          * @param code

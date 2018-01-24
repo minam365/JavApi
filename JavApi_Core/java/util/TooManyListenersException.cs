@@ -22,7 +22,7 @@ using javax = biz.ritter.javapix;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * A {@code TooManyListenersException} is thrown when an attempt is made to add
      * more than one listener to an event source which only supports a single
      * listener. It is also thrown when the same listener is added more than once.
@@ -32,7 +32,7 @@ namespace biz.ritter.javapi.util
 
         private const long serialVersionUID = 5074640544770687831L;
 
-        /**
+         /*
          * Constructs a new {@code TooManyListenersException} with the current stack
          * trace filled in.
          */
@@ -41,7 +41,7 @@ namespace biz.ritter.javapi.util
         {
         }
 
-        /**
+         /*
          * Constructs a new {@code TooManyListenersException} with the stack trace
          * and message filled in.
          * 

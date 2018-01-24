@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util
 {
-    /**
+     /*
      * An {@code EmptyStackException} is thrown if the pop/peek method of a stack is
      * executed on an empty stack.
      *
@@ -28,7 +28,7 @@ namespace biz.ritter.javapi.util
 
         private static readonly long serialVersionUID = 5084686378493302095L;
 
-        /**
+         /*
          * Constructs a new {@code EmptyStackException} with the stack trace filled
          * in.
          */

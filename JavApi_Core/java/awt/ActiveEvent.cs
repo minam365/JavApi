@@ -13,7 +13,7 @@
  */
 namespace biz.ritter.javapi.awt
 {
-    /**
+     /*
      * @author Michael Danilov
      */
     public interface ActiveEvent

@@ -22,7 +22,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapix.xml.crypto
 {
 
-/**
+ /*
  * Indicates an exceptional condition thrown by a {@link KeySelector}.
  *
  * <p>A <code>KeySelectorException</code> can contain a cause: another 
@@ -36,7 +36,7 @@ public class KeySelectorException : java.lang.Exception {
 
     private const long serialVersionUID = -7480033639322531109L;
 
-    /**
+     /*
      * The throwable that caused this exception to get thrown, or 
      * <code>null</code> if this exception was not caused by another throwable 
      * or if the causative throwable is unknown. 
@@ -45,14 +45,14 @@ public class KeySelectorException : java.lang.Exception {
      */
     private java.lang.Throwable cause;
 
-    /**
+     /*
      * Constructs a new <code>KeySelectorException</code> with 
      * <code>null</code> as its detail message.
      */
     public KeySelectorException() :base(){
     }
 
-    /**
+     /*
      * Constructs a new <code>KeySelectorException</code> with the specified 
      * detail message. 
      *
@@ -62,7 +62,7 @@ public class KeySelectorException : java.lang.Exception {
         
     }
 
-    /**
+     /*
      * Constructs a new <code>KeySelectorException</code> with the 
      * specified detail message and cause.  
      * <p>Note that the detail message associated with
@@ -77,7 +77,7 @@ public class KeySelectorException : java.lang.Exception {
         this.cause = cause;
     }
 
-    /**
+     /*
      * Constructs a new <code>KeySelectorException</code> with the specified 
      * cause and a detail message of 
      * <code>(cause==null ? null : cause.toString())</code>
@@ -92,7 +92,7 @@ public class KeySelectorException : java.lang.Exception {
         this.cause = cause;
     }
 
-    /**
+     /*
      * Returns the cause of this <code>KeySelectorException</code> or 
      * <code>null</code> if the cause is nonexistent or unknown.  (The 
      * cause is the throwable that caused this 
@@ -105,7 +105,7 @@ public class KeySelectorException : java.lang.Exception {
         return cause;
     }
 
-    /**
+     /*
      * Prints this <code>KeySelectorException</code>, its backtrace and
      * the cause's backtrace to the standard error stream.
      */
@@ -116,7 +116,7 @@ public class KeySelectorException : java.lang.Exception {
         }
     }
 
-    /**
+     /*
      * Prints this <code>KeySelectorException</code>, its backtrace and
      * the cause's backtrace to the specified print stream.
      *
@@ -126,7 +126,7 @@ public class KeySelectorException : java.lang.Exception {
 			this.printStackTrace(new java.io.PrintWriter(s));
     }
 
-    /**
+     /*
      * Prints this <code>KeySelectorException</code>, its backtrace and
      * the cause's backtrace to the specified print writer.
      *

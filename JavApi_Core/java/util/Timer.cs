@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util
 {
-    /**
+     /*
      * {@code Timer}s are used to schedule jobs for execution in a background process. A
      * single thread is used for the scheduling and this thread has the option of
      * being a daemon thread. By calling {@code cancel} you can terminate a
@@ -70,7 +70,7 @@ namespace biz.ritter.javapi.util
         // Used to finalize thread
         private readonly FinalizerHelper finalizer;
     
-        /**
+         /*
             * Creates a new named {@code Timer} which may be specified to be run as a
             * daemon thread.
             *
@@ -88,7 +88,7 @@ namespace biz.ritter.javapi.util
             java.lang.Runtime.getRuntime().addShutdownHook(t);
         }
         
-        /**
+         /*
             * Creates a new named {@code Timer} which does not run as a daemon thread.
             *
             * @param name the name of the Timer.
@@ -98,7 +98,7 @@ namespace biz.ritter.javapi.util
             this(name, false){
         }
         
-        /**
+         /*
             * Creates a new {@code Timer} which may be specified to be run as a daemon thread.
             *
             * @param isDaemon {@code true} if the {@code Timer}'s thread should be a daemon thread.
@@ -107,14 +107,14 @@ namespace biz.ritter.javapi.util
             this("Timer-" + Timer.nextId(), isDaemon){
         }
     
-        /**
+         /*
             * Creates a new non-daemon {@code Timer}.
             */
         public Timer() :
             this(false){
         }
     
-        /**
+         /*
             * Cancels the {@code Timer} and removes any scheduled tasks. If there is a
             * currently running task it is not affected. No more tasks may be scheduled
             * on this {@code Timer}. Subsequent calls do nothing.
@@ -123,7 +123,7 @@ namespace biz.ritter.javapi.util
             impl.cancel();
         }
     
-        /**
+         /*
             * Removes all canceled tasks from the task queue. If there are no
             * other references on the tasks, then after this call they are free
             * to be garbage collected.
@@ -137,7 +137,7 @@ namespace biz.ritter.javapi.util
             }
         }
     
-        /**
+         /*
             * Schedule a task for single execution. If {@code when} is less than the
             * current time, it will be scheduled to be executed as soon as possible.
             *
@@ -159,7 +159,7 @@ namespace biz.ritter.javapi.util
             scheduleImpl(task, delay < 0 ? 0 : delay, -1, false);
         }
     
-        /**
+         /*
             * Schedule a task for single execution after a specified delay.
             *
             * @param task
@@ -179,7 +179,7 @@ namespace biz.ritter.javapi.util
             scheduleImpl(task, delay, -1, false);
         }
     
-        /**
+         /*
             * Schedule a task for repeated fixed-delay execution after a specific delay.
             *
             * @param task
@@ -201,7 +201,7 @@ namespace biz.ritter.javapi.util
             scheduleImpl(task, delay, period, false);
         }
     
-        /**
+         /*
             * Schedule a task for repeated fixed-delay execution after a specific time
             * has been reached.
             *
@@ -225,7 +225,7 @@ namespace biz.ritter.javapi.util
             scheduleImpl(task, delay < 0 ? 0 : delay, period, false);
         }
     
-        /**
+         /*
             * Schedule a task for repeated fixed-rate execution after a specific delay
             * has passed.
             *
@@ -248,7 +248,7 @@ namespace biz.ritter.javapi.util
             scheduleImpl(task, delay, period, true);
         }
     
-        /**
+         /*
             * Schedule a task for repeated fixed-rate execution after a specific time
             * has been reached.
             *
@@ -312,24 +312,24 @@ namespace biz.ritter.javapi.util
     internal sealed class TimerImpl : java.lang.Thread {
     
     
-        /**
+         /*
             * True if the method cancel() of the Timer was called or the !!!stop()
             * method was invoked
             */
         internal bool cancelled;
     
-        /**
+         /*
             * True if the Timer has become garbage
             */
         internal bool finished;
     
-        /**
+         /*
             * Vector consists of scheduled events, sorted according to
             * {@code when} field of TaskScheduled object.
             */
         private IAC_TimerHeap tasks = new IAC_TimerHeap();
     
-        /**
+         /*
             * Starts a new timer.
             * 
             * @param name thread's name
@@ -346,7 +346,7 @@ namespace biz.ritter.javapi.util
             this.start();
         }
     
-        /**
+         /*
             * This method will be launched on separate thread for each Timer
             * object.
             */
@@ -452,7 +452,7 @@ namespace biz.ritter.javapi.util
             this.notify();
         }
     
-        /**
+         /*
             * Cancels timer.
             */
         public void cancel() {

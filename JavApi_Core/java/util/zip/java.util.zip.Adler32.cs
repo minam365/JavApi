@@ -62,7 +62,7 @@ namespace biz.ritter.javapi.util.zip
             return this.checksum;
         }
 
-        /**
+         /*
             * Resets the Adler32 checksum to it initial state.
             */
         public void reset()
@@ -70,7 +70,7 @@ namespace biz.ritter.javapi.util.zip
             this.Initialize();
         }
 
-        /**
+         /*
             * Updates this checksum with the byte value provided as integer.
             *
             * @param val
@@ -81,7 +81,7 @@ namespace biz.ritter.javapi.util.zip
             this.update(new byte[] { (byte)val });
         }
 
-        /**
+         /*
             * Updates this checksum with the bytes contained in buffer {@code buf}.
             *
             * @param buf
@@ -92,7 +92,7 @@ namespace biz.ritter.javapi.util.zip
             this.update(buf, 0, buf.Length);
         }
 
-        /**
+         /*
             * Updates this checksum with n bytes of data obtained from buffer {@code
             * buf}, starting at offset {@code off}.
             *

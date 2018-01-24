@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.sql
 {
-    /**
+     /*
      * An exception class that holds information about Database access warnings.
      */
     [Serializable]
@@ -25,7 +25,7 @@ namespace biz.ritter.javapi.sql
 
         private const long serialVersionUID = 3917336774604784856L;
 
-        /**
+         /*
          * Creates an {@code SQLWarning} object. The reason string is set to {@code
          * null}, the {@code SQLState} string is set to {@code null} and the error
          * code is set to 0.
@@ -35,7 +35,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an {@code SQLWarning} object. The reason string is set to the
          * given reason string, the {@code SQLState} string is set to {@code null}
          * and the error code is set to 0.
@@ -48,7 +48,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an {@code SQLWarning} object. The reason string is set to the
          * given reason string, the {@code SQLState} string is set to the given
          * {@code SQLState} string and the error code is set to 0.
@@ -63,7 +63,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an {@code SQLWarning} object. The reason string is set to the
          * given reason string, the {@code SQLState} string is set to the given
          * {@code SQLState} string and the error code is set to the given error code
@@ -81,7 +81,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Gets the next {@code SQLWarning} chained to this {@code SQLWarning} object.
          * 
          * @return the {@code SQLWarning} chained to this {@code SQLWarning}.
@@ -102,7 +102,7 @@ namespace biz.ritter.javapi.sql
             throw new java.lang.Error("SQLWarning chain holds value that is not a SQLWarning"); //$NON-NLS-1$
         }
 
-        /**
+         /*
          * Creates an SQLWarning object. The Reason string is set to null, the
          * SQLState string is set to null and the Error Code is set to 0, cause is
          * set to cause.
@@ -114,7 +114,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLWarning object. The Reason string is set to reason, the
          * SQLState string is set to null and the Error Code is set to 0, cause is
          * set to the given cause
@@ -126,7 +126,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLWarning object. The Reason string is set to reason, the
          * SQLState string is set to given SQLState and the Error Code is set to 0,
          * cause is set to the given cause
@@ -138,7 +138,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLWarning object. The Reason string is set to reason, the
          * SQLState string is set to given SQLState and the Error Code is set to
          * vendorCode, cause is set to the given cause
@@ -151,7 +151,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Chains a supplied {@code SQLWarning} to this {@code SQLWarning}.
          * 
          * @param w

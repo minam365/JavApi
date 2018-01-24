@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.beans
 {
-    /**
+     /*
      * A type of {@link PropertyChangeEvent} that indicates that an indexed property
      * has changed.
      * 
@@ -31,7 +31,7 @@ namespace biz.ritter.javapi.beans
 
         private readonly int index;
 
-        /**
+         /*
          * Creates a new property changed event with an indication of the property
          * index.
          * 
@@ -58,7 +58,7 @@ namespace biz.ritter.javapi.beans
             this.index = index;
         }
 
-        /**
+         /*
          * Answer the index of the property that was changed in this event.
          * 
          * @return The property element index.

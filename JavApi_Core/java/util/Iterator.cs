@@ -15,7 +15,7 @@
 
 namespace biz.ritter.javapi.util
 {
-    /**
+    /*
      * An {@code Iterator} is used to sequence over a collection of objects.
      * Conceptually, an iterator is always positioned between two elements of a
      * collection. A fresh iterator is always positioned in front of the first
@@ -29,7 +29,7 @@ namespace biz.ritter.javapi.util
      *            the type of object returned by the iterator.
      */
     public interface Iterator<E> {
-        /**
+        /*
          * Returns whether there are more elements to iterate, i.e. whether the
          * iterator is positioned in front of an element.
          * 
@@ -38,7 +38,7 @@ namespace biz.ritter.javapi.util
          */
         bool hasNext();
 
-        /**
+        /*
          * Returns the next object in the iteration, i.e. returns the element in
          * front of the iterator and advances the iterator by one position.
          * 
@@ -49,7 +49,7 @@ namespace biz.ritter.javapi.util
          */
         E next();
 
-        /**
+        /*
          * Removes the last object returned by {@code next} from the collection.
          * This method can only be called once after {@code next} was called.
          * 

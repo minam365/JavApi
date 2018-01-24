@@ -8,7 +8,7 @@ using org.apache.harmony.awt.gl;
 
 namespace biz.ritter.javapi.awt.geom
 {
-/**
+ /*
  * @author Denis M. Kishenko
  */
 
@@ -235,22 +235,22 @@ public abstract class CubicCurve2D : Shape, java.lang.Cloneable {
      */
     class Iterator : PathIterator {
 
-        /**
+         /*
          * The source CubicCurve2D object
          */
         CubicCurve2D c;
         
-        /**
+         /*
          * The path iterator transformation
          */
         AffineTransform t;
         
-        /**
+         /*
          * The current segmenet index
          */
         int index;
 
-        /**
+         /*
          * Constructs a new CubicCurve2D.Iterator for given line and transformation
          * @param c - the source CubicCurve2D object
          * @param at - the AffineTransform object to apply rectangle path

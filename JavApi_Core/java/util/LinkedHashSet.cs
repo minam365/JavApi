@@ -19,7 +19,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * LinkedHashSet is a variant of HashSet. Its entries are kept in a
      * doubly-linked list. The iteration order is the order in which entries were
      * inserted.
@@ -37,13 +37,13 @@ namespace biz.ritter.javapi.util
 
         private static readonly long serialVersionUID = -2851667679971038690L;
 
-        /**
+         /*
          * Constructs a new empty instance of {@code LinkedHashSet}.
          */
         public LinkedHashSet() :base(new LinkedHashMap<E, HashSet<E>>()){
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code LinkedHashSet} with the specified
          * capacity.
          * 
@@ -53,7 +53,7 @@ namespace biz.ritter.javapi.util
         public LinkedHashSet(int capacity) : base (new LinkedHashMap<E, HashSet<E>>(capacity)){
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code LinkedHashSet} with the specified
          * capacity and load factor.
          * 
@@ -65,7 +65,7 @@ namespace biz.ritter.javapi.util
         public LinkedHashSet(int capacity, float loadFactor) : base (new LinkedHashMap<E, HashSet<E>>(capacity, loadFactor)){
         }
 
-        /**
+         /*
          * Constructs a new instance of {@code LinkedHashSet} containing the unique
          * elements in the specified collection.
          * 

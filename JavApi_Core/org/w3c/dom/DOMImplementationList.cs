@@ -13,7 +13,7 @@
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      *  The <code>DOMImplementationList</code> interface provides the abstraction 
      * of an ordered collection of DOM implementations, without defining or 
      * constraining how this collection is implemented. The items in the 
@@ -24,7 +24,7 @@ namespace org.w3c.dom
      */
     public interface DOMImplementationList
     {
-        /**
+         /*
          *  Returns the <code>index</code>th item in the collection. If 
          * <code>index</code> is greater than or equal to the number of 
          * <code>DOMImplementation</code>s in the list, this returns 
@@ -36,7 +36,7 @@ namespace org.w3c.dom
          */
         DOMImplementation item(int index);
 
-        /**
+         /*
          *  The number of <code>DOMImplementation</code>s in the list. The range 
          * of valid child node indices is 0 to <code>length-1</code> inclusive. 
          */

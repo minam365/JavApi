@@ -7,7 +7,7 @@ using System;
 namespace org.xml.sax
 {
 
-    /**
+     /*
      * Encapsulate an XML parse error or warning.
      *
      * <blockquote>
@@ -45,7 +45,7 @@ namespace org.xml.sax
         //////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Create a new SAXParseException from a message and a Locator.
          *
          * <p>This constructor is especially useful when an application is
@@ -72,7 +72,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Wrap an existing exception in a SAXParseException.
          *
          * <p>This constructor is especially useful when an application is
@@ -103,7 +103,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Create a new SAXParseException.
          *
          * <p>This constructor is most useful for parser writers.</p>
@@ -132,7 +132,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Create a new SAXParseException with an embedded exception.
          *
          * <p>This constructor is most useful for parser writers who
@@ -164,7 +164,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Internal initialization method.
          *
          * @param publicId The public identifier of the entity which generated the exception,
@@ -184,7 +184,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Get the public identifier of the entity where the exception occurred.
          *
          * @return A string containing the public identifier, or null
@@ -197,7 +197,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Get the system identifier of the entity where the exception occurred.
          *
          * <p>If the system identifier is a URL, it will have been resolved
@@ -213,7 +213,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * The line number of the end of the text where the exception occurred.
          *
          * <p>The first line is line 1.</p>
@@ -228,7 +228,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * The column number of the end of the text where the exception occurred.
          *
          * <p>The first column in a line is position 1.</p>
@@ -248,28 +248,28 @@ namespace org.xml.sax
         //////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * @serial The public identifier, or null.
          * @see #getPublicId
          */
         private String publicId;
 
 
-        /**
+         /*
          * @serial The system identifier, or null.
          * @see #getSystemId
          */
         private String systemId;
 
 
-        /**
+         /*
          * @serial The line number, or -1.
          * @see #getLineNumber
          */
         private int lineNumber;
 
 
-        /**
+         /*
          * @serial The column number, or -1.
          * @see #getColumnNumber
          */

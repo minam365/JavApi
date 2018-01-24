@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.security
 {
-    /**
+     /*
      * {@code Permission} is the common base class of all permissions that
      * participate in the access control security framework around
      * {@link AccessController} and {@link AccessControlContext}. A permission
@@ -57,7 +57,7 @@ namespace biz.ritter.javapi.security
          */
         //public abstract int GetHashCode();
 
-        /**
+         /*
          * Returns a comma separated string identifying the actions associated with
          * this permission. The returned actions are in canonical form. For example:
          *
@@ -76,7 +76,7 @@ namespace biz.ritter.javapi.security
          */
         public abstract String getActions();
 
-        /**
+         /*
          * Indicates whether the specified permission is implied by this permission.
          * The {@link AccessController} uses this method to check whether permission
          * protected access is allowed with the present policy.
@@ -88,7 +88,7 @@ namespace biz.ritter.javapi.security
          */
         public abstract bool implies(Permission permission);
 
-        /**
+         /*
          * Constructs a new instance of {@code Permission} with its name.
          *
          * @param name
@@ -99,7 +99,7 @@ namespace biz.ritter.javapi.security
             this.name = name;
         }
 
-        /**
+         /*
          * Returns the name of this permission.
          *
          * @return the name of this permission.
@@ -109,7 +109,7 @@ namespace biz.ritter.javapi.security
             return name;
         }
 
-        /**
+         /*
          * Invokes {@link SecurityManager#checkPermission(Permission)} with this
          * permission as its argument. This method implements the {@link Guard}
          * interface.
@@ -131,7 +131,7 @@ namespace biz.ritter.javapi.security
             }
         }
 
-        /**
+         /*
          * Returns a specific {@link PermissionCollection} container for permissions
          * of this type. Returns {@code null} if any permission collection can be
          * used.
@@ -147,7 +147,7 @@ namespace biz.ritter.javapi.security
             return null;
         }
 
-        /**
+         /*
          * Returns a string containing a concise, human-readable description of the
          * this {@code Permission} including its name and its actions.
          *

@@ -30,7 +30,7 @@ import org.apache.harmony.luni.util.PriviAction;
 namespace biz.ritter.javapi.io
 {
 
-    /**
+     /*
      * Wraps an existing {@link OutputStream} and provides convenience methods for
      * writing common data types in a human readable format. This is not to be
      * confused with DataOutputStream which is used for encoding common data types
@@ -44,12 +44,12 @@ namespace biz.ritter.javapi.io
 
         private const String TOKEN_NULL = "null"; //$NON-NLS-1$
 
-        /**
+         /*
          * indicates whether or not this PrintStream has incurred an error.
          */
         private bool ioError;
 
-        /**
+         /*
          * indicates whether or not this PrintStream should flush its contents after
          * printing a new line.
          */
@@ -61,7 +61,7 @@ namespace biz.ritter.javapi.io
 
         // private Formatter formatter;
 
-        /**
+         /*
          * Constructs a new {@code PrintStream} with {@code out} as its target
          * stream. By default, the new print stream does not automatically flush its
          * contents to the target stream when a newline is encountered.
@@ -80,7 +80,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Constructs a new {@code PrintStream} with {@code out} as its target
          * stream. The parameter {@code autoflush} determines if the print stream
          * automatically flushes its contents to the target stream when a newline is
@@ -104,7 +104,7 @@ namespace biz.ritter.javapi.io
             this.autoflush = autoflush;
         }
 
-        /**
+         /*
          * Constructs a new {@code PrintStream} with {@code out} as its target
          * stream and using the character encoding {@code enc} while writing. The
          * parameter {@code autoflush} determines if the print stream automatically
@@ -145,7 +145,7 @@ namespace biz.ritter.javapi.io
             encoding = enc;
         }
 
-        /**
+         /*
          * Constructs a new {@code PrintStream} with {@code file} as its target. The
          * virtual machine's default character set is used for character encoding.
          * 
@@ -163,7 +163,7 @@ namespace biz.ritter.javapi.io
         {
         }
 
-        /**
+         /*
          * Constructs a new {@code PrintStream} with {@code file} as its target. The
          * character set named {@code csn} is used for character encoding.
          * 
@@ -197,7 +197,7 @@ namespace biz.ritter.javapi.io
             encoding = csn;
         }
 
-        /**
+         /*
          * Constructs a new {@code PrintStream} with the file identified by
          * {@code fileName} as its target. The virtual machine's default character
          * set is used for character encoding.
@@ -216,7 +216,7 @@ namespace biz.ritter.javapi.io
         {
         }
 
-        /**
+         /*
          * Constructs a new {@code PrintStream} with the file identified by
          * {@code fileName} as its target. The character set named {@code csn} is
          * used for character encoding.
@@ -242,7 +242,7 @@ namespace biz.ritter.javapi.io
         {
         }
 
-        /**
+         /*
          * Flushes this stream and returns the value of the error flag.
          * 
          * @return {@code true} if either an {@code IOException} has been thrown
@@ -262,7 +262,7 @@ namespace biz.ritter.javapi.io
             return ioError || delegateJ.checkError();
         }
 
-        /**
+         /*
          * Sets the error state of the stream to false.
          * 
          * @since 1.6
@@ -272,7 +272,7 @@ namespace biz.ritter.javapi.io
             ioError = false;
         }
 
-        /**
+         /*
          * Closes this print stream. Flushes this stream and then closes the target
          * stream. If an I/O error occurs, this stream's error state is set to
          * {@code true}.
@@ -298,7 +298,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Ensures that all pending data is sent out to the target stream. It also
          * flushes the target stream. If an I/O error occurs, this stream's error
          * state is set to {@code true}.
@@ -324,7 +324,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Writes a string formatted by an intermediate {@code Formatter} to the
          * target stream using the specified format string and arguments. For the
          * locale, the default value of the current virtual machine instance is
@@ -349,7 +349,7 @@ namespace biz.ritter.javapi.io
             return this.format(java.util.Locale.getDefault(), format, args);
         }
 
-        /**
+         /*
          * Writes a string formatted by an intermediate {@link Formatter} to this
          * stream using the specified locale, format string and arguments.
          * 
@@ -380,7 +380,7 @@ namespace biz.ritter.javapi.io
             return this;
         }
 
-        /**
+         /*
          * Prints a formatted string. The behavior of this method is the same as
          * this stream's {@code #format(String, Object...)} method. For the locale,
          * the default value of the current virtual machine instance is used.
@@ -405,7 +405,7 @@ namespace biz.ritter.javapi.io
             return this.format(format, args);
         }
 
-        /**
+         /*
          * Prints a formatted string. The behavior of this method is the same as
          * this stream's {@code #format(Locale, String, Object...)} method.
          * 
@@ -431,7 +431,7 @@ namespace biz.ritter.javapi.io
             return this.format(l, format, args);
         }
 
-        /**
+         /*
          * Put the line separator String onto the print stream.
          */
         private void newline()
@@ -439,7 +439,7 @@ namespace biz.ritter.javapi.io
             print(lineSeparator);
         }
 
-        /**
+         /*
          * Prints the string representation of the specified character array
          * to the target stream.
          * 
@@ -452,7 +452,7 @@ namespace biz.ritter.javapi.io
             print(new String(charArray, 0, charArray.Length));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified character to the target
          * stream.
          * 
@@ -465,7 +465,7 @@ namespace biz.ritter.javapi.io
             print(java.lang.StringJ.valueOf(ch));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified double to the target
          * stream.
          * 
@@ -478,7 +478,7 @@ namespace biz.ritter.javapi.io
             print(java.lang.StringJ.valueOf(dnum));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified float to the target
          * stream.
          * 
@@ -491,7 +491,7 @@ namespace biz.ritter.javapi.io
             print(java.lang.StringJ.valueOf(fnum));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified integer to the target
          * stream.
          * 
@@ -504,7 +504,7 @@ namespace biz.ritter.javapi.io
             print(java.lang.StringJ.valueOf(inum));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified long to the target
          * stream.
          * 
@@ -517,7 +517,7 @@ namespace biz.ritter.javapi.io
             print(java.lang.StringJ.valueOf(lnum));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified object to the target
          * stream.
          * 
@@ -530,7 +530,7 @@ namespace biz.ritter.javapi.io
             print(java.lang.StringJ.valueOf(obj));
         }
 
-        /**
+         /*
          * Prints a string to the target stream. The string is converted to an array
          * of bytes using the encoding chosen during the construction of this
          * stream. The bytes are then written to the target stream with
@@ -575,7 +575,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Prints the string representation of the specified boolean to the target
          * stream.
          * 
@@ -588,7 +588,7 @@ namespace biz.ritter.javapi.io
             print(java.lang.StringJ.valueOf(boolean));
         }
 
-        /**
+         /*
          * Prints the string representation of the system property
          * {@code "line.separator"} to the target stream.
          */
@@ -597,7 +597,7 @@ namespace biz.ritter.javapi.io
             newline();
         }
 
-        /**
+         /*
          * Prints the string representation of the specified character array
          * followed by the system property {@code "line.separator"} to the target
          * stream.
@@ -611,7 +611,7 @@ namespace biz.ritter.javapi.io
             println(new String(charArray, 0, charArray.Length));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified character followed by
          * the system property {@code "line.separator"} to the target stream.
          * 
@@ -624,7 +624,7 @@ namespace biz.ritter.javapi.io
             println(java.lang.StringJ.valueOf(ch));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified double followed by the
          * system property {@code "line.separator"} to the target stream.
          * 
@@ -637,7 +637,7 @@ namespace biz.ritter.javapi.io
             println(java.lang.StringJ.valueOf(dnum));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified float followed by the
          * system property {@code "line.separator"} to the target stream.
          * 
@@ -650,7 +650,7 @@ namespace biz.ritter.javapi.io
             println(java.lang.StringJ.valueOf(fnum));
         }
 
-        /**
+         /*
           * Prints the string representation of the specified integer followed by the
           * system property {@code "line.separator"} to the target stream.
           * 
@@ -663,7 +663,7 @@ namespace biz.ritter.javapi.io
             println(java.lang.StringJ.valueOf(inum));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified long followed by the
          * system property {@code "line.separator"} to the target stream.
          * 
@@ -676,7 +676,7 @@ namespace biz.ritter.javapi.io
             println(java.lang.StringJ.valueOf(lnum));
         }
 
-        /**
+         /*
          * Prints the string representation of the specified object followed by the
          * system property {@code "line.separator"} to the target stream.
          * 
@@ -689,7 +689,7 @@ namespace biz.ritter.javapi.io
             println(java.lang.StringJ.valueOf(obj));
         }
 
-        /**
+         /*
          * Prints a string followed by the system property {@code "line.separator"}
          * to the target stream. The string is converted to an array of bytes using
          * the encoding chosen during the construction of this stream. The bytes are
@@ -710,7 +710,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Prints the string representation of the specified boolean followed by the
          * system property {@code "line.separator"} to the target stream.
          * 
@@ -723,7 +723,7 @@ namespace biz.ritter.javapi.io
             println(java.lang.StringJ.valueOf(boolean));
         }
 
-        /**
+         /*
          * Sets the error flag of this print stream to {@code true}.
          */
         protected void setError()
@@ -731,7 +731,7 @@ namespace biz.ritter.javapi.io
             ioError = true;
         }
 
-        /**
+         /*
          * Writes {@code count} bytes from {@code buffer} starting at {@code offset}
          * to the target stream. If autoflush is set, this stream gets flushed after
          * writing the buffer.
@@ -786,7 +786,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Writes one byte to the target stream. Only the least significant byte of
          * the integer {@code oneByte} is written. This stream is flushed if
          * {@code oneByte} is equal to the character {@code '\n'} and this stream is
@@ -826,7 +826,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Appends the character {@code c} to the target stream. This method works
          * the same way as {@link #print(char)}.
          * 
@@ -840,7 +840,7 @@ namespace biz.ritter.javapi.io
             return this;
         }
 
-        /**
+         /*
          * Appends the character sequence {@code csq} to the target stream. This
          * method works the same way as {@code PrintStream.print(csq.toString())}.
          * If {@code csq} is {@code null}, then the string "null" is written to the
@@ -863,7 +863,7 @@ namespace biz.ritter.javapi.io
             return this;
         }
 
-        /**
+         /*
          * Appends a subsequence of the character sequence {@code csq} to the target
          * stream. This method works the same way as {@code
          * PrintStream.print(csq.subsequence(start, end).toString())}. If {@code

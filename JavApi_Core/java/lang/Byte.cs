@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang
 {
-    /**
+     /*
      * The wrapper for the primitive type {@code byte}.
      *
      * @since 1.1
@@ -25,29 +25,29 @@ namespace biz.ritter.javapi.lang
     [Serializable]
     public sealed class Byte : Number, Comparable<java.lang.Byte>
     {
-        /**
+         /*
          * The {@link Class} object that represents the primitive type {@code byte}.
          */
         public static readonly Type TYPE = new byte[0].GetType().GetElementType();
 
         private static readonly long serialVersionUID = -7183698231559129828L;
 
-        /**
+         /*
          * The value which the receiver represents.
          */
         private readonly sbyte value;
 
-        /**
+         /*
          * The maximum {@code Byte} value, 2<sup>7</sup>-1.
          */
         public static readonly sbyte MAX_VALUE = SByte.MaxValue;
 
-        /**
+         /*
          * The minimum {@code Byte} value, -2<sup>7</sup>.
          */
         public static readonly sbyte MIN_VALUE = SByte.MinValue;
 
-        /**
+         /*
          * The number of bits needed to represent a {@code Byte} value in two's
          * complement form.
          * 
@@ -55,12 +55,12 @@ namespace biz.ritter.javapi.lang
          */
         public static readonly int SIZE = 8;
 
-        /**
+         /*
          * A cache of instances used by {@link #valueOf(byte)} and auto-boxing.
          */
         private static readonly java.lang.Byte[] CACHE = new java.lang.Byte[256];
 
-        /**
+         /*
          * Constructs a new {@code Byte} with the specified primitive byte value.
          * 
          * @param value
@@ -79,7 +79,7 @@ namespace biz.ritter.javapi.lang
             this.value = value;
         }
 
-        /**
+         /*
          * Constructs a new {@code Byte} from the specified string.
          * 
          * @param string
@@ -93,7 +93,7 @@ namespace biz.ritter.javapi.lang
         {
         }
 
-        /**
+         /*
          * Gets the primitive value of this byte.
          * 
          * @return this object's primitive value.
@@ -111,7 +111,7 @@ namespace biz.ritter.javapi.lang
             return this.value;
         }
 
-        /**
+         /*
          * Compares this object to the specified byte object to determine their
          * relative order.
          * 
@@ -129,7 +129,7 @@ namespace biz.ritter.javapi.lang
             return value > obj.value ? 1 : (value < obj.value ? -1 : 0);
         }
 
-        /**
+         /*
          * Parses the specified string and returns a {@code Byte} instance if the
          * string can be decoded into a single byte value. The string may be an
          * optional minus sign "-" followed by a hexadecimal ("0x..." or "#..."),
@@ -157,7 +157,7 @@ namespace biz.ritter.javapi.lang
             return value;
         }
 
-        /**
+         /*
          * Compares this object with the specified object and indicates if they are
          * equal. In order to be equal, {@code object} must be an instance of
          * {@code Byte} and have the same byte value as this object.
@@ -193,7 +193,7 @@ namespace biz.ritter.javapi.lang
             return value;
         }
 
-        /**
+         /*
          * Parses the specified string as a signed decimal byte value. The ASCII
          * character \u002d ('-') is recognized as the minus sign.
          * 
@@ -215,7 +215,7 @@ namespace biz.ritter.javapi.lang
             throw new NumberFormatException();
         }
 
-        /**
+         /*
          * Parses the specified string as a signed byte value using the specified
          * radix. The ASCII character \u002d ('-') is recognized as the minus sign.
          * 
@@ -252,7 +252,7 @@ namespace biz.ritter.javapi.lang
             return Integer.toString(value);
         }
 
-        /**
+         /*
          * Returns a string containing a concise, human-readable description of the
          * specified byte value.
          * 
@@ -265,7 +265,7 @@ namespace biz.ritter.javapi.lang
             return Integer.toString(value);
         }
 
-        /**
+         /*
          * Parses the specified string as a signed decimal byte value.
          * 
          * @param string
@@ -282,7 +282,7 @@ namespace biz.ritter.javapi.lang
             return valueOf(parseByte(str));
         }
 
-        /**
+         /*
          * Parses the specified string as a signed byte value using the specified
          * radix.
          * 
@@ -304,7 +304,7 @@ namespace biz.ritter.javapi.lang
             return valueOf(parseByte(str, radix));
         }
 
-        /**
+         /*
          * Returns a {@code Byte} instance for the specified byte value.
          * <p/>
          * If it is not necessary to get a new {@code Byte} instance, it is

@@ -8,7 +8,7 @@
 namespace org.w3c.dom.events
 {
 
-    /**
+     /*
      * The <code>EventListener</code> interface is the primary method for handling 
      * events.  Users implement the <code>EventListener</code> interface and 
      * register their listener  on an <code>EventTarget</code> using the 
@@ -19,7 +19,7 @@ namespace org.w3c.dom.events
      */
     public interface EventListener
     {
-        /**
+         /*
          * This method is called whenever an event occurs of the type for which the 
          * <code> EventListener</code> interface was registered. 
          * @param evt The <code>Event</code> contains contextual information about 

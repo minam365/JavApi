@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.logging
 {
 
-/**
+ /*
  * A {@code FileHandler} writes logging records into a specified file or a
  * rotating set of files.
  * <p>
@@ -127,7 +127,7 @@ public class FileHandler : StreamHandler {
     // current unique ID
     int uniqueID = -1;
 
-    /**
+     /*
      * Construct a {@code FileHandler} using {@code LogManager} properties or
      * their default value.
      * 
@@ -247,7 +247,7 @@ public class FileHandler : StreamHandler {
         setOutputStream(output);
     }
 
-    /**
+     /*
      * Transform the pattern to the valid file name, replacing any patterns, and
      * applying generation and uniqueID if present
      * 
@@ -365,7 +365,7 @@ public class FileHandler : StreamHandler {
         return result;
     }
 
-    /**
+     /*
      * Constructs a new {@code FileHandler}. The given name pattern is used as
      * output filename, the file limit is set to zero (no limit), the file count
      * is set to one; the remaining configuration is done using
@@ -396,7 +396,7 @@ public class FileHandler : StreamHandler {
                 .valueOf(DEFAULT_COUNT));
     }
 
-    /**
+     /*
      * Construct a new {@code FileHandler}. The given name pattern is used as
      * output filename, the file limit is set to zero (no limit), the file count
      * is initialized to one and the value of {@code append} becomes the new
@@ -430,7 +430,7 @@ public class FileHandler : StreamHandler {
                 java.lang.Integer.valueOf(DEFAULT_COUNT));
     }
 
-    /**
+     /*
      * Construct a new {@code FileHandler}. The given name pattern is used as
      * output filename, the maximum file size is set to {@code limit} and the
      * file count is initialized to {@code count}. The remaining configuration
@@ -471,7 +471,7 @@ public class FileHandler : StreamHandler {
         init(pattern, null, java.lang.Integer.valueOf(limit), java.lang.Integer.valueOf(count));
     }
 
-    /**
+     /*
      * Construct a new {@code FileHandler}. The given name pattern is used as
      * output filename, the maximum file size is set to {@code limit}, the file
      * count is initialized to {@code count} and the append mode is set to
@@ -517,7 +517,7 @@ public class FileHandler : StreamHandler {
                 .valueOf(count));
     }
 
-    /**
+     /*
      * Flushes and closes all opened files.
      * 
      * @throws SecurityException
@@ -543,7 +543,7 @@ public class FileHandler : StreamHandler {
         }
     }
 
-    /**
+     /*
      * Publish a {@code LogRecord}.
      * 
      * @param record
@@ -558,7 +558,7 @@ public class FileHandler : StreamHandler {
         }}
     }
 
-    /**
+     /*
      * This output stream uses the decorator pattern to add measurement features
      * to OutputStream which can detect the total size(in bytes) of output, the
      * initial size can be set.

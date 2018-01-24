@@ -8,7 +8,7 @@ using System;
 namespace org.xml.sax
 {
 
-    /**
+     /*
      * Exception class for an unsupported operation.
      *
      * <blockquote>
@@ -31,7 +31,7 @@ namespace org.xml.sax
     public class SAXNotSupportedException : SAXException
     {
 
-        /**
+         /*
          * Construct a new exception with no message.
          */
         public SAXNotSupportedException()
@@ -40,7 +40,7 @@ namespace org.xml.sax
         }
 
 
-        /**
+         /*
          * Construct a new exception with the given message.
          *
          * @param message The text message of the exception.

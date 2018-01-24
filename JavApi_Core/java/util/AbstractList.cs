@@ -20,7 +20,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util
 {
-    /**
+     /*
      * {@code AbstractList} is an abstract implementation of the {@code List} interface, optimized
      * for a backing store which supports random access. This implementation does
      * not support adding or replacing. A subclass must implement the abstract
@@ -33,19 +33,19 @@ namespace biz.ritter.javapi.util
     [Serializable]
     public abstract class AbstractList<E> : AbstractCollection<E>, List<E>, IEnumerable<E> {
 
-        /**
+         /*
          * A counter for changes to the list.
          */
         [NonSerialized]
         protected internal int modCount;
 
-        /**
+         /*
          * Constructs a new instance of this AbstractList.
          */
         protected AbstractList() : base (){
         }
 
-        /**
+         /*
          * Inserts the specified object into this List at the specified location.
          * The object is inserted before any previous element at the specified
          * location. If the location is equal to the size of this List, the object
@@ -73,7 +73,7 @@ namespace biz.ritter.javapi.util
             throw new java.lang.UnsupportedOperationException();
         }
 
-        /**
+         /*
          * Adds the specified object at the end of this List.
          * 
          * 
@@ -94,7 +94,7 @@ namespace biz.ritter.javapi.util
             return true;
         }
 
-        /**
+         /*
          * Inserts the objects in the specified Collection at the specified location
          * in this List. The objects are added in the order they are returned from
          * the collection's iterator.
@@ -121,7 +121,7 @@ namespace biz.ritter.javapi.util
             return !collection.isEmpty();
         }
 
-        /**
+         /*
          * Removes all elements from this list, leaving it empty.
          * 
          * @throws UnsupportedOperationException
@@ -134,7 +134,7 @@ namespace biz.ritter.javapi.util
             removeRange(0, size());
         }
 
-        /**
+         /*
          * Compares the specified object to this list and return true if they are
          * equal. Two lists are equal when they both contain the same objects in the
          * same order.
@@ -168,7 +168,7 @@ namespace biz.ritter.javapi.util
             return false;
         }
 
-        /**
+         /*
          * Returns the element at the specified location in this list.
          * 
          * @param location
@@ -179,7 +179,7 @@ namespace biz.ritter.javapi.util
          */
         public abstract E get(int location);
 
-        /**
+         /*
          * Returns the hash code of this list. The hash code is calculated by taking
          * each element's hashcode into account.
          * 
@@ -198,7 +198,7 @@ namespace biz.ritter.javapi.util
             return result;
         }
 
-        /**
+         /*
          * Searches this list for the specified object and returns the index of the
          * first occurrence.
          * 
@@ -225,7 +225,7 @@ namespace biz.ritter.javapi.util
             return -1;
         }
 
-        /**
+         /*
          * Returns an iterator on the elements of this list. The elements are
          * iterated in the same order as they occur in the list.
          * 
@@ -237,7 +237,7 @@ namespace biz.ritter.javapi.util
             return new SimpleListIterator<E>(this);
         }
 
-        /**
+         /*
          * Searches this list for the specified object and returns the index of the
          * last occurrence.
          * 
@@ -264,7 +264,7 @@ namespace biz.ritter.javapi.util
             return -1;
         }
 
-        /**
+         /*
          * Returns a ListIterator on the elements of this list. The elements are
          * iterated in the same order that they occur in the list.
          * 
@@ -275,7 +275,7 @@ namespace biz.ritter.javapi.util
             return listIterator(0);
         }
 
-        /**
+         /*
          * Returns a list iterator on the elements of this list. The elements are
          * iterated in the same order as they occur in the list. The iteration
          * starts at the specified location.
@@ -291,7 +291,7 @@ namespace biz.ritter.javapi.util
             return new FullListIterator<E>(this,location);
         }
 
-        /**
+         /*
          * Removes the object at the specified location from this list.
          * 
          * @param location
@@ -306,7 +306,7 @@ namespace biz.ritter.javapi.util
             throw new java.lang.UnsupportedOperationException();
         }
 
-        /**
+         /*
          * Removes the objects in the specified range from the start to the end
          * index minus one.
          * 
@@ -327,7 +327,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Replaces the element at the specified location in this list with the
          * specified object.
          * 
@@ -349,7 +349,7 @@ namespace biz.ritter.javapi.util
             throw new java.lang.UnsupportedOperationException();
         }
 
-        /**
+         /*
          * Returns a part of consecutive elements of this list as a view. The
          * returned view will be of zero length if start equals end. Any change that
          * occurs in the returned subList will be reflected to the original list,

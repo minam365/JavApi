@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.nio
 {
     
-    /**
+     /*
      * An {@code InvalidMarkException} is thrown when {@code reset()} is called on a
      * buffer, but no mark has been set previously.
      */
@@ -28,7 +28,7 @@ namespace biz.ritter.javapi.nio
 
         private static readonly long serialVersionUID = 1698329710438510774L;
 
-        /**
+         /*
          * Constructs an {@code InvalidMarkException}.
          */
         public InvalidMarkException() : base() {

@@ -21,7 +21,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapix.xml.parsers
 {
-	/**
+	 /*
  * Thrown when a problem with configuration with the Parser Factories
  * exists. This error will typically be thrown when the class of a
  * parser factory specified in the system properties cannot be found
@@ -33,12 +33,12 @@ namespace biz.ritter.javapix.xml.parsers
 
 	public class FactoryConfigurationError : java.lang.Error
 	{
-		/**
+		 /*
      *<code>Exception</code> that represents the error.
      */
 		private java.lang.Exception exception;
 
-		/**
+		 /*
      * Create a new <code>FactoryConfigurationError</code> with no
      * detail message.
      */
@@ -48,7 +48,7 @@ namespace biz.ritter.javapix.xml.parsers
 			this.exception = null;
 		}
 
-		/**
+		 /*
      * Create a new <code>FactoryConfigurationError</code> with
      * the <code>String </code> specified as an error message.
      *
@@ -60,7 +60,7 @@ namespace biz.ritter.javapix.xml.parsers
 			this.exception = null;
 		}
 
-		/**
+		 /*
      * Create a new <code>FactoryConfigurationError</code> with a
      * given <code>Exception</code> base cause of the error.
      *
@@ -73,7 +73,7 @@ namespace biz.ritter.javapix.xml.parsers
 			this.exception = e;
 		}
 
-		/**
+		 /*
      * Create a new <code>FactoryConfigurationError</code> with the
      * given <code>Exception</code> base cause and detail message.
      *
@@ -87,7 +87,7 @@ namespace biz.ritter.javapix.xml.parsers
 			this.exception = e;
 		}
 
-		/**
+		 /*
      * Return the message (if any) for this error . If there is no
      * message for the exception and there is an encapsulated
      * exception then the message of that exception, if it exists will be 
@@ -108,7 +108,7 @@ namespace biz.ritter.javapix.xml.parsers
 			return message;
 		}
 
-		/**
+		 /*
      * Return the actual exception (if any) that caused this exception to
      * be raised.
      *

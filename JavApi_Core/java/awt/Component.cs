@@ -180,7 +180,7 @@ namespace biz.ritter.javapi.awt
                 toolkit.unlockAWT();
             }
         }
-        /**
+         /*
          * Update the component bounds and post the appropriate events
          */
         void setBounds(int x, int y, int w, int h, int bMask, bool updateBehavior)
@@ -233,7 +233,7 @@ namespace biz.ritter.javapi.awt
                 toolkit.unlockAWT();
             }
         }
-        /**
+         /*
          * Calls InputContextImpl.notifyClientWindowChanged.
          */
         internal virtual void notifyInputMethod(Rectangle bounds)
@@ -336,7 +336,7 @@ namespace biz.ritter.javapi.awt
             throw new java.lang.UnsupportedOperationException("Not supported: getToolkit().getSystemEventQueueImpl().postEvent(e);");
             //getToolkit().getSystemEventQueueImpl().postEvent(e);
         }
-        /**
+         /*
          * Gets only parent of a child component, but not owner of a window.
          * 
          * @return parent of child component, null if component is a top-level

@@ -2,7 +2,7 @@
 
 namespace biz.ritter.javapi.awt
 {
-    /**
+     /*
      * PaintContext
      * @author Alexey A. Petrenko
      */

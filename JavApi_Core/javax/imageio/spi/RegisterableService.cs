@@ -17,7 +17,7 @@ using javax = biz.ritter.javapix;
 
 namespace biz.ritter.javapix.imageio.spi
 {
-/**
+ /*
  * @author Rustem V. Rafikov
  */
 

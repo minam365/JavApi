@@ -15,7 +15,7 @@
 
 namespace biz.ritter.javapi.lang.refj
 {
-    /**
+     /*
      * Implements a soft reference, which is the least-weak of the three types of
      * references. Once the garbage collector has decided that an object {@code obj}
      * is <a href="package.html#definitions">softly-reachable</a>, the following
@@ -72,7 +72,7 @@ namespace biz.ritter.javapi.lang.refj
     public class SoftReference<T> : Reference<T>
     {
 
-        /**
+         /*
          * Constructs a new soft reference to the given referent. The newly created
          * reference is not registered with any reference queue.
          *
@@ -84,7 +84,7 @@ namespace biz.ritter.javapi.lang.refj
             initReference(r);
         }
 
-        /**
+         /*
          * Constructs a new soft reference to the given referent. The newly created
          * reference is registered with the given reference queue.
          *
@@ -99,7 +99,7 @@ namespace biz.ritter.javapi.lang.refj
             initReference(r, q);
         }
 
-        /**
+         /*
          * Return the referent of the reference object.
          *
          * @return the referent to which reference refers, or {@code null} if the

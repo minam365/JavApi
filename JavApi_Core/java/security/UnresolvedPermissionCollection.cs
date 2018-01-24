@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.security
 {
-    /**
+     /*
      * {@code UnresolvedPermissionCollection} represents a specific {@code
      * PermissionCollection} for storing {@link UnresolvedPermission} instances.
      * Contained elements are grouped by their target type.
@@ -34,7 +34,7 @@ namespace biz.ritter.javapi.security
         [NonSerialized]
         private java.util.HashMap<String, java.util.Collection<Permission>> klasses = new java.util.HashMap<String, java.util.Collection<Permission>>();
 
-        /**
+         /*
          * Adds an unresolved permission to this {@code
          * UnresolvedPermissionCollection}.
          * 
@@ -80,7 +80,7 @@ namespace biz.ritter.javapi.security
             return java.util.Collections<Permission>.enumeration(all);
         }
 
-        /**
+         /*
          * Always returns {@code false}.
          * 
          * @return always {@code false}
@@ -91,7 +91,7 @@ namespace biz.ritter.javapi.security
             return false;
         }
 
-        /** 
+         /* 
          * Returns true if this collection contains unresolved permissions 
          * with the same classname as argument permission. 
          */
@@ -100,7 +100,7 @@ namespace biz.ritter.javapi.security
             return klasses.containsKey(permission.getClass().getName());
         }
 
-        /**
+         /*
          * Resolves all permissions of the same class as the specified target
          * permission and adds them to the specified collection. If passed
          * collection is {@code null} and some unresolved permissions were resolved,
@@ -166,7 +166,7 @@ namespace biz.ritter.javapi.security
             out.writeFields();
         }
 
-        /** 
+         /* 
          * Reads the object from stream and checks elements grouping for validity. 
          *
         private void readObject(java.io.ObjectInputStream in) throws IOException,

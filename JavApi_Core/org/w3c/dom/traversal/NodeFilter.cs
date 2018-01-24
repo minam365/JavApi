@@ -8,7 +8,7 @@
 namespace org.w3c.dom.traversal
 {
 
-    /**
+     /*
      * Filters are objects that know how to "filter out" nodes. If an Iterator or 
      * <code>TreeWalker</code> is given a filter, before it returns the next 
      * node, it applies the filter. If the filter says to accept the node, the 
@@ -25,7 +25,7 @@ namespace org.w3c.dom.traversal
      */
     public interface NodeFilter
     {
-        /**
+         /*
          * Test whether a specified node is visible in the logical view of a 
          * TreeWalker or NodeIterator. This function will be called by the 
          * implementation of TreeWalker and NodeIterator; it is not intended to be 

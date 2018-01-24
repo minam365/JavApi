@@ -18,7 +18,7 @@ using org.apache.harmony.security.fortress;
 namespace biz.ritter.javapi.security
 {
 
-    /**
+     /*
      * Represents the Service Provider Interface (SPI) for java.security.Policy
      * class.
      * 
@@ -40,7 +40,7 @@ namespace biz.ritter.javapi.security
             // default constructor
         }
 
-        /**
+         /*
          * Answers if the policy has granted a Permission to a
          * ProtectionDomain.
          * 
@@ -55,7 +55,7 @@ namespace biz.ritter.javapi.security
         protected internal abstract bool engineImplies(ProtectionDomain domain,
                 Permission permission);
 
-        /**
+         /*
          * Refreshes/reloads the policy configuration. The behavior of this method
          * depends on the implementation. For example, calling refresh on a
          * file-based policy will cause the file to be re-read.
@@ -70,7 +70,7 @@ namespace biz.ritter.javapi.security
             // do nothing in default implementation
         }
 
-        /**
+         /*
          * Answers a PermissionCollection object containing the set of permissions
          * granted to the specified CodeSource.
          * 
@@ -93,7 +93,7 @@ namespace biz.ritter.javapi.security
             return Policy.UNSUPPORTED_EMPTY_COLLECTION;
         }
 
-        /**
+         /*
          * Answers a PermissionCollection object containing the set of permissions
          * granted to the specified ProtectionDomain.
          * 

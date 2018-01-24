@@ -14,7 +14,7 @@ using System;
 namespace org.w3c.dom
 {
 
-    /**
+     /*
      * The <code>Element</code> interface represents an element in an HTML or XML 
      * document. Elements may have attributes associated with them; since the 
      * <code>Element</code> interface inherits from <code>Node</code>, the 
@@ -33,7 +33,7 @@ namespace org.w3c.dom
      */
     public interface Element : Node
     {
-        /**
+         /*
          * The name of the element. For example, in: 
          * <pre> &lt;elementExample 
          * id="demo"&gt; ... &lt;/elementExample&gt; , </pre>
@@ -46,7 +46,7 @@ namespace org.w3c.dom
          */
         String getTagName();
 
-        /**
+         /*
          * Retrieves an attribute value by name.
          * @param nameThe name of the attribute to retrieve.
          * @return The <code>Attr</code> value as a string, or the empty string 
@@ -54,7 +54,7 @@ namespace org.w3c.dom
          */
         String getAttribute(String name);
 
-        /**
+         /*
          * Adds a new attribute. If an attribute with that name is already present 
          * in the element, its value is changed to be that of the value 
          * parameter. This value is a simple string; it is not parsed as it is 
@@ -78,7 +78,7 @@ namespace org.w3c.dom
         void setAttribute(String name,
                                  String value);//                             throws DOMException;
 
-        /**
+         /*
          * Removes an attribute by name. If the removed attribute is known to have 
          * a default value, an attribute immediately appears containing the 
          * default value as well as the corresponding namespace URI, local name, 
@@ -91,7 +91,7 @@ namespace org.w3c.dom
          */
         void removeAttribute(String name);//                                throws DOMException;
 
-        /**
+         /*
          * Retrieves an attribute node by name.
          * <br>To retrieve an attribute node by qualified name and namespace URI, 
          * use the <code>getAttributeNodeNS</code> method.
@@ -103,7 +103,7 @@ namespace org.w3c.dom
          */
         Attr getAttributeNode(String name);
 
-        /**
+         /*
          * Adds a new attribute node. If an attribute with that name (
          * <code>nodeName</code>) is already present in the element, it is 
          * replaced by the new one.
@@ -124,7 +124,7 @@ namespace org.w3c.dom
          */
         Attr setAttributeNode(Attr newAttr);//                                 throws DOMException;
 
-        /**
+         /*
          * Removes the specified attribute node. If the removed <code>Attr</code> 
          * has a default value it is immediately replaced. The replacing 
          * attribute has the same namespace URI and local name, as well as the 
@@ -139,7 +139,7 @@ namespace org.w3c.dom
          */
         Attr removeAttributeNode(Attr oldAttr);//                                    throws DOMException;
 
-        /**
+         /*
          * Returns a <code>NodeList</code> of all descendant <code>Elements</code> 
          * with a given tag name, in the order in which they are encountered in 
          * a preorder traversal of this <code>Element</code> tree.
@@ -149,7 +149,7 @@ namespace org.w3c.dom
          */
         NodeList getElementsByTagName(String name);
 
-        /**
+         /*
          * Retrieves an attribute value by local name and namespace URI. HTML-only 
          * DOM implementations do not need to implement this method.
          * @param namespaceURIThe namespace URI of the attribute to retrieve.
@@ -161,7 +161,7 @@ namespace org.w3c.dom
         String getAttributeNS(String namespaceURI,
                                      String localName);
 
-        /**
+         /*
          * Adds a new attribute. If an attribute with the same local name and 
          * namespace URI is already present on the element, its prefix is 
          * changed to be the prefix part of the <code>qualifiedName</code>, and 
@@ -201,7 +201,7 @@ namespace org.w3c.dom
                                    String qualifiedName,
                                    String value);//                               throws DOMException;
 
-        /**
+         /*
          * Removes an attribute by local name and namespace URI. If the removed 
          * attribute has a default value it is immediately replaced. The 
          * replacing attribute has the same namespace URI and local name, as 
@@ -216,7 +216,7 @@ namespace org.w3c.dom
         void removeAttributeNS(String namespaceURI,
                                       String localName);//                                  throws DOMException;
 
-        /**
+         /*
          * Retrieves an <code>Attr</code> node by local name and namespace URI. 
          * HTML-only DOM implementations do not need to implement this method.
          * @param namespaceURIThe namespace URI of the attribute to retrieve.
@@ -229,7 +229,7 @@ namespace org.w3c.dom
         Attr getAttributeNodeNS(String namespaceURI,
                                        String localName);
 
-        /**
+         /*
          * Adds a new attribute. If an attribute with that local name and that 
          * namespace URI is already present in the element, it is replaced by 
          * the new one.
@@ -251,7 +251,7 @@ namespace org.w3c.dom
          */
         Attr setAttributeNodeNS(Attr newAttr);//                                   throws DOMException;
 
-        /**
+         /*
          * Returns a <code>NodeList</code> of all the descendant 
          * <code>Elements</code> with a given local name and namespace URI in 
          * the order in which they are encountered in a preorder traversal of 
@@ -268,7 +268,7 @@ namespace org.w3c.dom
         NodeList getElementsByTagNameNS(String namespaceURI,
                                                String localName);
 
-        /**
+         /*
          * Returns <code>true</code> when an attribute with a given name is 
          * specified on this element or has a default value, <code>false</code> 
          * otherwise.
@@ -280,7 +280,7 @@ namespace org.w3c.dom
          */
         bool hasAttribute(String name);
 
-        /**
+         /*
          * Returns <code>true</code> when an attribute with a given local name and 
          * namespace URI is specified on this element or has a default value, 
          * <code>false</code> otherwise. HTML-only DOM implementations do not 

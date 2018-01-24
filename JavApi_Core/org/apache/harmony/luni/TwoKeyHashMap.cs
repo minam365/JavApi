@@ -19,7 +19,7 @@ using org.apache.harmony.luni.util;
 namespace org.apache.harmony.luni
 {
 
-    /**
+     /*
      * 
      * Reductive hash with two keys
      * 
@@ -41,7 +41,7 @@ namespace org.apache.harmony.luni
         private float loadFactor;
         int threshold = 0;
 
-        /**
+         /*
          * Constructs an empty HashMap
          */
         public TwoKeyHashMap() :
@@ -49,7 +49,7 @@ namespace org.apache.harmony.luni
         {
         }
 
-        /**
+         /*
          * Constructs an empty HashMap
          * 
          * @param initialCapacity
@@ -59,7 +59,7 @@ namespace org.apache.harmony.luni
         {
         }
 
-        /**
+         /*
          * Constructs an empty HashMap
          * 
          * @param initialCapacity
@@ -86,7 +86,7 @@ namespace org.apache.harmony.luni
             arr = new Entry<E, K, V>[arrSize + 1];
         }
 
-        /**
+         /*
          * Returns a collection view of the values
          */
         public override java.util.Collection<V> values()
@@ -98,7 +98,7 @@ namespace org.apache.harmony.luni
             return valuesJ;
         }
 
-        /**
+         /*
          * Returns a collection view of the mappings
          */
         public override java.util.Set<java.util.MapNS.Entry<String, V>> entrySet()
@@ -110,7 +110,7 @@ namespace org.apache.harmony.luni
             return entrySetJ;
         }
 
-        /**
+         /*
          * Clears the map
          */
         public override void clear()
@@ -120,7 +120,7 @@ namespace org.apache.harmony.luni
             java.util.Arrays<Object>.fill(arr, 0, arr.Length, null);
         }
 
-        /**
+         /*
          * Removes the mapping for the keys
          * 
          * @param key1
@@ -133,7 +133,7 @@ namespace org.apache.harmony.luni
             return (V)(null != e ? e.value : default(V));
         }
 
-        /**
+         /*
          * Associates the specified value with the specified keys in this map
          * 
          * @param key1
@@ -189,7 +189,7 @@ namespace org.apache.harmony.luni
             return default(V);
         }
 
-        /**
+         /*
          * Rehash the map
          * 
          */
@@ -229,7 +229,7 @@ namespace org.apache.harmony.luni
             arr = newArr;
         }
 
-        /**
+         /*
          * Answers whether this map contains a mapping for the specified keys.
          * 
          * @param key1 first key
@@ -242,7 +242,7 @@ namespace org.apache.harmony.luni
             return findEntry(key1, key2) != null;
         }
 
-        /**
+         /*
          * Return the value by keys
          * 
          * @param key1
@@ -259,7 +259,7 @@ namespace org.apache.harmony.luni
             return default(V);
         }
 
-        /**
+         /*
          * Returns true if this map contains no key-value mappings
          */
         public override bool isEmpty()
@@ -267,7 +267,7 @@ namespace org.apache.harmony.luni
             return sizeJ == 0;
         }
 
-        /**
+         /*
          * Returns the number of mappings
          */
         public override int size()
@@ -275,7 +275,7 @@ namespace org.apache.harmony.luni
             return sizeJ;
         }
 
-        /**
+         /*
          * Creates new entry
          * 
          * @param hashCode
@@ -291,7 +291,7 @@ namespace org.apache.harmony.luni
             return new Entry<E, K, V>(hashCode, key1, key2, value, next);
         }
 
-        /**
+         /*
          * Creates entries iterator
          * 
          * @return
@@ -301,7 +301,7 @@ namespace org.apache.harmony.luni
             return new EntryIteratorImpl(this);
         }
 
-        /**
+         /*
          * Creates values iterator
          * 
          * @return
@@ -311,7 +311,7 @@ namespace org.apache.harmony.luni
             return new ValueIteratorImpl(this);
         }
 
-        /**
+         /*
          * Entry implementation for the TwoKeyHashMap class
          * 
          */
@@ -610,7 +610,7 @@ namespace org.apache.harmony.luni
             return null;
         }
 
-        /**
+         /*
          * An instance is returned by the values() call.
          */
         class ValuesCollectionImpl : java.util.AbstractCollection<V>

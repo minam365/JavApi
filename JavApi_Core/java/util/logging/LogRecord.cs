@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.logging
 {
 
-/**
+ /*
  * A {@code LogRecord} object represents a logging request. It is passed between
  * the logging framework and individual logging handlers. Client applications
  * should not modify a {@code LogRecord} object that has been passed into the
@@ -53,70 +53,70 @@ public class LogRecord : java.io.Serializable {
     // The base id as the starting point for thread ID allocation.
     private static int initThreadId = 0;
 
-    /**
+     /*
      * The logging level.
      * 
      * @serial
      */
     private Level level;
 
-    /**
+     /*
      * The sequence number.
      * 
      * @serial
      */
     private long sequenceNumber;
 
-    /**
+     /*
      * The name of the class that issued the logging call.
      * 
      * @serial
      */
     private String sourceClassName;
 
-    /**
+     /*
      * The name of the method that issued the logging call.
      * 
      * @serial
      */
     private String sourceMethodName;
 
-    /**
+     /*
      * The original message text.
      * 
      * @serial
      */
     private String message;
 
-    /**
+     /*
      * The ID of the thread that issued the logging call.
      * 
      * @serial
      */
     private int threadID;
 
-    /**
+     /*
      * The time that the event occurred, in milliseconds since 1970.
      * 
      * @serial
      */
     private long millis;
 
-    /**
+     /*
      * The associated {@code Throwable} object if any.
      * 
      * @serial
      */
     private java.lang.Throwable thrown;
 
-    /**
+     /*
      * The name of the source logger.
      * 
      * @serial
      */
     private String loggerName;
 
-    /**
+     /*
      * The name of the resource bundle used to localize the log message.
      * 
      * @serial
@@ -135,7 +135,7 @@ public class LogRecord : java.io.Serializable {
         [NonSerialized]
     private bool sourceInited;
 
-    /**
+     /*
      * Constructs a {@code LogRecord} object using the supplied the logging
      * level and message. The millis property is set to the current time. The
      * sequence property is set to a new unique value, allocated in increasing
@@ -178,7 +178,7 @@ public class LogRecord : java.io.Serializable {
         this.thrown = null;
     }
 
-    /**
+     /*
      * Gets the logging level.
      * 
      * @return the logging level.
@@ -187,7 +187,7 @@ public class LogRecord : java.io.Serializable {
         return level;
     }
 
-    /**
+     /*
      * Sets the logging level.
      * 
      * @param level
@@ -203,7 +203,7 @@ public class LogRecord : java.io.Serializable {
         this.level = level;
     }
 
-    /**
+     /*
      * Gets the name of the logger.
      * 
      * @return the logger name.
@@ -212,7 +212,7 @@ public class LogRecord : java.io.Serializable {
         return loggerName;
     }
 
-    /**
+     /*
      * Sets the name of the logger.
      * 
      * @param loggerName
@@ -222,7 +222,7 @@ public class LogRecord : java.io.Serializable {
         this.loggerName = loggerName;
     }
 
-    /**
+     /*
      * Gets the raw message.
      * 
      * @return the raw message, may be {@code null}.
@@ -231,7 +231,7 @@ public class LogRecord : java.io.Serializable {
         return message;
     }
 
-    /**
+     /*
      * Sets the raw message. When this record is formatted by a logger that has
      * a localization resource bundle that contains an entry for {@code message},
      * then the raw message is replaced with its localized version.
@@ -243,7 +243,7 @@ public class LogRecord : java.io.Serializable {
         this.message = message;
     }
 
-    /**
+     /*
      * Gets the time when this event occurred, in milliseconds since 1970.
      * 
      * @return the time when this event occurred, in milliseconds since 1970.
@@ -252,7 +252,7 @@ public class LogRecord : java.io.Serializable {
         return millis;
     }
 
-    /**
+     /*
      * Sets the time when this event occurred, in milliseconds since 1970.
      * 
      * @param millis
@@ -262,7 +262,7 @@ public class LogRecord : java.io.Serializable {
         this.millis = millis;
     }
 
-    /**
+     /*
      * Gets the parameters.
      * 
      * @return the array of parameters or {@code null} if there are no
@@ -272,7 +272,7 @@ public class LogRecord : java.io.Serializable {
         return parameters;
     }
 
-    /**
+     /*
      * Sets the parameters.
      * 
      * @param parameters
@@ -282,7 +282,7 @@ public class LogRecord : java.io.Serializable {
         this.parameters = parameters;
     }
 
-    /**
+     /*
      * Gets the resource bundle used to localize the raw message during
      * formatting.
      * 
@@ -293,7 +293,7 @@ public class LogRecord : java.io.Serializable {
         return resourceBundle;
     }
 
-    /**
+     /*
      * Sets the resource bundle used to localize the raw message during
      * formatting.
      *
@@ -304,7 +304,7 @@ public class LogRecord : java.io.Serializable {
         this.resourceBundle = resourceBundle;
     }
 
-    /**
+     /*
      * Gets the name of the resource bundle.
      * 
      * @return the name of the resource bundle, {@code null} if none is
@@ -314,7 +314,7 @@ public class LogRecord : java.io.Serializable {
         return resourceBundleName;
     }
 
-    /**
+     /*
      * Sets the name of the resource bundle.
      * 
      * @param resourceBundleName
@@ -324,7 +324,7 @@ public class LogRecord : java.io.Serializable {
         this.resourceBundleName = resourceBundleName;
     }
 
-    /**
+     /*
      * Gets the sequence number.
      * 
      * @return the sequence number.
@@ -333,7 +333,7 @@ public class LogRecord : java.io.Serializable {
         return sequenceNumber;
     }
 
-    /**
+     /*
      * Sets the sequence number. It is usually not necessary to call this method
      * to change the sequence number because the number is allocated when this
      * instance is constructed.
@@ -345,7 +345,7 @@ public class LogRecord : java.io.Serializable {
         this.sequenceNumber = sequenceNumber;
     }
 
-    /**
+     /*
      * Gets the name of the class that is the source of this log record. This
      * information can be changed, may be {@code null} and is untrusted.
      * 
@@ -384,7 +384,7 @@ public class LogRecord : java.io.Serializable {
         }
     }
 
-    /**
+     /*
      * Sets the name of the class that is the source of this log record.
      * 
      * @param sourceClassName
@@ -396,7 +396,7 @@ public class LogRecord : java.io.Serializable {
         this.sourceClassName = sourceClassName;
     }
 
-    /**
+     /*
      * Gets the name of the method that is the source of this log record.
      * 
      * @return the name of the source method of this log record.
@@ -406,7 +406,7 @@ public class LogRecord : java.io.Serializable {
         return sourceMethodName;
     }
 
-    /**
+     /*
      * Sets the name of the method that is the source of this log record.
      * 
      * @param sourceMethodName
@@ -418,7 +418,7 @@ public class LogRecord : java.io.Serializable {
         this.sourceMethodName = sourceMethodName;
     }
 
-    /**
+     /*
      * Gets a unique ID of the thread originating the log record. Every thread
      * becomes a different ID.
      * <p>
@@ -431,7 +431,7 @@ public class LogRecord : java.io.Serializable {
         return threadID;
     }
 
-    /**
+     /*
      * Sets the ID of the thread originating this log record.
      * 
      * @param threadID
@@ -441,7 +441,7 @@ public class LogRecord : java.io.Serializable {
         this.threadID = threadID;
     }
 
-    /**
+     /*
      * Gets the {@code Throwable} object associated with this log record.
      * 
      * @return the {@code Throwable} object associated with this log record.
@@ -450,7 +450,7 @@ public class LogRecord : java.io.Serializable {
         return thrown;
     }
 
-    /**
+     /*
      * Sets the {@code Throwable} object associated with this log record.
      * 
      * @param thrown

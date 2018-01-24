@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-/**
+ /*
  * An {@code UnknownFormatFlagsException} will be thrown if there is
  * an unknown flag.
  * 
@@ -31,7 +31,7 @@ public class UnknownFormatFlagsException : IllegalFormatException {
 
     private String flags;
 
-    /**
+     /*
      * Constructs a new {@code UnknownFormatFlagsException} with the specified
      * flags.
      * 
@@ -45,7 +45,7 @@ public class UnknownFormatFlagsException : IllegalFormatException {
         flags = f;
     }
 
-    /**
+     /*
      * Returns the flags associated with the exception.
      * 
      * @return the flags associated with the exception.
@@ -54,7 +54,7 @@ public class UnknownFormatFlagsException : IllegalFormatException {
         return flags;
     }
 
-    /**
+     /*
      * Returns the message associated with the exception.
      * 
      * @return the message associated with the exception.

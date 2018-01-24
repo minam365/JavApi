@@ -15,7 +15,7 @@
 
 namespace biz.ritter.javapi.security
 {
-    /**
+     /*
      * {@code PublicKey} is the common interface for public keys.
      * 
      * @see PrivateKey

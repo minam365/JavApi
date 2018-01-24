@@ -30,7 +30,7 @@ namespace biz.ritter.javapi.lang
 
         private const long serialVersionUID = 1054362542914539689L;
 
-        /**
+         /*
          * Constructs a new {@code ClassCircularityError} that include the current
          * stack trace.
          */

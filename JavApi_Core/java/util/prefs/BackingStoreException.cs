@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.prefs
 {
 
-    /**
+     /*
      * An exception to indicate that an error was encountered while accessing the
      * backing store.
      * 
@@ -28,7 +28,7 @@ namespace biz.ritter.javapi.util.prefs
 
         private const long serialVersionUID = 859796500401108469L;
 
-        /**
+         /*
          * Constructs a new {@code BackingStoreException} instance with a detailed
          * exception message.
          * 
@@ -40,7 +40,7 @@ namespace biz.ritter.javapi.util.prefs
         {
         }
 
-        /**
+         /*
          * Constructs a new {@code BackingStoreException} instance with a nested
          * {@code Throwable}.
          * 

@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.logging
 {
 
-/**
+ /*
  * A handler that writes log messages to the standard output stream
  * {@code System.err}.
  * <p>
@@ -43,13 +43,13 @@ namespace biz.ritter.javapi.util.logging
  */
 public class ConsoleHandler : StreamHandler {
 
-    /**
+     /*
      * Constructs a {@code ConsoleHandler} object.
      */
     public ConsoleHandler() :base (java.lang.SystemJ.err){
     }
 
-    /**
+     /*
      * Closes this handler. The {@code System.err} is flushed but not closed.
      */
     
@@ -57,7 +57,7 @@ public class ConsoleHandler : StreamHandler {
         base.close(false);
     }
 
-    /**
+     /*
      * Logs a record if necessary. A flush operation will be done.
      * 
      * @param record

@@ -22,7 +22,7 @@ using javax = biz.ritter.javapix;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * {@code SimpleTimeZone} is a concrete subclass of {@code TimeZone}
      * that represents a time zone for use with a Gregorian calendar. This class
      * does not handle historical changes.
@@ -53,19 +53,19 @@ namespace biz.ritter.javapi.util
         private const int DOM_MODE = 1, DOW_IN_MONTH_MODE = 2,
                 DOW_GE_DOM_MODE = 3, DOW_LE_DOM_MODE = 4;
 
-        /**
+         /*
          * The constant for representing a start or end time in GMT time mode.
          */
         public const int UTC_TIME = 2;
 
-        /**
+         /*
          * The constant for representing a start or end time in standard local time mode,
          * based on timezone's raw offset from GMT; does not include Daylight
          * savings.
          */
         public const int STANDARD_TIME = 1;
 
-        /**
+         /*
          * The constant for representing a start or end time in local wall clock time
          * mode, based on timezone's adjusted offset from GMT; includes
          * Daylight savings.
@@ -82,7 +82,7 @@ namespace biz.ritter.javapi.util
         private readonly bool isSimple;
 
 
-        /**
+         /*
          * Returns a new {@code SimpleTimeZone} with the same ID, {@code rawOffset} and daylight
          * savings time rules as this SimpleTimeZone.
          * 
@@ -99,7 +99,7 @@ namespace biz.ritter.javapi.util
             return zone;
         }
 
-        /**
+         /*
          * Compares the specified object to this {@code SimpleTimeZone} and returns whether they
          * are equal. The object must be an instance of {@code SimpleTimeZone} and have the
          * same internal data.
@@ -144,7 +144,7 @@ namespace biz.ritter.javapi.util
             return rawOffset;
         }
 
-        /**
+         /*
          * Returns an integer hash code for the receiver. Objects which are equal
          * return the same value for this method.
          * 
@@ -199,7 +199,7 @@ namespace biz.ritter.javapi.util
             return year % 4 == 0;
         }
 
-        /**
+         /*
          * Sets the daylight savings offset in milliseconds for this {@code SimpleTimeZone}.
          * 
          * @param milliseconds
@@ -334,7 +334,7 @@ namespace biz.ritter.javapi.util
             }
         }
 
-        /**
+         /*
          * Sets the starting year for daylight savings time in this {@code SimpleTimeZone}.
          * Years before this start year will always be in standard time.
          * 
@@ -347,7 +347,7 @@ namespace biz.ritter.javapi.util
             useDaylight = true;
         }
 
-        /**
+         /*
          * Returns the string representation of this {@code SimpleTimeZone}.
          * 
          * @return the string representation of this {@code SimpleTimeZone}.
@@ -388,7 +388,7 @@ namespace biz.ritter.javapi.util
         }
 
 
-        /**
+         /*
          * Constructs a {@code SimpleTimeZone} with the given base time zone offset from GMT
          * and time zone ID. Timezone IDs can be obtained from
          * {@code TimeZone.getAvailableIDs}. Normally you should use {@code TimeZone.getDefault} to
@@ -418,7 +418,7 @@ namespace biz.ritter.javapi.util
         }
 
 
-        /**
+         /*
          * Constructs a {@code SimpleTimeZone} with the given base time zone offset from GMT,
          * time zone ID, and times to start and end the daylight savings time. Timezone IDs can
          * be obtained from {@code TimeZone.getAvailableIDs}. Normally you should use
@@ -496,7 +496,7 @@ namespace biz.ritter.javapi.util
         {
         }
 
-        /**
+         /*
          * Constructs a {@code SimpleTimeZone} with the given base time zone offset from GMT,
          * time zone ID, times to start and end the daylight savings time, and
          * the daylight savings time difference in milliseconds.
@@ -570,7 +570,7 @@ namespace biz.ritter.javapi.util
              */
         }
 
-        /**
+         /*
          * Construct a {@code SimpleTimeZone} with the given base time zone offset from GMT,
          * time zone ID, times to start and end the daylight savings time including a
          * mode specifier, the daylight savings time difference in milliseconds.
@@ -630,7 +630,7 @@ namespace biz.ritter.javapi.util
         }
 
 
-        /**
+         /*
          * Gets the offset from GMT of this {@code TimeZone} for the specified date and
          * time. The offset includes daylight savings time if the specified date and
          * time are within the daylight savings time period.
@@ -656,7 +656,7 @@ namespace biz.ritter.javapi.util
             throw new java.lang.UnsupportedOperationException("Not yet implemented");
         }
 
-        /**
+         /*
          * Returns whether the specified {@code Date} is in the daylight savings time period for
          * this {@code TimeZone}.
          * 
@@ -670,7 +670,7 @@ namespace biz.ritter.javapi.util
             throw new java.lang.UnsupportedOperationException("Not yet implemented");
         }
 
-        /**
+         /*
          * Sets the offset for standard time from GMT for this {@code TimeZone}.
          * 
          * @param offset

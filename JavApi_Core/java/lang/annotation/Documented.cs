@@ -17,7 +17,7 @@
 
 namespace biz.ritter.javapi.lang.annotation
 {
-	/**
+	 /*
  * Defines a meta-annotation for indicating that an annotation is documented and
  * considered part of the public API.
  *

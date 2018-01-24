@@ -17,7 +17,7 @@ namespace biz.ritter.javapi.lang.reflect
 {
     public class AccessibleObject
     {
-        /**
+         /*
          * Attempts to set the value of the accessible flag. Setting this flag to
          * false will enable access checks, setting to true will disable them. If
          * there is a security manager, checkPermission is called with a

@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang{
 
-/**
+ /*
  * Thrown when the virtual machine notices that a program tries to reference,
  * on a class or object, a field that does not exist.
  */
@@ -24,7 +24,7 @@ public class NoSuchFieldException : java.lang.Exception {
 
     private const long serialVersionUID = -6143714805279938260L;
 
-    /**
+     /*
      * Constructs a new {@code NoSuchFieldException} that includes the current
      * stack trace.
      */
@@ -32,7 +32,7 @@ public class NoSuchFieldException : java.lang.Exception {
         
     }
 
-    /**
+     /*
      * Constructs a new {@code NoSuchFieldException} with the current stack
      * trace and the specified detail message.
      * 

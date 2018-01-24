@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.nio.charset.spi
 {
 
-    /**
+     /*
      * The service provider class for character sets.
      */
     public abstract class CharsetProvider {
@@ -26,7 +26,7 @@ namespace biz.ritter.javapi.nio.charset.spi
         // The permission required to construct a new provider.
         //private static RuntimePermission CONSTRUCT_PERM = new RuntimePermission("charsetProvider"); //$NON-NLS-1$
 
-        /**
+         /*
          * Constructor for subclassing with concrete types.
          * 
          * @throws SecurityException
@@ -39,14 +39,14 @@ namespace biz.ritter.javapi.nio.charset.spi
                 securityManager.checkPermission(CONSTRUCT_PERM);*/
         }
 
-        /**
+         /*
          * Returns an iterator over all the available charsets.
          * 
          * @return the iterator.
          */
         public abstract java.util.Iterator<java.nio.charset.Charset> charsets();
 
-        /**
+         /*
          * Returns the named charset.
          * <p>
          * If the charset is unavailable the method returns <code>null</code>.

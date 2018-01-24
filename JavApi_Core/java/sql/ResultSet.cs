@@ -16,7 +16,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.sql
 {
-    /**
+     /*
      * An interface for an object which represents a database table entry, returned
      * as the result of the query to the database.
      * <p/>
@@ -76,7 +76,7 @@ namespace biz.ritter.javapi.sql
     public interface ResultSet : Wrapper
     {
 
-        /**
+         /*
          * Moves the cursor to a specified row number in the {@code ResultSet}.
          * 
          * @param row
@@ -89,7 +89,7 @@ namespace biz.ritter.javapi.sql
          */
         bool absolute(int row);// throws SQLException;
 
-        /**
+         /*
          * Moves the cursor to the end of the {@code ResultSet}, after the last row.
          * 
          * @throws SQLException
@@ -97,7 +97,7 @@ namespace biz.ritter.javapi.sql
          */
         void afterLast();// throws SQLException;
 
-        /**
+         /*
          * Moves the cursor to the start of the {@code ResultSet}, before the first
          * row.
          * 
@@ -106,7 +106,7 @@ namespace biz.ritter.javapi.sql
          */
         void beforeFirst();// throws SQLException;
 
-        /**
+         /*
          * Cancels any updates made to the current row in the {@code ResultSet}.
          * 
          * @throws SQLException
@@ -114,7 +114,7 @@ namespace biz.ritter.javapi.sql
          */
         void cancelRowUpdates();// throws SQLException;
 
-        /**
+         /*
          * Clears all warnings related to this {@code ResultSet}.
          * 
          * @throws SQLException
@@ -122,7 +122,7 @@ namespace biz.ritter.javapi.sql
          */
         void clearWarnings();// throws SQLException;
 
-        /**
+         /*
          * Releases this {@code ResultSet}'s database and JDBC resources. You are
          * strongly advised to use this method rather than relying on the release
          * being done when the {@code ResultSet}'s finalize method is called during
@@ -135,7 +135,7 @@ namespace biz.ritter.javapi.sql
          */
         void close();// throws SQLException;
 
-        /**
+         /*
          * Deletes the current row from the {@code ResultSet} and from the
          * underlying database.
          * 
@@ -144,7 +144,7 @@ namespace biz.ritter.javapi.sql
          */
         void deleteRow();// throws SQLException;
 
-        /**
+         /*
          * Gets the index number for a column in the {@code ResultSet} from the
          * provided column name.
          * 
@@ -157,7 +157,7 @@ namespace biz.ritter.javapi.sql
          */
         int findColumn(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Shifts the cursor position to the first row in the {@code ResultSet}.
          * 
          * @return {@code true} if the position is in a legitimate row, {@code
@@ -167,7 +167,7 @@ namespace biz.ritter.javapi.sql
          */
         bool first();// throws SQLException;
 
-        /**
+         /*
          * Gets the content of a column specified by column index in the current row
          * of this {@code ResultSet} as a {@code java.sql.Array}.
          * 
@@ -179,7 +179,7 @@ namespace biz.ritter.javapi.sql
          */
         Array getArray(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name as a {@code
          * java.sql.Array}.
          * 
@@ -191,7 +191,7 @@ namespace biz.ritter.javapi.sql
          */
         Array getArray(String colName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as an ASCII
          * character stream.
          * 
@@ -203,7 +203,7 @@ namespace biz.ritter.javapi.sql
          */
         java.io.InputStream getAsciiStream(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name as an ASCII character
          * stream.
          * 
@@ -215,7 +215,7 @@ namespace biz.ritter.javapi.sql
          */
         java.io.InputStream getAsciiStream(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a {@code
          * java.math.BigDecimal}.
          * 
@@ -227,7 +227,7 @@ namespace biz.ritter.javapi.sql
          */
         java.math.BigDecimal getBigDecimal(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a {@code
          * java.math.BigDecimal}.
          * 
@@ -244,7 +244,7 @@ namespace biz.ritter.javapi.sql
         java.math.BigDecimal getBigDecimal(int columnIndex, int scale)
                ;// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name, as a {@code
          * java.math.BigDecimal}.
          * 
@@ -256,7 +256,7 @@ namespace biz.ritter.javapi.sql
          */
         java.math.BigDecimal getBigDecimal(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name, as a {@code
          * java.math.BigDecimal}.
          * 
@@ -273,7 +273,7 @@ namespace biz.ritter.javapi.sql
         java.math.BigDecimal getBigDecimal(String columnName, int scale)
                ;// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a binary
          * stream.
          * <p/>
@@ -291,7 +291,7 @@ namespace biz.ritter.javapi.sql
          */
         java.io.InputStream getBinaryStream(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name as a binary stream.
          * <p/>
          * This method can be used to read {@code LONGVARBINARY} values. All of the
@@ -308,7 +308,7 @@ namespace biz.ritter.javapi.sql
          */
         java.io.InputStream getBinaryStream(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a {@code
          * java.sql.Blob} object.
          * 
@@ -320,7 +320,7 @@ namespace biz.ritter.javapi.sql
          */
         Blob getBlob(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name, as a {@code
          * java.sql.Blob} object.
          * 
@@ -332,7 +332,7 @@ namespace biz.ritter.javapi.sql
          */
         Blob getBlob(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a {@code bool}
          * .
          * 
@@ -345,7 +345,7 @@ namespace biz.ritter.javapi.sql
          */
         bool getBoolean(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name, as a {@code bool}
          * .
          * 
@@ -358,7 +358,7 @@ namespace biz.ritter.javapi.sql
          */
         bool getBoolean(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a {@code byte}.
          * 
          * @param columnIndex
@@ -370,7 +370,7 @@ namespace biz.ritter.javapi.sql
          */
         byte getByte(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name as a {@code byte}.
          * 
          * @param columnName
@@ -382,7 +382,7 @@ namespace biz.ritter.javapi.sql
          */
         byte getByte(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a byte array.
          * 
          * @param columnIndex
@@ -394,7 +394,7 @@ namespace biz.ritter.javapi.sql
          */
         byte[] getBytes(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name as a byte array.
          * 
          * @param columnName
@@ -406,7 +406,7 @@ namespace biz.ritter.javapi.sql
          */
         byte[] getBytes(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a {@code
          * java.io.Reader} object.
          * 
@@ -420,7 +420,7 @@ namespace biz.ritter.javapi.sql
          */
         java.io.Reader getCharacterStream(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name as a {@code
          * java.io.Reader} object.
          * 
@@ -433,7 +433,7 @@ namespace biz.ritter.javapi.sql
          */
         java.io.Reader getCharacterStream(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a {@code
          * java.sql.Clob}.
          * 
@@ -446,7 +446,7 @@ namespace biz.ritter.javapi.sql
          */
         Clob getClob(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name as a {@code
          * java.sql.Clob}.
          * 
@@ -459,7 +459,7 @@ namespace biz.ritter.javapi.sql
          */
         Clob getClob(String colName);// throws SQLException;
 
-        /**
+         /*
          * Gets the concurrency mode of this {@code ResultSet}.
          * 
          * @return the concurrency mode - one of: {@code ResultSet.CONCUR_READ_ONLY}
@@ -469,7 +469,7 @@ namespace biz.ritter.javapi.sql
          */
         int getConcurrency();// throws SQLException;
 
-        /**
+         /*
          * Gets the name of the SQL cursor of this {@code ResultSet}.
          * 
          * @return the SQL cursor name.
@@ -478,7 +478,7 @@ namespace biz.ritter.javapi.sql
          */
         String getCursorName();// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a {@code
          * java.sql.Date}.
          * 
@@ -491,7 +491,7 @@ namespace biz.ritter.javapi.sql
          */
         java.sql.Date getDate(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a {@code
          * java.sql.Date}. This method uses a supplied calendar to compute the Date.
          * 
@@ -506,7 +506,7 @@ namespace biz.ritter.javapi.sql
          */
         java.sql.Date getDate(int columnIndex, java.util.Calendar cal);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name as a {@code
          * java.sql.Date}.
          * 
@@ -519,7 +519,7 @@ namespace biz.ritter.javapi.sql
          */
         java.sql.Date getDate(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name, as a {@code
          * java.sql.Date} object.
          * 
@@ -534,7 +534,7 @@ namespace biz.ritter.javapi.sql
          */
         java.sql.Date getDate(String columnName, java.util.Calendar cal);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a {@code double}
          * value.
          * 
@@ -547,7 +547,7 @@ namespace biz.ritter.javapi.sql
          */
         double getDouble(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name as a {@code double}
          * value.
          * 
@@ -560,7 +560,7 @@ namespace biz.ritter.javapi.sql
          */
         double getDouble(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Gets the direction in which rows are fetched for this {@code ResultSet}
          * object.
          * 
@@ -574,7 +574,7 @@ namespace biz.ritter.javapi.sql
          */
         int getFetchDirection();// throws SQLException;
 
-        /**
+         /*
          * Gets the fetch size (in number of rows) for this {@code ResultSet}.
          * 
          * @return the fetch size as an int
@@ -583,7 +583,7 @@ namespace biz.ritter.javapi.sql
          */
         int getFetchSize();// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a {@code float}
          * value.
          * 
@@ -596,7 +596,7 @@ namespace biz.ritter.javapi.sql
          */
         float getFloat(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name as a {@code float}
          * value.
          * 
@@ -609,7 +609,7 @@ namespace biz.ritter.javapi.sql
          */
         float getFloat(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as an {@code int}
          * value.
          * 
@@ -622,7 +622,7 @@ namespace biz.ritter.javapi.sql
          */
         int getInt(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name, as an {@code int}
          * value.
          * 
@@ -635,7 +635,7 @@ namespace biz.ritter.javapi.sql
          */
         int getInt(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a {@code long}
          * value.
          * 
@@ -648,7 +648,7 @@ namespace biz.ritter.javapi.sql
          */
         long getLong(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name, as a {@code long}
          * value.
          * 
@@ -661,7 +661,7 @@ namespace biz.ritter.javapi.sql
          */
         long getLong(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Gets the metadata for this {@code ResultSet}. This defines the number,
          * types and properties of the columns in the {@code ResultSet}.
          * 
@@ -672,7 +672,7 @@ namespace biz.ritter.javapi.sql
          */
         ResultSetMetaData getMetaData();// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified column as a Java {@code Object}. The type
          * of the returned object will be the default according to the column's SQL
          * type, following the JDBC specification for built-in types.
@@ -690,7 +690,7 @@ namespace biz.ritter.javapi.sql
          */
         Object getObject(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a Java {@code
          * Object}.
          * <p/>
@@ -711,7 +711,7 @@ namespace biz.ritter.javapi.sql
         Object getObject(int columnIndex, java.util.Map<String, java.lang.Class> map)
                ;// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a specified column as a Java {@code Object}. The type
          * of the returned object will be the default according to the column's SQL
          * type, following the JDBC specification for built-in types.
@@ -729,7 +729,7 @@ namespace biz.ritter.javapi.sql
          */
         Object getObject(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name as a Java {@code
          * Object}.
          * <p/>
@@ -749,7 +749,7 @@ namespace biz.ritter.javapi.sql
         Object getObject(String columnName, java.util.Map<String, java.lang.Class> map)
                ;// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a Java {@code
          * java.sql.Ref}.
          * 
@@ -761,7 +761,7 @@ namespace biz.ritter.javapi.sql
          */
         Ref getRef(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name as a Java {@code
          * java.sql.Ref}.
          * 
@@ -773,7 +773,7 @@ namespace biz.ritter.javapi.sql
          */
         Ref getRef(String colName);// throws SQLException;
 
-        /**
+         /*
          * Gets the number of the current row in the {@code ResultSet}. Row numbers
          * start at 1 for the first row.
          * 
@@ -784,7 +784,7 @@ namespace biz.ritter.javapi.sql
          */
         int getRow();// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a short value.
          * 
          * @param columnIndex
@@ -796,7 +796,7 @@ namespace biz.ritter.javapi.sql
          */
         short getShort(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name, as a short value.
          * 
          * @param columnName
@@ -808,7 +808,7 @@ namespace biz.ritter.javapi.sql
          */
         short getShort(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Gets the statement that produced this {@code ResultSet}. If the {@code
          * ResultSet} was not created by a statement (i.e. because it was returned
          * from one of the {@link DatabaseMetaData} methods), {@code null} is
@@ -821,7 +821,7 @@ namespace biz.ritter.javapi.sql
          */
         Statement getStatement();// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a String.
          * 
          * @param columnIndex
@@ -833,7 +833,7 @@ namespace biz.ritter.javapi.sql
          */
         String getString(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name, as a String.
          * 
          * @param columnName
@@ -845,7 +845,7 @@ namespace biz.ritter.javapi.sql
          */
         String getString(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a {@code
          * java.sql.Time} value.
          * 
@@ -858,7 +858,7 @@ namespace biz.ritter.javapi.sql
          */
         Time getTime(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a {@code
          * java.sql.Time} value. The supplied {@code Calendar} is used to 
          * map the SQL {@code Time} value to a Java Time value.
@@ -874,7 +874,7 @@ namespace biz.ritter.javapi.sql
          */
         Time getTime(int columnIndex, java.util.Calendar cal);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name, as a {@code
          * java.sql.Time} value.
          * 
@@ -887,7 +887,7 @@ namespace biz.ritter.javapi.sql
          */
         Time getTime(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index, as a {@code
          * java.sql.Time} value. The supplied {@code Calendar} is used to 
          * map the SQL {@code Time} value to a Java Time value.
@@ -903,7 +903,7 @@ namespace biz.ritter.javapi.sql
          */
         Time getTime(String columnName, java.util.Calendar cal);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a {@code
          * java.sql.Timestamp} value.
          * 
@@ -916,7 +916,7 @@ namespace biz.ritter.javapi.sql
          */
         Timestamp getTimestamp(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index, as a {@code
          * java.sql.Timestamp} value. The supplied Calendar is used when mapping
          * the SQL {@code Timestamp} value to a Java {@code Timestamp} value.
@@ -933,7 +933,7 @@ namespace biz.ritter.javapi.sql
         Timestamp getTimestamp(int columnIndex, java.util.Calendar cal)
                ;// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name, as a {@code
          * java.sql.Timestamp} value.
          * 
@@ -946,7 +946,7 @@ namespace biz.ritter.javapi.sql
          */
         Timestamp getTimestamp(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name, as a {@code
          * java.sql.Timestamp} value. The supplied Calendar is used when mapping
          * the SQL {@code Timestamp} value to a Java {@code Timestamp} value.
@@ -963,7 +963,7 @@ namespace biz.ritter.javapi.sql
         Timestamp getTimestamp(String columnName, java.util.Calendar cal)
                ;// throws SQLException;
 
-        /**
+         /*
          * Gets the type of the {@code ResultSet}.
          * 
          * @return The {@code ResultSet} type, one of:
@@ -977,7 +977,7 @@ namespace biz.ritter.javapi.sql
          */
         int getType();// throws SQLException;
 
-        /**
+         /*
          * Gets the value of the column as an {@code InputStream} of unicode
          * characters.
          * 
@@ -991,7 +991,7 @@ namespace biz.ritter.javapi.sql
          */
         java.io.InputStream getUnicodeStream(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of the column as an {@code InputStream} of Unicode
          * characters.
          * 
@@ -1005,7 +1005,7 @@ namespace biz.ritter.javapi.sql
          */
         java.io.InputStream getUnicodeStream(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column index as a {@code
          * java.net.URL}.
          * 
@@ -1017,7 +1017,7 @@ namespace biz.ritter.javapi.sql
          */
         java.net.URL getURL(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Gets the value of a column specified by column name as a {@code
          * java.net.URL} object.
          * 
@@ -1029,7 +1029,7 @@ namespace biz.ritter.javapi.sql
          */
         java.net.URL getURL(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Gets the first warning generated by calls on this {@code ResultSet}.
          * Subsequent warnings on this {@code ResultSet} are chained to the first
          * one.
@@ -1049,7 +1049,7 @@ namespace biz.ritter.javapi.sql
          */
         SQLWarning getWarnings();// throws SQLException;
 
-        /**
+         /*
          * Insert the insert row into the {@code ResultSet} and into the underlying
          * database. The cursor must be set to the Insert Row before this method is
          * invoked.
@@ -1062,7 +1062,7 @@ namespace biz.ritter.javapi.sql
          */
         void insertRow();// throws SQLException;
 
-        /**
+         /*
          * Gets if the cursor is after the last row of the {@code ResultSet}.
          * 
          * @return {@code true} if the cursor is after the last row in the {@code
@@ -1073,7 +1073,7 @@ namespace biz.ritter.javapi.sql
          */
         bool isAfterLast();// throws SQLException;
 
-        /**
+         /*
          * Gets if the cursor is before the first row of the {@code ResultSet}.
          * 
          * @return {@code true} if the cursor is before the first row in the {@code
@@ -1084,7 +1084,7 @@ namespace biz.ritter.javapi.sql
          */
         bool isBeforeFirst();// throws SQLException;
 
-        /**
+         /*
          * Gets if the cursor is on the first row of the {@code ResultSet}.
          * 
          * @return {@code true} if the cursor is on the first row in the {@code
@@ -1095,7 +1095,7 @@ namespace biz.ritter.javapi.sql
          */
         bool isFirst();// throws SQLException;
 
-        /**
+         /*
          * Gets if the cursor is on the last row of the {@code ResultSet}
          * 
          * @return {@code true} if the cursor is on the last row in the {@code
@@ -1106,7 +1106,7 @@ namespace biz.ritter.javapi.sql
          */
         bool isLast();// throws SQLException;
 
-        /**
+         /*
          * Shifts the cursor position to the last row of the {@code ResultSet}.
          * 
          * @return {@code true} if the new position is in a legitimate row, {@code
@@ -1116,7 +1116,7 @@ namespace biz.ritter.javapi.sql
          */
         bool last();// throws SQLException;
 
-        /**
+         /*
          * Moves the cursor to the remembered position, namely the 
          * row that was the current row before a call to {@code moveToInsertRow}.
          * This only applies if the cursor is on the Insert Row.
@@ -1126,7 +1126,7 @@ namespace biz.ritter.javapi.sql
          */
         void moveToCurrentRow();// throws SQLException;
 
-        /**
+         /*
          * Moves the cursor position to the Insert Row. The current position is
          * remembered and the cursor is positioned at the Insert Row. The columns in
          * the Insert Row should be filled in with the appropriate update methods,
@@ -1137,7 +1137,7 @@ namespace biz.ritter.javapi.sql
          */
         void moveToInsertRow();// throws SQLException;
 
-        /**
+         /*
          * Shifts the cursor position down one row in this {@code ResultSet} object.
          * <p/>
          * Any input streams associated with the current row are closed and any
@@ -1151,7 +1151,7 @@ namespace biz.ritter.javapi.sql
          */
         bool next();// throws SQLException;
 
-        /**
+         /*
          * Relocates the cursor position to the preceding row in this {@code
          * ResultSet}.
          * 
@@ -1162,7 +1162,7 @@ namespace biz.ritter.javapi.sql
          */
         bool previous();// throws SQLException;
 
-        /**
+         /*
          * Refreshes the current row with its most up to date value in the database.
          * Must not be called when the cursor is on the Insert Row.
          * <p/>
@@ -1176,7 +1176,7 @@ namespace biz.ritter.javapi.sql
          */
         void refreshRow();// throws SQLException;
 
-        /**
+         /*
          * Moves the cursor position up or down by a specified number of rows. If
          * the new position is beyond the start row (or end row), the cursor position is
          * set before the first row (or, respectively, after the last row).
@@ -1191,7 +1191,7 @@ namespace biz.ritter.javapi.sql
          */
         bool relative(int rows);// throws SQLException;
 
-        /**
+         /*
          * Indicates whether a row has been deleted. This method depends on whether
          * the JDBC driver and database can detect deletions.
          * 
@@ -1202,7 +1202,7 @@ namespace biz.ritter.javapi.sql
          */
         bool rowDeleted();// throws SQLException;
 
-        /**
+         /*
          * Indicates whether the current row has had an insertion operation. This
          * method depends on whether the JDBC driver and database can detect
          * insertions.
@@ -1214,7 +1214,7 @@ namespace biz.ritter.javapi.sql
          */
         bool rowInserted();// throws SQLException;
 
-        /**
+         /*
          * Indicates whether the current row has been updated. This method depends
          * on whether the JDBC driver and database can detect updates.
          * 
@@ -1225,7 +1225,7 @@ namespace biz.ritter.javapi.sql
          */
         bool rowUpdated();// throws SQLException;
 
-        /**
+         /*
          * Indicates which direction (forward/reverse) will be used to process the
          * rows of this {@code ResultSet} object. This is treated as a hint by the
          * JDBC driver.
@@ -1238,7 +1238,7 @@ namespace biz.ritter.javapi.sql
          */
         void setFetchDirection(int direction);// throws SQLException;
 
-        /**
+         /*
          * Indicates the number of rows to fetch from the database when extra rows
          * are required for this {@code ResultSet}. This used as a hint to the JDBC
          * driver.
@@ -1254,7 +1254,7 @@ namespace biz.ritter.javapi.sql
          */
         void setFetchSize(int rows);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with a {@code
          * java.sql.Array} value.
          * 
@@ -1267,7 +1267,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateArray(int columnIndex, Array x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with a {@code java.sql.Array}
          * value.
          * 
@@ -1280,7 +1280,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateArray(String columnName, Array x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with an ASCII stream value.
          * 
          * @param columnIndex
@@ -1295,7 +1295,7 @@ namespace biz.ritter.javapi.sql
         void updateAsciiStream(int columnIndex, java.io.InputStream x, int length)
                ;// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with an Ascii stream value.
          * 
          * @param columnName
@@ -1310,7 +1310,7 @@ namespace biz.ritter.javapi.sql
         void updateAsciiStream(String columnName, java.io.InputStream x, int length)
                ;// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with a {@code
          * java.sql.BigDecimal} value.
          * 
@@ -1324,7 +1324,7 @@ namespace biz.ritter.javapi.sql
         void updateBigDecimal(int columnIndex, java.math.BigDecimal x)
                ;// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with a {@code
          * java.sql.BigDecimal} value.
          * 
@@ -1338,7 +1338,7 @@ namespace biz.ritter.javapi.sql
         void updateBigDecimal(String columnName, java.math.BigDecimal x)
                ;// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with a binary stream value.
          * 
          * @param columnIndex
@@ -1353,7 +1353,7 @@ namespace biz.ritter.javapi.sql
         void updateBinaryStream(int columnIndex, java.io.InputStream x, int length)
                ;// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with a binary stream value.
          * 
          * @param columnName
@@ -1368,7 +1368,7 @@ namespace biz.ritter.javapi.sql
         void updateBinaryStream(String columnName, java.io.InputStream x, int length)
                ;// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with a {@code java.sql.Blob}
          * value.
          * 
@@ -1381,7 +1381,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateBlob(int columnIndex, Blob x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with a {@code java.sql.Blob}
          * value.
          * 
@@ -1394,7 +1394,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateBlob(String columnName, Blob x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with a {@code bool}
          * value.
          * 
@@ -1407,7 +1407,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateBoolean(int columnIndex, bool x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with a {@code bool} value.
          * 
          * @param columnName
@@ -1419,7 +1419,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateBoolean(String columnName, bool x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with a {@code byte} value.
          * 
          * @param columnIndex
@@ -1431,7 +1431,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateByte(int columnIndex, byte x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with a {@code byte} value.
          * 
          * @param columnName
@@ -1443,7 +1443,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateByte(String columnName, byte x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with a {@code byte} array
          * value.
          * 
@@ -1456,7 +1456,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateBytes(int columnIndex, byte[] x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with a byte array value.
          * 
          * @param columnName
@@ -1468,7 +1468,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateBytes(String columnName, byte[] x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with a character stream
          * value.
          * 
@@ -1484,7 +1484,7 @@ namespace biz.ritter.javapi.sql
         void updateCharacterStream(int columnIndex, java.io.Reader x, int length)
                ;// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with a character stream
          * value.
          * 
@@ -1500,7 +1500,7 @@ namespace biz.ritter.javapi.sql
         void updateCharacterStream(String columnName, java.io.Reader reader,
                 int length);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with a {@code java.sql.Clob}
          * value.
          * 
@@ -1513,7 +1513,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateClob(int columnIndex, Clob x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with a {@code java.sql.Clob}
          * value.
          * 
@@ -1526,7 +1526,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateClob(String columnName, Clob x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with a {@code java.sql.Date}
          * value.
          * 
@@ -1539,7 +1539,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateDate(int columnIndex, java.sql.Date x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with a {@code java.sql.Date}
          * value.
          * 
@@ -1552,7 +1552,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateDate(String columnName, java.sql.Date x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with a {@code double} value.
          * 
          * @param columnIndex
@@ -1564,7 +1564,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateDouble(int columnIndex, double x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with a {@code double} value.
          * 
          * @param columnName
@@ -1576,7 +1576,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateDouble(String columnName, double x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with a {@code float} value.
          * 
          * @param columnIndex
@@ -1588,7 +1588,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateFloat(int columnIndex, float x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with a {@code float} value.
          * 
          * @param columnName
@@ -1600,7 +1600,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateFloat(String columnName, float x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with an {@code int} value.
          * 
          * @param columnIndex
@@ -1612,7 +1612,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateInt(int columnIndex, int x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with an {@code int} value.
          * 
          * @param columnName
@@ -1624,7 +1624,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateInt(String columnName, int x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with a {@code long} value.
          * 
          * @param columnIndex
@@ -1636,7 +1636,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateLong(int columnIndex, long x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with a {@code long} value.
          * 
          * @param columnName
@@ -1648,7 +1648,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateLong(String columnName, long x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with a {@code null} value.
          * 
          * @param columnIndex
@@ -1658,7 +1658,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateNull(int columnIndex);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with a {@code null} value.
          * 
          * @param columnName
@@ -1668,7 +1668,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateNull(String columnName);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with an {@code Object}
          * value.
          * 
@@ -1681,7 +1681,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateObject(int columnIndex, Object x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with an {@code Object}
          * value.
          * 
@@ -1699,7 +1699,7 @@ namespace biz.ritter.javapi.sql
         void updateObject(int columnIndex, Object x, int scale)
                ;// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with an {@code Object} value.
          * 
          * @param columnName
@@ -1711,7 +1711,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateObject(String columnName, Object x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with an {@code Object} value.
          * 
          * @param columnName
@@ -1728,7 +1728,7 @@ namespace biz.ritter.javapi.sql
         void updateObject(String columnName, Object x, int scale)
                ;// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with a {@code java.sql.Ref}
          * value.
          * 
@@ -1741,7 +1741,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateRef(int columnIndex, Ref x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with a {@code java.sql.Ref}
          * value.
          * 
@@ -1754,7 +1754,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateRef(String columnName, Ref x);// throws SQLException;
 
-        /**
+         /*
          * Updates the database with the new contents of the current row of this
          * {@code ResultSet} object.
          * 
@@ -1763,7 +1763,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateRow();// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with a {@code short} value.
          * 
          * @param columnIndex
@@ -1775,7 +1775,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateShort(int columnIndex, short x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with a {@code short} value.
          * 
          * @param columnName
@@ -1787,7 +1787,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateShort(String columnName, short x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with a {@code String} value.
          * 
          * @param columnIndex
@@ -1799,7 +1799,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateString(int columnIndex, String x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with a {@code String} value.
          * 
          * @param columnName
@@ -1811,7 +1811,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateString(String columnName, String x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with a {@code Time} value.
          * 
          * @param columnIndex
@@ -1823,7 +1823,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateTime(int columnIndex, Time x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column name with a {@code Time} value.
          * 
          * @param columnName
@@ -1835,7 +1835,7 @@ namespace biz.ritter.javapi.sql
          */
         void updateTime(String columnName, Time x);// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by a column index with a {@code Timestamp}
          * value.
          * 
@@ -1849,7 +1849,7 @@ namespace biz.ritter.javapi.sql
         void updateTimestamp(int columnIndex, Timestamp x)
                ;// throws SQLException;
 
-        /**
+         /*
          * Updates a column specified by column name with a {@code Timestamp} value.
          * 
          * @param columnName
@@ -1862,7 +1862,7 @@ namespace biz.ritter.javapi.sql
         void updateTimestamp(String columnName, Timestamp x)
                ;// throws SQLException;
 
-        /**
+         /*
          * Determines whether the last column read from this {@code ResultSet}
          * contained SQL {@code NULL}.
          * 
@@ -1873,7 +1873,7 @@ namespace biz.ritter.javapi.sql
          */
         bool wasNull();// throws SQLException;
 
-        /**
+         /*
          * TODO
          * 
          * @param columnIndex
@@ -2009,61 +2009,61 @@ namespace biz.ritter.javapi.sql
     }
     public sealed class ResultSetConstants
     {
-        /**
+         /*
          * A constant used to indicate that a {@code ResultSet} object must be
          * closed when the method {@code Connection.commit} is invoked.
          */
         public const int CLOSE_CURSORS_AT_COMMIT = 2;
 
-        /**
+         /*
          * A constant used to indicate that a {@code ResultSet} object must not be
          * closed when the method {@code Connection.commit} is invoked.
          */
         public const int HOLD_CURSORS_OVER_COMMIT = 1;
 
-        /**
+         /*
          * A constant used to indicate the concurrency mode for a {@code ResultSet}
          * object that cannot be updated.
          */
         public const int CONCUR_READ_ONLY = 1007;
 
-        /**
+         /*
          * A constant used to indicate the concurrency mode for a {@code ResultSet}
          * object that can be updated.
          */
         public const int CONCUR_UPDATABLE = 1008;
 
-        /**
+         /*
          * A constant used to indicate processing of the rows of a {@code ResultSet}
          * in the forward direction, first to last.
          */
         public const int FETCH_FORWARD = 1000;
 
-        /**
+         /*
          * A constant used to indicate processing of the rows of a {@code ResultSet}
          * in the reverse direction, last to first.
          */
         public const int FETCH_REVERSE = 1001;
 
-        /**
+         /*
          * A constant used to indicate that the order of processing of the rows of a
          * {@code ResultSet} is unknown.
          */
         public const int FETCH_UNKNOWN = 1002;
 
-        /**
+         /*
          * A constant used to indicate a {@code ResultSet} object whose cursor can
          * only move forward.
          */
         public const int TYPE_FORWARD_ONLY = 1003;
 
-        /**
+         /*
          * A constant used to indicate a {@code ResultSet} object which is
          * scrollable but is insensitive to changes made by others.
          */
         public const int TYPE_SCROLL_INSENSITIVE = 1004;
 
-        /**
+         /*
          * A constant used to indicate a {@code ResultSet} object which is
          * scrollable and sensitive to changes made by others.
          */

@@ -8,7 +8,7 @@ using System;
 namespace org.xml.sax
 {
 
-    /**
+     /*
      * Basic interface for resolving entities.
      *
      * <blockquote>
@@ -70,7 +70,7 @@ namespace org.xml.sax
     {
 
 
-        /**
+         /*
          * Allow the application to resolve external entities.
          *
          * <p>The parser will call this method before opening any external

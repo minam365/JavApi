@@ -15,7 +15,7 @@ using System;
 
 namespace biz.ritter.javapi.util
 {
-    /**
+     /*
      * NavigableMap is a SortedMap with navigation methods answering the closest
      * matches for specified item.
      * 
@@ -26,21 +26,21 @@ namespace biz.ritter.javapi.util
      * @since 1.6
      */
     public interface NavigableMap<K, V> : SortedMap<K, V> {
-        /**
+         /*
          * Answers the entry with the smallest key, or null if the map is empty.
          * 
          * @return the entry with the smallest key, or null if the map is empty
          */
         MapNS.Entry<K, V> firstEntry();
 
-        /**
+         /*
          * Answers the entry with the biggest key, or null if the map is empty.
          * 
          * @return the entry with the biggest key, or null if the map is empty
          */
         MapNS.Entry<K, V> lastEntry();
 
-        /**
+         /*
          * Deletes and answers the entry with the smallest key, or null if the map
          * is empty.
          * 
@@ -48,7 +48,7 @@ namespace biz.ritter.javapi.util
          */
         MapNS.Entry<K, V> pollFirstEntry();
 
-        /**
+         /*
          * Deletes and answers the entry with the biggest key, or null if the map is
          * empty.
          * 
@@ -56,7 +56,7 @@ namespace biz.ritter.javapi.util
          */
         MapNS.Entry<K, V> pollLastEntry();
 
-        /**
+         /*
          * Answers an entry related with the smallest key greater than or equal to
          * the specified key, or null if no such key.
          * 
@@ -70,7 +70,7 @@ namespace biz.ritter.javapi.util
          */
         MapNS.Entry<K, V> ceilingEntry(K key);
 
-        /**
+         /*
          * Answers the smallest key greater than or equal to the specified key, or
          * null if no such key.
          * 
@@ -85,7 +85,7 @@ namespace biz.ritter.javapi.util
          */
         K ceilingKey(K key);
 
-        /**
+         /*
          * Answers an entry related with the smallest key greater than the specified
          * key, or null if no such key.
          * 
@@ -99,7 +99,7 @@ namespace biz.ritter.javapi.util
          */
         MapNS.Entry<K, V> higherEntry(K key);
 
-        /**
+         /*
          * Answers the smallest key greater than the specified key, or null if no
          * such key.
          * 
@@ -113,7 +113,7 @@ namespace biz.ritter.javapi.util
          */
         K higherKey(K key);
 
-        /**
+         /*
          * Answers an entry related with the biggest key less than or equal to the
          * specified key, or null if no such key.
          * 
@@ -127,7 +127,7 @@ namespace biz.ritter.javapi.util
          */
         MapNS.Entry<K, V> floorEntry(K key);
 
-        /**
+         /*
          * Answers the biggest key less than or equal to the specified key, or null
          * if no such key.
          * 
@@ -141,7 +141,7 @@ namespace biz.ritter.javapi.util
          */
         K floorKey(K key);
 
-        /**
+         /*
          * Answers an entry related with the biggest key less than the specified
          * key, or null if no such key.
          * 
@@ -155,7 +155,7 @@ namespace biz.ritter.javapi.util
          */
         MapNS.Entry<K, V> lowerEntry(K key);
 
-        /**
+         /*
          * Answers the biggest key less than the specified key, or null if no such
          * key.
          * 
@@ -169,28 +169,28 @@ namespace biz.ritter.javapi.util
          */
         K lowerKey(K key);
 
-        /**
+         /*
          * Answers a NavigableSet view of the keys in ascending order.
          * 
          * @return the navigable set view
          */
         NavigableSet<K> navigableKeySet();
 
-        /**
+         /*
          * Answers a reverse order view of the map.
          * 
          * @return the reverse order view of the map
          */
         NavigableMap<K, V> descendingMap();
 
-        /**
+         /*
          * Answers a NavigableSet view of the keys in descending order.
          * 
          * @return the navigable set view
          */
         NavigableSet<K> descendingKeySet();
 
-        /**
+         /*
          * Answers a view of part of the map whose keys is from startKey to endKey.
          * 
          * @param startKey
@@ -214,7 +214,7 @@ namespace biz.ritter.javapi.util
          */
         NavigableMap<K, V> subMap(K startKey, bool startInclusive, K endKey, bool endInclusive);
 
-        /**
+         /*
          * Answers a view of the head of the map whose keys are smaller than (or
          * equal to, depends on inclusive argument) endKey.
          * 
@@ -236,7 +236,7 @@ namespace biz.ritter.javapi.util
          */
         NavigableMap<K, V> headMap(K endKey, bool inclusive);
 
-        /**
+         /*
          * Answers a view of the tail of the map whose keys are bigger than (or
          * equal to, depends on inclusive argument) startKey.
          * 

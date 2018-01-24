@@ -18,14 +18,14 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.spi
 {
 
-    /**
+     /*
      * The base class for all the locale related service provider interfaces (SPIs).
      * 
      * @since 1.6
      */
     public abstract class LocaleServiceProvider
     {
-        /**
+         /*
          * The constructor
          * 
          */
@@ -34,7 +34,7 @@ namespace biz.ritter.javapi.util.spi
             // do nothing
         }
 
-        /**
+         /*
          * Gets all available locales that has localized objects or names from this
          * locale service provider.
          * 

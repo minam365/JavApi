@@ -38,7 +38,7 @@ namespace biz.ritter.javapi.awt
                 toolkit.unlockAWT();
             }
         }
-        /**
+         /*
          * @deprecated
          */
         [Obsolete]

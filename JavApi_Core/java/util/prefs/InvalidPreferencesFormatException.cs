@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util.prefs
 {
 
-    /**
+     /*
      * An exception to indicate that the input XML file is not well-formed or could
      * not be validated against the appropriate document type (specified by
      * in the {@code Preferences}).
@@ -28,7 +28,7 @@ namespace biz.ritter.javapi.util.prefs
 
         private const long serialVersionUID = -791715184232119669L;
 
-        /**
+         /*
          * Constructs a new {@code InvalidPreferencesFormatException} instance with
          * a detailed exception message.
          * 
@@ -40,7 +40,7 @@ namespace biz.ritter.javapi.util.prefs
         {
         }
 
-        /**
+         /*
          * Constructs a new {@code InvalidPreferencesFormatException} instance with
          * a detailed exception message and a nested {@code Throwable}.
          * 
@@ -54,7 +54,7 @@ namespace biz.ritter.javapi.util.prefs
         {
         }
 
-        /**
+         /*
          * Constructs a new {@code InvalidPreferencesFormatException} instance with
          * a nested {@code Throwable}.
          * 

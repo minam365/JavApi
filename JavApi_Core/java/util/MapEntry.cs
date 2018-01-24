@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * MapEntry is an internal class which provides an implementation of Map.Entry.
      */
     internal class MapEntry<K, V> : MapNS.Entry<K, V>, java.lang.Cloneable

@@ -22,7 +22,7 @@ namespace biz.ritter.javapi.net
     public interface URLStreamHandlerFactory
     {
 
-        /**
+         /*
          * Creates a new {@code URLStreamHandler} instance for the given {@code
          * protocol}.
          * 

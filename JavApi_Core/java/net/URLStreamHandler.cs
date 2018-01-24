@@ -18,14 +18,14 @@ using org.apache.harmony.luni.util;
 namespace biz.ritter.javapi.net
 {
 
-    /**
+     /*
      * The abstract class {@code URLStreamHandler} is the base for all classes which
      * can handle the communication with a URL object over a particular protocol
      * type.
      */
     public abstract class URLStreamHandler
     {
-        /**
+         /*
          * Establishes a new connection to the resource specified by the URL {@code
          * u}. Since different protocols also have unique ways of connecting, it
          * must be overwritten by the subclass.
@@ -38,7 +38,7 @@ namespace biz.ritter.javapi.net
          */
         protected internal abstract URLConnection openConnection(URL u);// throws IOException;
 
-        /**
+         /*
          * Establishes a new connection to the resource specified by the URL {@code
          * u} using the given {@code proxy}. Since different protocols also have
          * unique ways of connecting, it must be overwritten by the subclass.
@@ -61,7 +61,7 @@ namespace biz.ritter.javapi.net
             throw new java.lang.UnsupportedOperationException("method has not been implemented yet"); //$NON-NLS-1$
         }
 
-        /**
+         /*
          * Parses the clear text URL in {@code str} into a URL object. URL strings
          * generally have the following format:
          * <p/>
@@ -229,7 +229,7 @@ namespace biz.ritter.javapi.net
                 query, refJ);
     }
 
-        /**
+         /*
          * Sets the fields of the URL {@code u} to the values of the supplied
          * arguments.
          * 
@@ -259,7 +259,7 @@ namespace biz.ritter.javapi.net
             u.set(protocol, host, port, file, refJ);
         }
 
-        /**
+         /*
          * Sets the fields of the URL {@code u} to the values of the supplied
          * arguments.
          * 
@@ -293,7 +293,7 @@ namespace biz.ritter.javapi.net
             u.set(protocol, host, port, authority, userInfo, file, query, refJ);
         }
 
-        /**
+         /*
          * Returns the clear text representation of a given URL using HTTP format.
          * 
          * @param url
@@ -328,7 +328,7 @@ namespace biz.ritter.javapi.net
             return answer.toString();
         }
 
-        /**
+         /*
          * Compares two URL objects whether they represent the same URL. Two URLs
          * are equal if they have the same file, host, port, protocol, query, and
          * reference components.
@@ -356,7 +356,7 @@ namespace biz.ritter.javapi.net
             return s1 == s2 || (s1 != null && s1.equals(s2));
         }
 
-        /**
+         /*
          * Returns the default port of the protocol used by the handled URL. The
          * current implementation returns always {@code -1}.
          *
@@ -367,7 +367,7 @@ namespace biz.ritter.javapi.net
             return -1;
         }
 
-        /**
+         /*
          * Returns the host address of the given URL.
          *
          * @param url
@@ -391,7 +391,7 @@ namespace biz.ritter.javapi.net
             }
         }
 
-        /**
+         /*
          * Returns the hashcode value for the given URL object.
          * 
          * @param url
@@ -403,7 +403,7 @@ namespace biz.ritter.javapi.net
             return toExternalForm(url).GetHashCode();
         }
 
-        /**
+         /*
          * Compares two URL objects whether they refer to the same host.
          *
          * @param url1
@@ -433,7 +433,7 @@ namespace biz.ritter.javapi.net
             return host1 != null && host1.equalsIgnoreCase(host2);
         }
 
-        /**
+         /*
          * Compares two URL objects whether they refer to the same file. In the
          * comparison included are the URL components protocol, host, port and file.
          * 

@@ -16,15 +16,15 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.math
 {
-    /**
+     /*
      * Provides primality probabilistic methods.
      */
     class Primality {
 
-        /** Just to denote that this class can't be instantiated. */
+         /* Just to denote that this class can't be instantiated. */
         private Primality() {}
 
-        /** All prime numbers with bit length lesser than 10 bits. */
+         /* All prime numbers with bit length lesser than 10 bits. */
         private static readonly int []primes = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29,
                 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101,
                 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167,
@@ -40,10 +40,10 @@ namespace biz.ritter.javapi.math
                 919, 929, 937, 941, 947, 953, 967, 971, 977, 983, 991, 997, 1009,
                 1013, 1019, 1021 };
 
-        /** All {@code BigInteger} prime numbers with bit length lesser than 8 bits. */
+         /* All {@code BigInteger} prime numbers with bit length lesser than 8 bits. */
         private static readonly BigInteger []BIprimes = new BigInteger[primes.Length];
 
-        /**
+         /*
          * It encodes how many iterations of Miller-Rabin test are need to get an
          * error bound not greater than {@code 2<sup>(-100)</sup>}. For example:
          * for a {@code 1000}-bit number we need {@code 4} iterations, since
@@ -55,7 +55,7 @@ namespace biz.ritter.javapi.math
                 110, 105, 101, 96, 92, 87, 83, 78, 73, 69, 64, 59, 54, 49, 44, 38,
                 32, 26, 1 };
 
-        /**
+         /*
          * It encodes how many i-bit primes there are in the table for
          * {@code i=2,...,10}. For example {@code offsetPrimes[6]} says that from
          * index {@code 11} exists {@code 7} consecutive {@code 6}-bit prime
@@ -73,7 +73,7 @@ namespace biz.ritter.javapi.math
             }
         }
 
-        /**
+         /*
          * It uses the sieve of Eratosthenes to discard several composite numbers in
          * some appropriate range (at the moment {@code [this, this + 1024]}). After
          * this process it applies the Miller-Rabin test to the numbers that were
@@ -149,7 +149,7 @@ namespace biz.ritter.javapi.math
             }
         }
 
-        /**
+         /*
          * A random number is generated until a probable prime number is found.
          * 
          * @see BigInteger#BigInteger(int,int,Random)
@@ -181,7 +181,7 @@ namespace biz.ritter.javapi.math
             return n;
         }
 
-        /**
+         /*
          * @see BigInteger#isProbablePrime(int)
          * @see #millerRabin(BigInteger, int)
          * @ar.org.fitc.ref Optimizations: "A. Menezes - Handbook of applied
@@ -219,7 +219,7 @@ namespace biz.ritter.javapi.math
             return millerRabin(n, certainty);
         }
 
-        /**
+         /*
          * The Miller-Rabin primality test.
          * 
          * @param n the input number to be tested.

@@ -180,7 +180,7 @@ namespace biz.ritter.javapi.awt.image
             }
         }
 
-        /**
+         /*
          * This method is used by other methods of this class. The behaviour of
          * this method depends on the method which has been invoke this one. The
          * argument methodId is used to choose valid behaviour in a particular case.

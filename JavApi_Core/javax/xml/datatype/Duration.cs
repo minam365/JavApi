@@ -23,7 +23,7 @@ using javax = biz.ritter.javapix;
 namespace biz.ritter.javapix.xml.datatype
 {
 
-    /**
+     /*
      * <p>Immutable representation of a time span as defined in
      * the W3C XML Schema 1.0 specification.</p>
      * 
@@ -90,7 +90,7 @@ namespace biz.ritter.javapix.xml.datatype
     public abstract class Duration
     {
 
-        /**
+         /*
          * <p>Return the name of the XML Schema date/time type that this instance 
          * maps to. Type is computed based on fields that are set,
          * i.e. {@link #isSet(DatatypeConstants.Field field)} == <code>true</code>.</p>
@@ -207,7 +207,7 @@ namespace biz.ritter.javapix.xml.datatype
             );
         }
 
-        /**
+         /*
          * Returns the sign of this duration in -1,0, or 1.
          * 
          * @return
@@ -216,7 +216,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract int getSign();
 
-        /**
+         /*
          * <p>Get the years value of this <code>Duration</code> as an <code>int</code> or <code>0</code> if not present.</p>
          * 
          * <p><code>getYears()</code> is a convenience method for
@@ -233,7 +233,7 @@ namespace biz.ritter.javapix.xml.datatype
             return getField(DatatypeConstants.YEARS).intValue();
         }
 
-        /**
+         /*
          * Obtains the value of the MONTHS field as an integer value,
          * or 0 if not present.
          * 
@@ -247,7 +247,7 @@ namespace biz.ritter.javapix.xml.datatype
             return getField(DatatypeConstants.MONTHS).intValue();
         }
 
-        /**
+         /*
          * Obtains the value of the DAYS field as an integer value,
          * or 0 if not present.
          * 
@@ -261,7 +261,7 @@ namespace biz.ritter.javapix.xml.datatype
             return getField(DatatypeConstants.DAYS).intValue();
         }
 
-        /**
+         /*
          * Obtains the value of the HOURS field as an integer value,
          * or 0 if not present.
          * 
@@ -276,7 +276,7 @@ namespace biz.ritter.javapix.xml.datatype
             return getField(DatatypeConstants.HOURS).intValue();
         }
 
-        /**
+         /*
          * Obtains the value of the MINUTES field as an integer value,
          * or 0 if not present.
          * 
@@ -291,7 +291,7 @@ namespace biz.ritter.javapix.xml.datatype
             return getField(DatatypeConstants.MINUTES).intValue();
         }
 
-        /**
+         /*
          * Obtains the value of the SECONDS field as an integer value,
          * or 0 if not present.
          * 
@@ -307,7 +307,7 @@ namespace biz.ritter.javapix.xml.datatype
             return getField(DatatypeConstants.SECONDS).intValue();
         }
 
-        /**
+         /*
          * <p>Returns the length of the duration in milli-seconds.</p>
          * 
          * <p>If the seconds field carries more digits than milli-second order,
@@ -345,7 +345,7 @@ namespace biz.ritter.javapix.xml.datatype
                         - getCalendarTimeInMillis(startInstant);
         }
 
-        /**
+         /*
          * <p>Returns the length of the duration in milli-seconds.</p>
          * 
          * <p>If the seconds field carries more digits than milli-second order,
@@ -384,7 +384,7 @@ namespace biz.ritter.javapix.xml.datatype
             return getCalendarTimeInMillis(cal) - startInstant.getTime();
         }
 
-        /**
+         /*
          * Gets the value of a field. 
          * 
          * Fields of a duration object may contain arbitrary large value.
@@ -409,7 +409,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract java.lang.Number getField(DatatypeConstants.Field field);
 
-        /**
+         /*
          * Checks if a field is set.
          * 
          * A field of a duration object may or may not be present.
@@ -426,7 +426,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract bool isSet(DatatypeConstants.Field field);
 
-        /**
+         /*
          * <p>Computes a new duration whose value is <code>this+rhs</code>.</p>
          * 
          * <p>For example,</p>
@@ -478,7 +478,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract Duration add(Duration rhs);
 
-        /**
+         /*
          * Adds this duration to a {@link Calendar} object.
          * 
          * <p>
@@ -519,7 +519,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract void addTo(java.util.Calendar calendar);
 
-        /**
+         /*
          * Adds this duration to a {@link Date} object.
          * 
          * <p/>
@@ -559,7 +559,7 @@ namespace biz.ritter.javapix.xml.datatype
             date.setTime(getCalendarTimeInMillis(cal));
         }
 
-        /**
+         /*
          * <p>Computes a new duration whose value is <code>this-rhs</code>.</p>
          * 
          * <p>For example:</p>
@@ -613,7 +613,7 @@ namespace biz.ritter.javapix.xml.datatype
             return add(rhs.negate());
         }
 
-        /**
+         /*
          * <p>Computes a new duration whose value is <code>factor</code> times
          * longer than the value of this duration.</p>
          * 
@@ -634,7 +634,7 @@ namespace biz.ritter.javapix.xml.datatype
             return multiply(new java.math.BigDecimal(java.lang.StringJ.valueOf(factor)));
         }
 
-        /**
+         /*
          * Computes a new duration whose value is <code>factor</code> times
          * longer than the value of this duration.
          * 
@@ -683,7 +683,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract Duration multiply(java.math.BigDecimal factor);
 
-        /**
+         /*
          * Returns a new <code>Duration</code> object whose
          * value is <code>-this</code>.
          * 
@@ -697,7 +697,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract Duration negate();
 
-        /**
+         /*
          * <p>Converts the years and months fields into the days field
          * by using a specific time instant as the reference point.</p>
          * 
@@ -729,7 +729,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract Duration normalizeWith(java.util.Calendar startTimeInstant);
 
-        /**
+         /*
          * <p>Partial order relation comparison with this <code>Duration</code> instance.</p>
          * 
          * <p>Comparison result must be in accordance with
@@ -761,7 +761,7 @@ namespace biz.ritter.javapix.xml.datatype
          */
         public abstract int compare(Duration duration);
 
-        /**
+         /*
          * <p>Checks if this duration object is strictly longer than
          * another <code>Duration</code> object.</p>
          * 
@@ -792,7 +792,7 @@ namespace biz.ritter.javapix.xml.datatype
             return compare(duration) == DatatypeConstants.GREATER;
         }
 
-        /**
+         /*
          * <p>Checks if this duration object is strictly shorter than
          * another <code>Duration</code> object.</p>
          * 
@@ -815,7 +815,7 @@ namespace biz.ritter.javapix.xml.datatype
             return compare(duration) == DatatypeConstants.LESSER;
         }
 
-        /**
+         /*
          * <p>Checks if this duration object has the same duration
          * as another <code>Duration</code> object.</p>
          * 
@@ -876,7 +876,7 @@ namespace biz.ritter.javapix.xml.datatype
 		// default method not twice declared
         //public abstract int GetHashCode();
 
-        /**
+         /*
          * <p>Returns a <code>String</code> representation of this <code>Duration</code> <code>Object</code>.</p>
          * 
          * <p>The result is formatted according to the XML Schema 1.0 spec and can be always parsed back later into the
@@ -942,7 +942,7 @@ namespace biz.ritter.javapix.xml.datatype
             return buf.toString();
         }
 
-        /**
+         /*
          * <p>Turns {@link BigDecimal} to a string representation.</p>
          * 
          * <p>Due to a behavior change in the {@link BigDecimal#toString()}
@@ -988,7 +988,7 @@ namespace biz.ritter.javapix.xml.datatype
         }
 
 
-        /**
+         /*
          * <p>Calls the {@link Calendar#getTimeInMillis} method.
          * Prior to JDK1.4, this method was protected and therefore
          * cannot be invoked directly.</p>

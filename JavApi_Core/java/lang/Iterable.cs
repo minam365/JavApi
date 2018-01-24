@@ -18,7 +18,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.lang
 {
 
-    /**
+     /*
      * Objects of classes that implement this interface can be used within a
      * {@code foreach} statement.
      *
@@ -26,7 +26,7 @@ namespace biz.ritter.javapi.lang
      */
     public interface Iterable<T> {
 
-        /**
+         /*
          * Returns an {@link Iterator} for the elements in this object.
          * 
          * @return An {@code Iterator} instance.

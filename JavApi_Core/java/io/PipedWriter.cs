@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.io
 {
 
-/**
+ /*
  * Places information on a communications pipe. When two threads want to pass
  * data back and forth, one creates a piped writer and the other creates a piped
  * reader.
@@ -25,14 +25,14 @@ namespace biz.ritter.javapi.io
  * @see PipedReader
  */
 public class PipedWriter : Writer {
-    /**
+     /*
      * The destination PipedReader
      */
     private PipedReader dest;
 
     private bool closed;
 
-    /**
+     /*
      * Constructs a new unconnected {@code PipedWriter}. The resulting writer
      * must be connected to a {@code PipedReader} before data may be written to
      * it.
@@ -43,7 +43,7 @@ public class PipedWriter : Writer {
         
     }
 
-    /**
+     /*
      * Constructs a new {@code PipedWriter} connected to the {@link PipedReader}
      * {@code dest}. Any data written to this writer can be read from {@code
      * dest}.
@@ -58,7 +58,7 @@ public class PipedWriter : Writer {
         connect(dest);
     }
 
-    /**
+     /*
      * Closes this writer. If a {@link PipedReader} is connected to this writer,
      * it is closed as well and the pipe is disconnected. Any data buffered in
      * the reader can still be read.
@@ -78,7 +78,7 @@ public class PipedWriter : Writer {
         }
     }
 
-    /**
+     /*
      * Connects this {@code PipedWriter} to a {@link PipedReader}. Any data
      * written to this writer becomes readable in the reader.
      * 
@@ -101,7 +101,7 @@ public class PipedWriter : Writer {
         }
     }
 
-    /**
+     /*
      * Notifies the readers of this {@code PipedReader} that characters can be read. This
      * method does nothing if this Writer is not connected.
      * 
@@ -121,7 +121,7 @@ public class PipedWriter : Writer {
         }
     }
 
-    /**
+     /*
      * Writes {@code count} characters from the character array {@code buffer}
      * starting at offset {@code index} to this writer. The written data can
      * then be read from the connected {@link PipedReader} instance.
@@ -174,7 +174,7 @@ public class PipedWriter : Writer {
         }
     }
 
-    /**
+     /*
      * Writes a single character {@code c} to this writer. This character can
      * then be read from the connected {@link PipedReader} instance.
      * <p>

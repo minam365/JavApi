@@ -19,7 +19,7 @@ using System;
 
 namespace biz.ritter.javapix.xml.crypto.dsig
 {
-	/**
+	 /*
  * A specification of algorithm parameters for a {@link CanonicalizationMethod}
  * Algorithm. The purpose of this interface is to group (and provide type 
  * safety for) all canonicalization (C14N) parameter specifications. All 

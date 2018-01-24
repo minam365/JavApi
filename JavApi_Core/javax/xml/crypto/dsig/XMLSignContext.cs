@@ -21,7 +21,7 @@ using System;
 namespace biz.ritter.javapix.xml.crypto.dsig
 {
 
-/**
+ /*
  * Contains context information for generating XML Signatures. This interface
  * is primarily intended for type-safety.
  *

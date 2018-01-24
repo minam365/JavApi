@@ -20,7 +20,7 @@ using biz.ritter.javapi;
 namespace biz.ritter.javapi.util
 {
 
-    /**
+     /*
      * An {@code UnknownFormatConversionException} will be thrown if the format
      * conversion is unknown.
      * 
@@ -32,7 +32,7 @@ namespace biz.ritter.javapi.util
 
         private String s;
 
-        /**
+         /*
          * Constructs an {@code UnknownFormatConversionException} with the unknown
          * format conversion.
          * 
@@ -46,7 +46,7 @@ namespace biz.ritter.javapi.util
             this.s = s;
         }
 
-        /**
+         /*
          * Returns the conversion associated with the exception.
          * 
          * @return the conversion associated with the exception.
@@ -55,7 +55,7 @@ namespace biz.ritter.javapi.util
             return s;
         }
 
-        /**
+         /*
          * Returns the message of the exception.
          * 
          * @return the message of the exception.

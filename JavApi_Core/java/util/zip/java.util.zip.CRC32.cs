@@ -45,7 +45,7 @@ namespace biz.ritter.javapi.util.zip
             return (~checksum) & 0xffffffffL;
         }
 
-        /**
+         /*
             * Resets the Adler32 checksum to it initial state.
             */
         public void reset()
@@ -53,7 +53,7 @@ namespace biz.ritter.javapi.util.zip
             this.Initialize();
         }
 
-        /**
+         /*
             * Updates this checksum with the byte value provided as integer.
             *
             * @param val
@@ -64,7 +64,7 @@ namespace biz.ritter.javapi.util.zip
             checksum = (dotnet.lang.Operator.shiftRightUnsignet(checksum, 8)) ^ T1[(checksum ^ val) & 0xff];
         }
 
-        /**
+         /*
             * Updates this checksum with the bytes contained in buffer {@code buf}.
             *
             * @param buf
@@ -75,7 +75,7 @@ namespace biz.ritter.javapi.util.zip
             this.update(buf, 0, buf.Length);
         }
 
-        /**
+         /*
             * Updates this checksum with n bytes of data obtained from buffer {@code
             * buf}, starting at offset {@code off}.
             *
@@ -137,12 +137,12 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-      /**
+       /*
        * Pre-generated lookup tables. For the code to generate these tables
        * please see HDFS-297.
        */
 
-      /** T1[x] is ~CRC(x) */
+       /* T1[x] is ~CRC(x) */
       private static  long[] T1 = new long[] {
         0x0, 0x77073096, 0xee0e612c, 0x990951ba,
         0x76dc419, 0x706af48f, 0xe963a535, 0x9e6495a3,
@@ -210,7 +210,7 @@ namespace biz.ritter.javapi.util.zip
         0xb40bbe37, 0xc30c8ea1, 0x5a05df1b, 0x2d02ef8d
       };
 
-      /** T2[x] is ~CRC(x followed by one 0x00 byte) */
+       /* T2[x] is ~CRC(x followed by one 0x00 byte) */
       private static long[] T2 = new long[] {
         0x0, 0x191b3141, 0x32366282, 0x2b2d53c3,
         0x646cc504, 0x7d77f445, 0x565aa786, 0x4f4196c7,
@@ -278,7 +278,7 @@ namespace biz.ritter.javapi.util.zip
         0xb809aeb1, 0xa1129ff0, 0x8a3fcc33, 0x9324fd72
       };
 
-      /** T3[x] is ~CRC(x followed by two 0x00 bytes) */
+       /* T3[x] is ~CRC(x followed by two 0x00 bytes) */
       private static long[] T3 = new long[] {
         0x0, 0x1c26a37, 0x384d46e, 0x246be59,
         0x709a8dc, 0x6cbc2eb, 0x48d7cb2, 0x54f1685,
@@ -346,7 +346,7 @@ namespace biz.ritter.javapi.util.zip
         0xbcde8ab4, 0xbd1ce083, 0xbf5a5eda, 0xbe9834ed
       };
 
-      /** T4[x] is ~CRC(x followed by three 0x00 bytes) */
+       /* T4[x] is ~CRC(x followed by three 0x00 bytes) */
       private static long[] T4 = new long[] {
         0x0, 0xb8bc6765, 0xaa09c88b, 0x12b5afee,
         0x8f629757, 0x37def032, 0x256b5fdc, 0x9dd738b9,

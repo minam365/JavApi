@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.nio.charset
 {
-    /**
+     /*
      * An {@code IllegalCharsetNameException} is thrown when an illegal charset name
      * is encountered.
      */
@@ -32,7 +32,7 @@ namespace biz.ritter.javapi.nio.charset
         // The illegal charset name
         private String charsetName;
 
-        /**
+         /*
          * Constructs a new {@code IllegalCharsetNameException} with the supplied
          * charset name.
          * 
@@ -43,7 +43,7 @@ namespace biz.ritter.javapi.nio.charset
             this.charsetName = charset;
         }
 
-        /**
+         /*
          * Gets the encountered illegal charset name.
          * 
          * @return the encountered illegal charset name.

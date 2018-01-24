@@ -8,7 +8,7 @@ using java = biz.ritter.javapi;
 
 namespace org.xml.sax.helpers
 {
-    /**
+     /*
      * Default implementation of the Attributes interface.
      *
      * <blockquote>
@@ -51,7 +51,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Construct a new, empty AttributesImpl object.
          */
         public AttributesImpl()
@@ -61,7 +61,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Copy an existing Attributes object.
          *
          * <p>This constructor is especially useful inside a
@@ -81,7 +81,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Return the number of attributes in the list.
          *
          * @return The number of attributes in the list.
@@ -93,7 +93,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Return an attribute's Namespace URI.
          *
          * @param index The attribute's index (zero-based).
@@ -114,7 +114,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Return an attribute's local name.
          *
          * @param index The attribute's index (zero-based).
@@ -135,7 +135,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Return an attribute's qualified (prefixed) name.
          *
          * @param index The attribute's index (zero-based).
@@ -156,7 +156,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Return an attribute's type by index.
          *
          * @param index The attribute's index (zero-based).
@@ -177,7 +177,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Return an attribute's value by index.
          *
          * @param index The attribute's index (zero-based).
@@ -197,7 +197,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Look up an attribute's index by Namespace name.
          *
          * <p>In many cases, it will be more efficient to look up the name once and
@@ -224,7 +224,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Look up an attribute's index by qualified (prefixed) name.
          *
          * @param qName The qualified name.
@@ -245,7 +245,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Look up an attribute's type by Namespace-qualified name.
          *
          * @param uri The Namespace URI, or the empty string for a name
@@ -269,7 +269,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Look up an attribute's type by qualified (prefixed) name.
          *
          * @param qName The qualified name.
@@ -291,7 +291,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Look up an attribute's value by Namespace-qualified name.
          *
          * @param uri The Namespace URI, or the empty string for a name
@@ -315,7 +315,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Look up an attribute's value by qualified (prefixed) name.
          *
          * @param qName The qualified name.
@@ -343,7 +343,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Clear the attribute list for reuse.
          *
          * <p>Note that little memory is freed by this call:
@@ -361,7 +361,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Copy an entire Attributes object.
          *
          * <p>It may be more efficient to reuse an existing object
@@ -388,7 +388,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Add an attribute to the end of the list.
          *
          * <p>For the sake of speed, this method does no checking
@@ -418,7 +418,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Set an attribute in the list.
          *
          * <p>For the sake of speed, this method does no checking
@@ -457,7 +457,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Remove an attribute from the list.
          *
          * @param index The index of the attribute (zero-based).
@@ -489,7 +489,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Set the Namespace URI of a specific attribute.
          *
          * @param index The index of the attribute (zero-based).
@@ -512,7 +512,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Set the local name of a specific attribute.
          *
          * @param index The index of the attribute (zero-based).
@@ -535,7 +535,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Set the qualified name of a specific attribute.
          *
          * @param index The index of the attribute (zero-based).
@@ -558,7 +558,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Set the type of a specific attribute.
          *
          * @param index The index of the attribute (zero-based).
@@ -580,7 +580,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Set the value of a specific attribute.
          *
          * @param index The index of the attribute (zero-based).
@@ -608,7 +608,7 @@ namespace org.xml.sax.helpers
         ////////////////////////////////////////////////////////////////////
 
 
-        /**
+         /*
          * Ensure the internal array's capacity.
          *
          * @param n The minimum number of attributes that the array must
@@ -647,7 +647,7 @@ namespace org.xml.sax.helpers
         }
 
 
-        /**
+         /*
          * Report a bad array index in a manipulator.
          *
          * @param index The index to report.

@@ -14,7 +14,7 @@
 
 namespace biz.ritter.javapi.security.spec
 {
-	/**
+	 /*
 	 * The marker interface for algorithm parameter specifications. The purpose is
 	 * to group parameter specifications for algorithms.
 	 */

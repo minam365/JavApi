@@ -19,7 +19,7 @@ using org.apache.harmony.luni.util;
 namespace biz.ritter.javapi.io
 {
 
-    /**
+     /*
      * Wraps an existing {@link InputStream} and reads typed data from it.
      * Typically, this stream has been written by a DataOutputStream. Types that can
      * be read include byte, 16-bit short, 32-bit int, 32-bit float, 64-bit long,
@@ -32,7 +32,7 @@ namespace biz.ritter.javapi.io
 
         protected internal byte[] buff;
 
-        /**
+         /*
          * Constructs a new DataInputStream on the InputStream {@code in}. All
          * reads are then filtered through this stream. Note that data read by this
          * stream is not in a human readable format and was most likely created by a
@@ -47,7 +47,7 @@ namespace biz.ritter.javapi.io
             buff = new byte[8];
         }
 
-        /**
+         /*
          * Reads bytes from this stream into the byte array {@code buffer}. Returns
          * the number of bytes that have been read.
          * 
@@ -64,7 +64,7 @@ namespace biz.ritter.javapi.io
             return inJ.read(buffer, 0, buffer.Length);
         }
 
-        /**
+         /*
          * Reads at most {@code length} bytes from this stream and stores them in
          * the byte array {@code buffer} starting at {@code offset}. Returns the
          * number of bytes that have been read or -1 if no bytes have been read and
@@ -88,7 +88,7 @@ namespace biz.ritter.javapi.io
             return inJ.read(buffer, offset, length);
         }
 
-        /**
+         /*
          * Reads a boolean from this stream.
          * 
          * @return the next boolean value from the source stream.
@@ -107,7 +107,7 @@ namespace biz.ritter.javapi.io
             return temp != 0;
         }
 
-        /**
+         /*
          * Reads an 8-bit byte value from this stream.
          * 
          * @return the next byte value from the source stream.
@@ -126,7 +126,7 @@ namespace biz.ritter.javapi.io
             return (byte) temp;
         }
 
-        /**
+         /*
          * Reads a 16-bit character value from this stream.
          * 
          * @return the next char value from the source stream.
@@ -156,7 +156,7 @@ namespace biz.ritter.javapi.io
 
         }
 
-        /**
+         /*
          * Reads a 64-bit double value from this stream.
          * 
          * @return the next double value from the source stream.
@@ -171,7 +171,7 @@ namespace biz.ritter.javapi.io
             return java.lang.Double.longBitsToDouble(readLong());
         }
 
-        /**
+         /*
          * Reads a 32-bit float value from this stream.
          * 
          * @return the next float value from the source stream.
@@ -186,7 +186,7 @@ namespace biz.ritter.javapi.io
             return java.lang.Float.intBitsToFloat(readInt());
         }
 
-        /**
+         /*
          * Reads bytes from this stream into the byte array {@code buffer}. This
          * method will block until {@code buffer.length} number of bytes have been
          * read.
@@ -205,7 +205,7 @@ namespace biz.ritter.javapi.io
             readFully(buffer, 0, buffer.Length);
         }
 
-        /**
+         /*
          * Reads bytes from this stream and stores them in the byte array {@code
          * buffer} starting at the position {@code offset}. This method blocks until
          * {@code length} bytes have been read. If {@code length} is zero, then this
@@ -256,7 +256,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Reads a 32-bit integer value from this stream.
          * 
          * @return the next int value from the source stream.
@@ -275,7 +275,7 @@ namespace biz.ritter.javapi.io
                 ((buff[2] & 0xff) << 8) | (buff[3] & 0xff);
         }
 
-        /**
+         /*
          * Returns a string that contains the next line of text available from the
          * source stream. A line is represented by zero or more characters followed
          * by {@code '\n'}, {@code '\r'}, {@code "\r\n"} or the end of the stream.
@@ -323,7 +323,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Reads a 64-bit long value from this stream.
          * 
          * @return the next long value from the source stream.
@@ -346,7 +346,7 @@ namespace biz.ritter.javapi.io
             return ((i1 & 0xffffffffL) << 32) | (i2 & 0xffffffffL);
         }
 
-        /**
+         /*
          * Reads a 16-bit short value from this stream.
          * 
          * @return the next short value from the source stream.
@@ -364,7 +364,7 @@ namespace biz.ritter.javapi.io
             return (short) (((buff[0] & 0xff) << 8) | (buff[1] & 0xff));
         }
 
-        /**
+         /*
          * Reads an unsigned 8-bit byte value from this stream and returns it as an
          * int.
          * 
@@ -384,7 +384,7 @@ namespace biz.ritter.javapi.io
             return temp;
         }
 
-        /**
+         /*
          * Reads a 16-bit unsigned short value from this stream and returns it as an
          * int.
          * 
@@ -403,7 +403,7 @@ namespace biz.ritter.javapi.io
             return (char) (((buff[0] & 0xff) << 8) | (buff[1] & 0xff));
         }
 
-        /**
+         /*
          * Reads an string encoded in {@link DataInput modified UTF-8} from this
          * stream.
          * 
@@ -432,7 +432,7 @@ namespace biz.ritter.javapi.io
             return Util.convertUTF8WithBuf(buf, output, 0, utfSize);
         }
 
-        /**
+         /*
          * Reads a string encoded in {@link DataInput modified UTF-8} from the
          * {@code DataInput} stream {@code in}.
          * 
@@ -448,7 +448,7 @@ namespace biz.ritter.javapi.io
             return decodeUTF(input.readUnsignedShort(), input);
         }
 
-        /**
+         /*
          * Skips {@code count} number of bytes in this stream. Subsequent {@code
          * read()}s will not return these bytes unless {@code reset()} is used.
          * 

@@ -17,35 +17,35 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.io
 {
-    /**
+     /*
      * A specialized {@link InputStream } for reading the contents of a byte array.
      * 
      * @see ByteArrayOutputStream
      */
     public class ByteArrayInputStream : InputStream {
-        /**
+         /*
          * The {@code byte} array containing the bytes to stream over.
          */
         protected internal byte[] buf;
 
-        /**
+         /*
          * The current position within the byte array.
          */
         protected internal int pos;
 
-        /**
+         /*
          * The current mark position. Initially set to 0 or the <code>offset</code>
          * parameter within the constructor.
          */
         protected int markJ;
 
-        /**
+         /*
          * The total number of bytes initially available in the byte array
          * {@code buf}.
          */
         protected int countJ;
 
-        /**
+         /*
          * Constructs a new {@code ByteArrayInputStream} on the byte array
          * {@code buf}.
          * 
@@ -58,7 +58,7 @@ namespace biz.ritter.javapi.io
             this.countJ = buf.Length;
         }
 
-        /**
+         /*
          * Constructs a new {@code ByteArrayInputStream} on the byte array
          * {@code buf} with the initial position set to {@code offset} and the
          * number of bytes available set to {@code offset} + {@code length}.
@@ -77,7 +77,7 @@ namespace biz.ritter.javapi.io
             countJ = offset + length > buf.Length ? buf.Length : offset + length;
         }
 
-        /**
+         /*
          * Returns the number of bytes that are available before this stream will
          * block. This method returns the number of bytes yet to be read from the
          * source byte array.
@@ -90,7 +90,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Closes this stream and frees resources associated with this stream.
          * 
          * @throws IOException
@@ -101,7 +101,7 @@ namespace biz.ritter.javapi.io
             // Do nothing on close, this matches JDK behaviour.
         }
 
-        /**
+         /*
          * Sets a mark position in this ByteArrayInputStream. The parameter
          * {@code readlimit} is ignored. Sending {@code reset()} will reposition the
          * stream back to the marked position.
@@ -118,7 +118,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Indicates whether this stream supports the {@code mark()} and
          * {@code reset()} methods. Returns {@code true} since this class supports
          * these methods.
@@ -132,7 +132,7 @@ namespace biz.ritter.javapi.io
             return true;
         }
 
-        /**
+         /*
          * Reads a single byte from the source byte array and returns it as an
          * integer in the range from 0 to 255. Returns -1 if the end of the source
          * array has been reached.
@@ -146,7 +146,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Reads at most {@code len} bytes from this stream and stores
          * them in byte array {@code b} starting at {@code offset}. This
          * implementation reads bytes from the source byte array.
@@ -193,7 +193,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Resets this stream to the last marked location. This implementation
          * resets the position to either the marked position, the start position
          * supplied in the constructor or 0 if neither has been provided.
@@ -207,7 +207,7 @@ namespace biz.ritter.javapi.io
             }
         }
 
-        /**
+         /*
          * Skips {@code count} number of bytes in this InputStream. Subsequent
          * {@code read()}s will not return these bytes unless {@code reset()} is
          * used. This implementation skips {@code count} number of bytes in the

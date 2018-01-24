@@ -7,7 +7,7 @@ using System;
 namespace org.xml.sax
 {
 
-    /**
+     /*
      * Interface for associating a SAX event with a document location.
      *
      * <blockquote>
@@ -47,7 +47,7 @@ namespace org.xml.sax
     {
 
 
-        /**
+         /*
          * Return the public identifier for the current document event.
          *
          * <p>The return value is the public identifier of the document
@@ -61,7 +61,7 @@ namespace org.xml.sax
         String getPublicId();
 
 
-        /**
+         /*
          * Return the system identifier for the current document event.
          *
          * <p>The return value is the system identifier of the document
@@ -80,7 +80,7 @@ namespace org.xml.sax
         String getSystemId();
 
 
-        /**
+         /*
          * Return the line number where the current document event ends.
          * Lines are delimited by line ends, which are defined in
          * the XML specification.
@@ -107,7 +107,7 @@ namespace org.xml.sax
         int getLineNumber();
 
 
-        /**
+         /*
          * Return the column number where the current document event ends.
          * This is one-based number of Java <code>char</code> values since
          * the last line end.

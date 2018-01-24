@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang
 {
-    /**
+     /*
      * {@code VirtualMachineError} is the superclass of all error classes that occur
      * during the operation of the virtual machine.
      * 
@@ -27,14 +27,14 @@ namespace biz.ritter.javapi.lang
 
         private static readonly long serialVersionUID = 4161983926571568670L;
 
-        /**
+         /*
          * Constructs a new {@code VirtualMachineError} that includes the current
          * stack trace.
          */
         public VirtualMachineError() : base() {
         }
 
-        /**
+         /*
          * Constructs a new {@code VirtualMachineError} with the current stack trace
          * and the specified detail message.
          * 

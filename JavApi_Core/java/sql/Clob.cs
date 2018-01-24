@@ -17,7 +17,7 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.sql
 {
-    /**
+     /*
      * A Java interface mapping for the SQL CLOB type.
      * <p/>
      * An SQL {@code CLOB} type stores a large array of characters as the value in a
@@ -30,7 +30,7 @@ namespace biz.ritter.javapi.sql
     public interface Clob
     {
 
-        /**
+         /*
          * Gets the value of this {@code Clob} object as an ASCII stream.
          * 
          * @return an ASCII {@code InputStream} giving access to the 
@@ -40,7 +40,7 @@ namespace biz.ritter.javapi.sql
          */
         java.io.InputStream getAsciiStream();// throws SQLException;
 
-        /**
+         /*
          * Gets the data of this {@code Clob} object in a {@code java.io.Reader}.
          * 
          * @return a character stream Reader object giving access to the {@code
@@ -50,7 +50,7 @@ namespace biz.ritter.javapi.sql
          */
         java.io.Reader getCharacterStream();// throws SQLException;
 
-        /**
+         /*
          * Gets a copy of a specified substring in this {@code Clob}.
          * 
          * @param pos
@@ -63,7 +63,7 @@ namespace biz.ritter.javapi.sql
          */
         String getSubString(long pos, int length);// throws SQLException;
 
-        /**
+         /*
          * Retrieves the number of characters in this {@code Clob} object.
          * 
          * @return a long value with the number of character in this {@code Clob}.
@@ -72,7 +72,7 @@ namespace biz.ritter.javapi.sql
          */
         long length();// throws SQLException;
 
-        /**
+         /*
          * Retrieves the character position at which a specified {@code Clob} object
          * appears in this {@code Clob} object.
          * 
@@ -87,7 +87,7 @@ namespace biz.ritter.javapi.sql
          */
         long position(Clob searchstr, long start);// throws SQLException;
 
-        /**
+         /*
          * Retrieves the character position at which a specified substring appears
          * in this {@code Clob} object.
          * 
@@ -103,7 +103,7 @@ namespace biz.ritter.javapi.sql
          */
         long position(String searchstr, long start);// throws SQLException;
 
-        /**
+         /*
          * Retrieves a stream which can be used to write Ascii characters to this
          * {@code Clob} object, starting at specified position.
          * 
@@ -116,7 +116,7 @@ namespace biz.ritter.javapi.sql
          */
         java.io.OutputStream setAsciiStream(long pos);// throws SQLException;
 
-        /**
+         /*
          * Retrieves a stream which can be used to write a stream of unicode
          * characters to this {@code Clob} object, at a specified position.
          * 
@@ -129,7 +129,7 @@ namespace biz.ritter.javapi.sql
          */
         java.io.Writer setCharacterStream(long pos);// throws SQLException;
 
-        /**
+         /*
          * Writes a given Java String to this {@code Clob} object at a specified
          * position.
          * 
@@ -143,7 +143,7 @@ namespace biz.ritter.javapi.sql
          */
         int setString(long pos, String str);// throws SQLException;
 
-        /**
+         /*
          * Writes {@code len} characters of a string, starting at a specified
          * character offset, to this {@code Clob}.
          * 
@@ -162,7 +162,7 @@ namespace biz.ritter.javapi.sql
         int setString(long pos, String str, int offset, int len)
                ;// throws SQLException;
 
-        /**
+         /*
          * Truncates this {@code Clob} after the specified number of characters.
          * 
          * @param len
@@ -173,7 +173,7 @@ namespace biz.ritter.javapi.sql
          */
         void truncate(long len);// throws SQLException;
 
-        /**
+         /*
          * TODO Javadoc
          * 
          * @throws SQLException

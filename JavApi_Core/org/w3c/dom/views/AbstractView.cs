@@ -7,13 +7,13 @@
 namespace org.w3c.dom.views
 {
 
-    /**
+     /*
      * A base interface that all views shall derive from.
      * @since DOM Level 2
      */
     public interface AbstractView
     {
-        /**
+         /*
          * The source <code>DocumentView</code> for which, this is an 
          * <code>AbstractView</code> of.
          */

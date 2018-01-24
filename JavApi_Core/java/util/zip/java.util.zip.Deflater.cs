@@ -19,7 +19,7 @@ namespace biz.ritter.javapi.util.zip
 {
 
 
-    /**
+     /*
      * This class compresses data using the <i>DEFLATE</i> algorithm (see <a
      * href="http://www.gzip.org/algorithm.txt">specification</a>).
      * <p>
@@ -36,58 +36,58 @@ namespace biz.ritter.javapi.util.zip
      */
     public class Deflater {
 
-        /**
+         /*
          * Upper bound for the compression level range.
          */
         public const int BEST_COMPRESSION = 9;
 
-        /**
+         /*
          * Lower bound for compression level range.
          */
         public const int BEST_SPEED = 1;
 
-        /**
+         /*
          * Usage of the default compression level.
          */
         public const int DEFAULT_COMPRESSION = -1;
 
-        /**
+         /*
          * Default value for compression strategy.
          */
         public const int DEFAULT_STRATEGY = 0;
 
-        /**
+         /*
          * Default value for compression method.
          */
         public const int DEFLATED = 8;
 
-        /**
+         /*
          * Possible value for compression strategy.
          */
         public const int FILTERED = 1;
 
-        /**
+         /*
          * Possible value for compression strategy.
          */
         public const int HUFFMAN_ONLY = 2;
 
-        /**
+         /*
          * Possible value for compression level.
          */
         public const int NO_COMPRESSION = 0;
 
-        /**
+         /*
          * Use buffering for best compression.
          */
         internal static readonly int Z_NO_FLUSH = 0;
 
-        /**
+         /*
          * Flush buffers so recipients can immediately decode the data sent thus
          * far. This mode may degrade compression.
          */
         internal static readonly int Z_SYNC_FLUSH = 2;
 
-        /**
+         /*
          * Flush buffers because there is no further data.
          */
         internal static readonly int Z_FINISH = 4;
@@ -112,7 +112,7 @@ namespace biz.ritter.javapi.util.zip
 
         private int inLength;
 
-        /**
+         /*
          * Constructs a new {@code Deflater} instance with default compression
          * level. The strategy can be specified with {@link #setStrategy}, only. A
          * header is added to the output by default; use constructor {@code
@@ -121,7 +121,7 @@ namespace biz.ritter.javapi.util.zip
         public Deflater() :this(DEFAULT_COMPRESSION, false){
         }
 
-        /**
+         /*
          * Constructs a new {@code Deflater} instance with a specific compression
          * level. The strategy can be specified with {@code setStrategy}, only. A
          * header is added to the output by default; use
@@ -133,7 +133,7 @@ namespace biz.ritter.javapi.util.zip
         public Deflater(int level) :this(level, false){
         }
 
-        /**
+         /*
          * Constructs a new {@code Deflater} instance with a specific compression
          * level. If noHeader is passed as true no ZLib header is added to the
          * output. In a ZIP archive every entry (compressed file) comes with such a
@@ -152,7 +152,7 @@ namespace biz.ritter.javapi.util.zip
             //TODO
         }
 
-        /**
+         /*
          * Deflates the data (previously passed to {@code setInput}) into the
          * supplied buffer.
          *
@@ -165,7 +165,7 @@ namespace biz.ritter.javapi.util.zip
             return deflate(buf, 0, buf.Length);
         }
 
-        /**
+         /*
          * Deflates data (previously passed to {@code setInput}) into a specific
          * region within the supplied buffer.
          *
@@ -181,7 +181,7 @@ namespace biz.ritter.javapi.util.zip
             return deflate(buf, off, nbytes, flushParm);
         }
 
-        /**
+         /*
          * @param flushParam one of {@link #Z_NO_FLUSH}, {@link #Z_FINISH} or
          *            {@link #Z_SYNC_FLUSH}.
          */
@@ -191,7 +191,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Frees all resources held onto by this deflating algorithm. Any unused
          * input or output is discarded. While this method is used by {@code
          * finalize()}, it can be called explicitly in order to free native
@@ -209,7 +209,7 @@ namespace biz.ritter.javapi.util.zip
             end();
         }
 
-        /**
+         /*
          * Indicates to the {@code Deflater} that all uncompressed input has been provided
          * to it.
          *
@@ -221,7 +221,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Returns whether or not all provided data has been successfully
          * compressed.
          *
@@ -233,7 +233,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Returns the Adler32 checksum of uncompressed data currently read. If a
          * preset dictionary is used getAdler() will return the Adler32 checksum of
          * the dictionary used.
@@ -252,7 +252,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Returns the total number of bytes of input consumed by the {@code Deflater}.
          *
          * @return number of bytes of input read.
@@ -267,7 +267,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Returns the total number of compressed bytes output by this {@code Deflater}.
          *
          * @return number of compressed bytes output.
@@ -279,7 +279,7 @@ namespace biz.ritter.javapi.util.zip
             return -1;
         }
 
-        /**
+         /*
          * Counterpart to setInput(). Indicates whether or not all bytes of
          * uncompressed input have been consumed by the {@code Deflater}. If needsInput()
          * returns true setInput() must be called before deflation can continue. If
@@ -301,7 +301,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Resets the {@code Deflater} to accept new input without affecting any
          * previously made settings for the compression strategy or level. This
          * operation <i>must</i> be called after {@code finished()} returns
@@ -314,7 +314,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-       /**
+        /*
          * Sets the dictionary to be used for compression by this {@code Deflater}.
          * setDictionary() can only be called if this {@code Deflater} supports the writing
          * of ZLIB headers. This is the default behaviour but can be overridden
@@ -328,7 +328,7 @@ namespace biz.ritter.javapi.util.zip
             setDictionary(buf, 0, buf.Length);
         }
 
-        /**
+         /*
          * Sets the dictionary to be used for compression by this {@code Deflater}.
          * setDictionary() can only be called if this {@code Deflater} supports the writing
          * of ZLIB headers. This is the default behaviour but can be overridden
@@ -348,7 +348,7 @@ namespace biz.ritter.javapi.util.zip
         }
 
 
-        /**
+         /*
          * Sets the input buffer the {@code Deflater} will use to extract uncompressed bytes
          * for later compression.
          *
@@ -359,7 +359,7 @@ namespace biz.ritter.javapi.util.zip
             setInput(buf, 0, buf.Length);
         }
 
-        /**
+         /*
          * Sets the input buffer the {@code Deflater} will use to extract uncompressed bytes
          * for later compression. Input will be taken from the buffer region
          * starting at off and ending at nbytes - 1.
@@ -375,7 +375,7 @@ namespace biz.ritter.javapi.util.zip
         }
 
 
-        /**
+         /*
          * Sets the compression level to be used when compressing data. The
          * compression level must be a value between 0 and 9. This value must be set
          * prior to calling setInput().
@@ -394,7 +394,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Sets the compression strategy to be used. The strategy must be one of
          * FILTERED, HUFFMAN_ONLY or DEFAULT_STRATEGY.This value must be set prior
          * to calling setInput().
@@ -414,7 +414,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Returns a long int of total number of bytes read by the {@code Deflater}. This
          * method performs the same as {@code getTotalIn} except it returns a long value
          * instead of an integer
@@ -428,7 +428,7 @@ namespace biz.ritter.javapi.util.zip
             }
         }
 
-        /**
+         /*
          * Returns a long int of total number of bytes of read by the {@code Deflater}. This
          * method performs the same as {@code getTotalOut} except it returns a long
          * value instead of an integer

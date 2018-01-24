@@ -22,7 +22,7 @@ namespace biz.ritter.javapi.sql
 
         private const long serialVersionUID = -9104382843534716547L;
 
-        /**
+         /*
          * Creates an SQLNonTransientException object. The Reason string is set to
          * null, the SQLState string is set to null and the Error Code is set to 0.
          */
@@ -31,7 +31,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLNonTransientException object. The Reason string is set to
          * the given reason string, the SQLState string is set to null and the Error
          * Code is set to 0.
@@ -44,7 +44,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLNonTransientException object. The Reason string is set to
          * the given reason string, the SQLState string is set to the given SQLState
          * string and the Error Code is set to 0.
@@ -59,7 +59,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLNonTransientException object. The Reason string is set to
          * the given reason string, the SQLState string is set to the given SQLState
          * string and the Error Code is set to the given error code value.
@@ -77,7 +77,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLNonTransientException object. The Reason string is set to
          * the null if cause == null or cause.toString() if cause!=null,and the
          * cause Throwable object is set to the given cause Throwable object.
@@ -91,7 +91,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLNonTransientException object. The Reason string is set to
          * the given and the cause Throwable object is set to the given cause
          * Throwable object.
@@ -107,7 +107,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLNonTransientException object. The Reason string is set to
          * the given reason string, the SQLState string is set to the given SQLState
          * string and the cause Throwable object is set to the given cause Throwable
@@ -127,7 +127,7 @@ namespace biz.ritter.javapi.sql
         {
         }
 
-        /**
+         /*
          * Creates an SQLNonTransientException object. The Reason string is set to
          * the given reason string, the SQLState string is set to the given SQLState
          * string , the Error Code is set to the given error code value, and the
